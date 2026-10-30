@@ -4,6 +4,8 @@
 @font-face{font-family:"MoUKai SC";src:url(../library/fonts/MoUKaiSC.woff2) format("woff2");font-display:block}
 @font-face{font-family:"MoTWKai";src:url(../library/fonts/MoTWKai.woff2) format("woff2");font-display:block}
 @font-face{font-family:"MoMaShan";src:url(../library/fonts/MoMaShan.woff2) format("woff2");font-display:block}
+/* screen-edge safe margins (setting 邊緣留白, set by Model.applyEdge): keep controls out of the pen digitizer / gesture dead zone at the screen edge */
+:root{--edge-b:3.5vh;--edge-t:1vh;--edge-l:1vw;--edge-r:1vw}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;margin:0;padding:0;height:100%;background:#fff;color:#000;overflow:hidden;
   font-family:"MoKai TC","PingFang TC","Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:18px;line-height:1.35}
@@ -16,7 +18,7 @@ button:disabled{color:#888;border-color:#888;background:#fff}
 button.big{min-height:64px;font-size:22px;padding:0 24px}
 input[type=text]{min-height:56px;border:2px solid #000;padding:0 10px;font-size:18px;background:#fff;width:100%;max-width:420px}
 textarea{width:100%;min-height:160px;border:2px solid #000;font-size:14px;font-family:monospace;background:#fff}
-.screen{position:absolute;left:0;top:0;right:0;bottom:0;overflow:auto;padding:16px 20px 40px;background:#fff;-webkit-overflow-scrolling:touch}
+.screen{position:absolute;left:0;top:0;right:0;bottom:0;overflow:auto;padding:calc(16px + var(--edge-t)) calc(20px + var(--edge-r)) calc(40px + var(--edge-b)) calc(20px + var(--edge-l));background:#fff;-webkit-overflow-scrolling:touch}
 .screen h1{font-size:26px;margin:0 0 12px;font-weight:normal}
 .screen h2{font-size:20px;margin:18px 0 8px;font-weight:normal;border-bottom:2px solid #000;padding-bottom:4px}
 .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px;flex-wrap:wrap}
@@ -42,8 +44,8 @@ textarea{width:100%;min-height:160px;border:2px solid #000;font-size:14px;font-f
 /* practice */
 .practice{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;flex-direction:column;background:#fff}
 .practice.land{flex-direction:row}
-.pbar{display:flex;flex-wrap:wrap;padding:1px;border-bottom:2px solid #000;align-items:center;flex:none;background:#fff}
-.practice.land .pbar{flex-direction:column;flex-wrap:nowrap;border-bottom:0;border-right:2px solid #000;width:116px;overflow:auto;justify-content:flex-start}
+.pbar{display:flex;flex-wrap:wrap;padding:calc(1px + var(--edge-t)) calc(1px + var(--edge-r)) 1px calc(1px + var(--edge-l));border-bottom:2px solid #000;align-items:center;flex:none;background:#fff}
+.practice.land .pbar{flex-direction:column;flex-wrap:nowrap;border-bottom:0;border-right:2px solid #000;width:calc(116px + var(--edge-l));padding:calc(1px + var(--edge-t)) 1px var(--edge-b) calc(1px + var(--edge-l));overflow:auto;justify-content:flex-start}
 .pbar>*{margin:3px}
 .pbar button{flex:1 1 auto;min-width:64px;padding:0 8px}
 .practice.land .pbar button{flex:none;width:calc(100% - 6px)}
@@ -57,11 +59,11 @@ textarea{width:100%;min-height:160px;border:2px solid #000;font-size:14px;font-f
 
 /* overlay */
 #layer{position:fixed;left:0;top:0;right:0;bottom:0;pointer-events:none;z-index:100}
-.modal-bg{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(255,255,255,.88);pointer-events:auto;display:flex;align-items:center;justify-content:center;padding:12px}
+.modal-bg{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(255,255,255,.88);pointer-events:auto;display:flex;align-items:center;justify-content:center;padding:calc(12px + var(--edge-t)) calc(12px + var(--edge-r)) calc(12px + var(--edge-b)) calc(12px + var(--edge-l))}
 .modal{background:#fff;border:3px solid #000;padding:16px 18px;max-width:760px;width:100%;max-height:96%;overflow:auto}
 .modal h2{margin:0 0 10px;font-size:22px;font-weight:normal}
 .modal .btnrow{margin-top:14px;justify-content:flex-end}
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#000;color:#fff;padding:12px 18px;font-size:18px;max-width:90%;pointer-events:none}
+.toast{position:fixed;left:50%;bottom:calc(24px + var(--edge-b));transform:translateX(-50%);background:#000;color:#fff;padding:12px 18px;font-size:18px;max-width:90%;pointer-events:none}
 .flash{position:fixed;left:0;top:0;right:0;bottom:0;pointer-events:auto}
 .pt-area{border:2px solid #000;background:#fff;touch-action:none;display:block;width:100%;height:320px}
 .pt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2px 16px;font-size:16px;margin:10px 0}
@@ -75,3 +77,17 @@ a.btnlink{display:flex;align-items:center;justify-content:center;min-height:64px
 a.btnlink.plain{background:#fff;color:#000;min-height:56px;font-size:18px;font-weight:normal;display:inline-flex;margin:8px 0 0}
 .card.install{max-width:760px}
 .card.update{background:#fff;border-width:3px}
+
+/* export screen (作品): static preview + big segmented options */
+.exp{position:fixed;left:0;top:0;right:0;bottom:0;background:#fff;overflow:auto;pointer-events:auto;padding:calc(12px + var(--edge-t)) calc(16px + var(--edge-r)) calc(24px + var(--edge-b)) calc(16px + var(--edge-l))}
+.exp h1{font-size:24px;margin:0;font-weight:normal}
+.exp .topbar{margin-bottom:6px}
+.exp .prevbox{border:2px solid #000;padding:6px;margin:6px 0;display:flex;justify-content:center;align-items:center;background:#fff;min-height:120px}
+.exp .prevbox canvas{display:block;max-width:100%;max-height:52vh;width:auto;height:auto}
+.exp .prevnav{display:flex;align-items:center;margin:4px 0}
+.exp .prevnav>*{margin-right:10px}
+.exp h2{font-size:20px;margin:14px 0 6px;font-weight:normal;border-bottom:2px solid #000;padding-bottom:3px}
+/* edge test (筆測): full-screen frame bands; the pen colours them black where it is received */
+.edge-test{position:fixed;left:0;top:0;right:0;bottom:0;background:#fff;pointer-events:auto;touch-action:none}
+.edge-test canvas{position:absolute;left:0;top:0;width:100%;height:100%;touch-action:none}
+.edge-test .card{position:absolute;left:50%;top:50%;width:86%;max-width:520px;transform:translate(-50%,-50%);background:#fff;border:2px solid #000;padding:14px 16px;margin:0}

@@ -104,6 +104,21 @@
     MX.layer().appendChild(bg);
     return api;
   };
+  // A full-screen overlay (the export screen, the edge test) that takes part in the modal stack, so Android Back closes it first.
+  MX.overlay = function (el, onClose) {
+    var api = {
+      el: el, bg: el,
+      close: function () {
+        var at = modalStack.indexOf(api);
+        if (at >= 0) modalStack.splice(at, 1);
+        if (el.parentNode) el.parentNode.removeChild(el);
+        if (onClose) onClose();
+      }
+    };
+    modalStack.push(api);
+    MX.layer().appendChild(el);
+    return api;
+  };
   // Close the top-most open modal (Android Back button). Returns true if one was closed.
   MX.closeTopModal = function () {
     while (modalStack.length) {

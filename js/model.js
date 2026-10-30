@@ -5,7 +5,8 @@
 
   var DEF_SETTINGS = {
     acceptTouch: false, inkWidth: 'mid', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'm', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
-    name: '', perf: false, pressure: 'auto', autoNext: true, touchPrompted: false
+    name: '', perf: false, pressure: 'auto', autoNext: true, touchPrompted: false,
+    edgeBottom: '3.5', edgeSide: '1', exp: null
   };
   var DEF_CFG = {
     script: 'trad', mode: 'trace', grid: 'mi', box: true, guide: true, size: 'M', dir: 'v', punct: 'hide',
@@ -42,13 +43,22 @@
       if (!(sv >= 1)) Store.set('schema', 1);
       M.settings = assign({}, DEF_SETTINGS, Store.get('settings'));
       if (M.settings.tplStyle === 'dotted') M.settings.tplStyle = 'dots';   // older builds: dotted outline -> halftone dots
+      M.applyEdge();
       M.copies = {};
       Store.keys('copy:').forEach(function (k) {
         var c = Store.get(k);
         if (c && c.id) { c.cfg = assign({}, DEF_CFG, normCfg(c.cfg)); M.copies[c.id] = c; }
       });
     },
-    saveSettings: function () { Store.set('settings', M.settings); },
+    saveSettings: function () { Store.set('settings', M.settings); M.applyEdge(); },
+    // Edge safe margins as CSS variables so toolbars, dialogs and scrolling screens keep clear of the screen edge too (see Layout.insets).
+    applyEdge: function () {
+      try {
+        var e = MX.Layout.edgePct(M.settings), st = document.documentElement.style;
+        st.setProperty('--edge-b', e.b + 'vh'); st.setProperty('--edge-t', e.s + 'vh');
+        st.setProperty('--edge-l', e.s + 'vw'); st.setProperty('--edge-r', e.s + 'vw');
+      } catch (e) { MX.err(e); }
+    },
     textCfg: function (textId) { var s = Store.get('textcfg:' + textId); return assign({}, DEF_CFG, s ? normCfg(assign({}, s)) : s); },
     saveTextCfg: function (textId, cfg) { Store.set('textcfg:' + textId, assign({}, cfg)); },
 

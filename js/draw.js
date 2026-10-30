@@ -50,11 +50,11 @@
   }
   // Paint ink segments k0..k1 of a flat [x,y,p,...] stroke (cell-local 0..1000 units).
   // ox,oy = cell origin in px; sc = px per unit. fin=true also paints the closing segment.
-  D.paint = function (ctx, pts, ox, oy, sc, k0, k1, fin, base) {
+  D.paint = function (ctx, pts, ox, oy, sc, k0, k1, fin, base, color) {
     var n = pts.length / 3;
     if (!n) return;
     ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-    ctx.strokeStyle = '#000'; ctx.fillStyle = '#000';
+    ctx.strokeStyle = color || '#000'; ctx.fillStyle = color || '#000';
     if (n === 1) {
       if (fin) {
         ctx.beginPath();
@@ -91,8 +91,8 @@
       ctx.stroke();
     }
   };
-  D.paintFull = function (ctx, pts, ox, oy, sc, base) {
-    D.paint(ctx, pts, ox, oy, sc, 1, pts.length / 3 - 1, true, base);
+  D.paintFull = function (ctx, pts, ox, oy, sc, base, color) {
+    D.paint(ctx, pts, ox, oy, sc, 1, pts.length / 3 - 1, true, base, color);
   };
 
   // Ordered-dither (Bayer 4x4) halftone: the glyph becomes pure black device pixels (alpha 0 or 255), so a 1-bit e-ink mode keeps it.

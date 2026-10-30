@@ -180,7 +180,7 @@
           var txt = await MX.Library.getText(c.textId);
           Model.loadInk(c);
           var cells = MX.Layout.buildCells(txt, c.cfg, c.signStr);
-          MX.Export.openSheet(MX.Export.ctx(c, txt, cells), 0, window.innerWidth < window.innerHeight);
+          MX.Export.openSheet(MX.Export.ctx(c, txt, cells));
         } }),
         h('button', { text: '刪除', 'data-act': 'delete', onclick: async function () {
           var ok = await MX.confirm('刪除這份存檔？無法復原。', '刪除', '刪除存檔');

@@ -148,7 +148,10 @@
     var r = S.stage.getBoundingClientRect();
     var W = Math.floor(r.width), H = Math.floor(r.height);
     if (W < 40 || H < 40) return;
-    S.g = Layout.grid(W, H, S.cfg);
+    // keep every cell clear of the screen-edge dead zone (pen digitizer / system gestures): margins only where the stage touches the viewport edge
+    var vw = window.innerWidth, vh = window.innerHeight;
+    S.inset = Layout.insets(settings(), vw, vh, { left: r.left < 2, top: r.top < 2, right: r.right > vw - 2, bottom: r.bottom > vh - 2 });
+    S.g = Layout.grid(W, H, S.cfg, S.inset);
     S.pages = Layout.paginate(S.cells, S.g.perPage);
     S.dpr = Math.min(window.devicePixelRatio || 1, settings().perf ? 1 : 2);
     // The grid/template canvas uses the real device pixel ratio (up to 3) so 1-device-pixel dots map 1:1 to screen pixels; resampling would
@@ -552,7 +555,7 @@
     var seq = S.token;
     S.timers.next = setTimeout(function () {
       if (!S || S.token !== seq || S.active !== null) return;
-      S.nextBtn = h('button', { class: 'nextbtn', 'data-act': 'autonext', text: '下一頁 ▶', onclick: function () { goRel(1); } });
+      S.nextBtn = h('button', { class: 'nextbtn', 'data-act': 'autonext', text: '下一頁 ▶', style: 'bottom:' + (12 + ((S.inset && S.inset.b) || 0)) + 'px', onclick: function () { goRel(1); } });
       S.stage.appendChild(S.nextBtn);
     }, 3000);
   }
@@ -576,7 +579,7 @@
   // ------------------------------------------------------------------ sheets
   function cp() { return MX.Export.ctx(S.copy, S.text, S.cells); }
   function openExport() {
-    MX.Export.openSheet(cp(), S.pageIdx, S.g.portrait);
+    MX.Export.openSheet(cp());
   }
   function openSettings() {
     if (!S) return;
@@ -596,7 +599,7 @@
     MX.modal({
       title: '設定', body: body,
       buttons: [
-        { label: '匯出圖片', act: 'export', onClick: function () { openExport(); } },
+        { label: '匯出作品', act: 'export', onClick: function () { openExport(); } },
         { label: '新抄一遍', act: 'newcopy', onClick: function () { newCopy(); } },
         { label: '完成', act: 'done', primary: true }
       ]
@@ -620,7 +623,7 @@
       title: '圓滿完成',
       body: [h('p', { text: '這是第 ' + n + ' 遍。用時約 ' + MX.fmtDuration(c.activeMs) + '。' })],
       buttons: [
-        { label: '匯出圖片', act: 'export', onClick: function () { if (S) openExport(); } },
+        { label: '匯出作品', act: 'export', onClick: function () { if (S) openExport(); } },
         { label: '新抄一遍', act: 'newcopy', onClick: function () { newCopy(); } },
         { label: '繼續', act: 'continue', primary: true }
       ]
@@ -637,7 +640,7 @@
         cells.push({ slot: s, idx: idx, ch: idx >= 0 ? S.cells[idx].ch : '', punct: idx >= 0 ? S.cells[idx].punct : '',
           col: o.col, row: o.row, x: r.left + o.x, y: r.top + o.y, size: g.cell });
       });
-      return { page: S.pageIdx, pages: S.pages.length, cols: g.cols, rows: g.rows, cell: g.cell, dir: g.dir, portrait: g.portrait,
+      return { page: S.pageIdx, pages: S.pages.length, inset: g.inset, stage: [g.W, g.H], gx: g.ox, gy: g.oy, cols: g.cols, rows: g.rows, cell: g.cell, dir: g.dir, portrait: g.portrait,
         perPage: g.perPage, total: S.cells.length, filled: S.copy.filled, cells: cells, copyId: S.copy.id, completed: !!S.copy.completedAt,
         mode: S.cfg.mode, nextBtn: !!S.nextBtn, pressureSeen: S.pressureSeen, hint: S.hint };
     },
