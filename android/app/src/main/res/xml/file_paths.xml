@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FileProvider paths: only the downloaded update APK (getExternalFilesDir(DIRECTORY_DOWNLOADS)/moxie-update.apk) is ever shared. -->
+<paths>
+    <external-files-path name="updates" path="Download/" />
+</paths>

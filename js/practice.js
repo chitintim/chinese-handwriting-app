@@ -9,7 +9,9 @@
   function keepOn(v) {
     try { var b = bridge(); if (b && typeof b.keepScreenOn === 'function') b.keepScreenOn(!!v); } catch (e) { MX.err(e); }
   }
-  function inkBase() { return Draw.INK_W[settings().inkWidth] || Draw.INK_W.mid; }
+  function inkStyle() { return MX.Ink.style(settings()); }
+  var Ink = MX.Ink;
+  var stats = { full: 0, region: 0, paints: 0, clears: 0 };     // instrumentation (tests): full-page ink redraws vs. region repaints
 
   // ------------------------------------------------------------------ show / hide
   var P = MX.Practice = {
@@ -20,7 +22,7 @@
       if (!copy) { location.hash = '#/'; return; }
       if (copy.status === 'archived') opts = { readOnly: true };   // e.g. Back after 新抄一遍: never edit an archived copy
       var text;
-      try { text = await MX.Library.getText(copy.textId); } catch (e) {
+      try { text = await MX.Library.getView(copy.textId, Model.sid(copy)); } catch (e) {
         root.appendChild(h('div', { class: 'screen' }, [h('h1', { text: '無法載入文本' }), h('p', { text: String(e.message || e) }),
           h('button', { text: '返回', onclick: function () { location.hash = '#/'; } })]));
         return;
@@ -38,7 +40,7 @@
         root: h('div', { class: 'practice' }), copy: copy, text: text, cells: cells, readOnly: !!(opts && opts.readOnly),
         cfg: copy.cfg, g: null, pages: [], pageIdx: 0, slotOf: {}, dpr: 1, token: 0,
         active: null, stroke: null, erasing: null, ops: [], focus: -1, penSeen: false, lastPen: 0, tick: 0,
-        pressureSeen: false, lastP: 0, hint: -1, timers: {}, nextBtn: null, banner: null, rect: null, listeners: []
+        cap: new Ink.Sampler(), rawOk: false, hint: -1, timers: {}, nextBtn: null, banner: null, rect: null, listeners: []
       };
       root.appendChild(S.root);
       S.bar = h('div', { class: 'pbar' });
@@ -77,6 +79,10 @@
   function attach() {
     var ink = S.ink;
     on(ink, 'pointerdown', onDown);
+    // pointerrawupdate (Chrome 77+, secure contexts) delivers every digitizer sample as it arrives, ahead of the frame-aligned pointermove;
+    // without it pointermove's coalesced events carry the same samples. Both are fed through the Sampler, which drops what it already has.
+    S.rawOk = 'onpointerrawupdate' in window;
+    if (S.rawOk) on(ink, 'pointerrawupdate', onMove);
     on(ink, 'pointermove', onMove);
     on(ink, 'pointerup', onUp);
     on(ink, 'pointercancel', onUp);
@@ -137,7 +143,7 @@
     if (S.cfg.mode === 'recall') bar.appendChild(btn('提示', 'hint', hint));
     bar.appendChild(btn('刷新', 'refresh', function () { refresh(); }));
     bar.appendChild(btn('設定', 'settings', openSettings));
-    bar.appendChild(btn('返回', 'back', function () { flush(); location.hash = '#/'; }));
+    bar.appendChild(btn('返回', 'back', function () { flush(); location.hash = MX.Screens.backFor(S.copy.textId); }));
   }
 
   function layout() {
@@ -153,17 +159,17 @@
     S.inset = Layout.insets(settings(), vw, vh, { left: r.left < 2, top: r.top < 2, right: r.right > vw - 2, bottom: r.bottom > vh - 2 });
     S.g = Layout.grid(W, H, S.cfg, S.inset);
     S.pages = Layout.paginate(S.cells, S.g.perPage);
-    S.dpr = Math.min(window.devicePixelRatio || 1, settings().perf ? 1 : 2);
-    // The grid/template canvas uses the real device pixel ratio (up to 3) so 1-device-pixel dots map 1:1 to screen pixels; resampling would
-    // turn them grey (and a fast e-ink mode would drop them). The ink canvas keeps the cheaper cap.
-    S.bdpr = Math.min(window.devicePixelRatio || 1, settings().perf ? 1 : 3);
-    [[S.bg, S.bdpr], [S.ink, S.dpr]].forEach(function (a) {
-      var c = a[0];
+    // Both canvases use the real device pixel ratio (up to 3; 2.625 on the iReader) so one canvas pixel is one screen pixel: the 1-device-pixel
+    // dots of the grid stay black (resampling would turn them grey and a fast e-ink mode would drop them) and ink edges are not blurred by a
+    // 1.31x upscale. Performance mode renders at 1x. The ink transform uses the exact canvas/CSS ratio (Math.round of W * dpr is not exact).
+    S.dpr = S.bdpr = Math.min(window.devicePixelRatio || 1, settings().perf ? 1 : 3);
+    [S.bg, S.ink].forEach(function (c) {
       c.style.width = W + 'px'; c.style.height = H + 'px';
-      c.width = Math.round(W * a[1]); c.height = Math.round(H * a[1]);
+      c.width = Math.round(W * S.dpr); c.height = Math.round(H * S.dpr);
     });
+    S.kx = S.ink.width / W; S.ky = S.ink.height / H;
     S.bgx.setTransform(S.bdpr, 0, 0, S.bdpr, 0, 0);
-    S.inkx.setTransform(S.dpr, 0, 0, S.dpr, 0, 0);
+    S.inkx.setTransform(S.kx, 0, 0, S.ky, 0, 0);
     S.pageIdx = pageOf(S.copy.pos || 0);
     renderPage();
   }
@@ -195,17 +201,17 @@
     page.forEach(function (idx, s) { if (idx >= 0) S.slotOf[idx] = s; });
     hideNext();
     drawBg(false);
-    if (Draw.fontsLoaded(S.cfg.script, settings().tplFont)) drawBg(true);
-    else {
-      var chars = page.map(function (i) { return i >= 0 ? S.cells[i].ch + S.cells[i].punct : ''; }).join('');
-      Draw.fontsReady(S.cfg.script, chars, settings().tplFont).then(function () { if (S && tk === S.token) drawBg(true); });
-    }
+    // the fonts are unicode-range chunks: what has to be loaded depends on the characters of this page
+    var chars = page.map(function (i) { return i >= 0 ? S.cells[i].ch + S.cells[i].punct : ''; }).join(''), all = !!S.text.custom;
+    if (Draw.fontsLoaded(S.cfg.script, settings().tplFont, chars, all)) drawBg(true);
+    else Draw.fontsReady(S.cfg.script, chars, settings().tplFont, all).then(function () { if (S && tk === S.token) drawBg(true); });
     redrawInk();
     updateUi();
     S.root.setAttribute('data-page', S.pageIdx);
   }
   function redrawInk() {
-    var g = S.g, ctx = S.inkx, base = inkBase();
+    var g = S.g, ctx = S.inkx, style = inkStyle();
+    stats.full++;
     ctx.clearRect(0, 0, g.W, g.H);
     var page = S.pages[S.pageIdx];
     for (var s = 0; s < page.length; s++) {
@@ -214,7 +220,7 @@
       var strokes = S.copy.ink[idx];
       if (!strokes) continue;
       var o = slotOrigin(s);
-      for (var i = 0; i < strokes.length; i++) Draw.paintFull(ctx, strokes[i], o.x, o.y, g.cell / 1000, base);
+      for (var i = 0; i < strokes.length; i++) Ink.paintStroke(ctx, strokes[i], o.x, o.y, g.cell / 1000, style, '#000', { px: S.kx });
     }
   }
   function updateUi() {
@@ -272,30 +278,18 @@
     }
     S.tick = now;
   }
-  function pressureOf(ev) {
-    if (ev.pointerType !== 'pen' || settings().pressure === 'off') return 500;
-    var pr = ev.pressure;
-    if (pr > 0 && pr !== 0.5) S.pressureSeen = true;
-    if (!S.pressureSeen) return 500;
-    if (!(pr > 0)) return S.lastP || 500;
-    var p = Math.round(pr * 1000);
-    if (S.lastP) p = Math.round(S.lastP * 0.4 + p * 0.6);
-    S.lastP = p;
-    return p;
+  // ---- samples -> ink. The Sampler turns events (coalesced, de-duplicated, never predicted) into stored integer samples
+  // [x, y, p, tx, ty, t]; the Ink.Builder of the stroke paints each new sample incrementally.
+  function mapFor(st) {
+    return function (ev) {
+      var g = S.g;
+      return [Math.round((ev.clientX - S.rect.left - st.cx) / g.cell * 1000), Math.round((ev.clientY - S.rect.top - st.cy) / g.cell * 1000)];
+    };
   }
-  function addPoint(ev) {
-    var st = S.stroke, g = S.g;
-    var lx = Math.round((ev.clientX - S.rect.left - st.cx) / g.cell * 1000);
-    var ly = Math.round((ev.clientY - S.rect.top - st.cy) / g.cell * 1000);
-    var n = st.pts.length;
-    if (n >= 3 && st.pts[n - 3] === lx && st.pts[n - 2] === ly) return false;
-    st.pts.push(lx, ly, pressureOf(ev));
-    return true;
-  }
-  function paintNew(fin) {
-    var st = S.stroke, n = st.pts.length / 3;
-    Draw.paint(S.inkx, st.pts, st.cx, st.cy, S.g.cell / 1000, st.drawn + 1, n - 1, fin, inkBase());
-    st.drawn = n - 1;
+  function feed() {
+    var st = S.stroke, pts = S.cap.pts, n = pts.length / 6, k;
+    for (k = st.fed; k < n; k++) st.pen.add(pts[k * 6], pts[k * 6 + 1], pts[k * 6 + 2], pts[k * 6 + 3], pts[k * 6 + 4], pts[k * 6 + 5]);
+    if (n > st.fed) { st.fed = n; st.pen.draw(); stats.paints++; }
   }
   function allowed(e) {
     if (e.pointerType === 'pen') return true;
@@ -336,17 +330,12 @@
       return;
     }
     var o = slotOrigin(S.slotOf[idx]);
-    S.stroke = { idx: idx, cx: o.x, cy: o.y, pts: [], drawn: 0 };
-    S.lastP = 0;
-    addPoint(e);
-    paintNew(false);
-  }
-  function events(e) {
-    var list = null;
-    if (typeof e.getCoalescedEvents === 'function') {
-      try { list = e.getCoalescedEvents(); } catch (x) { list = null; }
-    }
-    return list && list.length ? list : [e];
+    S.cap.reset();
+    S.stroke = { idx: idx, cx: o.x, cy: o.y, fed: 0, style: inkStyle() };
+    S.stroke.map = mapFor(S.stroke);
+    S.stroke.pen = Ink.pen(S.inkx, o.x, o.y, S.g.cell / 1000, S.stroke.style, { px: S.kx });
+    S.cap.take(e, S.stroke.map);
+    feed();
   }
   function onMove(e) {
     if (!S) return;
@@ -354,25 +343,19 @@
     if (S.active === null || e.pointerId !== S.active) return;
     S.lastEv = Date.now();
     tickTime(false);
-    var evs = events(e), i;
+    var evs = Ink.Sampler.events(e), i;
     if (S.erasing) {
       for (i = 0; i < evs.length; i++) eraseAt(evs[i].clientX - S.rect.left, evs[i].clientY - S.rect.top);
       return;
     }
-    var added = false;
-    for (i = 0; i < evs.length; i++) if (addPoint(evs[i])) added = true;
-    if (added) paintNew(false);
+    if (S.cap.take(e, S.stroke.map)) feed();
   }
   function onUp(e) {
     if (!S || S.active === null || e.pointerId !== S.active) return;
     if (e.type === 'pointerup' && S.stroke) {
       tickTime(false);
-      var st = S.stroke, p = st.pts.length;
-      // final position (pressure of the up event is meaningless -> reuse last)
-      var lp = p ? st.pts[p - 1] : 500;
-      var lx = Math.round((e.clientX - S.rect.left - st.cx) / S.g.cell * 1000);
-      var ly = Math.round((e.clientY - S.rect.top - st.cy) / S.g.cell * 1000);
-      if (p && (st.pts[p - 3] !== lx || st.pts[p - 2] !== ly)) st.pts.push(lx, ly, lp);
+      S.cap.end(e, S.stroke.map);       // the final position is always kept: pen-up flushes the stroke to where the pen really stopped
+      feed();
     }
     finish(false);
   }
@@ -387,16 +370,38 @@
     var st = S.stroke;
     if (!st) return;
     S.stroke = null;
-    if (!st.pts.length) return;
-    if (cancelled && wasType !== 'pen') { redrawInk(); return; }   // a pen took over from a touch/palm stroke: drop it
-    Draw.paint(S.inkx, st.pts, st.cx, st.cy, S.g.cell / 1000, st.drawn + 1, st.pts.length / 3 - 1, true, inkBase());
+    var pts = S.cap.pts.slice();      // flat samples [x, y, p, tx, ty, t, ...] (absolute, integers)
+    if (!pts.length) return;
+    if (cancelled && wasType !== 'pen') { repaintRect(strokeRect(st, pts)); return; }   // a pen took over from a touch/palm stroke: drop it
+    // learn the pen's pressure floor from the first strokes (settings.pressFloor), before the final shape is rendered
+    if (S.cap.pressureSeen && settings().pressure !== 'off' && pts.length >= 24 && Ink.learn(settings(), S.cap.minP)) Model.saveSettings();
     var arr = S.copy.ink[st.idx] || (S.copy.ink[st.idx] = []);
-    arr.push(st.pts);
-    pushOp({ k: 'add', cell: st.idx, stroke: st.pts });
+    arr.push(pts);
+    // pen-up polish: re-render just this stroke's bounding box from the stored samples (clean taper, full-lookahead smoothing); never the page
+    repaintRect(strokeRect(st, pts));
+    pushOp({ k: 'add', cell: st.idx, stroke: pts });
     Model.markDirty(S.copy, st.idx);
     scheduleSave();
     afterChange();
     armNext();
+  }
+  // ---- region repaint: clear a rectangle of the ink canvas and repaint the strokes that reach into it (no full-page redraw)
+  function strokeRect(st, pts) {
+    return Ink.bounds(pts, st.cx, st.cy, S.g.cell / 1000, inkStyle(), S.kx);
+  }
+  function repaintRect(rect) {
+    var g = S.g, page = S.pages[S.pageIdx], items = [], s, idx, strokes, i, o;
+    for (s = 0; s < page.length; s++) {
+      idx = page[s];
+      if (idx < 0) continue;
+      strokes = S.copy.ink[idx];
+      if (!strokes || !strokes.length) continue;
+      o = slotOrigin(s);
+      if (o.x + g.cell * 1.4 < rect.x0 || o.x - g.cell * 0.4 > rect.x1 || o.y + g.cell * 1.4 < rect.y0 || o.y - g.cell * 0.4 > rect.y1) continue;
+      for (i = 0; i < strokes.length; i++) items.push({ st: strokes[i], ox: o.x, oy: o.y, sc: g.cell / 1000 });
+    }
+    stats.region++;
+    return Ink.repaintRegion(S.inkx, S.kx, S.ky, rect, items, inkStyle(), S.kx);
   }
   function pushOp(op) { S.ops.push(op); if (S.ops.length > 400) S.ops.shift(); }
   function afterChange() {
@@ -406,11 +411,11 @@
 
   // ------------------------------------------------------------------ erasing
   function strokeHit(pts, ox, oy, sc, x, y, r) {
-    var n = pts.length / 3, i;
+    var n = pts.length / 6, i;
     var px = ox + pts[0] * sc, py = oy + pts[1] * sc;
     if (n === 1) return Math.sqrt((x - px) * (x - px) + (y - py) * (y - py)) <= r;
     for (i = 1; i < n; i++) {
-      var qx = ox + pts[i * 3] * sc, qy = oy + pts[i * 3 + 1] * sc;
+      var qx = ox + pts[i * 6] * sc, qy = oy + pts[i * 6 + 1] * sc;
       var dx = qx - px, dy = qy - py, l2 = dx * dx + dy * dy, t = l2 ? ((x - px) * dx + (y - py) * dy) / l2 : 0;
       t = t < 0 ? 0 : (t > 1 ? 1 : t);
       var cx = px + t * dx - x, cy = py + t * dy - y;
@@ -420,7 +425,7 @@
     return false;
   }
   function eraseAt(x, y) {
-    var g = S.g, page = S.pages[S.pageIdx], r = Math.max(10, g.cell * 0.05), removed = false;
+    var g = S.g, page = S.pages[S.pageIdx], r = Math.max(10, g.cell * 0.05), removed = null, style = inkStyle();
     for (var s = 0; s < page.length; s++) {
       var idx = page[s];
       if (idx < 0) continue;
@@ -431,13 +436,13 @@
       for (var i = strokes.length - 1; i >= 0; i--) {
         if (strokeHit(strokes[i], o.x, o.y, g.cell / 1000, x, y, r)) {
           S.erasing.items.push({ cell: idx, index: i, stroke: strokes[i] });
+          removed = Ink.union(removed, Ink.bounds(strokes[i], o.x, o.y, g.cell / 1000, style, S.kx));
           strokes.splice(i, 1);
           Model.markDirty(S.copy, idx);
-          removed = true;
         }
       }
     }
-    if (removed) { redrawInk(); }
+    if (removed) repaintRect(removed);
   }
 
   // ------------------------------------------------------------------ toolbar actions
@@ -611,22 +616,31 @@
     var ok = await MX.confirm(msg, '新抄一遍', '新抄一遍');
     if (!ok || !S) return;
     Model.archive(c);
-    location.replace('#/setup/' + c.textId + '?new=1');   // replace: Back must not return to the archived copy
+    location.replace(MX.Screens.hash('setup', c.textId, Model.sid(c), 'new=1'));   // replace: Back must not return to the archived copy
   }
   function complete() {
     var c = S.copy;
     c.completedAt = Date.now();
     Model.flush(c);
     Model.addDone(c);
-    var n = Model.doneCount(c.textId);
+    var n = Model.doneCount(c.textId, Model.sid(c));       // of this section
+    var secs = S.text.sections || [], at = secs.indexOf(Model.sid(c)), nextSec = at >= 0 && at < secs.length - 1 ? secs[at + 1] : null;
+    var buttons = [
+      { label: '匯出作品', act: 'export', onClick: function () { if (S) openExport(); } },
+      { label: '新抄一遍', act: 'newcopy', onClick: function () { newCopy(); } }
+    ];
+    if (nextSec) {
+      buttons.push({ label: '下一章', act: 'nextsec', onClick: function () {
+        var nc = Model.activeCopy(c.textId, nextSec);
+        flush();
+        location.hash = nc ? MX.Screens.hash('practice', nc.id) : MX.Screens.hash('setup', c.textId, nextSec);
+      } });
+    }
+    buttons.push({ label: '繼續', act: 'continue', primary: true });
     MX.modal({
       title: '圓滿完成',
       body: [h('p', { text: '這是第 ' + n + ' 遍。用時約 ' + MX.fmtDuration(c.activeMs) + '。' })],
-      buttons: [
-        { label: '匯出作品', act: 'export', onClick: function () { if (S) openExport(); } },
-        { label: '新抄一遍', act: 'newcopy', onClick: function () { newCopy(); } },
-        { label: '繼續', act: 'continue', primary: true }
-      ]
+      buttons: buttons
     });
   }
 
@@ -642,9 +656,12 @@
       });
       return { page: S.pageIdx, pages: S.pages.length, inset: g.inset, stage: [g.W, g.H], gx: g.ox, gy: g.oy, cols: g.cols, rows: g.rows, cell: g.cell, dir: g.dir, portrait: g.portrait,
         perPage: g.perPage, total: S.cells.length, filled: S.copy.filled, cells: cells, copyId: S.copy.id, completed: !!S.copy.completedAt,
-        mode: S.cfg.mode, nextBtn: !!S.nextBtn, pressureSeen: S.pressureSeen, hint: S.hint };
+        mode: S.cfg.mode, nextBtn: !!S.nextBtn, pressureSeen: S.cap.pressureSeen, hint: S.hint, rawOk: S.rawOk, kx: S.kx, ky: S.ky, dpr: S.dpr,
+        inkSize: [S.ink.width, S.ink.height], inkCss: [S.ink.style.width, S.ink.style.height] };
     },
     flipMs: 0,
+    stats: function () { return { full: stats.full, region: stats.region, paints: stats.paints }; },
+    style: function () { return inkStyle(); },
     relayout: function () { if (S) layout(); },
     go: go,
     cellsAll: function () { return S ? S.cells.map(function (c) { return c.ch; }).join('') : ''; },

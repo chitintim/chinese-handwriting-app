@@ -4,9 +4,10 @@
   var Store = MX.Store;
 
   var DEF_SETTINGS = {
-    acceptTouch: false, inkWidth: 'mid', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'm', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
+    acceptTouch: false, inkWidth: 'mid', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'md', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
     name: '', perf: false, pressure: 'auto', autoNext: true, touchPrompted: false,
-    edgeBottom: '3.5', edgeSide: '1', exp: null
+    brush: 'mao', curve: 'mid', stab: 'light', pressFloor: 0, pressN: 0,
+    edgeBottom: '3.5', edgeSide: '1', exp: null, libScript: 'trad'
   };
   var DEF_CFG = {
     script: 'trad', mode: 'trace', grid: 'mi', box: true, guide: true, size: 'M', dir: 'v', punct: 'hide',
@@ -29,26 +30,46 @@
     }
     return t;
   }
-  var META = ['id', 'textId', 'status', 'createdAt', 'updatedAt', 'cfg', 'signStr', 'pos', 'activeMs',
+  var META = ['id', 'textId', 'sectionId', 'status', 'createdAt', 'updatedAt', 'cfg', 'signStr', 'pos', 'activeMs',
     'filled', 'total', 'completedAt', 'archivedAt'];
 
   var M = MX.Model = {
     CONTENT_KEYS: CONTENT_KEYS, normCfg: normCfg, DEF_CFG: DEF_CFG, DEF_SETTINGS: DEF_SETTINGS,
     copies: {},
 
+    // Library sections: a copy / completion record without sectionId (everything stored before the multi-text library) belongs to section 'main'.
+    sid: function (c) { return (c && c.sectionId) || 'main'; },
+    SCHEMA: 2,
+
     init: function () {
-      // Stored-data schema marker. Records only ever gain optional fields (defaults are merged below), so
-      // schema 1 needs no migration; put future migrations here, keyed on the stored value.
+      // Stored-data schema marker. Records only ever gain optional fields (defaults are merged below).
+      //   1 -> 2: copy:* and done:* records get sectionId 'main' (the heart sutra's only section; nothing else existed before); the template glyph size
+      //           default moved from 中 0.70 (key 'm') to 中 0.75 (key 'md'), so a stored 'm' (the old default) becomes 'md'. Ink, cfg and tallies are untouched.
       var sv = Store.get('schema');
-      if (!(sv >= 1)) Store.set('schema', 1);
+      if (!(sv >= M.SCHEMA)) M.migrate(sv || 0);
       M.settings = assign({}, DEF_SETTINGS, Store.get('settings'));
       if (M.settings.tplStyle === 'dotted') M.settings.tplStyle = 'dots';   // older builds: dotted outline -> halftone dots
       M.applyEdge();
       M.copies = {};
       Store.keys('copy:').forEach(function (k) {
         var c = Store.get(k);
-        if (c && c.id) { c.cfg = assign({}, DEF_CFG, normCfg(c.cfg)); M.copies[c.id] = c; }
+        if (c && c.id) { c.cfg = assign({}, DEF_CFG, normCfg(c.cfg)); if (!c.sectionId) c.sectionId = 'main'; M.copies[c.id] = c; }
       });
+    },
+    migrate: function (from) {
+      if (from < 2) {
+        var st = Store.get('settings');
+        if (st && st.tplSize === 'm') { st.tplSize = 'md'; Store.set('settings', st); }
+        Store.keys('copy:').forEach(function (k) {
+          var c = Store.get(k);
+          if (c && !c.sectionId) { c.sectionId = 'main'; Store.set(k, c); }
+        });
+        Store.keys('done:').forEach(function (k) {
+          var d = Store.get(k);
+          if (d && !d.sectionId) { d.sectionId = 'main'; Store.set(k, d); }
+        });
+      }
+      Store.set('schema', M.SCHEMA);
     },
     saveSettings: function () { Store.set('settings', M.settings); M.applyEdge(); },
     // Edge safe margins as CSS variables so toolbars, dialogs and scrolling screens keep clear of the screen edge too (see Layout.insets).
@@ -62,28 +83,40 @@
     textCfg: function (textId) { var s = Store.get('textcfg:' + textId); return assign({}, DEF_CFG, s ? normCfg(assign({}, s)) : s); },
     saveTextCfg: function (textId, cfg) { Store.set('textcfg:' + textId, assign({}, cfg)); },
 
-    activeCopy: function (textId) {
-      var best = null;
+    // Copies are keyed by text + section (+ script, which lives in cfg.script): at most one active copy per section is shown in the UI.
+    // sectionId defaults to 'main'; script is optional (any script).
+    activeCopy: function (textId, sectionId, script) {
+      var best = null, sec = sectionId || 'main';
       Object.keys(M.copies).forEach(function (id) {
         var c = M.copies[id];
-        if (c.textId === textId && c.status === 'active' && (!best || c.createdAt > best.createdAt)) best = c;
+        if (c.textId === textId && M.sid(c) === sec && c.status === 'active' && (!script || c.cfg.script === script) && (!best || c.createdAt > best.createdAt)) best = c;
       });
       return best;
     },
-    archived: function (textId) {
+    // sectionId undefined = all sections of the text
+    archived: function (textId, sectionId) {
       return Object.keys(M.copies).map(function (id) { return M.copies[id]; })
-        .filter(function (c) { return c.textId === textId && c.status === 'archived'; })
+        .filter(function (c) { return c.textId === textId && c.status === 'archived' && (!sectionId || M.sid(c) === sectionId); })
         .sort(function (a, b) { return (b.archivedAt || 0) - (a.archivedAt || 0); });
     },
-    doneCount: function (textId) {
-      return Store.keys('done:').filter(function (k) { var d = Store.get(k); return d && d.textId === textId; }).length;
+    doneCount: function (textId, sectionId, script) {
+      return Store.keys('done:').filter(function (k) {
+        var d = Store.get(k);
+        return d && d.textId === textId && (!sectionId || (d.sectionId || 'main') === sectionId) && (!script || d.script === script);
+      }).length;
     },
     doneList: function () { return Store.keys('done:').map(function (k) { return Store.get(k); }); },
+    // active copies, most recently written first (the home screen's 繼續 rows)
+    recent: function () {
+      return Object.keys(M.copies).map(function (id) { return M.copies[id]; })
+        .filter(function (c) { return c.status === 'active' && c.filled > 0 && !c.completedAt; })
+        .sort(function (a, b) { return (b.updatedAt || 0) - (a.updatedAt || 0); });
+    },
 
-    create: function (textId, cfg, signStr, total) {
+    create: function (textId, cfg, signStr, total, sectionId) {
       var now = Date.now();
       var c = {
-        id: MX.uid(), textId: textId, status: 'active', createdAt: now, updatedAt: now,
+        id: MX.uid(), textId: textId, sectionId: sectionId || 'main', status: 'active', createdAt: now, updatedAt: now,
         cfg: assign({}, DEF_CFG, cfg), signStr: signStr || '', pos: 0, activeMs: 0,
         filled: 0, total: total || 0, completedAt: null, archivedAt: null
       };
@@ -98,8 +131,9 @@
       c.ink = {};
       var pre = 'ink:' + c.id + ':';
       Store.keys(pre).forEach(function (k) {
-        var v = Store.get(k);
-        if (v && v.length) c.ink[k.slice(pre.length)] = v;
+        var v = Store.get(k), a = [];
+        if (v && v.length) v.forEach(function (st) { var d = MX.Ink.decode(st); if (d) a.push(d); });   // v1 flat [x,y,p] and v2 {v:2,d} strokes -> in-memory stride-6
+        if (a.length) c.ink[k.slice(pre.length)] = a;
       });
       return c;
     },
@@ -126,7 +160,7 @@
       if (c._dirty) {
         Object.keys(c._dirty).forEach(function (idx) {
           var key = 'ink:' + c.id + ':' + idx, v = c.ink[idx];
-          if (v && v.length) Store.set(key, v); else Store.del(key);
+          if (v && v.length) Store.set(key, v.map(MX.Ink.encode)); else Store.del(key);   // stored as v2 {v:2,d} strokes
         });
         c._dirty = null;
       }
@@ -144,7 +178,7 @@
     },
     addDone: function (c) {
       var d = {
-        id: MX.uid(), copyId: c.id, textId: c.textId, script: c.cfg.script, mode: c.cfg.mode,
+        id: MX.uid(), copyId: c.id, textId: c.textId, sectionId: M.sid(c), script: c.cfg.script, mode: c.cfg.mode,
         date: new Date().toISOString(), ts: Date.now(), duration: c.activeMs
       };
       Store.set('done:' + d.id, d);

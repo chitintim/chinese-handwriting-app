@@ -1,0 +1,31 @@
+{
+ "id": "loushi-ming",
+ "title": {
+  "trad": "陋室銘",
+  "simp": "陋室铭"
+ },
+ "author": {
+  "trad": "劉禹錫",
+  "simp": "刘禹锡"
+ },
+ "dynasty": {
+  "trad": "唐",
+  "simp": "唐"
+ },
+ "source": "https://zh.wikisource.org/wiki/陋室銘",
+ "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/陋室銘",
+ "notes": "唐劉禹錫作，81字（不含標點）。取自維基文庫（全唐文／古文觀止本）。",
+ "sections": [
+  {
+   "id": "main",
+   "title": {
+    "trad": "陋室銘",
+    "simp": "陋室铭"
+   },
+   "body": {
+    "trad": "山不在高，有仙則名。水不在深，有龍則靈。斯是陋室，惟吾德馨。苔痕上階綠，草色入簾青。談笑有鴻儒，往來無白丁。可以調素琴，閱金經。無絲竹之亂耳，無案牘之勞形。南陽諸葛廬，西蜀子雲亭。孔子云：何陋之有？",
+    "simp": "山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟吾德馨。苔痕上阶绿，草色入帘青。谈笑有鸿儒，往来无白丁。可以调素琴，阅金经。无丝竹之乱耳，无案牍之劳形。南阳诸葛庐，西蜀子云亭。孔子云：何陋之有？"
+   }
+  }
+ ]
+}

@@ -8,6 +8,7 @@
   var pending = 0, waiters = [];
   var idbBad = false;       // an IndexedDB write failed: further writes also go to localStorage (merged back on next start)
   var warned = false;
+  var LOCAL_ONLY = /^(ota|sys):/;
 
   function open() {
     return new Promise(function (res, rej) {
@@ -115,8 +116,9 @@
     del: function (k) { delete mem[k]; persist(k, null, true); },
     keys: function (prefix) { return Object.keys(mem).filter(function (k) { return k.indexOf(prefix || '') === 0; }); },
     idle: function () { return new Promise(function (res) { if (pending === 0) res(); else waiters.push(res); }); },
-    exportAll: function () { var o = {}; Object.keys(mem).forEach(function (k) { o[k] = mem[k]; }); return o; },
-    clearAll: function () { Object.keys(mem).slice().forEach(function (k) { Store.del(k); }); },
+    // Keys under LOCAL_ONLY (downloaded library data, update bookkeeping) are not part of a backup and survive an import.
+    exportAll: function () { var o = {}; Object.keys(mem).forEach(function (k) { if (!LOCAL_ONLY.test(k)) o[k] = mem[k]; }); return o; },
+    clearAll: function () { Object.keys(mem).slice().forEach(function (k) { if (!LOCAL_ONLY.test(k)) Store.del(k); }); },
     importAll: function (entries) {
       Store.clearAll();
       Object.keys(entries).forEach(function (k) { Store.set(k, entries[k]); });

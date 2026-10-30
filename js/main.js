@@ -9,7 +9,7 @@
     var q = '', i = raw.indexOf('?');
     if (i >= 0) { q = raw.slice(i + 1); raw = raw.slice(0, i); }
     var parts = raw.split('/').filter(Boolean).map(decodeURIComponent);
-    return { name: parts[0] || 'home', arg: parts[1] || '', query: q };
+    return { name: parts[0] || 'home', arg: parts[1] || '', arg2: parts[2] || '', query: q };
   }
   function teardown() {
     if (MX.Practice) MX.Practice.hide();
@@ -27,11 +27,14 @@
       switch (r.name) {
         case 'practice': MX.Practice.show(el, r.arg, { readOnly: false }); break;
         case 'view': MX.Practice.show(el, r.arg, { readOnly: true }); break;
-        case 'setup': MX.Screens.setup(el, r.arg, r.query); break;
+        case 'setup': MX.Screens.setup(el, r.arg, r.arg2 || 'main', r.query); break;
+        case 'lib': MX.Screens.category(el, r.arg, r.query); break;
+        case 'text': MX.Screens.text(el, r.arg, r.query); break;
+        case 'custom': MX.Screens.custom(el, r.arg); break;
         case 'settings': MX.Screens.settings(el); break;
-        case 'archives': MX.Screens.archives(el, r.arg); break;
+        case 'archives': MX.Screens.archives(el, r.arg, r.arg2); break;
         case 'pentest': MX.PenTest.show(el); break;
-        default: MX.Screens.home(el);
+        default: MX.Screens.home(el, r.query);
       }
     } catch (e) {
       MX.err(e);
@@ -40,6 +43,7 @@
     }
   }
   MX.route = route;
+  MX.isHome = function () { return current === 'home'; };
 
   async function boot() {
     var el = root();
@@ -47,6 +51,7 @@
       await MX.Store.init();
       MX.Model.init();
       await MX.Library.load();
+      await MX.Draw.loadCoverage();
     } catch (e) {
       MX.err(e);
       el.appendChild(MX.h('div', { class: 'screen' }, [
@@ -79,6 +84,8 @@
     route();
     MX.ready = true;
     registerSw();
+    // APK: look for a newer release / library (at most once per 24 h, silent when offline)
+    if (window.MoBridge) { try { MX.Update.auto().catch(function () { /* offline */ }); } catch (e) { MX.err(e); } }
   }
 
   // Service worker: hosted (http/https) web app only, never inside the native wrapper or file://.

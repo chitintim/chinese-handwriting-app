@@ -30,9 +30,15 @@ public class MoBridge {
     static final String FOLDER = "墨";
 
     private final MainActivity activity;
+    private final Updater updater;
 
     MoBridge(MainActivity activity) {
         this.activity = activity;
+        this.updater = new Updater(activity);
+    }
+
+    void shutdown() {
+        updater.shutdown();
     }
 
     @JavascriptInterface
@@ -40,15 +46,43 @@ public class MoBridge {
         return true;
     }
 
+    /** "versionName+versionCode", e.g. "1.2.3+10203". versionName is the release tag without the "v"; versionCode = major*10000+minor*100+patch. */
     @JavascriptInterface
     public String version() {
+        return versionName() + "+" + versionCode();
+    }
+
+    /** The release version, e.g. "1.2.3" ("0.0.0" if unknown). */
+    @JavascriptInterface
+    public String versionName() {
+        try {
+            PackageInfo pi = activity.getPackageManager().getPackageInfo(activity.getPackageName(), 0);
+            return pi.versionName == null ? "0.0.0" : pi.versionName;
+        } catch (Exception e) {
+            return "0.0.0";
+        }
+    }
+
+    @JavascriptInterface
+    @SuppressWarnings("deprecation")
+    public int versionCode() {
         try {
             PackageInfo pi = activity.getPackageManager().getPackageInfo(activity.getPackageName(), 0);
             long code = Build.VERSION.SDK_INT >= 28 ? pi.getLongVersionCode() : pi.versionCode;
-            return pi.versionName + "+" + code;
+            return (int) code;
         } catch (Exception e) {
-            return "unknown";
+            return 0;
         }
+    }
+
+    /**
+     * Downloads the release APK at {@code url} (must be under https://github.com/chitintim/chinese-handwriting-app/) and opens the package
+     * installer when done. Returns "started", "permission" (the "install unknown apps" setting was opened: the user must allow it and
+     * tap 更新 again) or "error:&lt;message&gt;". Progress arrives as the window event {@code mo-update}.
+     */
+    @JavascriptInterface
+    public String downloadAndInstall(String url) {
+        return updater.start(url);
     }
 
     @JavascriptInterface

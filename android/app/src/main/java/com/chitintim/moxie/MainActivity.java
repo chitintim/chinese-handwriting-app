@@ -44,7 +44,7 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * Single-activity WebView shell for the offline 墨 handwriting web app.
+ * Single-activity WebView shell for the 墨 handwriting web app (works offline; the network is only used to look for updates).
  * The web app lives in assets/www and is served at https://appassets.androidplatform.net/.
  */
 public class MainActivity extends Activity {
@@ -146,7 +146,7 @@ public class MainActivity extends Activity {
         public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
             Uri uri = request.getUrl();
             if (!HOST.equalsIgnoreCase(uri.getHost())) {
-                return null; // not ours (no INTERNET permission anyway)
+                return null; // not ours (update check, library download): the network
             }
             String path = uri.getPath();
             // The app is fully bundled; a service worker would only risk serving stale code after an
@@ -279,6 +279,13 @@ public class MainActivity extends Activity {
         if (hasFocus) applyImmersive();
     }
 
+    /** Runs JavaScript in the page (any thread). */
+    void evalJs(final String js) {
+        runOnUiThread(() -> {
+            if (webView != null) webView.evaluateJavascript(js, null);
+        });
+    }
+
     void setKeepScreenOn(boolean on) {
         runOnUiThread(() -> {
             if (on) getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -388,6 +395,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         handler.removeCallbacksAndMessages(null);
+        if (bridge != null) bridge.shutdown();
         if (webView != null) {
             try {
                 ViewGroup p = (ViewGroup) webView.getParent();

@@ -3,29 +3,41 @@
   var MX = window.MX;
   var D = MX.Draw = {};
 
-  D.INK_W = { thin: 13, mid: 22, thick: 36 };   // base width in 1/1000 cell units (at p = 0.5)
+  D.INK_W = MX.Ink.BASE;   // 筆粗: base nib width in 1/1000 cell units at medium pressure (see ink.js)
   // Template greys. E-ink fast refresh modes (A2 / 極速 / 快刷) threshold to 1 bit at roughly #808080: only the full-quality
   // refresh shows these greys (中 #a8 and 淺 #c4 turn white in a fast mode, 深 #85 is borderline). 描紅樣式 網點 / 空心 and
   // the black dotted guide lines below are the fast-mode-safe alternatives.
   D.TONE = { light: '#c4c4c4', mid: '#a8a8a8', dark: '#858585' };
   D.GRID_OUT = '#cfcfcf';      // cell box and guide lines are always lighter than the lightest template tone
   D.GRID_GUIDE = '#e3e3e3';
-  // template glyph size as a fraction of the cell (default 中 = the old 0.8 reduced by ~13%)
-  D.TPL_SIZE = { s: 0.60, m: 0.70, l: 0.80, xl: 0.90 };
-  D.tplScale = function (key) { return D.TPL_SIZE[key] || D.TPL_SIZE.m; };
+  // template glyph size as a fraction of the cell. History: 0.80 originally (too big), then 0.70 (a bit too small); the default 中 is halfway: 0.75.
+  // Keys: s 小 0.60, m 中小 0.70 (the previous default), md 中 0.75 (default), l 大 0.80 (the original size), xl 特大 0.90.
+  D.TPL_SIZE = { s: 0.60, m: 0.70, md: 0.75, l: 0.80, xl: 0.90 };
+  D.DEF_TPL_SIZE = 'md';
+  D.tplScale = function (key) { return D.TPL_SIZE[key] || D.TPL_SIZE[D.DEF_TPL_SIZE]; };
   // normalised grid options of a copy config (also understands the legacy grid: fang | none)
   D.gridOf = function (cfg) {
     var legacyOff = cfg.grid === 'none', noGuide = cfg.grid === 'fang';
     return { box: cfg.box !== false && !legacyOff, guide: cfg.guide !== false && !legacyOff && !noGuide, style: cfg.grid === 'tian' ? 'tian' : 'mi' };
   };
 
-  // Template fonts (subsets built from open-licensed fonts, see library/fonts/README.txt). full[script] = covers every library glyph
-  // (checked against library/fonts/fonts.json by the tests); otherwise missing glyphs fall back per character along the stack.
+  // Template fonts (subsets built from open-licensed fonts, see library/fonts/README.txt). Which library characters a font lacks is in
+  // library/fonts/fonts.json (D.missing, loaded at start by D.loadCoverage); a missing glyph falls back per character along the stack, so the
+  // fallback fonts are only loaded for a page that shows such a character.
   D.FONTS = {
-    ukai: { label: '楷書', fam: { trad: 'MoUKai TC', simp: 'MoUKai SC' }, full: { trad: true, simp: true } },
-    tw: { label: '正楷', fam: { trad: 'MoTWKai', simp: 'MoTWKai' }, full: { trad: true, simp: true } },
-    msz: { label: '行楷', fam: { trad: 'MoMaShan', simp: 'MoMaShan' }, full: { trad: false, simp: false } },
-    wk: { label: '硬筆', fam: { trad: 'MoKai TC', simp: 'MoKai SC' }, full: { trad: true, simp: true } }
+    ukai: { label: '楷書', fam: { trad: 'MoUKai TC', simp: 'MoUKai SC' } },
+    tw: { label: '正楷', fam: { trad: 'MoTWKai', simp: 'MoTWKai' } },
+    msz: { label: '行楷', fam: { trad: 'MoMaShan', simp: 'MoMaShan' } },
+    wk: { label: '硬筆', fam: { trad: 'MoKai TC', simp: 'MoKai SC' } }
+  };
+  D.missing = null;      // {font: {trad: 'chars', simp: 'chars'}}
+  D.loadCoverage = function () {
+    return fetch('library/fonts/fonts.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (m) {
+      if (!m) return;
+      var o = {};
+      Object.keys(m).forEach(function (k) { o[k] = {}; Object.keys(m[k]).forEach(function (sc) { o[k][sc] = m[k][sc].missing || ''; }); });
+      D.missing = o;
+    }).catch(function () { /* unknown coverage: every font of the stack is loaded */ });
   };
   D.FONT_ORDER = ['ukai', 'tw', 'msz', 'wk'];     // most calligraphic first, LXGW WenKai last
   D.DEF_FONT = 'ukai';
@@ -44,56 +56,7 @@
     return list.map(function (f) { return '"' + f + '"'; }).join(',') + sys;
   };
 
-  function wOf(base, p, sc) {
-    var w = base * (0.3 + 1.4 * p / 1000) * sc;
-    return w < 0.9 ? 0.9 : w;
-  }
-  // Paint ink segments k0..k1 of a flat [x,y,p,...] stroke (cell-local 0..1000 units).
-  // ox,oy = cell origin in px; sc = px per unit. fin=true also paints the closing segment.
-  D.paint = function (ctx, pts, ox, oy, sc, k0, k1, fin, base, color) {
-    var n = pts.length / 3;
-    if (!n) return;
-    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-    ctx.strokeStyle = color || '#000'; ctx.fillStyle = color || '#000';
-    if (n === 1) {
-      if (fin) {
-        ctx.beginPath();
-        ctx.arc(ox + pts[0] * sc, oy + pts[1] * sc, wOf(base, pts[2], sc) / 2, 0, 6.2832);
-        ctx.fill();
-      }
-      return;
-    }
-    var k, ax, ay, bx, by, cx, cy;
-    for (k = Math.max(1, k0); k <= k1 && k < n; k++) {
-      cx = ox + pts[k * 3] * sc; cy = oy + pts[k * 3 + 1] * sc;
-      ctx.beginPath();
-      if (k === 1) {
-        ax = ox + pts[0] * sc; ay = oy + pts[1] * sc;
-        ctx.moveTo(ax, ay);
-        ctx.lineTo((ax + cx) / 2, (ay + cy) / 2);
-        ctx.lineWidth = wOf(base, (pts[2] + pts[5]) / 2, sc);
-      } else {
-        ax = ox + pts[(k - 2) * 3] * sc; ay = oy + pts[(k - 2) * 3 + 1] * sc;
-        bx = ox + pts[(k - 1) * 3] * sc; by = oy + pts[(k - 1) * 3 + 1] * sc;
-        ctx.moveTo((ax + bx) / 2, (ay + by) / 2);
-        ctx.quadraticCurveTo(bx, by, (bx + cx) / 2, (by + cy) / 2);
-        ctx.lineWidth = wOf(base, pts[(k - 1) * 3 + 2], sc);
-      }
-      ctx.stroke();
-    }
-    if (fin) {
-      ax = ox + pts[(n - 2) * 3] * sc; ay = oy + pts[(n - 2) * 3 + 1] * sc;
-      bx = ox + pts[(n - 1) * 3] * sc; by = oy + pts[(n - 1) * 3 + 1] * sc;
-      ctx.beginPath();
-      ctx.moveTo((ax + bx) / 2, (ay + by) / 2);
-      ctx.lineTo(bx, by);
-      ctx.lineWidth = wOf(base, pts[(n - 1) * 3 + 2], sc);
-      ctx.stroke();
-    }
-  };
-  D.paintFull = function (ctx, pts, ox, oy, sc, base, color) {
-    D.paint(ctx, pts, ox, oy, sc, 1, pts.length / 3 - 1, true, base, color);
-  };
+  // Ink strokes are painted by the shared ink engine (MX.Ink, ink.js): practice view, pen-test pad and export all call Ink.paintStroke.
 
   // Ordered-dither (Bayer 4x4) halftone: the glyph becomes pure black device pixels (alpha 0 or 255), so a 1-bit e-ink mode keeps it.
   var BAYER = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
@@ -202,7 +165,7 @@
   // o: {box, guide, gstyle ('mi'|'tian'), look, density, dpr, mode, script, font, tplStyle, tplColor, tplScale, punct (bool), tpl (bool: show template in this cell)}
   D.cell = function (ctx, x, y, size, cell, o) {
     drawGrid(ctx, x, y, size, o);
-    var sc = o.tplScale || D.TPL_SIZE.m;
+    var sc = o.tplScale || D.TPL_SIZE.md;
     if (o.mode === 'copy') {
       D.glyph(ctx, cell.ch, x + size * 0.17, y + size * 0.17, size * 0.26 * sc / 0.8, { script: o.script, font: o.font, style: 'fill', color: '#333', dpr: o.dpr });
     } else if (o.tpl) {
@@ -213,18 +176,27 @@
     }
   };
 
-  // Make sure the web fonts are loaded before painting glyphs. key = template font; an incomplete font also loads the fallbacks.
-  var fontsOk = {};
-  D.fontsReady = function (script, text, key) {
-    var sc = script === 'simp' ? 'simp' : 'trad', ck = sc + ':' + (key || '');
-    if (fontsOk[ck]) return Promise.resolve();
+  // Make sure the web fonts are loaded before painting glyphs. The fonts are split into unicode-range chunks (see library/fonts/fonts.css), so what
+  // has to be loaded depends on the characters: text = the characters about to be drawn. key = template font; a font that does not cover the whole
+  // library also loads the fallback fonts. all = also load the fallbacks (custom texts may hold characters outside the library).
+  function fontsFor(sc, key, text, all) {
+    var f = D.FONTS[key], miss = D.missing && D.missing[key] ? D.missing[key][sc] : undefined;
+    if (all || !f || miss === undefined) return famList(sc, key);
+    for (var i = 0; i < miss.length; i++) if ((text || '').indexOf(miss.charAt(i)) >= 0) return famList(sc, key);
+    return [f.fam[sc]];
+  }
+  D.fontsReady = function (script, text, key, all) {
+    var sc = script === 'simp' ? 'simp' : 'trad';
     if (!document.fonts || !document.fonts.load) return Promise.resolve();
-    var fams = D.FONTS[key] && D.FONTS[key].full[sc] ? [D.FONTS[key].fam[sc]] : famList(sc, key);
-    var ps = fams.map(function (f) { return document.fonts.load('40px "' + f + '"', text || '墨').catch(function () { return null; }); });
-    var p = Promise.all(ps).then(function () { fontsOk[ck] = true; }, function () {});
-    return Promise.race([p, new Promise(function (r) { setTimeout(r, 3000); })]);
+    var ps = fontsFor(sc, key, text, all).map(function (f) { return document.fonts.load('40px "' + f + '"', text || '墨').catch(function () { return null; }); });
+    var p = Promise.all(ps).then(function () {}, function () {});
+    return Promise.race([p, new Promise(function (r) { setTimeout(r, 5000); })]);
   };
-  D.fontsLoaded = function (script, key) {
-    return !!fontsOk[(script === 'simp' ? 'simp' : 'trad') + ':' + (key || '')] || !(document.fonts && document.fonts.load);
+  D.fontsLoaded = function (script, key, text, all) {
+    var sc = script === 'simp' ? 'simp' : 'trad';
+    if (!(document.fonts && document.fonts.check)) return true;
+    try {
+      return fontsFor(sc, key, text, all).every(function (f) { return document.fonts.check('40px "' + f + '"', text || '墨'); });
+    } catch (e) { return true; }
   };
 })();

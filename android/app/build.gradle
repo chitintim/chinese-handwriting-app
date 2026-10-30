@@ -2,7 +2,8 @@ plugins {
     id 'com.android.application'
 }
 
-// Values injected by CI (see ci/build-apk.yml); sensible defaults for local builds.
+// Values injected by CI (see ci/build-apk.yml): versionName = release tag without the 'v', versionCode = major*10000 + minor*100 + patch.
+// Sensible defaults for local builds.
 def moxieVersionCode = Integer.parseInt(System.getenv('MOXIE_VERSION_CODE') ?: '1')
 def moxieVersionName = System.getenv('MOXIE_VERSION_NAME') ?: '0.0.0-dev'
 def moxieKeystoreFile = System.getenv('MOXIE_KEYSTORE_FILE')
@@ -56,4 +57,5 @@ android {
 
 dependencies {
     implementation 'androidx.webkit:webkit:1.11.0'
+    implementation 'androidx.core:core:1.12.0'   // FileProvider (install the downloaded update)
 }

@@ -1,11 +1,822 @@
 {
-  "texts": [
-    {
-      "id": "heart-sutra",
-      "title": {"trad": "般若波羅蜜多心經", "simp": "般若波罗蜜多心经"},
-      "file": "texts/heart-sutra.json",
-      "chars": 260,
-      "description": "玄奘譯 · 260字"
-    }
-  ]
+ "version": 2,
+ "categories": [
+  {
+   "id": "buddhist",
+   "title": {
+    "trad": "佛經",
+    "simp": "佛经"
+   }
+  },
+  {
+   "id": "daoist",
+   "title": {
+    "trad": "道家",
+    "simp": "道家"
+   }
+  },
+  {
+   "id": "primer",
+   "title": {
+    "trad": "蒙學",
+    "simp": "蒙学"
+   }
+  },
+  {
+   "id": "confucian",
+   "title": {
+    "trad": "儒典",
+    "simp": "儒典"
+   }
+  },
+  {
+   "id": "prose",
+   "title": {
+    "trad": "古文",
+    "simp": "古文"
+   }
+  },
+  {
+   "id": "poetry",
+   "title": {
+    "trad": "詩",
+    "simp": "诗"
+   }
+  },
+  {
+   "id": "ci",
+   "title": {
+    "trad": "詞",
+    "simp": "词"
+   }
+  },
+  {
+   "id": "stele",
+   "title": {
+    "trad": "碑帖名篇",
+    "simp": "碑帖名篇"
+   }
+  }
+ ],
+ "texts": [
+  {
+   "id": "heart-sutra",
+   "category": "buddhist",
+   "title": {
+    "trad": "般若波羅蜜多心經",
+    "simp": "般若波罗蜜多心经"
+   },
+   "author": {
+    "trad": "玄奘",
+    "simp": "玄奘"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/heart-sutra.json",
+   "chars": 260,
+   "sections": 1,
+   "description": {
+    "trad": "玄奘譯 · 260字",
+    "simp": "玄奘译 · 260字"
+   }
+  },
+  {
+   "id": "diamond-sutra",
+   "category": "buddhist",
+   "title": {
+    "trad": "金剛般若波羅蜜經",
+    "simp": "金刚般若波罗蜜经"
+   },
+   "author": {
+    "trad": "鳩摩羅什",
+    "simp": "鸠摩罗什"
+   },
+   "dynasty": {
+    "trad": "姚秦",
+    "simp": "姚秦"
+   },
+   "file": "texts/diamond-sutra.json",
+   "chars": 5179,
+   "sections": 32,
+   "description": {
+    "trad": "鳩摩羅什譯 · 三十二分",
+    "simp": "鸠摩罗什译 · 三十二分"
+   }
+  },
+  {
+   "id": "amitabha-sutra",
+   "category": "buddhist",
+   "title": {
+    "trad": "佛說阿彌陀經",
+    "simp": "佛说阿弥陀经"
+   },
+   "author": {
+    "trad": "鳩摩羅什",
+    "simp": "鸠摩罗什"
+   },
+   "dynasty": {
+    "trad": "姚秦",
+    "simp": "姚秦"
+   },
+   "file": "texts/amitabha-sutra.json",
+   "chars": 1859,
+   "sections": 1,
+   "description": {
+    "trad": "鳩摩羅什譯 · 淨土三經之一",
+    "simp": "鸠摩罗什译 · 净土三经之一"
+   }
+  },
+  {
+   "id": "guanyin-pumen",
+   "category": "buddhist",
+   "title": {
+    "trad": "妙法蓮華經觀世音菩薩普門品",
+    "simp": "妙法莲华经观世音菩萨普门品"
+   },
+   "author": {
+    "trad": "鳩摩羅什",
+    "simp": "鸠摩罗什"
+   },
+   "dynasty": {
+    "trad": "姚秦",
+    "simp": "姚秦"
+   },
+   "file": "texts/guanyin-pumen.json",
+   "chars": 2062,
+   "sections": 1,
+   "description": {
+    "trad": "俗稱《觀音經》· 含偈頌",
+    "simp": "俗称《观音经》· 含偈颂"
+   }
+  },
+  {
+   "id": "dabei-zhou",
+   "category": "buddhist",
+   "title": {
+    "trad": "千手千眼無礙大悲心陀羅尼",
+    "simp": "千手千眼无碍大悲心陀罗尼"
+   },
+   "author": {
+    "trad": "伽梵達摩",
+    "simp": "伽梵达摩"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/dabei-zhou.json",
+   "chars": 415,
+   "sections": 1,
+   "description": {
+    "trad": "八十四句 · 梵音漢字",
+    "simp": "八十四句 · 梵音汉字"
+   }
+  },
+  {
+   "id": "wangsheng-zhou",
+   "category": "buddhist",
+   "title": {
+    "trad": "拔一切業障根本得生淨土神咒",
+    "simp": "拔一切业障根本得生净土神咒"
+   },
+   "author": {
+    "trad": "求那跋陀羅",
+    "simp": "求那跋陀罗"
+   },
+   "dynasty": {
+    "trad": "劉宋",
+    "simp": "刘宋"
+   },
+   "file": "texts/wangsheng-zhou.json",
+   "chars": 59,
+   "sections": 1,
+   "description": {
+    "trad": "十小咒之一 · 十四句",
+    "simp": "十小咒之一 · 十四句"
+   }
+  },
+  {
+   "id": "daodejing",
+   "category": "daoist",
+   "title": {
+    "trad": "道德經",
+    "simp": "道德经"
+   },
+   "author": {
+    "trad": "老子",
+    "simp": "老子"
+   },
+   "dynasty": {
+    "trad": "春秋",
+    "simp": "春秋"
+   },
+   "file": "texts/daodejing.json",
+   "chars": 5307,
+   "sections": 81,
+   "description": {
+    "trad": "王弼本 · 八十一章",
+    "simp": "王弼本 · 八十一章"
+   }
+  },
+  {
+   "id": "qingjing-jing",
+   "category": "daoist",
+   "title": {
+    "trad": "太上老君說常清靜經",
+    "simp": "太上老君说常清静经"
+   },
+   "author": {
+    "trad": "（舊題）太上老君",
+    "simp": "（旧题）太上老君"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/qingjing-jing.json",
+   "chars": 586,
+   "sections": 1,
+   "description": {
+    "trad": "全真早晚課 · 約六百字",
+    "simp": "全真早晚课 · 约六百字"
+   }
+  },
+  {
+   "id": "qianziwen",
+   "category": "primer",
+   "title": {
+    "trad": "千字文",
+    "simp": "千字文"
+   },
+   "author": {
+    "trad": "周興嗣",
+    "simp": "周兴嗣"
+   },
+   "dynasty": {
+    "trad": "南朝梁",
+    "simp": "南朝梁"
+   },
+   "file": "texts/qianziwen.json",
+   "chars": 1000,
+   "sections": 1,
+   "description": {
+    "trad": "周興嗣編 · 一千字不重複",
+    "simp": "周兴嗣编 · 一千字不重复"
+   }
+  },
+  {
+   "id": "sanzijing",
+   "category": "primer",
+   "title": {
+    "trad": "三字經",
+    "simp": "三字经"
+   },
+   "author": {
+    "trad": "王應麟（相傳）",
+    "simp": "王应麟（相传）"
+   },
+   "dynasty": {
+    "trad": "南宋",
+    "simp": "南宋"
+   },
+   "file": "texts/sanzijing.json",
+   "chars": 1062,
+   "sections": 1,
+   "description": {
+    "trad": "王應麟舊本 · 止於宋",
+    "simp": "王应麟旧本 · 止于宋"
+   }
+  },
+  {
+   "id": "dizigui",
+   "category": "primer",
+   "title": {
+    "trad": "弟子規",
+    "simp": "弟子规"
+   },
+   "author": {
+    "trad": "李毓秀",
+    "simp": "李毓秀"
+   },
+   "dynasty": {
+    "trad": "清",
+    "simp": "清"
+   },
+   "file": "texts/dizigui.json",
+   "chars": 1080,
+   "sections": 8,
+   "description": {
+    "trad": "李毓秀 · 三字一句 · 1080字",
+    "simp": "李毓秀 · 三字一句 · 1080字"
+   }
+  },
+  {
+   "id": "daxue",
+   "category": "confucian",
+   "title": {
+    "trad": "大學",
+    "simp": "大学"
+   },
+   "author": {
+    "trad": "曾子（相傳）",
+    "simp": "曾子（相传）"
+   },
+   "dynasty": {
+    "trad": "先秦",
+    "simp": "先秦"
+   },
+   "file": "texts/daxue.json",
+   "chars": 1753,
+   "sections": 1,
+   "description": {
+    "trad": "《禮記》古本 · 四書之一",
+    "simp": "《礼记》古本 · 四书之一"
+   }
+  },
+  {
+   "id": "zhongyong",
+   "category": "confucian",
+   "title": {
+    "trad": "中庸",
+    "simp": "中庸"
+   },
+   "author": {
+    "trad": "子思（相傳）",
+    "simp": "子思（相传）"
+   },
+   "dynasty": {
+    "trad": "先秦",
+    "simp": "先秦"
+   },
+   "file": "texts/zhongyong.json",
+   "chars": 3567,
+   "sections": 33,
+   "description": {
+    "trad": "《禮記》本 · 三十三章",
+    "simp": "《礼记》本 · 三十三章"
+   }
+  },
+  {
+   "id": "lunyu",
+   "category": "confucian",
+   "title": {
+    "trad": "論語",
+    "simp": "论语"
+   },
+   "author": {
+    "trad": "孔子弟子及再傳弟子",
+    "simp": "孔子弟子及再传弟子"
+   },
+   "dynasty": {
+    "trad": "先秦",
+    "simp": "先秦"
+   },
+   "file": "texts/lunyu.json",
+   "chars": 15921,
+   "sections": 20,
+   "description": {
+    "trad": "二十篇 · 孔門言行錄",
+    "simp": "二十篇 · 孔门言行录"
+   }
+  },
+  {
+   "id": "lantingji-xu",
+   "category": "prose",
+   "title": {
+    "trad": "蘭亭集序",
+    "simp": "兰亭集序"
+   },
+   "author": {
+    "trad": "王羲之",
+    "simp": "王羲之"
+   },
+   "dynasty": {
+    "trad": "東晉",
+    "simp": "东晋"
+   },
+   "file": "texts/lantingji-xu.json",
+   "chars": 324,
+   "sections": 1,
+   "description": {
+    "trad": "王羲之 · 天下第一行書",
+    "simp": "王羲之 · 天下第一行书"
+   }
+  },
+  {
+   "id": "loushi-ming",
+   "category": "prose",
+   "title": {
+    "trad": "陋室銘",
+    "simp": "陋室铭"
+   },
+   "author": {
+    "trad": "劉禹錫",
+    "simp": "刘禹锡"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/loushi-ming.json",
+   "chars": 81,
+   "sections": 1,
+   "description": {
+    "trad": "劉禹錫 · 八十一字",
+    "simp": "刘禹锡 · 八十一字"
+   }
+  },
+  {
+   "id": "ailian-shuo",
+   "category": "prose",
+   "title": {
+    "trad": "愛蓮說",
+    "simp": "爱莲说"
+   },
+   "author": {
+    "trad": "周敦頤",
+    "simp": "周敦颐"
+   },
+   "dynasty": {
+    "trad": "北宋",
+    "simp": "北宋"
+   },
+   "file": "texts/ailian-shuo.json",
+   "chars": 119,
+   "sections": 1,
+   "description": {
+    "trad": "周敦頤 · 出淤泥而不染",
+    "simp": "周敦颐 · 出淤泥而不染"
+   }
+  },
+  {
+   "id": "taohuayuan-ji",
+   "category": "prose",
+   "title": {
+    "trad": "桃花源記",
+    "simp": "桃花源记"
+   },
+   "author": {
+    "trad": "陶淵明",
+    "simp": "陶渊明"
+   },
+   "dynasty": {
+    "trad": "東晉",
+    "simp": "东晋"
+   },
+   "file": "texts/taohuayuan-ji.json",
+   "chars": 321,
+   "sections": 1,
+   "description": {
+    "trad": "陶淵明 · 世外桃源",
+    "simp": "陶渊明 · 世外桃源"
+   }
+  },
+  {
+   "id": "yueyanglou-ji",
+   "category": "prose",
+   "title": {
+    "trad": "岳陽樓記",
+    "simp": "岳阳楼记"
+   },
+   "author": {
+    "trad": "范仲淹",
+    "simp": "范仲淹"
+   },
+   "dynasty": {
+    "trad": "北宋",
+    "simp": "北宋"
+   },
+   "file": "texts/yueyanglou-ji.json",
+   "chars": 368,
+   "sections": 1,
+   "description": {
+    "trad": "范仲淹 · 先天下之憂而憂",
+    "simp": "范仲淹 · 先天下之忧而忧"
+   }
+  },
+  {
+   "id": "zuiweng-ting-ji",
+   "category": "prose",
+   "title": {
+    "trad": "醉翁亭記",
+    "simp": "醉翁亭记"
+   },
+   "author": {
+    "trad": "歐陽脩",
+    "simp": "欧阳修"
+   },
+   "dynasty": {
+    "trad": "北宋",
+    "simp": "北宋"
+   },
+   "file": "texts/zuiweng-ting-ji.json",
+   "chars": 403,
+   "sections": 1,
+   "description": {
+    "trad": "歐陽脩 · 醉翁之意不在酒",
+    "simp": "欧阳修 · 醉翁之意不在酒"
+   }
+  },
+  {
+   "id": "chushibiao",
+   "category": "prose",
+   "title": {
+    "trad": "前出師表",
+    "simp": "前出师表"
+   },
+   "author": {
+    "trad": "諸葛亮",
+    "simp": "诸葛亮"
+   },
+   "dynasty": {
+    "trad": "三國",
+    "simp": "三国"
+   },
+   "file": "texts/chushibiao.json",
+   "chars": 628,
+   "sections": 1,
+   "description": {
+    "trad": "諸葛亮 · 鞠躬盡瘁",
+    "simp": "诸葛亮 · 鞠躬尽瘁"
+   }
+  },
+  {
+   "id": "qian-chibifu",
+   "category": "prose",
+   "title": {
+    "trad": "前赤壁賦",
+    "simp": "前赤壁赋"
+   },
+   "author": {
+    "trad": "蘇軾",
+    "simp": "苏轼"
+   },
+   "dynasty": {
+    "trad": "北宋",
+    "simp": "北宋"
+   },
+   "file": "texts/qian-chibifu.json",
+   "chars": 537,
+   "sections": 1,
+   "description": {
+    "trad": "蘇軾 · 壬戌之秋",
+    "simp": "苏轼 · 壬戌之秋"
+   }
+  },
+  {
+   "id": "hou-chibifu",
+   "category": "prose",
+   "title": {
+    "trad": "後赤壁賦",
+    "simp": "后赤壁赋"
+   },
+   "author": {
+    "trad": "蘇軾",
+    "simp": "苏轼"
+   },
+   "dynasty": {
+    "trad": "北宋",
+    "simp": "北宋"
+   },
+   "file": "texts/hou-chibifu.json",
+   "chars": 357,
+   "sections": 1,
+   "description": {
+    "trad": "蘇軾 · 是歲十月之望",
+    "simp": "苏轼 · 是岁十月之望"
+   }
+  },
+  {
+   "id": "guiqulai-xi",
+   "category": "prose",
+   "title": {
+    "trad": "歸去來兮辭",
+    "simp": "归去来兮辞"
+   },
+   "author": {
+    "trad": "陶淵明",
+    "simp": "陶渊明"
+   },
+   "dynasty": {
+    "trad": "東晉",
+    "simp": "东晋"
+   },
+   "file": "texts/guiqulai-xi.json",
+   "chars": 537,
+   "sections": 2,
+   "description": {
+    "trad": "陶淵明 · 含序",
+    "simp": "陶渊明 · 含序"
+   }
+  },
+  {
+   "id": "tengwangge-xu",
+   "category": "prose",
+   "title": {
+    "trad": "滕王閣序",
+    "simp": "滕王阁序"
+   },
+   "author": {
+    "trad": "王勃",
+    "simp": "王勃"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/tengwangge-xu.json",
+   "chars": 717,
+   "sections": 1,
+   "description": {
+    "trad": "王勃 · 落霞與孤鶩齊飛",
+    "simp": "王勃 · 落霞与孤鹜齐飞"
+   }
+  },
+  {
+   "id": "luoshen-fu",
+   "category": "prose",
+   "title": {
+    "trad": "洛神賦",
+    "simp": "洛神赋"
+   },
+   "author": {
+    "trad": "曹植",
+    "simp": "曹植"
+   },
+   "dynasty": {
+    "trad": "曹魏",
+    "simp": "曹魏"
+   },
+   "file": "texts/luoshen-fu.json",
+   "chars": 910,
+   "sections": 1,
+   "description": {
+    "trad": "曹植 · 翩若驚鴻",
+    "simp": "曹植 · 翩若惊鸿"
+   }
+  },
+  {
+   "id": "shishuo",
+   "category": "prose",
+   "title": {
+    "trad": "師說",
+    "simp": "师说"
+   },
+   "author": {
+    "trad": "韓愈",
+    "simp": "韩愈"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/shishuo.json",
+   "chars": 456,
+   "sections": 1,
+   "description": {
+    "trad": "韓愈 · 師者傳道受業解惑",
+    "simp": "韩愈 · 师者传道受业解惑"
+   }
+  },
+  {
+   "id": "afanggong-fu",
+   "category": "prose",
+   "title": {
+    "trad": "阿房宮賦",
+    "simp": "阿房宫赋"
+   },
+   "author": {
+    "trad": "杜牧",
+    "simp": "杜牧"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/afanggong-fu.json",
+   "chars": 514,
+   "sections": 1,
+   "description": {
+    "trad": "杜牧 · 六王畢四海一",
+    "simp": "杜牧 · 六王毕四海一"
+   }
+  },
+  {
+   "id": "chunye-yan",
+   "category": "prose",
+   "title": {
+    "trad": "春夜宴從弟桃花園序",
+    "simp": "春夜宴从弟桃花园序"
+   },
+   "author": {
+    "trad": "李白",
+    "simp": "李白"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/chunye-yan.json",
+   "chars": 119,
+   "sections": 1,
+   "description": {
+    "trad": "李白 · 浮生若夢為歡幾何",
+    "simp": "李白 · 浮生若梦为欢几何"
+   }
+  },
+  {
+   "id": "tangshi",
+   "category": "poetry",
+   "title": {
+    "trad": "唐詩精選",
+    "simp": "唐诗精选"
+   },
+   "author": {
+    "trad": "唐代諸家",
+    "simp": "唐代诸家"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/tangshi.json",
+   "chars": 4626,
+   "sections": 61,
+   "description": {
+    "trad": "61首唐詩名篇",
+    "simp": "61首唐诗名篇"
+   }
+  },
+  {
+   "id": "songci",
+   "category": "ci",
+   "title": {
+    "trad": "宋詞精選",
+    "simp": "宋词精选"
+   },
+   "author": {
+    "trad": "宋代諸家",
+    "simp": "宋代诸家"
+   },
+   "dynasty": {
+    "trad": "宋",
+    "simp": "宋"
+   },
+   "file": "texts/songci.json",
+   "chars": 2454,
+   "sections": 35,
+   "description": {
+    "trad": "35闋宋詞名篇",
+    "simp": "35阕宋词名篇"
+   }
+  },
+  {
+   "id": "jiuchenggong",
+   "category": "stele",
+   "title": {
+    "trad": "九成宮醴泉銘",
+    "simp": "九成宫醴泉铭"
+   },
+   "author": {
+    "trad": "魏徵",
+    "simp": "魏征"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/jiuchenggong.json",
+   "chars": 1067,
+   "sections": 2,
+   "description": {
+    "trad": "歐陽詢楷書 · 唐貞觀六年",
+    "simp": "欧阳询楷书 · 唐贞观六年"
+   }
+  },
+  {
+   "id": "xuanmita",
+   "category": "stele",
+   "title": {
+    "trad": "玄秘塔碑",
+    "simp": "玄秘塔碑"
+   },
+   "author": {
+    "trad": "裴休",
+    "simp": "裴休"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/xuanmita.json",
+   "chars": 1174,
+   "sections": 2,
+   "description": {
+    "trad": "柳公權楷書 · 唐會昌元年",
+    "simp": "柳公权楷书 · 唐会昌元年"
+   }
+  }
+ ]
 }

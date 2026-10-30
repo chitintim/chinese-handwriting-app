@@ -19,12 +19,15 @@
       { k: 'sign', label: '落款', content: true, opts: ONOFF }
     ],
     SETTINGS: [
+      { k: 'brush', label: '筆觸', opts: [['mao', '毛筆'], ['ying', '硬筆'], ['gang', '鋼筆']] },
       { k: 'inkWidth', label: '筆粗', opts: [['thin', '細'], ['mid', '中'], ['thick', '粗']] },
+      { k: 'curve', label: '筆壓', opts: [['light', '輕'], ['mid', '中'], ['heavy', '重']] },
+      { k: 'stab', label: '防抖', opts: [['off', '關'], ['light', '輕'], ['mid', '中']] },
       { k: 'tplStyle', label: '描紅樣式', opts: [['fill', '灰色'], ['dots', '網點'], ['outline', '空心']] },
       { k: 'tplFont', label: '字體', opts: [['ukai', '楷書'], ['tw', '正楷'], ['msz', '行楷'], ['wk', '硬筆']] },
       { k: 'gridLook', label: '格線樣式', opts: [['dots', '點線(黑)'], ['light', '實線淺灰'], ['black', '實線黑']] },
       { k: 'gridDensity', label: '點線疏密', opts: [['sparse', '疏'], ['mid', '中'], ['dense', '密']] },
-      { k: 'tplSize', label: '字大小', opts: [['s', '小'], ['m', '中'], ['l', '大'], ['xl', '特大']] },
+      { k: 'tplSize', label: '字大小', opts: [['s', '小'], ['m', '中小'], ['md', '中'], ['l', '大'], ['xl', '特大']] },
       { k: 'tplTone', label: '深淺', opts: [['light', '淺'], ['mid', '中'], ['dark', '深']] },
       { k: 'pressure', label: '壓感', opts: [['auto', '自動'], ['off', '固定']] },
       { k: 'acceptTouch', label: '手指書寫', opts: ONOFF },

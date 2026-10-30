@@ -20,6 +20,7 @@
     INK: 0.92,                  // ink is drawn at 92% of its cell
     SIG: 0.6,                   // signature size relative to the body
     FOOT: 0.9,                  // extra bottom margin for the page number on 分頁
+    MG: 0.8,                    // gutter between the sheets of 合併長圖 (cells)
     CH: 1.08, SP: 1.5, SEAL: 1.6, GAP: 0.4, STAG: 1.0    // signature (units of the signature size)
   };
   var RATIOS = { '3:4': 0.75, '4:3': 4 / 3, '1:1': 1, 'A4p': 210 / 297, 'A4l': 297 / 210 };
@@ -91,6 +92,7 @@
       sealStyle: o.sealStyle === 'red' ? 'red' : 'white', punct: !!o.punct && cfg.punct === 'show', tpl: !!o.tpl, out: o.out === 'pdf' ? 'pdf' : 'png',
       date: +o.date || copyDate(cp.copy), font: o.font || st.tplFont
     };
+    d.merge = o.merge === true && d.format === 'pages' && d.out === 'png';      // 合併長圖: all 分頁 sheets in ONE image (see mergePlan)
     d.ratio = RATIOS[o.ratio] ? o.ratio : (d.format === 'pages' ? 'A4p' : (dir === 'v' ? '4:3' : '3:4'));
     d.r = RATIOS[d.ratio];
     d.perLine = Math.floor(num(o.perLine, 3, 60, 0));
@@ -257,6 +259,25 @@
 
   function cnPage(n) { return Closing.cnNum(n); }
 
+  // 合併長圖: the sheets of a 分頁 export in ONE image, in reading order. 直書: side by side, sheet 1 RIGHTMOST, then to the left (columns read
+  // right -> left, so the sheets do too); never stacked top-to-bottom. 橫書: top to bottom, sheet 1 on top. K.MG of paper between sheets.
+  // Returns {dir, w, h, gutter, at: [{i, x, y}]} in cell units (x, y = top-left of sheet i).
+  function mergePlan(pages, dir) {
+    var G = K.MG, n = pages.length, at = [], W = 0, H = 0, i, pos;
+    pages.forEach(function (pg) {
+      if (dir === 'v') { W += pg.w; H = Math.max(H, pg.h); } else { H += pg.h; W = Math.max(W, pg.w); }
+    });
+    if (dir === 'v') W += G * (n - 1); else H += G * (n - 1);
+    if (dir === 'v') {
+      pos = W;
+      for (i = 0; i < n; i++) { pos -= pages[i].w; at.push({ i: i, x: pos, y: (H - pages[i].h) / 2 }); pos -= G; }
+    } else {
+      pos = 0;
+      for (i = 0; i < n; i++) { at.push({ i: i, x: (W - pages[i].w) / 2, y: pos }); pos += pages[i].h + G; }
+    }
+    return { dir: dir, w: W, h: H, gutter: G, at: at };
+  }
+
   // compose(cp, opts) -> {d, geo, P, pages: [{w, h, items, ...}], unit scale info}
   function compose(cp, o) {
     MX.Model.loadInk(cp.copy);
@@ -315,7 +336,8 @@
           } else pg.items.push({ t: 'text', role: 'pageno', str: label, x: Wp / 2, y: Hp - M * 0.8, s: sz });
         });
       }
-      return { d: d, geo: geo, P: P, Lcap: Lcap, sigOwnPage: sigOwn, pages: pages, bodyLines: totalLines, titleStack: titleStack, sigStack: sigPl ? sigPl.stack : 0, Sfull: Sfull };
+      return { d: d, geo: geo, P: P, Lcap: Lcap, sigOwnPage: sigOwn, pages: pages, bodyLines: totalLines, titleStack: titleStack, sigStack: sigPl ? sigPl.stack : 0, Sfull: Sfull,
+        merge: d.merge && pages.length > 1 ? mergePlan(pages, d.dir) : null };
     }
     // sheet / scroll: one page
     var best;
@@ -344,7 +366,7 @@
   // Pixels per cell unit: 220 px per cell, scaled down so that every page is <= 16 megapixels and <= 8192 px per side.
   function scaleFor(L) {
     var u = CELL_PX;
-    L.pages.forEach(function (pg) {
+    (L.merge ? [L.merge] : L.pages).forEach(function (pg) {
       u = Math.min(u, Math.sqrt(MAX_PX / (pg.w * pg.h)), MAX_SIDE / Math.max(pg.w, pg.h));
     });
     return Math.floor(u * 1000) / 1000;
@@ -386,7 +408,7 @@
   function renderPage(cp, L, idx, u) {
     var d = L.d, pg = L.pages[idx], sz = pxSize(pg, u), cv = document.createElement('canvas');
     cv.width = sz.w; cv.height = sz.h;
-    var ctx = cv.getContext('2d'), paper = PAPER[d.paper], st = MX.Model.settings, base = Draw.INK_W[st.inkWidth] || Draw.INK_W.mid;
+    var ctx = cv.getContext('2d'), paper = PAPER[d.paper], inkStyle = MX.Ink.style(MX.Model.settings);
     ctx.fillStyle = paper; ctx.fillRect(0, 0, sz.w, sz.h);
     ctx.lineCap = 'butt';
     var ink = cp.copy.ink, order = ['rule', 'border', 'tpl', 'body', 'title', 'sig', 'punct', 'seal', 'pageno'];
@@ -413,7 +435,7 @@
           case 'cell':
             var strokes = ink[it.i] || [];
             for (j = 0; j < strokes.length; j++) {
-              Draw.paintFull(ctx, strokes[j], x + s * (1 - K.INK) / 2, y + s * (1 - K.INK) / 2, s * K.INK / 1000, base, INK);
+              MX.Ink.paintStroke(ctx, strokes[j], x + s * (1 - K.INK) / 2, y + s * (1 - K.INK) / 2, s * K.INK / 1000, inkStyle, INK, { px: 1 });   // the same brush model as on screen
             }
             break;
           case 'glyph':
@@ -431,6 +453,26 @@
             break;
         }
       });
+    });
+    return cv;
+  }
+
+  // The 合併長圖 image: every sheet rendered at u px per cell and pasted at its place of mergePlan; a thin grey line marks each gutter.
+  function renderMerged(cp, L, u) {
+    var m = L.merge, d = L.d, w = Math.max(1, Math.floor(m.w * u)), hh = Math.max(1, Math.floor(m.h * u)), cv = document.createElement('canvas');
+    cv.width = w; cv.height = hh;
+    var ctx = cv.getContext('2d');
+    ctx.fillStyle = PAPER[d.paper]; ctx.fillRect(0, 0, w, hh);
+    m.at.forEach(function (p, k) {
+      var pc = renderPage(cp, L, p.i, u), pg = L.pages[p.i];
+      ctx.drawImage(pc, Math.round(p.x * u), Math.round(p.y * u));
+      release(pc);
+      if (k < m.at.length - 1) {
+        ctx.fillStyle = RULE_WU;
+        var lw = Math.max(1, Math.round(0.02 * u));
+        if (m.dir === 'v') ctx.fillRect(Math.round((p.x - m.gutter / 2) * u - lw / 2), 0, lw, hh);
+        else ctx.fillRect(0, Math.round((p.y + pg.h + m.gutter / 2) * u - lw / 2), w, lw);
+      }
     });
     return cv;
   }
@@ -485,8 +527,8 @@
   // ------------------------------------------------------------------ file names
   function shortName(cp, d) {
     var t = cp.text || {};
-    if (t.short && t.short[d.script]) return t.short[d.script];
-    return cp.copy.textId === 'heart-sutra' ? '心經' : ((t.title && (t.title[d.script] || t.title.trad)) || cp.copy.textId);
+    if (t.short && t.short[d.script]) return t.short[d.script].replace(/[\\/:*?"<>|\s]+/g, '_');
+    return cp.copy.textId === 'heart-sutra' && !t.multi ? '心經' : (((t.title && (t.title[d.script] || t.title.trad)) || cp.copy.textId).replace(/[\\/:*?"<>|\s]+/g, '_'));
   }
   function ymd(ts) { var x = new Date(ts); return x.getFullYear() + MX.pad2(x.getMonth() + 1) + MX.pad2(x.getDate()); }
   function baseName(cp, d) { return shortName(cp, d) + '-' + d.script + '-' + ymd(d.date) + '-' + FORMAT_NAME[d.format]; }
@@ -495,7 +537,7 @@
     K: K, RATIOS: RATIOS, CELL_PX: CELL_PX, MAX_PX: MAX_PX, MAX_SIDE: MAX_SIDE, RED: RED, PAPER: PAPER,
     // cp = {copy, text, cells}
     ctx: function (copy, text, cells) { return { copy: copy, text: text, cells: cells }; },
-    resolve: resolve, compose: compose, scaleFor: scaleFor, pxSize: pxSize, sealShape: sealShape, buildPdf: buildPdf, renderPage: renderPage,
+    resolve: resolve, compose: compose, scaleFor: scaleFor, pxSize: pxSize, sealShape: sealShape, buildPdf: buildPdf, renderPage: renderPage, renderMerged: renderMerged,
     prepare: prepare, baseName: baseName,
 
     // Render the whole export. Returns [{name, blob, mime, w, h, pages}]: PNG per page, or ONE multi-page PDF (分頁 + out 'pdf').
@@ -515,6 +557,13 @@
         out.push({ name: base + '.pdf', blob: new Blob([buildPdf(pgs)], { type: 'application/pdf' }), mime: 'application/pdf', w: pgs[0].w, h: pgs[0].h, pages: pgs.length });
         return out;
       }
+      if (L.merge) {
+        cv = renderMerged(cp, L, u); sz = { w: cv.width, h: cv.height };
+        var mb = await toBlob(cv, 'image/png');
+        release(cv);
+        out.push({ name: base + '-長圖.png', blob: mb, mime: 'image/png', w: sz.w, h: sz.h, pages: L.pages.length });
+        return out;
+      }
       for (i = 0; i < L.pages.length; i++) {
         cv = renderPage(cp, L, i, u); sz = { w: cv.width, h: cv.height };
         var blob = await toBlob(cv, 'image/png');
@@ -531,7 +580,7 @@
 
     // ---- export screen: static scaled preview (re-rendered only when an option changes), big segmented options
     openSheet: function (cp0) {
-      var st = MX.Model.settings, textId = cp0.copy.textId, ui = { cp: cp0, o: {}, page: 0, seq: 0, L: null };
+      var st = MX.Model.settings, textId = cp0.copy.textId, secId = MX.Model.sid(cp0.copy), ui = { cp: cp0, o: {}, page: 0, seq: 0, L: null };
       var KEEP = ['paper', 'rules', 'border', 'title', 'sign', 'seal', 'dateStyle', 'suffix', 'sealStyle', 'hui', 'punct', 'tpl'];
       var saved = st.exp || {};
       KEEP.forEach(function (k) { if (saved[k] !== undefined) ui.o[k] = saved[k]; });
@@ -547,16 +596,16 @@
       root.appendChild(status); root.appendChild(box); root.appendChild(nav); root.appendChild(ctrl);
 
       function scopes() {
-        var list = [], act = MX.Model.activeCopy(textId);
+        var list = [], act = MX.Model.activeCopy(textId, secId);
         if (act) list.push([act.id, '目前這一遍']);
-        MX.Model.archived(textId).forEach(function (c) { list.push([c.id, '存檔 ' + MX.fmtDate(c.archivedAt || c.updatedAt)]); });
+        MX.Model.archived(textId, secId).forEach(function (c) { list.push([c.id, '存檔 ' + MX.fmtDate(c.archivedAt || c.updatedAt)]); });
         if (!list.some(function (x) { return x[0] === ui.cp.copy.id; })) list.unshift([ui.cp.copy.id, ui.cp.copy.status === 'archived' ? '存檔' : '目前這一遍']);
         return list;
       }
       async function switchCopy(id) {
         var c = MX.Model.copies[id];
         if (!c) return;
-        var text = await MX.Library.getText(textId);
+        var text = await MX.Library.getView(textId, secId);
         MX.Model.loadInk(c);
         ui.cp = E.ctx(c, text, Layout.buildCells(text, c.cfg, c.signStr));
         ui.o.format = undefined; ui.o.ratio = undefined; ui.o.perLine = undefined; ui.page = 0;
@@ -569,7 +618,7 @@
       }
       function set(k, v, noPersist) {
         ui.o[k] = v;
-        if (k === 'format') { ui.o.ratio = undefined; ui.page = 0; }
+        if (k === 'format') { ui.o.ratio = undefined; ui.page = 0; if (v !== 'pages') ui.o.merge = undefined; }
         if (KEEP.indexOf(k) >= 0 && !noPersist) persist();
         drawControls(); refresh();
       }
@@ -585,6 +634,7 @@
         if (d.format !== 'scroll') row('ratio', d.format === 'pages' ? '頁面比例' : '比例', RATIO_LIST, d.ratio);
         row('perLine', d.dir === 'v' ? '每行字數（每欄）' : '每行字數', [[0, '自動'], [8, '8'], [10, '10'], [12, '12'], [15, '15'], [20, '20'], [25, '25']], d.perLine);
         if (d.format === 'pages') row('out', '輸出', [['png', 'PNG 逐頁'], ['pdf', 'PDF 一份']], d.out);
+        if (d.format === 'pages' && d.out === 'png') row('merge', '合併長圖', [[false, '分開存'], [true, '合成一張']], d.merge);
         row('paper', '紙色', [['xuan', '宣紙'], ['white', '純白']], d.paper);
         row('rules', '欄線', [['zhu', '朱絲欄'], ['wu', '烏絲欄'], ['mi', '米字格'], ['none', '無']], d.rules);
         row('border', '邊框', onoff, d.border);
@@ -613,17 +663,19 @@
         if (seq !== ui.seq) return;
         ui.L = L;
         ui.page = MX.clamp(ui.page, 0, L.pages.length - 1);
-        var fit = scaleFor(L), pg = L.pages[ui.page], mx = Math.max(pg.w, pg.h);
-        var u = Math.min(fit, (L.d.format === 'scroll' ? 1600 : 1100) / mx);
-        var cv = renderPage(ui.cp, L, ui.page, u);
+        var fit = scaleFor(L), pg = L.merge || L.pages[ui.page], mx = Math.max(pg.w, pg.h);
+        var u = Math.min(fit, (L.d.format === 'scroll' || (L.merge && pg.w / pg.h > 2) ? 1600 : 1100) / mx);
+        var cv = L.merge ? renderMerged(ui.cp, L, u) : renderPage(ui.cp, L, ui.page, u);
         cv.setAttribute('data-role', 'exp-preview');
         cv.setAttribute('data-pages', String(L.pages.length));
         cv.setAttribute('data-page', String(ui.page));
+        if (L.merge) cv.setAttribute('data-merged', L.merge.dir);
         box.innerHTML = ''; box.appendChild(cv);
         var sz = pxSize(pg, fit);
-        status.textContent = '共 ' + L.pages.length + ' ' + (L.d.format === 'pages' ? '頁' : '張') + ' · 輸出 ' + sz.w + '×' + sz.h + ' px · 每行 ' + L.P + ' 字';
+        status.textContent = L.merge ? '共 ' + L.pages.length + ' 頁，合成 1 張（' + (L.merge.dir === 'v' ? '由右到左並排' : '由上到下') + '）· 輸出 ' + sz.w + '×' + sz.h + ' px · 每行 ' + L.P + ' 字'
+          : '共 ' + L.pages.length + ' ' + (L.d.format === 'pages' ? '頁' : '張') + ' · 輸出 ' + sz.w + '×' + sz.h + ' px · 每行 ' + L.P + ' 字';
         nav.innerHTML = '';
-        if (L.pages.length > 1) {
+        if (L.pages.length > 1 && !L.merge) {
           nav.appendChild(h('button', { 'data-act': 'pprev', text: '上一頁', disabled: ui.page <= 0 ? true : null, onclick: function () { ui.page--; refresh(); } }));
           nav.appendChild(h('div', { 'data-role': 'exp-ctr', text: (ui.page + 1) + ' / ' + L.pages.length }));
           nav.appendChild(h('button', { 'data-act': 'pnext', text: '下一頁', disabled: ui.page >= L.pages.length - 1 ? true : null, onclick: function () { ui.page++; refresh(); } }));

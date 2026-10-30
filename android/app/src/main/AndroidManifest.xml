@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Only needed to save exports into Download/墨 on Android 9 and below. No INTERNET: everything is bundled. -->
+    <!-- Only needed to save exports into Download/墨 on Android 9 and below. -->
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
+    <!-- Everything is bundled and works offline; the network is used only to look for a new release / library and to download the new APK. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Install the downloaded update (Android 8+: the user allows "install unknown apps" for this app once). -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:allowBackup="false"
@@ -25,5 +29,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Hands the downloaded update APK to the package installer (content:// URI instead of file://). -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 </manifest>
