@@ -4,7 +4,7 @@
   var Store = MX.Store;
 
   var DEF_SETTINGS = {
-    acceptTouch: false, inkWidth: 'mid', tplStyle: 'fill', tplTone: 'mid', tplSize: 'm', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
+    acceptTouch: false, inkWidth: 'mid', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'm', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
     name: '', perf: false, pressure: 'auto', autoNext: true, touchPrompted: false
   };
   var DEF_CFG = {
@@ -41,6 +41,7 @@
       var sv = Store.get('schema');
       if (!(sv >= 1)) Store.set('schema', 1);
       M.settings = assign({}, DEF_SETTINGS, Store.get('settings'));
+      if (M.settings.tplStyle === 'dotted') M.settings.tplStyle = 'dots';   // older builds: dotted outline -> halftone dots
       M.copies = {};
       Store.keys('copy:').forEach(function (k) {
         var c = Store.get(k);

@@ -1,14 +1,14 @@
 {
  "msz": {
   "simp": {
-   "bytes": 77284,
+   "bytes": 77348,
    "family": "MoMaShan",
    "file": "MoMaShan.woff2",
    "full": false,
    "missing": "埵夢實復時槃歲淨減滅無異盡眾礙經罣羅聲臘與薩蘊虛見觀觸訶說諦諸識遠閏離願顛"
   },
   "trad": {
-   "bytes": 77284,
+   "bytes": 77348,
    "family": "MoMaShan",
    "file": "MoMaShan.woff2",
    "full": false,
@@ -17,14 +17,14 @@
  },
  "tw": {
   "simp": {
-   "bytes": 109868,
+   "bytes": 109900,
    "family": "MoTWKai",
    "file": "MoTWKai.woff2",
    "full": true,
    "missing": ""
   },
   "trad": {
-   "bytes": 109868,
+   "bytes": 109900,
    "family": "MoTWKai",
    "file": "MoTWKai.woff2",
    "full": true,
@@ -40,7 +40,7 @@
    "missing": ""
   },
   "trad": {
-   "bytes": 62200,
+   "bytes": 62176,
    "family": "MoUKai TC",
    "file": "MoUKaiTC.woff2",
    "full": true,

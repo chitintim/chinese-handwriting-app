@@ -151,11 +151,15 @@
     S.g = Layout.grid(W, H, S.cfg);
     S.pages = Layout.paginate(S.cells, S.g.perPage);
     S.dpr = Math.min(window.devicePixelRatio || 1, settings().perf ? 1 : 2);
-    [S.bg, S.ink].forEach(function (c) {
+    // The grid/template canvas uses the real device pixel ratio (up to 3) so 1-device-pixel dots map 1:1 to screen pixels; resampling would
+    // turn them grey (and a fast e-ink mode would drop them). The ink canvas keeps the cheaper cap.
+    S.bdpr = Math.min(window.devicePixelRatio || 1, settings().perf ? 1 : 3);
+    [[S.bg, S.bdpr], [S.ink, S.dpr]].forEach(function (a) {
+      var c = a[0];
       c.style.width = W + 'px'; c.style.height = H + 'px';
-      c.width = Math.round(W * S.dpr); c.height = Math.round(H * S.dpr);
+      c.width = Math.round(W * a[1]); c.height = Math.round(H * a[1]);
     });
-    S.bgx.setTransform(S.dpr, 0, 0, S.dpr, 0, 0);
+    S.bgx.setTransform(S.bdpr, 0, 0, S.bdpr, 0, 0);
     S.inkx.setTransform(S.dpr, 0, 0, S.dpr, 0, 0);
     S.pageIdx = pageOf(S.copy.pos || 0);
     renderPage();
@@ -174,7 +178,7 @@
       if (idx < 0) continue;
       var o = slotOrigin(s);
       Draw.cell(S.bgx, o.x, o.y, g.cell, S.cells[idx], {
-        box: gr.box, guide: gr.guide, gstyle: gr.style, tplScale: Draw.tplScale(st.tplSize), font: st.tplFont,
+        box: gr.box, guide: gr.guide, gstyle: gr.style, look: st.gridLook, density: st.gridDensity, dpr: S.bdpr, tplScale: Draw.tplScale(st.tplSize), font: st.tplFont,
         mode: S.cfg.mode, script: S.cfg.script, tplStyle: st.tplStyle, tplColor: color,
         punct: S.cfg.punct === 'show', tpl: withTpl && (S.cfg.mode === 'trace' || idx === S.hint)
       });

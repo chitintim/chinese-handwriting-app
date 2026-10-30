@@ -22,7 +22,7 @@
       if (idx < 0) continue;
       var cr = MX.Layout.slotToColRow(g, s), x = g.ox + cr.col * g.cell, y = yOff + g.oy + cr.row * g.cell;
       MX.Draw.cell(ctx2d, x, y, g.cell, cp.cells[idx], {
-        box: opts.grid && gr.box, guide: opts.grid && gr.guide, gstyle: gr.style, tplScale: MX.Draw.tplScale(st.tplSize), font: st.tplFont,
+        box: opts.grid && gr.box, guide: opts.grid && gr.guide, gstyle: gr.style, look: 'light', dpr: 1, tplScale: MX.Draw.tplScale(st.tplSize), font: st.tplFont,
         mode: opts.tpl ? cfg.mode : 'x', script: cfg.script, tplStyle: st.tplStyle, tplColor: color,
         punct: opts.tpl && cfg.punct === 'show', tpl: opts.tpl
       });

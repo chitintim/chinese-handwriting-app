@@ -2,7 +2,7 @@
    Versioned cache, installed atomically from the network (cache:'reload'), cache-first afterwards.
    skipWaiting + clients.claim: a new version takes over at once; the page shows an "update available" card.
    Not cached: the download page (download/), the APK link (cross-origin), apk-www/ and android/ (not part of the app). */
-var CACHE = 'moxie-7e34f4cceb';
+var CACHE = 'moxie-e78e879ef8';
 var FILES = [
  "./",
  "css/app.css",
