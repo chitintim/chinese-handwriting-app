@@ -78,12 +78,6 @@
     } catch (e) { /* ignore */ }
     route();
     MX.ready = true;
-    // service worker: hosted (http/https) only, never inside the native wrapper or file://
-    if (!window.MoBridge && 'serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
-      try {
-        navigator.serviceWorker.register('sw.js').catch(function () { /* ignore */ });
-      } catch (e) { /* ignore */ }
-    }
   }
   boot();
 })();

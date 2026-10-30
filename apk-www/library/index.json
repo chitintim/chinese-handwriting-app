@@ -1,0 +1,11 @@
+{
+  "texts": [
+    {
+      "id": "heart-sutra",
+      "title": {"trad": "般若波羅蜜多心經", "simp": "般若波罗蜜多心经"},
+      "file": "texts/heart-sutra.json",
+      "chars": 260,
+      "description": "玄奘譯 · 260字"
+    }
+  ]
+}

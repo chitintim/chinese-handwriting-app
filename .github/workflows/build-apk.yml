@@ -1,6 +1,7 @@
 # Builds and signs the 墨字帖 Android APK and publishes it as a GitHub Release asset (moxie.apk).
 # Lives at android/ci/build-apk.yml in the source tree; copy to .github/workflows/build-apk.yml in the
-# PUBLIC repo (chitintim/chinese-handwriting-app) whose root is the built web app + android/.
+# PUBLIC repo (chitintim/chinese-handwriting-app) whose root is the download page + open library, with the
+# app bundle in apk-www/ (copied into the APK's assets) and the wrapper sources in android/.
 #
 # Trigger: push a tag like v1.0.3, or run manually (workflow_dispatch).
 # Needs repo secrets: MOXIE_KEYSTORE_B64, MOXIE_KEYSTORE_PASSWORD, MOXIE_KEY_ALIAS (see android/ci/set-secrets.sh).
@@ -74,18 +75,15 @@ jobs:
           echo "name=$NAME" >> "$GITHUB_OUTPUT"
           echo "Release tag: $TAG, versionName: $NAME, versionCode: ${GITHUB_RUN_NUMBER}"
 
-      - name: Stage web app into assets/www
+      - name: Stage app bundle (apk-www/) into assets/www
         run: |
           set -euo pipefail
           DEST=android/app/src/main/assets/www
           rm -rf "$DEST"
           mkdir -p "$DEST"
-          rsync -a \
-            --exclude='/android/' --exclude='/.github/' --exclude='/.git/' --exclude='/offline/' \
-            --exclude='/README*' --exclude='/LICENSE*' --exclude='/CNAME' --exclude='/.nojekyll' \
-            --exclude='/.gitignore' --exclude='/.gitattributes' --exclude='.DS_Store' \
-            ./ "$DEST/"
-          test -f "$DEST/index.html" || { echo "::error::index.html missing at repo root"; exit 1; }
+          test -f apk-www/index.html || { echo "::error::apk-www/index.html missing in the repo"; exit 1; }
+          rsync -a --exclude='.DS_Store' apk-www/ "$DEST/"
+          test -f "$DEST/index.html" && test -f "$DEST/library/index.json" || { echo "::error::app bundle incomplete"; exit 1; }
           echo "Staged $(find "$DEST" -type f | wc -l) files, $(du -sh "$DEST" | cut -f1)"
 
       - name: Decode signing keystore

@@ -46,7 +46,7 @@
     });
     if (!texts.length) el.appendChild(h('p', { text: '文庫是空的。' }));
     var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '';
-    el.appendChild(h('div', { class: 'note', text: (MX.Library.offline() ? '離線版 · ' : '') + '版本 ' + ver + ' · 儲存：' + Store.mode() }));
+    el.appendChild(h('div', { class: 'note', text: '版本 ' + ver + ' · 儲存：' + Store.mode() }));
   };
 
   // ------------------------------------------------------------------ setup

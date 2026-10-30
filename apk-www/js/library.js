@@ -10,10 +10,8 @@
   }
   MX.Library = {
     index: null,
-    offline: function () { return !!window.__LIBRARY__; },
     load: async function () {
-      if (window.__LIBRARY__) this.index = window.__LIBRARY__.index;
-      else this.index = await fetchJson('library/index.json');
+      this.index = await fetchJson('library/index.json');
       return this.index;
     },
     texts: function () { return (this.index && this.index.texts) || []; },
@@ -26,10 +24,7 @@
       if (cache[id]) return cache[id];
       var e = this.entry(id);
       if (!e) throw new Error('unknown text ' + id);
-      var t;
-      if (window.__LIBRARY__) t = window.__LIBRARY__.texts[id];
-      else t = await fetchJson('library/' + e.file);
-      if (!t) throw new Error('missing text ' + id);
+      var t = await fetchJson('library/' + e.file);
       cache[id] = t;
       return t;
     }
