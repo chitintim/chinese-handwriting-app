@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fallback for API 24/25 (no adaptive icons): black rounded square with the same white brush strokes. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M24,6 H84 A18,18 0 0 1 102,24 V84 A18,18 0 0 1 84,102 H24 A18,18 0 0 1 6,84 V24 A18,18 0 0 1 24,6 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M33,76 C38,58 54,40 78,32 C70,44 57,58 45,80 C41,81 36,79 33,76 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M36,50 C46,47 58,46 72,48 C73,51 72,53 70,54 C58,52 46,53 37,56 C35,54 35,52 36,50 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M66,66 C71,64 76,67 76,72 C76,77 71,80 66,78 C62,76 62,68 66,66 Z" />
+</vector>

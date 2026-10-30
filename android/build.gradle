@@ -1,0 +1,5 @@
+// Top-level build file.
+// Version matrix (keep in sync, see README): AGP 8.5.2 <-> Gradle 8.7 <-> JDK 17 <-> compileSdk 34.
+plugins {
+    id 'com.android.application' version '8.5.2' apply false
+}

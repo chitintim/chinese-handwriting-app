@@ -1,0 +1,15 @@
+# Populated by CI (copy of the web app) - never commit
+app/src/main/assets/www/
+# Gradle / Android build output
+.gradle/
+build/
+app/build/
+local.properties
+*.apk
+*.aab
+# Signing material must never be committed
+*.p12
+*.jks
+*.keystore
+*.pem
+.DS_Store

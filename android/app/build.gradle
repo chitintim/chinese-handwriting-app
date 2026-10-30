@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Values injected by CI (see ci/build-apk.yml); sensible defaults for local builds.
+def moxieVersionCode = Integer.parseInt(System.getenv('MOXIE_VERSION_CODE') ?: '1')
+def moxieVersionName = System.getenv('MOXIE_VERSION_NAME') ?: '0.0.0-dev'
+def moxieKeystoreFile = System.getenv('MOXIE_KEYSTORE_FILE')
+
+android {
+    namespace 'com.chitintim.moxie'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.chitintim.moxie'
+        minSdk 24
+        targetSdk 34
+        versionCode moxieVersionCode
+        versionName moxieVersionName
+    }
+
+    signingConfigs {
+        release {
+            if (moxieKeystoreFile) {
+                storeFile file(moxieKeystoreFile)
+                storeType 'pkcs12'
+                storePassword System.getenv('MOXIE_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('MOXIE_KEY_ALIAS') ?: 'moxie'
+                // PKCS12: key password == store password
+                keyPassword System.getenv('MOXIE_KEYSTORE_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            if (moxieKeystoreFile) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        encoding 'UTF-8'
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.11.0'
+}

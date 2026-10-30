@@ -1,0 +1,147 @@
+# Builds and signs the 墨字帖 Android APK and publishes it as a GitHub Release asset (moxie.apk).
+# Lives at android/ci/build-apk.yml in the source tree; copy to .github/workflows/build-apk.yml in the
+# PUBLIC repo (chitintim/chinese-handwriting-app) whose root is the built web app + android/.
+#
+# Trigger: push a tag like v1.0.3, or run manually (workflow_dispatch).
+# Needs repo secrets: MOXIE_KEYSTORE_B64, MOXIE_KEYSTORE_PASSWORD, MOXIE_KEY_ALIAS (see android/ci/set-secrets.sh).
+name: Build APK
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to create/update (blank = v1.0.<run number>)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-apk
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install SDK platform and build-tools
+        run: |
+          set -euo pipefail
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager "platforms;android-34" "build-tools;34.0.0" >/dev/null
+
+      - name: Set up Gradle 8.7
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Determine version
+        id: ver
+        env:
+          INPUT_TAG: ${{ github.event.inputs.tag }}
+        run: |
+          set -euo pipefail
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            TAG="${GITHUB_REF_NAME}"
+          elif [ -n "${INPUT_TAG}" ]; then
+            TAG="${INPUT_TAG}"
+          else
+            TAG="v1.0.${GITHUB_RUN_NUMBER}"
+          fi
+          NAME="${TAG#v}"
+          if ! printf '%s' "$NAME" | grep -Eq '^[0-9A-Za-z._+-]+$'; then
+            echo "::error::Bad tag/version name: $TAG"; exit 1
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          echo "Release tag: $TAG, versionName: $NAME, versionCode: ${GITHUB_RUN_NUMBER}"
+
+      - name: Stage web app into assets/www
+        run: |
+          set -euo pipefail
+          DEST=android/app/src/main/assets/www
+          rm -rf "$DEST"
+          mkdir -p "$DEST"
+          rsync -a \
+            --exclude='/android/' --exclude='/.github/' --exclude='/.git/' --exclude='/offline/' \
+            --exclude='/README*' --exclude='/LICENSE*' --exclude='/CNAME' --exclude='/.nojekyll' \
+            --exclude='/.gitignore' --exclude='/.gitattributes' --exclude='.DS_Store' \
+            ./ "$DEST/"
+          test -f "$DEST/index.html" || { echo "::error::index.html missing at repo root"; exit 1; }
+          echo "Staged $(find "$DEST" -type f | wc -l) files, $(du -sh "$DEST" | cut -f1)"
+
+      - name: Decode signing keystore
+        env:
+          MOXIE_KEYSTORE_B64: ${{ secrets.MOXIE_KEYSTORE_B64 }}
+          MOXIE_KEYSTORE_PASSWORD: ${{ secrets.MOXIE_KEYSTORE_PASSWORD }}
+          MOXIE_KEY_ALIAS: ${{ secrets.MOXIE_KEY_ALIAS }}
+        run: |
+          set -euo pipefail
+          for v in MOXIE_KEYSTORE_B64 MOXIE_KEYSTORE_PASSWORD MOXIE_KEY_ALIAS; do
+            if [ -z "${!v}" ]; then echo "::error::Secret $v is not set (run android/ci/set-secrets.sh)"; exit 1; fi
+          done
+          KS="$RUNNER_TEMP/moxie.p12"
+          printf '%s' "$MOXIE_KEYSTORE_B64" | base64 -d > "$KS"
+          keytool -list -storetype pkcs12 -keystore "$KS" -storepass:env MOXIE_KEYSTORE_PASSWORD -alias "$MOXIE_KEY_ALIAS" | grep -i fingerprint
+          echo "MOXIE_KEYSTORE_FILE=$KS" >> "$GITHUB_ENV"
+
+      - name: Build release APK
+        env:
+          MOXIE_VERSION_CODE: ${{ github.run_number }}
+          MOXIE_VERSION_NAME: ${{ steps.ver.outputs.name }}
+          MOXIE_KEYSTORE_PASSWORD: ${{ secrets.MOXIE_KEYSTORE_PASSWORD }}
+          MOXIE_KEY_ALIAS: ${{ secrets.MOXIE_KEY_ALIAS }}
+        run: gradle -p android :app:assembleRelease --no-daemon --stacktrace
+
+      - name: Verify signature and name the APK
+        run: |
+          set -euo pipefail
+          SRC=android/app/build/outputs/apk/release/app-release.apk
+          test -f "$SRC" || { echo "::error::Signed APK not found (is it app-release-unsigned.apk?)"; ls -R android/app/build/outputs || true; exit 1; }
+          SDK="${ANDROID_SDK_ROOT:-${ANDROID_HOME}}"
+          APKSIGNER="$SDK/build-tools/34.0.0/apksigner"
+          "$APKSIGNER" verify --verbose --print-certs "$SRC" | grep -E 'Verifies|SHA-256|Number of signers|Signer #1 certificate DN'
+          cp "$SRC" moxie.apk
+          ls -l moxie.apk
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: moxie-apk
+          path: moxie.apk
+          if-no-files-found: error
+
+      - name: Publish GitHub Release
+        env:
+          TAG: ${{ steps.ver.outputs.tag }}
+          VNAME: ${{ steps.ver.outputs.name }}
+        run: |
+          set -euo pipefail
+          NOTES="墨字帖 ${VNAME} (build ${GITHUB_RUN_NUMBER}, commit ${GITHUB_SHA::7})"
+          if gh release view "$TAG" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$TAG" moxie.apk --clobber -R "$GITHUB_REPOSITORY"
+            gh release edit "$TAG" --latest -R "$GITHUB_REPOSITORY"
+          else
+            gh release create "$TAG" moxie.apk -R "$GITHUB_REPOSITORY" \
+              --target "$GITHUB_SHA" --title "墨字帖 ${VNAME}" --notes "$NOTES" --latest
+          fi
+          echo "Download: https://github.com/${GITHUB_REPOSITORY}/releases/latest/download/moxie.apk"
