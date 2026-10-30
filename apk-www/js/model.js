@@ -4,14 +4,22 @@
   var Store = MX.Store;
 
   var DEF_SETTINGS = {
-    acceptTouch: false, inkWidth: 'mid', tplStyle: 'fill', tplTone: 'mid',
+    acceptTouch: false, inkWidth: 'mid', tplStyle: 'fill', tplTone: 'mid', tplSize: 'm', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
     name: '', perf: false, pressure: 'auto', autoNext: true, touchPrompted: false
   };
   var DEF_CFG = {
-    script: 'trad', mode: 'trace', grid: 'mi', size: 'M', dir: 'v', punct: 'hide',
+    script: 'trad', mode: 'trace', grid: 'mi', box: true, guide: true, size: 'M', dir: 'v', punct: 'hide',
     title: false, closing: false, sign: false
   };
   var CONTENT_KEYS = ['script', 'title', 'closing', 'sign'];
+
+  // Older records used grid: mi | tian | fang | none. Now: grid = guide style (mi | tian), box = outer cell border, guide = inner lines.
+  function normCfg(c) {
+    if (!c) return c;
+    if (c.grid === 'fang') { c.grid = 'mi'; if (c.guide === undefined) c.guide = false; }
+    else if (c.grid === 'none') { c.grid = 'mi'; if (c.box === undefined) c.box = false; if (c.guide === undefined) c.guide = false; }
+    return c;
+  }
 
   function assign(t) {
     for (var i = 1; i < arguments.length; i++) {
@@ -24,7 +32,7 @@
     'filled', 'total', 'completedAt', 'archivedAt'];
 
   var M = MX.Model = {
-    CONTENT_KEYS: CONTENT_KEYS, DEF_CFG: DEF_CFG, DEF_SETTINGS: DEF_SETTINGS,
+    CONTENT_KEYS: CONTENT_KEYS, normCfg: normCfg, DEF_CFG: DEF_CFG, DEF_SETTINGS: DEF_SETTINGS,
     copies: {},
 
     init: function () {
@@ -36,11 +44,11 @@
       M.copies = {};
       Store.keys('copy:').forEach(function (k) {
         var c = Store.get(k);
-        if (c && c.id) { c.cfg = assign({}, DEF_CFG, c.cfg); M.copies[c.id] = c; }
+        if (c && c.id) { c.cfg = assign({}, DEF_CFG, normCfg(c.cfg)); M.copies[c.id] = c; }
       });
     },
     saveSettings: function () { Store.set('settings', M.settings); },
-    textCfg: function (textId) { return assign({}, DEF_CFG, Store.get('textcfg:' + textId)); },
+    textCfg: function (textId) { var s = Store.get('textcfg:' + textId); return assign({}, DEF_CFG, s ? normCfg(assign({}, s)) : s); },
     saveTextCfg: function (textId, cfg) { Store.set('textcfg:' + textId, assign({}, cfg)); },
 
     activeCopy: function (textId) {

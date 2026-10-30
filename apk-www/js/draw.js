@@ -5,13 +5,40 @@
 
   D.INK_W = { thin: 13, mid: 22, thick: 36 };   // base width in 1/1000 cell units (at p = 0.5)
   D.TONE = { light: '#c4c4c4', mid: '#a8a8a8', dark: '#858585' };
-  D.GRID_OUT = '#cfcfcf';
+  D.GRID_OUT = '#cfcfcf';      // cell box and guide lines are always lighter than the lightest template tone
   D.GRID_GUIDE = '#e3e3e3';
+  // template glyph size as a fraction of the cell (default 中 = the old 0.8 reduced by ~13%)
+  D.TPL_SIZE = { s: 0.60, m: 0.70, l: 0.80, xl: 0.90 };
+  D.tplScale = function (key) { return D.TPL_SIZE[key] || D.TPL_SIZE.m; };
+  // normalised grid options of a copy config (also understands the legacy grid: fang | none)
+  D.gridOf = function (cfg) {
+    var legacyOff = cfg.grid === 'none', noGuide = cfg.grid === 'fang';
+    return { box: cfg.box !== false && !legacyOff, guide: cfg.guide !== false && !legacyOff && !noGuide, style: cfg.grid === 'tian' ? 'tian' : 'mi' };
+  };
 
-  D.fam = function (script) {
-    return script === 'simp'
-      ? '"MoKai SC","LXGW WenKai","Kaiti SC","STKaiti","KaiTi","Noto Serif CJK SC",serif'
-      : '"MoKai TC","LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB","Noto Serif CJK TC",serif';
+  // Template fonts (subsets built from open-licensed fonts, see library/fonts/README.txt). full[script] = covers every library glyph
+  // (checked against library/fonts/fonts.json by the tests); otherwise missing glyphs fall back per character along the stack.
+  D.FONTS = {
+    ukai: { label: '楷書', fam: { trad: 'MoUKai TC', simp: 'MoUKai SC' }, full: { trad: true, simp: true } },
+    tw: { label: '正楷', fam: { trad: 'MoTWKai', simp: 'MoTWKai' }, full: { trad: true, simp: true } },
+    msz: { label: '行楷', fam: { trad: 'MoMaShan', simp: 'MoMaShan' }, full: { trad: false, simp: false } },
+    wk: { label: '硬筆', fam: { trad: 'MoKai TC', simp: 'MoKai SC' }, full: { trad: true, simp: true } }
+  };
+  D.FONT_ORDER = ['ukai', 'tw', 'msz', 'wk'];     // most calligraphic first, LXGW WenKai last
+  D.DEF_FONT = 'ukai';
+  function famList(script, key) {
+    var sc = script === 'simp' ? 'simp' : 'trad', out = [];
+    if (D.FONTS[key]) out.push(D.FONTS[key].fam[sc]);
+    D.FONT_ORDER.forEach(function (k) { var f = D.FONTS[k].fam[sc]; if (out.indexOf(f) < 0) out.push(f); });
+    return out;
+  }
+  // CSS font stack. No key = the UI font (LXGW WenKai first); with a key = that template font first, then the others, LXGW last.
+  D.fam = function (script, key) {
+    var sys = script === 'simp'
+      ? ',"LXGW WenKai","Kaiti SC","STKaiti","KaiTi","Noto Serif CJK SC",serif'
+      : ',"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB","Noto Serif CJK TC",serif';
+    var list = key ? famList(script, key) : famList(script, 'wk');
+    return list.map(function (f) { return '"' + f + '"'; }).join(',') + sys;
   };
 
   function wOf(base, p, sc) {
@@ -68,7 +95,7 @@
   // Draw one glyph centred in a box (cx,cy centre; size = em box in px).
   D.glyph = function (ctx, ch, cx, cy, size, o) {
     ctx.save();
-    ctx.font = Math.round(size) + 'px ' + D.fam(o.script);
+    ctx.font = Math.round(size) + 'px ' + D.fam(o.script, o.font);
     ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
     var m = ctx.measureText(ch), y = cy;
     if (m && m.actualBoundingBoxAscent !== undefined) y = cy + (m.actualBoundingBoxAscent - m.actualBoundingBoxDescent) / 2;
@@ -84,45 +111,51 @@
     ctx.restore();
   };
 
-  // Draw the cell background: grid, template/reference, punctuation.
-  // o: {grid, mode, script, tplStyle, tplColor, punct (bool), tpl (bool: show template in this cell)}
+  // Draw the cell background: box, guide lines, template/reference, punctuation.
+  // o: {box, guide, gstyle ('mi'|'tian'), mode, script, tplStyle, tplColor, tplScale, punct (bool), tpl (bool: show template in this cell)}
   D.cell = function (ctx, x, y, size, cell, o) {
     ctx.save();
-    if (o.grid !== 'none') {
+    if (o.box) {
       ctx.setLineDash([]);
       ctx.strokeStyle = D.GRID_OUT; ctx.lineWidth = 1.5;
       ctx.strokeRect(x + 0.75, y + 0.75, size - 1.5, size - 1.5);
+    }
+    if (o.guide) {
       ctx.strokeStyle = D.GRID_GUIDE; ctx.lineWidth = 1;
       ctx.setLineDash([6, 6]);
       ctx.beginPath();
       ctx.moveTo(x + size / 2, y + 2); ctx.lineTo(x + size / 2, y + size - 2);
       ctx.moveTo(x + 2, y + size / 2); ctx.lineTo(x + size - 2, y + size / 2);
-      if (o.grid === 'mi') {
+      if (o.gstyle === 'mi') {
         ctx.moveTo(x + 2, y + 2); ctx.lineTo(x + size - 2, y + size - 2);
         ctx.moveTo(x + size - 2, y + 2); ctx.lineTo(x + 2, y + size - 2);
       }
       ctx.stroke();
     }
     ctx.restore();
+    var sc = o.tplScale || D.TPL_SIZE.m;
     if (o.mode === 'copy') {
-      D.glyph(ctx, cell.ch, x + size * 0.17, y + size * 0.17, size * 0.26, { script: o.script, style: 'fill', color: '#333' });
+      D.glyph(ctx, cell.ch, x + size * 0.17, y + size * 0.17, size * 0.26 * sc / 0.8, { script: o.script, font: o.font, style: 'fill', color: '#333' });
     } else if (o.tpl) {
-      D.glyph(ctx, cell.ch, x + size / 2, y + size / 2, size * 0.8, { script: o.script, style: o.tplStyle, color: o.tplColor });
+      D.glyph(ctx, cell.ch, x + size / 2, y + size / 2, size * sc, { script: o.script, font: o.font, style: o.tplStyle, color: o.tplColor });
     }
     if (o.punct && cell.punct) {
       D.glyph(ctx, cell.punct, x + size * 0.84, y + size * 0.86, size * 0.2, { script: o.script, style: 'fill', color: '#555' });
     }
   };
 
-  // Make sure the web fonts are loaded before painting glyphs.
+  // Make sure the web fonts are loaded before painting glyphs. key = template font; an incomplete font also loads the fallbacks.
   var fontsOk = {};
-  D.fontsReady = function (script, text) {
-    var key = script;
-    if (fontsOk[key]) return Promise.resolve();
+  D.fontsReady = function (script, text, key) {
+    var sc = script === 'simp' ? 'simp' : 'trad', ck = sc + ':' + (key || '');
+    if (fontsOk[ck]) return Promise.resolve();
     if (!document.fonts || !document.fonts.load) return Promise.resolve();
-    var spec = '40px ' + (script === 'simp' ? '"MoKai SC"' : '"MoKai TC"');
-    var p = document.fonts.load(spec, text || '墨').then(function () { fontsOk[key] = true; }, function () {});
+    var fams = D.FONTS[key] && D.FONTS[key].full[sc] ? [D.FONTS[key].fam[sc]] : famList(sc, key);
+    var ps = fams.map(function (f) { return document.fonts.load('40px "' + f + '"', text || '墨').catch(function () { return null; }); });
+    var p = Promise.all(ps).then(function () { fontsOk[ck] = true; }, function () {});
     return Promise.race([p, new Promise(function (r) { setTimeout(r, 3000); })]);
   };
-  D.fontsLoaded = function (script) { return !!fontsOk[script] || !(document.fonts && document.fonts.load); };
+  D.fontsLoaded = function (script, key) {
+    return !!fontsOk[(script === 'simp' ? 'simp' : 'trad') + ':' + (key || '')] || !(document.fonts && document.fonts.load);
+  };
 })();

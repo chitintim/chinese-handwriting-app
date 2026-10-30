@@ -7,8 +7,10 @@
     // per-copy config fields; content=true ones are locked once the copy has ink
     CFG: [
       { k: 'script', label: '字體', content: true, opts: [['trad', '繁體'], ['simp', '简体']] },
-      { k: 'grid', label: '格線', opts: [['mi', '米字格'], ['tian', '田字格'], ['fang', '方格'], ['none', '無']] },
-      { k: 'size', label: '每頁', opts: [['L', '大 4×5'], ['M', '中 6×8'], ['S', '小 8×10']] },
+      { k: 'box', label: '外框', opts: [[true, '有'], [false, '無']] },
+      { k: 'guide', label: '格線', opts: [[true, '有'], [false, '無']] },
+      { k: 'grid', label: '格線樣式', opts: [['mi', '米字格'], ['tian', '田字格']] },
+      { k: 'size', label: '格大小', opts: [['XL', '特大 3×4'], ['L', '大 4×5'], ['ML', '中大 5×7'], ['M', '中 6×8'], ['S', '小 8×10'], ['XS', '特小 10×13']] },
       { k: 'dir', label: '方向', opts: [['v', '直書'], ['h', '橫書']] },
       { k: 'punct', label: '標點', opts: [['hide', '隱藏'], ['show', '顯示']] },
       { k: 'mode', label: '模式', opts: [['trace', '描'], ['copy', '臨'], ['recall', '默']] },
@@ -19,10 +21,14 @@
     SETTINGS: [
       { k: 'inkWidth', label: '筆粗', opts: [['thin', '細'], ['mid', '中'], ['thick', '粗']] },
       { k: 'tplStyle', label: '範本', opts: [['fill', '實心'], ['outline', '空心'], ['dotted', '點線']] },
+      { k: 'tplFont', label: '字體', opts: [['ukai', '楷書'], ['tw', '正楷'], ['msz', '行楷'], ['wk', '硬筆']] },
+      { k: 'tplSize', label: '字大小', opts: [['s', '小'], ['m', '中'], ['l', '大'], ['xl', '特大']] },
       { k: 'tplTone', label: '深淺', opts: [['light', '淺'], ['mid', '中'], ['dark', '深']] },
       { k: 'pressure', label: '壓感', opts: [['auto', '自動'], ['off', '固定']] },
       { k: 'acceptTouch', label: '手指書寫', opts: ONOFF },
       { k: 'perf', label: '效能模式', opts: ONOFF },
+      { k: 'autoFlip', label: '自動翻頁', opts: ONOFF },
+      { k: 'flipDelay', label: '翻頁等待', opts: [['1', '1秒'], ['2', '2秒'], ['3', '3秒']] },
       { k: 'autoNext', label: '翻頁鈕', opts: ONOFF }
     ],
     // segmented single-choice control

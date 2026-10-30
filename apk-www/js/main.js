@@ -51,7 +51,7 @@
       MX.err(e);
       el.appendChild(MX.h('div', { class: 'screen' }, [
         MX.h('h1', { text: '無法載入文庫' }),
-        MX.h('p', { text: '請用網址開啟，或使用「離線版」單一檔案。' }),
+        MX.h('p', { text: '請檢查網路連線後重試，或安裝 App (APK)。' }),
         MX.h('p', { class: 'mono', text: String(e && e.message || e) }),
         MX.h('button', { text: '重試', onclick: function () { location.reload(); } })
       ]));
@@ -78,6 +78,27 @@
     } catch (e) { /* ignore */ }
     route();
     MX.ready = true;
+    registerSw();
+  }
+
+  // Service worker: hosted (http/https) web app only, never inside the native wrapper or file://.
+  // A new version installs in the background (versioned cache, skipWaiting + clients.claim); the page then shows an
+  // "update available" card on the home screen (no automatic reload, so ink is never lost mid-stroke).
+  function registerSw() {
+    var flag = document.querySelector('meta[name=mx-sw]');
+    if (window.MoBridge || !flag || flag.content !== '1' || !('serviceWorker' in navigator) || !/^https?:$/.test(location.protocol)) return;
+    try {
+      var had = !!navigator.serviceWorker.controller;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (!had) { had = true; return; }       // first install claiming this page: nothing to update
+        MX.updateReady = true;
+        if (current === 'home') route();
+      });
+      navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(function (reg) {
+        var check = function () { try { reg.update().catch(function () { /* offline */ }); } catch (e) { /* ignore */ } };
+        document.addEventListener('visibilitychange', function () { if (!document.hidden) check(); });
+      }).catch(function () { /* ignore */ });
+    } catch (e) { /* ignore */ }
   }
   boot();
 })();

@@ -30,6 +30,10 @@
       var cells = Layout.buildCells(text, copy.cfg, copy.signStr);
       copy.total = cells.length;
       Model.recount(copy);
+      if (!(opts && opts.readOnly) && copy.status !== 'archived') {
+        // resume at the page holding the first empty cell (a finished copy keeps its last position)
+        for (var ei = 0; ei < cells.length; ei++) if (!(copy.ink[ei] || []).length) { copy.pos = ei; break; }
+      }
       S = {
         root: h('div', { class: 'practice' }), copy: copy, text: text, cells: cells, readOnly: !!(opts && opts.readOnly),
         cfg: copy.cfg, g: null, pages: [], pageIdx: 0, slotOf: {}, dpr: 1, token: 0,
@@ -164,13 +168,14 @@
   function drawBg(withTpl) {
     var g = S.g, page = S.pages[S.pageIdx], st = settings();
     S.bgx.clearRect(0, 0, g.W, g.H);
-    var color = Draw.TONE[st.tplTone] || Draw.TONE.mid;
+    var color = Draw.TONE[st.tplTone] || Draw.TONE.mid, gr = Draw.gridOf(S.cfg);
     for (var s = 0; s < page.length; s++) {
       var idx = page[s];
       if (idx < 0) continue;
       var o = slotOrigin(s);
       Draw.cell(S.bgx, o.x, o.y, g.cell, S.cells[idx], {
-        grid: S.cfg.grid, mode: S.cfg.mode, script: S.cfg.script, tplStyle: st.tplStyle, tplColor: color,
+        box: gr.box, guide: gr.guide, gstyle: gr.style, tplScale: Draw.tplScale(st.tplSize), font: st.tplFont,
+        mode: S.cfg.mode, script: S.cfg.script, tplStyle: st.tplStyle, tplColor: color,
         punct: S.cfg.punct === 'show', tpl: withTpl && (S.cfg.mode === 'trace' || idx === S.hint)
       });
     }
@@ -183,10 +188,10 @@
     page.forEach(function (idx, s) { if (idx >= 0) S.slotOf[idx] = s; });
     hideNext();
     drawBg(false);
-    if (Draw.fontsLoaded(S.cfg.script)) drawBg(true);
+    if (Draw.fontsLoaded(S.cfg.script, settings().tplFont)) drawBg(true);
     else {
       var chars = page.map(function (i) { return i >= 0 ? S.cells[i].ch + S.cells[i].punct : ''; }).join('');
-      Draw.fontsReady(S.cfg.script, chars).then(function () { if (S && tk === S.token) drawBg(true); });
+      Draw.fontsReady(S.cfg.script, chars, settings().tplFont).then(function () { if (S && tk === S.token) drawBg(true); });
     }
     redrawInk();
     updateUi();
@@ -509,9 +514,35 @@
     if (S.nextBtn && S.nextBtn.parentNode) S.nextBtn.parentNode.removeChild(S.nextBtn);
     S.nextBtn = null;
   }
-  function armNext() {
+  // Page complete = every cell of the page has ink.
+  function pageFull(page) {
+    var n = 0;
+    for (var i = 0; i < page.length; i++) {
+      if (page[i] < 0) continue;
+      n++;
+      if (!(S.copy.ink[page[i]] || []).length) return false;
+    }
+    return n > 0;
+  }
+  // Called after a stroke: if the page is now full, turn to the next page after the idle delay (one instant step, no animation).
+  // Any new pen-down (hideNext), page change, undo or clear cancels it. Never from the last page; only after writing on this page.
+  function armFlip() {
     clearTimeout(S.timers.next);
-    if (S.readOnly || !settings().autoNext || S.pageIdx >= S.pages.length - 1) return;
+    var st = settings();
+    if (S.readOnly || !st.autoFlip || S.pageIdx >= S.pages.length - 1 || !pageFull(S.pages[S.pageIdx])) return false;
+    var seq = S.token, ms = (parseInt(st.flipDelay, 10) || 2) * 1000;
+    if (MX.test && MX.test.flipMs) ms = MX.test.flipMs;
+    S.timers.next = setTimeout(function () {
+      if (!S || S.token !== seq || S.active !== null || document.querySelector('.modal-bg')) return;
+      if (!pageFull(S.pages[S.pageIdx]) || S.pageIdx >= S.pages.length - 1) return;
+      goRel(1);
+    }, ms);
+    return true;
+  }
+  function armNext() {
+    if (armFlip()) return;
+    clearTimeout(S.timers.next);
+    if (S.readOnly || settings().autoFlip || !settings().autoNext || S.pageIdx >= S.pages.length - 1) return;
     var li = lastIdx(S.pages[S.pageIdx]);
     if (li < 0 || !(S.copy.ink[li] || []).length) return;
     var seq = S.token;
@@ -606,6 +637,8 @@
         perPage: g.perPage, total: S.cells.length, filled: S.copy.filled, cells: cells, copyId: S.copy.id, completed: !!S.copy.completedAt,
         mode: S.cfg.mode, nextBtn: !!S.nextBtn, pressureSeen: S.pressureSeen, hint: S.hint };
     },
+    flipMs: 0,
+    relayout: function () { if (S) layout(); },
     go: go,
     cellsAll: function () { return S ? S.cells.map(function (c) { return c.ch; }).join('') : ''; },
     inkOf: function (idx) { return S ? (S.copy.ink[idx] || []) : []; },

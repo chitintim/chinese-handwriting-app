@@ -1,6 +1,6 @@
 # 墨字帖 — Android wrapper
 
-Minimal WebView shell (`com.chitintim.moxie`) that bundles the app (the product; there is no browser version) and serves it at
+Minimal WebView shell (`com.chitintim.moxie`) that bundles the app (the same code as the hosted web app on GitHub Pages) and serves it at
 `https://appassets.androidplatform.net/` through `WebViewAssetLoader`. No INTERNET permission.
 Built **only in GitHub Actions** (no local Android SDK needed).
 
@@ -17,10 +17,11 @@ Java 17 source level, `androidx.webkit:webkit:1.11.0`. No Kotlin, no AppCompat, 
 
 ## Public repo layout
 
-The public repo (`chitintim/chinese-handwriting-app`) root is the GitHub Pages site: `index.html` (download page) and `library/`
-(the open content library). Next to it: `apk-www/` (the app bundle: `index.html`, `css/`, `js/`, `library/`), `android/` (this
-folder, verbatim) and `.github/workflows/build-apk.yml`. CI copies `apk-www/` into `android/app/src/main/assets/www/`.
-All of it is produced by `scripts/build.py` + `scripts/publish.sh` in the private source repo.
+The public repo (`chitintim/chinese-handwriting-app`) root is the GitHub Pages site and is the hosted web app (`index.html`, `css/`, `js/`, `library/`,
+`sw.js`, `manifest.webmanifest`, `icon.svg`) plus `download/index.html` (install page). Next to it: `apk-www/` (the same app bundle without `sw.js`),
+`android/` (this folder, verbatim) and `.github/workflows/build-apk.yml`. CI copies `apk-www/` into `android/app/src/main/assets/www/` (it uses the runner's
+preinstalled `sdkmanager`, not `android-actions/setup-android`). All of it is produced by `scripts/build.py` + `scripts/publish.sh` in the private source repo.
+The web app's home screen links to `releases/latest/download/moxie.apk` (big 安裝 App (APK) button, hidden when `window.MoBridge` exists, i.e. inside this app).
 
 ## Releasing
 
@@ -35,8 +36,8 @@ Re-running the same tag replaces the asset.
 
 Stable download URL: https://github.com/chitintim/chinese-handwriting-app/releases/latest/download/moxie.apk
 
-To ship an app update: run build + publish in the source repo (refreshes `apk-www/` and the download page), then push a new `v*` tag in the public repo.
-The download page always links to `releases/latest`, so it needs no change per release.
+To ship an app update: run build + publish in the source repo (refreshes the web app, `apk-www/` and the download page), then push a new `v*` tag in the public repo.
+The web app and the download page always link to `releases/latest`, so they need no change per release. Web users get the new version through the service worker (update card).
 
 ## Signing
 
@@ -56,7 +57,7 @@ Gradle reads `MOXIE_KEYSTORE_FILE`, `MOXIE_KEYSTORE_PASSWORD`, `MOXIE_KEY_ALIAS`
 
 ## Installing on the iReader Smart 6C Pro
 
-1. In the tablet's browser open the download page https://chitintim.github.io/chinese-handwriting-app/ (or the direct URL above) (or copy `moxie.apk` over USB into Download).
+1. In the tablet's browser open the web app https://chitintim.github.io/chinese-handwriting-app/ and tap 安裝 App (APK), or the install page .../download/ (or the direct URL above) (or copy `moxie.apk` over USB into Download).
 2. Open the downloaded file. When asked, allow "Install unknown apps" for the browser/file manager, then Install.
 3. Updates: download and install the newer `moxie.apk` over the old one (same package + key = data kept).
 
@@ -75,7 +76,7 @@ Gradle reads `MOXIE_KEYSTORE_FILE`, `MOXIE_KEYSTORE_PASSWORD`, `MOXIE_KEY_ALIAS`
   `preventDefault`ed, or `window.__moHandleBack()` returns `true` (the web app closes the top dialog, or steps back to
   the home screen), the app stays; otherwise (home screen, or no answer within 1 s) it closes.
 - Pause: `Activity.onPause` dispatches `window` event `mo-pause` so the page saves unsaved ink immediately.
-- The app has no service worker. `MainActivity` still answers `/sw.js` with a 404 as a leftover safeguard (the APK is the update mechanism).
+- The app registers no service worker (skipped when `MoBridge` exists; `apk-www/` does not even contain `sw.js`). `MainActivity` still answers `/sw.js` with a 404 as a safeguard (the APK is the update mechanism).
 - External links open in the system browser; all other navigation stays in the app.
 
 ## Troubleshooting

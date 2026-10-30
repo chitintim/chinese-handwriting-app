@@ -11,7 +11,8 @@
   }
   function paintPage(ctx2d, g, pages, pageIdx, cp, opts, yOff) {
     var cfg = cp.copy.cfg, st = MX.Model.settings;
-    var color = MX.Draw.TONE[st.tplTone] || MX.Draw.TONE.mid;
+    var color = MX.Draw.TONE[st.tplTone] || MX.Draw.TONE.mid, gr = MX.Draw.gridOf(cfg);
+    if (opts.grid && !gr.box && !gr.guide) gr = { box: true, guide: true, style: 'tian' };   // an exported sheet with grid always shows some grid
     var base = MX.Draw.INK_W[st.inkWidth] || 22;
     ctx2d.fillStyle = '#fff';
     ctx2d.fillRect(0, yOff, g.W, g.H);
@@ -21,7 +22,7 @@
       if (idx < 0) continue;
       var cr = MX.Layout.slotToColRow(g, s), x = g.ox + cr.col * g.cell, y = yOff + g.oy + cr.row * g.cell;
       MX.Draw.cell(ctx2d, x, y, g.cell, cp.cells[idx], {
-        grid: opts.grid ? (cfg.grid === 'none' ? 'tian' : cfg.grid) : 'none',
+        box: opts.grid && gr.box, guide: opts.grid && gr.guide, gstyle: gr.style, tplScale: MX.Draw.tplScale(st.tplSize), font: st.tplFont,
         mode: opts.tpl ? cfg.mode : 'x', script: cfg.script, tplStyle: st.tplStyle, tplColor: color,
         punct: opts.tpl && cfg.punct === 'show', tpl: opts.tpl
       });
@@ -50,7 +51,7 @@
       var opts = { grid: o.grid !== false, tpl: !!o.tpl };
       var portrait = o.portrait !== false;
       var cfg = cp.copy.cfg;
-      if (opts.tpl) await MX.Draw.fontsReady(cfg.script, cp.cells.map(function (c) { return c.ch; }).join('').slice(0, 400));
+      if (opts.tpl) await MX.Draw.fontsReady(cfg.script, cp.cells.map(function (c) { return c.ch; }).join('').slice(0, 400), MX.Model.settings.tplFont);
       var cell = CELL;
       var g = exportGrid(cfg, portrait, cell);
       var pages = MX.Layout.paginate(cp.cells, g.perPage);

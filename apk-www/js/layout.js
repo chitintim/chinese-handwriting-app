@@ -1,7 +1,8 @@
 (function () {
   'use strict';
   var MX = window.MX;
-  var DIMS = { L: [4, 5], M: [6, 8], S: [8, 10] };
+  // cols x rows in portrait (swapped in landscape). Six steps: XL 特大, L 大, ML 中大, M 中, S 小, XS 特小.
+  var DIMS = { XL: [3, 4], L: [4, 5], ML: [5, 7], M: [6, 8], S: [8, 10], XS: [10, 13] };
 
   // Build the cell sequence for a copy. A cell has a stable index (its position in this array),
   // independent of page size/orientation, so ink survives re-layout.

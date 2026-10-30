@@ -1,7 +1,7 @@
 # Builds and signs the 墨字帖 Android APK and publishes it as a GitHub Release asset (moxie.apk).
 # Lives at android/ci/build-apk.yml in the source tree; copy to .github/workflows/build-apk.yml in the
-# PUBLIC repo (chitintim/chinese-handwriting-app) whose root is the download page + open library, with the
-# app bundle in apk-www/ (copied into the APK's assets) and the wrapper sources in android/.
+# PUBLIC repo (chitintim/chinese-handwriting-app) whose root is the hosted web app (GitHub Pages) + download/ page, with the
+# same app bundle (without the service worker) in apk-www/ (copied into the APK's assets) and the wrapper sources in android/.
 #
 # Trigger: push a tag like v1.0.3, or run manually (workflow_dispatch).
 # Needs repo secrets: MOXIE_KEYSTORE_B64, MOXIE_KEYSTORE_PASSWORD, MOXIE_KEY_ALIAS (see android/ci/set-secrets.sh).

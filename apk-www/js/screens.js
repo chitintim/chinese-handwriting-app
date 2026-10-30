@@ -2,6 +2,7 @@
   'use strict';
   var MX = window.MX, h = MX.h, Model = MX.Model, Store = MX.Store;
   var S = MX.Screens = {};
+  var APK_URL = 'https://github.com/chitintim/chinese-handwriting-app/releases/latest/download/moxie.apk';
 
   function screen(root, title, backHash, extra) {
     var el = h('div', { class: 'screen' });
@@ -21,6 +22,12 @@
       h('button', { text: '設定', 'data-act': 'settings', onclick: function () { location.hash = '#/settings'; } })
     ]);
     el.setAttribute('data-screen', 'home');
+    if (MX.updateReady) {
+      el.appendChild(h('div', { class: 'card update', 'data-role': 'update' }, [
+        h('div', { class: 'm', text: '有新版本可用。', style: 'margin-bottom:8px' }),
+        h('button', { class: 'on big', 'data-act': 'reload', text: '重新載入以更新', onclick: function () { location.reload(); } })
+      ]));
+    }
     var texts = MX.Library.texts();
     texts.forEach(function (t) {
       var cfg = Model.textCfg(t.id), copy = Model.activeCopy(t.id);
@@ -45,6 +52,15 @@
       el.appendChild(card);
     });
     if (!texts.length) el.appendChild(h('p', { text: '文庫是空的。' }));
+    if (!window.MoBridge) {
+      // hosted web app only: offer the Android app (hidden inside the APK)
+      el.appendChild(h('div', { class: 'card install', 'data-role': 'apk-install' }, [
+        h('div', { class: 't', text: '安裝 App (APK)' }),
+        h('div', { class: 'm', text: '安裝到平板，可離線使用。' }),
+        h('a', { class: 'btnlink', 'data-act': 'apk', href: APK_URL, text: '安裝 App (APK)' }),
+        h('a', { class: 'btnlink plain', 'data-act': 'apk-help', href: 'download/', text: '安裝步驟' })
+      ]));
+    }
     var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '';
     el.appendChild(h('div', { class: 'note', text: '版本 ' + ver + ' · 儲存：' + Store.mode() }));
   };
