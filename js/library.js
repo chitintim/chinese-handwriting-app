@@ -57,11 +57,28 @@
     };
   }
 
+  // ---- explanations (解說): library/notes/<textId>.json, listed by library/notes/manifest.json (written by the build from the files that exist; absent = no notes at all)
+  var notesCache = {};
+  function normNote(v) { return v && (v.trad || v.simp) ? dual(v) : null; }
+  function normNotes(raw) {
+    var secs = {};
+    Object.keys((raw && raw.sections) || {}).forEach(function (id) {
+      var s = raw.sections[id] || {};
+      secs[id] = {
+        summary: normNote(s.summary), translation: normNote(s.translation), background: normNote(s.background),
+        keyLines: (s.keyLines || []).filter(function (k) { return k && k.line; }).map(function (k) { return { line: dual(k.line), note: normNote(k.note) }; }),
+        glossary: (s.glossary || []).filter(function (g) { return g && g.term; }).map(function (g) { return { term: dual(g.term), note: normNote(g.note) }; })
+      };
+    });
+    return { id: raw && raw.id, disclaimer: normNote(raw && raw.disclaimer), sections: secs };
+  }
+
   var L = MX.Library = {
     CUSTOM: CUSTOM, MAX_CUSTOM: MAX_CUSTOM,
     index: null,            // the library index in force (bundled, or the downloaded one when newer)
     bundledVersion: 0,
     otaActive: false,
+    notesIdx: {},            // {textId: {sectionId: true}} from library/notes/manifest.json
     dual: dual,
 
     load: async function () {
@@ -70,7 +87,49 @@
       L.bundledVersion = bundled.version;
       L.index = bundled;
       L.applyOta();
+      await L.loadNotesManifest();
       return L.index;
+    },
+    loadNotesManifest: async function () {
+      L.notesIdx = {};
+      try {
+        var m = await fetchJson('library/notes/manifest.json');
+        (m && m.texts || []).forEach(function (t) {
+          if (!t || !t.id) return;
+          var o = {};
+          (t.sections || []).forEach(function (sid) { o[sid] = true; });
+          L.notesIdx[t.id] = o;
+        });
+      } catch (e) { L.notesIdx = {}; }       // no notes shipped (or offline without a cache): the app works without
+      return L.notesIdx;
+    },
+    // true when a 解說 exists for the section (sectionId omitted: for any section of the text)
+    hasNotes: function (textId, sectionId) {
+      var o = L.notesIdx[textId];
+      if (!o) return false;
+      return sectionId ? !!o[sectionId] : Object.keys(o).length > 0;
+    },
+    notesSections: function (textId) { return Object.keys(L.notesIdx[textId] || {}); },
+    getNotes: async function (textId) {
+      if (notesCache[textId]) return notesCache[textId];
+      var n = normNotes(await fetchJson('library/notes/' + encodeURIComponent(textId) + '.json'));
+      notesCache[textId] = n;
+      return n;
+    },
+    // the notes of one section ({summary, translation, keyLines, glossary, background} + disclaimer), null when there are none
+    getSectionNotes: async function (textId, sectionId) {
+      if (!L.hasNotes(textId, sectionId)) return null;
+      var n = await L.getNotes(textId), s = n.sections[sectionId || 'main'];
+      return s ? { summary: s.summary, translation: s.translation, background: s.background, keyLines: s.keyLines, glossary: s.glossary, disclaimer: n.disclaimer } : null;
+    },
+    // entries (library + 自訂) whose title / author / dynasty contain q (either script, case-insensitive)
+    search: function (q) {
+      q = String(q || '').trim().toLowerCase();
+      if (!q) return [];
+      var all = ((L.index && L.index.texts) || []).concat(L.customs().map(customEntry));
+      return all.filter(function (e) {
+        return [e.title, e.author, e.dynasty].some(function (v) { return v && ((v.trad || '').toLowerCase().indexOf(q) >= 0 || (v.simp || '').toLowerCase().indexOf(q) >= 0); });
+      });
     },
     // Downloaded library (APK): a newer index than the bundled one wins; an older one (the app was updated past it) is dropped.
     applyOta: function () {

@@ -59,6 +59,7 @@
     hide: function () {
       if (!S) return;
       var s = S;
+      if (MX.StrokePop) MX.StrokePop.close();
       flush();
       s.listeners.forEach(function (l) { l[0].removeEventListener(l[1], l[2], l[3]); });
       Object.keys(s.timers).forEach(function (k) { clearTimeout(s.timers[k]); });
@@ -89,6 +90,15 @@
     on(ink, 'lostpointercapture', onUp);
     on(ink, 'contextmenu', function (e) { e.preventDefault(); });
     on(ink, 'pointerover', function (e) { if (e.pointerType === 'pen') { S.lastPen = Date.now(); S.penSeen = true; } });
+    // finger double-tap -> stroke order (gesture.js). The recognizer sees every touch event first; it only ever acts in pen-only mode. Pen events anywhere on the page discard a sequence in progress.
+    S.dt = new MX.Gesture.DoubleTap({ hit: hitClient, enabled: tapEnabled, onDouble: function (idx) { openStroke(idx); } });
+    on(ink, 'pointerdown', function (e) { var i = hitClient(e.clientX, e.clientY); if (i >= 0) S.lastCell = i; S.dt.down(e); }, true);
+    on(ink, 'pointermove', function (e) { S.dt.move(e); }, true);
+    on(ink, 'pointerup', function (e) { S.dt.up(e); }, true);
+    on(ink, 'pointercancel', function (e) { S.dt.cancel(e); }, true);
+    ['pointerdown', 'pointermove', 'pointerup', 'pointercancel', 'pointerover', 'pointerenter', 'pointerrawupdate'].forEach(function (t) {
+      on(window, t, function (e) { if (S && S.dt && e.pointerType === 'pen') S.dt.pen(e); }, true);
+    });
     on(window, 'resize', onResize);
     on(window, 'orientationchange', onResize);
     on(document, 'keydown', onKey);
@@ -131,23 +141,58 @@
       var b = h('button', { type: 'button', text: label, 'data-act': act, onclick: fn, class: extra || '' });
       return b;
     }
-    S.btnPrev = btn(land ? '▲ 上一頁' : (vert ? '上一頁 ▶' : '◀ 上一頁'), 'prev', function () { goRel(-1); });
-    S.btnNext = btn(land ? '▼ 下一頁' : (vert ? '◀ 下一頁' : '下一頁 ▶'), 'next', function () { goRel(1); });
+    function nav(label, act, fn, icon, right) { return MX.btn({ label: label, icon: icon, iconRight: right, act: act, onclick: fn, iconSize: 18 }); }
+    // 返回 first (top left of the bar; never at the bottom edge), then the page buttons. Arrows are inline SVG (the UI font has no ◀ ▶).
+    bar.appendChild(btn('返回', 'back', function () { flush(); if (S.readOnly) history.back(); else location.hash = MX.Screens.backFor(S.copy.textId); }));
+    S.btnPrev = land ? nav('上一頁', 'prev', function () { goRel(-1); }, 'tri-u') : (vert ? nav('上一頁', 'prev', function () { goRel(-1); }, 'tri-r', true) : nav('上一頁', 'prev', function () { goRel(-1); }, 'tri-l'));
+    S.btnNext = land ? nav('下一頁', 'next', function () { goRel(1); }, 'tri-d') : (vert ? nav('下一頁', 'next', function () { goRel(1); }, 'tri-l') : nav('下一頁', 'next', function () { goRel(1); }, 'tri-r', true));
     S.counter = h('div', { class: 'ctr', 'data-role': 'counter' });
     var first, second;
     if (!land && vert) { first = S.btnNext; second = S.btnPrev; } else { first = S.btnPrev; second = S.btnNext; }
     bar.appendChild(first); bar.appendChild(S.counter); bar.appendChild(second);
+    var notes = MX.Library.hasNotes(S.copy.textId, Model.sid(S.copy));
     if (S.readOnly) {
       bar.appendChild(btn('匯出', 'export', function () { openExport(); }));
-      bar.appendChild(btn('返回', 'back', function () { history.back(); }));
+      bar.appendChild(btn('筆順', 'stroke', strokeButton));
+      if (notes) bar.appendChild(btn('解說', 'notes', openNotes));
       return;
     }
     bar.appendChild(btn('撤銷', 'undo', undo));
     bar.appendChild(btn('清頁', 'clear', clearPage));
     if (S.cfg.mode === 'recall') bar.appendChild(btn('提示', 'hint', hint));
+    bar.appendChild(btn('筆順', 'stroke', strokeButton));
     bar.appendChild(btn('刷新', 'refresh', function () { refresh(); }));
+    if (notes) bar.appendChild(btn('解說', 'notes', openNotes));
     bar.appendChild(btn('設定', 'settings', openSettings));
-    bar.appendChild(btn('返回', 'back', function () { flush(); location.hash = MX.Screens.backFor(S.copy.textId); }));
+  }
+  function openNotes() {
+    if (!S) return;
+    flush();
+    location.hash = MX.Screens.hash('notes', S.copy.textId, Model.sid(S.copy), 'copy=' + S.copy.id);
+  }
+  // 對照模式: a strip beside (landscape) / below (portrait, above the edge margin) the stage with the 要旨 and glossary of this section. It exists only when the setting is on
+  // and the section has notes; the stage gets what is left (the cells are laid out in the stage only).
+  function syncStrip() {
+    var want = !!(settings().sideNotes && MX.Library.hasNotes(S.copy.textId, Model.sid(S.copy)));
+    if (!want) {
+      if (S.pnotes) { if (S.pnotes.parentNode) S.pnotes.parentNode.removeChild(S.pnotes); S.pnotes = null; S.nsec = null; }
+      return;
+    }
+    if (!S.pnotes) {
+      S.pnotes = h('div', { class: 'pnotes', 'data-role': 'notes-strip' });
+      S.root.appendChild(S.pnotes);
+      var box = S.pnotes;
+      MX.Library.getSectionNotes(S.copy.textId, Model.sid(S.copy)).then(function (n) {
+        if (!S || S.pnotes !== box) return;
+        S.nsec = n || false;
+        fillStrip();
+      }).catch(function (e) { MX.err(e); if (S && S.pnotes === box) { S.nsec = false; fillStrip(); } });
+    }
+    if (S.nsec !== undefined && S.nsec !== null) fillStrip();
+  }
+  function fillStrip() {
+    if (!S || !S.pnotes) return;
+    MX.Notes.fillStrip(S.pnotes, S.nsec || null, S.cfg.script === 'simp' ? 'simp' : 'trad', openNotes);
   }
 
   function layout() {
@@ -155,6 +200,7 @@
     var land = window.innerWidth >= window.innerHeight;
     S.root.className = 'practice ' + (land ? 'land' : 'port');
     buildBar();
+    syncStrip();
     var r = S.stage.getBoundingClientRect();
     var W = Math.floor(r.width), H = Math.floor(r.height);
     if (W < 40 || H < 40) return;
@@ -266,6 +312,26 @@
     S.timers.save = setTimeout(flush, 600);
   }
 
+  // ------------------------------------------------------------------ stroke order (筆順): finger double-tap on a cell, or the toolbar button
+  function hitClient(cx, cy) {
+    if (!S || !S.g) return -1;
+    var r = S.ink.getBoundingClientRect();
+    return hit(cx - r.left, cy - r.top);
+  }
+  // the double-tap exists only while the finger never inks (pen-only mode) and the setting 雙擊看筆順 is on
+  function tapEnabled() { return !!S && settings().strokeTap !== false && !settings().acceptTouch; }
+  function openStroke(idx) {
+    if (!S || !S.cells[idx]) return;
+    S.lastCell = idx;
+    MX.StrokePop.open({ ch: S.cells[idx].ch, script: S.cfg.script });
+  }
+  // the toolbar button: the cell touched last (pen, finger or double-tap) when it is on this page, else the cell written last, else the first cell of the page
+  function strokeButton() {
+    if (!S) return;
+    var idx = S.lastCell !== undefined && S.slotOf[S.lastCell] !== undefined ? S.lastCell : (S.focus >= 0 && S.slotOf[S.focus] !== undefined ? S.focus : firstIdx(S.pages[S.pageIdx]));
+    openStroke(idx);
+  }
+
   // ------------------------------------------------------------------ pointer input
   function hit(x, y) {
     var g = S.g, col = Math.floor((x - g.ox) / g.cell), row = Math.floor((y - g.oy) / g.cell);
@@ -311,7 +377,10 @@
       finish(true);
     }
     if (!allowed(e)) {
-      if (!isPen && !S.penSeen && !settings().acceptTouch && !settings().touchPrompted) showTouchPrompt();
+      if (!isPen && !S.penSeen && !settings().acceptTouch && !settings().touchPrompted) {
+        // with 雙擊看筆順 on, a plain tap must not pop the banner up over the cells (it would eat the second tap): the banner waits until the touch moves
+        if (tapEnabled()) S.promptFor = { id: e.pointerId, x: e.clientX, y: e.clientY }; else showTouchPrompt();
+      }
       return;
     }
     if (e.pointerType === 'mouse' && e.button !== 0 && e.button !== 5) return;
@@ -344,6 +413,7 @@
   function onMove(e) {
     if (!S) return;
     if (e.pointerType === 'pen') { S.lastPen = Date.now(); S.penSeen = true; }
+    if (S.promptFor && e.pointerId === S.promptFor.id && Math.hypot(e.clientX - S.promptFor.x, e.clientY - S.promptFor.y) > 10) { S.promptFor = null; if (!settings().touchPrompted) showTouchPrompt(); }
     if (S.active === null || e.pointerId !== S.active) return;
     S.lastEv = Date.now();
     tickTime(false);
@@ -355,11 +425,13 @@
     if (S.cap.take(e, S.stroke.map)) feed();
   }
   function onUp(e) {
+    if (S && S.promptFor && e.pointerId === S.promptFor.id) S.promptFor = null;
     if (!S || S.active === null || e.pointerId !== S.active) return;
     if (e.type === 'pointerup' && S.stroke) {
       tickTime(false);
       S.cap.end(e, S.stroke.map);       // the final position is always kept: pen-up flushes the stroke to where the pen really stopped
       feed();
+      S.stroke.pen.end();               // ... and adds the 出鋒 tail (the only thing painted at pen-up; the region repaint below reproduces it exactly)
     }
     finish(false);
   }
@@ -565,14 +637,15 @@
     var seq = S.token;
     S.timers.next = setTimeout(function () {
       if (!S || S.token !== seq || S.active !== null) return;
-      S.nextBtn = h('button', { class: 'nextbtn', 'data-act': 'autonext', text: '下一頁 ▶', style: 'bottom:' + (12 + ((S.inset && S.inset.b) || 0)) + 'px', onclick: function () { goRel(1); } });
+      S.nextBtn = MX.btn({ cls: 'nextbtn', act: 'autonext', label: '下一頁', icon: S.cfg.dir === 'v' && !S.root.className.match(/land/) ? 'tri-l' : 'tri-r', iconRight: !(S.cfg.dir === 'v' && !S.root.className.match(/land/)), onclick: function () { goRel(1); } });
+      S.nextBtn.style.bottom = (12 + ((S.inset && S.inset.b) || 0)) + 'px';
       S.stage.appendChild(S.nextBtn);
     }, 3000);
   }
   function showTouchPrompt() {
     if (S.banner) return;
     S.banner = h('div', { class: 'banner', 'data-role': 'touch-prompt' }, [
-      h('div', { text: '筆似乎以「觸控」回報。是否允許手指／觸控書寫？' }),
+      h('div', { text: '筆似乎以「觸控」回報。是否允許手指或觸控書寫？' }),
       h('div', { class: 'btnrow' }, [
         h('button', { text: '允許', 'data-act': 'allow-touch', onclick: function () {
           settings().acceptTouch = true; settings().touchPrompted = true; Model.saveSettings(); closeBanner(); MX.toast('已允許觸控書寫');
@@ -607,33 +680,42 @@
   }
   function openSettings() {
     if (!S) return;
-    var cfgFields = MX.Form.CFG.filter(function (f) { return !f.content; });
+    var cfgFields = MX.Form.CFG.filter(function (f) { return !f.content; }), api, ws = MX.Form.widthSample(settings());
+    // 完成 sticks to the top right of the sheet (no button at the bottom edge); everything applies and is saved at once
+    var head = h('div', { class: 'sheethead' }, [h('h2', { text: '設定', class: 'grow' }), h('button', { class: 'on', text: '完成', 'data-act': 'done', onclick: function () { api.close(); } })]);
     var body = [
+      head,
+      h('div', { class: 'btnrow' }, [
+        h('button', { text: '匯出作品', 'data-act': 'export', onclick: function () { api.close(); openExport(); } }),
+        h('button', { text: '新抄一遍', 'data-act': 'newcopy', onclick: function () { api.close(); newCopy(); } })
+      ]),
+      h('h2', { text: '署名與落款' }),
       MX.Form.signBlock(settings(), S.cfg, S.text.category === 'buddhist', function (k) {
         if (k === 'sign') { Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg); }
         else Model.saveSettings();
         if (k === 'name') rebuildLater(); else rebuildCells();
       }),
+      h('h2', { text: '這一遍' }),
       MX.Form.build(cfgFields, S.cfg, false, function (k) {
         Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg);
         if (k === 'title') { rebuildCells(); return; }
         S.copy.pos = firstIdx(S.pages[S.pageIdx]);
         layout();
-      }),
-      h('h2', { text: '筆與範本' }),
-      MX.Form.build(MX.Form.SETTINGS, settings(), false, function () {
-        Model.saveSettings();
-        layout();
       })
     ];
-    MX.modal({
-      title: '設定', body: body,
-      buttons: [
-        { label: '匯出作品', act: 'export', onClick: function () { openExport(); } },
-        { label: '新抄一遍', act: 'newcopy', onClick: function () { newCopy(); } },
-        { label: '完成', act: 'done', primary: true }
-      ]
+    MX.Form.GROUPS.forEach(function (g) {
+      if (!g.keys.length) return;
+      body.push(h('h2', { text: g.title }));
+      body.push(MX.Form.build(MX.Form.fields(g.keys), settings(), false, function (k) {
+        Model.saveSettings();
+        if (k === 'brush' || k === 'inkWidth' || k === 'pressRange') ws.update();
+        layout();
+      }));
+      if (MX.Form.GROUP_NOTES[g.id]) body.push(h('div', { class: 'note', text: MX.Form.GROUP_NOTES[g.id] }));
+      if (g.id === 'brush') body.push(ws.el);
     });
+    api = MX.modal({ body: body });
+    api.el.className += ' sheet';
   }
   async function newCopy() {
     if (!S) return;
@@ -648,12 +730,19 @@
     c.completedAt = Date.now();
     Model.flush(c);
     Model.addDone(c);
-    var n = Model.doneCount(c.textId, Model.sid(c));       // of this section
-    var secs = S.text.sections || [], at = secs.indexOf(Model.sid(c)), nextSec = at >= 0 && at < secs.length - 1 ? secs[at + 1] : null;
+    var sid = Model.sid(c), n = Model.doneCount(c.textId, sid);       // of this section
+    var hasNotes = MX.Library.hasNotes(c.textId, sid);
+    if (hasNotes && settings().autoNotes !== false && !(MX.test && MX.test.noAutoNotes)) {
+      // 完成後顯示解說: the explanation page is the completion screen (it carries 下一章 / 匯出作品 / 新抄一遍)
+      location.hash = MX.Screens.hash('notes', c.textId, sid, 'done=' + c.id);
+      return;
+    }
+    var secs = S.text.sections || [], at = secs.indexOf(sid), nextSec = at >= 0 && at < secs.length - 1 ? secs[at + 1] : null;
     var buttons = [
       { label: '匯出作品', act: 'export', onClick: function () { if (S) openExport(); } },
       { label: '新抄一遍', act: 'newcopy', onClick: function () { newCopy(); } }
     ];
+    if (hasNotes) buttons.push({ label: '解說', act: 'notes', onClick: function () { openNotes(); } });
     if (nextSec) {
       buttons.push({ label: '下一章', act: 'nextsec', onClick: function () {
         var nc = Model.activeCopy(c.textId, nextSec);
@@ -693,6 +782,8 @@
     keys: function () { return S ? S.cells.map(function (c) { return c.key; }).join() : ''; },
     cellsAll: function () { return S ? S.cells.map(function (c) { return c.ch; }).join('') : ''; },
     inkOf: function (idx) { return S && S.cells[idx] ? (S.copy.ink[S.cells[idx].key] || []) : []; },
-    setPos: function (p) { if (S) { S.copy.pos = p; layout(); } }
+    setPos: function (p) { if (S) { S.copy.pos = p; layout(); } },
+    strokeMs: 0,
+    lastCell: function () { return S ? S.lastCell : undefined; }
   };
 })();

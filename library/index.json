@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "categories": [
   {
    "id": "buddhist",
@@ -55,6 +55,48 @@
    "title": {
     "trad": "碑帖名篇",
     "simp": "碑帖名篇"
+   }
+  },
+  {
+   "id": "calligraphy-classics",
+   "title": {
+    "trad": "法帖書論",
+    "simp": "法帖书论"
+   }
+  },
+  {
+   "id": "small-kai",
+   "title": {
+    "trad": "小楷",
+    "simp": "小楷"
+   }
+  },
+  {
+   "id": "shijing-chuci",
+   "title": {
+    "trad": "詩經楚辭",
+    "simp": "诗经楚辞"
+   }
+  },
+  {
+   "id": "yuanqu",
+   "title": {
+    "trad": "曲",
+    "simp": "曲"
+   }
+  },
+  {
+   "id": "family-maxims",
+   "title": {
+    "trad": "家訓格言",
+    "simp": "家训格言"
+   }
+  },
+  {
+   "id": "basics",
+   "title": {
+    "trad": "基礎練習",
+    "simp": "基础练习"
    }
   }
  ],
@@ -213,7 +255,7 @@
     "simp": "春秋"
    },
    "file": "texts/daodejing.json",
-   "chars": 5307,
+   "chars": 5297,
    "sections": 81,
    "description": {
     "trad": "王弼本 · 八十一章",
@@ -374,7 +416,7 @@
     "simp": "先秦"
    },
    "file": "texts/lunyu.json",
-   "chars": 15921,
+   "chars": 15920,
    "sections": 20,
    "description": {
     "trad": "二十篇 · 孔門言行錄",
@@ -727,6 +769,627 @@
    }
   },
   {
+   "id": "houchushibiao",
+   "category": "prose",
+   "title": {
+    "trad": "後出師表",
+    "simp": "后出师表"
+   },
+   "author": {
+    "trad": "諸葛亮",
+    "simp": "诸葛亮"
+   },
+   "dynasty": {
+    "trad": "三國蜀",
+    "simp": "三国蜀"
+   },
+   "file": "texts/houchushibiao.json",
+   "chars": 629,
+   "sections": 1,
+   "description": {
+    "trad": "諸葛亮 · 建興六年",
+    "simp": "诸葛亮 · 建兴六年"
+   }
+  },
+  {
+   "id": "chenqingbiao",
+   "category": "prose",
+   "title": {
+    "trad": "陳情表",
+    "simp": "陈情表"
+   },
+   "author": {
+    "trad": "李密",
+    "simp": "李密"
+   },
+   "dynasty": {
+    "trad": "西晉",
+    "simp": "西晋"
+   },
+   "file": "texts/chenqingbiao.json",
+   "chars": 476,
+   "sections": 1,
+   "description": {
+    "trad": "李密 · 西晉",
+    "simp": "李密 · 西晋"
+   }
+  },
+  {
+   "id": "wuliuxiansheng",
+   "category": "prose",
+   "title": {
+    "trad": "五柳先生傳",
+    "simp": "五柳先生传"
+   },
+   "author": {
+    "trad": "陶淵明",
+    "simp": "陶渊明"
+   },
+   "dynasty": {
+    "trad": "東晉",
+    "simp": "东晋"
+   },
+   "file": "texts/wuliuxiansheng.json",
+   "chars": 174,
+   "sections": 1,
+   "description": {
+    "trad": "陶淵明 · 東晉",
+    "simp": "陶渊明 · 东晋"
+   }
+  },
+  {
+   "id": "yuzhuyuansishu",
+   "category": "prose",
+   "title": {
+    "trad": "與朱元思書",
+    "simp": "与朱元思书"
+   },
+   "author": {
+    "trad": "吳均",
+    "simp": "吴均"
+   },
+   "dynasty": {
+    "trad": "南朝梁",
+    "simp": "南朝梁"
+   },
+   "file": "texts/yuzhuyuansishu.json",
+   "chars": 144,
+   "sections": 1,
+   "description": {
+    "trad": "吳均 · 南朝梁",
+    "simp": "吴均 · 南朝梁"
+   }
+  },
+  {
+   "id": "dixiezhongshushu",
+   "category": "prose",
+   "title": {
+    "trad": "答謝中書書",
+    "simp": "答谢中书书"
+   },
+   "author": {
+    "trad": "陶弘景",
+    "simp": "陶弘景"
+   },
+   "dynasty": {
+    "trad": "南朝梁",
+    "simp": "南朝梁"
+   },
+   "file": "texts/dixiezhongshushu.json",
+   "chars": 68,
+   "sections": 1,
+   "description": {
+    "trad": "陶弘景 · 南朝梁",
+    "simp": "陶弘景 · 南朝梁"
+   }
+  },
+  {
+   "id": "xiaoshitanji",
+   "category": "prose",
+   "title": {
+    "trad": "小石潭記",
+    "simp": "小石潭记"
+   },
+   "author": {
+    "trad": "柳宗元",
+    "simp": "柳宗元"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/xiaoshitanji.json",
+   "chars": 193,
+   "sections": 1,
+   "description": {
+    "trad": "柳宗元 · 永州八記",
+    "simp": "柳宗元 · 永州八记"
+   }
+  },
+  {
+   "id": "mashuo",
+   "category": "prose",
+   "title": {
+    "trad": "馬說",
+    "simp": "马说"
+   },
+   "author": {
+    "trad": "韓愈",
+    "simp": "韩愈"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/mashuo.json",
+   "chars": 151,
+   "sections": 1,
+   "description": {
+    "trad": "韓愈 · 雜說之四",
+    "simp": "韩愈 · 杂说之四"
+   }
+  },
+  {
+   "id": "shesheshe",
+   "category": "prose",
+   "title": {
+    "trad": "捕蛇者說",
+    "simp": "捕蛇者说"
+   },
+   "author": {
+    "trad": "柳宗元",
+    "simp": "柳宗元"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/shesheshe.json",
+   "chars": 469,
+   "sections": 1,
+   "description": {
+    "trad": "柳宗元 · 唐",
+    "simp": "柳宗元 · 唐"
+   }
+  },
+  {
+   "id": "jinxuejie",
+   "category": "prose",
+   "title": {
+    "trad": "進學解",
+    "simp": "进学解"
+   },
+   "author": {
+    "trad": "韓愈",
+    "simp": "韩愈"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/jinxuejie.json",
+   "chars": 743,
+   "sections": 1,
+   "description": {
+    "trad": "韓愈 · 唐",
+    "simp": "韩愈 · 唐"
+   }
+  },
+  {
+   "id": "yuanhui",
+   "category": "prose",
+   "title": {
+    "trad": "原毀",
+    "simp": "原毁"
+   },
+   "author": {
+    "trad": "韓愈",
+    "simp": "韩愈"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/yuanhui.json",
+   "chars": 657,
+   "sections": 1,
+   "description": {
+    "trad": "韓愈 · 唐",
+    "simp": "韩愈 · 唐"
+   }
+  },
+  {
+   "id": "songliyuanguipangu",
+   "category": "prose",
+   "title": {
+    "trad": "送李愿歸盤谷序",
+    "simp": "送李愿归盘谷序"
+   },
+   "author": {
+    "trad": "韓愈",
+    "simp": "韩愈"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/songliyuanguipangu.json",
+   "chars": 504,
+   "sections": 1,
+   "description": {
+    "trad": "韓愈 · 唐",
+    "simp": "韩愈 · 唐"
+   }
+  },
+  {
+   "id": "jishierlangwen",
+   "category": "prose",
+   "title": {
+    "trad": "祭十二郎文",
+    "simp": "祭十二郎文"
+   },
+   "author": {
+    "trad": "韓愈",
+    "simp": "韩愈"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/jishierlangwen.json",
+   "chars": 1060,
+   "sections": 1,
+   "description": {
+    "trad": "韓愈 · 祭文第一",
+    "simp": "韩愈 · 祭文第一"
+   }
+  },
+  {
+   "id": "huanggangzhulouji",
+   "category": "prose",
+   "title": {
+    "trad": "黃岡竹樓記",
+    "simp": "黄冈竹楼记"
+   },
+   "author": {
+    "trad": "王禹偁",
+    "simp": "王禹偁"
+   },
+   "dynasty": {
+    "trad": "宋",
+    "simp": "宋"
+   },
+   "file": "texts/huanggangzhulouji.json",
+   "chars": 339,
+   "sections": 1,
+   "description": {
+    "trad": "王禹偁 · 宋",
+    "simp": "王禹偁 · 宋"
+   }
+  },
+  {
+   "id": "qiushengfu",
+   "category": "prose",
+   "title": {
+    "trad": "秋聲賦",
+    "simp": "秋声赋"
+   },
+   "author": {
+    "trad": "歐陽脩",
+    "simp": "欧阳修"
+   },
+   "dynasty": {
+    "trad": "宋",
+    "simp": "宋"
+   },
+   "file": "texts/qiushengfu.json",
+   "chars": 410,
+   "sections": 1,
+   "description": {
+    "trad": "歐陽脩 · 宋嘉祐四年",
+    "simp": "欧阳修 · 宋嘉祐四年"
+   }
+  },
+  {
+   "id": "shizhongshanji",
+   "category": "prose",
+   "title": {
+    "trad": "石鐘山記",
+    "simp": "石钟山记"
+   },
+   "author": {
+    "trad": "蘇軾",
+    "simp": "苏轼"
+   },
+   "dynasty": {
+    "trad": "宋",
+    "simp": "宋"
+   },
+   "file": "texts/shizhongshanji.json",
+   "chars": 503,
+   "sections": 1,
+   "description": {
+    "trad": "蘇軾 · 宋",
+    "simp": "苏轼 · 宋"
+   }
+  },
+  {
+   "id": "liuguolun",
+   "category": "prose",
+   "title": {
+    "trad": "六國論",
+    "simp": "六国论"
+   },
+   "author": {
+    "trad": "蘇洵",
+    "simp": "苏洵"
+   },
+   "dynasty": {
+    "trad": "宋",
+    "simp": "宋"
+   },
+   "file": "texts/liuguolun.json",
+   "chars": 542,
+   "sections": 1,
+   "description": {
+    "trad": "蘇洵 · 宋",
+    "simp": "苏洵 · 宋"
+   }
+  },
+  {
+   "id": "shangshumiyuan",
+   "category": "prose",
+   "title": {
+    "trad": "上樞密韓太尉書",
+    "simp": "上枢密韩太尉书"
+   },
+   "author": {
+    "trad": "蘇轍",
+    "simp": "苏辙"
+   },
+   "dynasty": {
+    "trad": "宋",
+    "simp": "宋"
+   },
+   "file": "texts/shangshumiyuan.json",
+   "chars": 524,
+   "sections": 1,
+   "description": {
+    "trad": "蘇轍 · 宋",
+    "simp": "苏辙 · 宋"
+   }
+  },
+  {
+   "id": "lingguanzhuanxu",
+   "category": "prose",
+   "title": {
+    "trad": "伶官傳序",
+    "simp": "伶官传序"
+   },
+   "author": {
+    "trad": "歐陽脩",
+    "simp": "欧阳修"
+   },
+   "dynasty": {
+    "trad": "宋",
+    "simp": "宋"
+   },
+   "file": "texts/lingguanzhuanxu.json",
+   "chars": 332,
+   "sections": 1,
+   "description": {
+    "trad": "歐陽脩 · 宋",
+    "simp": "欧阳修 · 宋"
+   }
+  },
+  {
+   "id": "xiangjixuanzhi",
+   "category": "prose",
+   "title": {
+    "trad": "項脊軒志",
+    "simp": "项脊轩志"
+   },
+   "author": {
+    "trad": "歸有光",
+    "simp": "归有光"
+   },
+   "dynasty": {
+    "trad": "明",
+    "simp": "明"
+   },
+   "file": "texts/xiangjixuanzhi.json",
+   "chars": 631,
+   "sections": 1,
+   "description": {
+    "trad": "歸有光 · 明",
+    "simp": "归有光 · 明"
+   }
+  },
+  {
+   "id": "songdongyangmasheng",
+   "category": "prose",
+   "title": {
+    "trad": "送東陽馬生序",
+    "simp": "送东阳马生序"
+   },
+   "author": {
+    "trad": "宋濂",
+    "simp": "宋濂"
+   },
+   "dynasty": {
+    "trad": "明",
+    "simp": "明"
+   },
+   "file": "texts/songdongyangmasheng.json",
+   "chars": 588,
+   "sections": 1,
+   "description": {
+    "trad": "宋濂 · 明",
+    "simp": "宋濂 · 明"
+   }
+  },
+  {
+   "id": "diaoguzhanchangwen",
+   "category": "prose",
+   "title": {
+    "trad": "弔古戰場文",
+    "simp": "吊古战场文"
+   },
+   "author": {
+    "trad": "李華",
+    "simp": "李华"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/diaoguzhanchangwen.json",
+   "chars": 619,
+   "sections": 1,
+   "description": {
+    "trad": "李華 · 唐",
+    "simp": "李华 · 唐"
+   }
+  },
+  {
+   "id": "qiuxingfu",
+   "category": "prose",
+   "title": {
+    "trad": "秋興賦",
+    "simp": "秋兴赋"
+   },
+   "author": {
+    "trad": "潘岳",
+    "simp": "潘岳"
+   },
+   "dynasty": {
+    "trad": "西晉",
+    "simp": "西晋"
+   },
+   "file": "texts/qiuxingfu.json",
+   "chars": 615,
+   "sections": 1,
+   "description": {
+    "trad": "潘岳 · 西晉",
+    "simp": "潘岳 · 西晋"
+   }
+  },
+  {
+   "id": "caoguilunzhan",
+   "category": "prose",
+   "title": {
+    "trad": "曹劌論戰",
+    "simp": "曹刿论战"
+   },
+   "author": {
+    "trad": "左丘明",
+    "simp": "左丘明"
+   },
+   "dynasty": {
+    "trad": "春秋",
+    "simp": "春秋"
+   },
+   "file": "texts/caoguilunzhan.json",
+   "chars": 222,
+   "sections": 1,
+   "description": {
+    "trad": "《左傳》· 莊公十年",
+    "simp": "《左传》· 庄公十年"
+   }
+  },
+  {
+   "id": "zoujifengqiwang",
+   "category": "prose",
+   "title": {
+    "trad": "鄒忌諷齊王納諫",
+    "simp": "邹忌讽齐王纳谏"
+   },
+   "author": {
+    "trad": "《戰國策》",
+    "simp": "《战国策》"
+   },
+   "dynasty": {
+    "trad": "戰國",
+    "simp": "战国"
+   },
+   "file": "texts/zoujifengqiwang.json",
+   "chars": 342,
+   "sections": 1,
+   "description": {
+    "trad": "《戰國策》· 齊策一",
+    "simp": "《战国策》· 齐策一"
+   }
+  },
+  {
+   "id": "quanxue",
+   "category": "prose",
+   "title": {
+    "trad": "勸學",
+    "simp": "劝学"
+   },
+   "author": {
+    "trad": "荀子",
+    "simp": "荀子"
+   },
+   "dynasty": {
+    "trad": "戰國",
+    "simp": "战国"
+   },
+   "file": "texts/quanxue.json",
+   "chars": 1612,
+   "sections": 3,
+   "description": {
+    "trad": "荀子 · 君子曰學不可以已",
+    "simp": "荀子 · 君子曰学不可以已"
+   }
+  },
+  {
+   "id": "xiaoyaoyou",
+   "category": "prose",
+   "title": {
+    "trad": "逍遙遊",
+    "simp": "逍遥游"
+   },
+   "author": {
+    "trad": "莊子",
+    "simp": "庄子"
+   },
+   "dynasty": {
+    "trad": "戰國",
+    "simp": "战国"
+   },
+   "file": "texts/xiaoyaoyou.json",
+   "chars": 1464,
+   "sections": 4,
+   "description": {
+    "trad": "莊子 · 內篇第一",
+    "simp": "庄子 · 内篇第一"
+   }
+  },
+  {
+   "id": "yugongyishan",
+   "category": "prose",
+   "title": {
+    "trad": "愚公移山",
+    "simp": "愚公移山"
+   },
+   "author": {
+    "trad": "列子",
+    "simp": "列子"
+   },
+   "dynasty": {
+    "trad": "戰國",
+    "simp": "战国"
+   },
+   "file": "texts/yugongyishan.json",
+   "chars": 310,
+   "sections": 1,
+   "description": {
+    "trad": "《列子·湯問》",
+    "simp": "《列子·汤问》"
+   }
+  },
+  {
    "id": "tangshi",
    "category": "poetry",
    "title": {
@@ -747,6 +1410,98 @@
    "description": {
     "trad": "61首唐詩名篇",
     "simp": "61首唐诗名篇"
+   }
+  },
+  {
+   "id": "tangsong-buyi",
+   "category": "poetry",
+   "title": {
+    "trad": "唐宋詩補遺",
+    "simp": "唐宋诗补遗"
+   },
+   "author": {
+    "trad": "唐宋諸家",
+    "simp": "唐宋诸家"
+   },
+   "dynasty": {
+    "trad": "唐宋",
+    "simp": "唐宋"
+   },
+   "file": "texts/tangsong-buyi.json",
+   "chars": 1221,
+   "sections": 36,
+   "description": {
+    "trad": "唐宋名篇36首",
+    "simp": "唐宋名篇36首"
+   }
+  },
+  {
+   "id": "qianjiashi",
+   "category": "poetry",
+   "title": {
+    "trad": "千家詩精選",
+    "simp": "千家诗精选"
+   },
+   "author": {
+    "trad": "宋至唐諸家",
+    "simp": "宋至唐诸家"
+   },
+   "dynasty": {
+    "trad": "唐宋",
+    "simp": "唐宋"
+   },
+   "file": "texts/qianjiashi.json",
+   "chars": 2524,
+   "sections": 76,
+   "description": {
+    "trad": "蒙學詩選 · 絕句律詩76首",
+    "simp": "蒙学诗选 · 绝句律诗76首"
+   }
+  },
+  {
+   "id": "gushi-shijiu",
+   "category": "poetry",
+   "title": {
+    "trad": "古詩十九首",
+    "simp": "古诗十九首"
+   },
+   "author": {
+    "trad": "無名氏",
+    "simp": "无名氏"
+   },
+   "dynasty": {
+    "trad": "漢",
+    "simp": "汉"
+   },
+   "file": "texts/gushi-shijiu.json",
+   "chars": 1270,
+   "sections": 19,
+   "description": {
+    "trad": "五言詩之冠冕 · 漢無名氏",
+    "simp": "五言诗之冠冕 · 汉无名氏"
+   }
+  },
+  {
+   "id": "hanwei-yuefu",
+   "category": "poetry",
+   "title": {
+    "trad": "漢魏樂府古詩選",
+    "simp": "汉魏乐府古诗选"
+   },
+   "author": {
+    "trad": "漢魏六朝諸家",
+    "simp": "汉魏六朝诸家"
+   },
+   "dynasty": {
+    "trad": "漢至北朝",
+    "simp": "汉至北朝"
+   },
+   "file": "texts/hanwei-yuefu.json",
+   "chars": 964,
+   "sections": 13,
+   "description": {
+    "trad": "漢魏六朝名篇13首",
+    "simp": "汉魏六朝名篇13首"
    }
   },
   {
@@ -816,6 +1571,489 @@
    "description": {
     "trad": "柳公權楷書 · 唐會昌元年",
     "simp": "柳公权楷书 · 唐会昌元年"
+   }
+  },
+  {
+   "id": "shengjiaoxu",
+   "category": "stele",
+   "title": {
+    "trad": "大唐三藏聖教序",
+    "simp": "大唐三藏圣教序"
+   },
+   "author": {
+    "trad": "李世民",
+    "simp": "李世民"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/shengjiaoxu.json",
+   "chars": 781,
+   "sections": 4,
+   "description": {
+    "trad": "褚遂良楷書〈雁塔聖教序〉 · 集字聖教序",
+    "simp": "褚遂良楷书〈雁塔圣教序〉 · 集字圣教序"
+   }
+  },
+  {
+   "id": "caoquan-bei",
+   "category": "stele",
+   "title": {
+    "trad": "曹全碑（碑陽）",
+    "simp": "曹全碑（碑阳）"
+   },
+   "author": {
+    "trad": "王敞、王畢等",
+    "simp": "王敞、王毕等"
+   },
+   "dynasty": {
+    "trad": "東漢",
+    "simp": "东汉"
+   },
+   "file": "texts/caoquan-bei.json",
+   "chars": 849,
+   "sections": 1,
+   "description": {
+    "trad": "漢隸 · 東漢中平二年",
+    "simp": "汉隶 · 东汉中平二年"
+   }
+  },
+  {
+   "id": "shupu",
+   "category": "calligraphy-classics",
+   "title": {
+    "trad": "書譜",
+    "simp": "书谱"
+   },
+   "author": {
+    "trad": "孫過庭",
+    "simp": "孙过庭"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/shupu.json",
+   "chars": 3711,
+   "sections": 8,
+   "description": {
+    "trad": "孫過庭 · 唐垂拱三年 · 書法理論經典",
+    "simp": "孙过庭 · 唐垂拱三年 · 书法理论经典"
+   }
+  },
+  {
+   "id": "jizhi-wengao",
+   "category": "calligraphy-classics",
+   "title": {
+    "trad": "祭姪文稿",
+    "simp": "祭姪文稿"
+   },
+   "author": {
+    "trad": "顏真卿",
+    "simp": "颜真卿"
+   },
+   "dynasty": {
+    "trad": "唐",
+    "simp": "唐"
+   },
+   "file": "texts/jizhi-wengao.json",
+   "chars": 236,
+   "sections": 1,
+   "description": {
+    "trad": "顏真卿行草 · 唐乾元元年 · 天下第二行書",
+    "simp": "颜真卿行草 · 唐乾元元年 · 天下第二行书"
+   }
+  },
+  {
+   "id": "hanshi-tie",
+   "category": "calligraphy-classics",
+   "title": {
+    "trad": "黃州寒食詩帖",
+    "simp": "黄州寒食诗帖"
+   },
+   "author": {
+    "trad": "蘇軾",
+    "simp": "苏轼"
+   },
+   "dynasty": {
+    "trad": "宋",
+    "simp": "宋"
+   },
+   "file": "texts/hanshi-tie.json",
+   "chars": 120,
+   "sections": 2,
+   "description": {
+    "trad": "蘇軾行書 · 宋元豐五年 · 天下第三行書",
+    "simp": "苏轼行书 · 宋元丰五年 · 天下第三行书"
+   }
+  },
+  {
+   "id": "shusu-tie",
+   "category": "calligraphy-classics",
+   "title": {
+    "trad": "蜀素帖（節選）",
+    "simp": "蜀素帖（节选）"
+   },
+   "author": {
+    "trad": "米芾",
+    "simp": "米芾"
+   },
+   "dynasty": {
+    "trad": "宋",
+    "simp": "宋"
+   },
+   "file": "texts/shusu-tie.json",
+   "chars": 166,
+   "sections": 2,
+   "description": {
+    "trad": "米芾行書 · 宋元祐三年 · 擬古、吳江舟中詩",
+    "simp": "米芾行书 · 宋元祐三年 · 拟古、吴江舟中诗"
+   }
+  },
+  {
+   "id": "leyi-lun",
+   "category": "small-kai",
+   "title": {
+    "trad": "樂毅論",
+    "simp": "乐毅论"
+   },
+   "author": {
+    "trad": "夏侯玄",
+    "simp": "夏侯玄"
+   },
+   "dynasty": {
+    "trad": "三國魏",
+    "simp": "三国魏"
+   },
+   "file": "texts/leyi-lun.json",
+   "chars": 690,
+   "sections": 1,
+   "description": {
+    "trad": "夏侯玄 · 王羲之小楷臨本文字",
+    "simp": "夏侯玄 · 王羲之小楷临本文字"
+   }
+  },
+  {
+   "id": "xiaojing",
+   "category": "small-kai",
+   "title": {
+    "trad": "孝經",
+    "simp": "孝经"
+   },
+   "author": {
+    "trad": "曾子門人（相傳）",
+    "simp": "曾子门人（相传）"
+   },
+   "dynasty": {
+    "trad": "先秦",
+    "simp": "先秦"
+   },
+   "file": "texts/xiaojing.json",
+   "chars": 1801,
+   "sections": 18,
+   "description": {
+    "trad": "十八章 · 小楷常臨篇目",
+    "simp": "十八章 · 小楷常临篇目"
+   }
+  },
+  {
+   "id": "dongfangshuo-huazan",
+   "category": "small-kai",
+   "title": {
+    "trad": "東方朔畫贊",
+    "simp": "东方朔画赞"
+   },
+   "author": {
+    "trad": "夏侯湛",
+    "simp": "夏侯湛"
+   },
+   "dynasty": {
+    "trad": "西晉",
+    "simp": "西晋"
+   },
+   "file": "texts/dongfangshuo-huazan.json",
+   "chars": 590,
+   "sections": 1,
+   "description": {
+    "trad": "夏侯湛 · 王羲之/顏真卿小楷名帖",
+    "simp": "夏侯湛 · 王羲之/颜真卿小楷名帖"
+   }
+  },
+  {
+   "id": "caoe-bei",
+   "category": "small-kai",
+   "title": {
+    "trad": "曹娥碑",
+    "simp": "曹娥碑"
+   },
+   "author": {
+    "trad": "邯鄲淳（傳）",
+    "simp": "邯郸淳（传）"
+   },
+   "dynasty": {
+    "trad": "東漢",
+    "simp": "东汉"
+   },
+   "file": "texts/caoe-bei.json",
+   "chars": 374,
+   "sections": 1,
+   "description": {
+    "trad": "傳王羲之小楷 · 孝女曹娥碑文",
+    "simp": "传王羲之小楷 · 孝女曹娥碑文"
+   }
+  },
+  {
+   "id": "shijing",
+   "category": "shijing-chuci",
+   "title": {
+    "trad": "詩經精選",
+    "simp": "诗经精选"
+   },
+   "author": {
+    "trad": "先秦無名氏及尹吉甫等",
+    "simp": "先秦无名氏及尹吉甫等"
+   },
+   "dynasty": {
+    "trad": "先秦",
+    "simp": "先秦"
+   },
+   "file": "texts/shijing.json",
+   "chars": 8512,
+   "sections": 87,
+   "description": {
+    "trad": "先秦 · 詩三百精選，含關雎、蒹葭、桃夭、采薇、碩鼠、七月等",
+    "simp": "先秦 · 诗三百精选，含关雎、蒹葭、桃夭、采薇、硕鼠、七月等"
+   }
+  },
+  {
+   "id": "chuci",
+   "category": "shijing-chuci",
+   "title": {
+    "trad": "楚辭精選",
+    "simp": "楚辞精选"
+   },
+   "author": {
+    "trad": "屈原",
+    "simp": "屈原"
+   },
+   "dynasty": {
+    "trad": "戰國",
+    "simp": "战国"
+   },
+   "file": "texts/chuci.json",
+   "chars": 4551,
+   "sections": 23,
+   "description": {
+    "trad": "屈原 · 離騷、九歌、卜居、漁父",
+    "simp": "屈原 · 离骚、九歌、卜居、渔父"
+   }
+  },
+  {
+   "id": "yuanqu-xiaoling",
+   "category": "yuanqu",
+   "title": {
+    "trad": "元曲小令",
+    "simp": "元曲小令"
+   },
+   "author": {
+    "trad": "元代諸家",
+    "simp": "元代诸家"
+   },
+   "dynasty": {
+    "trad": "元",
+    "simp": "元"
+   },
+   "file": "texts/yuanqu-xiaoling.json",
+   "chars": 550,
+   "sections": 18,
+   "description": {
+    "trad": "元代小令18首",
+    "simp": "元代小令18首"
+   }
+  },
+  {
+   "id": "zhuzi-jiaxun",
+   "category": "family-maxims",
+   "title": {
+    "trad": "朱子家訓",
+    "simp": "朱子家训"
+   },
+   "author": {
+    "trad": "朱用純（朱柏廬）",
+    "simp": "朱用纯（朱柏庐）"
+   },
+   "dynasty": {
+    "trad": "清",
+    "simp": "清"
+   },
+   "file": "texts/zhuzi-jiaxun.json",
+   "chars": 516,
+   "sections": 4,
+   "description": {
+    "trad": "朱柏廬 · 治家格言",
+    "simp": "朱柏庐 · 治家格言"
+   }
+  },
+  {
+   "id": "zengguang-xianwen",
+   "category": "family-maxims",
+   "title": {
+    "trad": "增廣賢文",
+    "simp": "增广贤文"
+   },
+   "author": {
+    "trad": "佚名",
+    "simp": "佚名"
+   },
+   "dynasty": {
+    "trad": "明清",
+    "simp": "明清"
+   },
+   "file": "texts/zengguang-xianwen.json",
+   "chars": 4973,
+   "sections": 16,
+   "description": {
+    "trad": "格言諺語 · 上集",
+    "simp": "格言谚语 · 上集"
+   }
+  },
+  {
+   "id": "caigentan",
+   "category": "family-maxims",
+   "title": {
+    "trad": "菜根譚（前集選）",
+    "simp": "菜根谭（前集选）"
+   },
+   "author": {
+    "trad": "洪應明",
+    "simp": "洪应明"
+   },
+   "dynasty": {
+    "trad": "明",
+    "simp": "明"
+   },
+   "file": "texts/caigentan.json",
+   "chars": 3518,
+   "sections": 10,
+   "description": {
+    "trad": "洪應明 · 前集前100則",
+    "simp": "洪应明 · 前集前100则"
+   }
+  },
+  {
+   "id": "yongzi-bafa",
+   "category": "basics",
+   "title": {
+    "trad": "永字八法",
+    "simp": "永字八法"
+   },
+   "author": {
+    "trad": "傳隋智永",
+    "simp": "传隋智永"
+   },
+   "dynasty": {
+    "trad": "隋唐",
+    "simp": "隋唐"
+   },
+   "file": "texts/yongzi-bafa.json",
+   "chars": 100,
+   "sections": 9,
+   "description": {
+    "trad": "八種基本筆畫 · 反覆習「永」",
+    "simp": "八种基本笔画 · 反复习「永」"
+   }
+  },
+  {
+   "id": "bihua-lizi",
+   "category": "basics",
+   "title": {
+    "trad": "基本筆畫例字",
+    "simp": "基本笔画例字"
+   },
+   "author": {
+    "trad": "編選",
+    "simp": "编选"
+   },
+   "dynasty": {
+    "trad": "—",
+    "simp": "—"
+   },
+   "file": "texts/bihua-lizi.json",
+   "chars": 118,
+   "sections": 12,
+   "description": {
+    "trad": "12種筆畫 · 各取常用例字",
+    "simp": "12种笔画 · 各取常用例字"
+   }
+  },
+  {
+   "id": "changyong-zi",
+   "category": "basics",
+   "title": {
+    "trad": "常用字（一級字表前500）",
+    "simp": "常用字（一级字表前500）"
+   },
+   "author": {
+    "trad": "教育部 國家語委",
+    "simp": "教育部 国家语委"
+   },
+   "dynasty": {
+    "trad": "—",
+    "simp": "—"
+   },
+   "file": "texts/changyong-zi.json",
+   "chars": 500,
+   "sections": 10,
+   "description": {
+    "trad": "一級字表 · 前500字（50字一節）",
+    "simp": "一级字表 · 前500字（50字一节）"
+   }
+  },
+  {
+   "id": "pianpang-bushou",
+   "category": "basics",
+   "title": {
+    "trad": "偏旁部首例字",
+    "simp": "偏旁部首例字"
+   },
+   "author": {
+    "trad": "編選",
+    "simp": "编选"
+   },
+   "dynasty": {
+    "trad": "—",
+    "simp": "—"
+   },
+   "file": "texts/pianpang-bushou.json",
+   "chars": 471,
+   "sections": 40,
+   "description": {
+    "trad": "40個偏旁 · 各取常用例字",
+    "simp": "40个偏旁 · 各取常用例字"
+   }
+  },
+  {
+   "id": "jichu-cihui",
+   "category": "basics",
+   "title": {
+    "trad": "基礎詞語",
+    "simp": "基础词语"
+   },
+   "author": {
+    "trad": "編選",
+    "simp": "编选"
+   },
+   "dynasty": {
+    "trad": "—",
+    "simp": "—"
+   },
+   "file": "texts/jichu-cihui.json",
+   "chars": 111,
+   "sections": 8,
+   "description": {
+    "trad": "數字、干支、生肖、節氣",
+    "simp": "数字、干支、生肖、节气"
    }
   }
  ]

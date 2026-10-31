@@ -14,6 +14,7 @@
   function teardown() {
     if (MX.Practice) MX.Practice.hide();
     if (MX.PenTest) MX.PenTest.hide();
+    if (MX.Notes) MX.Notes.hide();
     MX.Model.flushAll();
     var layer = MX.layer();
     layer.innerHTML = '';
@@ -30,6 +31,9 @@
         case 'setup': MX.Screens.setup(el, r.arg, r.arg2 || 'main', r.query); break;
         case 'lib': MX.Screens.category(el, r.arg, r.query); break;
         case 'text': MX.Screens.text(el, r.arg, r.query); break;
+        case 'shelf': MX.Screens.shelf(el, r.arg, r.query); break;
+        case 'search': MX.Screens.search(el, r.query); break;
+        case 'notes': MX.Notes.show(el, r.arg, r.arg2 || 'main', r.query); break;
         case 'custom': MX.Screens.custom(el, r.arg); break;
         case 'settings': MX.Screens.settings(el); break;
         case 'archives': MX.Screens.archives(el, r.arg, r.arg2); break;

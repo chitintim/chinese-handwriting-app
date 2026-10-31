@@ -4,11 +4,12 @@
   var Store = MX.Store;
 
   var DEF_SETTINGS = {
-    acceptTouch: false, inkWidth: 'mthin', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'md', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
+    acceptTouch: false, inkWidth: 'thin', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'md', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
     name: '', perf: false, pressure: 'auto', autoNext: true, touchPrompted: false,
-    brush: 'xiu', picked: {}, curve: 'mid', stab: 'light', pressFloor: 0, pressN: 0, pressLo: 0, pressHi: 0, pressCal: false,
+    brush: 'mao', custom: null, picked: {}, stab: 'light', pressFloor: 0, pressN: 0, pressLo: 0, pressHi: 0, pressCal: false, pressMx: [], pressMd: [], pressNm: 0, pressKnots: null, pressRange: 'mid',
     edgeBottom: '3.5', edgeSide: '1', exp: null, libScript: 'trad',
-    sigDate: 'gz', sigWord: '', sigDizi: true, sigHui: false
+    sigDate: 'gz', sigWord: '', sigDizi: true, sigHui: false,
+    autoNotes: true, sideNotes: false, strokeTap: true, strokeSpeed: 'mid'
   };
   var DEF_CFG = {
     script: 'trad', mode: 'trace', grid: 'mi', box: true, guide: true, size: 'M', dir: 'v', punct: 'hide',
@@ -40,7 +41,7 @@
 
     // Library sections: a copy / completion record without sectionId (everything stored before the multi-text library) belongs to section 'main'.
     sid: function (c) { return (c && c.sectionId) || 'main'; },
-    SCHEMA: 4,
+    SCHEMA: 5,
 
     init: function () {
       // Stored-data schema marker. Records only ever gain optional fields (defaults are merged below).
@@ -51,6 +52,8 @@
       //           Ink is raw samples, so old strokes simply re-render with the current style.
       //   3 -> 4: title (標題) and 落款 are on by default; the per-text config template of older builds stored the old defaults (off) whether chosen or not, so a stored
       //           title / sign of false becomes true there (copies keep their own config). Ink keys: copies get keyv 2 when first opened (Model.upgradeKeys).
+      //   4 -> 5: new pen defaults 毛筆 / 筆粗 細 (user feedback on 0.5.2). Every stored settings object holds the defaults of the build that wrote it (brush 'xiu' / 'mao', inkWidth 'mthin' / 'mid' ...)
+      //           whether chosen or not; settings.picked marks what the user chose explicitly in the UI. Anything not picked is dropped, so it follows the current default.
       var sv = Store.get('schema');
       if (!(sv >= M.SCHEMA)) M.migrate(sv || 0);
       M.settings = assign({}, DEF_SETTINGS, Store.get('settings'));
@@ -90,6 +93,20 @@
           var t = Store.get(k);
           if (t && typeof t === 'object') { if (t.title === false) t.title = true; if (t.sign === false) t.sign = true; Store.set(k, t); }
         });
+      }
+      if (from < 5) {
+        var s5 = Store.get('settings');
+        if (s5 && typeof s5 === 'object') {
+          var pk = s5.picked && typeof s5.picked === 'object' ? s5.picked : {};
+          if (!pk.brush) delete s5.brush;
+          if (!pk.inkWidth) delete s5.inkWidth;
+          // the pressure model changed (one clear model: 粗細 = size at normal pressure, 校準 = 輕 / 平常 / 重 map): an old two-stroke calibration saturated normal writing, so it is dropped
+          // (the adaptive range is learned again); 筆壓 輕 / 中 / 重 (curve) is gone
+          if (s5.pressCal && !s5.pressKnots) { s5.pressCal = false; s5.pressLo = 0; s5.pressHi = 0; }
+          s5.pressMx = []; s5.pressMd = []; s5.pressNm = 0;
+          delete s5.curve;
+          Store.set('settings', s5);
+        }
       }
       Store.set('schema', M.SCHEMA);
     },
@@ -133,6 +150,42 @@
       return Object.keys(M.copies).map(function (id) { return M.copies[id]; })
         .filter(function (c) { return c.status === 'active' && c.filled > 0 && !c.completedAt; })
         .sort(function (a, b) { return (b.updatedAt || 0) - (a.updatedAt || 0); });
+    },
+
+    // ---- favourites (收藏): text level (fav:<textId>) and section level (fav:<textId>:<sectionId>); part of the JSON backup like every other key
+    favKey: function (textId, sectionId) { return 'fav:' + textId + (sectionId ? ':' + sectionId : ''); },
+    isFav: function (textId, sectionId) { return !!Store.get(M.favKey(textId, sectionId)); },
+    setFav: function (textId, sectionId, on) {
+      var k = M.favKey(textId, sectionId);
+      if (on) Store.set(k, { textId: textId, sectionId: sectionId || null, ts: Date.now() }); else Store.del(k);
+      return !!on;
+    },
+    toggleFav: function (textId, sectionId) { return M.setFav(textId, sectionId, !M.isFav(textId, sectionId)); },
+    // newest first: [{textId, sectionId|null, ts}]
+    favs: function () {
+      return Store.keys('fav:').map(function (k) { return Store.get(k); }).filter(function (f) { return f && f.textId; })
+        .sort(function (a, b) { return (b.ts || 0) - (a.ts || 0); });
+    },
+    // share (0..1) of an active copy that is written; a completed copy counts as 1
+    copyFrac: function (c) { return !c ? 0 : (c.completedAt ? 1 : (c.total ? Math.min(1, c.filled / c.total) : 0)); },
+    // progress of a whole text (0..1): the mean of its sections' active copies (sections without a copy count 0); nSec = number of sections
+    textProgress: function (textId, nSec) {
+      var seen = {}, sum = 0;
+      Object.keys(M.copies).forEach(function (id) { var c = M.copies[id]; if (c.textId === textId && c.status === 'active') seen[M.sid(c)] = 1; });
+      Object.keys(seen).forEach(function (sid) { sum += M.copyFrac(M.activeCopy(textId, sid)); });
+      return nSec > 0 ? Math.min(1, sum / nSec) : 0;
+    },
+    // number of different sections of the text that have been completed at least once
+    sectionsDone: function (textId) {
+      var seen = {};
+      Store.keys('done:').forEach(function (k) { var d = Store.get(k); if (d && d.textId === textId) seen[d.sectionId || 'main'] = 1; });
+      return Object.keys(seen).length;
+    },
+    // newest write time (ms) among the text's copies
+    lastWritten: function (textId) {
+      var t = 0;
+      Object.keys(M.copies).forEach(function (id) { var c = M.copies[id]; if (c.textId === textId && c.filled > 0 && (c.updatedAt || 0) > t) t = c.updatedAt; });
+      return t;
     },
 
     create: function (textId, cfg, signStr, total, sectionId) {

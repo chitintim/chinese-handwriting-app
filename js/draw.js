@@ -47,14 +47,19 @@
     D.FONT_ORDER.forEach(function (k) { var f = D.FONTS[k].fam[sc]; if (out.indexOf(f) < 0) out.push(f); });
     return out;
   }
-  // CSS font stack. No key = the UI font (LXGW WenKai first); with a key = that template font first, then the others, LXGW last.
+  // CSS font stack. No key = the UI font (UKai first, see UI_LIST); with a key = that template font first, then the others, LXGW last.
   D.fam = function (script, key) {
     var sys = script === 'simp'
       ? ',"LXGW WenKai","Kaiti SC","STKaiti","KaiTi","Noto Serif CJK SC",serif'
       : ',"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB","Noto Serif CJK TC",serif';
-    var list = key ? famList(script, key) : famList(script, 'wk');
+    var list = key ? famList(script, key) : UI_LIST[script === 'simp' ? 'simp' : 'trad'];
     return list.map(function (f) { return '"' + f + '"'; }).join(',') + sys;
   };
+  // The UI font (every text of the app except template glyphs): the broad-coverage chunked default font first (library + GB2312 + Big5 per script, unicode-range chunks, plus the symbols
+  // the UI uses), then LXGW WenKai (UI strings are scanned into it by the build), then TW-Kai. Latin digits and punctuation come from the first face too (one consistent face).
+  // The CSS body font-family in app.css is the same list.
+  var UI_LIST = { trad: ['MoUKai TC', 'MoKai TC', 'MoTWKai'], simp: ['MoUKai SC', 'MoKai SC', 'MoTWKai'] };
+  D.uiFam = function (script) { return D.fam(script); };
 
   // Ink strokes are painted by the shared ink engine (MX.Ink, ink.js): practice view, pen-test pad and export all call Ink.paintStroke.
 

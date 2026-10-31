@@ -1,0 +1,31 @@
+{
+ "id": "dixiezhongshushu",
+ "title": {
+  "trad": "答謝中書書",
+  "simp": "答谢中书书"
+ },
+ "author": {
+  "trad": "陶弘景",
+  "simp": "陶弘景"
+ },
+ "dynasty": {
+  "trad": "南朝梁",
+  "simp": "南朝梁"
+ },
+ "source": "https://zh.wikisource.org/wiki/答謝中書書",
+ "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/答謝中書書",
+ "notes": "取維基文庫「答謝中書書」頁面正文，不含題解、注釋與評語；異體字統一為通行字（如无→無、衹→祇）。",
+ "sections": [
+  {
+   "id": "main",
+   "title": {
+    "trad": "答謝中書書",
+    "simp": "答谢中书书"
+   },
+   "body": {
+    "trad": "山川之美，古來共談。高峰入雲，清流見底。兩岸石壁，五色交輝。青林翠竹，四時俱備。曉霧將歇，猿鳥亂鳴；夕日欲頹，沉鱗競躍。實是欲界之仙都。自康樂以來，未復有能與其奇者。",
+    "simp": "山川之美，古来共谈。高峰入云，清流见底。两岸石壁，五色交辉。青林翠竹，四时俱备。晓雾将歇，猿鸟乱鸣；夕日欲颓，沉鳞竞跃。实是欲界之仙都。自康乐以来，未复有能与其奇者。"
+   }
+  }
+ ]
+}

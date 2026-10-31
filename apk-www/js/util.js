@@ -52,6 +52,52 @@
   };
   MX.layer = function () { return document.getElementById('layer'); };
 
+  // Inline SVG icons (pure black, no font dependency): star / star-o (收藏), tri-l / tri-r / tri-u / tri-d (page arrows). The UI font has ☆★ but not ◀▶, and an icon is the same on every device.
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  MX.icon = function (name, size) {
+    var sz = size || 24, svg = document.createElementNS(SVGNS, 'svg'), el, pts = [], i, r, a;
+    svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('width', String(sz)); svg.setAttribute('height', String(sz));
+    svg.setAttribute('class', 'ico ico-' + name); svg.setAttribute('aria-hidden', 'true'); svg.setAttribute('focusable', 'false');
+    if (name === 'star' || name === 'star-o') {
+      for (i = 0; i < 10; i++) { r = i % 2 ? 4.8 : 11; a = -Math.PI / 2 + i * Math.PI / 5; pts.push((12 + r * Math.cos(a)).toFixed(2) + ',' + (12.8 + r * Math.sin(a)).toFixed(2)); }
+      el = document.createElementNS(SVGNS, 'polygon');
+      el.setAttribute('points', pts.join(' '));
+      el.setAttribute('fill', name === 'star' ? 'currentColor' : 'none');
+      el.setAttribute('stroke', 'currentColor'); el.setAttribute('stroke-width', '2'); el.setAttribute('stroke-linejoin', 'round');
+    } else {
+      var P = { 'tri-l': '17,3 5,12 17,21', 'tri-r': '7,3 19,12 7,21', 'tri-u': '3,17 12,5 21,17', 'tri-d': '3,7 12,19 21,7' };
+      el = document.createElementNS(SVGNS, 'polygon');
+      el.setAttribute('points', P[name] || P['tri-r']); el.setAttribute('fill', 'currentColor');
+    }
+    svg.appendChild(el);
+    return svg;
+  };
+  // A button with an icon and/or label: MX.btn({label, icon, iconRight, act, cls, onclick})
+  MX.btn = function (o) {
+    var kids = [], attrs = { type: 'button', class: o.cls || '', 'data-act': o.act || null, onclick: o.onclick || null, disabled: o.disabled ? true : null, title: o.title || null, 'aria-label': o.aria || null };
+    if (o.icon && !o.iconRight) kids.push(MX.icon(o.icon, o.iconSize));
+    if (o.label) kids.push(o.label);
+    if (o.icon && o.iconRight) kids.push(MX.icon(o.icon, o.iconSize));
+    if (o.icon) attrs.class = (attrs.class + ' withico').trim();
+    return MX.h('button', attrs, kids);
+  };
+  // 收藏 toggle button for a text (sectionId null) or a section. onToggle(on) after the change.
+  MX.favButton = function (textId, sectionId, onToggle, withLabel) {
+    var on = MX.Model.isFav(textId, sectionId), b;
+    function paint() {
+      on = MX.Model.isFav(textId, sectionId);
+      b.setAttribute('data-on', on ? '1' : '0'); b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.title = on ? '取消收藏' : '加入收藏';
+      b.innerHTML = '';
+      b.appendChild(MX.icon(on ? 'star' : 'star-o', 28));
+      if (withLabel) b.appendChild(document.createTextNode(on ? '已收藏' : '收藏'));
+    }
+    b = MX.h('button', { type: 'button', class: 'fav' + (withLabel ? ' withico' : ''), 'data-act': 'fav', onclick: function () {
+      var v = MX.Model.toggleFav(textId, sectionId); paint(); if (onToggle) onToggle(v);
+    } });
+    paint();
+    return b;
+  };
+
   var toastEl = null, toastTimer = null;
   MX.toast = function (msg, ms) {
     if (toastEl && toastEl.parentNode) toastEl.parentNode.removeChild(toastEl);

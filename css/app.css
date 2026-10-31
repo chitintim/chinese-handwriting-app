@@ -1,20 +1,29 @@
 /* screen-edge safe margins (setting 邊緣留白, set by Model.applyEdge): keep controls out of the pen digitizer / gesture dead zone at the screen edge */
-:root{--edge-b:3.5vh;--edge-t:1vh;--edge-l:1vw;--edge-r:1vw}
+:root{--edge-b:3.5vh;--edge-t:1vh;--edge-l:1vw;--edge-r:1vw;
+  /* type scale (px) and spacing: one set for every screen */
+  --t-xs:15px;--t-s:17px;--t-m:19px;--t-l:24px;--t-xl:28px;--sp-1:6px;--sp-2:10px;--sp-3:16px;--sp-4:24px}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;margin:0;padding:0;height:100%;background:#fff;color:#000;overflow:hidden;
-  font-family:"MoKai TC","PingFang TC","Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:18px;line-height:1.35}
+  /* UI font: the broad-coverage chunked default font first (every UI string, Latin digits and punctuation from one face), then LXGW WenKai, TW-Kai, system fonts */
+  font-family:"MoUKai TC","MoKai TC","MoTWKai","Kaiti TC","BiauKai","PingFang TC","Noto Sans CJK TC","Microsoft JhengHei",serif;font-size:18px;line-height:1.35}
 #app{position:absolute;left:0;top:0;right:0;bottom:0;background:#fff}
 input,textarea{-webkit-user-select:text;user-select:text}
 button,input,select,textarea{font:inherit;color:#000;border-radius:0}
 button{min-height:56px;min-width:56px;padding:0 14px;background:#fff;border:2px solid #000;font-size:18px;cursor:pointer;touch-action:manipulation}
 button:active,button.on{background:#000;color:#fff}
-button:disabled{color:#888;border-color:#888;background:#fff}
+button:disabled{color:#000;border-style:dashed;background:#fff;text-decoration:line-through}
+button:disabled.on,.seg button:disabled.on{background:#000;color:#fff;text-decoration:none}
+button svg.ico{display:inline-block;vertical-align:middle;fill:currentColor}
+button.withico{display:inline-flex;align-items:center;justify-content:center}
+button.withico svg{margin:0 6px}
+button.withico svg:first-child:last-child{margin:0}
+:active>.ico{color:inherit}
 button.big{min-height:64px;font-size:22px;padding:0 24px}
 input[type=text]{min-height:56px;border:2px solid #000;padding:0 10px;font-size:18px;background:#fff;width:100%;max-width:420px}
 textarea{width:100%;min-height:160px;border:2px solid #000;font-size:14px;font-family:monospace;background:#fff}
-.screen{position:absolute;left:0;top:0;right:0;bottom:0;overflow:auto;padding:calc(16px + var(--edge-t)) calc(20px + var(--edge-r)) calc(40px + var(--edge-b)) calc(20px + var(--edge-l));background:#fff;-webkit-overflow-scrolling:touch}
+.screen{position:absolute;left:0;top:0;right:0;bottom:0;overflow:auto;padding:calc(12px + var(--edge-t)) calc(20px + var(--edge-r)) calc(16px + var(--edge-b)) calc(20px + var(--edge-l));background:#fff;-webkit-overflow-scrolling:touch}
 .screen h1{font-size:26px;margin:0 0 12px;font-weight:normal}
-.screen h2{font-size:20px;margin:18px 0 8px;font-weight:normal;border-bottom:2px solid #000;padding-bottom:4px}
+.screen h2{font-size:var(--t-m);margin:var(--sp-3) 0 var(--sp-2);font-weight:normal;border-bottom:2px solid #000;padding-bottom:4px}
 .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px;flex-wrap:wrap}
 .topbar>*{margin:0 10px 10px 0}
 .topbar>:last-child{margin-right:0}
@@ -23,7 +32,7 @@ textarea{width:100%;min-height:160px;border:2px solid #000;font-size:14px;font-f
 .btnrow>*{margin:0 10px 10px 0}
 .card{border:2px solid #000;padding:14px 16px;margin:0 0 14px;max-width:760px}
 .card .t{font-size:24px}
-.card .m{font-size:16px;color:#333;margin:4px 0 10px}
+.card .m{font-size:16px;color:#222;margin:4px 0 10px}
 .bar{height:14px;border:2px solid #000;margin:6px 0 10px;max-width:420px}
 .bar i{display:block;height:100%;background:#000}
 .frow{display:flex;align-items:center;margin:8px 0;flex-wrap:wrap}
@@ -32,7 +41,7 @@ textarea{width:100%;min-height:160px;border:2px solid #000;font-size:14px;font-f
 .seg{display:flex;flex-wrap:wrap}
 .seg button{margin-right:-2px}
 .seg button.on{background:#000;color:#fff}
-.note{font-size:15px;color:#333;margin:4px 0}
+.note{font-size:var(--t-xs);color:#222;margin:4px 0}
 .mono{font-family:monospace;font-size:15px;white-space:pre-wrap;word-break:break-all}
 
 /* practice */
@@ -65,6 +74,9 @@ textarea{width:100%;min-height:160px;border:2px solid #000;font-size:14px;font-f
 .swi{margin:0 10px 8px 0;width:96px}
 .swi canvas{display:block;border:1px solid #000}
 .pt-grid div b{font-weight:normal;color:#333}
+.frow.tune input[type=range]{width:300px;max-width:100%;height:48px;margin:0 10px 0 0;flex:1 1 200px}
+.frow.tune .tval{min-width:72px;font-size:17px}
+textarea[data-role=tune-json]{min-height:110px;margin-top:8px}
 
 /* install-app area (hosted web app only) and update notice */
 a.btnlink{display:flex;align-items:center;justify-content:center;min-height:64px;padding:0 24px;border:3px solid #000;background:#000;color:#fff;font-size:22px;font-weight:bold;text-decoration:none;text-align:center}
@@ -90,7 +102,7 @@ a.btnlink.plain{background:#fff;color:#000;min-height:56px;font-size:18px;font-w
 .lrow{display:flex;align-items:stretch;height:88px;border:2px solid #000;margin:0 0 10px;max-width:820px;overflow:hidden}
 .lmain{flex:1;min-width:0;padding:0 14px;display:flex;flex-direction:column;justify-content:center;cursor:pointer}
 .lmain .t{font-size:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lmain .m{font-size:15px;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:2px 0 0}
+.lmain .m{font-size:var(--t-xs);line-height:1.25;color:#222;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin:2px 0 0}
 .lbtns{display:flex;flex:none;align-items:center;padding:0 8px 0 0}
 .lbtns button{margin-left:8px;min-width:72px}
 .pager{display:flex;align-items:center;margin:0 0 8px}
@@ -98,3 +110,112 @@ a.btnlink.plain{background:#fff;color:#000;min-height:56px;font-size:18px;font-w
 .pager .ctr{font-size:20px;min-width:90px;text-align:center}
 .card .notes,.notes{white-space:pre-wrap;font-size:15px;border-top:2px solid #000;border-bottom:2px solid #000;padding:8px 0;margin:8px 0;max-height:260px;overflow:hidden}
 textarea.cbody{font-family:inherit;font-size:20px;min-height:300px;height:42vh;margin:8px 0;padding:8px 10px}
+
+/* ---- library v2: back button + breadcrumbs, shelves, tiles, controls, empty states ---- */
+.topbar .backbtn{margin-right:var(--sp-2)}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;margin:0 0 var(--sp-2);font-size:var(--t-s)}
+.crumbs .sep{margin:0 4px;font-size:var(--t-m)}
+.crumbs .crumb{min-height:48px;min-width:48px;border:0;border-bottom:2px solid #000;padding:0 8px;font-size:var(--t-s);background:#fff}
+.crumbs .crumb:active{background:#000;color:#fff}
+.crumbs .here{padding:0 8px;border-bottom:2px solid transparent}
+.shead{display:flex;align-items:center;justify-content:space-between;margin:var(--sp-1) 0 6px;border-bottom:2px solid #000;min-height:40px}
+.shead h2{margin:0;border:0;padding:0;font-size:var(--t-l)}
+.shead button{margin:0 0 4px 0}
+.shelf{margin:0 0 4px}
+.shelf .note{padding:0 0 6px;margin:0}
+.lrow.compact{height:76px;margin:0 0 8px}
+.lrow.compact .t{font-size:var(--t-l)}
+.tiles{display:flex;flex-wrap:wrap;margin:0 -4px}
+.tile{flex:1 1 108px;min-width:104px;max-width:260px;height:64px;margin:4px;padding:3px 10px;text-align:left;display:flex;flex-direction:column;justify-content:center;font-size:var(--t-l)}
+.tile .t{font-size:22px;line-height:1.2}
+.tile .m{font-size:var(--t-xs);line-height:1.25;min-height:18px}
+.homewrap{display:block}
+@media (orientation:landscape) and (min-width:700px){.homewrap{display:flex}.hcol{flex:1 1 0;min-width:0}.hcol:first-child{margin-right:16px}}
+.tile:active .m{color:#fff}
+.lmain:active{background:#000;color:#fff}
+.lmain:active .m{color:#fff}
+.lbtns button.fav{min-width:56px;width:56px;padding:0}
+.btnrow button.fav,.topbar button.fav{min-width:56px}
+.btnrow.actions{margin-top:var(--sp-2)}
+.ctl{display:flex;flex-wrap:wrap;align-items:center;margin:0 0 var(--sp-2)}
+.ctl .frow{margin:0 var(--sp-3) 6px 0}
+.ctl .searchrow input[type=text]{width:260px;max-width:100%}
+.empty{border:2px dashed #000;padding:var(--sp-4) var(--sp-3);margin:var(--sp-2) 0;max-width:820px}
+.empty .et{font-size:var(--t-l)}
+.empty .eh{font-size:var(--t-s);margin-top:6px}
+.compactcard{display:flex;flex-wrap:wrap;align-items:center;padding:8px 12px}
+.compactcard .ct{flex:1 1 200px;margin-right:var(--sp-2)}
+.compactcard .t{font-size:var(--t-m)}
+.compactcard .m{margin:0}
+.compactcard a.btnlink{min-height:64px;font-size:var(--t-s);padding:0 14px;margin:4px 8px 4px 0}
+.compactcard a.btnlink.plain{margin:4px 0}
+.vernote{margin-top:var(--sp-2)}
+.pager button{min-width:100px}
+
+/* ---- settings: floating 完成, section index, sections ---- */
+.floatdone{position:fixed;top:calc(8px + var(--edge-t));right:calc(14px + var(--edge-r));z-index:30;min-width:96px;min-height:60px;font-size:var(--t-l);border-width:3px}
+.screen.settings .topbar{padding-right:120px}
+.sindex{display:flex;flex-wrap:wrap;margin:var(--sp-2) 0}
+.sindex button{margin:0 8px 8px 0;min-width:84px}
+.sect{margin:0 0 var(--sp-4);padding-top:2px}
+.sect h2{font-size:var(--t-l)}
+.wsample{display:flex;flex-wrap:wrap;margin:var(--sp-2) 0}
+.wsi{margin:0 var(--sp-3) 4px 0;text-align:center}
+.wsi canvas{display:block;border:2px solid #000}
+.wsi .note{margin:2px 0}
+.sheet{position:relative}
+.sheethead{position:sticky;top:-16px;z-index:5;display:flex;align-items:center;background:#fff;margin:-16px -18px 8px;padding:10px 18px;border-bottom:3px solid #000}
+.sheethead h2{margin:0;border:0;padding:0;font-size:var(--t-l)}
+.sheethead .grow{flex:1}
+.modal.sheet h2{font-size:var(--t-m);border-bottom:2px solid #000}
+.modal.sheet .sheethead h2{border:0}
+
+/* ---- 解說 reading page (paginated with CSS columns) ---- */
+.screen.nread{display:flex;flex-direction:column;overflow:hidden}
+.screen.nread .topbar{flex:none}
+.nview{flex:1;min-height:0;position:relative;overflow:hidden}
+.ncols{overflow:hidden;font-size:22px;line-height:1.75;column-fill:auto}
+.ncols .ntitle{font-size:var(--t-xl);margin:0 0 var(--sp-2);font-weight:normal;line-height:1.3}
+.ncols .ndone{border:3px solid #000;padding:8px 12px;margin:0 0 var(--sp-3);font-size:var(--t-m)}
+.ncols .npart{margin:0 0 var(--sp-3)}
+.ncols .npart h2{font-size:var(--t-m);display:inline-block;background:#000;color:#fff;border:0;padding:0 12px;margin:0 0 8px;break-after:avoid;-webkit-column-break-after:avoid}
+.ncols .ntext{margin:0 0 10px;text-align:justify}
+.ncols .nitem{margin:0 0 12px;break-inside:avoid;-webkit-column-break-inside:avoid}
+.ncols .nline{font-size:24px;border-left:5px solid #000;padding-left:12px}
+.ncols .nnote{font-size:20px;color:#000}
+.ncols .nitem .nnote{padding-left:17px;display:block}
+.ncols .nitem.gl .nnote{display:inline;padding:0}
+.ncols .nterm{font-size:22px;border-bottom:2px solid #000}
+.ncols .ndisc{font-size:var(--t-s);border-top:2px solid #000;padding-top:8px;margin:var(--sp-3) 0 0}
+.ncols .nacts{margin:var(--sp-3) 0;break-inside:avoid;-webkit-column-break-inside:avoid}
+.npager{flex:none;margin:var(--sp-2) 0 0}
+
+/* ---- 對照模式 strip of the practice view ---- */
+.pnotes{flex:none;background:#fff;border:0 solid #000;display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden}
+.practice.land .pnotes{width:30%;border-left-width:2px;padding:6px calc(10px + var(--edge-r)) var(--edge-b) 10px}
+.practice.port .pnotes{height:27%;border-top-width:2px;padding:4px calc(12px + var(--edge-r)) calc(6px + var(--edge-b)) calc(12px + var(--edge-l))}
+.pnotes .shead2{display:flex;align-items:center;justify-content:space-between;flex:none;border-bottom:2px solid #000;margin-bottom:4px}
+.pnotes .shead2 .sh{font-size:var(--t-s)}
+.pnotes .shead2 button{min-height:56px;min-width:64px;margin:0 0 2px 8px;font-size:var(--t-s)}
+.pnotes .sbody{flex:1;min-height:0;overflow:hidden;font-size:var(--t-s);line-height:1.5}
+.pnotes .ssum{margin:0 0 6px}
+.pnotes .sgl{margin:0 0 3px;font-size:16px}
+.pnotes .nterm{border-bottom:2px solid #000}
+.pnotes .smore{font-size:var(--t-s)}
+
+/* ---- stroke-order popup (筆順): pure black / white, no animation of its own (the steps are redrawn by script) ---- */
+.stroke-pop{max-width:720px}
+.stroke-pop .spstatus{text-align:center;font-size:var(--t-m);margin:2px 0 6px}
+.stroke-pop .sp-cv{display:block;margin:0 auto 8px;background:#fff}
+.stroke-pop .spctl{display:flex;flex-wrap:wrap;align-items:center;margin:4px 0 6px}
+.stroke-pop .spctl>*{margin:4px 14px 4px 0}
+.stroke-pop .sprow{display:flex;flex-wrap:wrap;align-items:center}
+.stroke-pop .sprow .lbl{margin-right:8px;font-size:var(--t-s)}
+.stroke-pop .sprow>button{margin-right:6px}
+.stroke-pop .spframes{display:flex;flex-wrap:wrap;margin:6px 0 2px}
+.stroke-pop .spf{display:block;min-width:84px;min-height:0;height:auto;padding:3px;margin:0 6px 6px 0}
+.stroke-pop .spf canvas{display:block;margin:0 auto}
+.stroke-pop .spf .cap{font-size:var(--t-xs);text-align:center}
+.stroke-pop .spov{justify-content:center;align-items:center;margin-top:2px}
+.stroke-pop .spov .ctr{min-width:72px;text-align:center;font-size:var(--t-m)}
+.stroke-pop .spnodata{font-size:var(--t-m);margin:12px 0}
