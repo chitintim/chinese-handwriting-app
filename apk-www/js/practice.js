@@ -56,7 +56,10 @@
         S.root.appendChild(S.top); S.root.appendChild(S.stage); S.root.appendChild(S.bar);
       } else { S.root.appendChild(S.bar); S.root.appendChild(S.stage); }
       S.bgx = S.bg.getContext('2d');
-      try { S.inkx = S.ink.getContext('2d', { desynchronized: true }); } catch (e) { S.inkx = null; }
+      // Low-latency (desynchronized) canvas only on the iReader e-ink tablet, where it is tested; on many
+      // Android GPUs it composites the transparent ink layer as solid black.
+      var lowLat = /iReader|Smart 6c|SmartOS/i.test(navigator.userAgent || '');
+      try { S.inkx = lowLat ? S.ink.getContext('2d', { desynchronized: true }) : S.ink.getContext('2d'); } catch (e) { S.inkx = null; }
       if (!S.inkx) S.inkx = S.ink.getContext('2d');
       attach();
       layout();
