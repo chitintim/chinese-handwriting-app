@@ -360,7 +360,6 @@
       tickTime(false);
       S.cap.end(e, S.stroke.map);       // the final position is always kept: pen-up flushes the stroke to where the pen really stopped
       feed();
-      S.stroke.pen.end();               // ... and adds the 出鋒 tail (the only thing painted at pen-up; the region repaint below reproduces it exactly)
     }
     finish(false);
   }

@@ -6,7 +6,7 @@
   var DEF_SETTINGS = {
     acceptTouch: false, inkWidth: 'mthin', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'md', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
     name: '', perf: false, pressure: 'auto', autoNext: true, touchPrompted: false,
-    brush: 'xiu', custom: null, picked: {}, curve: 'mid', stab: 'light', pressFloor: 0, pressN: 0, pressLo: 0, pressHi: 0, pressCal: false, pressMx: [],
+    brush: 'xiu', picked: {}, curve: 'mid', stab: 'light', pressFloor: 0, pressN: 0, pressLo: 0, pressHi: 0, pressCal: false,
     edgeBottom: '3.5', edgeSide: '1', exp: null, libScript: 'trad',
     sigDate: 'gz', sigWord: '', sigDizi: true, sigHui: false
   };
