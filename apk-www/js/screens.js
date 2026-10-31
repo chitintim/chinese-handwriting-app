@@ -221,6 +221,22 @@
     if (apkCard) el.appendChild(apkCard);
     if (libCard) el.appendChild(libCard);
 
+    // the intro card near the top of home, right under the header and notices, in every layout (wide: a two-column card). Black text.
+    // Title, a short story (English + 中文), the ask, and two separate big links: 關於與隨喜 (opens the intro dialog) and GitHub. On the 電子紙 tablet the 中文 line comes first and the English one is smaller (keeps the shelves above the fold).
+    var compactIntro = !MX.Device.isWide() && !MX.Device.isPhone() && Model.settings.screenType === 'eink';
+    var iEn = h('p', { class: 'ien', lang: 'en', 'data-role': 'intro-en', text: 'Hey, it\'s Tim 👋 I vibe-coded this while sitting with my mom in hospital. She\'s a devoted Buddhist, and 抄心經 is close to her heart. It started as one sutra and grew into a little library of texts to trace.' });
+    var iZh = h('p', { class: 'izh', lang: 'zh', 'data-role': 'intro-zh', text: '在醫院陪媽媽的日子裡做的小工具，由一篇《心經》開始，慢慢變成一個小字帖庫。' });
+    var introEl = h('div', { class: 'intro' + (compactIntro ? ' compact' : ''), 'data-role': 'home-intro' }, [
+      h('div', { class: 'i1', 'data-role': 'intro-title', text: '墨字帖 · 抄經、臨帖的描紅練習' }),
+      h('div', { class: 'ibodies' }, compactIntro ? [iZh, iEn] : [iEn, iZh]),
+      h('div', { class: 'i3', 'data-role': 'intro-ask', text: 'Free, always. If you like it, please consider a kind donation to Dana-Farber, or a visit to 西方寺 — 如覺得有用，歡迎隨喜。' }),
+      h('div', { class: 'i4', 'data-role': 'intro-links' }, [
+        h('a', { class: 'ilink', 'data-act': 'about', href: '#/about', onclick: function (e) { e.preventDefault(); if (MX.Intro) MX.Intro.open(); } }, ['關於與隨喜', MX.icon('tri-r', 12)]),
+        h('a', { class: 'ilink', 'data-act': 'github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: 'GitHub' })
+      ])
+    ]);
+    el.appendChild(introEl);
+
     // shelves: 繼續書寫 and 收藏. Their rows are added last, as many as the screen has room for (see below). Landscape: shelves left, 書庫 right.
     var wrap = h('div', { class: 'homewrap' }), colA = h('div', { class: 'hcol' }), colB = h('div', { class: 'hcol' });
     wrap.appendChild(colA); wrap.appendChild(colB);
@@ -267,21 +283,6 @@
     }
     var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '';
     el.appendChild(h('div', { class: 'note vernote', text: '版本 ' + ver + ' · 字帖庫 ' + Lib.version() + ' · 儲存：' + Store.mode() }));
-    // the intro card at the very end of the screen (inside the .screen bottom padding: never in the bottom edge dead zone; wide layout: a two-column card under the header). Black text.
-    // Title, a short story (English + 中文), the ask, and two separate big links: 關於與隨喜 (opens the intro dialog) and GitHub. On the 電子紙 tablet the 中文 line comes first and the English one is smaller (keeps the shelves above the fold).
-    var compactIntro = !MX.Device.isWide() && !MX.Device.isPhone() && Model.settings.screenType === 'eink';
-    var iEn = h('p', { class: 'ien', lang: 'en', 'data-role': 'intro-en', text: 'Hey, it\'s Tim 👋 I vibe-coded this while sitting with my mom in hospital. She\'s a devoted Buddhist, and 抄心經 is close to her heart. It started as one sutra and grew into a little library of texts to trace.' });
-    var iZh = h('p', { class: 'izh', lang: 'zh', 'data-role': 'intro-zh', text: '在醫院陪媽媽的日子裡做的小工具，由一篇《心經》開始，慢慢變成一個小字帖庫。' });
-    el.appendChild(h('div', { class: 'intro' + (compactIntro ? ' compact' : ''), 'data-role': 'home-intro' }, [
-      h('div', { class: 'i1', 'data-role': 'intro-title', text: '墨字帖 · 抄經、臨帖的描紅練習' }),
-      h('div', { class: 'ibodies' }, compactIntro ? [iZh, iEn] : [iEn, iZh]),
-      h('div', { class: 'i3', 'data-role': 'intro-ask', text: 'Free, always. If you like it, please consider a kind donation to Dana-Farber, or a visit to 西方寺 — 如覺得有用，歡迎隨喜。' }),
-      h('div', { class: 'i4', 'data-role': 'intro-links' }, [
-        h('a', { class: 'ilink', 'data-act': 'about', href: '#/about', onclick: function (e) { e.preventDefault(); if (MX.Intro) MX.Intro.open(); } }, ['關於與隨喜', MX.icon('tri-r', 12)]),
-        h('a', { class: 'ilink', 'data-act': 'github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: 'GitHub' })
-      ])
-    ]));
-
     // rows: whatever height is left, shared between the two shelves (at least one row each when they have any)
     if (rItems.length) rRows.innerHTML = '';
     if (fItems.length) fRows.innerHTML = '';
