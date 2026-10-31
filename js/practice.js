@@ -34,21 +34,27 @@
       Model.recount(copy, cells);
       if (!(opts && opts.readOnly) && copy.status !== 'archived') {
         // resume at the page holding the first empty cell (a finished copy keeps its last position)
-        for (var ei = 0; ei < cells.length; ei++) if (!(copy.ink[cells[ei].key] || []).length) { copy.pos = ei; break; }
+        if (P.resume && P.resume.id === copy.id && P.resume.pos < cells.length) copy.pos = P.resume.pos;      // redrawn in the other layout: stay where we were
+        else for (var ei = 0; ei < cells.length; ei++) if (!(copy.ink[cells[ei].key] || []).length) { copy.pos = ei; break; }
       }
+      P.resume = null;
       S = {
-        root: h('div', { class: 'practice' }), copy: copy, text: text, cells: cells, readOnly: !!(opts && opts.readOnly),
+        phone: MX.Device.isPhone(), root: h('div', { class: 'practice' }), copy: copy, text: text, cells: cells, readOnly: !!(opts && opts.readOnly),
         cfg: copy.cfg, g: null, pages: [], pageIdx: 0, slotOf: {}, dpr: 1, token: 0,
         active: null, stroke: null, erasing: null, ops: [], focus: -1, penSeen: false, lastPen: 0, tick: 0,
         cap: new Ink.Sampler(), rawOk: false, hint: -1, timers: {}, nextBtn: null, banner: null, rect: null, listeners: []
       };
       root.appendChild(S.root);
-      S.bar = h('div', { class: 'pbar' });
+      S.bar = h('div', { class: S.phone ? 'pbtns' : 'pbar', 'data-role': S.phone ? 'phone-buttons' : null });
       S.stage = h('div', { class: 'stage' });
       S.bg = h('canvas', { id: 'bg' });
       S.ink = h('canvas', { id: 'ink' });
       S.stage.appendChild(S.bg); S.stage.appendChild(S.ink);
-      S.root.appendChild(S.bar); S.root.appendChild(S.stage);
+      if (S.phone) {
+        // phone layout: context header (title, neighbouring characters, progress) / one big cell / buttons
+        S.top = h('div', { class: 'ptop', 'data-role': 'phone-top' });
+        S.root.appendChild(S.top); S.root.appendChild(S.stage); S.root.appendChild(S.bar);
+      } else { S.root.appendChild(S.bar); S.root.appendChild(S.stage); }
       S.bgx = S.bg.getContext('2d');
       try { S.inkx = S.ink.getContext('2d', { desynchronized: true }); } catch (e) { S.inkx = null; }
       if (!S.inkx) S.inkx = S.ink.getContext('2d');
@@ -68,6 +74,9 @@
       keepOn(false);
     },
     active: function () { return !!S; },
+    busy: function () { return !!S && S.active !== null; },
+    resume: null,
+    rememberPos: function () { if (S) P.resume = { id: S.copy.id, pos: S.copy.pos || 0 }; },
     next: function () { goRel(1); },
     prev: function () { goRel(-1); },
     refresh: refresh
@@ -79,6 +88,14 @@
   }
   function attach() {
     var ink = S.ink;
+    if (S.phone) {
+      // no page scroll / zoom / pull-to-refresh / text selection while writing (CSS touch-action:none etc. does most; these catch the browsers that need an explicit preventDefault)
+      var stop = function (e) { if (e.cancelable) e.preventDefault(); };
+      on(S.stage, 'touchstart', stop, { passive: false });
+      on(S.stage, 'touchmove', stop, { passive: false });
+      on(S.root, 'touchmove', function (e) { if (e.target === S.stage || S.stage.contains(e.target)) stop(e); }, { passive: false });
+      ['gesturestart', 'gesturechange'].forEach(function (t) { on(document, t, stop, { passive: false }); });
+    }
     on(ink, 'pointerdown', onDown);
     // pointerrawupdate (Chrome 77+, secure contexts) delivers every digitizer sample as it arrives, ahead of the frame-aligned pointermove;
     // without it pointermove's coalesced events carry the same samples. Both are fed through the Sampler, which drops what it already has.
@@ -132,7 +149,56 @@
     for (var i = page.length - 1; i >= 0; i--) if (page[i] >= 0) return page[i];
     return -1;
   }
+  // ---- phone layout: header (返回, section title, 設定) / context strip / n / total + bar; buttons below the cell
+  function buildPhoneBar() {
+    var bar = S.bar, top = S.top;
+    bar.innerHTML = ''; top.innerHTML = '';
+    var notes = MX.Library.hasNotes(S.copy.textId, Model.sid(S.copy));
+    var sc = S.cfg.script === 'simp' ? 'simp' : 'trad', tt = S.text.textTitle || S.text.title, st = S.text.sectionTitle || S.text.title;
+    var title = S.text.multi ? tt[sc] + ' · ' + st[sc] : S.text.title[sc];
+    S.counter = h('div', { class: 'ctr', 'data-role': 'counter' });
+    S.progress = h('i', { style: 'width:0%' });
+    S.ctx = h('div', { class: 'pctx', 'data-role': 'ctx-strip', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) });
+    top.appendChild(h('div', { class: 'prow' }, [
+      h('button', { type: 'button', text: '返回', 'data-act': 'back', onclick: function () { flush(); if (S.readOnly) history.back(); else location.hash = MX.Screens.backFor(S.copy.textId); } }),
+      h('div', { class: 'ptitle', 'data-role': 'phone-title', text: title || '', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) }),
+      S.readOnly ? h('button', { type: 'button', text: '匯出', 'data-act': 'export', onclick: function () { openExport(); } })
+        : h('button', { type: 'button', text: '設定', 'data-act': 'settings', onclick: openSettings })
+    ]));
+    top.appendChild(S.ctx);
+    top.appendChild(h('div', { class: 'pprog' }, [S.counter, h('div', { class: 'bar', 'data-role': 'phone-progress' }, [S.progress])]));
+    S.btnPrev = MX.btn({ label: '上一字', icon: 'tri-l', act: 'prev', onclick: function () { goRel(-1); }, iconSize: 18 });
+    S.nextLabel = h('span', { text: '下一字' });
+    S.btnNext = h('button', { type: 'button', class: 'on withico', 'data-act': 'next', onclick: phoneNext }, [S.nextLabel, MX.icon('tri-r', 18)]);
+    bar.appendChild(h('div', { class: 'prow nav' }, [S.btnPrev, S.btnNext]));
+    var row = h('div', { class: 'prow tools' });
+    if (!S.readOnly) {
+      row.appendChild(h('button', { type: 'button', text: '撤銷', 'data-act': 'undo', onclick: undo }));
+      row.appendChild(h('button', { type: 'button', text: '清除', 'data-act': 'clear', onclick: clearPage }));
+      if (S.cfg.mode === 'recall') row.appendChild(h('button', { type: 'button', text: '提示', 'data-act': 'hint', onclick: hint }));
+    }
+    row.appendChild(h('button', { type: 'button', text: '筆順', 'data-act': 'stroke', onclick: strokeButton }));
+    if (notes) row.appendChild(h('button', { type: 'button', text: '解說', 'data-act': 'notes', onclick: openNotes }));
+    bar.appendChild(row);
+  }
+  // the characters around the current one, in sequence (reading) order, left to right whatever the writing direction; 默 hides the current and the following ones
+  function fillCtx() {
+    var cur = S.pages[S.pageIdx][0], n = S.cells.length, i, c, masked, b;
+    S.ctx.innerHTML = '';
+    for (i = Math.max(0, cur - 3); i <= Math.min(n - 1, cur + 3); i++) {
+      c = S.cells[i]; masked = S.cfg.mode === 'recall' && i >= cur;
+      b = h('button', { type: 'button', class: 'cx' + (i === cur ? ' cur' : '') + (c.sec !== S.cells[cur].sec ? ' other' : ''), 'data-idx': i, 'data-cur': i === cur ? '1' : null,
+        'aria-label': masked ? '' : c.ch, onclick: (function (k) { return function () { go(pageOf(k)); }; })(i) }, [h('span', { class: 'ch', text: masked ? '○' : c.ch })]);
+      S.ctx.appendChild(b);
+    }
+  }
+  function phoneNext() {
+    if (!S) return;
+    if (S.pageIdx < S.pages.length - 1) { goRel(1); return; }
+    if (!S.readOnly && !S.copy.completedAt && S.active === null && S.copy.filled >= S.copy.total && S.copy.total > 0) complete();
+  }
   function buildBar() {
+    if (S.phone) { buildPhoneBar(); return; }
     var land = S.root.className.indexOf('land') >= 0;
     var vert = S.cfg.dir === 'v';
     var bar = S.bar;
@@ -173,7 +239,7 @@
   // 對照模式: a strip beside (landscape) / below (portrait, above the edge margin) the stage with the 要旨 and glossary of this section. It exists only when the setting is on
   // and the section has notes; the stage gets what is left (the cells are laid out in the stage only).
   function syncStrip() {
-    var want = !!(settings().sideNotes && MX.Library.hasNotes(S.copy.textId, Model.sid(S.copy)));
+    var want = !S.phone && !!(settings().sideNotes && MX.Library.hasNotes(S.copy.textId, Model.sid(S.copy)));
     if (!want) {
       if (S.pnotes) { if (S.pnotes.parentNode) S.pnotes.parentNode.removeChild(S.pnotes); S.pnotes = null; S.nsec = null; }
       return;
@@ -197,8 +263,14 @@
 
   function layout() {
     if (!S) return;
+    if (S.phone !== MX.Device.isPhone()) {      // the layout mode flipped (版面 setting, window resized across 520 px): rebuild the view in the other layout
+      var cur = S;
+      P.rememberPos();
+      setTimeout(function () { if (S === cur) MX.route(); }, 0);
+      return;
+    }
     var land = window.innerWidth >= window.innerHeight;
-    S.root.className = 'practice ' + (land ? 'land' : 'port');
+    S.root.className = 'practice ' + (land ? 'land' : 'port') + (S.phone ? ' phone' : '');
     buildBar();
     syncStrip();
     var r = S.stage.getBoundingClientRect();
@@ -206,8 +278,13 @@
     if (W < 40 || H < 40) return;
     // keep every cell clear of the screen-edge dead zone (pen digitizer / system gestures): margins only where the stage touches the viewport edge
     var vw = window.innerWidth, vh = window.innerHeight;
-    S.inset = Layout.insets(settings(), vw, vh, { left: r.left < 2, top: r.top < 2, right: r.right > vw - 2, bottom: r.bottom > vh - 2 });
-    S.g = Layout.grid(W, H, S.cfg, S.inset);
+    if (S.phone) {
+      S.inset = { l: 0, t: 0, r: 0, b: 0 };
+      S.g = Layout.gridOne(W, H, S.cfg, S.inset, 6);      // one cell, as big as the stage allows
+    } else {
+      S.inset = Layout.insets(settings(), vw, vh, { left: r.left < 2, top: r.top < 2, right: r.right > vw - 2, bottom: r.bottom > vh - 2 });
+      S.g = Layout.grid(W, H, S.cfg, S.inset);
+    }
     S.pages = Layout.paginate(S.cells, S.g);
     // Both canvases use the real device pixel ratio (up to 3; 2.625 on the iReader) so one canvas pixel is one screen pixel: the 1-device-pixel
     // dots of the grid stay black (resampling would turn them grey and a fast e-ink mode would drop them) and ink edges are not blurred by a
@@ -277,6 +354,15 @@
     S.counter.textContent = (S.pageIdx + 1) + ' / ' + S.pages.length;
     S.btnPrev.disabled = S.pageIdx <= 0;
     S.btnNext.disabled = S.pageIdx >= S.pages.length - 1;
+    if (S.phone) {
+      var last = S.pageIdx >= S.pages.length - 1, fin = last && !S.readOnly && !S.copy.completedAt && S.copy.total > 0 && S.copy.filled >= S.copy.total;
+      S.btnNext.disabled = last && !fin;
+      S.btnNext.setAttribute('data-act', fin ? 'finish' : 'next');
+      S.nextLabel.textContent = fin ? '完成' : '下一字';
+      S.progress.style.width = (100 * (S.pageIdx + 1) / Math.max(1, S.pages.length)) + '%';
+      S.root.setAttribute('data-cell', S.pages[S.pageIdx][0]);
+      fillCtx();
+    }
   }
 
   // ------------------------------------------------------------------ navigation
@@ -319,7 +405,7 @@
     return hit(cx - r.left, cy - r.top);
   }
   // the double-tap exists only while the finger never inks (pen-only mode) and the setting 雙擊看筆順 is on
-  function tapEnabled() { return !!S && settings().strokeTap !== false && !settings().acceptTouch; }
+  function tapEnabled() { return !!S && !S.phone && settings().strokeTap !== false && !settings().acceptTouch; }
   function openStroke(idx) {
     if (!S || !S.cells[idx]) return;
     S.lastCell = idx;
@@ -334,6 +420,7 @@
 
   // ------------------------------------------------------------------ pointer input
   function hit(x, y) {
+    if (S.phone) return S.pages[S.pageIdx][0];      // the whole stage is the one cell's writing area
     var g = S.g, col = Math.floor((x - g.ox) / g.cell), row = Math.floor((y - g.oy) / g.cell);
     if (col < 0 || row < 0 || col >= g.cols || row >= g.rows) return -1;
     var s = Layout.colRowToSlot(g, col, row);
@@ -361,10 +448,12 @@
     for (k = st.fed; k < n; k++) st.pen.add(pts[k * 6], pts[k * 6 + 1], pts[k * 6 + 2], pts[k * 6 + 3], pts[k * 6 + 4], pts[k * 6 + 5]);
     if (n > st.fed) { st.fed = n; st.pen.draw(); stats.paints++; }
   }
+  // finger / mouse ink: the 手指書寫 setting; in the phone layout 手機手指書寫 (default on) instead
+  function fingerOk() { return S.phone ? settings().phoneTouch !== false : !!settings().acceptTouch; }
   function allowed(e) {
     if (e.pointerType === 'pen') return true;
-    if (!settings().acceptTouch) return false;
-    if (Math.max(e.width || 0, e.height || 0) > 45) return false;   // big contact area = palm
+    if (!fingerOk()) return false;
+    if (Math.max(e.width || 0, e.height || 0) > (S.phone ? 120 : 45)) return false;   // big contact area = palm
     return Date.now() - S.lastPen > 1500;   // palm rejection while a pen is around
   }
   function onDown(e) {
@@ -372,12 +461,13 @@
     var isPen = e.pointerType === 'pen';
     if (isPen) { S.lastPen = Date.now(); S.penSeen = true; }
     if (S.active !== null) {
-      // a new pointer while one is down: ignore (palm), unless the pen arrives or the old pointer went silent (lost pointerup)
-      if (!isPen && Date.now() - S.lastEv < 1500) return;
+      // a new pointer while one is down: ignore (palm / second finger), unless the pen arrives or the old pointer went silent (lost pointerup). A touch NEVER cancels a pen stroke
+      // (a pen held still for a moment is not "silent"; only a pen that has sent nothing for 8 s is treated as lost)
+      if (!isPen && Date.now() - S.lastEv < (S.activeType === 'pen' ? 8000 : 1500)) return;
       finish(true);
     }
     if (!allowed(e)) {
-      if (!isPen && !S.penSeen && !settings().acceptTouch && !settings().touchPrompted) {
+      if (!isPen && !S.phone && !S.penSeen && !settings().acceptTouch && !settings().touchPrompted) {
         // with 雙擊看筆順 on, a plain tap must not pop the banner up over the cells (it would eat the second tap): the banner waits until the touch moves
         if (tapEnabled()) S.promptFor = { id: e.pointerId, x: e.clientX, y: e.clientY }; else showTouchPrompt();
       }
@@ -405,6 +495,8 @@
     var o = slotOrigin(S.slotOf[idx]);
     S.cap.reset();
     S.stroke = { idx: idx, cx: o.x, cy: o.y, fed: 0, style: inkStyle() };
+    // finger / mouse: no real pressure -> width from the writing speed (touch always; a mouse only in the phone layout, where it stands in for a finger)
+    if (e.pointerType === 'touch' || (e.pointerType === 'mouse' && S.phone)) { var sty = S.stroke.style; S.cap.synth = function (n) { return Ink.rawFor(sty, n); }; }
     S.stroke.map = mapFor(S.stroke);
     S.stroke.pen = Ink.pen(S.inkx, o.x, o.y, S.g.cell / 1000, S.stroke.style, { px: S.kx });
     S.cap.take(e, S.stroke.map);
@@ -455,7 +547,7 @@
     repaintRect(strokeRect(st, pts));
     // learn the pen's pressure floor and working range (settings.pressFloor / pressLo / pressHi) only now: the stroke on screen was drawn with the old values,
     // so the repaint above gives the same pixels (a later full redraw uses the updated range)
-    if (S.cap.pressureSeen && settings().pressure !== 'off' && pts.length >= 24 && Ink.learn(settings(), S.cap.minP, pts)) Model.saveSettings();
+    if (wasType === 'pen' && S.cap.pressureSeen && settings().pressure !== 'off' && pts.length >= 24 && Ink.learn(settings(), S.cap.minP, pts)) Model.saveSettings();
     pushOp({ k: 'add', cell: st.idx, stroke: pts });
     dirty(st.idx);
     scheduleSave();
@@ -483,6 +575,7 @@
   function pushOp(op) { S.ops.push(op); if (S.ops.length > 400) S.ops.shift(); }
   function afterChange() {
     Model.recount(S.copy, S.cells);
+    if (S.phone) { updateUi(); return; }       // phone: completion waits for the idle delay (armFlip) or the 完成 button
     if (!S.copy.completedAt && S.copy.total > 0 && S.copy.filled >= S.copy.total) complete();
   }
 
@@ -558,6 +651,7 @@
   function undone() {
     Model.recount(S.copy, S.cells);
     redrawInk(); scheduleSave(); hideNext();
+    if (S.phone) updateUi();
   }
   async function clearPage() {
     if (!S || S.active !== null) return;
@@ -566,8 +660,8 @@
       if (idx < 0) return;
       (S.copy.ink[KY(idx)] || []).forEach(function (st, i) { items.push({ cell: idx, index: i, stroke: st }); });
     });
-    if (!items.length) { MX.toast('此頁沒有字跡'); return; }
-    var ok = await MX.confirm('清除此頁所有字跡？（可用「撤銷」還原）', '清除', '清頁');
+    if (!items.length) { MX.toast(S.phone ? '這個字還沒有字跡' : '此頁沒有字跡'); return; }
+    var ok = S.phone ? true : await MX.confirm('清除此頁所有字跡？（可用「撤銷」還原）', '清除', '清頁');      // phone: one character, 撤銷 brings it back
     if (!ok || !S) return;
     page.forEach(function (idx) {
       if (idx >= 0 && S.copy.ink[KY(idx)] && S.copy.ink[KY(idx)].length) { S.copy.ink[KY(idx)] = []; dirty(idx); }
@@ -575,6 +669,7 @@
     pushOp({ k: 'del', items: items });
     Model.recount(S.copy, S.cells);
     redrawInk(); scheduleSave(); hideNext();
+    if (S.phone) updateUi();
   }
   function hint() {
     if (!S || S.cfg.mode !== 'recall') return;
@@ -618,19 +713,24 @@
   function armFlip() {
     clearTimeout(S.timers.next);
     var st = settings();
-    if (S.readOnly || !st.autoFlip || S.pageIdx >= S.pages.length - 1 || !pageFull(S.pages[S.pageIdx])) return false;
+    if (S.readOnly) return false;
+    // phone: the copy is complete when every character has ink; that is announced after the same idle delay as a page turn (never at the first stroke of the last character)
+    var allDone = function () { return S.phone && !S.copy.completedAt && S.copy.total > 0 && S.copy.filled >= S.copy.total; };
+    var flips = function () { return st.autoFlip && S.pageIdx < S.pages.length - 1 && pageFull(S.pages[S.pageIdx]); };
+    if (!allDone() && !flips()) return false;
     var seq = S.token, ms = (parseInt(st.flipDelay, 10) || 2) * 1000;
     if (MX.test && MX.test.flipMs) ms = MX.test.flipMs;
     S.timers.next = setTimeout(function () {
       if (!S || S.token !== seq || S.active !== null || document.querySelector('.modal-bg')) return;
-      if (!pageFull(S.pages[S.pageIdx]) || S.pageIdx >= S.pages.length - 1) return;
-      goRel(1);
+      if (allDone()) { complete(); return; }
+      if (flips()) goRel(1);
     }, ms);
     return true;
   }
   function armNext() {
     if (armFlip()) return;
     clearTimeout(S.timers.next);
+    if (S.phone) return;      // the buttons are always on the screen
     if (S.readOnly || settings().autoFlip || !settings().autoNext || S.pageIdx >= S.pages.length - 1) return;
     var li = lastIdx(S.pages[S.pageIdx]);
     if (li < 0 || !(S.copy.ink[KY(li)] || []).length) return;
@@ -709,6 +809,7 @@
       body.push(MX.Form.build(MX.Form.fields(g.keys), settings(), false, function (k) {
         Model.saveSettings();
         if (k === 'brush' || k === 'inkWidth' || k === 'pressRange') ws.update();
+        if (k === 'screenType' && api) MX.Form.syncSeg(api.el, 'gridLook', settings().gridLook);
         layout();
       }));
       if (MX.Form.GROUP_NOTES[g.id]) body.push(h('div', { class: 'note', text: MX.Form.GROUP_NOTES[g.id] }));
@@ -768,7 +869,7 @@
         cells.push({ slot: s, idx: idx, ch: idx >= 0 ? S.cells[idx].ch : '', punct: idx >= 0 ? S.cells[idx].punct : '',
           col: o.col, row: o.row, x: r.left + o.x, y: r.top + o.y, size: g.cell });
       });
-      return { page: S.pageIdx, pages: S.pages.length, inset: g.inset, stage: [g.W, g.H], gx: g.ox, gy: g.oy, cols: g.cols, rows: g.rows, cell: g.cell, dir: g.dir, portrait: g.portrait,
+      return { phone: S.phone, page: S.pageIdx, pages: S.pages.length, inset: g.inset, stage: [g.W, g.H], gx: g.ox, gy: g.oy, cols: g.cols, rows: g.rows, cell: g.cell, dir: g.dir, portrait: g.portrait,
         perPage: g.perPage, total: S.cells.length, filled: S.copy.filled, cells: cells, copyId: S.copy.id, completed: !!S.copy.completedAt,
         mode: S.cfg.mode, nextBtn: !!S.nextBtn, pressureSeen: S.cap.pressureSeen, hint: S.hint, rawOk: S.rawOk, kx: S.kx, ky: S.ky, dpr: S.dpr,
         inkSize: [S.ink.width, S.ink.height], inkCss: [S.ink.style.width, S.ink.style.height] };

@@ -67,6 +67,16 @@
       return;
     }
     window.addEventListener('hashchange', route);
+    // the layout mode flipped (版面 setting, a window resized across 520 px): draw the current screen again in the other layout (not under a pen that is writing)
+    var reflow = function () {
+      if (MX.Practice && MX.Practice.busy()) { setTimeout(reflow, 400); return; }
+      var sc = document.querySelector('#app > .screen'), top = sc ? sc.scrollTop : 0;
+      if (MX.Practice) MX.Practice.rememberPos();
+      route();
+      sc = document.querySelector('#app > .screen');
+      if (sc && top) sc.scrollTop = top;
+    };
+    MX.Device.onChange(function () { if (MX.ready) reflow(); });
     window.addEventListener('pagehide', function () { MX.Model.flushAll(); });
     document.addEventListener('visibilitychange', function () { if (document.hidden) MX.Model.flushAll(); });
     // native wrapper: Activity.onPause (the WebView may never see pagehide/visibilitychange before the process is killed)

@@ -24,12 +24,15 @@
       { k: 'stab', label: '防抖', opts: [['off', '關'], ['light', '輕'], ['mid', '中']] },
       { k: 'tplStyle', label: '描紅樣式', opts: [['fill', '灰色'], ['dots', '網點'], ['outline', '空心']] },
       { k: 'tplFont', label: '字體', opts: [['ukai', '楷書'], ['tw', '正楷'], ['msz', '行楷'], ['wk', '硬筆']] },
+      { k: 'screenType', label: '螢幕類型', opts: [['eink', '電子紙'], ['normal', '一般螢幕']] },
       { k: 'gridLook', label: '格線樣式', opts: [['dots', '點線(黑)'], ['light', '實線淺灰'], ['black', '實線黑']] },
       { k: 'gridDensity', label: '點線疏密', opts: [['sparse', '疏'], ['mid', '中'], ['dense', '密']] },
       { k: 'tplSize', label: '字大小', opts: [['s', '小'], ['m', '中小'], ['md', '中'], ['l', '大'], ['xl', '特大']] },
       { k: 'tplTone', label: '深淺', opts: [['light', '淺'], ['mid', '中'], ['dark', '深']] },
       { k: 'pressure', label: '壓感', opts: [['auto', '自動'], ['off', '固定']] },
+      { k: 'layoutMode', label: '版面', opts: [['auto', '自動'], ['tablet', '平板'], ['phone', '手機']] },
       { k: 'acceptTouch', label: '手指書寫', opts: ONOFF },
+      { k: 'phoneTouch', label: '手機手指書寫', opts: ONOFF },
       { k: 'strokeTap', label: '雙擊看筆順', opts: ONOFF },
       { k: 'perf', label: '效能模式', opts: ONOFF },
       { k: 'autoFlip', label: '自動翻頁', opts: ONOFF },
@@ -43,17 +46,20 @@
     ],
     // The app settings screen / the practice sheet group the SETTINGS fields (the 署名落款 block, 資料 and 關於 are built by the screen itself)
     GROUPS: [
-      { id: 'write', title: '書寫', keys: ['acceptTouch', 'strokeTap', 'autoFlip', 'flipDelay', 'autoNext'] },
+      { id: 'write', title: '書寫', keys: ['acceptTouch', 'phoneTouch', 'strokeTap', 'autoFlip', 'flipDelay', 'autoNext'] },
       { id: 'brush', title: '筆觸', keys: ['brush', 'tune', 'inkWidth', 'pressRange', 'stab', 'pressure'] },
       { id: 'grid', title: '格線', keys: ['gridLook', 'gridDensity'] },
       { id: 'sign', title: '署名落款', keys: [] },
       { id: 'notes', title: '解說', keys: ['autoNotes', 'sideNotes'] },
-      { id: 'display', title: '顯示', keys: ['libScript', 'tplStyle', 'tplFont', 'tplSize', 'tplTone', 'edgeBottom', 'edgeSide', 'perf'] },
+      { id: 'display', title: '顯示', keys: ['layoutMode', 'screenType', 'libScript', 'tplStyle', 'tplFont', 'tplSize', 'tplTone', 'edgeBottom', 'edgeSide', 'perf'] },
       { id: 'data', title: '資料', keys: [] },
       { id: 'about', title: '關於', keys: [] }
     ],
     // the explanation under a settings group (shown by the settings screen and the practice sheet)
-    GROUP_NOTES: { write: '雙擊看筆順：筆不在旁邊時，用手指在格子上快速點兩下，顯示該字的筆順動畫。「手指書寫」開啟時此手勢停用，請改用工具列的「筆順」鈕。' },
+    GROUP_NOTES: {
+      write: '雙擊看筆順：筆不在旁邊時，用手指在格子上快速點兩下，顯示該字的筆順動畫。「手指書寫」開啟時此手勢停用，請改用工具列的「筆順」鈕。手機版面預設可用手指書寫（「手機手指書寫」），雙擊手勢停用，請按「筆順」鈕。',
+      display: '螢幕類型：電子紙＝黑色點線格（電子紙快速刷新也看得清楚）；一般螢幕＝淺灰實線格。選擇時會一併換上對應的格線樣式。版面：自動＝螢幕短邊小於 520 像素時用手機版面（一次寫一個字），否則用平板版面。兩種版面的字跡通用，可以在任一種繼續同一份字帖。'
+    },
     fields: function (keys) {
       return keys.map(function (k) { return F.SETTINGS.filter(function (f) { return f.k === k; })[0]; }).filter(Boolean);
     },
@@ -139,6 +145,7 @@
         var dis = !!(f.content && locked);
         box.appendChild(F.row(f.label, F.seg(f.opts, obj[f.k], function (v) {
           obj[f.k] = v;
+          if (f.k === 'screenType' && MX.Model && MX.Model.applyScreenType) MX.Model.applyScreenType(obj, v);
           if (f.pick) { if (!obj.picked || typeof obj.picked !== 'object') obj.picked = {}; obj.picked[f.k] = true; }   // explicit choice: never replaced by a changed default
           if (onChange) onChange(f.k, v);
         }, dis), f.k));

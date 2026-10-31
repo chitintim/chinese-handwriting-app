@@ -104,6 +104,18 @@
       dir: cfg.dir === 'h' ? 'h' : 'v', W: W, H: H, inset: n
     };
   }
+  // Phone layout: ONE cell per page, as large as fits the W x H stage (minus `margin` px on every side and the insets). Same fields as grid(), so paginate() (every line
+  // holds one cell -> one page per cell, in sequence order whatever the writing direction), slotToColRow and the practice view work unchanged.
+  function gridOne(W, H, cfg, inset, margin) {
+    var n = inset || { l: 0, t: 0, r: 0, b: 0 }, m = margin === undefined ? 8 : margin;
+    var aw = Math.max(10, W - n.l - n.r - 2 * m), ah = Math.max(10, H - n.t - n.b - 2 * m);
+    var cell = Math.max(10, Math.floor(Math.min(aw, ah)));
+    return {
+      cols: 1, rows: 1, perPage: 1, cell: cell, portrait: W < H, single: true,
+      ox: n.l + m + Math.floor((aw - cell) / 2), oy: n.t + m + Math.floor((ah - cell) / 2),
+      dir: cfg.dir === 'h' ? 'h' : 'v', W: W, H: H, inset: n
+    };
+  }
   // slot (0..perPage-1, reading order) -> column,row (0-based from the left/top). THE reading-order mapping, shared by the practice view and
   // the 作品 export: 直書 fills a column top->bottom and columns advance right->left; 橫書 fills a row left->right and rows advance top->bottom.
   function slotToColRow(g, s) {
@@ -127,7 +139,7 @@
   }
 
   MX.Layout = {
-    DIMS: DIMS, EDGE_DEF: EDGE_DEF, edgePct: edgePct, buildCells: buildCells, cellsFor: cellsFor, paginate: paginate, grid: grid, insets: insets,
+    DIMS: DIMS, EDGE_DEF: EDGE_DEF, edgePct: edgePct, buildCells: buildCells, cellsFor: cellsFor, paginate: paginate, grid: grid, gridOne: gridOne, insets: insets,
     slotToColRow: slotToColRow, colRowToSlot: colRowToSlot, flowGrid: flowGrid, slotToLinePos: slotToLinePos
   };
 })();

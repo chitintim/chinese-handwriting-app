@@ -563,6 +563,23 @@
   Ink.Sampler = Sampler;
   Sampler.prototype.reset = function () {
     this.pts = []; this.seen = []; this.lastTr = 0; this.lastP = 500; this.minP = 1001; this.raw = 0;
+    this.synth = null; this.vl = null; this.sv = 0; this.vn = 0.6;
+  };
+  // A finger (or mouse) reports no real pressure: a constant 0 / 0.5. When `synth` is set (a function n 0..1 -> raw pressure 0..1000, set by the practice view for touch strokes),
+  // the pressure is derived from the writing speed instead: slow -> thick, fast -> thin (a brush that is pulled quickly leaves a thinner line), smoothed so the width changes
+  // gradually. The result is stored like any other pressure, so a copy written with the finger renders the same on every layout.
+  var TOUCH_V0 = 0.25, TOUCH_V1 = 4.0, TOUCH_NSLOW = 0.9, TOUCH_NFAST = 0.15;     // speed (cell units / ms) where the width starts to fall / is thinnest; the normalised pressure at both ends
+  Sampler.prototype.velocityP = function (xy, ts) {
+    var l = this.vl, dt, v, a;
+    if (!l) { this.vl = { x: xy[0], y: xy[1], t: ts }; this.vn = 0.6; return this.synth(this.vn); }
+    dt = ts - l.t;
+    dt = dt > 0 ? (dt > 100 ? 100 : dt) : 4;
+    v = Math.sqrt((xy[0] - l.x) * (xy[0] - l.x) + (xy[1] - l.y) * (xy[1] - l.y)) / dt;
+    this.sv += (v - this.sv) * (1 - Math.exp(-dt / 60));
+    a = (this.sv - TOUCH_V0) / (TOUCH_V1 - TOUCH_V0); a = a <= 0 ? 0 : (a >= 1 ? 1 : a * a * (3 - 2 * a));
+    this.vn += (TOUCH_NSLOW - (TOUCH_NSLOW - TOUCH_NFAST) * a - this.vn) * (1 - Math.exp(-dt / 90));
+    l.x = xy[0]; l.y = xy[1]; l.t = ts;
+    return this.synth(this.vn);
   };
   Sampler.events = function (e) {
     var list = null;
@@ -593,8 +610,15 @@
   };
   function tilt(v) { v = Math.round(+v || 0); return v < -90 ? -90 : (v > 90 ? 90 : v); }
   Sampler.prototype.add = function (ev, xy, force) {
-    var pts = this.pts, n = pts.length, x = xy[0], y = xy[1], p = this.pressureOf(ev), tx = 0, ty = 0, tr, dx, dy;
-    if (ev.pointerType === 'pen') { tx = tilt(ev.tiltX); ty = tilt(ev.tiltY); }
+    var pts = this.pts, n = pts.length, x = xy[0], y = xy[1], p = ev.pointerType !== 'pen' && this.synth ? this.velocityP(xy, ev.timeStamp || 0) : this.pressureOf(ev), tx = 0, ty = 0, tr, dx, dy, tn, az;
+    if (ev.pointerType === 'pen') {
+      tx = tilt(ev.tiltX); ty = tilt(ev.tiltY);
+      // Safari (Apple Pencil) may give altitudeAngle / azimuthAngle (radians) and no tiltX / tiltY
+      if (!tx && !ty && ev.altitudeAngle > 0 && ev.altitudeAngle < 1.5 && ev.azimuthAngle === ev.azimuthAngle) {
+        tn = Math.tan(1.5707963267948966 - ev.altitudeAngle); az = ev.azimuthAngle;
+        tx = tilt(Math.atan(tn * Math.cos(az)) / DEG); ty = tilt(Math.atan(tn * Math.sin(az)) / DEG);
+      }
+    }
     this.lastP = p;
     this.raw++;
     if (n) {

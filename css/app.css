@@ -2,7 +2,9 @@
 :root{--edge-b:3.5vh;--edge-t:1vh;--edge-l:1vw;--edge-r:1vw;
   /* type scale (px) and spacing: one set for every screen */
   --t-xs:15px;--t-s:17px;--t-m:19px;--t-l:24px;--t-xl:28px;--sp-1:6px;--sp-2:10px;--sp-3:16px;--sp-4:24px}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+/* no double-tap zoom anywhere (Safari), no text-size inflation after a rotation */
+html,body{touch-action:manipulation;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html,body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;margin:0;padding:0;height:100%;background:#fff;color:#000;overflow:hidden;
   /* UI font: the broad-coverage chunked default font first (every UI string, Latin digits and punctuation from one face), then LXGW WenKai, TW-Kai, system fonts */
   font-family:"MoUKai TC","MoKai TC","MoTWKai","Kaiti TC","BiauKai","PingFang TC","Noto Sans CJK TC","Microsoft JhengHei",serif;font-size:18px;line-height:1.35}
@@ -219,3 +221,94 @@ textarea.cbody{font-family:inherit;font-size:20px;min-height:300px;height:42vh;m
 .stroke-pop .spov{justify-content:center;align-items:center;margin-top:2px}
 .stroke-pop .spov .ctr{min-width:72px;text-align:center;font-size:var(--t-m)}
 .stroke-pop .spnodata{font-size:var(--t-m);margin:12px 0}
+
+/* iOS: a tip card on the home screen (add to the Home Screen) */
+.card.tip{border-width:3px}
+
+/* ================================================================ PHONE LAYOUT (html.phone, docs/SPEC.md "Phone layout")
+   One compact column, targets >= 44 px, no horizontal overflow at 360 px; the safe-area insets are in --edge-* (Model.applyEdge); the screen height is --app-h (= innerHeight, set by
+   MX.Device) because 100vh is the largest viewport on a phone and would hide the bottom behind the browser bar. */
+html.phone,html.phone body{overscroll-behavior:none;height:var(--app-h,100%);overflow:hidden}
+html.phone body{position:fixed;left:0;top:0;width:100%}
+html.phone{--t-xs:14px;--t-s:16px;--t-m:18px;--t-l:21px;--t-xl:24px;--sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px}
+html.phone #app{right:0;bottom:auto;height:var(--app-h,100%)}
+html.phone #layer,html.phone .modal-bg,html.phone .exp,html.phone .flash,html.phone .edge-test{bottom:auto;height:var(--app-h,100%)}
+html.phone button{min-height:48px;min-width:48px;padding:0 10px;font-size:17px}
+html.phone button.big{min-height:52px;font-size:19px;padding:0 14px}
+html.phone input[type=text]{min-height:48px;font-size:17px;max-width:none}
+html.phone .screen{padding:calc(8px + var(--edge-t)) calc(12px + var(--edge-r)) calc(14px + var(--edge-b)) calc(12px + var(--edge-l));overflow-x:hidden;overscroll-behavior:contain}
+html.phone .screen h1{font-size:21px;margin:0 0 6px}
+html.phone .screen h2{font-size:var(--t-m)}
+html.phone .topbar{flex-wrap:wrap}
+html.phone .topbar>*{margin:0 8px 8px 0}
+html.phone .topbar .grow{flex:1 1 140px;min-width:0}
+html.phone .btnrow>*{margin:0 8px 8px 0}
+html.phone .card{max-width:none;padding:10px 12px;margin-bottom:10px}
+html.phone .card .t{font-size:20px}
+html.phone .crumbs{font-size:var(--t-xs)}
+html.phone .crumbs .crumb{min-height:44px;min-width:44px;padding:0 6px;font-size:var(--t-xs)}
+html.phone .frow{flex-direction:column;align-items:stretch;margin:6px 0}
+html.phone .frow>*{margin-right:0}
+html.phone .frow label{min-width:0;font-size:16px;margin-bottom:2px}
+html.phone .seg{padding-right:2px}
+html.phone .seg button{flex:1 1 auto;min-width:52px}
+html.phone .ctl .frow{margin-right:0}
+html.phone .ctl .searchrow input[type=text]{width:100%}
+html.phone .lrow{flex-direction:column;align-items:stretch;height:132px;margin:0 0 8px;max-width:none}
+html.phone .lrow.compact{height:124px}
+html.phone .lmain{flex:1 1 auto;padding:4px 10px;min-height:0}
+html.phone .lmain .t{font-size:21px}
+html.phone .lrow.compact .t{font-size:20px}
+html.phone .lbtns{padding:0 6px 6px;flex:none}
+html.phone .lbtns button{flex:1 1 auto;margin:0 6px 0 0;min-width:48px;padding:0 6px}
+html.phone .lbtns button.fav,html.phone .btnrow button.fav,html.phone .topbar button.fav{min-width:48px;width:48px;padding:0;flex:none}
+html.phone .tiles{margin:0 -3px}
+html.phone .tile{flex:1 1 40%;min-width:0;max-width:none;height:60px;margin:3px}
+html.phone .tile .t{font-size:20px}
+html.phone .homewrap .hcol:first-child{margin-right:0}
+html.phone .pager button{min-width:76px}
+html.phone .pager .ctr{min-width:60px;font-size:18px}
+html.phone .sindex button{min-width:64px;margin:0 6px 6px 0}
+html.phone .floatdone{min-width:72px;min-height:48px;font-size:18px;top:calc(6px + var(--edge-t));right:calc(10px + var(--edge-r))}
+html.phone .screen.settings .topbar{padding-right:88px}
+html.phone .compactcard a.btnlink{min-height:52px;font-size:var(--t-s);flex:1 1 40%}
+html.phone a.btnlink.plain{min-height:48px}
+html.phone textarea.cbody{min-height:200px;font-size:18px}
+html.phone .modal-bg{padding:calc(8px + var(--edge-t)) calc(8px + var(--edge-r)) calc(8px + var(--edge-b)) calc(8px + var(--edge-l))}
+html.phone .modal{padding:12px;border-width:2px;max-height:100%}
+html.phone .modal .btnrow{justify-content:stretch}
+html.phone .modal .btnrow button{flex:1 1 auto}
+html.phone .sheethead{margin:-12px -12px 8px;padding:6px 12px;top:-12px}
+html.phone .exp{padding:calc(8px + var(--edge-t)) calc(10px + var(--edge-r)) calc(16px + var(--edge-b)) calc(10px + var(--edge-l));overflow-x:hidden}
+html.phone .exp h1{font-size:20px}
+html.phone .exp .prevnav{flex-wrap:wrap}
+html.phone .toast{max-width:92%;bottom:calc(16px + var(--edge-b));font-size:16px}
+html.phone .stroke-pop .spf{min-width:64px}
+html.phone .pt-area{height:240px}
+html.phone .frow.tune input[type=range]{width:100%;flex:1 1 100%;margin:0}
+html.phone .nextbtn{margin-left:-110px;width:220px}
+
+/* phone practice: header (返回, title, 設定) + context strip + progress / the one big cell / buttons */
+.practice.phone{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto;grid-template-areas:"top" "stage" "bar";touch-action:none;overscroll-behavior:none;background:#fff}
+.practice.phone.land{grid-template-columns:minmax(0,1fr) 42%;grid-template-rows:minmax(0,1fr) auto;grid-template-areas:"stage top" "stage bar"}
+.practice.phone .ptop{grid-area:top;min-width:0;padding:var(--edge-t) var(--edge-r) 0 var(--edge-l);border-bottom:2px solid #000;background:#fff;align-self:start}
+.practice.phone.land .ptop{border-left:2px solid #000}
+.practice.phone .stage{grid-area:stage}
+.practice.phone .pbtns{grid-area:bar;min-width:0;padding:6px var(--edge-r) var(--edge-b) var(--edge-l);border-top:2px solid #000;background:#fff}
+.practice.phone.land .pbtns{border-left:2px solid #000}
+.prow{display:flex;align-items:center;min-width:0}
+.ptop .prow{margin:2px 0}
+.ptop .prow>button{flex:none;min-width:64px;padding:0 8px}
+.ptitle{flex:1 1 0;min-width:0;padding:0 8px;text-align:center;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pctx{display:flex;justify-content:center;align-items:stretch;min-width:0}
+.pctx .cx{flex:1 1 0;min-width:0;max-width:64px;min-height:48px;margin:0;border:0;border-left:2px solid #fff;padding:0;background:#fff;font-size:27px;line-height:1}
+.pctx .cx.other{border-left:2px dotted #000}
+.pctx .cx.cur{background:#000;color:#fff;border-left-color:#000}
+.pprog{display:flex;align-items:center;padding:0 2px 6px}
+.pprog .ctr{min-width:78px;font-size:16px}
+.pprog .bar{flex:1;height:8px;margin:0;border-width:1px;max-width:none}
+.pbtns .prow>button{flex:1 1 0;min-width:0;margin:0 3px 6px}
+.pbtns .prow.nav button{min-height:56px;font-size:20px}
+.pbtns .prow.tools button{min-height:48px;font-size:17px;padding:0 4px}
+.pbtns .prow.tools{margin-bottom:0}
+.pbtns .prow.tools button{margin-bottom:0}

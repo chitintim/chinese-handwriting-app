@@ -7,9 +7,11 @@
     acceptTouch: false, inkWidth: 'thin', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'md', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
     name: '', perf: false, pressure: 'auto', autoNext: true, touchPrompted: false,
     brush: 'mao', custom: null, picked: {}, stab: 'light', pressFloor: 0, pressN: 0, pressLo: 0, pressHi: 0, pressCal: false, pressMx: [], pressMd: [], pressNm: 0, pressKnots: null, pressRange: 'mid',
-    edgeBottom: '3.5', edgeSide: '1', exp: null, libScript: 'trad',
+    edgeBottom: '3.5', edgeSide: (MX.Device && MX.Device.env().ios) ? '2' : '1',     // iOS: keep the cells clear of Safari's edge-swipe-back
+    screenType: '', exp: null, libScript: 'trad',
     sigDate: 'gz', sigWord: '', sigDizi: true, sigHui: false,
-    autoNotes: true, sideNotes: false, strokeTap: true, strokeSpeed: 'mid'
+    autoNotes: true, sideNotes: false, strokeTap: true, strokeSpeed: 'mid',
+    layoutMode: 'auto', phoneTouch: true
   };
   var DEF_CFG = {
     script: 'trad', mode: 'trace', grid: 'mi', box: true, guide: true, size: 'M', dir: 'v', punct: 'hide',
@@ -59,7 +61,11 @@
       M.settings = assign({}, DEF_SETTINGS, Store.get('settings'));
       M.settings.picked = assign({}, M.settings.picked);      // own copy (never the DEF_SETTINGS object)
       if (M.settings.tplStyle === 'dotted') M.settings.tplStyle = 'dots';   // older builds: dotted outline -> halftone dots
-      M.applyEdge();
+      if (MX.Device) MX.Device.apply(); else M.applyEdge();
+      if (M.settings.screenType !== 'eink' && M.settings.screenType !== 'normal') {      // 螢幕類型: first start on this device
+        M.settings.screenType = MX.Device ? MX.Device.defaultScreen() : 'eink';
+        if (M.settings.screenType === 'normal' && !(M.settings.picked && M.settings.picked.gridLook)) M.settings.gridLook = 'light';
+      }                  // layout mode (版面) + edge margins
       M.copies = {};
       Store.keys('copy:').forEach(function (k) {
         var c = Store.get(k);
@@ -110,14 +116,26 @@
       }
       Store.set('schema', M.SCHEMA);
     },
-    saveSettings: function () { Store.set('settings', M.settings); M.applyEdge(); },
+    saveSettings: function () { Store.set('settings', M.settings); if (MX.Device) MX.Device.refresh(); else M.applyEdge(); },
     // Edge safe margins as CSS variables so toolbars, dialogs and scrolling screens keep clear of the screen edge too (see Layout.insets).
     applyEdge: function () {
       try {
         var e = MX.Layout.edgePct(M.settings), st = document.documentElement.style;
+        if (MX.Device && MX.Device.isPhone()) {
+          // phone layout: the notch / home indicator / rounded corners (env safe-area insets, 0 elsewhere) plus a small margin; no pen dead zone to avoid
+          st.setProperty('--edge-b', 'calc(env(safe-area-inset-bottom, 0px) + 6px)'); st.setProperty('--edge-t', 'calc(env(safe-area-inset-top, 0px) + 4px)');
+          st.setProperty('--edge-l', 'calc(env(safe-area-inset-left, 0px) + 6px)'); st.setProperty('--edge-r', 'calc(env(safe-area-inset-right, 0px) + 6px)');
+          return;
+        }
         st.setProperty('--edge-b', e.b + 'vh'); st.setProperty('--edge-t', e.s + 'vh');
         st.setProperty('--edge-l', e.s + 'vw'); st.setProperty('--edge-r', e.s + 'vw');
       } catch (e) { MX.err(e); }
+    },
+    // 螢幕類型 preset: 電子紙 = black dotted guides (survive the fast refresh mode); 一般螢幕 = light grey solid guides. 格線樣式 can still be changed afterwards.
+    applyScreenType: function (st, v) {
+      st.screenType = v === 'normal' ? 'normal' : 'eink';
+      st.gridLook = st.screenType === 'normal' ? 'light' : 'dots';
+      return st;
     },
     textCfg: function (textId) { var s = Store.get('textcfg:' + textId); return assign({}, DEF_CFG, s ? normCfg(assign({}, s)) : s); },
     saveTextCfg: function (textId, cfg) { Store.set('textcfg:' + textId, assign({}, cfg)); },

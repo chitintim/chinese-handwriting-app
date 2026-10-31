@@ -4,6 +4,7 @@
   var S = MX.Screens = {};
   var APK_URL = 'https://github.com/chitintim/chinese-handwriting-app/releases/latest/download/moxie.apk';
   var ROW_H = 98;          // one list row (88 px + 10 px margin, see .lrow)
+  var ROW_H_PHONE = 140;   // the same in the phone layout (132 px + 8 px margin)
   var CROW_H = 84;         // one compact shelf row on the home screen (76 px + 8 px margin, .lrow.compact)
   var SHELF_MAX = 3;       // rows of a shelf on the home screen (the rest is behind 全部)
 
@@ -59,7 +60,7 @@
   // ---- paged lists (no scrolling on e-ink): as many rows as fit below what is already on the screen. A list is re-rendered in place (search, sort, pager) and keeps its state
   // in the URL (history.replaceState: Back never steps through pages). o = {state:{p,...}, rows(state)->nodes, link(state)->hash, rowH, reserve, empty(state)->node}
   function pagedHost(el, o) {
-    var host = h('div', { 'data-role': 'listhost' }), st = o.state, rowH = o.rowH || ROW_H, reserve = o.reserve === undefined ? 80 : o.reserve;
+    var host = h('div', { 'data-role': 'listhost' }), st = o.state, rowH = o.rowH || (MX.Device.isPhone() ? ROW_H_PHONE : ROW_H), reserve = o.reserve === undefined ? 80 : o.reserve;
     el.appendChild(host);
     function sync() { try { history.replaceState(null, '', o.link(st)); } catch (e) { /* ignore */ } }
     function render() {
@@ -189,6 +190,17 @@
         h('button', { class: 'on big', 'data-act': 'reload', text: '重新載入以更新', onclick: function () { location.reload(); } })
       ]));
     }
+    // iOS Safari, not installed to the Home Screen: the browser may delete site data after about 7 days without a visit
+    if (MX.Device.needsInstallTip()) {
+      el.appendChild(h('div', { class: 'card tip', 'data-role': 'ios-tip' }, [
+        h('div', { class: 't', text: '加到主畫面，保護你的字跡' }),
+        h('div', { class: 'm', text: 'Safari 可能在約 7 天沒開啟後清除網站資料。請按分享鈕，選「加入主畫面」，之後從主畫面圖示開啟：字跡才會長期保存，也能全螢幕書寫。也請定期到「設定 → 資料」匯出備份。' }),
+        h('div', { class: 'btnrow' }, [
+          h('button', { class: 'on', text: '知道了', 'data-act': 'tip-ok', onclick: function () { MX.Device.dismissInstallTip(); MX.route(); } }),
+          h('button', { text: '去備份', 'data-act': 'tip-backup', onclick: function () { MX.Device.dismissInstallTip(); location.hash = '#/settings'; } })
+        ])
+      ]));
+    }
     var apkCard = MX.Update.apkCard(), libCard = MX.Update.libCard();
     if (apkCard) el.appendChild(apkCard);
     if (libCard) el.appendChild(libCard);
@@ -245,7 +257,7 @@
     var left = el.clientHeight - pb - (last ? last.getBoundingClientRect().bottom : 0) - 6;
     if (getComputedStyle(wrap).display === 'flex') left += Math.max(0, colB.getBoundingClientRect().bottom - colA.getBoundingClientRect().bottom);     // side by side: the shelves may grow down to the end of the 書庫 column
     if (rItems.length || fItems.length) {
-      var total = Math.max(0, Math.floor(left / CROW_H)), a = 0, b = 0, progress = true;
+      var total = Math.max(0, Math.floor(left / (MX.Device.isPhone() ? 132 : CROW_H))), a = 0, b = 0, progress = true;
       if (rItems.length) a = 1;
       if (fItems.length) b = 1;
       total -= a + b;
@@ -593,7 +605,10 @@
     var n = section('notes');
     n.appendChild(groupForm('notes'));
     n.appendChild(h('div', { class: 'note', text: '完成一章後自動顯示該章解說；對照模式在抄寫時於旁邊（橫向）或下方（直向）顯示要旨與字詞。' }));
-    section('display').appendChild(groupForm('display'));
+    section('display').appendChild(groupForm('display', function (k) {
+      if (k === 'screenType') MX.Form.syncSeg(el, 'gridLook', st.gridLook);       // the preset also sets the grid style
+    }));
+    sections.display.appendChild(h('div', { class: 'note', 'data-role': 'display-note', text: MX.Form.GROUP_NOTES.display }));
 
     // ---- 資料
     var dat = section('data');

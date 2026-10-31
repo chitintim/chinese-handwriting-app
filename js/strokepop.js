@@ -117,7 +117,7 @@
         return;
       }
       P.dpr = dprNow();
-      P.size = Math.floor(MX.clamp(Math.min(window.innerWidth - 80, window.innerHeight - 470), 200, 520));
+      P.size = Math.floor(MX.clamp(Math.min(window.innerWidth - (MX.Device.isPhone() ? 56 : 80), window.innerHeight - (MX.Device.isPhone() ? 360 : 470)), 200, 520));
       P.status = h('div', { class: 'spstatus', 'data-role': 'stroke-status' });
       P.cv = h('canvas', { class: 'sp-cv', 'data-role': 'stroke-canvas', style: 'width:' + P.size + 'px;height:' + P.size + 'px' });
       P.cv.width = Math.round(P.size * P.dpr); P.cv.height = Math.round(P.size * P.dpr);
