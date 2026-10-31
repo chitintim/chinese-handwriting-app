@@ -18,7 +18,11 @@
   function detect() {
     var ua = navigator.userAgent || '', mt = navigator.maxTouchPoints || 0, st = false;
     try { st = navigator.standalone === true || !!(window.matchMedia && (matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: fullscreen)').matches)); } catch (e) { st = false; }
-    return { ios: /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && mt > 1), standalone: st };
+    // desktop = no touch screen and a precise pointer (mouse / trackpad): the mouse writes by default there (a pen-only app would be unusable)
+    var fine = false;
+    try { fine = !!(window.matchMedia && matchMedia('(any-pointer: fine)').matches); } catch (e) { fine = false; }
+    var ios = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && mt > 1);
+    return { ios: ios, standalone: st, desktop: !ios && mt === 0 && fine };
   }
   var D = MX.Device = {
     LIMIT: LIMIT,
@@ -44,11 +48,14 @@
       return Math.min(window.innerWidth, window.innerHeight) < LIMIT ? 'phone' : 'tablet';
     },
     isPhone: function () { return D.mode() === 'phone'; },
+    // the wide (laptop / desktop) layout: a landscape window of at least 1100 px at 3:2 or wider, never the phone layout. Class `wide` on <html>; docs/SPEC.md "Wide layout".
+    isWide: function () { return !D.isPhone() && window.innerWidth >= 1100 && window.innerWidth >= 1.5 * window.innerHeight; },
     // class + CSS variables; true when the mode changed since the last call
     apply: function () {
-      var ph = D.isPhone(), de = document.documentElement, changed = last !== null && last !== ph;
-      last = ph;
+      var ph = D.isPhone(), wd = D.isWide(), de = document.documentElement, key = (ph ? 'p' : 't') + (wd ? 'w' : ''), changed = last !== null && last !== key;
+      last = key;
       if (ph) de.classList.add('phone'); else de.classList.remove('phone');
+      if (wd) de.classList.add('wide'); else de.classList.remove('wide');
       de.setAttribute('data-layout', ph ? 'phone' : 'tablet');
       de.style.setProperty('--app-h', window.innerHeight + 'px');
       de.style.setProperty('--app-w', window.innerWidth + 'px');

@@ -288,27 +288,127 @@ html.phone .pt-area{height:240px}
 html.phone .frow.tune input[type=range]{width:100%;flex:1 1 100%;margin:0}
 html.phone .nextbtn{margin-left:-110px;width:220px}
 
-/* phone practice: header (返回, title, 設定) + context strip + progress / the one big cell / buttons */
+/* phone practice (docs/SPEC.md "Phone practice"): top bar = [返回 ... 自動 筆順 解說 設定] / section title + n / total / context strip / progress; the one big cell; bottom bar = [撤銷 清除 (提示) 上一字 下一字]
+   (primary controls under the thumb, inside the safe-area insets, 下一字 the widest). Landscape: the cell left, the same two bars stacked on the right. Nothing in the bars changes size when the auto-advance countdown shows. */
 .practice.phone{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto;grid-template-areas:"top" "stage" "bar";touch-action:none;overscroll-behavior:none;background:#fff}
-.practice.phone.land{grid-template-columns:minmax(0,1fr) 42%;grid-template-rows:minmax(0,1fr) auto;grid-template-areas:"stage top" "stage bar"}
-.practice.phone .ptop{grid-area:top;min-width:0;padding:var(--edge-t) var(--edge-r) 0 var(--edge-l);border-bottom:2px solid #000;background:#fff;align-self:start}
-.practice.phone.land .ptop{border-left:2px solid #000}
+.practice.phone.land{grid-template-columns:minmax(0,1fr) clamp(288px,42%,440px);grid-template-rows:minmax(0,1fr) auto;grid-template-areas:"stage top" "stage bar";padding-left:var(--edge-l)}
+.practice.phone .ptop{grid-area:top;position:relative;min-width:0;padding:var(--edge-t) var(--edge-r) 0 var(--edge-l);border-bottom:2px solid #000;background:#fff;align-self:start}
+.practice.phone.land .ptop{border-left:2px solid #000;padding-left:8px}
 .practice.phone .stage{grid-area:stage}
-.practice.phone .pbtns{grid-area:bar;min-width:0;padding:6px var(--edge-r) var(--edge-b) var(--edge-l);border-top:2px solid #000;background:#fff}
-.practice.phone.land .pbtns{border-left:2px solid #000}
+.practice.phone .pbtns{grid-area:bar;position:relative;min-width:0;padding:6px var(--edge-r) var(--edge-b) var(--edge-l);border-top:2px solid #000;background:#fff}
+.practice.phone.land .pbtns{border-left:2px solid #000;padding-left:8px}
 .prow{display:flex;align-items:center;min-width:0}
-.ptop .prow{margin:2px 0}
-.ptop .prow>button{flex:none;min-width:64px;padding:0 8px}
-.ptitle{flex:1 1 0;min-width:0;padding:0 8px;text-align:center;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.practice.phone.land .pbtns .prow>button{margin:0 2px}
+.ptop .prow.head{margin:2px 0}
+.practice.phone.land .ptop .prow.head{flex-wrap:wrap}
+.ptop .prow.head>button{flex:none;min-width:48px;padding:0 8px;margin:0 0 0 4px;font-size:16px}
+.ptop .prow.head>button:first-child{margin-left:0;min-width:56px}
+.ptop .prow.head>.sp{flex:1 1 0;min-width:0}
+.autopill{min-width:64px;font-size:15px;white-space:nowrap}
+.autopill[aria-pressed=true]{background:#000;color:#fff}
+.autopill[aria-pressed=false]{background:#fff;color:#000;border-style:dashed}
+.ptrow{display:flex;align-items:baseline;min-width:0;padding:0 2px 2px}
+.ptitle{flex:1 1 0;min-width:0;padding:0 4px 0 0;text-align:left;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ptrow .ctr{flex:none;font-size:16px;white-space:nowrap}
 .pctx{display:flex;justify-content:center;align-items:stretch;min-width:0}
 .pctx .cx{flex:1 1 0;min-width:0;max-width:64px;min-height:48px;margin:0;border:0;border-left:2px solid #fff;padding:0;background:#fff;font-size:27px;line-height:1}
 .pctx .cx.other{border-left:2px dotted #000}
 .pctx .cx.cur{background:#000;color:#fff;border-left-color:#000}
-.pprog{display:flex;align-items:center;padding:0 2px 6px}
-.pprog .ctr{min-width:78px;font-size:16px}
-.pprog .bar{flex:1;height:8px;margin:0;border-width:1px;max-width:none}
-.pbtns .prow>button{flex:1 1 0;min-width:0;margin:0 3px 6px}
-.pbtns .prow.nav button{min-height:56px;font-size:20px}
-.pbtns .prow.tools button{min-height:48px;font-size:17px;padding:0 4px}
-.pbtns .prow.tools{margin-bottom:0}
-.pbtns .prow.tools button{margin-bottom:0}
+.pprog{padding:4px 2px 6px}
+.pprog .bar{height:8px;margin:0;border-width:1px;max-width:none}
+.pbtns .prow{align-items:center}
+.pbtns .prow>button{flex:1 1 0;min-width:44px;min-height:56px;margin:0 3px;padding:0 2px;font-size:17px;white-space:nowrap}
+.pbtns .prow>button[data-act=prev]{flex-grow:1.2}
+.pbtns .prow>button[data-act=next],.pbtns .prow>button[data-act=finish]{flex-grow:2.6;min-height:64px;font-size:21px;border-width:3px;position:relative;overflow:hidden}
+.pbtns .prow>button[data-act=finish]{background:#000;color:#fff}
+.pbtns .prow>button[data-act=next] .l1,.pbtns .prow>button[data-act=finish] .l1{display:block;font-size:14px;line-height:1.1}
+.pbtns .prow>button[data-act=next] .l2,.pbtns .prow>button[data-act=finish] .l2{display:block;line-height:1.1}
+.pbtns .prow>button[data-act=next] .lbl,.pbtns .prow>button[data-act=finish] .lbl{text-align:center;line-height:1.1}
+.pbtns .prow>button[data-pending=static]{background:#000;color:#fff}
+.pbtns .prow>button[data-pending=static] svg{display:none}
+/* LCD countdown: a black copy of the button content is uncovered left to right over the delay (clip-path), so the text keeps full contrast on both colours */
+.afill{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:#000;color:#fff;pointer-events:none;clip-path:inset(0 100% 0 0);animation:afill linear forwards}
+@keyframes afill{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+/* long press on the pill: the delay chooser, laid over the strip (absolute: nothing moves) */
+.achoose{position:absolute;left:6px;right:6px;top:calc(var(--edge-t) + 54px);z-index:20;display:flex;align-items:center;background:#fff;border:3px solid #000;padding:4px}
+.achoose .al{flex:none;padding:0 6px;font-size:15px;white-space:nowrap}
+.achoose button{flex:1 1 0;min-width:44px;min-height:48px;margin:0 2px;padding:0 2px;font-size:16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* home intro + 關於 */
+.intro{margin:var(--sp-2) 0 0;color:#000;font-size:var(--t-xs);line-height:1.35}
+.intro .i1{font-size:var(--t-s)}
+.intro .i2{font-size:var(--t-s)}
+.intro .i3{display:flex;align-items:center;flex-wrap:wrap}
+.intro .i4{display:flex}
+.ilink.small{font-size:var(--t-xs)}
+.ilink{display:inline-flex;align-items:center;min-height:44px;padding:0 6px;color:#000;text-decoration:underline;font-size:inherit}
+.aitem a.btnlink{margin:6px 0 10px;min-height:56px}
+.ncols .ntext.small{font-size:var(--t-xs);line-height:1.5;text-align:left}
+.screen.about .ascroll{font-size:19px;line-height:1.6;overflow:visible}
+.screen.about .npart h2{display:inline-block;background:#000;color:#fff;border:0;padding:0 12px;margin:0 0 8px}
+html.phone .screen.about .ascroll{font-size:17px}
+html.phone .intro{margin-top:6px}
+
+/* ================================================================ WIDE LAYOUT (html.wide: a landscape window >= 1100 px at 3:2 or wider = a laptop / desktop; docs/SPEC.md "Wide layout")
+   One column of content centred at max 1160 px (the gutters are the rest), an 8 px grid (8 / 16 / 24 / 32), one type scale: page title 32, section title 22, card title 21, meta 15. */
+html.wide .screen{padding-left:max(calc(24px + var(--edge-l)),calc((100% - 1160px) / 2));padding-right:max(calc(24px + var(--edge-r)),calc((100% - 1160px) / 2));padding-top:calc(24px + var(--edge-t))}
+html.wide .screen h1{font-size:32px;margin:0}
+html.wide .screen h2{font-size:22px;margin:24px 0 8px}
+html.wide .topbar>*{margin:0 16px 16px 0}
+html.wide .topbar>:last-child{margin-right:0}
+/* home: header (name, buttons), a slim intro banner, shelves of uniform cards, the 書庫 grid */
+html.wide .screen[data-screen=home]{display:flex;flex-direction:column}
+html.wide .screen[data-screen=home]>*{flex:none}
+html.wide .screen[data-screen=home] .topbar{order:-2}
+html.wide .screen[data-screen=home] .intro{order:-1;display:flex;flex-wrap:wrap;align-items:center;margin:0 0 16px;padding:0 0 8px;border-bottom:2px solid #000;font-size:15px;line-height:1.3}
+html.wide .intro>div{margin-right:24px}
+html.wide .intro .i1{font-size:18px}
+html.wide .intro .i2{font-size:15px}
+html.wide .intro .i4{margin-left:auto;margin-right:0}
+html.wide .intro .ilink{min-height:44px}
+html.wide .homewrap{display:block}
+html.wide .hcol:first-child{margin-right:0}
+html.wide .shelf{margin:0 0 24px}
+html.wide .shead{display:flex;align-items:center;margin:0 0 8px}
+html.wide .shead h2{margin:0;flex:1;border-bottom:0;padding:0}
+html.wide [data-role=shelf-rows]{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+html.wide [data-role=shelf-rows] .note{grid-column:1 / -1;margin:0;padding:0;min-height:24px}
+html.wide .lrow.compact{flex-direction:column;height:164px;margin:0;max-width:none}
+html.wide .lrow.compact .lmain{flex:1 1 0;justify-content:flex-start;padding:12px 16px 0;min-height:0}
+html.wide .lrow.compact .t{font-size:21px;line-height:1.3}
+html.wide .lrow.compact .m{font-size:15px;margin:4px 0 0}
+html.wide .lrow.compact .lbar{display:block;flex:none;height:8px;border:1px solid #000;margin:8px 0 0}
+html.wide .lbar i{display:block;height:100%;background:#000}
+html.wide .lrow.compact .lbtns{padding:0 16px 8px 16px;justify-content:flex-end}
+html.wide .lrow.compact .lbtns button{min-height:48px;margin-left:8px}
+html.wide .tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin:0}
+html.wide .tile{flex:none;height:88px;margin:0;min-width:0;max-width:none;padding:8px 16px}
+html.wide .vernote{margin-top:24px}
+/* lists: two columns */
+html.wide [data-role=list]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;align-items:start}
+html.wide .lrow{max-width:none}
+html.wide .ctl{margin-bottom:16px}
+/* settings + 關於: a centred column of 720 px; the settings index is a sidebar */
+html.wide .screen.settings{display:grid;grid-template-columns:200px minmax(0,720px);column-gap:32px;align-content:start;
+  padding-left:max(calc(24px + var(--edge-l)),calc((100% - 952px) / 2));padding-right:max(calc(24px + var(--edge-r)),calc((100% - 952px) / 2))}
+html.wide .screen.settings>*{grid-column:2;min-width:0}
+html.wide .screen.settings>.topbar{grid-column:1 / -1;padding-right:0}
+html.wide .screen.settings>.floatdone{grid-column:auto;position:fixed}
+html.wide .screen.settings>.sindex{grid-column:1;grid-row:2 / 40;position:sticky;top:0;align-self:start;display:flex;flex-direction:column;margin:0}
+html.wide .screen.settings>.sindex button{margin:0 0 8px;width:100%;min-width:0;text-align:left}
+html.wide .screen.about{padding-left:max(calc(24px + var(--edge-l)),calc((100% - 720px) / 2));padding-right:max(calc(24px + var(--edge-r)),calc((100% - 720px) / 2))}
+html.wide .screen.nread .nview,html.wide .screen.nread .pager{max-width:820px;width:100%;margin-left:auto;margin-right:auto}
+/* practice on a laptop: the page grid is centred, at most 1280 px wide */
+html.wide .practice:not(.phone){left:max(0px,calc((100% - 1280px) / 2));right:max(0px,calc((100% - 1280px) / 2))}
+.lbar{display:none}
+
+/* stroke-order popup: 上一字 / 下一字, position, context */
+.spnav{margin:0 0 8px}
+.spnav .sprow.big{display:flex}
+.spnav .sprow.big button{flex:1 1 0;min-height:56px;font-size:20px;margin:0 4px 0 0}
+.spnav .sprow.big button:last-child{margin:0 0 0 4px}
+.spnav .sprow.pos{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+.sppos{font-size:var(--t-s)}
+.spctx{display:flex;align-items:center;font-size:20px}
+.spctx span{padding:0 5px;line-height:1.3}
+.spctx span.cur{background:#000;color:#fff}

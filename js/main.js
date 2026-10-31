@@ -33,6 +33,7 @@
         case 'text': MX.Screens.text(el, r.arg, r.query); break;
         case 'shelf': MX.Screens.shelf(el, r.arg, r.query); break;
         case 'search': MX.Screens.search(el, r.query); break;
+        case 'about': MX.Notes.about(el); break;
         case 'notes': MX.Notes.show(el, r.arg, r.arg2 || 'main', r.query); break;
         case 'custom': MX.Screens.custom(el, r.arg); break;
         case 'settings': MX.Screens.settings(el); break;

@@ -44,37 +44,16 @@
     return out;
   }
 
-  // ------------------------------------------------------------------ the reading page: #/notes/<textId>/<sectionId>?done=<copyId>
-  N.hide = function () {
-    if (!cur) return;
-    cur.listeners.forEach(function (l) { l[0].removeEventListener(l[1], l[2]); });
-    clearTimeout(cur.timer);
-    cur = null;
-  };
-  N.show = async function (root, textId, sectionId, query) {
-    N.hide();
-    sectionId = sectionId || 'main';
-    var q = qs(query), copy = q.done || q.copy ? Model.copies[q.done || q.copy] : null, done = !!q.done && !!copy;
-    var script = scriptFor(textId, sectionId, copy);
-    var entry = Lib.entry(textId);
-    if (!entry) { location.hash = '#/'; return; }
-    var el = h('div', { class: 'screen nread', 'data-screen': 'notes', 'data-text-id': textId, 'data-section': sectionId, style: 'font-family:' + MX.Draw.uiFam(script) });
-    root.appendChild(el);
-    var C = { el: el, listeners: [], page: 0, pages: 1, timer: null };
-    cur = C;
-    function back() { if (history.length > 1) history.back(); else location.hash = MX.Screens.backFor(textId); }
-    var title = h('h1', { class: 'grow', text: '解說', 'data-role': 'notes-title' });
-    el.appendChild(h('div', { class: 'topbar' }, [h('button', { text: done ? '返回書寫' : '返回', class: 'backbtn', 'data-act': 'back', onclick: function () {
-      if (done && copy) location.hash = MX.Screens.hash('practice', copy.id); else back();
-    } }), title]));
-    var view = h('div', { class: 'nview', 'data-role': 'notes-view' });
-    var cols = h('div', { class: 'ncols', 'data-role': 'notes-cols' });
+  // the paged column view shared by the 解說 page and the 關於 page: the view + pager are added to `el`; returns {cols, go, repage}
+  function paged(el, C, role) {
+    var view = h('div', { class: 'nview', 'data-role': role + '-view' });
+    var cols = h('div', { class: 'ncols', 'data-role': role + '-cols' });
     view.appendChild(cols);
     el.appendChild(view);
     var prev = h('button', { 'data-act': 'npage-prev', onclick: function () { go(C.page - 1); } }, [MX.icon('tri-u', 18), '上一頁']);
     var next = h('button', { 'data-act': 'npage-next', onclick: function () { go(C.page + 1); } }, ['下一頁', MX.icon('tri-d', 18)]);
     var ctr = h('div', { class: 'ctr', 'data-role': 'npage-ctr', text: '1 / 1' });
-    var pager = h('div', { class: 'pager npager', 'data-role': 'notes-pager' }, [prev, ctr, next]);
+    var pager = h('div', { class: 'pager npager', 'data-role': role + '-pager' }, [prev, ctr, next]);
     el.appendChild(pager);
 
     function go(p) {
@@ -103,6 +82,34 @@
       if (e.key === 'PageDown' || e.key === 'ArrowRight' || e.key === 'AudioVolumeDown' || e.keyCode === 25) { e.preventDefault(); go(C.page + 1); }
       else if (e.key === 'PageUp' || e.key === 'ArrowLeft' || e.key === 'AudioVolumeUp' || e.keyCode === 24) { e.preventDefault(); go(C.page - 1); }
     });
+
+    return { cols: cols, go: go, repage: repage };
+  }
+
+  // ------------------------------------------------------------------ the reading page: #/notes/<textId>/<sectionId>?done=<copyId>
+  N.hide = function () {
+    if (!cur) return;
+    cur.listeners.forEach(function (l) { l[0].removeEventListener(l[1], l[2]); });
+    clearTimeout(cur.timer);
+    cur = null;
+  };
+  N.show = async function (root, textId, sectionId, query) {
+    N.hide();
+    sectionId = sectionId || 'main';
+    var q = qs(query), copy = q.done || q.copy ? Model.copies[q.done || q.copy] : null, done = !!q.done && !!copy;
+    var script = scriptFor(textId, sectionId, copy);
+    var entry = Lib.entry(textId);
+    if (!entry) { location.hash = '#/'; return; }
+    var el = h('div', { class: 'screen nread', 'data-screen': 'notes', 'data-text-id': textId, 'data-section': sectionId, style: 'font-family:' + MX.Draw.uiFam(script) });
+    root.appendChild(el);
+    var C = { el: el, listeners: [], page: 0, pages: 1, timer: null };
+    cur = C;
+    function back() { if (history.length > 1) history.back(); else location.hash = MX.Screens.backFor(textId); }
+    var title = h('h1', { class: 'grow', text: '解說', 'data-role': 'notes-title' });
+    el.appendChild(h('div', { class: 'topbar' }, [h('button', { text: done ? '返回書寫' : '返回', class: 'backbtn', 'data-act': 'back', onclick: function () {
+      if (done && copy) location.hash = MX.Screens.hash('practice', copy.id); else back();
+    } }), title]));
+    var pg = paged(el, C, 'notes'), cols = pg.cols, go = pg.go, repage = pg.repage;
 
     var nt = null, text = null, failure = '';
     try { text = await Lib.getText(textId); nt = await Lib.getSectionNotes(textId, sectionId); } catch (e) { MX.err(e); failure = String(e && e.message || e); }
@@ -146,6 +153,70 @@
     go(Math.max(0, parseInt(q.p, 10) - 1 || 0));
     // layout settles after the fonts of this page load (loadingdone) and after the first paint
     setTimeout(repage, 60);
+  };
+
+  // ------------------------------------------------------------------ 關於 (#/about): who made it and why, 隨喜, links, version, credits.
+  // E-ink tablet: paged like the 解說 page (no scrolling). Phone / LCD: one scrolling screen. The copy is fixed text (it is not part of the library).
+  var GITHUB = 'https://github.com/chitintim/chinese-handwriting-app';
+  var DANA = 'https://danafarber.jimmyfund.org/site/Donation2?df_id=10522&mfc_pref=T&10522.donation=form1';
+  var WM = 'https://www.wm.org.hk/%E7%B7%9A%E4%B8%8A%E5%8A%9F%E5%BE%B7';
+  N.LINKS = { github: GITHUB, dana: DANA, wm: WM };
+  function ext(act, href, text, cls) { return h('a', { class: cls || 'btnlink', 'data-act': act, href: href, target: '_blank', rel: 'noopener', text: text }); }
+  function aboutBlocks() {
+    var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '', native = window.MoBridge && MX.Update ? MX.Update.current() : '';
+    return [
+      h('div', { class: 'npart', 'data-part': 'hey' }, [
+        h('h2', { text: 'Hey, it\'s Tim 👋' }),
+        h('p', { class: 'ntext', text: 'I made this while spending a lot of time sitting with my mom in hospital. She\'s been a devoted Buddhist for a very long time (皈依 many years ago), and 抄心經 is close to her heart. I wouldn\'t call myself a Buddhist, more someone slowly learning about it, and this gave me something calm to do while I\'m here.' }),
+        h('p', { class: 'ntext', text: 'The iReader I built it for was a gift for Mom a few months ago, back when she could still read. Now it\'s what I 抄經 on, sitting next to her.' }),
+        h('p', { class: 'ntext', text: 'It started as "I just want a nice way to 抄心經 on my e-ink tablet" and, well, it grew a bit. 😅' }),
+        h('p', { class: 'ntext', text: '嗨，我是 Tim。這個小工具，是我在醫院陪媽媽的日子裡慢慢做出來的。媽媽是虔誠的佛教徒，很多年前已經皈依；我自己不算是佛教徒，只是在慢慢學習。這部 iReader，本來是幾個月前買給媽媽看書用的；現在，它陪我在她身邊抄經。' })
+      ]),
+      h('div', { class: 'npart', 'data-part': 'donate' }, [
+        h('h2', { text: '隨喜 · If you like this app' }),
+        h('p', { class: 'ntext', text: 'It\'s free and always will be. If it brings you something, please consider a kind donation to one of these instead — not to me:' }),
+        h('div', { class: 'nitem aitem', 'data-role': 'donate-dana' }, [
+          h('p', { class: 'ntext', text: 'Dana-Farber Cancer Institute (Boston) — Mom has been fighting ovarian cancer, and we spent a couple of months at Dana-Farber. You can direct your gift to the Gynecologic Oncology Program.' }),
+          ext('donate-dana', DANA, 'Dana-Farber · Donate')
+        ]),
+        h('div', { class: 'nitem aitem', 'data-role': 'donate-wm' }, [
+          h('p', { class: 'ntext', text: '西方寺 Western Monastery (荃灣, Hong Kong) — where Mom spent so much of her time 禮佛.' }),
+          ext('donate-wm', WM, '西方寺 · 線上功德'),
+          h('p', { class: 'ntext', text: '(852) 2411 5111' })
+        ]),
+        h('p', { class: 'ntext', text: '如果這個小工具對你有幫助，歡迎隨喜捐助以上機構。🙏' })
+      ]),
+      h('div', { class: 'nitem aitem', 'data-role': 'about-github' }, [ext('about-github', GITHUB, '完整介紹 · GitHub')]),
+      h('div', { class: 'npart', 'data-part': 'credits' }, [
+        h('h2', { text: '版本與授權' }),
+        h('p', { class: 'ntext small', 'data-role': 'version', text: (native ? 'App 版本 ' + native + ' · ' : '') + '網頁版本 ' + ver + ' · 字帖庫 ' + (MX.Library.version ? MX.Library.version() : '') }),
+        h('p', { class: 'ntext small', 'data-role': 'font-credit', text: '字型：文鼎 PL 中楷 AR PL UKai（Arphic Public License）；全字庫正楷體 TW-Kai、馬善政 Ma Shan Zheng、霞鶩文楷 LXGW WenKai（SIL OFL 1.1）。已裁切字集並改名，授權全文在 library/fonts/。' }),
+        h('p', { class: 'ntext small', 'data-role': 'stroke-credit', text: '筆順資料：hanzi-writer-data／Make Me a Hanzi（取自文鼎 Arphic 字型，Arphic Public License，授權全文在 library/strokes/LICENSE）。筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。' })
+      ])
+    ];
+  }
+  N.aboutBlocks = aboutBlocks;
+  N.about = function (root) {
+    N.hide();
+    var pagedMode = !MX.Device.isPhone() && Model.settings.screenType === 'eink';
+    var el = h('div', { class: 'screen about' + (pagedMode ? ' nread' : ''), 'data-screen': 'about', 'data-mode': pagedMode ? 'paged' : 'scroll' });
+    root.appendChild(el);
+    var C = { el: el, listeners: [], page: 0, pages: 1, timer: null };
+    cur = C;
+    el.appendChild(h('div', { class: 'topbar' }, [
+      h('button', { text: '返回', class: 'backbtn', 'data-act': 'back', onclick: function () { if (history.length > 1) history.back(); else location.hash = '#/'; } }),
+      h('h1', { class: 'grow', text: '關於', 'data-role': 'about-title' })
+    ]));
+    if (pagedMode) {
+      var pg = paged(el, C, 'about');
+      aboutBlocks().forEach(function (b) { pg.cols.appendChild(b); });
+      pg.repage(); pg.go(0);
+      setTimeout(pg.repage, 60);
+    } else {
+      var body = h('div', { class: 'ncols ascroll', 'data-role': 'about-body' });
+      aboutBlocks().forEach(function (b) { body.appendChild(b); });
+      el.appendChild(body);
+    }
   };
 
   // ------------------------------------------------------------------ 對照模式 strip (practice view): 要旨 + glossary of the current section, as much as fits

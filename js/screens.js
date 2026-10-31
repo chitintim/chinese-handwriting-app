@@ -3,9 +3,11 @@
   var MX = window.MX, h = MX.h, Model = MX.Model, Store = MX.Store, Lib = MX.Library;
   var S = MX.Screens = {};
   var APK_URL = 'https://github.com/chitintim/chinese-handwriting-app/releases/latest/download/moxie.apk';
+  var GITHUB_URL = 'https://github.com/chitintim/chinese-handwriting-app';       // 關於 · GitHub (the APK's WebView hands every external https link to the system browser: MainActivity.handleNavigation)
   var ROW_H = 98;          // one list row (88 px + 10 px margin, see .lrow)
   var ROW_H_PHONE = 140;   // the same in the phone layout (132 px + 8 px margin)
   var CROW_H = 84;         // one compact shelf row on the home screen (76 px + 8 px margin, .lrow.compact)
+  var WIDE_CARDS = 4;      // cards per shelf row on the wide (laptop) layout
   var SHELF_MAX = 3;       // rows of a shelf on the home screen (the rest is behind 全部)
 
   // A screen: top bar = 返回 (top left, never at the bottom edge), title, extra buttons (right); then an optional breadcrumb line crumbs = [[label, hash], ...] (the last one is the page itself).
@@ -69,6 +71,7 @@
       if (!rows.length) { if (o.empty) host.appendChild(o.empty(st)); return; }
       var top = host.getBoundingClientRect().top + 2, pb = parseFloat(getComputedStyle(el).paddingBottom) || 0;
       var per = Math.max(3, Math.min(40, Math.floor((el.clientHeight - pb - top - reserve) / rowH)));
+      if (MX.Device.isWide()) per *= 2;       // two columns on the wide layout
       var pages = Math.max(1, Math.ceil(rows.length / per));
       st.p = MX.clamp(parseInt(st.p, 10) || 1, 1, pages);
       var box = h('div', { 'data-role': 'list', 'data-per': per });
@@ -91,7 +94,8 @@
   function lrow(o) {
     var main = h('div', { class: 'lmain', onclick: o.open }, [
       h('div', { class: 't', text: o.title, 'data-role': 'title' }),
-      h('div', { class: 'm', 'data-role': 'meta', text: o.meta || '' })
+      h('div', { class: 'm', 'data-role': 'meta', text: o.meta || '' }),
+      o.pct === undefined ? null : h('div', { class: 'lbar', 'data-role': 'card-bar' }, [h('i', { style: 'width:' + o.pct + '%' })])      // only the wide layout's cards show it
     ]);
     if (o.font) main.style.cssText = 'font-family:' + o.font;
     var btns = h('div', { class: 'lbtns' });
@@ -141,7 +145,7 @@
   function resumeRow(c, compact) {
     var e = Lib.entry(c.textId);
     var r = lrow({
-      title: T(e.title), meta: '進度 ' + pctOf(c) + '% · 最後書寫 ' + dateOf(c.updatedAt), font: uiFont(c.cfg.script), compact: compact,
+      title: T(e.title), meta: '進度 ' + pctOf(c) + '% · 最後書寫 ' + dateOf(c.updatedAt), font: uiFont(c.cfg.script), compact: compact, pct: pctOf(c),
       attrs: { 'data-role': 'resume', 'data-copy': c.id, 'data-text': null }, open: function () { location.hash = H('practice', c.id); },
       buttons: [{ label: '繼續', act: 'resume', primary: true, onclick: function () { location.hash = H('practice', c.id); } }]
     });
@@ -155,7 +159,7 @@
     if (sec) {
       var copy = Model.activeCopy(f.textId, sec);
       r = lrow({
-        title: T(e.title), meta: '進度 ' + pctOf(copy) + '% · 已抄 ' + Model.doneCount(f.textId, sec) + ' 遍', font: uiFont(scriptOf(f.textId, sec)), compact: compact,
+        title: T(e.title), meta: '進度 ' + pctOf(copy) + '% · 已抄 ' + Model.doneCount(f.textId, sec) + ' 遍', font: uiFont(scriptOf(f.textId, sec)), compact: compact, pct: pctOf(copy),
         attrs: { 'data-role': 'fav', 'data-fav-text': f.textId, 'data-fav-section': sec }, open: function () { location.hash = startHash(f.textId, sec); },
         buttons: [{ label: copy ? '繼續' : '開始', act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, sec); } },
           { node: MX.favButton(f.textId, sec, onFav) }]
@@ -166,7 +170,7 @@
     var byline = [T(e.author), T(e.dynasty)].filter(Boolean).join(' ');
     var prog = multi ? Math.floor(100 * Model.textProgress(f.textId, e.sections)) : pctOf(Model.activeCopy(f.textId, 'main'));
     return lrow({
-      title: T(e.title), meta: (byline ? byline + ' · ' : '') + e.chars + '字 · 進度 ' + prog + '%', font: uiFont(), compact: compact,
+      title: T(e.title), meta: (byline ? byline + ' · ' : '') + e.chars + '字 · 進度 ' + prog + '%', font: uiFont(), compact: compact, pct: prog,
       attrs: { 'data-role': 'fav', 'data-fav-text': f.textId }, open: function () { location.hash = multi ? H('text', f.textId) : startHash(f.textId, 'main'); },
       buttons: [multi ? { label: '章節', act: 'sections', primary: true, onclick: function () { location.hash = H('text', f.textId); } }
         : { label: Model.activeCopy(f.textId, 'main') ? '繼續' : '開始', act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, 'main'); } },
@@ -249,6 +253,14 @@
     }
     var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '';
     el.appendChild(h('div', { class: 'note vernote', text: '版本 ' + ver + ' · 字帖庫 ' + Lib.version() + ' · 儲存：' + Store.mode() }));
+    // a short card at the very end of the screen (inside the .screen bottom padding: never in the bottom edge dead zone); black text, 4 short lines. The link opens the 關於 page.
+    el.appendChild(h('div', { class: 'intro', 'data-role': 'home-intro' }, [
+      h('div', { class: 'i1', text: '墨字帖 · 抄經、臨帖的描紅練習' }),
+      h('div', { class: 'i2', text: 'Made by Tim, for Mom 🙏' }),
+      h('div', { class: 'i3' }, [document.createTextNode('Free, always. If you like it, please consider a kind donation — '),
+        h('a', { class: 'ilink', 'data-act': 'about', href: '#/about' }, ['關於與隨喜', MX.icon('tri-r', 12)])]),
+      h('div', { class: 'i4' }, [h('a', { class: 'ilink small', 'data-act': 'github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: 'GitHub' })])
+    ]));
 
     // rows: whatever height is left, shared between the two shelves (at least one row each when they have any)
     if (rItems.length) rRows.innerHTML = '';
@@ -256,7 +268,11 @@
     var last = el.lastElementChild, pb = parseFloat(getComputedStyle(el).paddingBottom) || 0;
     var left = el.clientHeight - pb - (last ? last.getBoundingClientRect().bottom : 0) - 6;
     if (getComputedStyle(wrap).display === 'flex') left += Math.max(0, colB.getBoundingClientRect().bottom - colA.getBoundingClientRect().bottom);     // side by side: the shelves may grow down to the end of the 書庫 column
-    if (rItems.length || fItems.length) {
+    if (MX.Device.isWide()) {
+      // wide layout: each shelf is one row of WIDE_CARDS uniform cards (the rest is behind 全部)
+      rItems.slice(0, WIDE_CARDS).forEach(function (c) { rRows.appendChild(resumeRow(c, true)); });
+      fItems.slice(0, WIDE_CARDS).forEach(function (f) { var r = favRow(f, true, function () { MX.route(); }); if (r) fRows.appendChild(r); });
+    } else if (rItems.length || fItems.length) {
       var total = Math.max(0, Math.floor(left / (MX.Device.isPhone() ? 132 : CROW_H))), a = 0, b = 0, progress = true;
       if (rItems.length) a = 1;
       if (fItems.length) b = 1;
@@ -672,6 +688,10 @@
     row.appendChild(h('button', { text: '筆測頁', 'data-act': 'pentest', onclick: function () { location.hash = '#/pentest'; } }));
     ab.appendChild(row);
     ab.appendChild(out);
+    ab.appendChild(h('div', { class: 'btnrow', 'data-role': 'about-links' }, [
+      h('button', { text: '關於與隨喜', 'data-act': 'about', onclick: function () { location.hash = '#/about'; } }),
+      h('a', { class: 'btnlink plain', 'data-act': 'about-github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: '完整介紹 · GitHub' })
+    ]));
     ab.appendChild(h('div', { class: 'note', 'data-role': 'stroke-credit', text: '筆順資料：hanzi-writer-data／Make Me a Hanzi（取自文鼎 Arphic 字型，Arphic Public License，授權全文在 library/strokes/LICENSE）。筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。' }));
   };
 

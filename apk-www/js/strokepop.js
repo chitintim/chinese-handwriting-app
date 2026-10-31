@@ -14,12 +14,13 @@
 
   function open(o) {
     close();
-    var P = { ch: o.ch, script: o.script === 'simp' ? 'simp' : 'trad', rec: null, n: 0, part: null, mode: 'idle', i: 0, k: 0, steps: 0, redraws: 0, ovPage: 0, timer: null, size: 200, dpr: 1, cv: null, status: null, state: 'loading' };
+    var P = { nav: o.nav ? { cells: o.nav.cells, idx: o.nav.idx } : null, tok: 0, ch: o.ch, script: o.script === 'simp' ? 'simp' : 'trad', rec: null, n: 0, part: null, mode: 'idle', i: 0, k: 0, steps: 0, redraws: 0, ovPage: 0, timer: null, size: 200, dpr: 1, cv: null, status: null, state: 'loading' };
     var body = h('div', { class: 'spbody', 'data-role': 'stroke-body' });
+    var titleEl = h('h2', { class: 'grow', text: '筆順 · ' + P.ch, 'data-role': 'stroke-title' });
     var api = MX.modal({
-      body: [h('div', { class: 'sheethead' }, [h('h2', { class: 'grow', text: '筆順 · ' + P.ch, 'data-role': 'stroke-title' }),
+      body: [h('div', { class: 'sheethead' }, [titleEl,
         h('button', { class: 'on', text: '關閉', 'data-act': 'close', onclick: function () { close(); } })]), body],
-      onClose: function () { stopTimer(); if (cur === P) cur = null; if (o.onClose) o.onClose(); }
+      onClose: function () { stopTimer(); document.removeEventListener('keydown', onKey, true); window.removeEventListener('mo-key', onMoKey); if (cur === P) cur = null; if (o.onClose) o.onClose(); }
     });
     api.el.className += ' sheet stroke-pop';
     api.el.setAttribute('data-role', 'stroke-pop');
@@ -93,7 +94,7 @@
           var c = h('canvas', { style: 'width:' + fs + 'px;height:' + fs + 'px' });
           c.width = Math.round(fs * P.dpr); c.height = Math.round(fs * P.dpr);
           St.draw(c.getContext('2d'), P.rec, fs, { dpr: P.dpr, done: kk, marks: false, script: P.script });
-          row.appendChild(h('button', { type: 'button', class: 'spf', 'data-act': 'frame', 'data-k': String(kk), title: '第 ' + kk + ' 畫', onclick: function () { toStatic(kk); } },
+          row.appendChild(h('button', { type: 'button', class: 'spf', 'data-act': 'frame', 'data-k': String(kk), title: '第 ' + kk + ' 畫', onclick: function () { remember('step'); toStatic(kk); } },
             [c, h('div', { class: 'cap', text: caption(kk) })]));
         })(k);
       }
@@ -110,6 +111,8 @@
     function build() {
       body.innerHTML = '';
       P.cv = null; P.status = null;
+      var nb = navBox();
+      if (nb) body.appendChild(nb);
       if (P.state === 'loading') { body.appendChild(h('p', { text: '載入中…', 'data-role': 'stroke-loading' })); return; }
       if (P.state !== 'ok') {
         body.appendChild(h('p', { class: 'spnodata', 'data-role': P.state === 'nodata' ? 'stroke-nodata' : 'stroke-error', text: P.state === 'nodata'
@@ -117,7 +120,7 @@
         return;
       }
       P.dpr = dprNow();
-      P.size = Math.floor(MX.clamp(Math.min(window.innerWidth - (MX.Device.isPhone() ? 56 : 80), window.innerHeight - (MX.Device.isPhone() ? 360 : 470)), 200, 520));
+      P.size = Math.floor(MX.clamp(Math.min(window.innerWidth - (MX.Device.isPhone() ? 56 : 80), window.innerHeight - (MX.Device.isPhone() ? 450 : 560)), 200, 520));
       P.status = h('div', { class: 'spstatus', 'data-role': 'stroke-status' });
       P.cv = h('canvas', { class: 'sp-cv', 'data-role': 'stroke-canvas', style: 'width:' + P.size + 'px;height:' + P.size + 'px' });
       P.cv.width = Math.round(P.size * P.dpr); P.cv.height = Math.round(P.size * P.dpr);
@@ -129,10 +132,10 @@
       });
       sp.setAttribute('data-role', 'speed');
       body.appendChild(h('div', { class: 'spctl' }, [
-        h('button', { type: 'button', text: '重播', 'data-act': 'replay', onclick: play }),
+        h('button', { type: 'button', text: '重播', 'data-act': 'replay', onclick: function () { remember('anim'); play(); } }),
         h('div', { class: 'sprow' }, [h('span', { class: 'lbl', text: '逐筆' }),
-          MX.btn({ label: '上一筆', icon: 'tri-l', act: 'step-prev', onclick: function () { toStatic(prevTarget()); } }),
-          MX.btn({ label: '下一筆', icon: 'tri-r', iconRight: true, act: 'step-next', onclick: function () { toStatic(P.n + 1); } })]),
+          MX.btn({ label: '上一筆', icon: 'tri-l', act: 'step-prev', onclick: function () { remember('step'); toStatic(prevTarget()); } }),
+          MX.btn({ label: '下一筆', icon: 'tri-r', iconRight: true, act: 'step-next', onclick: function () { remember('step'); toStatic(P.n + 1); } })]),
         h('div', { class: 'sprow' }, [h('span', { class: 'lbl', text: '速度' }), sp])
       ]));
       body.appendChild(frames());
@@ -140,18 +143,60 @@
       paint(); syncUi();
     }
 
-    St.get(P.ch).then(function (rec) {
-      if (cur !== P) return;
-      P.rec = rec; P.state = rec ? 'ok' : 'nodata';
+    // ---- characters: 上一字 / 下一字 step through the reading order of the practice view (title and 落款 cells included; punctuation is not a cell)
+    function remember(m) { if (settings().strokeMode !== m) { settings().strokeMode = m; MX.Model.saveSettings(); } }
+    function navBox() {
+      var nv = P.nav;
+      if (!nv) return null;
+      var N = nv.cells.length, i = nv.idx, j, ctx = h('div', { class: 'spctx', 'data-role': 'stroke-ctx', style: 'font-family:' + MX.Draw.uiFam(P.script) });
+      var prev = MX.btn({ label: '上一字', icon: 'tri-l', act: 'char-prev', iconSize: 18, onclick: function () { stepChar(-1); } });
+      var next = MX.btn({ label: '下一字', icon: 'tri-r', iconRight: true, act: 'char-next', iconSize: 18, onclick: function () { stepChar(1); } });
+      prev.disabled = i <= 0; next.disabled = i >= N - 1;
+      prev.setAttribute('aria-label', '上一字'); next.setAttribute('aria-label', '下一字');
+      for (j = Math.max(0, i - 2); j <= Math.min(N - 1, i + 2); j++) ctx.appendChild(h('span', { class: j === i ? 'cur' : '', text: nv.cells[j].ch }));
+      return h('div', { class: 'spnav', 'data-role': 'stroke-nav' }, [
+        h('div', { class: 'sprow big' }, [prev, next]),
+        h('div', { class: 'sprow pos' }, [h('div', { class: 'sppos', 'data-role': 'stroke-pos', text: '第 ' + (i + 1) + ' / ' + N + ' 字' }), ctx])
+      ]);
+    }
+    function start() { if (settings().strokeMode === 'step') toStatic(P.rec.n); else play(); }
+    function loadChar(ch) {
+      stopTimer();
+      var tok = ++P.tok;
+      P.ch = ch; P.rec = null; P.state = 'loading'; P.n = 0; P.part = null; P.mode = 'idle'; P.i = 0; P.ovPage = 0;
+      titleEl.textContent = '筆順 · ' + ch;
       build();
-      if (rec) play();
-    }).catch(function (e) {
-      MX.err(e);
-      if (cur !== P) return;
-      P.state = 'error'; build();
-    });
-    build();
+      St.get(ch).then(function (rec) {
+        if (cur !== P || tok !== P.tok) return;
+        P.rec = rec; P.state = rec ? 'ok' : 'nodata';
+        build();
+        if (rec) start();
+      }).catch(function (e) {
+        MX.err(e);
+        if (cur !== P || tok !== P.tok) return;
+        P.state = 'error'; build();
+      });
+    }
+    function stepChar(d) {
+      var nv = P.nav;
+      if (!nv) return;
+      var i = MX.clamp(nv.idx + d, 0, nv.cells.length - 1);
+      if (i === nv.idx) return;
+      nv.idx = i;
+      loadChar(nv.cells[i].ch);
+    }
+    P.stepChar = stepChar;
+    function keyDir(k, c) {
+      if (k === 'ArrowLeft' || k === 'PageUp' || k === 'AudioVolumeUp' || k === 'VolumeUp' || c === 24) return -1;
+      if (k === 'ArrowRight' || k === 'PageDown' || k === 'AudioVolumeDown' || k === 'VolumeDown' || c === 25) return 1;
+      return 0;
+    }
+    function onKey(e) { var d = keyDir(e.key, e.keyCode); if (cur === P && P.nav && d) { e.preventDefault(); e.stopPropagation(); stepChar(d); } }
+    function onMoKey(e) { if (cur === P && P.nav && (e.detail === 'next' || e.detail === 'prev')) stepChar(e.detail === 'next' ? 1 : -1); }
+    document.addEventListener('keydown', onKey, true);
+    window.addEventListener('mo-key', onMoKey);
     P.play = play; P.toStatic = toStatic;
+    loadChar(P.ch);
     return api;
   }
   function close() {
@@ -167,7 +212,7 @@
     info: function () {
       if (!cur) return null;
       var P = cur;
-      return { ch: P.ch, state: P.state, strokes: P.rec ? P.rec.n : 0, n: P.n, mode: P.mode, steps: P.steps, redraws: P.redraws, ovPage: P.ovPage, size: P.size, dpr: P.dpr,
+      return { ch: P.ch, idx: P.nav ? P.nav.idx : -1, state: P.state, strokes: P.rec ? P.rec.n : 0, n: P.n, mode: P.mode, steps: P.steps, redraws: P.redraws, ovPage: P.ovPage, size: P.size, dpr: P.dpr,
         speed: settings().strokeSpeed, ms: (MX.test && MX.test.strokeMs) || SPEEDS[settings().strokeSpeed] || SPEEDS.mid };
     }
   };

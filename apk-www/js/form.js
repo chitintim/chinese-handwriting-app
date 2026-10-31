@@ -36,7 +36,8 @@
       { k: 'strokeTap', label: '雙擊看筆順', opts: ONOFF },
       { k: 'perf', label: '效能模式', opts: ONOFF },
       { k: 'autoFlip', label: '自動翻頁', opts: ONOFF },
-      { k: 'flipDelay', label: '翻頁等待', opts: [['1', '1秒'], ['2', '2秒'], ['3', '3秒']] },
+      { k: 'phoneAuto', label: '自動下一字（手機）', opts: ONOFF },
+      { k: 'flipDelay', label: '翻頁等待', opts: [['1', '1秒'], ['1.5', '1.5秒'], ['2', '2秒'], ['3', '3秒']] },
       { k: 'autoNext', label: '翻頁鈕', opts: ONOFF },
       { k: 'edgeBottom', label: '邊緣留白 下', opts: [['0', '0%'], ['2', '2%'], ['3.5', '3.5%'], ['5', '5%'], ['8', '8%']] },
       { k: 'edgeSide', label: '邊緣留白 左右上', opts: [['0', '0%'], ['1', '1%'], ['2', '2%'], ['3', '3%']] },
@@ -46,7 +47,7 @@
     ],
     // The app settings screen / the practice sheet group the SETTINGS fields (the 署名落款 block, 資料 and 關於 are built by the screen itself)
     GROUPS: [
-      { id: 'write', title: '書寫', keys: ['acceptTouch', 'phoneTouch', 'strokeTap', 'autoFlip', 'flipDelay', 'autoNext'] },
+      { id: 'write', title: '書寫', keys: ['acceptTouch', 'phoneTouch', 'strokeTap', 'autoFlip', 'phoneAuto', 'flipDelay', 'autoNext'] },
       { id: 'brush', title: '筆觸', keys: ['brush', 'tune', 'inkWidth', 'pressRange', 'stab', 'pressure'] },
       { id: 'grid', title: '格線', keys: ['gridLook', 'gridDensity'] },
       { id: 'sign', title: '署名落款', keys: [] },

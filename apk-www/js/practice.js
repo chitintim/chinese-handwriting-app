@@ -118,9 +118,11 @@
     });
     on(window, 'resize', onResize);
     on(window, 'orientationchange', onResize);
+    on(document, 'pointerdown', function (e) { if (S && S.chooser && !S.chooser.contains(e.target) && !(S.pill && S.pill.contains(e.target))) closeChooser(); }, true);
     on(document, 'keydown', onKey);
     on(window, 'mo-key', function (e) {
       var d = e.detail;
+      if (MX.StrokePop && MX.StrokePop.isOpen()) return;       // the stroke-order popup uses them to step characters
       if (d === 'next') goRel(1); else if (d === 'prev') goRel(-1);
     });
     on(document, 'visibilitychange', function () { if (document.hidden) flush(); });
@@ -149,37 +151,116 @@
     for (var i = page.length - 1; i >= 0; i--) if (page[i] >= 0) return page[i];
     return -1;
   }
-  // ---- phone layout: header (返回, section title, 設定) / context strip / n / total + bar; buttons below the cell
+  // ---- phone layout. Top bar: [返回 ... 自動 筆順 解說 設定] / section title + n / total / context strip / progress. Bottom bar (thumb): [撤銷 清除 (提示) 上一字 下一字].
+  // 自動 = the auto-advance pill (settings.phoneAuto, tap = on / off, long press = the delay chooser); the delay itself is settings.flipDelay.
+  function autoOn() { return settings().phoneAuto !== false; }
+  function delayMs() {
+    var ms = (parseFloat(settings().flipDelay) || 2) * 1000;
+    if (MX.test && MX.test.flipMs) ms = MX.test.flipMs;
+    return ms;
+  }
+  function secText(ms) { return String(Math.round(ms / 100) / 10); }
+  // 電子紙 (and reduced motion): no animation, the button shows static text instead of a progress fill
+  function staticPending() {
+    if (settings().screenType === 'eink') return true;
+    try { return !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) { return false; }
+  }
+  function syncPill() {
+    if (!S || !S.pill) return;
+    var on = autoOn();
+    S.pill.setAttribute('aria-pressed', on ? 'true' : 'false');
+    S.pill.firstChild.textContent = '自動 ' + (on ? '開' : '關');
+  }
+  function toggleAuto() {
+    if (!S) return;
+    settings().phoneAuto = !autoOn();
+    Model.saveSettings();
+    hideNext();
+    syncPill();
+    if (S.status) S.status.textContent = '自動下一字：' + (autoOn() ? '開' : '關');
+  }
+  function openChooser() {
+    if (!S || S.chooser || !S.top) return;
+    hideNext();
+    var cur = parseFloat(settings().flipDelay) || 2;
+    var row = h('div', { class: 'achoose', 'data-role': 'auto-chooser', role: 'group', 'aria-label': '自動下一字的等待時間' }, [h('span', { class: 'al', text: '等待' })]);
+    [['1', '1 秒'], ['1.5', '1.5 秒'], ['2', '2 秒'], ['3', '3 秒']].forEach(function (o) {
+      var sel = parseFloat(o[0]) === cur;
+      row.appendChild(h('button', { type: 'button', 'data-v': o[0], class: sel ? 'on' : null, 'aria-pressed': sel ? 'true' : 'false', text: o[1], onclick: function () {
+        settings().flipDelay = o[0]; Model.saveSettings(); closeChooser();
+      } }));
+    });
+    S.top.appendChild(row);
+    S.chooser = row;
+  }
+  function closeChooser() {
+    if (!S || !S.chooser) return;
+    if (S.chooser.parentNode) S.chooser.parentNode.removeChild(S.chooser);
+    S.chooser = null;
+  }
+  // The pill sits in the top bar, outside the cell: a press on it never reaches the ink canvas, so a long press can not be a stroke.
+  function buildPill() {
+    var b = h('button', { type: 'button', class: 'autopill', 'data-act': 'auto', 'aria-label': '自動下一字', 'aria-haspopup': 'true', title: '點一下開關；長按設定等待時間' }, [h('span', { class: 't' })]);
+    var sx = 0, sy = 0;
+    function stop() { clearTimeout(S.timers.pill); }
+    b.addEventListener('pointerdown', function (e) {
+      S.pillLong = false; sx = e.clientX; sy = e.clientY;
+      stop();
+      S.timers.pill = setTimeout(function () { if (!S) return; S.pillLong = true; openChooser(); }, 500);
+    });
+    b.addEventListener('pointermove', function (e) { if (Math.hypot(e.clientX - sx, e.clientY - sy) > 12) stop(); });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) { b.addEventListener(t, stop); });
+    b.addEventListener('contextmenu', function (e) { e.preventDefault(); stop(); S.pillLong = true; openChooser(); });
+    b.addEventListener('keydown', function (e) { if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); openChooser(); } });
+    b.addEventListener('click', function () {
+      if (S.pillLong) { S.pillLong = false; return; }       // the long press already opened the chooser
+      closeChooser();
+      toggleAuto();
+    });
+    S.pill = b;
+    syncPill();
+    return b;
+  }
   function buildPhoneBar() {
     var bar = S.bar, top = S.top;
+    closeChooser();
     bar.innerHTML = ''; top.innerHTML = '';
     var notes = MX.Library.hasNotes(S.copy.textId, Model.sid(S.copy));
     var sc = S.cfg.script === 'simp' ? 'simp' : 'trad', tt = S.text.textTitle || S.text.title, st = S.text.sectionTitle || S.text.title;
     var title = S.text.multi ? tt[sc] + ' · ' + st[sc] : S.text.title[sc];
     S.counter = h('div', { class: 'ctr', 'data-role': 'counter' });
     S.progress = h('i', { style: 'width:0%' });
+    S.progBar = h('div', { class: 'bar', 'data-role': 'phone-progress', role: 'progressbar', 'aria-label': '進度', 'aria-valuemin': '1' }, [S.progress]);
     S.ctx = h('div', { class: 'pctx', 'data-role': 'ctx-strip', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) });
-    top.appendChild(h('div', { class: 'prow' }, [
+    var head = h('div', { class: 'prow head' }, [
       h('button', { type: 'button', text: '返回', 'data-act': 'back', onclick: function () { flush(); if (S.readOnly) history.back(); else location.hash = MX.Screens.backFor(S.copy.textId); } }),
-      h('div', { class: 'ptitle', 'data-role': 'phone-title', text: title || '', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) }),
-      S.readOnly ? h('button', { type: 'button', text: '匯出', 'data-act': 'export', onclick: function () { openExport(); } })
-        : h('button', { type: 'button', text: '設定', 'data-act': 'settings', onclick: openSettings })
-    ]));
+      h('div', { class: 'sp' })
+    ]);
+    S.pill = null;
+    if (!S.readOnly) head.appendChild(buildPill());
+    head.appendChild(h('button', { type: 'button', text: '筆順', 'data-act': 'stroke', onclick: strokeButton }));
+    if (notes) head.appendChild(h('button', { type: 'button', text: '解說', 'data-act': 'notes', onclick: openNotes }));
+    head.appendChild(S.readOnly ? h('button', { type: 'button', text: '匯出', 'data-act': 'export', onclick: function () { openExport(); } })
+      : h('button', { type: 'button', text: '設定', 'data-act': 'settings', onclick: openSettings }));
+    top.appendChild(head);
+    top.appendChild(h('div', { class: 'ptrow' }, [h('div', { class: 'ptitle', 'data-role': 'phone-title', text: title || '', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) }), S.counter]));
     top.appendChild(S.ctx);
-    top.appendChild(h('div', { class: 'pprog' }, [S.counter, h('div', { class: 'bar', 'data-role': 'phone-progress' }, [S.progress])]));
-    S.btnPrev = MX.btn({ label: '上一字', icon: 'tri-l', act: 'prev', onclick: function () { goRel(-1); }, iconSize: 18 });
-    S.nextLabel = h('span', { text: '下一字' });
-    S.btnNext = h('button', { type: 'button', class: 'on withico', 'data-act': 'next', onclick: phoneNext }, [S.nextLabel, MX.icon('tri-r', 18)]);
-    bar.appendChild(h('div', { class: 'prow nav' }, [S.btnPrev, S.btnNext]));
-    var row = h('div', { class: 'prow tools' });
+    top.appendChild(h('div', { class: 'pprog' }, [S.progBar]));
+    S.btnPrev = h('button', { type: 'button', text: '上一字', 'data-act': 'prev', onclick: function () { goRel(-1); } });
+    S.nextWord = '下一字';
+    S.nextLabel = h('span', { class: 'lbl', text: S.nextWord });
+    S.btnNext = h('button', { type: 'button', class: 'withico', 'data-act': 'next', onclick: phoneNext }, [S.nextLabel, MX.icon('tri-r', 18)]);
+    S.status = h('span', { class: 'sr', role: 'status', 'aria-live': 'polite', 'data-role': 'auto-status' });
+    var row = h('div', { class: 'prow main' });
     if (!S.readOnly) {
       row.appendChild(h('button', { type: 'button', text: '撤銷', 'data-act': 'undo', onclick: undo }));
       row.appendChild(h('button', { type: 'button', text: '清除', 'data-act': 'clear', onclick: clearPage }));
       if (S.cfg.mode === 'recall') row.appendChild(h('button', { type: 'button', text: '提示', 'data-act': 'hint', onclick: hint }));
     }
-    row.appendChild(h('button', { type: 'button', text: '筆順', 'data-act': 'stroke', onclick: strokeButton }));
-    if (notes) row.appendChild(h('button', { type: 'button', text: '解說', 'data-act': 'notes', onclick: openNotes }));
+    row.appendChild(S.btnPrev);
+    row.appendChild(S.btnNext);
     bar.appendChild(row);
+    bar.appendChild(S.status);
   }
   // the characters around the current one, in sequence (reading) order, left to right whatever the writing direction; 默 hides the current and the following ones
   function fillCtx() {
@@ -188,15 +269,45 @@
     for (i = Math.max(0, cur - 3); i <= Math.min(n - 1, cur + 3); i++) {
       c = S.cells[i]; masked = S.cfg.mode === 'recall' && i >= cur;
       b = h('button', { type: 'button', class: 'cx' + (i === cur ? ' cur' : '') + (c.sec !== S.cells[cur].sec ? ' other' : ''), 'data-idx': i, 'data-cur': i === cur ? '1' : null,
-        'aria-label': masked ? '' : c.ch, onclick: (function (k) { return function () { go(pageOf(k)); }; })(i) }, [h('span', { class: 'ch', text: masked ? '○' : c.ch })]);
+        'aria-current': i === cur ? 'true' : null, 'aria-label': masked ? '第 ' + (i + 1) + ' 字（尚未顯示）' : '跳到第 ' + (i + 1) + ' 字 ' + c.ch, onclick: (function (k) { return function () { go(pageOf(k)); }; })(i) }, [h('span', { class: 'ch', text: masked ? '○' : c.ch })]);
       S.ctx.appendChild(b);
     }
   }
   function phoneNext() {
     if (!S) return;
+    hideNext();
     if (S.pageIdx < S.pages.length - 1) { goRel(1); return; }
     if (!S.readOnly && !S.copy.completedAt && S.active === null && S.copy.filled >= S.copy.total && S.copy.total > 0) complete();
   }
+  // ---- the pending auto-advance: LCD = the button fills over the delay (a black copy of its content is uncovered by CSS); 電子紙 = static text on the button ("1.5 秒後下一字").
+  // The button keeps its size either way (flex-basis 0, fixed height), so nothing moves.
+  function showPending(ms, kind) {
+    if (!S || !S.phone || !S.btnNext) return;
+    var word = kind === 'finish' ? '完成' : '下一字', sec = secText(ms);
+    S.pend = { ms: ms, kind: kind };
+    S.status.textContent = sec + ' 秒後' + word;
+    if (staticPending()) {
+      S.btnNext.setAttribute('data-pending', 'static');
+      S.nextLabel.textContent = '';
+      S.nextLabel.appendChild(h('span', { class: 'l1', text: sec + ' 秒後' }));
+      S.nextLabel.appendChild(h('span', { class: 'l2', text: word }));
+    } else {
+      S.btnNext.setAttribute('data-pending', 'fill');
+      S.btnNext.appendChild(h('i', { class: 'afill', 'data-role': 'auto-progress', 'aria-hidden': 'true', style: 'animation-duration:' + ms + 'ms' }, [h('span', { class: 'lbl', text: word }), MX.icon('tri-r', 18)]));
+    }
+  }
+  function clearPending() {
+    if (!S || !S.pend) return;
+    S.pend = null;
+    if (S.btnNext) {
+      S.btnNext.removeAttribute('data-pending');
+      var f = S.btnNext.querySelector('.afill');
+      if (f) S.btnNext.removeChild(f);
+      S.nextLabel.textContent = S.nextWord;
+    }
+    if (S.status) S.status.textContent = '';
+  }
+  function buzz() { try { if (navigator.vibrate) navigator.vibrate(10); } catch (e) { /* not available (iOS Safari) */ } }
   function buildBar() {
     if (S.phone) { buildPhoneBar(); return; }
     var land = S.root.className.indexOf('land') >= 0;
@@ -280,7 +391,7 @@
     var vw = window.innerWidth, vh = window.innerHeight;
     if (S.phone) {
       S.inset = { l: 0, t: 0, r: 0, b: 0 };
-      S.g = Layout.gridOne(W, H, S.cfg, S.inset, 6);      // one cell, as big as the stage allows
+      S.g = Layout.gridOne(W, H, S.cfg, S.inset, 8);      // one cell, as big as the stage allows
     } else {
       S.inset = Layout.insets(settings(), vw, vh, { left: r.left < 2, top: r.top < 2, right: r.right > vw - 2, bottom: r.bottom > vh - 2 });
       S.g = Layout.grid(W, H, S.cfg, S.inset);
@@ -358,7 +469,9 @@
       var last = S.pageIdx >= S.pages.length - 1, fin = last && !S.readOnly && !S.copy.completedAt && S.copy.total > 0 && S.copy.filled >= S.copy.total;
       S.btnNext.disabled = last && !fin;
       S.btnNext.setAttribute('data-act', fin ? 'finish' : 'next');
-      S.nextLabel.textContent = fin ? '完成' : '下一字';
+      S.nextWord = fin ? '完成' : '下一字';
+      if (!S.pend) S.nextLabel.textContent = S.nextWord;
+      S.progBar.setAttribute('aria-valuemax', String(S.pages.length)); S.progBar.setAttribute('aria-valuenow', String(S.pageIdx + 1)); S.progBar.setAttribute('aria-valuetext', S.counter.textContent);
       S.progress.style.width = (100 * (S.pageIdx + 1) / Math.max(1, S.pages.length)) + '%';
       S.root.setAttribute('data-cell', S.pages[S.pageIdx][0]);
       fillCtx();
@@ -380,6 +493,7 @@
   function onKey(e) {
     if (!S || document.querySelector('.modal-bg')) return;
     var k = e.key, c = e.keyCode, d = 0, vert = S.cfg.dir === 'v';
+    if (k === 'Escape' && S.chooser) { closeChooser(); return; }
     if (k === 'ArrowLeft') d = vert ? 1 : -1;
     else if (k === 'ArrowRight') d = vert ? -1 : 1;
     else if (k === 'PageDown' || k === 'AudioVolumeDown' || k === 'VolumeDown' || c === 25) d = 1;
@@ -406,16 +520,21 @@
   }
   // the double-tap exists only while the finger never inks (pen-only mode) and the setting 雙擊看筆順 is on
   function tapEnabled() { return !!S && !S.phone && settings().strokeTap !== false && !settings().acceptTouch; }
+  // the popup steps through the whole reading order (S.cells: title, body, 落款), starting at idx
   function openStroke(idx) {
     if (!S || !S.cells[idx]) return;
     S.lastCell = idx;
-    MX.StrokePop.open({ ch: S.cells[idx].ch, script: S.cfg.script });
+    MX.StrokePop.open({ ch: S.cells[idx].ch, script: S.cfg.script, nav: { cells: S.cells, idx: idx } });
   }
-  // the toolbar button: the cell touched last (pen, finger or double-tap) when it is on this page, else the cell written last, else the first cell of the page
+  function isEmpty(i) { return !(S.copy.ink[KY(i)] || []).length; }
+  // the toolbar button: the next character that is not written yet, starting at the current one (phone: the character on the screen; tablet: the cell touched last when it is on this
+  // page, else the cell written last, else the first cell of the page). Everything written: the current one. A finger double-tap opens the tapped cell itself (openStroke).
   function strokeButton() {
     if (!S) return;
-    var idx = S.lastCell !== undefined && S.slotOf[S.lastCell] !== undefined ? S.lastCell : (S.focus >= 0 && S.slotOf[S.focus] !== undefined ? S.focus : firstIdx(S.pages[S.pageIdx]));
-    openStroke(idx);
+    var cur = S.phone ? S.pages[S.pageIdx][0]
+      : (S.lastCell !== undefined && S.slotOf[S.lastCell] !== undefined ? S.lastCell : (S.focus >= 0 && S.slotOf[S.focus] !== undefined ? S.focus : firstIdx(S.pages[S.pageIdx]))), i;
+    for (i = cur; i < S.cells.length; i++) if (isEmpty(i)) { openStroke(i); return; }
+    openStroke(cur);
   }
 
   // ------------------------------------------------------------------ pointer input
@@ -452,6 +571,10 @@
   function fingerOk() { return S.phone ? settings().phoneTouch !== false : !!settings().acceptTouch; }
   function allowed(e) {
     if (e.pointerType === 'pen') return true;
+    if (e.pointerType === 'mouse' && !S.phone && MX.Device.env().desktop) {       // desktop without touch or pen: the mouse writes (else the app is unusable); a one-time hint says a tablet or pen is best
+      if (!settings().mouseTip) { settings().mouseTip = true; Model.saveSettings(); MX.toast('用滑鼠也能書寫；用平板或手寫筆效果最好。', 4000); }
+      return true;
+    }
     if (!fingerOk()) return false;
     if (Math.max(e.width || 0, e.height || 0) > (S.phone ? 120 : 45)) return false;   // big contact area = palm
     return Date.now() - S.lastPen > 1500;   // palm rejection while a pen is around
@@ -496,7 +619,7 @@
     S.cap.reset();
     S.stroke = { idx: idx, cx: o.x, cy: o.y, fed: 0, style: inkStyle() };
     // finger / mouse: no real pressure -> width from the writing speed (touch always; a mouse only in the phone layout, where it stands in for a finger)
-    if (e.pointerType === 'touch' || (e.pointerType === 'mouse' && S.phone)) { var sty = S.stroke.style; S.cap.synth = function (n) { return Ink.rawFor(sty, n); }; }
+    if (e.pointerType === 'touch' || e.pointerType === 'mouse') { var sty = S.stroke.style; S.cap.synth = function (n) { return Ink.rawFor(sty, n); }; }
     S.stroke.map = mapFor(S.stroke);
     S.stroke.pen = Ink.pen(S.inkx, o.x, o.y, S.g.cell / 1000, S.stroke.style, { px: S.kx });
     S.cap.take(e, S.stroke.map);
@@ -695,6 +818,7 @@
   function hideNext() {
     if (!S) return;
     clearTimeout(S.timers.next);
+    clearPending();
     if (S.nextBtn && S.nextBtn.parentNode) S.nextBtn.parentNode.removeChild(S.nextBtn);
     S.nextBtn = null;
   }
@@ -715,15 +839,17 @@
     var st = settings();
     if (S.readOnly) return false;
     // phone: the copy is complete when every character has ink; that is announced after the same idle delay as a page turn (never at the first stroke of the last character)
-    var allDone = function () { return S.phone && !S.copy.completedAt && S.copy.total > 0 && S.copy.filled >= S.copy.total; };
-    var flips = function () { return st.autoFlip && S.pageIdx < S.pages.length - 1 && pageFull(S.pages[S.pageIdx]); };
+    var phoneOn = S.phone && autoOn();       // phone: its own 自動下一字 (the pill); the tablet's 自動翻頁 is a separate setting
+    var allDone = function () { return phoneOn && !S.copy.completedAt && S.copy.total > 0 && S.copy.filled >= S.copy.total; };
+    var flips = function () { return (S.phone ? phoneOn : st.autoFlip) && S.pageIdx < S.pages.length - 1 && pageFull(S.pages[S.pageIdx]); };
     if (!allDone() && !flips()) return false;
-    var seq = S.token, ms = (parseInt(st.flipDelay, 10) || 2) * 1000;
-    if (MX.test && MX.test.flipMs) ms = MX.test.flipMs;
+    var seq = S.token, ms = delayMs();
+    if (S.phone) showPending(ms, allDone() ? 'finish' : 'next');
     S.timers.next = setTimeout(function () {
-      if (!S || S.token !== seq || S.active !== null || document.querySelector('.modal-bg')) return;
-      if (allDone()) { complete(); return; }
-      if (flips()) goRel(1);
+      if (!S || S.token !== seq) return;
+      if (S.active !== null || document.querySelector('.modal-bg')) { clearPending(); return; }
+      if (allDone()) { clearPending(); buzz(); complete(); return; }
+      if (flips()) { buzz(); goRel(1); }       // one page change = one redraw (renderPage); hideNext there clears the countdown
     }, ms);
     return true;
   }
@@ -871,7 +997,7 @@
       });
       return { phone: S.phone, page: S.pageIdx, pages: S.pages.length, inset: g.inset, stage: [g.W, g.H], gx: g.ox, gy: g.oy, cols: g.cols, rows: g.rows, cell: g.cell, dir: g.dir, portrait: g.portrait,
         perPage: g.perPage, total: S.cells.length, filled: S.copy.filled, cells: cells, copyId: S.copy.id, completed: !!S.copy.completedAt,
-        mode: S.cfg.mode, nextBtn: !!S.nextBtn, pressureSeen: S.cap.pressureSeen, hint: S.hint, rawOk: S.rawOk, kx: S.kx, ky: S.ky, dpr: S.dpr,
+        mode: S.cfg.mode, nextBtn: !!S.nextBtn, pending: S.pend ? S.pend.kind : null, chooser: !!S.chooser, pressureSeen: S.cap.pressureSeen, hint: S.hint, rawOk: S.rawOk, kx: S.kx, ky: S.ky, dpr: S.dpr,
         inkSize: [S.ink.width, S.ink.height], inkCss: [S.ink.style.width, S.ink.style.height] };
     },
     flipMs: 0,
@@ -885,6 +1011,7 @@
     inkOf: function (idx) { return S && S.cells[idx] ? (S.copy.ink[S.cells[idx].key] || []) : []; },
     setPos: function (p) { if (S) { S.copy.pos = p; layout(); } },
     strokeMs: 0,
-    lastCell: function () { return S ? S.lastCell : undefined; }
+    lastCell: function () { return S ? S.lastCell : undefined; },
+    clearLast: function () { if (S) { S.lastCell = undefined; S.focus = -1; } }
   };
 })();
