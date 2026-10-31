@@ -65,6 +65,9 @@ textarea{width:100%;min-height:160px;border:2px solid #000;font-size:14px;font-f
 .swi{margin:0 10px 8px 0;width:96px}
 .swi canvas{display:block;border:1px solid #000}
 .pt-grid div b{font-weight:normal;color:#333}
+.frow.tune input[type=range]{width:300px;max-width:100%;height:48px;margin:0 10px 0 0;flex:1 1 200px}
+.frow.tune .tval{min-width:72px;font-size:17px}
+textarea[data-role=tune-json]{min-height:110px;margin-top:8px}
 
 /* install-app area (hosted web app only) and update notice */
 a.btnlink{display:flex;align-items:center;justify-content:center;min-height:64px;padding:0 24px;border:3px solid #000;background:#000;color:#fff;font-size:22px;font-weight:bold;text-decoration:none;text-align:center}

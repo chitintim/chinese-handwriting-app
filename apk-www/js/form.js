@@ -17,7 +17,8 @@
       { k: 'title', label: '標題', opts: ONOFF }
     ],
     SETTINGS: [
-      { k: 'brush', label: '筆觸', pick: true, opts: [['mao', '毛筆'], ['xiu', '秀麗筆'], ['ying', '硬筆'], ['gang', '鋼筆']] },
+      { k: 'brush', label: '筆觸', pick: true, opts: [['mao', '毛筆'], ['xiu', '秀麗筆'], ['ying', '硬筆'], ['gang', '鋼筆'], ['custom', '自訂']] },
+      { k: 'tune', label: '調校', button: '筆觸調校…' },
       { k: 'inkWidth', label: '筆粗', pick: true, opts: [['thin', '細'], ['mthin', '中細'], ['mid', '中'], ['thick', '粗']] },
       { k: 'curve', label: '筆壓', opts: [['light', '輕'], ['mid', '中'], ['heavy', '重']] },
       { k: 'stab', label: '防抖', opts: [['off', '關'], ['light', '輕'], ['mid', '中']] },
@@ -78,10 +79,21 @@
     row: function (label, ctrl, key) {
       return h('div', { class: 'frow', 'data-k': key || null }, [h('label', { text: label }), ctrl]);
     },
+    // highlight `value` in the segmented control of row `key` inside `root` (after the value was changed from elsewhere)
+    syncSeg: function (root, key, value) {
+      var row = root && root.querySelector('[data-k="' + key + '"]');
+      if (row) Array.prototype.forEach.call(row.querySelectorAll('button'), function (b) { b.className = b.getAttribute('data-v') === String(value) ? 'on' : ''; });
+    },
     // fields: array of definitions; obj: object to read/mutate; locked(content)->bool; onChange(k, v)
     build: function (fields, obj, locked, onChange) {
       var box = h('div');
       fields.forEach(function (f) {
+        if (f.button) {      // an action row (筆觸調校): opens the tuning panel; saving a 自訂 brush selects it
+          box.appendChild(F.row(f.label, h('button', { type: 'button', text: f.button, 'data-act': f.k, onclick: function () {
+            if (F.openTuner) F.openTuner(function () { F.syncSeg(box, 'brush', obj.brush); if (onChange) onChange('brush', obj.brush); });
+          } }), f.k));
+          return;
+        }
         var dis = !!(f.content && locked);
         box.appendChild(F.row(f.label, F.seg(f.opts, obj[f.k], function (v) {
           obj[f.k] = v;
