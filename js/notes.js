@@ -159,7 +159,7 @@
   // E-ink tablet: paged like the 解說 page (no scrolling). Phone / LCD: one scrolling screen. The copy is fixed text (it is not part of the library).
   var GITHUB = 'https://github.com/chitintim/chinese-handwriting-app';
   var DANA = 'https://danafarber.jimmyfund.org/site/Donation2?df_id=10522&mfc_pref=T&10522.donation=form1';
-  var WM = 'https://www.wm.org.hk/%E7%B7%9A%E4%B8%8A%E5%8A%9F%E5%BE%B7';
+  var WM = 'https://www.wm.org.hk/';
   N.LINKS = { github: GITHUB, dana: DANA, wm: WM };
   function ext(act, href, text, cls) { return h('a', { class: cls || 'btnlink', 'data-act': act, href: href, target: '_blank', rel: 'noopener', text: text }); }
   function aboutBlocks() {
@@ -168,9 +168,8 @@
       h('div', { class: 'npart', 'data-part': 'hey' }, [
         h('h2', { text: 'Hey, it\'s Tim 👋' }),
         h('p', { class: 'ntext', text: 'I vibe-coded this while spending a lot of time sitting with my mom in hospital. She\'s been a devoted Buddhist for a very long time (皈依 many years ago), and 抄心經 is close to her heart. I wouldn\'t call myself a Buddhist, more someone slowly learning about it, and this gave me something calm to do while I\'m here.' }),
-        h('p', { class: 'ntext', text: 'The iReader I built it for was a gift for Mom a few months ago, back when she could still read. Now it\'s what I 抄經 on, sitting next to her.' }),
-        h('p', { class: 'ntext', text: 'It started as "I just want a nice way to 抄心經 on my e-ink tablet" and, well, it grew a bit. 😅' }),
-        h('p', { class: 'ntext', text: '嗨，我是 Tim。這個小工具，是我在醫院陪媽媽的日子裡慢慢做出來的。媽媽是虔誠的佛教徒，很多年前已經皈依；我自己不算是佛教徒，只是在慢慢學習。這部 iReader，本來是幾個月前買給媽媽看書用的；現在，它陪我在她身邊抄經。' })
+        h('p', { class: 'ntext', text: 'A few months ago I\'d got her an e-ink tablet for reading, and sitting beside her it became my 抄經 tablet. It started as "I just want a nice way to 抄心經 on this" and, well, it grew a bit. 😅' }),
+        h('p', { class: 'ntext', text: '嗨，我是 Tim。這個小工具，是我在醫院陪媽媽的日子裡慢慢做出來的。媽媽是虔誠的佛教徒，很多年前已經皈依；我自己不算是佛教徒，只是在慢慢學習。幾個月前買給媽媽看書的電子墨水平板，後來成了我在她身邊抄經的字帖。' })
       ]),
       h('div', { class: 'npart', 'data-part': 'donate' }, [
         h('h2', { text: '隨喜 · If you like this app' }),
@@ -180,8 +179,8 @@
           ext('donate-dana', DANA, 'Dana-Farber · Donate')
         ]),
         h('div', { class: 'nitem aitem', 'data-role': 'donate-wm' }, [
-          h('p', { class: 'ntext', text: '西方寺 Western Monastery (荃灣, Hong Kong) — where Mom spent so much of her time 禮佛.' }),
-          ext('donate-wm', WM, '西方寺 · 線上功德'),
+          h('p', { class: 'ntext', text: '西方寺 Western Monastery (荃灣, Hong Kong) — where Mom spent so much of her time 禮佛. If you\'re ever in Hong Kong, it\'s a beautiful, peaceful place to visit; 隨喜 there in person if you like.' }),
+          ext('donate-wm', WM, '西方寺 · 網站'),
           h('p', { class: 'ntext', text: '(852) 2411 5111' })
         ]),
         h('p', { class: 'ntext', text: '如果這個小工具對你有幫助，歡迎隨喜捐助以上機構。🙏' })

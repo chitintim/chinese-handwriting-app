@@ -264,7 +264,7 @@
     el.appendChild(h('div', { class: 'intro' + (compactIntro ? ' compact' : ''), 'data-role': 'home-intro' }, [
       h('div', { class: 'i1', 'data-role': 'intro-title', text: '墨字帖 · 抄經、臨帖的描紅練習' }),
       h('div', { class: 'ibodies' }, compactIntro ? [iZh, iEn] : [iEn, iZh]),
-      h('div', { class: 'i3', 'data-role': 'intro-ask', text: 'Free, always. If you like it, please consider a kind donation to Dana-Farber or 西方寺 — 如覺得有用，歡迎隨喜。' }),
+      h('div', { class: 'i3', 'data-role': 'intro-ask', text: 'Free, always. If you like it, please consider a kind donation to Dana-Farber, or a visit to 西方寺 — 如覺得有用，歡迎隨喜。' }),
       h('div', { class: 'i4', 'data-role': 'intro-links' }, [
         h('a', { class: 'ilink', 'data-act': 'about', href: '#/about' }, ['關於與隨喜', MX.icon('tri-r', 12)]),
         h('a', { class: 'ilink', 'data-act': 'github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: 'GitHub' })
