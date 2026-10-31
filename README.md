@@ -20,7 +20,7 @@ Funny thing about that tablet: the iReader was actually a gift for Mom a few mon
 
 ### If this is useful to you 隨喜 🙏
 
-It's free and always will be. If you'd like to give something back, please donate to one of these instead — not to me:
+It's free and always will be. If you'd like to give something back, please consider a kind donation to one of these:
 
 - **[Dana-Farber Cancer Institute](https://danafarber.jimmyfund.org/site/Donation2?df_id=10522&mfc_pref=T&10522.donation=form1)** (Boston) — Mom has been fighting ovarian cancer, and we spent a couple of months at Dana-Farber. The people there are incredible. On that form you can direct your gift to the **Gynecologic Oncology Program** (which covers ovarian cancer).
 - **[西方寺 Western Monastery](https://www.wm.org.hk/)** (荃灣, Hong Kong) — where Mom spent so much of her time 禮佛, back when she could still go. If you're ever in Hong Kong, it's a beautiful, peaceful place to visit — 隨喜 there in person if you like.
