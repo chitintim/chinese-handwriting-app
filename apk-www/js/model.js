@@ -11,7 +11,7 @@
     screenType: '', exp: null, libScript: 'trad',
     sigDate: 'gz', sigWord: '', sigDizi: true, sigHui: false,
     autoNotes: true, sideNotes: false, strokeTap: true, strokeSpeed: 'mid',
-    layoutMode: 'auto', phoneTouch: true, phoneAuto: true
+    layoutMode: 'auto', phoneTouch: true, phoneAuto: true, lowLat: 'auto'
   };
   var DEF_CFG = {
     script: 'trad', mode: 'trace', grid: 'mi', box: true, guide: true, size: 'M', dir: 'v', punct: 'hide',

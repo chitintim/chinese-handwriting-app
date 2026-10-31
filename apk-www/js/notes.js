@@ -167,7 +167,7 @@
     return [
       h('div', { class: 'npart', 'data-part': 'hey' }, [
         h('h2', { text: 'Hey, it\'s Tim 👋' }),
-        h('p', { class: 'ntext', text: 'I made this while spending a lot of time sitting with my mom in hospital. She\'s been a devoted Buddhist for a very long time (皈依 many years ago), and 抄心經 is close to her heart. I wouldn\'t call myself a Buddhist, more someone slowly learning about it, and this gave me something calm to do while I\'m here.' }),
+        h('p', { class: 'ntext', text: 'I vibe-coded this while spending a lot of time sitting with my mom in hospital. She\'s been a devoted Buddhist for a very long time (皈依 many years ago), and 抄心經 is close to her heart. I wouldn\'t call myself a Buddhist, more someone slowly learning about it, and this gave me something calm to do while I\'m here.' }),
         h('p', { class: 'ntext', text: 'The iReader I built it for was a gift for Mom a few months ago, back when she could still read. Now it\'s what I 抄經 on, sitting next to her.' }),
         h('p', { class: 'ntext', text: 'It started as "I just want a nice way to 抄心經 on my e-ink tablet" and, well, it grew a bit. 😅' }),
         h('p', { class: 'ntext', text: '嗨，我是 Tim。這個小工具，是我在醫院陪媽媽的日子裡慢慢做出來的。媽媽是虔誠的佛教徒，很多年前已經皈依；我自己不算是佛教徒，只是在慢慢學習。這部 iReader，本來是幾個月前買給媽媽看書用的；現在，它陪我在她身邊抄經。' })
@@ -205,7 +205,8 @@
     cur = C;
     el.appendChild(h('div', { class: 'topbar' }, [
       h('button', { text: '返回', class: 'backbtn', 'data-act': 'back', onclick: function () { if (history.length > 1) history.back(); else location.hash = '#/'; } }),
-      h('h1', { class: 'grow', text: '關於', 'data-role': 'about-title' })
+      h('h1', { class: 'grow', text: '關於', 'data-role': 'about-title' }),
+      h('button', { class: 'replay', 'data-act': 'intro-replay', text: '重看介紹', onclick: function () { if (MX.Intro) MX.Intro.open(); } })
     ]));
     if (pagedMode) {
       var pg = paged(el, C, 'about');

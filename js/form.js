@@ -30,6 +30,7 @@
       { k: 'tplSize', label: '字大小', opts: [['s', '小'], ['m', '中小'], ['md', '中'], ['l', '大'], ['xl', '特大']] },
       { k: 'tplTone', label: '深淺', opts: [['light', '淺'], ['mid', '中'], ['dark', '深']] },
       { k: 'pressure', label: '壓感', opts: [['auto', '自動'], ['off', '固定']] },
+      { k: 'lowLat', label: '低延遲筆跡（實驗）', opts: [['auto', '自動'], ['on', '開'], ['off', '關']] },
       { k: 'layoutMode', label: '版面', opts: [['auto', '自動'], ['tablet', '平板'], ['phone', '手機']] },
       { k: 'acceptTouch', label: '手指書寫', opts: ONOFF },
       { k: 'phoneTouch', label: '手機手指書寫', opts: ONOFF },
@@ -52,14 +53,14 @@
       { id: 'grid', title: '格線', keys: ['gridLook', 'gridDensity'] },
       { id: 'sign', title: '署名落款', keys: [] },
       { id: 'notes', title: '解說', keys: ['autoNotes', 'sideNotes'] },
-      { id: 'display', title: '顯示', keys: ['layoutMode', 'screenType', 'libScript', 'tplStyle', 'tplFont', 'tplSize', 'tplTone', 'edgeBottom', 'edgeSide', 'perf'] },
+      { id: 'display', title: '顯示', keys: ['layoutMode', 'lowLat', 'screenType', 'libScript', 'tplStyle', 'tplFont', 'tplSize', 'tplTone', 'edgeBottom', 'edgeSide', 'perf'] },
       { id: 'data', title: '資料', keys: [] },
       { id: 'about', title: '關於', keys: [] }
     ],
     // the explanation under a settings group (shown by the settings screen and the practice sheet)
     GROUP_NOTES: {
       write: '雙擊看筆順：筆不在旁邊時，用手指在格子上快速點兩下，顯示該字的筆順動畫。「手指書寫」開啟時此手勢停用，請改用工具列的「筆順」鈕。手機版面預設可用手指書寫（「手機手指書寫」），雙擊手勢停用，請按「筆順」鈕。',
-      display: '螢幕類型：電子紙＝黑色點線格（電子紙快速刷新也看得清楚）；一般螢幕＝淺灰實線格。選擇時會一併換上對應的格線樣式。版面：自動＝螢幕短邊小於 520 像素時用手機版面（一次寫一個字），否則用平板版面。兩種版面的字跡通用，可以在任一種繼續同一份字帖。'
+      display: '螢幕類型：電子紙＝黑色點線格（電子紙快速刷新也看得清楚）；一般螢幕＝淺灰實線格。選擇時會一併換上對應的格線樣式。版面：自動＝螢幕短邊小於 520 像素時用手機版面（一次寫一個字），否則用平板版面。兩種版面的字跡通用，可以在任一種繼續同一份字帖。低延遲筆跡（實驗）：自動＝只在 iReader 電子紙平板上使用低延遲畫布；其他 Android 平板的某些顯示晶片會把書寫層畫成全黑，所以預設關閉。若書寫區變黑請設為「關」。下次進入書寫頁面才生效。'
     },
     fields: function (keys) {
       return keys.map(function (k) { return F.SETTINGS.filter(function (f) { return f.k === k; })[0]; }).filter(Boolean);

@@ -591,10 +591,14 @@
       var box = h('div', { class: 'prevbox', 'data-role': 'exp-box' });
       var nav = h('div', { class: 'prevnav' });
       var ctrl = h('div', { 'data-role': 'exp-opts' });
-      var btnSave = h('button', { class: 'on big', 'data-act': 'save', text: '儲存', onclick: save });
+      // APK: 儲存 renders and saves through the native bridge. Browser: the button only RENDERS the files; the 儲存 buttons of the panel (one per file / page) do the saving from their own tap
+      // (a browser download started after long async work has lost its user activation, and Android Chrome silently drops it). Each PNG is also shown as an <img> (long-press to save).
+      var native = !!(window.MoBridge && typeof window.MoBridge.saveFile === 'function');
+      var btnSave = h('button', { class: 'on big', 'data-act': 'save', text: native ? '儲存' : '產生檔案', onclick: save });
+      var panel = h('div', { class: 'savepanel', 'data-role': 'save-panel' });
       root.appendChild(h('div', { class: 'topbar' }, [h('h1', { class: 'grow', text: '匯出作品' }), btnSave,
         h('button', { class: 'big', 'data-act': 'back', text: '返回', onclick: function () { api.close(); } })]));
-      root.appendChild(status); root.appendChild(box); root.appendChild(nav); root.appendChild(ctrl);
+      root.appendChild(status); root.appendChild(panel); root.appendChild(box); root.appendChild(nav); root.appendChild(ctrl);
 
       function scopes() {
         var list = [], act = MX.Model.activeCopy(textId, secId);
@@ -657,7 +661,41 @@
         rows.forEach(function (r) { ctrl.appendChild(r); });
         ctrl.appendChild(h('div', { class: 'note', text: d.name ? '姓名：' + d.name + '（可在「設定」更改）' : '尚未設定姓名：到「設定」輸入姓名，才會有落款姓名與印章。' }));
       }
+      function clearPanel() {
+        (panel._urls || []).forEach(function (u) { try { URL.revokeObjectURL(u); } catch (e) { /* ignore */ } });
+        panel._urls = [];
+        panel.innerHTML = '';
+      }
+      function kb(n) { return n >= 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB'; }
+      function showPanel(files) {
+        clearPanel();
+        var many = files.length > 1;
+        panel.appendChild(h('div', { class: 'note', 'data-role': 'save-ready', text: '檔案已備妥（' + files.length + ' 個）。請按「儲存」' + (many ? '，每頁一個。' : '。') + (files[0].mime === 'application/pdf' ? '' : '儲存不了時，長按圖片選「儲存圖片」。') }));
+        files.forEach(function (f, i) {
+          var item = h('div', { class: 'savefile', 'data-idx': i }, [
+            h('div', { class: 'note', text: f.name + ' · ' + kb(f.blob.size) }),
+            h('button', { class: 'on big', 'data-act': 'save-file', 'data-idx': i, text: many ? '儲存 第 ' + (i + 1) + ' 個（共 ' + files.length + '）' : '儲存', onclick: function (ev) { saveOne(f, ev.currentTarget); } })
+          ]);
+          if (/^image\//.test(f.mime)) {
+            var url = URL.createObjectURL(f.blob);
+            panel._urls.push(url);
+            item.appendChild(h('img', { class: 'saveimg', 'data-role': 'save-img', alt: f.name, src: url, loading: 'lazy', decoding: 'async', draggable: 'false' }));
+            item.appendChild(h('div', { class: 'note', text: '長按圖片儲存' }));
+          }
+          panel.appendChild(item);
+        });
+      }
+      async function saveOne(f, btn) {
+        btn.disabled = true;
+        try {
+          var st = await MX.saveFile(f.name, f.blob, f.mime);       // first await inside: the tap's activation is still fresh (the files are already rendered)
+          MX.toast(st);
+          status.textContent = st;
+        } catch (e) { MX.err(e); MX.toast('儲存失敗，請長按圖片儲存'); status.textContent = '儲存失敗'; }
+        btn.disabled = false;
+      }
       async function refresh() {
+        clearPanel();
         var seq = ++ui.seq;
         status.textContent = '處理中…';
         var L;
@@ -685,6 +723,16 @@
       }
       async function save() {
         btnSave.disabled = true;
+        if (!native) {
+          status.textContent = '處理中…';
+          var seq0 = ui.seq;
+          try {
+            var files = await E.build(ui.cp, ui.o);
+            if (seq0 === ui.seq) { showPanel(files); status.textContent = '檔案已備妥，請按「儲存」'; try { panel.scrollIntoView({ block: 'nearest' }); } catch (e) { /* ignore */ } }
+          } catch (e) { MX.err(e); MX.toast('匯出失敗'); status.textContent = '匯出失敗'; }
+          btnSave.disabled = false;
+          return;
+        }
         status.textContent = '儲存中…';
         try {
           var r = await E.run(ui.cp, ui.o);
@@ -703,6 +751,7 @@
       MX.Model.flushAll();
       return JSON.stringify({ app: 'moxie', version: 1, exportedAt: new Date().toISOString(), entries: MX.Store.exportAll() });
     },
+    // one tap, no long work before the save (the JSON is built synchronously), so the user activation is still fresh for the share sheet / the download
     saveJson: async function () {
       var st = await MX.saveFile('moxie-backup-' + MX.fmtDate(Date.now()) + '.json', new Blob([E.json()], { type: 'application/json' }), 'application/json');
       MX.toast(st);

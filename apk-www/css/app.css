@@ -84,6 +84,14 @@ textarea[data-role=tune-json]{min-height:110px;margin-top:8px}
 a.btnlink{display:flex;align-items:center;justify-content:center;min-height:64px;padding:0 24px;border:3px solid #000;background:#000;color:#fff;font-size:22px;font-weight:bold;text-decoration:none;text-align:center}
 a.btnlink.plain{background:#fff;color:#000;min-height:56px;font-size:18px;font-weight:normal;display:inline-flex;margin:8px 0 0}
 .card.install{max-width:760px}
+.apkfb{flex:1 1 100%;width:100%;font-size:var(--t-xs);margin:2px 0 0}
+.flink{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;color:#000;text-decoration:underline}
+.savepanel:empty{display:none}
+.savepanel{border:2px solid #000;padding:8px 10px;margin:6px 0}
+.savefile{margin:0 0 12px}
+.savefile .note{margin:2px 0}
+.savefile button.big{width:100%;margin:4px 0 6px}
+.saveimg{display:block;max-width:100%;height:auto;max-height:60vh;margin:4px auto;border:1px solid #000;-webkit-touch-callout:default;-webkit-user-select:auto;user-select:auto}
 .card.update{background:#fff;border-width:3px}
 
 /* export screen (作品): static preview + big segmented options */
@@ -335,19 +343,27 @@ html.phone .nextbtn{margin-left:-110px;width:220px}
 .achoose button{flex:1 1 0;min-width:44px;min-height:48px;margin:0 2px;padding:0 2px;font-size:16px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 /* home intro + 關於 */
-.intro{margin:var(--sp-2) 0 0;color:#000;font-size:var(--t-xs);line-height:1.35}
-.intro .i1{font-size:var(--t-s)}
-.intro .i2{font-size:var(--t-s)}
-.intro .i3{display:flex;align-items:center;flex-wrap:wrap}
-.intro .i4{display:flex}
-.ilink.small{font-size:var(--t-xs)}
-.ilink{display:inline-flex;align-items:center;min-height:44px;padding:0 6px;color:#000;text-decoration:underline;font-size:inherit}
+.intro{margin:var(--sp-3) 0 0;padding:var(--sp-2) 0 0;border-top:2px solid #000;color:#000;font-size:var(--t-xs);line-height:1.4}
+.intro .i1{font-size:var(--t-m);line-height:1.3}
+.intro .ibodies p{margin:4px 0 0}
+.intro .izh{font-size:var(--t-s)}
+.intro .ien{font-size:var(--t-s)}
+.intro.compact .ien{font-size:14px;line-height:1.25}
+.intro.compact .i3{font-size:14px;line-height:1.25;margin-top:4px}
+.intro.compact .ilink{min-height:48px}
+.intro.compact .i4{margin-top:4px}
+.intro .i3{margin:6px 0 0;font-size:var(--t-xs)}
+.intro .i4{display:flex;flex-wrap:wrap;margin:6px 0 0}
+.ilink{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;margin:0 12px 6px 0;border:2px solid #000;color:#000;background:#fff;text-decoration:none;font-size:var(--t-s)}
+.ilink .ico{margin-left:6px}
 .aitem a.btnlink{margin:6px 0 10px;min-height:56px}
 .ncols .ntext.small{font-size:var(--t-xs);line-height:1.5;text-align:left}
 .screen.about .ascroll{font-size:19px;line-height:1.6;overflow:visible}
 .screen.about .npart h2{display:inline-block;background:#000;color:#fff;border:0;padding:0 12px;margin:0 0 8px}
 html.phone .screen.about .ascroll{font-size:17px}
 html.phone .intro{margin-top:6px}
+html.phone .ilink{flex:1 1 0;min-height:48px;padding:0 8px;margin:0 8px 6px 0}
+html.phone .ilink:last-child{margin-right:0}
 
 /* ================================================================ WIDE LAYOUT (html.wide: a landscape window >= 1100 px at 3:2 or wider = a laptop / desktop; docs/SPEC.md "Wide layout")
    One column of content centred at max 1160 px (the gutters are the rest), an 8 px grid (8 / 16 / 24 / 32), one type scale: page title 32, section title 22, card title 21, meta 15. */
@@ -360,12 +376,13 @@ html.wide .topbar>:last-child{margin-right:0}
 html.wide .screen[data-screen=home]{display:flex;flex-direction:column}
 html.wide .screen[data-screen=home]>*{flex:none}
 html.wide .screen[data-screen=home] .topbar{order:-2}
-html.wide .screen[data-screen=home] .intro{order:-1;display:flex;flex-wrap:wrap;align-items:center;margin:0 0 16px;padding:0 0 8px;border-bottom:2px solid #000;font-size:15px;line-height:1.3}
-html.wide .intro>div{margin-right:24px}
-html.wide .intro .i1{font-size:18px}
-html.wide .intro .i2{font-size:15px}
-html.wide .intro .i4{margin-left:auto;margin-right:0}
-html.wide .intro .ilink{min-height:44px}
+html.wide .screen[data-screen=home] .intro{order:-1;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);grid-template-rows:auto 1fr;column-gap:32px;align-items:start;margin:0 0 24px;padding:16px 24px;border:2px solid #000;font-size:15px;line-height:1.4}
+html.wide .intro .i1{grid-column:1;grid-row:1;font-size:21px}
+html.wide .intro .ibodies{grid-column:1;grid-row:2}
+html.wide .intro .ibodies p{font-size:15px}
+html.wide .intro .i3{grid-column:2;grid-row:1;margin:0;font-size:15px}
+html.wide .intro .i4{grid-column:2;grid-row:2;align-self:end;margin:8px 0 0}
+html.wide .intro .ilink{min-height:48px;font-size:17px}
 html.wide .homewrap{display:block}
 html.wide .hcol:first-child{margin-right:0}
 html.wide .shelf{margin:0 0 24px}
@@ -412,3 +429,36 @@ html.wide .practice:not(.phone){left:max(0px,calc((100% - 1280px) / 2));right:ma
 .spctx{display:flex;align-items:center;font-size:20px}
 .spctx span{padding:0 5px;line-height:1.3}
 .spctx span.cur{background:#000;color:#fff}
+
+/* first-visit intro dialog (js/intro.js): body-level, above #layer. No animation anywhere; pure black border, solid white. Phone = full-screen sheet, else centred max 680 px. LCD scrolls, 電子紙 pages (上一頁 / 下一頁). */
+html.intro-open,html.intro-open body{overflow:hidden}
+html.intro-open #app,html.intro-open #app .screen{overflow:hidden}
+.intro-bg{position:fixed;left:0;top:0;right:0;bottom:0;z-index:200;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.9);pointer-events:auto;overscroll-behavior:contain;
+  padding:calc(12px + var(--edge-t)) calc(12px + var(--edge-r)) calc(12px + var(--edge-b)) calc(12px + var(--edge-l))}
+.intro-bg[data-eink="1"]{background:#fff}
+.idlg{display:flex;flex-direction:column;width:100%;max-width:680px;max-height:100%;min-height:0;background:#fff;border:3px solid #000;outline:0;color:#000}
+.idlg[data-mode=paged]{height:100%}
+.ihead{display:flex;align-items:flex-start;flex:none;padding:10px 10px 8px 18px;border-bottom:2px solid #000}
+.ihead h1{flex:1 1 0;min-width:0;margin:0;padding-top:8px;font-size:24px;font-weight:normal;line-height:1.3}
+.iclose{flex:none;width:56px;min-width:56px;height:56px;min-height:56px;margin:0 0 0 8px;padding:0;display:inline-flex;align-items:center;justify-content:center}
+.ibody{font-size:19px;line-height:1.6}
+.iscroll{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:12px 18px 8px;outline:0}
+.ibodyview{margin:12px 18px 0}
+.ncols.ibody{font-size:20px;line-height:1.7}
+.idlg .npart{margin:0 0 var(--sp-3)}
+.idlg .npart h2{display:inline-block;background:#000;color:#fff;border:0;padding:0 12px;margin:0 0 8px;font-size:var(--t-m)}
+.idlg .ntext{margin:0 0 10px;text-align:left}
+.idlg .nitem{margin:0 0 12px}
+.ifoot{flex:none;padding:10px 18px 12px;border-top:2px solid #000}
+.ifoot .pager{margin:0 0 8px;justify-content:center}
+.ifoot .pager button{min-height:56px}
+.istart{display:block;width:100%;min-height:64px;margin:0;font-size:24px;border-width:3px}
+html.phone .intro-bg{bottom:auto;height:var(--app-h,100%);padding:0;background:#fff}
+html.phone .idlg{max-width:none;height:100%;max-height:none;border-width:0;padding:var(--edge-t) var(--edge-r) var(--edge-b) var(--edge-l)}
+html.phone .ihead{padding:4px 0 6px 4px}
+html.phone .ihead h1{font-size:20px;padding-top:6px}
+html.phone .iclose{width:52px;min-width:52px;height:52px;min-height:52px}
+html.phone .iscroll{padding:10px 8px 6px}
+html.phone .ibody{font-size:17px}
+html.phone .ifoot{padding:8px 4px 6px}
+html.phone button.istart{min-height:60px;font-size:21px}

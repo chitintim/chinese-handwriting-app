@@ -3,6 +3,7 @@
   var MX = window.MX, h = MX.h, Model = MX.Model, Store = MX.Store, Lib = MX.Library;
   var S = MX.Screens = {};
   var APK_URL = 'https://github.com/chitintim/chinese-handwriting-app/releases/latest/download/moxie.apk';
+  var RELEASES_URL = 'https://github.com/chitintim/chinese-handwriting-app/releases';     // the fallback when the APK link does nothing
   var GITHUB_URL = 'https://github.com/chitintim/chinese-handwriting-app';       // 關於 · GitHub (the APK's WebView hands every external https link to the system browser: MainActivity.handleNavigation)
   var ROW_H = 98;          // one list row (88 px + 10 px margin, see .lrow)
   var ROW_H_PHONE = 140;   // the same in the phone layout (132 px + 8 px margin)
@@ -248,18 +249,26 @@
       el.appendChild(h('div', { class: 'card install compactcard', 'data-role': 'apk-install' }, [
         h('div', { class: 'ct' }, [h('div', { class: 't', text: '安裝 App (APK)' }), h('div', { class: 'm', text: '安裝到平板，可離線使用。' })]),
         h('a', { class: 'btnlink', 'data-act': 'apk', href: APK_URL, text: '安裝 App (APK)' }),
-        h('a', { class: 'btnlink plain', 'data-act': 'apk-help', href: 'download/', text: '安裝步驟' })
+        h('a', { class: 'btnlink plain', 'data-act': 'apk-help', href: 'download/', text: '安裝步驟' }),
+        // a plain link (no download attribute, no target): the browser's own download manager handles it; if nothing happens, the note says what to do
+        h('div', { class: 'note apkfb', 'data-role': 'apk-fallback' }, ['若下載無反應：長按連結 → 下載連結，或開啟 ', h('a', { class: 'flink', 'data-act': 'apk-releases', href: RELEASES_URL, text: 'GitHub Releases 頁面' })])
       ]));
     }
     var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '';
     el.appendChild(h('div', { class: 'note vernote', text: '版本 ' + ver + ' · 字帖庫 ' + Lib.version() + ' · 儲存：' + Store.mode() }));
-    // a short card at the very end of the screen (inside the .screen bottom padding: never in the bottom edge dead zone); black text, 4 short lines. The link opens the 關於 page.
-    el.appendChild(h('div', { class: 'intro', 'data-role': 'home-intro' }, [
-      h('div', { class: 'i1', text: '墨字帖 · 抄經、臨帖的描紅練習' }),
-      h('div', { class: 'i2', text: 'Made by Tim, for Mom 🙏' }),
-      h('div', { class: 'i3' }, [document.createTextNode('Free, always. If you like it, please consider a kind donation — '),
-        h('a', { class: 'ilink', 'data-act': 'about', href: '#/about' }, ['關於與隨喜', MX.icon('tri-r', 12)])]),
-      h('div', { class: 'i4' }, [h('a', { class: 'ilink small', 'data-act': 'github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: 'GitHub' })])
+    // the intro card at the very end of the screen (inside the .screen bottom padding: never in the bottom edge dead zone; wide layout: a two-column card under the header). Black text.
+    // Title, a short story (English + 中文), the ask, and two separate big links: 關於與隨喜 (the 關於 page) and GitHub. On the 電子紙 tablet the 中文 line comes first and the English one is smaller (keeps the shelves above the fold).
+    var compactIntro = !MX.Device.isWide() && !MX.Device.isPhone() && Model.settings.screenType === 'eink';
+    var iEn = h('p', { class: 'ien', lang: 'en', 'data-role': 'intro-en', text: 'Hey, it\'s Tim 👋 I vibe-coded this while sitting with my mom in hospital. She\'s a devoted Buddhist, and 抄心經 is close to her heart. It started as one sutra and grew into a little library of texts to trace.' });
+    var iZh = h('p', { class: 'izh', lang: 'zh', 'data-role': 'intro-zh', text: '在醫院陪媽媽的日子裡做的小工具，由一篇《心經》開始，慢慢變成一個小字帖庫。' });
+    el.appendChild(h('div', { class: 'intro' + (compactIntro ? ' compact' : ''), 'data-role': 'home-intro' }, [
+      h('div', { class: 'i1', 'data-role': 'intro-title', text: '墨字帖 · 抄經、臨帖的描紅練習' }),
+      h('div', { class: 'ibodies' }, compactIntro ? [iZh, iEn] : [iEn, iZh]),
+      h('div', { class: 'i3', 'data-role': 'intro-ask', text: 'Free, always. If you like it, please consider a kind donation to Dana-Farber or 西方寺 — 如覺得有用，歡迎隨喜。' }),
+      h('div', { class: 'i4', 'data-role': 'intro-links' }, [
+        h('a', { class: 'ilink', 'data-act': 'about', href: '#/about' }, ['關於與隨喜', MX.icon('tri-r', 12)]),
+        h('a', { class: 'ilink', 'data-act': 'github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: 'GitHub' })
+      ])
     ]));
 
     // rows: whatever height is left, shared between the two shelves (at least one row each when they have any)

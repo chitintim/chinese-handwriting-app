@@ -48,6 +48,13 @@
       return Math.min(window.innerWidth, window.innerHeight) < LIMIT ? 'phone' : 'tablet';
     },
     isPhone: function () { return D.mode() === 'phone'; },
+    // Low-latency (desynchronized) ink canvas: setting 低延遲筆跡 auto = only on the iReader e-ink tablet (tested there); many other Android GPUs composite the transparent ink layer as solid black.
+    lowLatency: function () {
+      var v = MX.Model && MX.Model.settings && MX.Model.settings.lowLat;
+      if (v === 'on') return true;
+      if (v === 'off') return false;
+      return /iReader|Smart 6c|SmartOS/i.test(navigator.userAgent || '');
+    },
     // the wide (laptop / desktop) layout: a landscape window of at least 1100 px at 3:2 or wider, never the phone layout. Class `wide` on <html>; docs/SPEC.md "Wide layout".
     isWide: function () { return !D.isPhone() && window.innerWidth >= 1100 && window.innerWidth >= 1.5 * window.innerHeight; },
     // class + CSS variables; true when the mode changed since the last call
@@ -79,7 +86,7 @@
   // Safari (iOS): no pinch zoom, no text-selection loupe / callout / context menu on the app screens (inputs keep theirs); double-tap zoom is off by CSS (touch-action)
   function inField(t) { return !!(t && t.closest && t.closest('input,textarea,[contenteditable]')); }
   ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (t) { document.addEventListener(t, function (e) { e.preventDefault(); }, { passive: false }); });
-  document.addEventListener('contextmenu', function (e) { if (!inField(e.target)) e.preventDefault(); });
+  document.addEventListener('contextmenu', function (e) { if (!inField(e.target) && !(e.target.closest && e.target.closest('.saveimg'))) e.preventDefault(); });       // the exported picture keeps its long-press menu (Save image)
   document.addEventListener('selectstart', function (e) { if (!inField(e.target)) e.preventDefault(); });
   window.addEventListener('resize', onResize);
   window.addEventListener('orientationchange', onResize);

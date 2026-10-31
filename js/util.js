@@ -64,6 +64,10 @@
       el.setAttribute('points', pts.join(' '));
       el.setAttribute('fill', name === 'star' ? 'currentColor' : 'none');
       el.setAttribute('stroke', 'currentColor'); el.setAttribute('stroke-width', '2'); el.setAttribute('stroke-linejoin', 'round');
+    } else if (name === 'x') {
+      el = document.createElementNS(SVGNS, 'path');
+      el.setAttribute('d', 'M5 5 L19 19 M19 5 L5 19'); el.setAttribute('fill', 'none');
+      el.setAttribute('stroke', 'currentColor'); el.setAttribute('stroke-width', '3'); el.setAttribute('stroke-linecap', 'square');
     } else {
       var P = { 'tri-l': '17,3 5,12 17,21', 'tri-r': '7,3 19,12 7,21', 'tri-u': '3,17 12,5 21,17', 'tri-d': '3,7 12,19 21,7' };
       el = document.createElementNS(SVGNS, 'polygon');
@@ -205,7 +209,16 @@
   }
   MX.dataUrlToBlob = dataUrlToBlob;
 
-  // Save a file: native bridge if present, else anchor download. src = Blob | data: URL string.
+  // A phone or tablet (share sheets exist there; on a desktop browser an anchor download is the right thing)
+  MX.isMobileBrowser = function () {
+    var ua = navigator.userAgent || '';
+    return /Android|iPhone|iPad|iPod|Mobile/i.test(ua) || !!(MX.Device && MX.Device.env().ios);
+  };
+  // Save a file. Call it straight from a tap (user activation expires a few seconds after it: never after long async work).
+  //   1. native bridge (APK): MoBridge.saveFile
+  //   2. a mobile browser with navigator.canShare({files}): the share sheet (Save to Files / Photos); a cancelled share is not an error
+  //   3. an anchor download with a blob URL (kept alive for a minute: some browsers read it late)
+  // src = Blob | data: URL string.
   MX.saveFile = async function (filename, src, mime) {
     var blob = typeof src === 'string' ? dataUrlToBlob(src) : src;
     mime = mime || blob.type || 'application/octet-stream';
@@ -214,11 +227,21 @@
       var st = window.MoBridge.saveFile(filename, b64, mime);
       return String(st === undefined || st === null ? '已儲存' : st);
     }
+    if (MX.isMobileBrowser() && typeof navigator.share === 'function' && typeof navigator.canShare === 'function') {
+      var file = null;
+      try { file = new File([blob], filename, { type: mime }); } catch (e) { file = null; }
+      var ok = false;
+      try { ok = !!file && navigator.canShare({ files: [file] }); } catch (e) { ok = false; }
+      if (ok) {
+        try { await navigator.share({ files: [file], title: filename }); return '已分享 ' + filename; }
+        catch (e) { if (e && e.name === 'AbortError') return '已取消'; MX.err(e); /* anything else: fall back to the anchor */ }
+      }
+    }
     var url = URL.createObjectURL(blob);
     var a = h('a', { href: url, download: filename, style: 'display:none' });
     document.body.appendChild(a);
     a.click();
-    setTimeout(function () { URL.revokeObjectURL(url); if (a.parentNode) a.parentNode.removeChild(a); }, 4000);
+    setTimeout(function () { URL.revokeObjectURL(url); if (a.parentNode) a.parentNode.removeChild(a); }, 60000);
     return '已下載 ' + filename;
   };
 

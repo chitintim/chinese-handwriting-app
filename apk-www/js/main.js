@@ -46,6 +46,8 @@
       el.appendChild(MX.h('div', { class: 'screen' }, [MX.h('h1', { text: '發生錯誤' }), MX.h('p', { class: 'mono', text: String(e && e.stack || e) }),
         MX.h('button', { text: '返回', onclick: function () { location.hash = '#/'; } })]));
     }
+    // the first-visit intro: opens over the home screen only (never over practice / pen test / an export), stays open across a re-render, closes when the route leaves for practice
+    try { if (MX.Intro) MX.Intro.onRoute(r.name); } catch (e) { MX.err(e); }
   }
   MX.route = route;
   MX.isHome = function () { return current === 'home'; };
@@ -85,6 +87,7 @@
     // native wrapper: Back button. true = handled here (the app stays open), false = let Android close the app.
     window.__moHandleBack = function () {
       try {
+        if (MX.Intro && MX.Intro.isOpen()) { MX.Intro.close('back'); return true; }
         if (MX.closeTopModal()) return true;
         if (current && current !== 'home') {
           if (history.length > 1) history.back(); else location.hash = '#/';
