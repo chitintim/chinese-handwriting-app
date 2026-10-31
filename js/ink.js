@@ -4,6 +4,9 @@
   //
   //   samples (raw, post-coalesce, stored)  --Builder-->  stabilised points  --centripetal Catmull-Rom-->  nodes (ellipse footprints)
   //   --hull of two neighbouring footprints--> filled polygons.        Rendering is a deterministic function of (samples, style).
+  // Everything in the pipeline is CAUSAL (a point only depends on the samples up to it: One-Euro pressure filter, EMA tilt / speed / position, a
+  // curve segment whose end tangent does not look at the next point, start taper by distance from the start, no end taper), so what is painted while the pen
+  // moves is final: the pen-up repaint of the stroke reproduces the same pixels (apart from the flush to the real final pen position).
   //
   // Stored stroke, version 2: { v: 2, d: "<packed string>" } holding the integer samples [x, y, p, tx, ty, t, ...]:
   //   x, y   cell-local position in 1/1000 cell (0..1000 inside the cell; strokes may leave the cell a little)
@@ -19,23 +22,28 @@
 
   Ink.VERSION = 2;
   Ink.STRIDE = 6;
-  Ink.BASE = { thin: 13, mid: 22, thick: 36 };    // 筆粗: nib diameter in 1/1000 cell at a typical writing pressure (n = 0.4)
+  Ink.BASE = { thin: 13, mthin: 17.5, mid: 22, thick: 36 };    // 筆粗 細 / 中細 / 中 / 粗: nib diameter in 1/1000 cell at a typical writing pressure (n = 0.4); 中細 = midway between 細 and 中
   var DEG = Math.PI / 180, TWO_PI = 6.283185307179586;
   var NOMINAL_DT = 4;          // ms between samples when the time is unknown (v1 data, duplicate timestamps)
   var VREF = 2.8;              // writing speed (cell units / ms) at which the speed term saturates
   var ELONG = 2.2;             // 毛筆 footprint: major / minor axis = 1 + ELONG * sin(tilt)^2
   var RING = 16;               // polygon points per footprint
-  var TAU_P = 22, TAU_V = 45, TAU_T = 40;    // ms: EMA time constants of pressure, speed, tilt
+  var TAU_V = 45, TAU_T = 40;  // ms: EMA time constants of speed, tilt
+  var FC_MIN = 12, FC_BETA = 10, FC_D = 15;   // One-Euro pressure filter (Hz, Hz per unit/s, Hz): ~13 ms at rest, ~2.5 ms while the pressure changes quickly
   var MIN_STEP = 0.05;         // cell units: a stabilised point that moved less is not a new point
   var LEARN_N = 12;            // the pressure floor is learned over this many strokes
+  var RANGE_RATE = 0.12;       // adaptive working range: share of each new stroke's p5 / p95 blended in
+  var RANGE_MIN_SPAN = 0.3;    // the working range never gets narrower than this (cannot collapse)
 
-  // Brushes. width = base * (wMin + wGain * n) * (1 - speed * v) with n = normalised, curved, smoothed pressure; wMin + 0.4 * wGain = 1 (a typical writing pressure).
-  // start*: 起筆 (ramp from startMin to 1 over startLen cell units, plus a bulge); end*: 收筆 taper over endLen (+ endLenV * final speed), depth
-  // endT + endTV * final speed + endTD * pressure drop. tilt: elliptical footprint following tiltX / tiltY.
+  // Brushes. width = base * (wMin + wGain * n) * (1 - speed * v) with n = normalised, curved, filtered pressure (0 = lightest, 1 = hardest); wMin / (wMin + wGain) is the thinnest
+  // line as a share of the widest, typical writing pressure (n = 0.4) gives about 1.1 - 1.2. speed: thinning at full speed, capped at 15% so it never fights pressure.
+  // start*: 起筆 (ramp from startMin to 1 over startLen cell units, plus a bulge). 收筆 has no distance based taper (it would need to know where the pen lifts): it is
+  // the pressure release the pen reports. tilt: strength (0 = round nib, 1 = full 毛筆 ellipse) of the footprint following tiltX / tiltY.
   var BRUSH = {
-    mao: { label: '毛筆', wMin: 0.30, wGain: 1.75, speed: 0.32, tilt: true, startLen: 55, startMin: 0.5, startBulge: 0.16, endLen: 70, endLenV: 120, endT: 0.35, endTV: 0.5, endTD: 0.35 },
-    ying: { label: '硬筆', wMin: 0.72, wGain: 0.70, speed: 0.08, tilt: false, startLen: 22, startMin: 0.78, startBulge: 0, endLen: 34, endLenV: 40, endT: 0.18, endTV: 0.25, endTD: 0.2 },
-    gang: { label: '鋼筆', wMin: 0.92, wGain: 0.20, speed: 0, tilt: false, startLen: 0, startMin: 1, startBulge: 0, endLen: 18, endLenV: 0, endT: 0.06, endTV: 0, endTD: 0 }
+    mao: { label: '毛筆', wMin: 0.22, wGain: 2.30, speed: 0.15, tilt: 1, startLen: 55, startMin: 0.5, startBulge: 0.16 },        // thinnest ~9% of the widest
+    xiu: { label: '秀麗筆', wMin: 0.52, wGain: 1.48, speed: 0.10, tilt: 0.3, startLen: 32, startMin: 0.68, startBulge: 0.05 },   // ~26%
+    ying: { label: '硬筆', wMin: 0.75, wGain: 1.12, speed: 0.05, tilt: 0, startLen: 22, startMin: 0.78, startBulge: 0 },          // ~40%
+    gang: { label: '鋼筆', wMin: 0.92, wGain: 0.20, speed: 0, tilt: 0, startLen: 0, startMin: 1, startBulge: 0 }                  // ~82%
   };
   var GAMMA = { light: 0.6, mid: 1.0, heavy: 1.6 };                               // 筆壓 輕 / 中 / 重
   var STAB = { off: { tau: 0, lazy: 0 }, light: { tau: 6, lazy: 0 }, mid: { tau: 10, lazy: 7 } };   // 防抖: EMA time constant (ms), lazy-brush radius (cell units)
@@ -49,18 +57,22 @@
   // Everything that decides how samples look; built from the settings object (brush, inkWidth, curve, stab, pressure, pressFloor).
   Ink.style = function (st) {
     st = st || {};
-    var key = BRUSH[st.brush] ? st.brush : 'mao', fl = +st.pressFloor;
+    var key = BRUSH[st.brush] ? st.brush : 'xiu', fl = +st.pressFloor, lo = +st.pressLo, hi = +st.pressHi;
     if (!(fl > 0)) fl = 0;
     if (fl > 0.25) fl = 0.25;
+    if (!(lo > 0)) lo = fl;                       // working range [lo, hi] (raw pressure 0..1): learned / calibrated, else floor .. 1
+    lo = lo < fl ? fl : (lo > 0.6 ? 0.6 : lo);
+    if (!(hi > 0)) hi = 1;
+    hi = hi > 1 ? 1 : (hi < lo + RANGE_MIN_SPAN ? Math.min(1, lo + RANGE_MIN_SPAN) : hi);
     return {
-      brush: key, B: BRUSH[key], base: Ink.BASE[st.inkWidth] || Ink.BASE.mid, gamma: GAMMA[st.curve] || 1, floor: fl,
+      brush: key, B: BRUSH[key], base: Ink.BASE[st.inkWidth] || Ink.BASE.mthin, gamma: GAMMA[st.curve] || 1, floor: fl, lo: lo, hi: hi,
       fixed: st.pressure === 'off', stab: STAB[st.stab] || STAB.light
     };
   };
-  // raw pressure (0..1000) -> 0..1. The device's observed floor maps to 0; raw = true skips the 筆壓 curve.
+  // raw pressure (0..1000) -> 0..1. The lower end of the working range maps to 0, the upper end to 1; raw = true skips the 筆壓 curve.
   Ink.normPressure = function (p, S, raw) {
     if (S.fixed) return 0.5;
-    var n = (p / 1000 - S.floor) / (1 - S.floor);
+    var n = (p / 1000 - S.lo) / (S.hi - S.lo);
     n = n < 0 ? 0 : (n > 1 ? 1 : n);
     return raw ? n : Math.pow(n, S.gamma);
   };
@@ -169,12 +181,15 @@
   }
   Ink.Builder = Builder;
 
+  // smoothing factor of a low-pass with cut-off fc (Hz) for a step of dt ms
+  function oneEuro(dt, fc) { return 1 / (1 + 1000 / (TWO_PI * fc * dt)); }
+
   // one raw sample (cell units; p raw pressure * 1000; tilt degrees; t ms since the previous sample)
   Builder.prototype.add = function (x, y, p, tx, ty, t) {
     var S = this.S, n = Ink.normPressure(p, S), dt, a, nx, ny, dd, dx, dy, dl;
     if (!this.started) {
       this.started = true;
-      this.bx = this.ex = x; this.by = this.ey = y; this.en = n; this.etx = tx; this.ety = ty; this.sv = 0; this.dist = 0;
+      this.bx = this.ex = x; this.by = this.ey = y; this.en = n; this.np = n; this.edn = 0; this.etx = tx; this.ety = ty; this.sv = 0; this.dist = 0;
       this.rx = x; this.ry = y;
       this.pts.push({ x: x, y: y, n: n, v: 0, tx: tx, ty: ty, d: 0 });
       return;
@@ -188,7 +203,10 @@
     a = S.stab.tau > 0 ? 1 - Math.exp(-dt / S.stab.tau) : 1;
     nx = this.ex + (this.bx - this.ex) * a; ny = this.ey + (this.by - this.ey) * a;
     dd = Math.sqrt((nx - this.ex) * (nx - this.ex) + (ny - this.ey) * (ny - this.ey));
-    this.en += (n - this.en) * (1 - Math.exp(-dt / TAU_P));
+    // One-Euro filter on the pressure: slow cut-off at rest (steady width), fast while it changes (follows the hand with almost no lag)
+    this.edn += ((n - this.np) / dt * 1000 - this.edn) * oneEuro(dt, FC_D);
+    this.np = n;
+    this.en += (n - this.en) * oneEuro(dt, FC_MIN + FC_BETA * Math.abs(this.edn));
     this.etx += (tx - this.etx) * (1 - Math.exp(-dt / TAU_T));
     this.ety += (ty - this.ety) * (1 - Math.exp(-dt / TAU_T));
     this.sv += (dd / dt - this.sv) * (1 - Math.exp(-dt / TAU_V));
@@ -198,50 +216,35 @@
     this.pts.push({ x: nx, y: ny, n: this.en, v: this.sv, tx: this.etx, ty: this.ety, d: this.dist });
   };
 
-  // Pen up: flush to the final raw position (the stabiliser lags behind the pen) and fix the exit taper from the final speed / pressure drop.
+  // Pen up: flush to the final raw position (the stabiliser lags behind the pen). The ink already painted does not change.
   Builder.prototype.finish = function () {
-    var pts = this.pts, n = pts.length, last, dx, dy, dd, B = this.S.B, vEnd, drop, nmax, k;
+    var pts = this.pts, n = pts.length, last, dx, dy, dd;
     if (!n || this.fin) return;
     last = pts[n - 1];
     dx = this.rx - last.x; dy = this.ry - last.y; dd = Math.sqrt(dx * dx + dy * dy);
     if (dd >= MIN_STEP) {
       this.dist += dd;
       pts.push({ x: this.rx, y: this.ry, n: last.n, v: last.v, tx: last.tx, ty: last.ty, d: this.dist });
-      last = pts[n]; n++;
     }
-    vEnd = last.v / VREF; if (vEnd > 1) vEnd = 1;
-    nmax = last.n;
-    for (k = Math.max(0, n - 10); k < n; k++) if (pts[k].n > nmax) nmax = pts[k].n;
-    drop = nmax > 0.04 ? (nmax - last.n) / nmax : 0;
-    var sl = B.startLen, el = B.endLen + B.endLenV * vEnd, tot = this.dist, den = 1.5 * (sl + el);
-    var kk = den > 0 ? tot / den : 1;
-    this.fin = { total: tot, kk: kk > 1 ? 1 : kk, el: el, T: Math.min(0.92, B.endT + B.endTV * vEnd + B.endTD * drop) };
+    this.fin = true;
   };
 
   // footprint of one (interpolated) point in ctx coordinates
   Builder.prototype.shape = function (P) {
-    var S = this.S, B = S.B, f = this.fin, w = B.wMin + B.wGain * P.n, x, g, q, rem, R = 1, phi = 0, tx, ty, m, s2, ra, rb;
+    var S = this.S, B = S.B, w = B.wMin + B.wGain * P.n, x, g, R = 1, phi = 0, tx, ty, m, s2, ra, rb;
     if (B.speed) { x = P.v / VREF; w *= 1 - B.speed * (x > 1 ? 1 : x); }
     if (B.startLen) {
       x = P.d / B.startLen;
       if (x < 1) {
         g = B.startMin + (1 - B.startMin) * x * x * (3 - 2 * x) + B.startBulge * Math.sin(Math.PI * x);
-        w *= 1 - (1 - g) * (f ? f.kk : 1);
-      }
-    }
-    if (f && f.el > 0) {
-      rem = f.total - P.d;
-      if (rem < f.el) {
-        q = rem < 0 ? 0 : rem / f.el;
-        g = 1 - f.T * (1 - q * q * (3 - 2 * q));
-        w *= 1 - (1 - g) * f.kk;
+        w *= g;
       }
     }
     w *= S.base * this.sc;
     if (w < this.minw) w = this.minw;
     if (B.tilt) {
       tx = Math.tan(P.tx * DEG); ty = Math.tan(P.ty * DEG); m = Math.sqrt(tx * tx + ty * ty);
-      if (m > 1e-4) { s2 = Math.sin(Math.atan(m)); R = 1 + ELONG * s2 * s2; phi = Math.atan2(ty, tx); }
+      if (m > 1e-4) { s2 = Math.sin(Math.atan(m)); R = 1 + ELONG * B.tilt * s2 * s2; phi = Math.atan2(ty, tx); }
     }
     ra = w / 2 * Math.sqrt(R); rb = w / 2 / Math.sqrt(R);
     Ink.stats.nodes++;
@@ -251,7 +254,8 @@
   // Walk segment i (pts[i] -> pts[i+1]) as a centripetal Catmull-Rom curve and add one hull per sub-step to the path.
   // from = the node at pts[i]; returns the node at pts[i+1]. The end control point is duplicated while it is not known yet.
   Builder.prototype.run = function (i, from, ctx) {
-    var pts = this.pts, p1 = pts[i], p2 = pts[i + 1], p0 = pts[i - 1] || p1, p3 = pts[i + 2] || p2;
+    // causal: the end control point is the mirror of p1 about p2, never the next sample, so a segment is final the moment its end point exists
+    var pts = this.pts, p1 = pts[i], p2 = pts[i + 1], p0 = pts[i - 1] || p1, p3 = { x: 2 * p2.x - p1.x, y: 2 * p2.y - p1.y };
     var t01 = crossKnot(p0, p1), t12 = crossKnot(p1, p2), t23 = crossKnot(p2, p3);
     var m1x = t12 * ((p1.x - p0.x) / t01 - (p2.x - p0.x) / (t01 + t12) + (p2.x - p1.x) / t12);
     var m1y = t12 * ((p1.y - p0.y) / t01 - (p2.y - p0.y) / (t01 + t12) + (p2.y - p1.y) / t12);
@@ -268,31 +272,28 @@
       P.n = p1.n + (p2.n - p1.n) * s; P.v = p1.v + (p2.v - p1.v) * s;
       P.tx = p1.tx + (p2.tx - p1.tx) * s; P.ty = p1.ty + (p2.ty - p1.ty) * s; P.d = p1.d + (p2.d - p1.d) * s;
       nd = this.shape(P);
-      addHull(ctx, cur, nd);
+      ctx.beginPath(); addHull(ctx, cur, nd); ctx.fill();      // one fill per hull: the result does not depend on how the segments were batched (live vs whole stroke)
       Ink.stats.hulls++;
       cur = nd;
     }
     return cur;
   };
 
-  // Paint what is new. last = false: live (the newest segment is provisional, drawn with a duplicated end control point and painted again
-  // properly when the next sample arrives); last = true: everything, after finish().
+  // Paint what is new (every segment is final once it exists, see run()). `last` is kept for callers: live and after finish() paint the same way.
   Builder.prototype.paint = function (ctx, last, color) {
     var pts = this.pts, n = pts.length, cur, lastFinal, i;
     if (!n) return;
     ctx.fillStyle = color || '#000';
-    ctx.beginPath();
-    if (n === 1) {
-      if (!this.dot) { addRing(ctx, this.shape(pts[0])); this.dot = true; ctx.fill(); }
-      return;
+    if (!this.dot) {                           // the first footprint (a dot for a one-sample stroke)
+      this.node0 = this.shape(pts[0]);
+      ctx.beginPath(); addRing(ctx, this.node0); ctx.fill();
+      this.dot = true;
     }
-    if (!this.node0) this.node0 = this.shape(pts[0]);
+    if (n === 1) return;
     cur = this.node0;
-    lastFinal = last ? n - 2 : n - 3;
+    lastFinal = n - 2;
     for (i = this.done; i <= lastFinal; i++) cur = this.run(i, cur, ctx);
     if (lastFinal + 1 > this.done) { this.done = lastFinal + 1; this.node0 = cur; }
-    if (!last) this.run(n - 2, cur, ctx);
-    ctx.fill();
   };
 
   // ------------------------------------------------------------------ public painters
@@ -319,7 +320,7 @@
       if (st[i * 6] < x0) x0 = st[i * 6]; if (st[i * 6] > x1) x1 = st[i * 6];
       if (st[i * 6 + 1] < y0) y0 = st[i * 6 + 1]; if (st[i * 6 + 1] > y1) y1 = st[i * 6 + 1];
     }
-    var mg = S.base * sc * (B.wMin + B.wGain) * (1 + B.startBulge) * 0.5 * (B.tilt ? Math.sqrt(1 + ELONG) : 1) + 2.5 / (px || 1);
+    var mg = S.base * sc * (B.wMin + B.wGain) * (1 + B.startBulge) * 0.5 * Math.sqrt(1 + ELONG * B.tilt) + 2.5 / (px || 1);
     return { x0: ox + x0 * sc - mg, y0: oy + y0 * sc - mg, x1: ox + x1 * sc + mg, y1: oy + y1 * sc + mg };
   };
   function meets(a, b) { return a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0; }
@@ -343,20 +344,60 @@
     return r;
   };
 
-  // ------------------------------------------------------------------ pressure floor
-  // The pen's lowest reported pressure (0.094 on the iReader) is "just touching": learned from the lightest sample of each of the first strokes.
-  // set = the settings object (pressFloor 0..0.25, pressN strokes seen); minP = lowest raw pressure * 1000 of the stroke. True when it changed.
-  Ink.learn = function (set, minP) {
-    var n = set.pressN || 0, f, cur, nf;
-    if (!(minP > 0 && minP <= 1000) || n >= LEARN_N) return false;
-    f = minP / 1000;
-    f = f < 0.02 ? 0.02 : (f > 0.25 ? 0.25 : f);
-    cur = n > 0 && set.pressFloor > 0 ? set.pressFloor : 1;
-    nf = Math.round(Math.min(cur, f) * 1000) / 1000;
-    set.pressN = n + 1;
-    set.pressFloor = nf;
+  // ------------------------------------------------------------------ pressure floor and working range
+  // The pen's lowest reported pressure (0.094 on the iReader) is "just touching": learned from the lightest sample of each of the first strokes (pressFloor).
+  // On top of that a working range [pressLo, pressHi] (raw pressure 0..1) is mapped to n = 0..1: the robust p5 / p95 of each stroke's pressures, blended in slowly
+  // (so the width really reaches thin on a light touch and bold on a hard press, whatever this pen / hand does). It cannot collapse: lo <= 0.4, hi >= 0.6, span >= 0.3.
+  // 校準 (Ink.calibrate) sets the range from one very light and one very hard stroke and stops the adaptive learning (pressCal) until it is reset.
+  function round3(v) { return Math.round(v * 1000) / 1000; }
+  function clamp(v, a, b) { return v < a ? a : (v > b ? b : v); }
+  function pressures(pts) {
+    var out = [], i;
+    for (i = 2; i < pts.length; i += 6) if (pts[i] > 0) out.push(pts[i] / 1000);
+    return out.sort(function (a, b) { return a - b; });
+  }
+  function pct(a, q) { return a[Math.min(a.length - 1, Math.floor(q * (a.length - 1) + 0.5))]; }
+  // set = the settings object (pressFloor 0..0.25, pressN strokes seen, pressLo / pressHi); minP = lowest raw pressure * 1000 of the stroke;
+  // pts = the stroke's flat stride-6 samples (optional: the working range is learned from it). True when the settings changed.
+  Ink.learn = function (set, minP, pts) {
+    var n = set.pressN || 0, f, cur, nf, changed = false, a, lo, hi, fl;
+    if (minP > 0 && minP <= 1000 && n < LEARN_N) {
+      f = minP / 1000;
+      f = f < 0.02 ? 0.02 : (f > 0.25 ? 0.25 : f);
+      cur = n > 0 && set.pressFloor > 0 ? set.pressFloor : 1;
+      nf = round3(Math.min(cur, f));
+      set.pressN = n + 1;
+      set.pressFloor = nf;
+      changed = true;
+    }
+    if (pts && !set.pressCal) {
+      a = pressures(pts);
+      if (a.length >= 4) {
+        fl = set.pressFloor > 0 ? set.pressFloor : 0;
+        lo = clamp(pct(a, 0.05), fl, 0.4); hi = clamp(pct(a, 0.95), 0.6, 1);
+        if (set.pressHi > 0) {
+          lo = (set.pressLo > 0 ? set.pressLo : fl) * (1 - RANGE_RATE) + lo * RANGE_RATE;
+          hi = set.pressHi * (1 - RANGE_RATE) + hi * RANGE_RATE;
+        }
+        lo = round3(clamp(lo, fl, 0.4)); hi = round3(clamp(hi, Math.max(0.6, lo + RANGE_MIN_SPAN), 1));
+        if (lo !== set.pressLo || hi !== set.pressHi) { set.pressLo = lo; set.pressHi = hi; changed = true; }
+      }
+    }
+    return changed;
+  };
+  // light / hard = flat stride-6 samples of one very light and one very hard stroke. Sets pressLo (typical pressure of the light stroke) and pressHi (of the hard one).
+  // False when the two strokes are not clearly different (nothing is stored).
+  Ink.calibrate = function (set, light, hard) {
+    var a = pressures(light), b = pressures(hard), lo, hi, fl = set.pressFloor > 0 ? set.pressFloor : 0;
+    if (a.length < 4 || b.length < 4) return false;
+    lo = pct(a, 0.5); hi = pct(b, 0.5);
+    if (hi - lo < 0.15) return false;
+    lo = clamp(lo, Math.max(fl, 0.02), 0.5); hi = clamp(hi, lo + RANGE_MIN_SPAN, 1);
+    set.pressLo = round3(lo); set.pressHi = round3(hi); set.pressCal = true;
     return true;
   };
+  // back to the adaptive range
+  Ink.resetRange = function (set) { set.pressLo = 0; set.pressHi = 0; set.pressCal = false; };
 
   // ------------------------------------------------------------------ input: events -> stored samples
   // One Sampler per drawing surface. take(e, map) expands getCoalescedEvents() (never getPredictedEvents()), drops what was already seen

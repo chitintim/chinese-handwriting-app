@@ -29,12 +29,12 @@
       }
       if (seq !== showSeq) return;
       Model.loadInk(copy);
-      var cells = Layout.buildCells(text, copy.cfg, copy.signStr);
-      copy.total = cells.length;
-      Model.recount(copy);
+      Model.upgradeKeys(copy, text);
+      var cells = Layout.cellsFor(text, copy);
+      Model.recount(copy, cells);
       if (!(opts && opts.readOnly) && copy.status !== 'archived') {
         // resume at the page holding the first empty cell (a finished copy keeps its last position)
-        for (var ei = 0; ei < cells.length; ei++) if (!(copy.ink[ei] || []).length) { copy.pos = ei; break; }
+        for (var ei = 0; ei < cells.length; ei++) if (!(copy.ink[cells[ei].key] || []).length) { copy.pos = ei; break; }
       }
       S = {
         root: h('div', { class: 'practice' }), copy: copy, text: text, cells: cells, readOnly: !!(opts && opts.readOnly),
@@ -105,6 +105,10 @@
     layout();
   }, 150);
 
+  // ink is stored per cell KEY (body '12', title 't0', 落款 's3'); pages, focus and `pos` use the position in S.cells
+  function KY(idx) { return S.cells[idx].key; }
+  function dirty(idx) { Model.markDirty(S.copy, KY(idx)); }
+
   // ------------------------------------------------------------------ layout & render
   function pageOf(pos) {
     for (var i = 0; i < S.pages.length; i++) if (S.pages[i].indexOf(pos) >= 0) return i;
@@ -158,7 +162,7 @@
     var vw = window.innerWidth, vh = window.innerHeight;
     S.inset = Layout.insets(settings(), vw, vh, { left: r.left < 2, top: r.top < 2, right: r.right > vw - 2, bottom: r.bottom > vh - 2 });
     S.g = Layout.grid(W, H, S.cfg, S.inset);
-    S.pages = Layout.paginate(S.cells, S.g.perPage);
+    S.pages = Layout.paginate(S.cells, S.g);
     // Both canvases use the real device pixel ratio (up to 3; 2.625 on the iReader) so one canvas pixel is one screen pixel: the 1-device-pixel
     // dots of the grid stay black (resampling would turn them grey and a fast e-ink mode would drop them) and ink edges are not blurred by a
     // 1.31x upscale. Performance mode renders at 1x. The ink transform uses the exact canvas/CSS ratio (Math.round of W * dpr is not exact).
@@ -217,7 +221,7 @@
     for (var s = 0; s < page.length; s++) {
       var idx = page[s];
       if (idx < 0) continue;
-      var strokes = S.copy.ink[idx];
+      var strokes = S.copy.ink[KY(idx)];
       if (!strokes) continue;
       var o = slotOrigin(s);
       for (var i = 0; i < strokes.length; i++) Ink.paintStroke(ctx, strokes[i], o.x, o.y, g.cell / 1000, style, '#000', { px: S.kx });
@@ -373,14 +377,15 @@
     var pts = S.cap.pts.slice();      // flat samples [x, y, p, tx, ty, t, ...] (absolute, integers)
     if (!pts.length) return;
     if (cancelled && wasType !== 'pen') { repaintRect(strokeRect(st, pts)); return; }   // a pen took over from a touch/palm stroke: drop it
-    // learn the pen's pressure floor from the first strokes (settings.pressFloor), before the final shape is rendered
-    if (S.cap.pressureSeen && settings().pressure !== 'off' && pts.length >= 24 && Ink.learn(settings(), S.cap.minP)) Model.saveSettings();
-    var arr = S.copy.ink[st.idx] || (S.copy.ink[st.idx] = []);
+    var arr = S.copy.ink[KY(st.idx)] || (S.copy.ink[KY(st.idx)] = []);
     arr.push(pts);
     // pen-up polish: re-render just this stroke's bounding box from the stored samples (clean taper, full-lookahead smoothing); never the page
     repaintRect(strokeRect(st, pts));
+    // learn the pen's pressure floor and working range (settings.pressFloor / pressLo / pressHi) only now: the stroke on screen was drawn with the old values,
+    // so the repaint above gives the same pixels (a later full redraw uses the updated range)
+    if (S.cap.pressureSeen && settings().pressure !== 'off' && pts.length >= 24 && Ink.learn(settings(), S.cap.minP, pts)) Model.saveSettings();
     pushOp({ k: 'add', cell: st.idx, stroke: pts });
-    Model.markDirty(S.copy, st.idx);
+    dirty(st.idx);
     scheduleSave();
     afterChange();
     armNext();
@@ -394,7 +399,7 @@
     for (s = 0; s < page.length; s++) {
       idx = page[s];
       if (idx < 0) continue;
-      strokes = S.copy.ink[idx];
+      strokes = S.copy.ink[KY(idx)];
       if (!strokes || !strokes.length) continue;
       o = slotOrigin(s);
       if (o.x + g.cell * 1.4 < rect.x0 || o.x - g.cell * 0.4 > rect.x1 || o.y + g.cell * 1.4 < rect.y0 || o.y - g.cell * 0.4 > rect.y1) continue;
@@ -405,7 +410,7 @@
   }
   function pushOp(op) { S.ops.push(op); if (S.ops.length > 400) S.ops.shift(); }
   function afterChange() {
-    Model.recount(S.copy);
+    Model.recount(S.copy, S.cells);
     if (!S.copy.completedAt && S.copy.total > 0 && S.copy.filled >= S.copy.total) complete();
   }
 
@@ -429,7 +434,7 @@
     for (var s = 0; s < page.length; s++) {
       var idx = page[s];
       if (idx < 0) continue;
-      var strokes = S.copy.ink[idx];
+      var strokes = S.copy.ink[KY(idx)];
       if (!strokes || !strokes.length) continue;
       var o = slotOrigin(s);
       if (x < o.x - g.cell * 0.3 || x > o.x + g.cell * 1.3 || y < o.y - g.cell * 0.3 || y > o.y + g.cell * 1.3) continue;
@@ -438,7 +443,7 @@
           S.erasing.items.push({ cell: idx, index: i, stroke: strokes[i] });
           removed = Ink.union(removed, Ink.bounds(strokes[i], o.x, o.y, g.cell / 1000, style, S.kx));
           strokes.splice(i, 1);
-          Model.markDirty(S.copy, idx);
+          dirty(idx);
         }
       }
     }
@@ -456,30 +461,30 @@
       if (!ok) continue;
       S.ops.splice(i, 1);
       if (op.k === 'add') {
-        var arr = S.copy.ink[op.cell] || [], at = arr.indexOf(op.stroke);
+        var arr = S.copy.ink[KY(op.cell)] || [], at = arr.indexOf(op.stroke);
         if (at < 0) { i = S.ops.length; continue; }
         arr.splice(at, 1);
-        Model.markDirty(S.copy, op.cell);
+        dirty(op.cell);
       } else {
         for (k = op.items.length - 1; k >= 0; k--) {
-          var it = op.items[k], a = S.copy.ink[it.cell] || (S.copy.ink[it.cell] = []);
+          var it = op.items[k], a = S.copy.ink[KY(it.cell)] || (S.copy.ink[KY(it.cell)] = []);
           a.splice(Math.min(it.index, a.length), 0, it.stroke);
-          Model.markDirty(S.copy, it.cell);
+          dirty(it.cell);
         }
       }
       return undone();
     }
     // fallback after a reload: drop the last stroke of the focus cell / last inked cell on this page
     var page = S.pages[S.pageIdx], target = -1;
-    if (S.focus >= 0 && pageHas(S.focus) && (S.copy.ink[S.focus] || []).length) target = S.focus;
-    else for (k = page.length - 1; k >= 0; k--) if (page[k] >= 0 && (S.copy.ink[page[k]] || []).length) { target = page[k]; break; }
+    if (S.focus >= 0 && pageHas(S.focus) && (S.copy.ink[KY(S.focus)] || []).length) target = S.focus;
+    else for (k = page.length - 1; k >= 0; k--) if (page[k] >= 0 && (S.copy.ink[KY(page[k])] || []).length) { target = page[k]; break; }
     if (target < 0) { MX.toast('沒有可撤銷的筆畫'); return; }
-    S.copy.ink[target].pop();
-    Model.markDirty(S.copy, target);
+    S.copy.ink[KY(target)].pop();
+    dirty(target);
     undone();
   }
   function undone() {
-    Model.recount(S.copy);
+    Model.recount(S.copy, S.cells);
     redrawInk(); scheduleSave(); hideNext();
   }
   async function clearPage() {
@@ -487,22 +492,22 @@
     var page = S.pages[S.pageIdx], items = [];
     page.forEach(function (idx) {
       if (idx < 0) return;
-      (S.copy.ink[idx] || []).forEach(function (st, i) { items.push({ cell: idx, index: i, stroke: st }); });
+      (S.copy.ink[KY(idx)] || []).forEach(function (st, i) { items.push({ cell: idx, index: i, stroke: st }); });
     });
     if (!items.length) { MX.toast('此頁沒有字跡'); return; }
     var ok = await MX.confirm('清除此頁所有字跡？（可用「撤銷」還原）', '清除', '清頁');
     if (!ok || !S) return;
     page.forEach(function (idx) {
-      if (idx >= 0 && S.copy.ink[idx] && S.copy.ink[idx].length) { S.copy.ink[idx] = []; Model.markDirty(S.copy, idx); }
+      if (idx >= 0 && S.copy.ink[KY(idx)] && S.copy.ink[KY(idx)].length) { S.copy.ink[KY(idx)] = []; dirty(idx); }
     });
     pushOp({ k: 'del', items: items });
-    Model.recount(S.copy);
+    Model.recount(S.copy, S.cells);
     redrawInk(); scheduleSave(); hideNext();
   }
   function hint() {
     if (!S || S.cfg.mode !== 'recall') return;
     var page = S.pages[S.pageIdx], t = -1, i;
-    for (i = 0; i < page.length; i++) if (page[i] >= 0 && !(S.copy.ink[page[i]] || []).length) { t = page[i]; break; }
+    for (i = 0; i < page.length; i++) if (page[i] >= 0 && !(S.copy.ink[KY(page[i])] || []).length) { t = page[i]; break; }
     if (t < 0) t = S.focus;
     if (t < 0) return;
     S.hint = t;
@@ -532,7 +537,7 @@
     for (var i = 0; i < page.length; i++) {
       if (page[i] < 0) continue;
       n++;
-      if (!(S.copy.ink[page[i]] || []).length) return false;
+      if (!(S.copy.ink[KY(page[i])] || []).length) return false;
     }
     return n > 0;
   }
@@ -556,7 +561,7 @@
     clearTimeout(S.timers.next);
     if (S.readOnly || settings().autoFlip || !settings().autoNext || S.pageIdx >= S.pages.length - 1) return;
     var li = lastIdx(S.pages[S.pageIdx]);
-    if (li < 0 || !(S.copy.ink[li] || []).length) return;
+    if (li < 0 || !(S.copy.ink[KY(li)] || []).length) return;
     var seq = S.token;
     S.timers.next = setTimeout(function () {
       if (!S || S.token !== seq || S.active !== null) return;
@@ -586,12 +591,32 @@
   function openExport() {
     MX.Export.openSheet(cp());
   }
+  // The cells changed (title / 落款 switched, name or date style edited): rebuild the list. Ink is keyed by cell key, so what was written stays where it was, whatever the
+  // template under it now says; totals and progress follow the cells that exist.
+  var rebuildLater = MX.debounce(function () { rebuildCells(); }, 350);
+  function rebuildCells() {
+    if (!S) return;
+    var keep = S.cells[S.copy.pos] ? S.cells[S.copy.pos].key : null, i;
+    S.cells = Layout.cellsFor(S.text, S.copy);
+    Model.recount(S.copy, S.cells);
+    S.ops = []; S.focus = -1;
+    S.copy.pos = 0;
+    for (i = 0; i < S.cells.length; i++) if (S.cells[i].key === keep) { S.copy.pos = i; break; }
+    Model.saveMeta(S.copy);
+    layout();
+  }
   function openSettings() {
     if (!S) return;
     var cfgFields = MX.Form.CFG.filter(function (f) { return !f.content; });
     var body = [
+      MX.Form.signBlock(settings(), S.cfg, S.text.category === 'buddhist', function (k) {
+        if (k === 'sign') { Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg); }
+        else Model.saveSettings();
+        if (k === 'name') rebuildLater(); else rebuildCells();
+      }),
       MX.Form.build(cfgFields, S.cfg, false, function (k) {
         Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg);
+        if (k === 'title') { rebuildCells(); return; }
         S.copy.pos = firstIdx(S.pages[S.pageIdx]);
         layout();
       }),
@@ -664,8 +689,10 @@
     style: function () { return inkStyle(); },
     relayout: function () { if (S) layout(); },
     go: go,
+    cells: function () { return S ? S.cells : []; },
+    keys: function () { return S ? S.cells.map(function (c) { return c.key; }).join() : ''; },
     cellsAll: function () { return S ? S.cells.map(function (c) { return c.ch; }).join('') : ''; },
-    inkOf: function (idx) { return S ? (S.copy.ink[idx] || []) : []; },
+    inkOf: function (idx) { return S && S.cells[idx] ? (S.copy.ink[S.cells[idx].key] || []) : []; },
     setPos: function (p) { if (S) { S.copy.pos = p; layout(); } }
   };
 })();

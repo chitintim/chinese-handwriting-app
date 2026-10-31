@@ -63,6 +63,26 @@
       trad: '願以此功德，普及於一切，我等與眾生，皆共成佛道。',
       simp: '愿以此功德，普及于一切，我等与众生，皆共成佛道。'
     },
+    // 落款 lines of a copy, in reading order: [迴向 line 1, line 2 (buddhist, if 迴向偈 on)], date, name line. o = {script, name, date (ms), buddhist, style ('gz' | 'ce' | 'none'),
+    // word ('jing' 敬書 / 'lu' 恭錄 / 'mu' 沐手敬書 for buddhist texts, 'shu' 書 / 'lin' 臨 otherwise), dizi (弟子 prefix, buddhist, default on), hui}. No name -> no lines.
+    signLines: function (o) {
+      var name = String(o.name || '').replace(/\s+/g, ''), sc = o.script === 'simp' ? 'simp' : 'trad', out = [], k;
+      if (!name) return out;
+      if (o.buddhist && o.hui) out = out.concat(MX.Closing.verseLines(sc));
+      if (o.style !== 'none') out.push(MX.Closing.exportDate(sc, o.date || Date.now(), o.style === 'ce' ? 'ce' : 'gz'));
+      if (o.buddhist) {
+        k = SUFFIX[o.word] ? o.word : 'jing';
+        out.push((o.dizi === false ? '' : '弟子') + name + MX.Closing.suffix(sc, k));
+      } else out.push(name + (o.word === 'lin' ? (sc === 'simp' ? '临' : '臨') : (sc === 'simp' ? '书' : '書')));
+      return out;
+    },
+    // the 落款 lines for a copy of `text` from the settings (name, date style, closing word, 弟子, 迴向) and the copy (script, start date, 落款 on/off)
+    signFor: function (copy, text) {
+      var st = (MX.Model && MX.Model.settings) || {}, cfg = copy.cfg || {};
+      if (!cfg.sign || !String(st.name || '').replace(/\s+/g, '')) return [];
+      return MX.Closing.signLines({ script: cfg.script, name: st.name, date: copy.createdAt, buddhist: !!text && text.category === 'buddhist',
+        style: st.sigDate || 'gz', word: st.sigWord, dizi: st.sigDizi, hui: st.sigHui });
+    },
     // Lunar-calendar date line such as 歲次丙午年九月 (falls back to Gregorian month).
     dateLine: function (script, d) {
       d = d || new Date();

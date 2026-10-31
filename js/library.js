@@ -134,7 +134,7 @@
       if (!sec) return null;
       var multi = secs.length > 1;
       return {
-        id: text.id, textId: text.id, sectionId: sec.id, custom: !!text.custom, multi: multi,
+        id: text.id, textId: text.id, sectionId: sec.id, custom: !!text.custom, multi: multi, category: (L.entry(text.id) || {}).category || (text.custom ? 'custom' : ''),
         title: multi ? sec.title : text.title, textTitle: text.title, sectionTitle: sec.title,
         short: multi ? { trad: text.title.trad + '-' + sec.title.trad, simp: text.title.simp + '-' + sec.title.simp } : null,
         author: sec.author || text.author, dynasty: text.dynasty, body: sec.body,

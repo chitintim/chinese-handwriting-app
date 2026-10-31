@@ -77,18 +77,20 @@
   }
 
   // ------------------------------------------------------------------ options
-  function copyDate(copy) { return copy.completedAt || copy.updatedAt || Date.now(); }
+  function copyDate(copy) { return copy.createdAt || copy.updatedAt || Date.now(); }       // the copy's start date, fixed (also what the practice 落款 cells use)
   function resolve(cp, o) {
     o = o || {};
     var cfg = cp.copy.cfg, st = MX.Model.settings, dir = cfg.dir === 'h' ? 'h' : 'v', script = cfg.script === 'simp' ? 'simp' : 'trad';
-    var name = String(o.name !== undefined ? o.name : (st.name || '')).replace(/\s+/g, '');
+    var name = String(o.name !== undefined ? o.name : (st.name || '')).replace(/\s+/g, ''), bud = !!cp.text && cp.text.category === 'buddhist';
+    function pick(v, list, def) { return list.indexOf(v) >= 0 ? v : def; }
     var d = {
       dir: dir, script: script, name: name,
       format: o.format === 'scroll' && dir === 'v' ? 'scroll' : (o.format === 'pages' ? 'pages' : 'sheet'),
       paper: o.paper === 'white' ? 'white' : 'xuan',
       rules: ['zhu', 'wu', 'mi', 'none'].indexOf(o.rules) >= 0 ? o.rules : 'zhu',
       border: !!o.border, title: o.title !== false, sign: o.sign !== undefined ? !!o.sign : !!name, seal: o.seal !== undefined ? !!o.seal : !!name,
-      hui: !!o.hui, dateStyle: o.dateStyle === 'ce' ? 'ce' : 'gz', suffix: Closing.SUFFIX_KEYS.indexOf(o.suffix) >= 0 ? o.suffix : 'jing',
+      hui: o.hui !== undefined ? !!o.hui : !!st.sigHui, dateStyle: pick(o.dateStyle !== undefined ? o.dateStyle : st.sigDate, ['gz', 'ce', 'none'], 'gz'),
+      suffix: pick(o.suffix !== undefined ? o.suffix : st.sigWord, bud ? Closing.SUFFIX_KEYS : ['shu', 'lin'], bud ? 'jing' : 'shu'), buddhist: bud, dizi: st.sigDizi !== false,
       sealStyle: o.sealStyle === 'red' ? 'red' : 'white', punct: !!o.punct && cfg.punct === 'show', tpl: !!o.tpl, out: o.out === 'pdf' ? 'pdf' : 'png',
       date: +o.date || copyDate(cp.copy), font: o.font || st.tplFont
     };
@@ -107,11 +109,11 @@
   }
 
   // ------------------------------------------------------------------ units: title / body / signature
-  function hasInk(cp, list) { return list.some(function (i) { return (cp.copy.ink[i] || []).length > 0; }); }
+  function hasInk(cp, list) { return list.some(function (i) { return (cp.copy.ink[cp.cells[i].key] || []).length > 0; }); }
   function chars(s) { return Array.from(s).map(function (c) { return { ch: c }; }); }
   function gather(cp, d) {
     var cells = cp.cells, T = [], B = [], G = [], i;
-    for (i = 0; i < cells.length; i++) (cells[i].sec === 'title' ? T : (cells[i].sec === 'tail' ? G : B)).push(i);
+    for (i = 0; i < cells.length; i++) (cells[i].sec === 'title' ? T : (cells[i].sec === 'sign' ? G : B)).push(i);
     var U = { title: [], body: B.map(function (k) { return { i: k, punct: cells[k].punct }; }), sig: { hand: null, text: [] } };
     if (d.title) {
       if (T.length && hasInk(cp, T)) U.title = T.map(function (k) { return { i: k }; });
@@ -120,10 +122,9 @@
     if (d.sign) {
       if (G.length && hasInk(cp, G)) U.sig.hand = G.map(function (k) { return { i: k }; });
       else {
-        if (d.hui && !cp.copy.cfg.closing) Closing.verseLines(d.script).forEach(function (s) { U.sig.text.push(chars(s)); });
-        U.sig.text.push(chars(Closing.exportDate(d.script, d.date, d.dateStyle)));
-        var nl = Closing.nameLine(d.script, d.name, d.suffix);
-        if (nl) U.sig.text.push(chars(nl));
+        // the same lines the practice 落款 cells show (Closing.signLines); the closing verse of an old copy is already in its body
+        Closing.signLines({ script: d.script, name: d.name, date: d.date, buddhist: d.buddhist, style: d.dateStyle, word: d.suffix, dizi: d.dizi, hui: d.hui && !cp.copy.cfg.closing })
+          .forEach(function (ln) { U.sig.text.push(chars(ln)); });
       }
     }
     return U;
@@ -433,7 +434,7 @@
             ctx.stroke();
             break;
           case 'cell':
-            var strokes = ink[it.i] || [];
+            var strokes = ink[cp.cells[it.i].key] || [];
             for (j = 0; j < strokes.length; j++) {
               MX.Ink.paintStroke(ctx, strokes[j], x + s * (1 - K.INK) / 2, y + s * (1 - K.INK) / 2, s * K.INK / 1000, inkStyle, INK, { px: 1 });   // the same brush model as on screen
             }
@@ -607,7 +608,8 @@
         if (!c) return;
         var text = await MX.Library.getView(textId, secId);
         MX.Model.loadInk(c);
-        ui.cp = E.ctx(c, text, Layout.buildCells(text, c.cfg, c.signStr));
+        MX.Model.upgradeKeys(c, text);
+        ui.cp = E.ctx(c, text, Layout.cellsFor(text, c));
         ui.o.format = undefined; ui.o.ratio = undefined; ui.o.perLine = undefined; ui.page = 0;
         drawControls(); refresh();
       }
@@ -641,9 +643,9 @@
         row('title', '題目', onoff, d.title);
         row('sign', '落款', onoff, d.sign);
         if (d.sign) {
-          row('dateStyle', '日期', [['gz', '干支年'], ['ce', '公元年']], d.dateStyle);
-          row('suffix', '敬語', Closing.SUFFIX_KEYS.map(function (k) { return [k, Closing.suffix('trad', k)]; }), d.suffix);
-          if (!cfg.closing) row('hui', '迴向', onoff, d.hui);
+          row('dateStyle', '日期', [['gz', '干支年'], ['ce', '公元年'], ['none', '不寫']], d.dateStyle);
+          row('suffix', d.buddhist ? '敬語' : '署款', d.buddhist ? Closing.SUFFIX_KEYS.map(function (k) { return [k, Closing.suffix('trad', k)]; }) : [['shu', '書'], ['lin', '臨']], d.suffix);
+          if (!cfg.closing && d.buddhist) row('hui', '迴向', onoff, d.hui);
         }
         if (d.name) {
           row('seal', '印章', onoff, d.seal);

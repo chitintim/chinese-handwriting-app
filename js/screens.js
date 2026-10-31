@@ -236,7 +236,7 @@
     el.setAttribute('data-screen', 'setup');
     el.setAttribute('data-section', sectionId);
     var info = h('div', { class: 'note', 'data-role': 'cellcount' });
-    function signStr() { return d.sign ? MX.Closing.signLine(d.script, Model.settings.name) : ''; }
+    function cellsOf(txt) { return MX.Layout.cellsFor(txt, { cfg: d, createdAt: copy ? copy.createdAt : Date.now() }); }
     var viewP = Lib.getView(textId, sectionId);
     viewP.then(function (v) {
       if (!el.parentNode) return;
@@ -244,12 +244,17 @@
     }).catch(function () { /* shown below */ });
     function refreshInfo() {
       viewP.then(function (txt) {
-        var cells = MX.Layout.buildCells(txt, d, signStr());
+        var cells = cellsOf(txt);
         info.textContent = '共 ' + cells.length + ' 格';
       }).catch(function (e) { info.textContent = '無法載入文本：' + (e && e.message || e); });
     }
+    var signHold = h('div');
+    el.appendChild(signHold);
+    viewP.then(function (v) {
+      signHold.appendChild(MX.Form.signBlock(Model.settings, d, v.category === 'buddhist', function () { Model.saveSettings(); refreshInfo(); }));
+    }).catch(function () { /* the cell count shows the error */ });
     el.appendChild(MX.Form.build(MX.Form.CFG, d, locked, refreshInfo));
-    if (locked) el.appendChild(h('div', { class: 'note', text: '已開始書寫：字體、標題頁、迴向、落款需「新抄一遍」才能更改。' }));
+    if (locked) el.appendChild(h('div', { class: 'note', text: '已開始書寫：字體需「新抄一遍」才能更改。' }));
     el.appendChild(info);
     refreshInfo();
     var row = h('div', { class: 'btnrow', style: 'margin-top:16px' });
@@ -259,16 +264,14 @@
         var txt = await Lib.getView(textId, sectionId), c = copy;
         Model.saveTextCfg(textId, d);
         if (!c) {
-          var ss = signStr();
-          c = Model.create(textId, d, ss, MX.Layout.buildCells(txt, d, ss).length, sectionId);
+          c = Model.create(textId, d, '', 0, sectionId);
+          c.total = MX.Layout.cellsFor(txt, c).length;
+          Model.saveMeta(c);
         } else {
           var contentChanged = MX.Model.CONTENT_KEYS.some(function (k) { return c.cfg[k] !== d[k]; });
           c.cfg = assign({}, d);
-          if (contentChanged && !locked) {
-            c.signStr = signStr();
-            c.total = MX.Layout.buildCells(txt, c.cfg, c.signStr).length;
-            c.pos = 0;
-          }
+          if (contentChanged && !locked) c.pos = 0;
+          c.total = MX.Layout.cellsFor(txt, c).length;
           Model.saveMeta(c);
         }
         location.hash = H('practice', c.id);
@@ -340,12 +343,10 @@
     var el = screen(root, '設定', '#/');
     el.setAttribute('data-screen', 'settings');
     var st = Model.settings;
+    el.appendChild(MX.Form.signBlock(st, null, null, function () { Model.saveSettings(); }));
     el.appendChild(MX.Form.build(MX.Form.SETTINGS, st, false, function () { Model.saveSettings(); }));
     el.appendChild(MX.Form.row('文庫顯示', MX.Form.seg([['trad', '繁體'], ['simp', '简体']], st.libScript === 'simp' ? 'simp' : 'trad',
       function (v) { st.libScript = v; Model.saveSettings(); }), 'libScript'));
-    var nameIn = h('input', { type: 'text', value: st.name || '', placeholder: '落款姓名（選填）', 'data-role': 'name',
-      oninput: function () { st.name = nameIn.value; Model.saveSettings(); } });
-    el.appendChild(MX.Form.row('姓名', nameIn));
 
     // ---- updates
     el.appendChild(h('h2', { text: '更新' }));
@@ -430,8 +431,8 @@
         h('button', { text: '匯出', 'data-act': 'export', onclick: async function () {
           var txt = await Lib.getView(c.textId, Model.sid(c));
           Model.loadInk(c);
-          var cells = MX.Layout.buildCells(txt, c.cfg, c.signStr);
-          MX.Export.openSheet(MX.Export.ctx(c, txt, cells));
+          Model.upgradeKeys(c, txt);
+          MX.Export.openSheet(MX.Export.ctx(c, txt, MX.Layout.cellsFor(txt, c)));
         } }),
         h('button', { text: '刪除', 'data-act': 'delete', onclick: async function () {
           var ok = await MX.confirm('刪除這份存檔？無法復原。', '刪除', '刪除存檔');

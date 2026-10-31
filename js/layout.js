@@ -4,15 +4,16 @@
   // cols x rows in portrait (swapped in landscape). Six steps: XL 特大, L 大, ML 中大, M 中, S 小, XS 特小.
   var DIMS = { XL: [3, 4], L: [4, 5], ML: [5, 7], M: [6, 8], S: [8, 10], XS: [10, 13] };
 
-  // Build the cell sequence for a copy. A cell has a stable index (its position in this array),
-  // independent of page size/orientation, so ink survives re-layout.
-  function buildCells(text, cfg, signStr) {
+  // Build the cell sequence for a copy: title cells (cfg.title), the body, the legacy 迴向 verse inside the body (cfg.closing, old copies), then the 落款 lines (sig = array of
+  // strings, one per line, see Closing.signLines). A cell's position in this array is its index (pages, focus, `pos`); its ink is stored under its KEY, which never
+  // shifts when other parts are switched on or off: title cell i = 't<i>', body cell n = '<n>', 落款 cell i = 's<i>'.
+  function buildCells(text, cfg, sig) {
     var script = cfg.script === 'simp' ? 'simp' : 'trad';
-    var cells = [];
+    var cells = [], nb = 0, nt = 0, ns = 0;
     function addSection(str, sec, keepAll) {
       Array.from(str || '').forEach(function (c) {
         if (/\s/.test(c)) return;
-        if (keepAll || MX.Closing.isCJK(c)) cells.push({ ch: c, sec: sec, punct: '' });
+        if (keepAll || MX.Closing.isCJK(c)) cells.push({ ch: c, sec: sec, punct: '', key: sec === 'title' ? 't' + (nt++) : String(nb++) });
         else {
           // punctuation attaches to the previous cell of the same section (never occupies a cell)
           for (var i = cells.length - 1; i >= 0; i--) {
@@ -25,27 +26,52 @@
     if (cfg.title) addSection(text.title[script], 'title', true);
     addSection(text.body[script], 'body', false);
     if (cfg.closing) addSection(MX.Closing.verse[script], 'body', false);
-    if (cfg.sign && signStr) addSection(signStr, 'tail', true);
+    var lines = typeof sig === 'string' ? (sig ? [sig] : []) : (sig || []);
+    if (cfg.sign) lines.forEach(function (ln, j) {
+      Array.from(ln).forEach(function (c) { if (!/\s/.test(c)) cells.push({ ch: c, sec: 'sign', punct: '', line: j, key: 's' + (ns++) }); });
+    });
     return cells;
   }
+  // the cells of a copy of `text` (view) with the 落款 its settings give
+  function cellsFor(text, copy) { return buildCells(text, copy.cfg, MX.Closing.signFor(copy, text)); }
 
-  // Pages = arrays of cell indices (or -1 for an unused slot). Title cells get their own page(s).
-  function paginate(cells, perPage) {
-    var pages = [], cur = [];
-    function flush() {
-      if (!cur.length) return;
-      while (cur.length < perPage) cur.push(-1);
-      pages.push(cur); cur = [];
+  // Pages = arrays of perPage cell indices (-1 = unused slot), filled line by line (a line = a column in 直書 / a row in 橫書; slots run line by line, see slotToColRow).
+  // The title starts at the first line and has its own line(s), the body starts on the next fresh line, the 落款 starts on a new line after the body:
+  // 直書 each 落款 line sits 2 cells down from the top of its column, 橫書 each 落款 line is its own row, right-aligned. g = grid (dir, cols, rows).
+  function paginate(cells, g) {
+    var v = g.dir === 'v', per = v ? g.rows : g.cols, perPage = g.perPage, lines = [], cur = [], i, sec;
+    function pad(n) { var a = []; while (n-- > 0) a.push(-1); return a; }
+    function flush() { if (cur.length) { lines.push(cur.concat(pad(per - cur.length))); cur = []; } }
+    function put(idx) { cur.push(idx); if (cur.length === per) flush(); }
+    for (i = 0; i < cells.length; i++) {
+      sec = cells[i].sec;
+      if (sec !== 'sign') {
+        if (cur.length && i && (cells[i - 1].sec === 'title') !== (sec === 'title')) flush();       // the body starts on a fresh line after the title
+        put(i);
+      }
     }
-    var inTitle = true;
-    cells.forEach(function (c, i) {
-      if (inTitle && c.sec !== 'title') { flush(); inTitle = false; }
-      if (c.sec !== 'title') inTitle = false;
-      cur.push(i);
-      if (cur.length === perPage) flush();
-    });
     flush();
-    if (!pages.length) { var e = []; for (var k = 0; k < perPage; k++) e.push(-1); pages.push(e); }
+    // 落款: segments (cells of one text line), each starting on a fresh line
+    var segs = [], last = -1;
+    for (i = 0; i < cells.length; i++) if (cells[i].sec === 'sign') {
+      if (cells[i].line !== last) { segs.push([]); last = cells[i].line; }
+      segs[segs.length - 1].push(i);
+    }
+    var indent = v ? Math.min(2, per - 1) : 0;
+    segs.forEach(function (sg) {
+      var room = per - indent, k, chunk;
+      for (k = 0; k < sg.length; k += room) {
+        chunk = sg.slice(k, k + room);
+        lines.push(v ? pad(indent).concat(chunk, pad(per - indent - chunk.length)) : pad(per - chunk.length).concat(chunk));
+      }
+    });
+    var lpp = perPage / per, pages = [], q, pg, r;
+    for (q = 0; q < lines.length; q += lpp) {
+      pg = [];
+      for (r = 0; r < lpp; r++) pg = pg.concat(lines[q + r] || pad(per));
+      pages.push(pg);
+    }
+    if (!pages.length) pages.push(pad(perPage));
     return pages;
   }
 
@@ -101,7 +127,7 @@
   }
 
   MX.Layout = {
-    DIMS: DIMS, EDGE_DEF: EDGE_DEF, edgePct: edgePct, buildCells: buildCells, paginate: paginate, grid: grid, insets: insets,
+    DIMS: DIMS, EDGE_DEF: EDGE_DEF, edgePct: edgePct, buildCells: buildCells, cellsFor: cellsFor, paginate: paginate, grid: grid, insets: insets,
     slotToColRow: slotToColRow, colRowToSlot: colRowToSlot, flowGrid: flowGrid, slotToLinePos: slotToLinePos
   };
 })();
