@@ -4,6 +4,7 @@
   var S = MX.Screens = {};
   var APK_URL = 'https://github.com/chitintim/chinese-handwriting-app/releases/latest/download/moxie.apk';
   var RELEASES_URL = 'https://github.com/chitintim/chinese-handwriting-app/releases';     // the fallback when the APK link does nothing
+  var ADV_KEY = 'setupAdv:v2';       // 進階選項 of the setup screen is open (device-local: not in a backup)
   var GITHUB_URL = 'https://github.com/chitintim/chinese-handwriting-app';       // 關於 · GitHub (the APK's WebView hands every external https link to the system browser: MainActivity.handleNavigation)
   var ROW_H = 98;          // one list row (88 px + 10 px margin, see .lrow)
   var ROW_H_PHONE = 140;   // the same in the phone layout (132 px + 8 px margin)
@@ -112,12 +113,22 @@
     return { label: '解說', act: 'notes', onclick: function () { location.hash = H('notes', textId, sectionId || 'main'); } };
   }
 
+  // 匯出 for a copy from a list (loads its text and ink first): the 匯出作品 sheet
+  S.exportCopy = async function (c) {
+    var txt = await Lib.getView(c.textId, Model.sid(c));
+    Model.loadInk(c);
+    Model.upgradeKeys(c, txt);
+    MX.Export.openSheet(MX.Export.ctx(c, txt, MX.Layout.cellsFor(txt, c)));
+  };
+  function exportBtn(c) { return { label: '匯出', act: 'export', onclick: function () { S.exportCopy(c).catch(function (e) { MX.err(e); MX.toast('匯出失敗'); }); } }; }
+
   // buttons of a (text, section) row: 繼續/開始, 解說 (when there are notes), 收藏
   function sectionButtons(textId, sectionId, favSec, onFav) {
     var copy = Model.activeCopy(textId, sectionId), bs = [];
     bs.push({ label: copy ? '繼續' : '開始', act: 'start', primary: true,
       onclick: function () { location.hash = copy ? H('practice', copy.id) : H('setup', textId, sectionId); } });
     if (Lib.hasNotes(textId, sectionId)) bs.push(notesBtn(textId, sectionId));
+    if (copy && copy.filled > 0) bs.push(exportBtn(copy));
     bs.push({ node: MX.favButton(textId, favSec, onFav) });
     return bs;
   }
@@ -148,7 +159,7 @@
     var r = lrow({
       title: T(e.title), meta: '進度 ' + pctOf(c) + '% · 最後書寫 ' + dateOf(c.updatedAt), font: uiFont(c.cfg.script), compact: compact, pct: pctOf(c),
       attrs: { 'data-role': 'resume', 'data-copy': c.id, 'data-text': null }, open: function () { location.hash = H('practice', c.id); },
-      buttons: [{ label: '繼續', act: 'resume', primary: true, onclick: function () { location.hash = H('practice', c.id); } }]
+      buttons: [{ label: '繼續', act: 'resume', primary: true, onclick: function () { location.hash = H('practice', c.id); } }, exportBtn(c)]
     });
     if (e.sections > 1) refineTitle(r, c.textId, Model.sid(c));
     return r;
@@ -257,7 +268,7 @@
     var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '';
     el.appendChild(h('div', { class: 'note vernote', text: '版本 ' + ver + ' · 字帖庫 ' + Lib.version() + ' · 儲存：' + Store.mode() }));
     // the intro card at the very end of the screen (inside the .screen bottom padding: never in the bottom edge dead zone; wide layout: a two-column card under the header). Black text.
-    // Title, a short story (English + 中文), the ask, and two separate big links: 關於與隨喜 (the 關於 page) and GitHub. On the 電子紙 tablet the 中文 line comes first and the English one is smaller (keeps the shelves above the fold).
+    // Title, a short story (English + 中文), the ask, and two separate big links: 關於與隨喜 (opens the intro dialog) and GitHub. On the 電子紙 tablet the 中文 line comes first and the English one is smaller (keeps the shelves above the fold).
     var compactIntro = !MX.Device.isWide() && !MX.Device.isPhone() && Model.settings.screenType === 'eink';
     var iEn = h('p', { class: 'ien', lang: 'en', 'data-role': 'intro-en', text: 'Hey, it\'s Tim 👋 I vibe-coded this while sitting with my mom in hospital. She\'s a devoted Buddhist, and 抄心經 is close to her heart. It started as one sutra and grew into a little library of texts to trace.' });
     var iZh = h('p', { class: 'izh', lang: 'zh', 'data-role': 'intro-zh', text: '在醫院陪媽媽的日子裡做的小工具，由一篇《心經》開始，慢慢變成一個小字帖庫。' });
@@ -266,7 +277,7 @@
       h('div', { class: 'ibodies' }, compactIntro ? [iZh, iEn] : [iEn, iZh]),
       h('div', { class: 'i3', 'data-role': 'intro-ask', text: 'Free, always. If you like it, please consider a kind donation to Dana-Farber, or a visit to 西方寺 — 如覺得有用，歡迎隨喜。' }),
       h('div', { class: 'i4', 'data-role': 'intro-links' }, [
-        h('a', { class: 'ilink', 'data-act': 'about', href: '#/about' }, ['關於與隨喜', MX.icon('tri-r', 12)]),
+        h('a', { class: 'ilink', 'data-act': 'about', href: '#/about', onclick: function (e) { e.preventDefault(); if (MX.Intro) MX.Intro.open(); } }, ['關於與隨喜', MX.icon('tri-r', 12)]),
         h('a', { class: 'ilink', 'data-act': 'github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: 'GitHub' })
       ])
     ]));
@@ -467,26 +478,54 @@
     var crumbs = catCrumbs(entry);
     if (entry.sections > 1) crumbs.push([T(entry.title), H('text', textId)]);
     crumbs.push(['設定', H('setup', textId, sectionId)]);
-    var el = screen(root, '設定 · ' + T(entry.title), S.backFor(textId), null, crumbs);
+    var el = screen(root, T(entry.title), S.backFor(textId), null, crumbs);
     el.setAttribute('data-screen', 'setup');
     el.setAttribute('data-section', sectionId);
-    var info = h('div', { class: 'note', 'data-role': 'cellcount' });
+    // Layout of this screen: title (+ section) and the size estimate, ONE big start button right under them (繼續上次 + a quieter 重新開始 when there is ink),
+    // the two essentials (字體, 模式), the small links, and a collapsed 進階選項 (everything else; open/closed is remembered per device, static, no animation).
+    var info = h('div', { class: 'note scount', 'data-role': 'cellcount' });
     function cellsOf(txt) { return MX.Layout.cellsFor(txt, { cfg: d, createdAt: copy ? copy.createdAt : Date.now() }); }
     var viewP = Lib.getView(textId, sectionId);
     viewP.then(function (v) {
       if (!el.parentNode) return;
-      if (v.multi) el.querySelector('h1').textContent = '設定 · ' + T(v.textTitle) + ' · ' + T(v.sectionTitle);
+      if (v.multi) el.querySelector('h1').textContent = T(v.textTitle) + ' · ' + T(v.sectionTitle);
     }).catch(function () { /* shown below */ });
+    // an estimate of the pages in the tablet / laptop layout (the phone shows one cell per page: no page count there)
+    function pagesOf(cells) {
+      if (MX.Device.isPhone()) return 0;
+      var dm = MX.Layout.DIMS[d.size] || MX.Layout.DIMS.M, portrait = window.innerWidth < window.innerHeight, cols = portrait ? dm[0] : dm[1], rows = portrait ? dm[1] : dm[0];
+      return MX.Layout.paginate(cells, { dir: d.dir === 'h' ? 'h' : 'v', cols: cols, rows: rows, perPage: cols * rows }).length;
+    }
+    // the advanced choices that differ from the defaults, in words (shown under the collapsed 進階選項 row)
+    var advSum = h('div', { class: 'note advsum', 'data-role': 'adv-summary' });
+    function advSummary() {
+      var D = Model.DEF_CFG, get = function (k) { return d[k] === undefined ? D[k] : d[k]; };
+      var differs = ['box', 'guide', 'grid', 'size', 'dir', 'punct', 'title', 'sign'].some(function (k) { return get(k) !== D[k]; });
+      if (!differs) return '';
+      var size = MX.Form.CFG.filter(function (f) { return f.k === 'size'; })[0].opts.filter(function (o) { return o[0] === get('size'); })[0];
+      var parts = [get('guide') === false ? '無格線' : (get('grid') === 'tian' ? '田字格' : '米字格')];
+      if (get('box') === false) parts.push('無外框');
+      parts.push(get('dir') === 'h' ? '橫書' : '直書', (size ? size[1].split(' ')[0] : '中') + '格');
+      if (get('punct') === 'show') parts.push('顯示標點');
+      if (get('title') === false) parts.push('無標題');
+      parts.push(get('sign') === false ? '無落款' : '含落款');
+      return parts.join(' · ');
+    }
+    function refreshAdv() { advSum.textContent = advSummary(); advSum.hidden = !advSum.textContent || advOpen(); }
     function refreshInfo() {
       viewP.then(function (txt) {
-        var cells = cellsOf(txt);
-        info.textContent = '共 ' + cells.length + ' 格';
+        var cells = cellsOf(txt), pg = pagesOf(cells);
+        info.textContent = '約 ' + cells.length + ' 字' + (pg ? ' · ' + pg + ' 頁' : '');
+        info.setAttribute('data-cells', String(cells.length));
       }).catch(function (e) { info.textContent = '無法載入文本：' + (e && e.message || e); });
+      refreshAdv();
     }
+    el.appendChild(info);
     // actions first (no hunting for a button at the bottom of a long form)
-    var row = h('div', { class: 'btnrow actions' });
+    var inprog = !!(copy && Model.recount(copy) > 0);
+    var row = h('div', { class: 'btnrow actions startrow' });
     row.appendChild(h('button', {
-      class: 'on big', 'data-act': 'go', text: copy ? '確定並繼續' : '開始抄寫',
+      class: 'on big startbtn', 'data-act': 'go', text: inprog ? '繼續上次（' + Model.recount(copy) + ' / ' + (copy.total || 0) + '）' : '開始抄寫',
       onclick: async function () {
         var txt = await Lib.getView(textId, sectionId), c = copy;
         Model.saveTextCfg(textId, d);
@@ -504,11 +543,11 @@
         location.hash = H('practice', c.id);
       }
     }));
-    if (copy) {
+    if (copy && inprog) {
       row.appendChild(h('button', {
-        class: 'big', 'data-act': 'newcopy', text: '新抄一遍',
+        class: 'restartbtn', 'data-act': 'newcopy', text: '重新開始',
         onclick: async function () {
-          var ok = await MX.confirm('將目前這一遍存檔，重新開始新的一遍？', '新抄一遍', '新抄一遍');
+          var ok = await MX.confirm('將目前這一遍存檔，重新開始新的一遍？', '重新開始', '重新開始');
           if (!ok) return;
           Model.archive(copy);
           location.replace(H('setup', textId, sectionId, 'new=' + Date.now()));
@@ -516,23 +555,45 @@
       }));
     }
     el.appendChild(row);
+    // the essentials: 字體 (繁 / 简) and 模式 (描 / 臨 / 默)
+    var ESS = ['script', 'mode'], cfgFields = MX.Form.CFG;
+    el.appendChild(MX.Form.build(cfgFields.filter(function (f) { return ESS.indexOf(f.k) >= 0; }), d, locked, refreshInfo));
+    if (locked) el.appendChild(h('div', { class: 'note', text: '已開始書寫：字體需「重新開始」才能更改。' }));
     var row2 = h('div', { class: 'btnrow secondary' });
     row2.appendChild(MX.favButton(textId, entry.sections > 1 ? sectionId : null, null, true));
     if (Lib.hasNotes(textId, sectionId)) row2.appendChild(h('button', { text: '解說', 'data-act': 'notes', onclick: function () { location.hash = H('notes', textId, sectionId); } }));
     var arch = Model.archived(textId, sectionId).length;
     if (arch) row2.appendChild(h('button', { text: '存檔 (' + arch + ')', 'data-act': 'archives', onclick: function () { location.hash = H('archives', textId, sectionId); } }));
-    el.appendChild(row2);
 
+    try { if (Store.get('setupAdv:v1') !== undefined) Store.del('setupAdv:v1'); } catch (e) { /* ignore */ }       // reset once: the old flag is gone, 進階選項 starts collapsed
+    // 進階選項: collapsed by default; the choice is remembered per device (Store `setupAdv:v2`, device-local; v1 is deleted once)
+    function advOpen() { try { return !!Store.get(ADV_KEY); } catch (e) { return false; } }
+    var adv = h('div', { class: 'advbody', id: 'setup-adv', 'data-role': 'adv-body' });
+    var advBtn = h('button', { type: 'button', class: 'advbtn', 'data-act': 'adv', 'aria-controls': 'setup-adv', onclick: function () {
+      try { if (advOpen()) Store.del(ADV_KEY); else Store.set(ADV_KEY, 1); } catch (e) { MX.err(e); }
+      syncAdv();
+    } });
+    function syncAdv() {
+      var open = advOpen();
+      adv.hidden = !open;
+      advBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      advBtn.innerHTML = '';
+      advBtn.appendChild(h('span', { text: '進階選項' }));
+      advBtn.appendChild(MX.icon(open ? 'tri-u' : 'tri-d', 18));
+      refreshAdv();
+    }
+    el.appendChild(advBtn);
+    el.appendChild(advSum);
+    adv.appendChild(MX.Form.build(cfgFields.filter(function (f) { return ESS.indexOf(f.k) < 0; }), d, locked, refreshInfo));
     var signHold = h('div');
-    el.appendChild(signHold);
+    adv.appendChild(signHold);
     viewP.then(function (v) {
       signHold.appendChild(h('h2', { text: '署名與落款' }));
       signHold.appendChild(MX.Form.signBlock(Model.settings, d, v.category === 'buddhist', function () { Model.saveSettings(); refreshInfo(); }));
     }).catch(function () { /* the cell count shows the error */ });
-    el.appendChild(h('h2', { text: '這一遍' }));
-    el.appendChild(MX.Form.build(MX.Form.CFG, d, locked, refreshInfo));
-    if (locked) el.appendChild(h('div', { class: 'note', text: '已開始書寫：字體需「新抄一遍」才能更改。' }));
-    el.appendChild(info);
+    el.appendChild(adv);
+    if (MX.Device.isPhone()) adv.insertBefore(row2, adv.firstChild); else el.appendChild(row2);       // 收藏 / 解說 / 存檔: on a phone they are inside 進階選項 (nothing but the essentials above the fold)
+    syncAdv();
     refreshInfo();
   };
 
@@ -698,10 +759,11 @@
     ab.appendChild(row);
     ab.appendChild(out);
     ab.appendChild(h('div', { class: 'btnrow', 'data-role': 'about-links' }, [
-      h('button', { text: '關於與隨喜', 'data-act': 'about', onclick: function () { location.hash = '#/about'; } }),
+      h('button', { text: '關於與隨喜', 'data-act': 'about', onclick: function () { if (MX.Intro) MX.Intro.open(); } }),
       h('a', { class: 'btnlink plain', 'data-act': 'about-github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: '完整介紹 · GitHub' })
     ]));
-    ab.appendChild(h('div', { class: 'note', 'data-role': 'stroke-credit', text: '筆順資料：hanzi-writer-data／Make Me a Hanzi（取自文鼎 Arphic 字型，Arphic Public License，授權全文在 library/strokes/LICENSE）。筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。' }));
+    ab.appendChild(h('div', { class: 'note', 'data-role': 'font-credit', text: MX.Notes.CREDITS.font }));
+    ab.appendChild(h('div', { class: 'note', 'data-role': 'stroke-credit', text: MX.Notes.CREDITS.stroke }));
   };
 
   // ------------------------------------------------------------------ archives (of one section; no section = all sections of the text)
@@ -719,12 +781,7 @@
       ]);
       card.appendChild(h('div', { class: 'btnrow' }, [
         h('button', { text: '檢視', 'data-act': 'view', onclick: function () { location.hash = H('view', c.id); } }),
-        h('button', { text: '匯出', 'data-act': 'export', onclick: async function () {
-          var txt = await Lib.getView(c.textId, Model.sid(c));
-          Model.loadInk(c);
-          Model.upgradeKeys(c, txt);
-          MX.Export.openSheet(MX.Export.ctx(c, txt, MX.Layout.cellsFor(txt, c)));
-        } }),
+        h('button', { text: '匯出', 'data-act': 'export', onclick: function () { S.exportCopy(c).catch(function (e) { MX.err(e); MX.toast('匯出失敗'); }); } }),
         h('button', { text: '刪除', 'data-act': 'delete', onclick: async function () {
           var ok = await MX.confirm('刪除這份存檔？無法復原。', '刪除', '刪除存檔');
           if (!ok) return;

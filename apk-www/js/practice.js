@@ -241,8 +241,8 @@
     if (!S.readOnly) head.appendChild(buildPill());
     head.appendChild(h('button', { type: 'button', text: '筆順', 'data-act': 'stroke', onclick: strokeButton }));
     if (notes) head.appendChild(h('button', { type: 'button', text: '解說', 'data-act': 'notes', onclick: openNotes }));
-    head.appendChild(S.readOnly ? h('button', { type: 'button', text: '匯出', 'data-act': 'export', onclick: function () { openExport(); } })
-      : h('button', { type: 'button', text: '設定', 'data-act': 'settings', onclick: openSettings }));
+    head.appendChild(h('button', { type: 'button', text: '匯出', 'data-act': 'export', onclick: function () { openExport(); } }));
+    if (!S.readOnly) head.appendChild(h('button', { type: 'button', text: '設定', 'data-act': 'settings', onclick: openSettings }));
     top.appendChild(head);
     top.appendChild(h('div', { class: 'ptrow' }, [h('div', { class: 'ptitle', 'data-role': 'phone-title', text: title || '', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) }), S.counter]));
     top.appendChild(S.ctx);
@@ -330,7 +330,7 @@
     bar.appendChild(first); bar.appendChild(S.counter); bar.appendChild(second);
     var notes = MX.Library.hasNotes(S.copy.textId, Model.sid(S.copy));
     if (S.readOnly) {
-      bar.appendChild(btn('匯出', 'export', function () { openExport(); }));
+      bar.appendChild(nav('匯出', 'export', function () { openExport(); }, 'dl'));
       bar.appendChild(btn('筆順', 'stroke', strokeButton));
       if (notes) bar.appendChild(btn('解說', 'notes', openNotes));
       return;
@@ -340,6 +340,7 @@
     if (S.cfg.mode === 'recall') bar.appendChild(btn('提示', 'hint', hint));
     bar.appendChild(btn('筆順', 'stroke', strokeButton));
     bar.appendChild(btn('刷新', 'refresh', function () { refresh(); }));
+    bar.appendChild(nav('匯出', 'export', function () { openExport(); }, 'dl'));
     if (notes) bar.appendChild(btn('解說', 'notes', openNotes));
     bar.appendChild(btn('設定', 'settings', openSettings));
   }
@@ -913,7 +914,6 @@
     var body = [
       head,
       h('div', { class: 'btnrow' }, [
-        h('button', { text: '匯出作品', 'data-act': 'export', onclick: function () { api.close(); openExport(); } }),
         h('button', { text: '新抄一遍', 'data-act': 'newcopy', onclick: function () { api.close(); newCopy(); } })
       ]),
       h('h2', { text: '署名與落款' }),

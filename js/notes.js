@@ -44,7 +44,7 @@
     return out;
   }
 
-  // the paged column view shared by the 解說 page and the 關於 page: the view + pager are added to `el`; returns {cols, go, repage}
+  // the paged column view used by the 解說 page: the view + pager are added to `el`; returns {cols, go, repage}
   function paged(el, C, role) {
     var view = h('div', { class: 'nview', 'data-role': role + '-view' });
     var cols = h('div', { class: 'ncols', 'data-role': role + '-cols' });
@@ -155,15 +155,14 @@
     setTimeout(repage, 60);
   };
 
-  // ------------------------------------------------------------------ 關於 (#/about): who made it and why, 隨喜, links, version, credits.
-  // E-ink tablet: paged like the 解說 page (no scrolling). Phone / LCD: one scrolling screen. The copy is fixed text (it is not part of the library).
+  // ------------------------------------------------------------------ 關於與隨喜: who made it and why, 隨喜, links. Shown ONLY in the intro dialog (js/intro.js; there is no 關於 page any more:
+  // #/about opens the dialog over home). The copy is fixed text (it is not part of the library). The version and the licence notes live in 設定 -> 關於 (N.CREDITS).
   var GITHUB = 'https://github.com/chitintim/chinese-handwriting-app';
   var DANA = 'https://danafarber.jimmyfund.org/site/Donation2?df_id=10522&mfc_pref=T&10522.donation=form1';
   var WM = 'https://www.wm.org.hk/';
   N.LINKS = { github: GITHUB, dana: DANA, wm: WM };
   function ext(act, href, text, cls) { return h('a', { class: cls || 'btnlink', 'data-act': act, href: href, target: '_blank', rel: 'noopener', text: text }); }
   function aboutBlocks() {
-    var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '', native = window.MoBridge && MX.Update ? MX.Update.current() : '';
     return [
       h('div', { class: 'npart', 'data-part': 'hey' }, [
         h('h2', { text: 'Hey, it\'s Tim 👋' }),
@@ -173,7 +172,7 @@
       ]),
       h('div', { class: 'npart', 'data-part': 'donate' }, [
         h('h2', { text: '隨喜 · If you like this app' }),
-        h('p', { class: 'ntext', text: 'It\'s free and always will be. If it brings you something, please consider a kind donation to one of these instead — not to me:' }),
+        h('p', { class: 'ntext', text: 'It\'s free and always will be. If it brings you something, please consider a kind donation to one of these:' }),
         h('div', { class: 'nitem aitem', 'data-role': 'donate-dana' }, [
           h('p', { class: 'ntext', text: 'Dana-Farber Cancer Institute (Boston) — Mom has been fighting ovarian cancer, and we spent a couple of months at Dana-Farber. You can direct your gift to the Gynecologic Oncology Program.' }),
           ext('donate-dana', DANA, 'Dana-Farber · Donate')
@@ -185,38 +184,14 @@
         ]),
         h('p', { class: 'ntext', text: '如果這個小工具對你有幫助，歡迎隨喜捐助以上機構。🙏' })
       ]),
-      h('div', { class: 'nitem aitem', 'data-role': 'about-github' }, [ext('about-github', GITHUB, '完整介紹 · GitHub')]),
-      h('div', { class: 'npart', 'data-part': 'credits' }, [
-        h('h2', { text: '版本與授權' }),
-        h('p', { class: 'ntext small', 'data-role': 'version', text: (native ? 'App 版本 ' + native + ' · ' : '') + '網頁版本 ' + ver + ' · 字帖庫 ' + (MX.Library.version ? MX.Library.version() : '') }),
-        h('p', { class: 'ntext small', 'data-role': 'font-credit', text: '字型：文鼎 PL 中楷 AR PL UKai（Arphic Public License）；全字庫正楷體 TW-Kai、馬善政 Ma Shan Zheng、霞鶩文楷 LXGW WenKai（SIL OFL 1.1）。已裁切字集並改名，授權全文在 library/fonts/。' }),
-        h('p', { class: 'ntext small', 'data-role': 'stroke-credit', text: '筆順資料：hanzi-writer-data／Make Me a Hanzi（取自文鼎 Arphic 字型，Arphic Public License，授權全文在 library/strokes/LICENSE）。筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。' })
-      ])
+      h('div', { class: 'nitem aitem', 'data-role': 'about-github' }, [ext('about-github', GITHUB, '完整介紹 · GitHub')])
     ];
   }
   N.aboutBlocks = aboutBlocks;
-  N.about = function (root) {
-    N.hide();
-    var pagedMode = !MX.Device.isPhone() && Model.settings.screenType === 'eink';
-    var el = h('div', { class: 'screen about' + (pagedMode ? ' nread' : ''), 'data-screen': 'about', 'data-mode': pagedMode ? 'paged' : 'scroll' });
-    root.appendChild(el);
-    var C = { el: el, listeners: [], page: 0, pages: 1, timer: null };
-    cur = C;
-    el.appendChild(h('div', { class: 'topbar' }, [
-      h('button', { text: '返回', class: 'backbtn', 'data-act': 'back', onclick: function () { if (history.length > 1) history.back(); else location.hash = '#/'; } }),
-      h('h1', { class: 'grow', text: '關於', 'data-role': 'about-title' }),
-      h('button', { class: 'replay', 'data-act': 'intro-replay', text: '重看介紹', onclick: function () { if (MX.Intro) MX.Intro.open(); } })
-    ]));
-    if (pagedMode) {
-      var pg = paged(el, C, 'about');
-      aboutBlocks().forEach(function (b) { pg.cols.appendChild(b); });
-      pg.repage(); pg.go(0);
-      setTimeout(pg.repage, 60);
-    } else {
-      var body = h('div', { class: 'ncols ascroll', 'data-role': 'about-body' });
-      aboutBlocks().forEach(function (b) { body.appendChild(b); });
-      el.appendChild(body);
-    }
+  // the licence notes of 設定 -> 關於 (fonts, stroke data); the version line is built there
+  N.CREDITS = {
+    font: '字型：文鼎 PL 中楷 AR PL UKai（Arphic Public License）；全字庫正楷體 TW-Kai、馬善政 Ma Shan Zheng、霞鶩文楷 LXGW WenKai（SIL OFL 1.1）。已裁切字集並改名，授權全文在 library/fonts/。',
+    stroke: '筆順資料：hanzi-writer-data／Make Me a Hanzi（取自文鼎 Arphic 字型，Arphic Public License，授權全文在 library/strokes/LICENSE）。筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。'
   };
 
   // ------------------------------------------------------------------ 對照模式 strip (practice view): 要旨 + glossary of the current section, as much as fits

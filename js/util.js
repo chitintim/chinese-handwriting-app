@@ -68,6 +68,10 @@
       el = document.createElementNS(SVGNS, 'path');
       el.setAttribute('d', 'M5 5 L19 19 M19 5 L5 19'); el.setAttribute('fill', 'none');
       el.setAttribute('stroke', 'currentColor'); el.setAttribute('stroke-width', '3'); el.setAttribute('stroke-linecap', 'square');
+    } else if (name === 'dl') {
+      el = document.createElementNS(SVGNS, 'path');
+      el.setAttribute('d', 'M12 3 V15 M6 10 L12 16 L18 10 M4 21 H20'); el.setAttribute('fill', 'none');
+      el.setAttribute('stroke', 'currentColor'); el.setAttribute('stroke-width', '3'); el.setAttribute('stroke-linecap', 'square');
     } else {
       var P = { 'tri-l': '17,3 5,12 17,21', 'tri-r': '7,3 19,12 7,21', 'tri-u': '3,17 12,5 21,17', 'tri-d': '3,7 12,19 21,7' };
       el = document.createElementNS(SVGNS, 'polygon');

@@ -1,8 +1,8 @@
 (function () {
   'use strict';
-  // The first-visit intro: a full dialog with the whole 關於 text (the content comes from MX.Notes.aboutBlocks(), the very source of the 關於 page, so the two never diverge).
+  // The first-visit intro: a full dialog with the whole 關於 text (the content comes from MX.Notes.aboutBlocks(); there is no separate 關於 page).
   // Shown once, over the home screen only (never over the practice view, the pen test or an export). Persisted as Store key `introSeen:v1` (device-local, not part of a backup).
-  // Closes with 開始抄寫 / the ✕ / Esc / the Android Back button; 關於 -> 重看介紹 opens it again. docs/SPEC.md "First-visit intro".
+  // Closes with 開始抄寫 / the ✕ / Esc / the Android Back button. Opened again by hand from the home card (關於與隨喜), 設定 -> 關於 -> 關於與隨喜 and an old #/about link (main.js). docs/SPEC.md "First-visit intro".
   // Layout: phone = full-screen sheet (safe-area insets), otherwise centred, max 680 px. LCD: the text scrolls. 電子紙 tablet: paged with 上一頁 / 下一頁, no animation,
   // solid white, black border, and one full redraw (the screen is rebuilt) when it closes.
   // Test hooks: window.__MX_NO_INTRO = true (set by the test suites) stops the automatic opening; MX.Intro.open() always works.
@@ -32,7 +32,7 @@
     var C = cur, paged = C.paged;
     var close = h('button', { type: 'button', class: 'iclose', 'data-act': 'intro-close', 'aria-label': '關閉', title: '關閉', onclick: function () { I.close('x'); } }, [MX.icon('x', 26)]);
     var head = h('div', { class: 'ihead' }, [h('h1', { id: 'intro-title', 'data-role': 'intro-title', text: '墨字帖 · 抄經、臨帖的描紅練習' }), close]);
-    var blocks = MX.Notes.aboutBlocks().filter(function (b) { return b.getAttribute('data-part') !== 'credits'; });       // version + licences stay on the 關於 page
+    var blocks = MX.Notes.aboutBlocks();       // the version + licences are in 設定 -> 關於
     var body;
     if (paged) {
       var view = h('div', { class: 'nview ibodyview', 'data-role': 'intro-view' });
@@ -102,7 +102,7 @@
     if (C && C.root && C.root.parentNode) C.root.parentNode.removeChild(C.root);
   }
 
-  // open the dialog (the 重看介紹 button, the automatic first-visit call, tests). opts.auto = opened by itself
+  // open the dialog (the home card, 設定 -> 關於, #/about, the automatic first-visit call, tests). opts.auto = opened by itself
   I.open = function (opts) {
     if (cur) return false;
     cur = { auto: !!(opts && opts.auto), opener: document.activeElement, page: 0, pages: 1, paged: false };

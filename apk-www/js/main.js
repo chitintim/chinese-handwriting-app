@@ -22,7 +22,12 @@
   }
   function route() {
     teardown();
-    var r = parse(), el = root();
+    var r = parse(), el = root(), oldAbout = false;
+    // the old #/about (there is no 關於 page any more): the home screen with the dialog over it; the address goes back to #/ (no new history entry)
+    if (r.name === 'about') {
+      oldAbout = true; r = { name: 'home', arg: '', arg2: '', query: '' };
+      try { history.replaceState(history.state, '', location.pathname + location.search + '#/'); } catch (e) { /* ignore */ }
+    }
     current = r.name;
     try {
       switch (r.name) {
@@ -33,7 +38,6 @@
         case 'text': MX.Screens.text(el, r.arg, r.query); break;
         case 'shelf': MX.Screens.shelf(el, r.arg, r.query); break;
         case 'search': MX.Screens.search(el, r.query); break;
-        case 'about': MX.Notes.about(el); break;
         case 'notes': MX.Notes.show(el, r.arg, r.arg2 || 'main', r.query); break;
         case 'custom': MX.Screens.custom(el, r.arg); break;
         case 'settings': MX.Screens.settings(el); break;
@@ -47,7 +51,7 @@
         MX.h('button', { text: '返回', onclick: function () { location.hash = '#/'; } })]));
     }
     // the first-visit intro: opens over the home screen only (never over practice / pen test / an export), stays open across a re-render, closes when the route leaves for practice
-    try { if (MX.Intro) MX.Intro.onRoute(r.name); } catch (e) { MX.err(e); }
+    try { if (oldAbout && MX.Intro) MX.Intro.open(); if (MX.Intro) MX.Intro.onRoute(r.name); } catch (e) { MX.err(e); }
   }
   MX.route = route;
   MX.isHome = function () { return current === 'home'; };
