@@ -71,18 +71,18 @@ Works offline after the first visit. When a new version is out, an "update avail
 
 - No App Store app, so use the web version in **Safari**.
 - **Add to Home Screen** (Share button → 加入主畫面) and open it from the icon. Safari can wipe a plain tab's site data, ink included, after about 7 days without a visit. A Home Screen web app is exempt. The app reminds you once.
-- Still back up now and then: 設定 → 資料 → 匯出.
+- Still back up now and then: 設定 → 資料 → 匯出完整備份.
 - iPad + Apple Pencil gets the tablet layout with pressure and tilt. Set 螢幕類型 to 一般螢幕 (light-grey solid grid) under 設定 → 顯示.
 
 ### Phones
 
 When the screen's short side is under 520 px, the app switches to a one-character-at-a-time layout (or force it via 設定 → 顯示 → 版面 → 手機): big cell, a strip showing the 3 characters before and after, section title and progress, and buttons for 上一字, 下一字, 撤銷, 清除, 筆順 and 解說. Write with a finger or stylus; finger stroke width follows speed (slower = thicker). When you finish a character, it moves on after a short pause.
 
-Ink is stored exactly as on the tablet layout, so you can start on a tablet and continue on a phone (move data with 設定 → 匯出 / 匯入).
+Ink is stored exactly as on the tablet layout, so you can start on a tablet and continue on a phone (move data with 設定 → 資料 → 匯出完整備份 / 匯入備份).
 
 ### Data stays separate
 
-The web app and the APK keep separate storage. To move between them, use 設定 → 匯出 / 匯入 (full backup).
+The web app and the APK keep separate storage (設定 → 資料 says so too). To move between them, make a backup in one (設定 → 資料 → 匯出完整備份) and import it in the other (匯入備份 → 合併).
 
 ---
 
@@ -108,7 +108,7 @@ The web app and the APK keep separate storage. To move between them, use 設定 
 - **Edge margins** avoid the screen edges where pens lose signal (default 3.5 % bottom, 1 % sides and top).
 
 ### Bookshelf
-Home is a bookshelf: **continue writing** (jumps to your first empty cell), **favourites** (☆ / ★, whole texts or single sections) and the **library** (categories, sort, search). Each section tracks progress and completion count. **New copy** archives the current one (still viewable and exportable). **Custom** takes your own pasted text, kept on your device and included in backups.
+Home is a bookshelf: **continue writing** (jumps to your first empty cell), **favourites** (☆ / ★, whole texts or single sections) and the **library** (categories, sort, search). Each section tracks progress and completion count. Starting a section you have already finished begins a **new writing** (再抄一遍) and keeps the finished one; **新抄一遍** archives the current one the same way. **My works 我的作品** lists every writing (in progress, finished, archived), newest first, with a small preview, a filter by status and text, and 繼續 / 檢視 / 匯出 / 備份 / 刪除. **Custom** takes your own pasted text, kept on your device and included in backups.
 
 ### Section notes 解說
 82 of the 85 texts have per-section notes: summary, plain-language translation, key lines, glossary, background. They show after you finish a section (can be turned off). **Side-by-side mode** keeps the summary and glossary next to (landscape) or below (portrait) the writing area. The notes are AI-assisted, for study only.
@@ -124,7 +124,8 @@ Export re-flows the whole text into a finished piece instead of stitching screen
 
 ### Also
 - **Offline:** the APK, and the web version after its first load.
-- **Backup:** 設定 → 資料 → 匯出 / 匯入. One JSON file holds all copies, favourites and settings; importing replaces everything on that device.
+- **Backup:** 設定 → 資料 shows the space used, whether the browser promised to keep your data (申請長期保存) and the date of the last backup, and saves a full backup as one compressed `墨字帖-備份-YYYYMMDD.moxie` file (copies, ink, favourites, custom texts, settings; plain `.json` where the browser cannot compress). A single text or a single writing can be backed up from 我的作品 or the text page. Importing first shows what is in the file, then **merges** (adds and updates, never deletes; a writing that differs on both sides is kept twice) or replaces everything on that device. Older plain `.json` backups still import. A small card on the home screen suggests a backup after 3 finished writings or 14 days.
+- **Corrected texts:** every writing remembers a fingerprint of the text it was written against; if the library text is later corrected, opening the writing says so (your strokes are never moved or deleted).
 - Settings auto-save.
 - Every text has Traditional and Simplified forms you can switch between. The UI itself is in Traditional Chinese.
 
@@ -200,7 +201,7 @@ This repo is generated from a private source repository, so accepted PRs are mer
 - What you write **stays on your device** (IndexedDB, with localStorage as fallback). No accounts, ads, tracking or backend.
 - One anonymous **visit count** per app start via [GoatCounter](https://www.goatcounter.com/) (no cookies, nothing personal), just so I know whether it's worth putting effort into keeping this maintained. Skipped with Do Not Track.
 - The network is used only to: (1) load the web app and fonts, plus the visit count above; (2) check for APK updates (GitHub Releases API, at most once a day or on demand); (3) check for library updates (reads `library/index.json` and shows 「字帖庫有更新」; you choose whether to download).
-- Backups are your job: 設定 → 資料 → 匯出.
+- Backups are your job: 設定 → 資料 → 匯出完整備份.
 
 ---
 
@@ -223,7 +224,7 @@ This repo is generated from a private source repository, so accepted PRs are mer
 
 **Where do exports go?** APK: `Download/墨/` (Android 9 and below need storage permission first). Web: your browser's downloads.
 
-**Web and app progress differ?** They store data separately. Move it with 匯出 / 匯入.
+**Web and app progress differ?** They store data separately. Move it with 設定 → 資料 → 匯出完整備份 / 匯入備份 (合併).
 
 **Ink vanished on iPhone?** Safari probably cleared a plain tab's site data. Add to Home Screen and back up regularly.
 

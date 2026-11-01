@@ -48,7 +48,7 @@
     return t;
   }
   var META = ['id', 'textId', 'sectionId', 'status', 'createdAt', 'updatedAt', 'cfg', 'signStr', 'pos', 'activeMs',
-    'filled', 'total', 'completedAt', 'archivedAt', 'bodyN', 'nTitle', 'nSign', 'keyv'];
+    'filled', 'total', 'completedAt', 'archivedAt', 'bodyN', 'nTitle', 'nSign', 'keyv', 'fp', 'fpAck', 'libv'];
 
   var M = MX.Model = {
     CONTENT_KEYS: CONTENT_KEYS, CFG_KEYS: CFG_KEYS, normCfg: normCfg, DEF_CFG: DEF_CFG, DEF_SETTINGS: DEF_SETTINGS,
@@ -56,7 +56,7 @@
 
     // Library sections: a copy / completion record without sectionId (everything stored before the multi-text library) belongs to section 'main'.
     sid: function (c) { return (c && c.sectionId) || 'main'; },
-    SCHEMA: 7,
+    SCHEMA: 8,
 
     init: function () {
       // Stored-data schema marker. Records only ever gain optional fields (defaults are merged below).
@@ -74,6 +74,11 @@
       //   6 -> 7: one 書寫工具 setting (settings.inputMode: auto | pen | touch on a touch device; docs/SPEC.md "Input type") replaces the two overlapping switches 手指書寫 (acceptTouch,
       //           default off, tablet layout) and 手機手指書寫 (phoneTouch, default on, phone layout): acceptTouch true -> 'touch'; else phoneTouch false -> 'pen'; else 'auto' (= what both defaults did).
       //           Both old keys are removed, and so are the settings of the withdrawn 觸控板書寫 (padMode / padFine / padGain) and its banner flag sys:padTip. Nothing else is touched; the choice is device-level (a backup neither carries nor overwrites it).
+      //   7 -> 8: every copy remembers a text fingerprint (copy.fp, Library.fingerprint: the CJK characters of the body it was written against + the cell layout version) and the library
+      //           version it was made with (copy.libv). The library is not loaded yet when this runs, so nothing is rewritten here: Model.backfillFp() (called by main.js once the library
+      //           is loaded, and again after an import) gives each copy without one the fingerprint of the CURRENT library text, the best that can be done for writings made before
+      //           (a copy opened before that happens adopts it too, Model.checkFp). Copies, ink and tallies are otherwise untouched; the new device-local keys sys:lastBackup /
+      //           sys:backupSnooze / sys:lastPartial are not part of a backup. A wrapper of version 1 (older backups) is still read.
       var sv = Store.get('schema');
       if (!(sv >= M.SCHEMA)) M.migrate(sv || 0);
       M.settings = assign({}, DEF_SETTINGS, Store.get('settings'));
@@ -209,6 +214,12 @@
       return { id: ids[0], state: 'done' };
     },
 
+    // The copy a 開始 / 繼續 button continues: the active copy of the section unless it is finished. A finished copy is never reopened by starting again: a new writing begins
+    // and the finished one is archived (beginCopy in screens.js), so it stays in 我的作品 whole.
+    resumable: function (textId, sectionId) {
+      var c = M.activeCopy(textId, sectionId);
+      return c && !c.completedAt ? c : null;
+    },
     // Copies are keyed by text + section (+ script, which lives in cfg.script): at most one active copy per section is shown in the UI.
     // sectionId defaults to 'main'; script is optional (any script).
     activeCopy: function (textId, sectionId, script) {
@@ -275,12 +286,47 @@
       return t;
     },
 
-    create: function (textId, cfg, signStr, total, sectionId) {
+    // ---- text fingerprint (SPEC revision 21): does the library text still match the one this copy was written against?
+    //   'ok' same text; 'adopted' the copy had no fingerprint yet (it takes the current text's); 'unknown' fp '?': can't tell (see Backup.markFp); 'changed' the text differs (the ink may sit under other characters);
+    //   'acked' it differs but the user has seen the notice for this very version of the text (copy.fpAck)
+    FP_STR: { title: '字帖內容已更新', note: '這篇字帖的內容已更新，你的筆跡可能與新文字對不齊', keep: '你的筆跡完整保留，沒有被移動或刪除。', ok: '知道了' },
+    checkFp: function (c, view) {
+      if (!c || !view) return 'ok';
+      var now = MX.Library.fingerprint(view, c.cfg && c.cfg.script);
+      if (c.fp === '?') return 'unknown';       // imported from a backup of another library version that carried no fingerprint: we cannot tell, so no notice (never adopted)
+      if (!c.fp) { c.fp = now; c.libv = MX.Library.version(); M.saveMeta(c); return 'adopted'; }
+      if (c.fp === now) return 'ok';
+      return c.fpAck === now ? 'acked' : 'changed';
+    },
+    ackFp: function (c, view) { c.fpAck = MX.Library.fingerprint(view, c.cfg && c.cfg.script); M.saveMeta(c); },
+    // true when the library text differs from the one the copy was written against (also after the notice was acknowledged)
+    fpChanged: function (c, view) { var r = M.checkFp(c, view); return r === 'changed' || r === 'acked'; },
+    // copies without a fingerprint (made before schema 8, or in a backup of an older build) get the current library text's; resolves when done. Never rewrites a text that cannot be loaded.
+    backfillFp: function () {
+      var todo = Object.keys(M.copies).map(function (id) { return M.copies[id]; }).filter(function (c) { return !c.fp; });
+      M.fpReady = Promise.all(todo.map(function (c) {
+        return MX.Library.getView(c.textId, M.sid(c)).then(function (v) {
+          if (!c.fp) { c.fp = MX.Library.fingerprint(v, c.cfg && c.cfg.script); c.libv = MX.Library.version(); M.saveMeta(c); }
+        }).catch(function () { /* the text is gone or cannot be loaded now: tried again at the next start */ });
+      })).then(function () { return todo.length; });
+      return M.fpReady;
+    },
+    fpReady: Promise.resolve(0),
+    // the writings (copies that hold something), newest activity first: what 我的作品 lists. status: 'doing' (active, not finished) | 'done' (finished, still the section's active copy) | 'archived'
+    works: function () {
+      return Object.keys(M.copies).map(function (id) { return M.copies[id]; }).filter(function (c) { return c.filled > 0 || c.completedAt; })
+        .sort(function (a, b) { return M.stamp(b) - M.stamp(a); });
+    },
+    workStatus: function (c) { return c.status === 'archived' ? 'archived' : (c.completedAt ? 'done' : 'doing'); },
+    // when a copy last changed in any way (ink, finished, archived): what a merge compares
+    stamp: function (c) { return Math.max(c.updatedAt || 0, c.completedAt || 0, c.archivedAt || 0, c.createdAt || 0); },
+
+    create: function (textId, cfg, signStr, total, sectionId, fp) {
       var now = Date.now();
       var c = {
         id: MX.uid(), textId: textId, sectionId: sectionId || 'main', status: 'active', createdAt: now, updatedAt: now,
         cfg: assign({}, DEF_CFG, cfg), signStr: signStr || '', pos: 0, activeMs: 0,
-        filled: 0, total: total || 0, completedAt: null, archivedAt: null, keyv: 2
+        filled: 0, total: total || 0, completedAt: null, archivedAt: null, keyv: 2, fp: fp || undefined, libv: fp ? MX.Library.version() : undefined
       };
       c.ink = {};
       M.copies[c.id] = c;

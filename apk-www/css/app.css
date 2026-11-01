@@ -520,3 +520,31 @@ html.phone .mcards.compact .md{display:none}
 .advgrp .advbtn{max-width:560px}
 .advgrp .advbody{margin-top:4px}
 .sheet .mcards{max-width:none}
+
+/* ---- 我的作品, storage, backups (revision 21): static, black on white, no animation ---- */
+.lrow.work{height:144px}
+.lrow.work .wthumb{flex:none;width:86px;display:flex;align-items:center;justify-content:center;border-right:2px solid #000;background:#fff}
+.lrow.work .wthumb canvas{display:block;border:1px solid #000;background:#fff}
+.lrow.work .wthumb[data-thumb=pending]{background:#fff}
+.lrow.work .lmain .m{-webkit-line-clamp:3}
+.lrow.work .lbtns{flex:0 1 auto;flex-wrap:wrap;justify-content:flex-end;align-content:center;max-width:256px;padding:6px 8px 0 0}
+.lrow.work .lbtns button{margin:0 0 6px 8px;min-width:64px}
+.lrow.work[data-fp=changed]{border-style:dashed}
+.screen[data-screen=works] .ctl{flex-direction:column;align-items:stretch}
+.screen[data-screen=works] .ctl select{min-height:56px;font-size:18px;border:2px solid #000;background:#fff;padding:0 10px;max-width:100%}
+.bkhost button{margin:0 0 8px}
+.subh{font-size:var(--t-s);font-weight:normal;margin:var(--sp-2) 0 4px}
+.datapanel .note{margin:3px 0}
+.finnote{margin:2px 0 var(--sp-2)}
+.fpnote{border:2px solid #000;padding:6px 10px;margin:6px 0}
+label.chk{display:flex;align-items:center;min-height:48px;font-size:var(--t-s);margin:6px 0}
+label.chk input{width:28px;height:28px;margin:0 8px 0 0}
+.note.b{font-weight:bold}
+.badlist{margin-top:8px;border-top:2px solid #000;padding-top:6px}
+html.wide .screen[data-screen=works] [data-role=list]{grid-template-columns:minmax(0,1fr)}
+html.phone .lrow.work{display:grid;grid-template-columns:76px minmax(0,1fr);grid-template-rows:96px auto;height:168px}
+html.phone .lrow.work .wthumb{width:76px;grid-column:1;grid-row:1}
+html.phone .lrow.work .lmain{grid-column:2;grid-row:1}
+html.phone .lrow.work .lbtns{grid-column:1 / -1;grid-row:2;max-width:none;flex-wrap:nowrap;padding:0 6px 6px}
+html.phone .lrow.work .lbtns button{flex:1 1 0;margin:0 6px 0 0;min-width:0}
+html.phone .lrow.work .lbtns button:last-child{margin-right:0}

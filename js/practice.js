@@ -70,6 +70,7 @@
       attach();
       layout();
       keepOn(true);
+      try { fpNotice(copy, text); } catch (e) { MX.err(e); }
     },
     hide: function () {
       if (!S) return;
@@ -90,6 +91,16 @@
     prev: function () { goRel(-1); },
     refresh: refresh
   };
+
+  // The library text is not the one this copy was written against (a corrected text may put a character in another cell): say so, once per version of the text. Nothing is moved or deleted.
+  function fpNotice(copy, view) {
+    var FP_STR = Model.FP_STR;
+    if (Model.checkFp(copy, view) !== 'changed') return;
+    MX.modal({
+      title: FP_STR.title, body: [h('p', { 'data-role': 'fp-note', text: FP_STR.note }), h('p', { class: 'note', text: FP_STR.keep })],
+      buttons: [{ label: FP_STR.ok, act: 'fp-ok', primary: true, onClick: function () { Model.ackFp(copy, view); } }]
+    });
+  }
 
   function on(target, type, fn, opt) {
     target.addEventListener(type, fn, opt);
@@ -999,7 +1010,7 @@
     if (hasNotes) buttons.push({ label: '解說', act: 'notes', onClick: function () { openNotes(); } });
     if (nextSec) {
       buttons.push({ label: '下一章', act: 'nextsec', onClick: function () {
-        var nc = Model.activeCopy(c.textId, nextSec);
+        var nc = Model.resumable(c.textId, nextSec);
         flush();
         location.hash = nc ? MX.Screens.hash('practice', nc.id) : MX.Screens.hash('setup', c.textId, nextSec);
       } });

@@ -8,6 +8,7 @@
   var pending = 0, waiters = [];
   var idbBad = false;       // an IndexedDB write failed: further writes also go to localStorage (merged back on next start)
   var warned = false;
+  var errCount = 0;         // writes that could not be stored anywhere (IndexedDB and localStorage both failed): the import reports them
   var LOCAL_ONLY = /^(ota|sys|introSeen|setupAdv):/;       // introSeen:v1 = the first-visit intro was closed, setupAdv:v2 = 進階選項 of the setup screen is open (device-local: not in a backup, survive an import)
 
   function open() {
@@ -61,6 +62,7 @@
     } catch (e) { MX.err(e); return false; }
   }
   function warn() {
+    errCount++;
     if (warned) return;
     warned = true;
     if (MX.toast) MX.toast('儲存失敗（空間不足？）請盡快匯出備份', 6000);
@@ -111,6 +113,7 @@
       return mode;
     },
     mode: function () { return mode; },
+    writeErrors: function () { return errCount; },
     get: function (k) { return Object.prototype.hasOwnProperty.call(mem, k) ? mem[k] : undefined; },
     set: function (k, v) { mem[k] = v; persist(k, v, false); },
     del: function (k) { delete mem[k]; persist(k, null, true); },
@@ -118,6 +121,12 @@
     idle: function () { return new Promise(function (res) { if (pending === 0) res(); else waiters.push(res); }); },
     // Keys under LOCAL_ONLY (downloaded library data, update bookkeeping) are not part of a backup and survive an import.
     exportAll: function () { var o = {}; Object.keys(mem).forEach(function (k) { if (!LOCAL_ONLY.test(k)) o[k] = mem[k]; }); return o; },
+    // about how many bytes the user's data takes (the JSON of every backed-up entry; what a backup holds before compression)
+    sizeEstimate: function () {
+      var n = 0;
+      Object.keys(mem).forEach(function (k) { if (LOCAL_ONLY.test(k)) return; try { n += k.length + JSON.stringify(mem[k]).length; } catch (e) { /* ignore */ } });
+      return n;
+    },
     clearAll: function () { Object.keys(mem).slice().forEach(function (k) { if (!LOCAL_ONLY.test(k)) Store.del(k); }); },
     importAll: function (entries) {
       Store.clearAll();

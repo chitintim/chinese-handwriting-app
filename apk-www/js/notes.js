@@ -131,7 +131,7 @@
       var secs = text ? text.sections.map(function (s) { return s.id; }) : [], at = secs.indexOf(Model.sid(copy)), nextSec = at >= 0 && at < secs.length - 1 ? secs[at + 1] : null;
       var acts = h('div', { class: 'btnrow nacts', 'data-role': 'notes-actions' });
       if (nextSec) acts.appendChild(h('button', { class: 'on', text: '下一章', 'data-act': 'nextsec', onclick: function () {
-        var nc = Model.activeCopy(textId, nextSec);
+        var nc = Model.resumable(textId, nextSec);
         location.hash = nc ? MX.Screens.hash('practice', nc.id) : MX.Screens.hash('setup', textId, nextSec);
       } }));
       acts.appendChild(h('button', { text: '匯出作品', 'data-act': 'export', onclick: async function () {

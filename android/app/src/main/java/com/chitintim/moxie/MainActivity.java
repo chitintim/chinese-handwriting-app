@@ -23,6 +23,7 @@ import android.view.WindowInsetsController;
 import android.view.WindowManager;
 import android.webkit.RenderProcessGoneDetail;
 import android.webkit.URLUtil;
+import android.webkit.WebChromeClient;
 import android.webkit.ValueCallback;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
@@ -52,12 +53,14 @@ public class MainActivity extends Activity {
     static final String HOST = "appassets.androidplatform.net";
     static final String START_URL = "https://" + HOST + "/index.html";
     static final int REQ_STORAGE = 4201;
+    static final int REQ_FILE = 4202;
 
     private WebView webView;
     private WebViewAssetLoader assetLoader;
     private MoBridge bridge;
     private final Handler handler = new Handler(Looper.getMainLooper());
     private boolean backPending = false;
+    private ValueCallback<Uri[]> fileCallback;   // pending <input type=file> (backup import)
 
     // crash-loop guard for onRenderProcessGone
     private static int crashCount = 0;
@@ -134,6 +137,25 @@ public class MainActivity extends Activity {
         wv.addJavascriptInterface(bridge, "MoBridge");
 
         wv.setWebViewClient(new AppClient());
+        wv.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public boolean onShowFileChooser(WebView view, ValueCallback<Uri[]> callback, FileChooserParams params) {
+                if (fileCallback != null) fileCallback.onReceiveValue(null);
+                fileCallback = callback;
+                // Any file: backups are .moxie / .json, which have no reliable MIME type; the app checks the content.
+                Intent pick = new Intent(Intent.ACTION_GET_CONTENT);
+                pick.addCategory(Intent.CATEGORY_OPENABLE);
+                pick.setType("*/*");
+                try {
+                    startActivityForResult(Intent.createChooser(pick, "選擇備份檔"), REQ_FILE);
+                } catch (ActivityNotFoundException e) {
+                    fileCallback = null;
+                    callback.onReceiveValue(null);
+                    Toast.makeText(MainActivity.this, "找不到檔案管理程式", Toast.LENGTH_LONG).show();
+                }
+                return true;
+            }
+        });
         wv.setDownloadListener((url, userAgent, contentDisposition, mimeType, contentLength) ->
                 handleDownload(url, contentDisposition, mimeType));
         return wv;
@@ -365,6 +387,16 @@ public class MainActivity extends Activity {
     }
 
     // ------------------------------------------------------------------ lifecycle
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode != REQ_FILE || fileCallback == null) return;
+        Uri[] result = null;
+        if (resultCode == RESULT_OK && data != null && data.getData() != null) result = new Uri[]{data.getData()};
+        fileCallback.onReceiveValue(result);
+        fileCallback = null;
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {

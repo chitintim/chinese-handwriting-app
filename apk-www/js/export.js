@@ -983,7 +983,15 @@
       var panel = h('div', { class: 'savepanel', 'data-role': 'save-panel' });
       root.appendChild(h('div', { class: 'topbar' }, [h('h1', { class: 'grow', text: '匯出作品' }), btnSave,
         h('button', { class: 'big', 'data-act': 'back', text: '返回', onclick: function () { api.close(); } })]));
-      root.appendChild(status); root.appendChild(infoBox); root.appendChild(panel); root.appendChild(box); root.appendChild(nav); root.appendChild(ctrl);
+      var fpBox = h('div', { class: 'note fpnote', 'data-role': 'fp-note' });
+      function updateFp() {
+        var ch = false;
+        try { ch = MX.Model.fpChanged(ui.cp.copy, ui.cp.text); } catch (e) { MX.err(e); }
+        fpBox.textContent = ch ? MX.Model.FP_STR.note : '';
+        fpBox.hidden = !ch;
+      }
+      updateFp();
+      root.appendChild(status); root.appendChild(fpBox); root.appendChild(infoBox); root.appendChild(panel); root.appendChild(box); root.appendChild(nav); root.appendChild(ctrl);
 
       function scopes() {
         var list = [], act = MX.Model.activeCopy(textId, secId);
@@ -1000,6 +1008,7 @@
         MX.Model.upgradeKeys(c, text);
         ui.cp = E.ctx(c, text, Layout.cellsFor(text, c));
         ui.o.format = undefined; ui.o.ratio = undefined; ui.o.perLine = undefined; ui.o.orient = undefined; ui.page = 0;
+        updateFp();
         drawControls(); refresh();
       }
       function persist() {
@@ -1144,28 +1153,12 @@
       return { close: api.close, ui: ui };
     },
 
-    // ---- whole-app data backup ----
-    json: function () {
-      MX.Model.flushAll();
-      var entries = MX.Store.exportAll();
-      // 書寫工具 describes this device (touch or pen): a backup does not carry it (see importText)
-      if (entries.settings && typeof entries.settings === 'object') { entries.settings = Object.assign({}, entries.settings); delete entries.settings.inputMode; }
-      return JSON.stringify({ app: 'moxie', version: 1, exportedAt: new Date().toISOString(), entries: entries });
-    },
-    // one tap, no long work before the save (the JSON is built synchronously), so the user activation is still fresh for the share sheet / the download
-    saveJson: async function () {
-      var st = await MX.saveFile('moxie-backup-' + MX.fmtDate(Date.now()) + '.json', new Blob([E.json()], { type: 'application/json' }), 'application/json');
-      MX.toast(st);
-    },
+    // ---- whole-app data backup: see js/backup.js (MX.Backup). These two keep the plain-JSON, replace-everything form the tests and older code use.
+    json: function () { return JSON.stringify(MX.Backup.build(null)); },
     importText: function (text) {
-      var o;
-      try { o = JSON.parse(text); } catch (e) { throw new Error('不是有效的 JSON'); }
-      if (!o || o.app !== 'moxie' || !o.entries || typeof o.entries !== 'object') throw new Error('不是墨字帖的備份檔');
-      var keep = MX.Model.settings && MX.Model.settings.inputMode;          // 書寫工具 stays what this device has (a backup from another device must not change it)
-      MX.Store.importAll(o.entries);
-      MX.Model.init();
-      if (keep) { MX.Model.settings.inputMode = keep; MX.Model.saveSettings(); }
-      return Object.keys(o.entries).length;
+      var rep = MX.Backup.inspect(MX.Backup.parse(text));
+      MX.Backup.replace(rep);
+      return Object.keys(rep.valid).length;
     }
   };
 })();

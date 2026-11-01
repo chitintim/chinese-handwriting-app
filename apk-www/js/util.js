@@ -51,6 +51,28 @@
     return (hh ? hh + '小時' : '') + (mm ? mm + '分鐘' : '');
   };
   MX.layer = function () { return document.getElementById('layer'); };
+  // UI sentences with {name} slots (no string pieces glued together: a sentence is translated as a whole later): MX.fmt('已完成 {n} 份', {n: 3})
+  MX.fmt = function (s, v) { return String(s).replace(/\{(\w+)\}/g, function (m, k) { return v && v[k] !== undefined ? String(v[k]) : m; }); };
+  // 53-bit string hash (cyrb53) as base 36: a short fingerprint, not a security hash
+  MX.hash53 = function (str) {
+    var h1 = 0xdeadbeef, h2 = 0x41c6ce57, i, c;
+    str = String(str);
+    for (i = 0; i < str.length; i++) {
+      c = str.charCodeAt(i);
+      h1 = Math.imul(h1 ^ c, 2654435761); h2 = Math.imul(h2 ^ c, 1597334677);
+    }
+    h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+    return (4294967296 * (2097151 & h2) + (h1 >>> 0)).toString(36);
+  };
+  // 12.3 MB / 840 KB / 120 B
+  MX.fmtBytes = function (n) {
+    n = +n || 0;
+    if (n < 1024) return Math.round(n) + ' B';
+    if (n < 1048576) return Math.round(n / 1024) + ' KB';
+    if (n < 1073741824) return (n / 1048576).toFixed(n < 10485760 ? 1 : 0) + ' MB';
+    return (n / 1073741824).toFixed(1) + ' GB';
+  };
 
   // Inline SVG icons (pure black, no font dependency): star / star-o (收藏), tri-l / tri-r / tri-u / tri-d (page arrows). The UI font has ☆★ but not ◀▶, and an icon is the same on every device.
   var SVGNS = 'http://www.w3.org/2000/svg';
@@ -106,7 +128,10 @@
     return b;
   };
 
-  var toastEl = null, toastTimer = null;
+  var toastEl = null, toastTimer = null, toastLater = null;
+  // a toast for the NEXT screen (a route change clears the layer, so a message about what happened just before it is shown after the route is drawn): main.js calls MX.toastShowPending()
+  MX.toastNext = function (msg, ms) { toastLater = [msg, ms]; };
+  MX.toastShowPending = function () { var t = toastLater; toastLater = null; if (t) MX.toast(t[0], t[1]); };
   MX.toast = function (msg, ms) {
     if (toastEl && toastEl.parentNode) toastEl.parentNode.removeChild(toastEl);
     clearTimeout(toastTimer);

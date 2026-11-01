@@ -52,6 +52,7 @@
         case 'custom': MX.Screens.custom(el, r.arg); break;
         case 'settings': MX.Screens.settings(el); break;
         case 'archives': MX.Screens.archives(el, r.arg, r.arg2); break;
+        case 'works': MX.Screens.works(el, r.query); break;
         case 'pentest': MX.PenTest.show(el); break;
         default: MX.Screens.home(el, r.query);
       }
@@ -62,6 +63,7 @@
     }
     // the first-visit intro: opens over the home screen only (never over practice / pen test / an export), stays open across a re-render, closes when the route leaves for practice
     try { if (oldAbout && MX.Intro) MX.Intro.open(); if (MX.Intro) MX.Intro.onRoute(r.name); } catch (e) { MX.err(e); }
+    try { MX.toastShowPending(); } catch (e) { MX.err(e); }       // a message about what happened just before the route changed (e.g. 上一遍已存入我的作品)
   }
   MX.route = route;
   MX.isHome = function () { return current === 'home'; };
@@ -133,6 +135,7 @@
     } catch (e) { /* ignore */ }
     route();
     MX.ready = true;
+    try { MX.Model.backfillFp(); } catch (e) { MX.err(e); }       // copies from before the text fingerprint get the current library text's (schema 8)
     registerSw();
     countVisit();
     // APK: look for a newer release / library (at most once per 24 h, silent when offline)

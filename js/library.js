@@ -206,6 +206,14 @@
       return v;
     },
     sectionChars: function (sec) { return cjkCount(sec.body.trad); },
+    // Text fingerprint: a short hash of exactly what decides where a cell's ink sits, the CJK characters of the section's body in the copy's script (punctuation and spaces
+    // never take a cell) plus the cell layout version. A copy stores it when it is made; if the library text later differs, the ink may no longer match its characters.
+    // FP_LAYOUT changes only if the way cells are numbered changes (Layout.buildCells keys).
+    FP_LAYOUT: 1,
+    fingerprint: function (view, script) {
+      var sc = script === 'simp' ? 'simp' : 'trad', body = view && view.body ? view.body[sc] : '';
+      return MX.hash53(L.FP_LAYOUT + '|' + sc + '|' + Array.from(body || '').filter(function (c) { return MX.Closing.isCJK(c); }).join(''));
+    },
 
     // ---- custom texts (stored on this device only, part of the JSON backup; the same characters in both scripts)
     validateCustom: function (title, body) {

@@ -11,6 +11,14 @@
   var CROW_H = 84;         // one compact shelf row on the home screen (76 px + 8 px margin, .lrow.compact)
   var WIDE_CARDS = 4;      // cards per shelf row on the wide (laptop) layout
   var SHELF_MAX = 3;       // rows of a shelf on the home screen (the rest is behind 全部)
+  // sentences of this file that are new in revision 21 (kept together so a later interface-language toggle can swap them in one place)
+  var STR = {
+    start: '開始', resume: '繼續', again: '再抄一遍',
+    againBtn: '再抄一遍', againNote: '上一遍（{date} 完成）會存入「我的作品」，這一遍另外開始。',
+    archivedToast: '上一遍已存入我的作品', worksTitle: '我的作品', worksSummary: '{n} 份作品 · 已完成 {m} 份', worksAll: '全部 {n}', worksEmpty: '還沒有作品。寫完的和寫到一半的都會列在這裡。',
+    backupText: '備份這篇'
+  };
+  S.STR = STR;
 
   // A screen: top bar = 返回 (top left, never at the bottom edge), title, extra buttons (right); then an optional breadcrumb line crumbs = [[label, hash], ...] (the last one is the page itself).
   function screen(root, title, backHash, extra, crumbs) {
@@ -72,8 +80,8 @@
       var rows = o.rows(st);
       if (!rows.length) { if (o.empty) host.appendChild(o.empty(st)); return; }
       var top = host.getBoundingClientRect().top + 2, pb = parseFloat(getComputedStyle(el).paddingBottom) || 0;
-      var per = Math.max(3, Math.min(40, Math.floor((el.clientHeight - pb - top - reserve) / rowH)));
-      if (MX.Device.isWide()) per *= 2;       // two columns on the wide layout
+      var per = Math.max(o.minPer || 3, Math.min(40, Math.floor((el.clientHeight - pb - top - reserve) / rowH)));
+      if (MX.Device.isWide() && !o.single) per *= 2;       // two columns on the wide layout (a list of tall rows, o.single, keeps one)
       var pages = Math.max(1, Math.ceil(rows.length / per));
       st.p = MX.clamp(parseInt(st.p, 10) || 1, 1, pages);
       var box = h('div', { 'data-role': 'list', 'data-per': per });
@@ -92,6 +100,7 @@
   function empty(msg, hint) {
     return h('div', { class: 'empty', 'data-role': 'empty' }, [h('div', { class: 'et', text: msg }), hint ? h('div', { class: 'eh', text: hint }) : null]);
   }
+  S.ui = { screen: screen, pagedHost: pagedHost, empty: empty, qs: qs, T: T, uiFont: uiFont };      // for js/works.js
   // a list row: main part (title, meta; tap = primary) + buttons [{label, act, primary, onclick} | {node}]
   function lrow(o) {
     var main = h('div', { class: 'lmain', onclick: o.open }, [
@@ -125,8 +134,7 @@
   // buttons of a (text, section) row: 繼續/開始, 解說 (when there are notes), 收藏
   function sectionButtons(textId, sectionId, favSec, onFav) {
     var copy = Model.activeCopy(textId, sectionId), bs = [];
-    bs.push({ label: copy ? '繼續' : '開始', act: 'start', primary: true,
-      onclick: function () { location.hash = copy ? H('practice', copy.id) : H('setup', textId, sectionId); } });
+    bs.push({ label: startLabel(textId, sectionId), act: 'start', primary: true, onclick: function () { location.hash = startHash(textId, sectionId); } });
     if (Lib.hasNotes(textId, sectionId)) bs.push(notesBtn(textId, sectionId));
     if (copy && copy.filled > 0) bs.push(exportBtn(copy));
     bs.push({ node: MX.favButton(textId, favSec, onFav) });
@@ -140,9 +148,15 @@
     var copy = Model.activeCopy(textId, sectionId);
     return copy ? copy.cfg.script : libScript();
   }
+  // 開始 / 繼續 / 再抄一遍: an unfinished copy is continued; a section with no copy, or whose copy is finished, goes to the setup screen, which begins a NEW writing
+  // (the finished one is archived there and stays in 我的作品, see beginCopy)
   function startHash(textId, sectionId) {
-    var c = Model.activeCopy(textId, sectionId);
+    var c = Model.resumable(textId, sectionId);
     return c ? H('practice', c.id) : H('setup', textId, sectionId);
+  }
+  function startLabel(textId, sectionId) {
+    var a = Model.activeCopy(textId, sectionId);
+    return a ? (a.completedAt ? STR.again : STR.resume) : STR.start;
   }
   // The choices of a copy in words (米字格 · 直書 · 中格 ...; 無外框 / 顯示標點 / 無標題 only when they differ from the usual): the setup screen's 進階選項 summary and the text page's quick-start line.
   function cfgWords(d) {
@@ -166,14 +180,21 @@
   async function beginCopy(textId, sectionId, d, copy) {
     var txt = await Lib.getView(textId, sectionId), c = copy;
     Model.saveTextCfg(textId, d);
+    if (c && c.completedAt) {
+      // starting a section whose copy is finished: that writing is kept whole (archived, in 我的作品) and a new one begins
+      Model.archive(c);
+      c = null;
+      MX.toastNext(STR.archivedToast);
+    }
     if (!c) {
-      c = Model.create(textId, d, '', 0, sectionId);
+      c = Model.create(textId, d, '', 0, sectionId, Lib.fingerprint(txt, d.script));
       c.total = MX.Layout.cellsFor(txt, c).length;
       Model.saveMeta(c);
     } else {
       Model.loadInk(c);
       var locked = Model.recount(c) > 0, contentChanged = MX.Model.CONTENT_KEYS.some(function (k) { return c.cfg[k] !== d[k]; });
       c.cfg = assign({}, d);
+      if (!locked) { c.fp = Lib.fingerprint(txt, d.script); c.libv = Lib.version(); c.fpAck = undefined; }       // no ink yet: the copy follows the text as it is now
       if (contentChanged && !locked) c.pos = 0;
       c.total = MX.Layout.cellsFor(txt, c).length;
       Model.saveMeta(c);
@@ -210,7 +231,7 @@
       r = lrow({
         title: T(e.title), meta: '進度 ' + pctOf(copy) + '% · 已抄 ' + Model.doneCount(f.textId, sec) + ' 遍', font: uiFont(scriptOf(f.textId, sec)), compact: compact, pct: pctOf(copy),
         attrs: { 'data-role': 'fav', 'data-fav-text': f.textId, 'data-fav-section': sec }, open: function () { location.hash = startHash(f.textId, sec); },
-        buttons: [{ label: copy ? '繼續' : '開始', act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, sec); } },
+        buttons: [{ label: startLabel(f.textId, sec), act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, sec); } },
           { node: MX.favButton(f.textId, sec, onFav) }]
       });
       refineTitle(r, f.textId, sec);
@@ -222,7 +243,7 @@
       title: T(e.title), meta: (byline ? byline + ' · ' : '') + e.chars + '字 · 進度 ' + prog + '%', font: uiFont(), compact: compact, pct: prog,
       attrs: { 'data-role': 'fav', 'data-fav-text': f.textId }, open: function () { location.hash = multi ? H('text', f.textId) : startHash(f.textId, 'main'); },
       buttons: [multi ? { label: '章節', act: 'sections', primary: true, onclick: function () { location.hash = H('text', f.textId); } }
-        : { label: Model.activeCopy(f.textId, 'main') ? '繼續' : '開始', act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, 'main'); } },
+        : { label: startLabel(f.textId, 'main'), act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, 'main'); } },
         { node: MX.favButton(f.textId, null, onFav) }]
     });
   }
@@ -259,6 +280,8 @@
     var apkCard = MX.Update.apkCard(), libCard = MX.Update.libCard();
     if (apkCard) el.appendChild(apkCard);
     if (libCard) el.appendChild(libCard);
+    var nudge = MX.Backup.nudgeCard();          // 建議備份: unbacked-up work after 3+ finished writings or 14+ days (a card, not a dialog; 一週後再提醒)
+    if (nudge) el.appendChild(nudge);
 
     // the intro card near the top of home, right under the header and notices, in every layout (wide: a two-column card). Black text.
     // Title, a short story (English + 中文), the ask, and two separate big links: 關於與隨喜 (opens the intro dialog) and GitHub. On the 電子紙 tablet the 中文 line comes first and the English one is smaller (keeps the shelves above the fold).
@@ -294,6 +317,13 @@
     }
     var rRows = shelf('resume', '繼續書寫', rItems, '還沒有進行中的字帖。從下面的書庫選一篇開始。');
     var fRows = shelf('fav', '收藏', fItems, '還沒有收藏。點文本或章節旁的星號，加進這裡。');
+    // 我的作品: every writing (in progress, finished, archived) in one list; the shelf is only the way in
+    var ws = Model.works(), wFin = ws.filter(function (c) { return c.completedAt; }).length;
+    var wBox = h('div', { class: 'shelf', 'data-shelf': 'works' }, [
+      h('div', { class: 'shead' }, [h('h2', { text: STR.worksTitle, 'data-role': 'shelf-title' }), h('button', { 'data-act': 'works', text: ws.length ? MX.fmt(STR.worksAll, { n: ws.length }) : STR.worksTitle, onclick: function () { location.hash = '#/works'; } })]),
+      h('div', { class: 'note', 'data-role': 'works-summary', text: ws.length ? MX.fmt(STR.worksSummary, { n: ws.length, m: wFin }) : STR.worksEmpty })
+    ]);
+    colA.appendChild(wBox);
 
     // 書庫: category tiles
     colB.appendChild(h('div', { class: 'shead' }, [h('h2', { text: '書庫' })]));
@@ -500,6 +530,9 @@
       Lib.getText(textId).then(function (t) { return MX.Export.openPractice(textId, Model.nextSection(textId, t.sections.map(function (x) { return x.id; })).id); }).catch(function (e) { MX.err(e); MX.toast('無法開啟練習紙'); });
     } }));
     if (Model.archived(textId).length) extra.push(h('button', { text: '存檔 (' + Model.archived(textId).length + ')', 'data-act': 'archives', onclick: function () { location.hash = H('archives', textId); } }));
+    if (Model.works().some(function (c) { return c.textId === textId; })) {       // a backup of this text's writings only
+      extra.push(h('button', { text: STR.backupText, 'data-act': 'backup-text', onclick: function () { MX.Backup.save({ text: textId }).catch(function (e) { MX.err(e); MX.toast(MX.Backup.STR.saveFail); }); } }));
+    }
     var el = screen(root, T(entry.title), H('lib', entry.custom ? Lib.CUSTOM : entry.category), extra, cats.concat([[T(entry.title), H('text', textId)]]));
     el.setAttribute('data-screen', 'text');
     el.setAttribute('data-text-id', textId);
@@ -556,7 +589,9 @@
     var entry = Lib.entry(textId);
     if (!entry) { location.hash = '#/'; return; }
     sectionId = sectionId || 'main';
-    var copy = Model.activeCopy(textId, sectionId);
+    var active = Model.activeCopy(textId, sectionId);
+    var finished = active && active.completedAt ? active : null;         // a finished copy is not continued: 開始 begins a new writing and archives it (beginCopy)
+    var copy = finished ? null : active;
     if (copy) Model.loadInk(copy);
     var locked = !!(copy && Model.recount(copy) > 0);
     var d = assign({}, locked ? copy.cfg : Model.textCfg(textId));         // choices: this copy's when it has ink, else the text's remembered ones (Model.textCfg)
@@ -602,9 +637,9 @@
     var inprog = !!(copy && Model.recount(copy) > 0);
     var row = h('div', { class: 'btnrow actions startrow' });
     row.appendChild(h('button', {
-      class: 'on big startbtn', 'data-act': 'go', text: inprog ? '繼續上次（' + Model.recount(copy) + ' / ' + (copy.total || 0) + '）' : '開始抄寫',
+      class: 'on big startbtn', 'data-act': 'go', text: inprog ? '繼續上次（' + Model.recount(copy) + ' / ' + (copy.total || 0) + '）' : (finished ? STR.againBtn : '開始抄寫'),
       onclick: async function () {
-        var c = await beginCopy(textId, sectionId, d, copy);
+        var c = await beginCopy(textId, sectionId, d, copy || finished);
         location.hash = H('practice', c.id);
       }
     }));
@@ -620,6 +655,7 @@
       }));
     }
     el.appendChild(row);
+    if (finished) el.appendChild(h('div', { class: 'note finnote', 'data-role': 'finished-note', text: MX.fmt(STR.againNote, { date: MX.fmtDate(finished.completedAt) }) }));
     // the essentials: 字體 (繁 / 简) and 模式 (描 / 臨 / 默: three sample cells of the text's first character, drawn with the app's own drawing code; tap = choose). The 2 x 2 sample of the
     // cells (grid, direction, size ...) is the first thing inside 進階選項, right above the options that change it. What the samples show is what the practice view draws.
     var ESS = ['script', 'mode'], cfgFields = MX.Form.CFG, smp = [], sget = function () { return { cfg: d, st: Model.settings }; };
@@ -785,31 +821,9 @@
       ctx.refresh();
     } })]));
 
-    // ---- 資料
+    // ---- 資料 (js/backup.js: storage you can see, the last backup, backup / import, 我的作品)
     var dat = section('data');
-    var file = h('input', { type: 'file', accept: '.json,application/json', style: 'display:none', 'data-role': 'import-file',
-      onchange: function () {
-        var f = file.files && file.files[0];
-        if (!f) return;
-        var fr = new FileReader();
-        fr.onload = async function () {
-          var ok = await MX.confirm('匯入會取代此裝置上的所有資料。', '匯入', '匯入備份');
-          if (!ok) return;
-          try {
-            var cnt = MX.Export.importText(String(fr.result));
-            MX.toast('已匯入 ' + cnt + ' 筆');
-            location.hash = '#/';
-          } catch (e) { MX.toast('匯入失敗：' + e.message); }
-        };
-        fr.readAsText(f);
-        file.value = '';
-      } });
-    dat.appendChild(h('div', { class: 'btnrow' }, [
-      h('button', { text: '匯出資料 (JSON)', 'data-act': 'export-json', onclick: function () { MX.Export.saveJson().catch(function (e) { MX.err(e); MX.toast('匯出失敗'); }); } }),
-      h('button', { text: '匯入資料', 'data-act': 'import-json', onclick: function () { file.click(); } }),
-      file
-    ]));
-    dat.appendChild(h('div', { class: 'note', text: '資料只存在這台裝置，不會上傳。備份包含抄寫進度、字跡、收藏和自訂文本。' }));
+    MX.Backup.panel().forEach(function (n) { dat.appendChild(n); });
 
     // ---- 關於 (+ updates)
     var ab = section('about');
@@ -859,7 +873,8 @@
   // ------------------------------------------------------------------ archives (of one section; no section = all sections of the text)
   S.archives = function (root, textId, sectionId) {
     var entry = Lib.entry(textId);
-    var el = screen(root, '存檔 · ' + (entry ? T(entry.title) : ''), S.backFor(textId));
+    var el = screen(root, '存檔 · ' + (entry ? T(entry.title) : ''), S.backFor(textId), [
+      h('button', { text: STR.worksTitle, 'data-act': 'works', onclick: function () { location.hash = H('works', null, null, 't=' + encodeURIComponent(textId)); } })]);
     el.setAttribute('data-screen', 'archives');
     var list = Model.archived(textId, sectionId);
     if (!list.length) el.appendChild(h('p', { text: '沒有存檔。' }));
