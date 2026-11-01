@@ -1,0 +1,97 @@
+{
+ "id": "diaoguzhanchangwen",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Li Hua opens with a desolate ancient battlefield, then paints the savagery of the fighting and the misery of the soldiers. He looks back at the successes and failures of frontier defence through the ages, laments the harm done by forced labour and war, and concludes that the frontier should be held by virtue, drawing the peoples of the borders to the court.",
+   "translation": "Vast, vast, the flat sands stretch without limit; far off, no one can be seen. The river winds like a belt, and the hills coil in tangles. Dark and bleak, the wind is mournful and the sun dim. The tumbleweed is snapped, the grass withered, and the air bites like a frosty dawn. Birds fly past and do not alight; beasts bolt, having lost their herd. The village warden told me: 'This is an ancient battlefield. Whole armies have been overthrown here, and ghosts are often heard weeping; you can hear them when the sky is overcast.'\nHow heartbreaking! Was it Qin? Was it Han? Or more recent times? I have heard that Qi and Wei sent conscripts to garrison the frontier, while Jing and Han recruited volunteers. They hurried ten thousand li, and were exposed to the weather year after year. By day they grazed their horses on sand and grass, by night they crossed the frozen river. The land was wide and the sky long, and they did not know the way home. Their bodies lodged against sharp blades, with a heart full to bursting, to whom could they pour it out?\nFrom Qin and Han onwards the four barbarian peoples have been a constant concern, and the central lands have been drained and spent; no age has been without it. In ancient times it was said that the Rong and the Xia did not stand against the royal armies. When cultural teaching failed to spread, the military men turned to trickery. Trick tactics are far from humaneness and rightness, and the royal way was thought impractical and left unfollowed.\nAlas! Ah! I picture it: the north wind shakes the desert, and the barbarian troops watch for their chance. The commanding general holds the enemy cheap and takes the fight at the very gate of his camp. Banners stand across the field; the armoured ranks wheel along the river. Discipline is heavy and hearts are frightened; authority is exalted and lives are cheap. Sharp arrowheads pierce bone; startled sand flies into faces. Defender and invader grapple, and mountains and rivers shake and reel. The din splits rivers; the force of it collapses like thunder and lightning.\nThen, when the deep of winter has frozen everything and the sea's edge is bitter, snow buries the shins and ice hangs in the beards. Birds of prey stay in their nests, the war horses hesitate, silk and floss give no warmth, and fingers drop off and skin cracks. In such bitter cold, Heaven lends strength to the fierce barbarians, who lean on the killing air to cut and slaughter. They cut straight through the baggage train and strike the troops on the flank. The commandant has only just surrendered; the general's army is wiped out. Corpses fill the banks of the great channels, and blood fills the hollows beside the Great Wall. High or low, all alike are dry bones - how can it be told in full?\nThe drums grow weak and strength is spent; the arrows are gone and the bowstrings snapped. White blades cross and the precious swords break; the two armies press close and life and death are decided. Surrender, and be a barbarian's man for life! Fight, and have your bones bared on sand and gravel! No bird cries and the hills are silent; the night is long and the wind sighs. Souls gather and the sky is heavy; spirits assemble and the clouds are thick. The sunlight is cold and the grass short; the moonlight is bitter and the frost white. Heartbreaking, a sight cruel to the eye - was there ever the like of this?\nI have heard that Li Mu used the soldiers of Zhao, utterly defeated the Linhu, opened a thousand li of land, and the Xiongnu fled. The Han drained the whole empire, and wealth was spent and strength exhausted. It depends only on choosing the right man; does it lie in numbers? The Zhou drove out the Xianyun, as far north as Taiyuan; they built a wall at Shuofang and brought their armies back whole. At the victory feast they recorded merit, in harmony and at ease, ruler and ministers dignified and gracious. Qin raised the Great Wall, a barrier running to the sea, and poisoned living beings; for ten thousand li the earth was dark red. The Han struck the Xiongnu, and though they took the Yin mountains, bodies lay as pillows across the fields, and the gain did not make up for the harm.\nThe numberless common people - who has no father and mother? Led by the hand, carried in arms, they were feared too frail to live long. Who has no brothers, as close as foot and hand? Who has no husband or wife, as close as guest and friend? What kindness did they have in life? What fault is there that they should be killed? Whether they live or die, their families do not hear. If someone brings word, they half believe and half doubt. Heart and eyes are full of care, and in sleep they see the lost ones. They lay out offerings and pour libations, weeping towards the far horizon. Heaven and earth grieve; grass and trees are sad. If no mourners or sacrifices reach them, where can their souls rest? There will surely be famine years, and the people will wander as refugees. Alas, ah! Is it the times, or fate? It has always been so. What is to be done? The defence lies with the four barbarian peoples.",
+   "keyLines": [
+    {
+     "line": "浩浩乎平沙無垠，敻不見人",
+     "en": "Vast, vast, the flat sands stretch without limit, far off, and no one in sight.",
+     "note": "The opening picture of the empty, desolate sands sets the bleak and mournful tone of the whole piece."
+    },
+    {
+     "line": "亭長告予曰：「此古戰場也。嘗覆三軍，往往鬼哭，天陰則聞。」",
+     "en": "The village warden told me: 'This is an ancient battlefield. A whole army was once overturned here. Often ghosts are heard weeping, especially when the sky is overcast.'",
+     "note": "The warden tells us where we are, and this leads to the mourning of countless dead souls."
+    },
+    {
+     "line": "利鏃穿骨，驚沙入面。主客相搏，山川震眩",
+     "en": "Sharp arrowheads pierce bone; startled sand flies into faces. Host and guest grapple, and mountains and rivers shake and reel.",
+     "note": "In short four-character lines, it piles up the savagery of the fighting between the two armies."
+    },
+    {
+     "line": "鼓衰兮力竭，矢盡兮絃絕。白刃交兮寶刀折，兩軍蹙兮生死決",
+     "en": "The drums grow weak and strength is spent; the arrows are gone and the bowstrings snap. White blades cross and the precious swords break; the two armies press close and life and death are decided.",
+     "note": "The most urgent moment of the battle, in the rhythm of the Chuci (Songs of Chu) style, with short, hurried beats."
+    },
+    {
+     "line": "降矣哉，終身夷狄！戰矣哉，骨暴沙礫！",
+     "en": "Surrender, and be a barbarian's man for life! Fight, and have your bones bared on the sand and gravel!",
+     "note": "It shows the soldiers' hopeless position: to surrender is to be among foreigners for life, to fight is to lie unburied in the wilds."
+    },
+    {
+     "line": "蒼蒼蒸民，誰無父母？提攜捧負，畏其不壽",
+     "en": "The numberless common people - who does not have a father and mother? Led by the hand and carried in arms, they were feared too frail to live long.",
+     "note": "The scene moves from the battlefield to ordinary family life, and shows the pain of war through human bonds."
+    },
+    {
+     "line": "生也何恩？殺之何咎？其存其歿，家莫聞知",
+     "en": "What kindness did they ever have in life? What fault is there that they should be killed? Whether they live or die, their families do not hear of it.",
+     "note": "It puts a question about the fate of innocent soldiers, and names the sorrow of families who hear nothing."
+    },
+    {
+     "line": "為之奈何？守在四夷",
+     "en": "What is to be done? The defence lies with the four barbarian peoples (won over by virtue, so that they become the state's fence).",
+     "note": "The conclusion: the ideal frontier policy is to bring the border peoples to submit by virtue in government, and he opposes reckless warfare."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "亭長",
+     "en": "ting zhang - village warden",
+     "note": "A minor official in the Qin and Han who kept order in a rural area; here, a local officer on watch."
+    },
+    {
+     "term": "三軍",
+     "en": "san jun - the three armies",
+     "note": "An old general term for an army, meaning the whole force."
+    },
+    {
+     "term": "徭戍",
+     "en": "yao shu - labour service and garrison",
+     "note": "Forced labour and frontier garrison duty."
+    },
+    {
+     "term": "期門",
+     "en": "qi men - the rendezvous gate",
+     "note": "Most commentators take this as the gate of a military camp, where troops assembled; the line then means that the commander, careless of the enemy, lets the fight come right up to the camp gate. (Qimen was also the name of the Han emperor's guard, but that does not suit the sense here.)"
+    },
+    {
+     "term": "組練",
+     "en": "zu lian - armoured ranks",
+     "note": "Armour; by extension, an army."
+    },
+    {
+     "term": "玁狁",
+     "en": "Xianyun - the Xianyun",
+     "note": "A northern people in the Zhou period, of the kind later called the Xiongnu."
+    },
+    {
+     "term": "飲至策勳",
+     "en": "yin zhi ce xun - the drinking and recording of merit",
+     "note": "On returning in triumph, the army reported at the ancestral temple, held a feast and recorded the deeds."
+    },
+    {
+     "term": "守在四夷",
+     "en": "shou zai si yi - defence rests on the four barbarians",
+     "note": "In the old view, if the ruler wins people over by virtue, the foreign peoples on all sides naturally become a fence for the state."
+    }
+   ],
+   "background": "Li Hua (about 715-774) was a writer of the Tang dynasty (618-907), often named together with Xiao Yingshi. This is a lament over an ancient battlefield. It mixes parallel and free prose with passages in the Chuci (Songs of Chu) style, criticises reckless warmaking, and feels for the soldiers and common people who suffered in the wars. It is a famous Tang prose piece on this theme."
+  }
+ }
+}

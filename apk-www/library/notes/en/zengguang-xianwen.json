@@ -1,0 +1,1192 @@
+{
+ "id": "zengguang-xianwen",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "pian01": {
+   "summary": "The opening says that the book is built up from the sayings of earlier worthies, then runs through a string of short lines on friendship, the human heart, luck and conduct in the world. Its core is that it is hard to know a person and harder still to know a heart, so one must look with care.",
+   "translation": "The wise sayings of old time teach you earnestly. They are now set in rhyme and added to, so that you may see and hear more. To understand the present, look to the past; without the past there would be no present. Know yourself and know the other; measure another's heart by your own. Wine is good when you meet one who knows you; poems are for reciting to one who understands. You may know people all over the world, but how many know your heart? When you meet as if for the first time, you will have no bitterness towards each other even in old age. Live near the water and you know the nature of fish; live near the mountains and you know the cries of birds. A mountain stream rises easily and falls easily; a petty man's heart turns easily and overturns easily. When luck goes, gold turns to iron; when the time comes, iron looks like gold. When you read, put your mind into it: one word is worth a thousand pieces of gold. When you meet someone, say only three parts in ten, and do not throw out your whole heart. Plant flowers with a purpose and they do not bloom; stick in a willow twig without a thought and it grows into shade. In painting a tiger you can paint the skin but not the bones; in knowing a man you know his face but not his heart. Wealth is like dung and dirt; humaneness and rightness are worth a thousand pieces of gold. The stream running down the shoal has no intent; the white cloud leaving the cave has no mind. If I had not climbed high and looked out then, who would believe that the sea into which the rivers flow east is so deep? A long road shows a horse's strength; long days show a man's heart. When two have one heart, they can buy gold without money; when one man has one heart, even with money he can hardly buy a needle. At first meeting it is easy to get on well; living together for long, it is hard to behave well. A horse has no strength to go only because it is thin; a man lacks style only because he is poor. One who gives way to others is no fool; a fool does not give way. Some who are kin are not close; some who are not kin are as close as kin. Beautiful or not, it is the water of one's home village; close or not, they are one's own people from home. Even the orioles and flowers fear that spring will grow old; how can one let spring be spent in vain? To meet and leave without a drink would make even the peach blossoms at the cave mouth laugh at you.",
+   "keyLines": [
+    {
+     "line": "觀今宜鑒古，無古不成今",
+     "en": "To understand the present, look to the past; without the past there would be no present.",
+     "note": "We should learn from the past, because history is the foundation of the present."
+    },
+    {
+     "line": "相識滿天下，知心能幾人",
+     "en": "You may know people all over the world, but how many know your heart?",
+     "note": "Many know you, few know your heart: a sigh over how hard it is to find a true friend."
+    },
+    {
+     "line": "有意栽花花不發，無心插柳柳成蔭",
+     "en": "Plant flowers with a purpose and they do not bloom; stick in a willow twig without a thought and it grows into shade.",
+     "note": "Results often go against our wishes: what we work at may fail while what we do carelessly succeeds."
+    },
+    {
+     "line": "畫虎畫皮難畫骨，知人知面不知心",
+     "en": "In painting a tiger you can paint the skin but not the bones; in knowing a man you know his face but not his heart.",
+     "note": "Do not judge people by looks alone; the human heart is hard to fathom."
+    },
+    {
+     "line": "路遙知馬力，日久見人心",
+     "en": "A long road shows a horse's strength; long days show a man's heart.",
+     "note": "Only a long test shows what a person is."
+    },
+    {
+     "line": "美不美，鄉中水；親不親，故鄉人",
+     "en": "Beautiful or not, it is the water of one's home village; close or not, they are one's own people from home.",
+     "note": "The affection one feels for one's home place and one's fellow villagers."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "賢文",
+     "en": "xian wen - 'words of the worthies'",
+     "note": "The sayings and maxims handed down from wise people of the past."
+    },
+    {
+     "term": "諄諄",
+     "en": "zhun zhun - 'earnestly'",
+     "note": "Sincere and patient."
+    },
+    {
+     "term": "集韻",
+     "en": "ji yun - 'to set in rhyme'",
+     "note": "To arrange the words in rhyming lines so that they are easy to remember and recite."
+    },
+    {
+     "term": "將心比心",
+     "en": "jiang xin bi xin - 'measure another's heart by your own'",
+     "note": "To judge what another feels by what you would feel yourself."
+    },
+    {
+     "term": "出岫",
+     "en": "chu xiu - 'leaving the cave'",
+     "note": "「岫」 is a cave or a peak; clouds drift out from among the hills. The phrase comes from Tao Yuanming's 'Returning Home' (Guiqulai ci), where 'clouds, without thought, leave the cave'."
+    },
+    {
+     "term": "風流",
+     "en": "feng liu - 'style'",
+     "note": "Here it means bearing and presence, not the later sense of a romantic affair."
+    },
+    {
+     "term": "鶯花",
+     "en": "ying hua - 'orioles and flowers'",
+     "note": "Orioles and blossoms, the sights of spring."
+    }
+   ],
+   "background": "The Zengguang Xianwen (Expanded Words of the Worthies), also called the Xishi Xianwen or Gujin Xianwen, is a primer that appeared in the Ming dynasty (1368-1644) and was added to in the Qing (1644-1912). Its author is unknown, and it is a collective work gathered from proverbs and the poems and prose of earlier writers. The lines come from different sources, and it is often hard to say to whom a particular maxim belongs."
+  },
+  "pian02": {
+   "summary": "This section mixes remarks on the warmth and chill of human relations, on proportion in how to live, and on the essentials of standing on one's own feet: how wealth and poverty change dealings with people, guarding the tongue, blaming oneself and forgiving others, and views on fate and on diligence and thrift.",
+   "translation": "Do not let a rosy beauty grow old; do not let a dashing playboy become poor. At home you may not know how to receive guests, but when you go out you find how few hosts there are. There is no false huangqin and no true asafoetida. When a guest comes and the host takes no notice, the host has no good guests; when a good guest comes and the host takes no notice, the host is perhaps a fool. A poor man in a busy market is asked after by no one; a rich man deep in the hills has distant relatives. Who is not talked about behind his back, and who does not talk about others to their faces? A man with money speaks the truth; a man without money's words do not ring true. If you doubt it, look at the wine at a feast: each cup is offered first to the man with money. Make money in the bustle, and settle yourself in quiet. Come like wind and rain, and go like a speck of dust. The waves behind in the Yangtze push the waves ahead; new people in the world press on the old. The pavilion by the water gets the moon first; flowers and trees facing the sun meet spring early. The ancients never saw the moon of today, yet today's moon once shone on the ancients. The first to arrive is the lord, the later is the vassal. Do not say you set out early, for there are others who set out earlier. Do not trust the straight among the straight; beware of the humane who are not humane. There are straight trees in the hills, but there are no straight men in the world. Blame yourself that your branch has no leaves; do not complain that the sun is partial. Everything is fate, and not a bit of it is up to man. The plan for a year lies in spring, the plan for a day lies in the morning; the plan for a family lies in harmony, the plan for a life lies in diligence. Use the heart that blames others to blame yourself; use the heart that forgives yourself to forgive others. Keep your mouth shut like a bottle; guard your thoughts like a city. Better that others wrong me than that I wrong others. Be careful again and again in your intentions; above all, do not cheat your own heart. A tiger, at birth, can still be approached; a man who is familiar cannot be grown close to.",
+   "keyLines": [
+    {
+     "line": "貧居鬧市無人問，富在深山有遠親",
+     "en": "A poor man in a busy market is asked after by no one; a rich man deep in the hills has distant relatives.",
+     "note": "A sigh over the cold ways of the world: how people treat you depends on whether you are rich or poor."
+    },
+    {
+     "line": "長江後浪推前浪，世上新人趕舊人",
+     "en": "The waves behind in the Yangtze push the waves ahead; new people in the world press on the old.",
+     "note": "Generations succeed one another, and those who come after keep overtaking those before."
+    },
+    {
+     "line": "近水樓臺先得月，向陽花木早逢春",
+     "en": "The pavilion by the water gets the moon first; flowers and trees facing the sun meet spring early.",
+     "note": "Those who stand close to an advantage are the first to benefit."
+    },
+    {
+     "line": "一年之計在於春，一日之計在於晨；一家之計在於和，一生之計在於勤",
+     "en": "The plan for a year lies in spring, the plan for a day lies in the morning; the plan for a family lies in harmony, the plan for a life lies in diligence.",
+     "note": "Four 'plans' that tie the planning of time to the roots of home and life."
+    },
+    {
+     "line": "責人之心責己，恕己之心恕人",
+     "en": "Use the heart that blames others to blame yourself; use the heart that forgives yourself to forgive others.",
+     "note": "The rule of self-cultivation: be strict with yourself and generous to others."
+    },
+    {
+     "line": "寧可人負我，切莫我負人",
+     "en": "Better that others wrong me than that I wrong others.",
+     "note": "Better to suffer a loss than to do others wrong."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "黃芩、阿魏",
+     "en": "huang qin, a wei - 'huangqin and asafoetida'",
+     "note": "Two medicinal herbs. The saying that there is no false huangqin and no true asafoetida means that real and fake are hard to tell apart."
+    },
+    {
+     "term": "筵",
+     "en": "yan - 'feast'",
+     "note": "A banquet."
+    },
+    {
+     "term": "近水樓臺先得月",
+     "en": "jin shui lou tai xian de yue - 'the pavilion by the water gets the moon first'",
+     "note": "Said to come from the story of the Song official Su Lin presenting a poem to Fan Zhongyan. It means gaining first because one is near."
+    },
+    {
+     "term": "先到為君，後到為臣",
+     "en": "xian dao wei jun, hou dao wei chen - 'first to arrive is lord, later is vassal'",
+     "note": "A popular saying: order of arrival decides rank."
+    },
+    {
+     "term": "守口如瓶，防意如城",
+     "en": "shou kou ru ping, fang yi ru cheng - 'mouth like a bottle, thoughts like a city'",
+     "note": "To guard the mouth is to speak with care; to guard the thoughts is to keep stray notions out."
+    },
+    {
+     "term": "欺心",
+     "en": "qi xin - 'to cheat the heart'",
+     "note": "To deceive one's own conscience."
+    },
+    {
+     "term": "人熟",
+     "en": "ren shu - 'a familiar man'",
+     "note": "Someone one knows well."
+    }
+   ],
+   "background": "Like the first section, this one is mostly folk proverbs and has no single author. A line like 'the pavilion by the water gets the moon first' is said to come from a particular anecdote, but the accounts are not certain."
+  },
+  "pian03": {
+   "summary": "This section deals with how people behave: a distant relative is no match for a near neighbour, and the world is cold. It also urges patience, reading and doing good, and ends with two ways of doing good, reading and saving a life.",
+   "translation": "The one who comes to tell you of quarrels is himself a quarrel-maker. Distant water cannot put out a near fire; a far-off relative is not as good as a near neighbour. When there is tea and wine there are many brothers, but in an emergency, when was even one seen? Human feeling is like paper, sheet after sheet thin; worldly affairs are like a chess game, every game new. There are thousand-year trees in the hills, but a man of a hundred is hard to meet in the world. If your strength is slight, do not carry a heavy load; if your words carry little weight, do not advise others. Without money do not join the crowd; in trouble do not go looking for relatives. If you never do anything in your life that makes you frown, there should be no one in the world who grinds his teeth at you. The scholar is the treasure of the nation, and the Confucian is the jewel on the mat. If you want a way to give up wine, look at drunks with sober eyes. In asking for help, ask a true man; in giving help, help in the time of need. A single drop is like sweet dew when you are thirsty; another cup after you are drunk is worse than none. Staying too long makes you cheap; coming too often makes even kin grow distant. The one who does not speak while drinking is a true gentleman; the one who is clear about money is a true man. Do not forget friends from poor and humble days; do not cast out the wife who shared the dregs and husks. To leave the household life and keep to the first intention is more than enough to become a Buddha. Better than piling up a thousand taels of gold is understanding the classics. To raise a son and not teach him is like raising a donkey; to raise a daughter and not teach her is like raising a pig. If you have fields and do not till them the granary is empty; if you have books and do not read them your children will be foolish. When the granary is empty the years are lean; when the children are foolish, ritual and rightness are neglected. To listen to one talk of yours is better than ten years of reading. A man who does not understand past and present is like an ox or horse wearing a robe. Countless people fill the vast four seas, but which of them is a true man? White wine is brewed because one loves to entertain guests; gold is scattered to buy books. To save one life is better than to build a seven-storey pagoda.",
+   "keyLines": [
+    {
+     "line": "遠水難救近火，遠親不如近鄰",
+     "en": "Distant water cannot put out a near fire; a far-off relative is not as good as a near neighbour.",
+     "note": "In an emergency, help close at hand is more dependable than help far away."
+    },
+    {
+     "line": "有茶有酒多兄弟，急難何曾見一人",
+     "en": "When there is tea and wine there are many brothers, but in an emergency, when was even one seen?",
+     "note": "A sigh over fair-weather friends who cannot be relied on in trouble."
+    },
+    {
+     "line": "人情似紙張張薄，世事如棋局局新",
+     "en": "Human feeling is like paper, sheet after sheet thin; worldly affairs are like a chess game, every game new.",
+     "note": "Human feeling is thin, and each game of life goes differently."
+    },
+    {
+     "line": "貧賤之交不可忘，糟糠之妻不下堂",
+     "en": "Do not forget friends from poor and humble days; do not cast out the wife who shared the dregs and husks.",
+     "note": "From the Book of the Later Han (Hou Han shu), 'Biography of Song Hong': never forget friends of hard times, or the wife who shared them."
+    },
+    {
+     "line": "有田不耕倉廩虛，有書不讀子孫愚",
+     "en": "If you have fields and do not till them the granary is empty; if you have books and do not read them your children will be foolish.",
+     "note": "Fields are to be tilled and books to be read: an urging towards farming and study."
+    },
+    {
+     "line": "救人一命，勝造七級浮屠",
+     "en": "To save one life is better than to build a seven-storey pagoda.",
+     "note": "The merit of saving a life is greater than the merit of building a pagoda."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "糟糠之妻",
+     "en": "zao kang zhi qi - 'the wife of dregs and husks'",
+     "note": "A wife who has shared a life of poverty. 「糟糠」 are the lees of wine and the husks of rice, a figure for coarse food."
+    },
+    {
+     "term": "下堂",
+     "en": "xia tang - 'to leave the hall'",
+     "note": "To be divorced or put out of the main wife's position."
+    },
+    {
+     "term": "倉廩",
+     "en": "cang lin - 'granary'",
+     "note": "A store for keeping grain."
+    },
+    {
+     "term": "席上珍",
+     "en": "xi shang zhen - 'jewel on the mat'",
+     "note": "A treasure at the banquet. The Record of Rites, in 'Ruxing', has a line about scholars who 'have the jewel on the mat awaiting an invitation'."
+    },
+    {
+     "term": "襟裾",
+     "en": "jin ju - 'robe'",
+     "note": "The front and the hem of a garment; here it means wearing clothes."
+    },
+    {
+     "term": "七級浮屠",
+     "en": "qi ji fu tu - 'seven-storey pagoda'",
+     "note": "A pagoda of seven tiers, a figure for very great merit. 「浮屠」 is a Chinese rendering of the Sanskrit for the Buddha, and here means a stupa."
+    }
+   ],
+   "background": "This section uses a great many paired and parallel proverbs, drawn from popular sources and from poems and prose. The line about the wife of dregs and husks goes back to the story of Song Hong of the Eastern Han (25-220). Some lines resemble earlier verse, so no single source can be named."
+  },
+  "pian04": {
+   "summary": "This section holds several widely known lines, such as 'better to believe it exists', 'the contented are always content' and 'a hair's breadth wrong, a thousand li lost'. Its themes are caution in the world, contentment, and the choice of friends.",
+   "translation": "When the city gate catches fire, the fish in the moat suffer. Lucky grass grows before the courtyard, but a good thing is better not to have. If you want to be born into wealth and rank, you must put in killing work. A hundred years are not enough to build it, and one day is more than enough to ruin it. The human heart is like iron, and the law of the officials is like a furnace. Of good influence there is too little, of bad influence too much. If the water is too clear there are no fish; if a man is too sharp-eyed he has no followers. Those who know a little, their worries are halved; those who save themselves trouble, have none at all. At home, follow your father; once married, follow your husband. A fool fears his wife; a worthy woman respects her husband. There are quarrels all day long; if you do not listen, there are none. Better to be upright and short than crooked and plentiful. Better to believe that it exists than to believe that it does not. A bamboo fence and a thatched hut have fine scenery, better than any Daoist temple or monks' hall. If it is in your fate to have it, you will have it in the end; if it is not in your fate, do not force it. The Daoist temple welcomes immortal guests, and the study hides a minister in scholar's clothes. Plant bamboo in the courtyard where phoenixes may perch; keep fish in the pond that may turn into dragons. In making friends, seek those better than yourself; one like me is worse than none. After only three or five days, meeting again is not as good as at the start. Human feeling is like water, with its high and low; worldly affairs are like clouds that roll and unroll as they please. One who can speak is right whatever he says; one who cannot speak is rude. When you sharpen a knife you hate it not being keen, and a keen knife then cuts your finger. When you seek wealth you hate not getting it, and much wealth then harms you. The contented are always content and are never disgraced all their lives. Those who know when to stop always stop in time and are never shamed all their lives. With good fortune, you lose money; without it, you hurt yourself. A hair's breadth out, a thousand li lost. To climb high, one must start from the low; to go far, one must start from near. Think three times before you act; to think twice is enough. Using your mouth to send others is not so good as doing it yourself; asking others is not so good as asking yourself.",
+   "keyLines": [
+    {
+     "line": "城門失火，殃及池魚",
+     "en": "When the city gate catches fire, the fish in the moat suffer.",
+     "note": "Disaster that comes upon you through no fault of your own."
+    },
+    {
+     "line": "水太清則無魚，人至察則無徒",
+     "en": "If the water is too clear there are no fish; if a man is too sharp-eyed he has no followers.",
+     "note": "If you are too hard on people, no one will want your company."
+    },
+    {
+     "line": "寧可信其有，不可信其無",
+     "en": "Better to believe that it exists than to believe that it does not.",
+     "note": "Better to guard against a possible risk beforehand."
+    },
+    {
+     "line": "結交須勝己，似我不如無",
+     "en": "In making friends, seek those better than yourself; one like me is worse than none.",
+     "note": "Advice to make friends with people stronger than oneself."
+    },
+    {
+     "line": "知足常足，終身不辱。知止常止，終身不恥",
+     "en": "The contented are always content and are never disgraced all their lives. Those who know when to stop always stop in time and are never shamed all their lives.",
+     "note": "Close in sense to the Laozi's 'to know contentment is not to be disgraced, to know when to stop is not to be in danger'."
+    },
+    {
+     "line": "三思而行，再思可矣",
+     "en": "Think three times before you act; to think twice is enough.",
+     "note": "Confucius's saying in the Analects, 'Gongye Chang': be careful in what you do, but without too much hesitation."
+    },
+    {
+     "line": "使口不如親為，求人不如求己",
+     "en": "Using your mouth to send others is not so good as doing it yourself; asking others is not so good as asking yourself.",
+     "note": "Rather than ask someone else, do it yourself."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "殃及池魚",
+     "en": "yang ji chi yu - 'harm reaches the fish in the moat'",
+     "note": "From the story that when the city gate caught fire, people took water from the pond to put it out, the pond ran dry and the fish died. It means being hurt though innocent."
+    },
+    {
+     "term": "瑞草",
+     "en": "rui cao - 'lucky grass'",
+     "note": "Grass seen as an auspicious sign, such as the lingzhi fungus."
+    },
+    {
+     "term": "差之毫釐，失之千里",
+     "en": "cha zhi hao li, shi zhi qian li - 'a hair out, a thousand li lost'",
+     "note": "A small error at the start leads to a great one in the end. It appears in the quotations in the Record of Rites, 'Jingjie'."
+    },
+    {
+     "term": "登高自卑",
+     "en": "deng gao zi bei - 'to climb high, start from the low'",
+     "note": "To climb high you must start from low ground. It comes from the Doctrine of the Mean."
+    },
+    {
+     "term": "知止",
+     "en": "zhi zhi - 'to know when to stop'",
+     "note": "To know where to stop."
+    },
+    {
+     "term": "棲鳳竹、化龍魚",
+     "en": "qi feng zhu, hua long yu - 'bamboo for phoenixes, fish to become dragons'",
+     "note": "Bamboo where a phoenix may perch, fish that may turn into a dragon: a figure for a household with talent in it."
+    }
+   ],
+   "background": "The saying 'water too clear has no fish, a man too sharp-eyed has no followers' appears in a similar form in older works such as the Book of Han (Han shu), in the biography of Dongfang Shuo. 'Think three times before you act' and 'to climb high, start from the low' also come from the Analects and the Doctrine of the Mean, which shows that the book is largely put together from earlier writers' words."
+  },
+  "pian05": {
+   "summary": "This section is about brotherhood, gossip, a clear conscience and the shortness of life. It urges patience, diligent study and an easy mind, and closes with 'drink today, worry tomorrow'.",
+   "translation": "As little children we are brothers; grown up, each goes to a different village. Envy another's money but not his food; resent the living but not the dead. People are angry at the sight of white hair, but I am glad to see it, for how many young people have died before white hair came. Walls have cracks and partitions have ears. Good news does not leave the door; bad news travels a thousand li. If you want no one to know, do not do it. If a man does nothing that troubles his conscience, he is not afraid when knocking comes at his door at midnight. The thief is the petty man; the one who knows his fault is the noble person. The noble person bears poverty firmly; the petty man in poverty runs wild. In poverty there is ease, in wealth there are many worries. They do not take me for a benefactor, and instead take me for an enemy. Better to take from the straight than to seek in the crooked. A man without far thought will have worry near at hand. Those who know me say my heart is troubled; those who do not know me ask what I am seeking. On a fine day he will not go, and waits for the rain to fall on his head. When a thing is done, do not talk of it; spilt water is hard to gather. Quarrels come only from opening the mouth too often; troubles come only from pushing oneself forward. Bear a moment's anger and you spare yourself a hundred days of worry. Lately I have learnt the tortoise's way: when I can pull my head in, I pull it in. Those who fear the law are happy every day; those who cheat the public are anxious every day. A human life is like the grass's single spring. In black-haired youth we do not know to study early; only with white heads do we regret that we began to read late. After the fifteenth the moon grows dimmer; in middle age, everything is over. Children and grandchildren have their own fortunes; do not be an ox or horse for them. Do not make plans for a thousand years; thirty years east of the river, forty years west. A life does not reach a hundred years, yet we often carry the worries of a thousand. Today there is wine, so today I am drunk; tomorrow's sorrow I will bear tomorrow.",
+   "keyLines": [
+    {
+     "line": "牆有縫，壁有耳",
+     "en": "Walls have cracks and partitions have ears.",
+     "note": "Be careful what you say, since someone may hear through a wall."
+    },
+    {
+     "line": "為人不做虧心事，半夜敲門心不驚",
+     "en": "If a man does nothing that troubles his conscience, he is not afraid when knocking comes at his door at midnight.",
+     "note": "Only with a clear conscience can you be at peace."
+    },
+    {
+     "line": "君子固窮，小人窮斯濫也",
+     "en": "The noble person bears poverty firmly; the petty man in poverty runs wild.",
+     "note": "From the Analects, 'Wei Linggong': the noble person keeps his principles when poor; the petty man in poverty will do anything."
+    },
+    {
+     "line": "忍得一時之氣，免得百日之憂",
+     "en": "Bear a moment's anger and you spare yourself a hundred days of worry.",
+     "note": "Patience in the moment saves you trouble later."
+    },
+    {
+     "line": "黑髮不知勤學早，白首方悔讀書遲",
+     "en": "In black-haired youth we do not know to study early; only with white heads do we regret that we began to read late.",
+     "note": "An urging to study diligently while young. A poem by Yan Zhenqing of the Tang dynasty (618-907), 'Urging Study', has similar lines."
+    },
+    {
+     "line": "兒孫自有兒孫福，莫為兒孫作馬牛",
+     "en": "Children and grandchildren have their own fortunes; do not be an ox or horse for them.",
+     "note": "A reminder to parents not to wear themselves out for their descendants."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "嗔",
+     "en": "chen - 'to be angry'",
+     "note": "To be angry or furious."
+    },
+    {
+     "term": "君子固窮",
+     "en": "jun zi gu qiong - 'the noble person bears poverty firmly'",
+     "note": "「固」 here means 'by nature, with ease': the noble person can be content in hardship without changing his principles."
+    },
+    {
+     "term": "窮斯濫",
+     "en": "qiong si lan - 'in poverty runs wild'",
+     "note": "「濫」 means to go beyond limits and act wildly."
+    },
+    {
+     "term": "覆水難收",
+     "en": "fu shui nan shou - 'spilt water is hard to gather'",
+     "note": "Water that has been poured out is hard to take back; a figure for a settled matter that cannot be undone."
+    },
+    {
+     "term": "烏龜法",
+     "en": "wu gui fa - 'the tortoise's way'",
+     "note": "An attitude of drawing back to avoid trouble; here said with a note of self-mockery."
+    },
+    {
+     "term": "三十河東四十西",
+     "en": "san shi he dong si shi xi - 'thirty years east of the river, forty west'",
+     "note": "A common saying; the original runs 'thirty years east of the river, thirty years west', meaning that fortunes rise and fall."
+    },
+    {
+     "term": "人生不滿百",
+     "en": "ren sheng bu man bai - 'a life does not reach a hundred'",
+     "note": "From the Nineteen Old Poems, in the poem 'Sheng nian bu man bai'."
+    },
+    {
+     "term": "今朝有酒今朝醉",
+     "en": "jin zhao you jiu jin zhao zui - 'drink today'",
+     "note": "A line from the Tang poet Luo Yin's poem 'Self-Consolation', meaning to drive away care while one can."
+    }
+   ],
+   "background": "This section borrows from many earlier works, including the Analects, the Nineteen Old Poems, and the poem 'Self-Consolation' by Luo Yin, alongside many folk proverbs. The lines date from different times, and it is often hard to say which author a line belongs to."
+  },
+  "pian06": {
+   "summary": "This section speaks of fate, time and human feeling. It urges patience and giving way, treasuring time, seeing through meeting and parting, and trusting that good and bad are repaid, while affirming that everyone has a day when luck turns.",
+   "translation": "Where the road meets danger it is hard to turn aside; when affairs reach their head, one is not free. Medicine can cure a feigned illness, but wine cannot dissolve a real sorrow. A poor man is silent; level water does not flow. One family has a daughter and a hundred families ask for her; one horse will not go and a hundred horses are anxious. Pour wine only when there are flowers; do not climb the tower when there is no moon. Three cups reach the great Way; one drunken sleep dissolves a thousand cares. A deep mountain, after all, hides fierce tigers; the great sea must in the end take in small streams. If you cherish flowers you must be careful; if you love the moon you need not comb your hair. In general, choose one with good bones and flesh; without rouge and powder she still has charm. When you have received deep favour, it is wise to withdraw first; when success is at its height, you may stop. Do not wait until gossip reaches your ear, and the old kindness turns to enmity. As long as the bright moon of the Five Lakes remains, you need not worry about where to cast a golden hook. Do not leave a place where there are fish; do not linger on the shallow shore. What must go will go in the end; ask it to stay again and again and it will not stay. Bear a word, calm an anger, give up a move, take a step back. If at thirty you are not bold, at forty not rich, at fifty you are near the road to death. Living, do not discuss the soul; dead, do not recognise the corpse. An inch of time is an inch of gold; an inch of gold cannot buy an inch of time. Though a parent's kindness is deep, there is parting at last; though the bond of husband and wife is strong, they too part. A human life is like birds roosting in the same wood; when the great limit comes, each flies off alone. A good man is bullied; a good horse is ridden. A man without windfall wealth does not get rich; a horse without wild grass does not grow fat. When a man is fierce, men fear him but Heaven does not; when a man is good, men bully him but Heaven does not. Good and bad deeds are repaid in the end; the only question is whether sooner or later. The Yellow River has its days of clear water; how can a man have no time of good fortune?",
+   "keyLines": [
+    {
+     "line": "深山畢竟藏猛虎，大海終須納細流",
+     "en": "A deep mountain, after all, hides fierce tigers; the great sea must in the end take in small streams.",
+     "note": "The world holds all kinds of things, the strong and the weak, the good and the bad."
+    },
+    {
+     "line": "受恩深處宜先退，得意濃時便可休",
+     "en": "When you have received deep favour, it is wise to withdraw first; when success is at its height, you may stop.",
+     "note": "Know when to stop when you are in favour and at the height of success."
+    },
+    {
+     "line": "忍一句，息一怒，饒一著，退一步",
+     "en": "Bear a word, calm an anger, give up a move, take a step back.",
+     "note": "Four short phrases that together urge patience and giving way."
+    },
+    {
+     "line": "一寸光陰一寸金，寸金難買寸光陰",
+     "en": "An inch of time is an inch of gold; an inch of gold cannot buy an inch of time.",
+     "note": "Said to be a line by Wang Zhenbai of the Tang dynasty (618-907); it stresses that time is more precious than gold."
+    },
+    {
+     "line": "人生似鳥同林宿，大限來時各自飛",
+     "en": "A human life is like birds roosting in the same wood; when the great limit comes, each flies off alone.",
+     "note": "Using the image of birds, a sigh that all must part in the end."
+    },
+    {
+     "line": "善惡到頭終有報，只爭來早與來遲",
+     "en": "Good and bad deeds are repaid in the end; the only question is whether sooner or later.",
+     "note": "The popular belief in cause and effect: repayment is only a matter of sooner or later."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "三杯通大道",
+     "en": "san bei tong da dao - 'three cups reach the great Way'",
+     "note": "From Li Bai's 'Drinking Alone under the Moon', 'three cups reach the great Way, a full measure accords with nature'."
+    },
+    {
+     "term": "五湖",
+     "en": "wu hu - 'the Five Lakes'",
+     "note": "Rivers and lakes in general; it also recalls the story of Fan Li who set out in a boat on the Five Lakes."
+    },
+    {
+     "term": "饒一著",
+     "en": "rao yi zhao - 'to give up a move'",
+     "note": "「著」 is a move in a board game; to give the other player a move is to give way."
+    },
+    {
+     "term": "大限",
+     "en": "da xian - 'the great limit'",
+     "note": "The end of one's lifespan, the time of death."
+    },
+    {
+     "term": "橫財",
+     "en": "heng cai - 'windfall wealth'",
+     "note": "Money that comes unexpectedly."
+    },
+    {
+     "term": "澄清",
+     "en": "cheng qing - 'to run clear'",
+     "note": "The Yellow River is muddy, and a day of clear water is rare, a figure for a rare piece of good fortune."
+    },
+    {
+     "term": "下金鉤",
+     "en": "xia jin gou - 'to cast the golden hook'",
+     "note": "An elegant way of saying fishing; a figure for seizing an opportunity."
+    }
+   ],
+   "background": "Many lines in this section carry a folk belief in fate and cause and effect, such as 'good and bad deeds are repaid in the end', and mix in ideas from Confucianism, Buddhism and Daoism. A few lines have known authors, such as Li Bai and Wang Zhenbai, but most are proverbs."
+  },
+  "pian07": {
+   "summary": "This section reminds the reader to think of danger while at peace, to speak with care and stay out of other people's business, and ends on gratitude to parents and filial care in good time. Its second half uses the examination system and fortune to show how human feeling warms and cools.",
+   "translation": "When you are in favour, think of disgrace; when you live in peace, think of danger. Let every thought be as on the day you face the enemy, and every heart as when you cross a bridge. A hero walks a dangerous road; wealth and rank are like a flowering branch. Do not say that human feeling is a spring day; fear only the cold that comes with autumn. Though you see a friend off for a thousand li, you must part at last. Just watch the crab with a cold eye and see how long it can walk sideways. What you see, do not tell; when asked about it, say you do not know. Leave other people's business alone, and when there is none of your own, go home early. A false satin dyed a true red will still have others talking of it. Good deeds may be done; bad deeds must not be done. Promise a man a thing and do not change it for a thousand in gold. A dragon bears a dragon's son; a tiger bears a leopard's cub. A dragon in shallow water is teased by shrimp; a tiger fallen on the plain is bullied by dogs. Once, with one lift of the head, you are on the Dragon and Tiger List, and within ten years your body is at the Phoenix Pool. Ten years at the window with none to ask after you, then one success and the whole world knows your name. Wine debts are to be had everywhere you go; to live to seventy has been rare since ancient times. Raise sons to be looked after in old age, store grain against hunger. Keep chickens, pigs, dogs and hogs, and do not miss the season for them; a household of a few mouths can then go without hunger. Only when you run a household do you learn the price of salt and rice; only when you raise children do you learn the kindness of parents. Always think of the days of having when there are days of lacking; do not treat times of having nothing as if you had plenty. The tree wishes to be still but the wind will not stop; the son wishes to care for his parents but they are no longer there. When the time comes, the wind carries one to Tengwang Pavilion; when luck goes, the thunder strikes the Jianfu stele. When you enter a house, do not ask of its rise or fall; look at the faces and you know. When the official is honest, his clerks are thin; when the god is efficacious, the temple keeper is fat. Quench your thunder-like anger, and put away your tiger-and-wolf-like power. To spare others is the root of dealing with people; to yield to others is the skill of dealing with people.",
+   "keyLines": [
+    {
+     "line": "得寵思辱，安居慮危",
+     "en": "When you are in favour, think of disgrace; when you live in peace, think of danger.",
+     "note": "Stay alert when things are going well."
+    },
+    {
+     "line": "見事莫說，問事不知",
+     "en": "What you see, do not tell; when asked about it, say you do not know.",
+     "note": "A worldly-wise rule for getting through life: say little, watch more, and protect yourself."
+    },
+    {
+     "line": "十年窗下無人問，一舉成名天下知",
+     "en": "Ten years at the window with none to ask after you, then one success and the whole world knows your name.",
+     "note": "The scene of the examination candidate: years of study in cold obscurity, then sudden fame."
+    },
+    {
+     "line": "常將有日思無日，莫把無時當有時",
+     "en": "Always think of the days of having when there are days of lacking; do not treat times of having nothing as if you had plenty.",
+     "note": "A principle of thrift: think of lean times in times of plenty."
+    },
+    {
+     "line": "樹欲靜而風不止，子欲養而親不待",
+     "en": "The tree wishes to be still but the wind will not stop; the son wishes to care for his parents but they are no longer there.",
+     "note": "From the Han Commentary on the Songs: a sigh that care for one's parents must be given in time."
+    },
+    {
+     "line": "龍游淺水遭蝦戲，虎落平陽被犬欺",
+     "en": "A dragon in shallow water is teased by shrimp; a tiger fallen on the plain is bullied by dogs.",
+     "note": "Even the strong are looked down on when they lose their position."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "龍虎榜",
+     "en": "long hu bang - 'the Dragon and Tiger List'",
+     "note": "In the eighth year of the Zhenyuan era of the Tang dynasty (618-907), the list of successful jinshi candidates included famous men such as Han Yu and Ouyang Zhan, and was called the 'Dragon and Tiger List'. Later it came to mean passing the examinations in general."
+    },
+    {
+     "term": "鳳凰池",
+     "en": "feng huang chi - 'the Phoenix Pool'",
+     "note": "Another name for the Secretariat, used for the post of chief minister."
+    },
+    {
+     "term": "酒債尋常行處有",
+     "en": "jiu zhai xun chang xing chu you - 'wine debts are to be had everywhere'",
+     "note": "A line from Du Fu's poem 'Qu Jiang'. The next line is 'to live to seventy has been rare since ancient times'."
+    },
+    {
+     "term": "彘",
+     "en": "zhi - 'hog'",
+     "note": "A pig."
+    },
+    {
+     "term": "滕王閣",
+     "en": "teng wang ge - 'Tengwang Pavilion'",
+     "note": "The famous tower for which Wang Bo wrote his 'Preface to the Tengwang Pavilion'. The story is that a wind helped him arrive just in time."
+    },
+    {
+     "term": "薦福碑",
+     "en": "jian fu bei - 'the Jianfu stele'",
+     "note": "A stele in a popular tale that was struck by lightning; a figure for bad luck."
+    },
+    {
+     "term": "廟祝",
+     "en": "miao zhu - 'temple keeper'",
+     "note": "The man who looks after the incense and offerings in a temple."
+    }
+   ],
+   "background": "This section quotes the Mencius ('chickens, pigs, dogs and hogs', from 'King Hui of Liang, Part One') and the Han Commentary on the Songs (Han shi waizhuan, 'the tree wishes to be still'), mixed with popular sayings about the examinations and officialdom. Lines such as 'the wind carries one to Tengwang Pavilion' rest on popular tales, whose details differ from book to book."
+  },
+  "pian08": {
+   "summary": "This section covers care in speech, choosing the good and taking teachers wherever they are found, reading and doing good, and cause and effect. It contains famous lines such as 'among three people walking, there is a teacher for me' and 'if you do not strive when young'.",
+   "translation": "Good words are hard to find; bad words are easy to say. Once a word is spoken, a team of four horses cannot overtake it. Those who say I am good are my enemies; those who say I am bad are my teachers. Show your sword when you meet a knight on the road; do not offer verses unless the man is a poet. When three people walk together, there is surely a teacher for me among them: I choose the good in him and follow it, and the bad in him I correct in myself. If you wish your family to prosper in harmony, you must do good; if you wish to raise your family's name, you must read. If you do not strive when young and strong, you will grieve in vain when you are old. When a man has a good wish, Heaven is sure to help him. Do not drink wine in the hour of the rabbit, for you will be dazed and drunk until the hour of the rooster. Do not scold your wife in the hour of the rooster, or you will spend the night lonely and cold. Sow hemp and you reap hemp; sow beans and you reap beans. The net of Heaven is vast; its mesh is wide, but nothing slips through. Do not step forward when you see an official; do not be last when you are a guest. Better add a measure of grain than add a mouth. The mantis stalks the cicada, not knowing the oriole is behind. I do not ask for heaps of gold and jade; I only wish for my sons and grandsons all to be worthy. One day as husband and wife, a hundred lives of fate. A hundred lives of cultivation brings crossing in the same boat; a thousand lives of cultivation brings sharing the same pillow. Kill ten thousand, and you lose three thousand yourself. A word that wounds a man cuts as sharply as a knife. A withered tree can bloom again in spring, but a man is not young twice. Seek lodging before it is late; at the cock's crow look at the sky. A general or minister's chest should be wide enough to gallop a horse across; a duke or marquis's belly should be big enough to row a boat in. The rich think of next year; the poor think of what is before them. If you wish to keep human feeling good in the world, do not take payment for goods sold on credit. Life and death are fated; wealth and rank lie with Heaven. Strike a stone and there is fire; if you do not strike, there is no smoke. By study one comes to know the Way; without study all is in vain.",
+   "keyLines": [
+    {
+     "line": "一言旣出，駟馬難追",
+     "en": "Once a word is spoken, a team of four horses cannot overtake it.",
+     "note": "Be careful in speech: once out, a word cannot be taken back."
+    },
+    {
+     "line": "道吾好者是吾賊，道吾惡者是吾師",
+     "en": "Those who say I am good are my enemies; those who say I am bad are my teachers.",
+     "note": "The flatterer does harm, and the person who criticises frankly helps."
+    },
+    {
+     "line": "三人同行，必有我師焉，擇其善者而從之，其不善者而改之",
+     "en": "When three people walk together, there is surely a teacher for me among them: I choose the good in him and follow it, and the bad in him I correct in myself.",
+     "note": "From the Analects, 'Shu er': one can learn anywhere, imitating the good and examining oneself when one sees the bad."
+    },
+    {
+     "line": "少壯不努力，老大徒傷悲",
+     "en": "If you do not strive when young and strong, you will grieve in vain when you are old.",
+     "note": "From the Han yuefu ballad 'Long Song Xing': an urging to strive in time."
+    },
+    {
+     "line": "螳螂捕蟬，豈知黃雀在後",
+     "en": "The mantis stalks the cicada, not knowing the oriole is behind.",
+     "note": "Seeing only the gain in front and missing the danger behind."
+    },
+    {
+     "line": "傷人一語，利如刀割",
+     "en": "A word that wounds a man cuts as sharply as a knife.",
+     "note": "Words can wound deeper than a blade."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "駟馬",
+     "en": "si ma - 'a team of four horses'",
+     "note": "A carriage drawn by four horses, a figure for speed. It comes from the Analects, 'Yan Yuan': 'four horses cannot overtake the tongue'."
+    },
+    {
+     "term": "卯時、酉時",
+     "en": "mao shi, you shi - 'the hour of the rabbit, the hour of the rooster'",
+     "note": "The rabbit hour is about 5 to 7 in the morning, the rooster hour about 5 to 7 in the evening."
+    },
+    {
+     "term": "天眼恢恢，疎而不漏",
+     "en": "tian yan hui hui, shu er bu lou - 'the net of Heaven is vast'",
+     "note": "Based on the Laozi: 'The net of Heaven is vast; its mesh is wide, yet nothing slips through.'"
+    },
+    {
+     "term": "螳螂捕蟬",
+     "en": "tang lang bu chan - 'the mantis stalks the cicada'",
+     "note": "From the Zhuangzi, 'Shan mu', and the Garden of Stories (Shuoyuan): a figure for seeing only gain in front and guarding against nothing behind."
+    },
+    {
+     "term": "同船渡",
+     "en": "tong chuan du - 'crossing in the same boat'",
+     "note": "Crossing in one boat, as a mark of fated bond."
+    },
+    {
+     "term": "賒",
+     "en": "she - 'on credit'",
+     "note": "To sell on credit, or to be in debt."
+    },
+    {
+     "term": "胸前堪走馬、肚裏好撐船",
+     "en": "xiong qian kan zou ma, du li hao cheng chuan - 'chest wide enough for a horse, belly big enough for a boat'",
+     "note": "A figure for great breadth of mind, able to put up with others."
+    }
+   ],
+   "background": "This section draws heavily on the Analects, the Laozi, the Zhuangzi and Han ballads, which shows that the Zengguang Xianwen is a mix of classical quotations and folk sayings. There are different accounts of the original source of some of the maxims."
+  },
+  "pian09": {
+   "summary": "This section speaks of getting on with neighbours, keeping to one's lot, repayment for good and bad, and diligent study. It closes with 'the right time is less than the right place, the right place less than harmony among people' and 'gold is not what is dear; peace and ease are worth more'.",
+   "translation": "Do not laugh at others for being old; you too will come to it. If you get on well with your neighbours, it is like picking up a treasure. If you can keep to your lot, in the end you will have no worries. The great house does things in an ordinary way; the small house does things in a flurry. The great house teaches its young by ritual and rightness; the small house trains its boys by harshness. The noble person loves wealth but takes it by the proper way; a chaste woman loves beauty but receives it by ritual. Good brings good in return and bad brings bad. It is not that they are not repaid; the day has not yet come. Of ten thousand evils lust is the head; of a hundred virtues filial piety comes first. A man without good faith: I do not know how he can be. One man says something false, and a thousand repeat it as true. If you want a thing done well, ask the three elders. If you quarrel over small things, you lose the great Way. If the household is not in harmony, the neighbours bully it; if the neighbours are not in harmony, they gossip. Every year guard against famine, every night guard against thieves. Studying is good, not studying is not good. Those who study are like rice and grain; those who do not are like mugwort and weeds. When it is time to drink, drink; where you can sing loudly, sing. To fan a fire with the wind takes little effort. Without the fisherman to lead you, how would you see the waves? If you ask nothing of others, human feeling is good everywhere; if you do not drink, let the price of wine go as high as it likes. Knowing little means little worry; knowing many people means many quarrels. In the mountains I do not fear a man-eating tiger; I fear only the two-edged knife of human feeling. Beyond the strong there is always one stronger; a wicked man must be ground down by a wicked man. Knowing how to spend does not depend on being rich at home; having style does not need many clothes. Time is an arrow, sun and moon are a shuttle. The time of Heaven is not as good as the advantage of ground; the advantage of ground is not as good as the harmony of people. Gold is not what is dear; peace and ease are worth far more.",
+   "keyLines": [
+    {
+     "line": "和得鄰里好，猶如拾片寶",
+     "en": "If you get on well with your neighbours, it is like picking up a treasure.",
+     "note": "Good relations with neighbours are a rare piece of luck."
+    },
+    {
+     "line": "君子愛財，取之有道",
+     "en": "The noble person loves wealth but takes it by the proper way.",
+     "note": "Wealth should be sought by an upright road."
+    },
+    {
+     "line": "善有善報，惡有惡報。不是不報，日子不到",
+     "en": "Good brings good in return and bad brings bad. It is not that they are not repaid; the day has not yet come.",
+     "note": "A popular way to put cause and effect: repayment has only not yet come due."
+    },
+    {
+     "line": "萬惡淫為首，百善孝當先",
+     "en": "Of ten thousand evils lust is the head; of a hundred virtues filial piety comes first.",
+     "note": "The order of traditional morals: avoid lust first, and put filial piety first."
+    },
+    {
+     "line": "入山不怕傷人虎，只怕人情兩面刀",
+     "en": "In the mountains I do not fear a man-eating tiger; I fear only the two-edged knife of human feeling.",
+     "note": "The human heart is harder to guard against than a wild beast."
+    },
+    {
+     "line": "天時不如地利，地利不如人和",
+     "en": "The time of Heaven is not as good as the advantage of ground; the advantage of ground is not as good as the harmony of people.",
+     "note": "From the Mencius, 'Gongsun Chou, Part Two': unity of hearts matters more than timing or terrain."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "三老",
+     "en": "san lao - 'the three elders'",
+     "note": "In ancient times, village officials in charge of moral teaching; later, any old and experienced person."
+    },
+    {
+     "term": "小可",
+     "en": "xiao ke - 'a small thing'",
+     "note": "A trifle."
+    },
+    {
+     "term": "大家、小家",
+     "en": "da jia, xiao jia - 'great house, small house'",
+     "note": "A wealthy household and a humble one."
+    },
+    {
+     "term": "蒿",
+     "en": "hao - 'mugwort'",
+     "note": "A kind of wild weed, used here for a useless person."
+    },
+    {
+     "term": "不因漁父引，怎得見波濤",
+     "en": "bu yin yu fu yin, zen de jian bo tao - 'without the fisherman to lead'",
+     "note": "Without someone to guide you, you will not see new worlds."
+    },
+    {
+     "term": "兩面刀",
+     "en": "liang mian dao - 'two-edged knife'",
+     "note": "A figure for someone who says one thing and means another, hurting you behind your back."
+    },
+    {
+     "term": "強中更有強中手",
+     "en": "qiang zhong geng you qiang zhong shou - 'beyond the strong a stronger'",
+     "note": "Above the strong there is always someone stronger."
+    }
+   ],
+   "background": "Several lines here can be found in earlier books: 'a man without good faith' comes from the Analects, 'Wei zheng', and 'the time of Heaven is not as good as the advantage of ground' from the Mencius, 'Gongsun Chou, Part Two'. The rest are mostly proverbs, and the views on marriage and family rank carry the marks of their time."
+  },
+  "pian10": {
+   "summary": "This section includes well-known lines such as 'all trades are low, only study is high', 'the lamb has the kindness of kneeling to suckle', 'from thrift to luxury is easy' and 'only when you use a book do you regret how little you read'. The themes are study, filial piety, contentment and peace of mind.",
+   "translation": "All things in the world are of low rank; thinking it over, only study is high. The best words in the world are all said in books; the famous mountains under Heaven are mostly taken up by monks. To do good is the greatest joy; doing evil cannot be escaped. The lamb has the kindness of kneeling to suckle; the crow has the duty of feeding back. A filial son will bear a filial son; an unfilial son will bear an unfilial one. If you do not believe it, look at the water from the eaves: drop after drop falls into the old hollow. You are in a hurry and he is not; a man may be at leisure while his mind is not. Hide the bad in others and praise the good; hold both ends and take the middle. A worthy wife brings her husband little trouble; a filial son eases his father's heart. Once the pot and steamer have fallen, it is no use to look back. Water that has been spilt is truly hard to gather. In life, when will one say 'enough'? When one is old, stealing a little leisure is true leisure. As long as there is a green willow to tie a horse to, every road leads to Chang'an. Seeing is easy, learning is hard. Do not take what comes easily for something ordinary. Tired of quiet, we long for the bustle; tired of bustle, we recall the mountains. Once the heart has settled, there is no place where one is not at peace. Calculating with the mind gets everything wrong; thinking from a step back makes everything hard. The roads are different, but supporting a family is the same. From thrift to luxury is easy; from luxury to thrift is hard. Speak to the one who knows your music; do not play for one who does not. Turn stone to gold and the human heart will still not be satisfied. Believe in gambling and you sell your house. Others look at flowers, which is none of your concern; others bustle about, which is none of your feet's concern. Who does not love worthy sons and grandsons? Who does not love a thousand bushels of grain? But the five phases are not set that way. Do not waste your true heart in calculating; children and grandchildren have their own fortune. When you need a book you regret how little you read; you do not know that a thing is hard until you have gone through it.",
+   "keyLines": [
+    {
+     "line": "世上萬般皆下品，思量唯有讀書高",
+     "en": "All things in the world are of low rank; thinking it over, only study is high.",
+     "note": "The traditional respect for study, said to come from the Song man Wang Zhu's Poem for Prodigies."
+    },
+    {
+     "line": "羊有跪乳之恩，鴉有反哺之義",
+     "en": "The lamb has the kindness of kneeling to suckle; the crow has the duty of feeding back.",
+     "note": "Using animals that repay kindness to say that humans should be all the more filial."
+    },
+    {
+     "line": "不信但看檐前水，點點滴滴舊池窩",
+     "en": "If you do not believe it, look at the water from the eaves: drop after drop falls into the old hollow.",
+     "note": "Filial and unfilial habits are handed down: children follow what their parents do."
+    },
+    {
+     "line": "從儉入奢易，從奢入儉難",
+     "en": "From thrift to luxury is easy; from luxury to thrift is hard.",
+     "note": "A standard of living goes up easily and comes down with difficulty."
+    },
+    {
+     "line": "知音說與知音聽，不是知音莫與彈",
+     "en": "Speak to the one who knows your music; do not play for one who does not.",
+     "note": "Drawing on the story of Boya and Zhong Ziqi: choose the right listener."
+    },
+    {
+     "line": "書到用時方恨少，事非經過不知難",
+     "en": "When you need a book you regret how little you read; you do not know that a thing is hard until you have gone through it.",
+     "note": "The value of study and of experience."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "下品",
+     "en": "xia pin - 'low rank'",
+     "note": "Low in grade or status."
+    },
+    {
+     "term": "跪乳",
+     "en": "gui ru - 'kneeling to suckle'",
+     "note": "A tradition says that lambs kneel to suckle, a figure for gratitude."
+    },
+    {
+     "term": "反哺",
+     "en": "fan bu - 'feeding back'",
+     "note": "A young crow, grown up, feeds its aged parent; a figure for caring for one's parents."
+    },
+    {
+     "term": "忤逆",
+     "en": "wu ni - 'unfilial'",
+     "note": "To go against one's elders, to be disrespectful to one's parents."
+    },
+    {
+     "term": "釜甑",
+     "en": "fu zeng - 'pot and steamer'",
+     "note": "「釜」 is a cauldron and 「甑」 a steamer for rice. In the Book of the Later Han, 'Biography of Guo Tai', Meng Min dropped his steamer and did not look back, a figure for not regretting what is settled."
+    },
+    {
+     "term": "隱惡揚善，執其兩端",
+     "en": "yin e yang shan, zhi qi liang duan - 'hide the bad and praise the good, hold both ends'",
+     "note": "From the Doctrine of the Mean, describing the way the sage-king Shun dealt with people."
+    },
+    {
+     "term": "千鍾粟",
+     "en": "qian zhong su - 'a thousand zhong of grain'",
+     "note": "A large salary. 「鍾」 was an ancient measure of grain."
+    }
+   ],
+   "background": "'All trades are low, only study is high' is said to come from the Song-dynasty (960-1279) Poem for Prodigies by Wang Zhu, though it has long circulated among the people. This section also quotes the Doctrine of the Mean on hiding the bad and praising the good and holding both ends, together with many paired maxims."
+  },
+  "pian11": {
+   "summary": "This section urges harmony and patience, filial and brotherly duty, and doing good without asking about the future, together with observations on human feeling and fate.",
+   "translation": "No parent under Heaven is in the wrong, and the hardest thing to find in the world is a brother. If you are on bad terms with someone, advise him to raise geese; if you are not on good terms with someone, advise him to build a house. Just do good, and do not ask about the road ahead. Where the river is narrow the water runs fast; when a man is pressed, schemes come. Knowing there is a tiger on the mountain, do not walk towards the tiger's mountain. If you do not walk the road you do not arrive; if you do not do the thing it is not done. A man who is not urged is not good; a bell that is not struck does not sound. Only when he has no money does he give up wine; only when he is old does he begin to read the sutras. Lighting a seven-storey pagoda is not as good as one lamp in a dark place. The two old ones in your hall are living Buddhas, so what need is there to go to Spirit Mountain to pay respect to the World-Honoured One? To everyone I urge: in all things do not deceive, for three feet above your head are the gods. Keep just a square inch of land and leave it to your children and grandchildren to plough. Put out the fire in your heart, and trim the lamp before the Buddha. The clever are always short of something, while the dim end up as ministers. Many bright stars are not as good as a single moon shining alone. Brothers who harm each other would be better never born. What is reasonable may be done; do not fight over small gains. A peony is lovely but only for the eyes; the jujube flower is small, yet it bears fruit. Cheat the old, but never cheat the young; to cheat is to have a heart not clear. Plough and hoe according to your lot and gather what the land gives, and in time give thanks to Heaven when you are full. Where you can bear it, bear it; where you can endure it, endure it. If you do not bear and endure, small things grow great. When people argue and show off heroics, the household's fortunes gradually decline. A worthy wife makes her husband honoured; a wicked wife brings her husband ruin. When one man has cause for joy, the myriad people all depend on it. A man may be old but his heart is not old; a man may be poor but his spirit should not be poor. No man is fine for a thousand days; no flower is red for a hundred. The wasp has a needle in its mouth, and the tangerine is divided in two sides. The thing most hated in the world: the most poisonous is the heart of a lewd woman.",
+   "keyLines": [
+    {
+     "line": "天下無不是的父母，世上最難得者兄弟",
+     "en": "No parent under Heaven is in the wrong, and the hardest thing to find in the world is a brother.",
+     "note": "It stresses filial duty to parents and love between brothers. The absolute 'no parent is in the wrong' should be read with its time in mind."
+    },
+    {
+     "line": "明知山有虎，莫向虎山行",
+     "en": "Knowing there is a tiger on the mountain, do not walk towards the tiger's mountain.",
+     "note": "Do not run into danger when you know it is there."
+    },
+    {
+     "line": "堂上二老是活佛，何用靈山朝世尊",
+     "en": "The two old ones in your hall are living Buddhas, so what need is there to go to Spirit Mountain to pay respect to the World-Honoured One?",
+     "note": "Honouring your living parents is better than travelling far to worship the Buddha."
+    },
+    {
+     "line": "萬事勸人休瞞昧，舉頭三尺有神明",
+     "en": "To everyone I urge: in all things do not deceive, for three feet above your head are the gods.",
+     "note": "A warning not to deceive your own heart, since the gods are watching from above."
+    },
+    {
+     "line": "得忍且忍，得耐且耐",
+     "en": "Where you can bear it, bear it; where you can endure it, endure it.",
+     "note": "Patience keeps small things from growing into disasters."
+    },
+    {
+     "line": "人無千日好，花無百日紅",
+     "en": "No man is fine for a thousand days; no flower is red for a hundred.",
+     "note": "Rise and decline are not fixed, so do not grow complacent."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "靈山",
+     "en": "ling shan - 'Spirit Mountain'",
+     "note": "Vulture Peak, where the Buddha taught; later any holy place of Buddhism."
+    },
+    {
+     "term": "世尊",
+     "en": "shi zun - 'the World-Honoured One'",
+     "note": "A title of respect for Shakyamuni Buddha."
+    },
+    {
+     "term": "方寸土",
+     "en": "fang cun tu - 'a square inch of land'",
+     "note": "A small plot, a figure for a modest family property."
+    },
+    {
+     "term": "惺惺、懵懵",
+     "en": "xing xing, meng meng - 'clever, dim'",
+     "note": "「惺惺」 means sharp and clear; 「懵懵」 means muddled."
+    },
+    {
+     "term": "蒼天",
+     "en": "cang tian - 'the blue heaven'",
+     "note": "Heaven."
+    },
+    {
+     "term": "一人有慶，兆民咸賴",
+     "en": "yi ren you qing, zhao min xian lai - 'one man has cause for joy, all the people depend on it'",
+     "note": "From the Book of Documents (Shangshu), 'Lu xing': when the ruler is good, the people all benefit."
+    },
+    {
+     "term": "架屋",
+     "en": "jia wu - 'to build a house'",
+     "note": "To put up a house."
+    }
+   ],
+   "background": "This section reflects a mixture of Buddhist, Confucian and folk belief, such as the idea that honouring one's parents is better than going on pilgrimage to the Buddha. The last line, about the 'poisonous heart of a lewd woman', carries the traditional prejudice against women, and should be read in its historical context."
+  },
+  "pian12": {
+   "summary": "This section covers the changes of fortune, wealth and poverty and ritual, how fortune and misfortune lean on each other, and self-examination, as in 'the leak in the roof gets a night of rain' and 'bitter medicine is good for illness'. It ends by advising people to turn back and take their own measure.",
+   "translation": "Murder may be forgiven; what offends human feeling and reason is hard to bear. A sudden fortune does not know how to enjoy the new wealth; a sudden poverty cannot easily change the old family ways. May the seats of the hall always be full of guests, and the wine in the cup never empty. A leaking house meets night after night of rain; a boat under way meets a head wind. The bamboo shoot becomes bamboo only when its sheath falls; the fish becomes a dragon only after struggling upstream. I remember riding a bamboo horse as a boy, and looking on, it is already a white-haired old man. Ritual and rightness are born from plenty; thieves come from poverty. All the stars in the sky turn to the north; all the waters in the world flow east. A scholar will die for one who knows him; a woman adorns herself for one who delights in her. Form is emptiness, and emptiness is form. The noble person is at ease in poverty; the man of insight knows his fate. Good medicine is bitter in the mouth but good for illness; honest words grate on the ear but are good for conduct. Those who follow Heaven live; those who go against Heaven perish. If there is fate, people meet from a thousand li away; if there is none, they pass face to face without meeting. The fortunate prosper; the unfortunate perish. Men die for wealth, birds die for food. Husband and wife in harmony are like the zither with its large and small, and the pipes. Rouge and powder can easily make a girl look charming; without money it is hard to be a good young man. With a son, poverty will not last long; without a son, wealth will not last. The good will live long; the bad will die early. Food pleasing to the mouth, eaten too much, turns into medicine; a pleasure that passes the limit may give rise to disaster. The rich and noble must keep to their lot; the poor need not think in vain. To draw water with no wind is to make waves for nothing; embroidered flowers, however fine, have no scent. Greed for a measure of rice loses half a year's grain. Struggle for a pig's foot and you lose a leg of lamb. The dragon returns to its cave at dusk, its clouds still damp; the musk deer passes the spring mountain, and the grass and trees are fragrant. All your life you only know how to measure the shortcomings of others; why not turn back and measure yourself?",
+   "keyLines": [
+    {
+     "line": "屋漏更遭連夜雨，行船又遇打頭風",
+     "en": "A leaking house meets night after night of rain; a boat under way meets a head wind.",
+     "note": "Misfortunes do not come singly; troubles come one after another."
+    },
+    {
+     "line": "筍因落籜方成竹，魚為奔波始化龍",
+     "en": "The bamboo shoot becomes bamboo only when its sheath falls; the fish becomes a dragon only after struggling upstream.",
+     "note": "Growth needs trial. It is an image from the carp leaping the Dragon Gate."
+    },
+    {
+     "line": "禮義生於富足，盜賊出於貧窮",
+     "en": "Ritual and rightness are born from plenty; thieves come from poverty.",
+     "note": "People know ritual and rightness once they have enough to eat and wear. It is close to the line of the Guanzi, 'when the granaries are full, people know ritual and restraint'."
+    },
+    {
+     "line": "士為知己者死，女為悅己者容",
+     "en": "A scholar will die for one who knows him; a woman adorns herself for one who delights in her.",
+     "note": "From the words of Yu Rang in the Strategies of the Warring States: one gives everything for the person who values one."
+    },
+    {
+     "line": "良藥苦口利於病，忠言逆耳利於行",
+     "en": "Good medicine is bitter in the mouth but good for illness; honest words grate on the ear but are good for conduct.",
+     "note": "Helpful criticism is often hard to hear, and must be taken with an open mind."
+    },
+    {
+     "line": "平生只會量人短，何不回頭把自量",
+     "en": "All your life you only know how to measure the shortcomings of others; why not turn back and measure yourself?",
+     "note": "Do not pick only at others' faults; look at yourself too."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "籜",
+     "en": "tuo - 'bamboo sheath'",
+     "note": "The husk of a bamboo shoot."
+    },
+    {
+     "term": "竹馬",
+     "en": "zhu ma - 'bamboo horse'",
+     "note": "A children's game of riding a bamboo pole as a horse."
+    },
+    {
+     "term": "色即是空",
+     "en": "se ji shi kong - 'form is emptiness'",
+     "note": "A Buddhist term, found in the Heart Sutra, meaning that the things we see have no fixed nature."
+    },
+    {
+     "term": "琴瑟笙簧",
+     "en": "qin se sheng huang - 'zither, large zither, and pipes'",
+     "note": "Four instruments, a figure for harmony between husband and wife."
+    },
+    {
+     "term": "乍富",
+     "en": "zha fu - 'sudden wealth'",
+     "note": "To become rich suddenly."
+    },
+    {
+     "term": "拱北",
+     "en": "gong bei - 'turn to the north'",
+     "note": "The stars wheel around the Pole Star."
+    },
+    {
+     "term": "麝",
+     "en": "she - 'musk deer'",
+     "note": "The musk deer; the male produces musk."
+    },
+    {
+     "term": "達人",
+     "en": "da ren - 'a person of insight'",
+     "note": "Someone who understands how things are and takes a wide view."
+    }
+   ],
+   "background": "Several lines here can be found in older books, such as the Strategies of the Warring States (Zhanguo ce), 'Zhao ce', the Family Sayings of Confucius (Kongzi jiayu) and the Mencius, and the Buddhist phrase 'form is emptiness' also appears. Lines such as 'with a son, poverty will not last long' reflect older ideas of clan and heirs."
+  },
+  "pian13": {
+   "summary": "This section says that you cannot judge people by their looks, that a light gift carries heavy feeling, that the world is hard to foresee, and that one should be content. It stresses filial duty, rightness and giving people convenience, and is one of the calmer and broader-minded passages.",
+   "translation": "See a good deed as if you could not catch up with it; see an evil deed as if you were putting your hand into boiling water. When a man is poor his ambition is short; when a horse is thin its coat looks long. You are anxious at heart, and others do not know you are busy. In poverty there is no man of means to give you gold; in sickness there is a wise man to tell you a remedy. When something provokes you, do not argue about it; when it has passed, the heart is cool. When autumn comes the hills are full of beauty; when spring comes there is no place without the scent of flowers. An ordinary man cannot be judged by his looks, and the sea cannot be measured with a dipper. The clear water is blocked by earth; the crowd of fine scholars is harmed by wine. Under the mugwort there may be the fragrance of orchid; in a thatched hut there may be a prince or king. In countless red-gated mansions someone starves to death; how many ministers have come from plain white houses. In drunkenness the universe is large; in the pot the sun and moon are long. Brushing a stone to sit, I feel the spring robe cold; treading the flowers on my way home, the horse's hooves are fragrant. All things are fixed in a former life; this floating life is busy for nothing. Sending a hair a thousand li, the gift is slight but the kindness and rightness are heavy. The cuckoo that cries to the moon has a cold throat; the butterfly that sleeps on flowers has fragrant dreams. If one word misses the mark, a thousand words will not be used. One man passes on a falsehood, and a hundred pass it on as true. Ten thousand gold pieces of good medicine are not as good as having no illness. Sending a goose feather a thousand li, the gift is light but the feeling is heavy. The affairs of the world are clear as a mirror; the road ahead is dark as lacquer. The noble person thinks of the law; the petty man thinks of favours. The bowls on the shelf go round in turn, and the daughter-in-law will in time be a mother-in-law. Time cannot be bought with gold; a lifetime passes like a colt past a crack. With ten thousand mu of good fields one eats a pint a day; with a thousand rooms in a great house one sleeps eight feet a night. Of the thousand sutras and ten thousand classics, filial piety and rightness come first. In heaven and on earth, convenience for others comes first. One word that goes into a magistrate's gate cannot be pulled out by nine oxen.",
+   "keyLines": [
+    {
+     "line": "見善如不及，見惡如探湯",
+     "en": "See a good deed as if you could not catch up with it; see an evil deed as if you were putting your hand into boiling water.",
+     "note": "From the Analects, 'Ji shi': rush after the good, and draw back from evil as if scalded."
+    },
+    {
+     "line": "凡人不可貌相，海水不可斗量",
+     "en": "An ordinary man cannot be judged by his looks, and the sea cannot be measured with a dipper.",
+     "note": "Do not judge a person's ability by their appearance."
+    },
+    {
+     "line": "無限朱門生餓殍，幾多白屋出公卿",
+     "en": "In countless red-gated mansions someone starves to death; how many ministers have come from plain white houses.",
+     "note": "Wealth and poverty are not fixed, and birth does not decide what one achieves."
+    },
+    {
+     "line": "千里送鵝毛，禮輕情義重",
+     "en": "Sending a goose feather a thousand li, the gift is light but the feeling is heavy.",
+     "note": "The worth of a gift lies in the feeling behind it."
+    },
+    {
+     "line": "良田萬頃，日食一升。大廈千間，夜眠八尺",
+     "en": "With ten thousand mu of good fields one eats a pint a day; with a thousand rooms in a great house one sleeps eight feet a night.",
+     "note": "However rich one is, one person needs little; an urging to be content."
+    },
+    {
+     "line": "一字入公門，九牛拔不出",
+     "en": "One word that goes into a magistrate's gate cannot be pulled out by nine oxen.",
+     "note": "A popular warning about lawsuits: once you are in, it is hard to get out."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "探湯",
+     "en": "tan tang - 'to put the hand into hot water'",
+     "note": "To thrust the hand into boiling water; it describes shrinking back at once in fear."
+    },
+    {
+     "term": "餓殍",
+     "en": "e piao - 'one who has starved'",
+     "note": "A person who has died of hunger."
+    },
+    {
+     "term": "白屋",
+     "en": "bai wu - 'white house'",
+     "note": "An unadorned commoner's dwelling."
+    },
+    {
+     "term": "茅茨",
+     "en": "mao ci - 'thatch roof'",
+     "note": "A roof of thatch, meaning a plain hut."
+    },
+    {
+     "term": "子規",
+     "en": "zi gui - 'cuckoo'",
+     "note": "A bird whose cry is mournful."
+    },
+    {
+     "term": "君子懷刑",
+     "en": "jun zi huai xing - 'the noble person thinks of the law'",
+     "note": "From the Analects, 'Liren': the noble person thinks of the rules, the petty man of favours."
+    },
+    {
+     "term": "駒過隙",
+     "en": "ju guo xi - 'a colt past a crack'",
+     "note": "A white colt passing a gap, a figure for time flying. It comes from the Zhuangzi, 'Zhi bei you'."
+    }
+   ],
+   "background": "This section includes lines from the Analects, the Zhuangzi and other classics, along with folk maxims. 'An ordinary man cannot be judged by his looks' and 'sending a goose feather a thousand li' have become common sayings. Some lines may have been repeated in copying, as with 'sending a hair a thousand li' and 'sending a goose feather a thousand li'."
+  },
+  "pian14": {
+   "summary": "This section speaks of money and human feeling, of fate and of good and bad being repaid, in lines such as 'to get things done in the world you must use the world's wealth', 'one man holds the pass' and 'to wrong others is a calamity; to spare others is a blessing'. It mixes the realistic with the urging to do good.",
+   "translation": "The yamen with its eight-character gate faces south: if you have right but no money, do not come in. If you seek to get things done in the world, you must use the world's wealth. Wealth begins with a pint and a gill; poverty comes from not reckoning. Living near a river, do not waste its water; living near a mountain, do not burn its wood for nothing. If there is no talented man in the family, where will an official come from? A kind man does not command troops; a just man does not manage money. One man holds the pass, and ten thousand cannot break through. Nothing is up to human calculation; a whole life is arranged by fate. The white cloud was a thing without a mind, yet it was led out by the clear wind. Go fast or go slow, there is only so much road ahead. In your fate there is only so much wealth, and not a hair of it can be lost. Whispers among men sound like thunder to Heaven; a guilty deed in a dark room, the eyes of the gods are like lightning. Even a hair's weight of evil, urge others not to do; even a hair's weight of good, give others convenience. To cheat people is a calamity; to spare people is a blessing. The eye of Heaven is vast, and repayment is swift. The words of the sages awe gods and spirits. Each person has a heart, and each heart has its own view. To hear it said is not as good as meeting it yourself; to hear with the ear is not as good as seeing with the eye. When you see another man's wealth, be glad; do not let your heart burn like fire. Soldiers are raised for a thousand days to be used for one morning. When the state is clear, talented men are honoured; when the household is rich, the child is spoiled. A cut from a sharp knife heals easily; a wounding word leaves a hatred that does not fade. The one thing fair in the world is white hair, which has not spared even the heads of the noble. With money one can stand out from the crowd; without clothes one is reluctant to go out. In office one must be chief minister; in the examinations one must come first. A seedling comes from the earth; a tree divides into branches. Fire in the house makes smoke that becomes clouds. Repay resentment with fairness; repay kindness with kindness.",
+   "keyLines": [
+    {
+     "line": "富從升合起，貧因不算來",
+     "en": "Wealth begins with a pint and a gill; poverty comes from not reckoning.",
+     "note": "Riches come from small amounts piled up, and poverty often from failing to reckon."
+    },
+    {
+     "line": "慈不掌兵，義不掌財",
+     "en": "A kind man does not command troops; a just man does not manage money.",
+     "note": "A commander cannot be soft-hearted; whoever handles money must keep public and private apart."
+    },
+    {
+     "line": "一夫當關，萬夫莫開",
+     "en": "One man holds the pass, and ten thousand cannot break through.",
+     "note": "From Li Bai's 'The Road to Shu is Hard', describing the danger of the terrain."
+    },
+    {
+     "line": "欺人是禍，饒人是福",
+     "en": "To cheat people is a calamity; to spare people is a blessing.",
+     "note": "One who does good to others is the one who is blessed."
+    },
+    {
+     "line": "利刀割體痕易合，惡語傷人恨不消",
+     "en": "A cut from a sharp knife heals easily; a wounding word leaves a hatred that does not fade.",
+     "note": "Hurt from words is harder to heal than hurt from a blade."
+    },
+    {
+     "line": "公道世間唯白髮，貴人頭上不曾饒",
+     "en": "The one thing fair in the world is white hair, which has not spared even the heads of the noble.",
+     "note": "From Du Mu's poem of the Tang dynasty (618-907), 'To a Recluse': old age alone treats everyone alike."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "八字衙門",
+     "en": "ba zi ya men - 'the eight-character yamen'",
+     "note": "The gate of the office was shaped like the character for eight, hence the name."
+    },
+    {
+     "term": "升合",
+     "en": "sheng ge - 'a pint and a gill'",
+     "note": "Two small ancient units of volume, a figure for tiny accumulations."
+    },
+    {
+     "term": "以直報怨",
+     "en": "yi zhi bao yuan - 'repay resentment with fairness'",
+     "note": "From the Analects, 'Xian wen': to meet a grudge with an even-handed attitude."
+    },
+    {
+     "term": "養軍千日，用在一朝",
+     "en": "yang jun qian ri, yong zai yi zhao - 'raise soldiers for a thousand days to use them for one morning'",
+     "note": "One prepares in ordinary times for the key moment."
+    },
+    {
+     "term": "暗室虧心",
+     "en": "an shi kui xin - 'a guilty deed in a dark room'",
+     "note": "A deed that troubles the conscience, done where nobody sees."
+    },
+    {
+     "term": "天眼恢恢",
+     "en": "tian yan hui hui - 'the eye of Heaven is vast'",
+     "note": "Based on the Laozi's 'the net of Heaven is vast', meaning that the Way of Heaven is just."
+    }
+   ],
+   "background": "'One man holds the pass' comes from Li Bai's 'The Road to Shu is Hard', 'the one thing fair in the world is white hair' from a poem by Du Mu, and 'repay resentment with fairness' from the Analects, which shows how many sources this book gathers. Lines such as 'if you have right but no money, do not come in' reflect how the old courts were seen."
+  },
+  "pian15": {
+   "summary": "This section includes well-known lines such as 'do not burn incense in leisure, then clasp the Buddha's foot in need', 'the setting sun is infinitely fine' and 'one day a teacher, a father for life'. It covers knowing people, treasuring time, teaching the young, and respect for teachers and gratitude.",
+   "translation": "Though the red cheeks of youth mock me today, white hair will not let you go one day. When father and son are in harmony the house does not decline; when brothers are in harmony the house does not divide. Under one stretch of cloud we did not know each other, yet three thousand li away I meet you. The official has his regular rules; the people have their agreements of harmony. In leisure you do not burn incense; in need you clasp the Buddha's foot. I am lucky to be born in a peaceful and untroubled age, but I fear old age may come and leave little time. When the state is in disorder we think of good generals; when the family is poor we think of a worthy wife. A pond that holds water must guard against drought; fields that are diligently tilled are enough to support a family. With deep roots one need not fear the shaking of the wind; a straight tree need not worry about the slanting shadow of the moon. Win the cat and you lose the ox's leg. A fool in a thousand thoughts must have one right; a wise man in a thousand thoughts must have one wrong. At first, with people, I listened to their words and trusted their conduct. Now, with people, I listen to their words and watch their conduct. Whose hair is combed without a stray strand? In a lover's eye comes Xi Shi. A pearl sunk in a deep pool makes the river lovely; jade hidden in stone makes the mountain shine. The setting sun is infinitely fine, but I fear it will not last. A long drought meets sweet rain; far from home one meets an old friend; the night of the wedding chamber candles; the time of one's name on the golden list. Cherishing blossoms, I rise early in spring; loving the moon, I sleep late at night. Scooping water, I hold the moon in my hands; playing with flowers, the scent fills my clothes. Peach red, plum white, rose purple: ask the Lord of Spring and he knows nothing of it. In teaching sons and grandsons, teach them rightness; plant mulberry and cudrania, and plant few flowers. Do not think the place of your birth is best; where you have been deeply favoured is home. In learning, be below one man; in use, above ten thousand. One day a teacher, a father for life. To forget kindness and betray rightness is to be a beast.",
+   "keyLines": [
+    {
+     "line": "閒時不燒香，急時抱佛腳",
+     "en": "In leisure you do not burn incense; in need you clasp the Buddha's foot.",
+     "note": "Not preparing in ordinary times, and then scrambling when trouble arrives."
+    },
+    {
+     "line": "國亂思良將，家貧思賢妻",
+     "en": "When the state is in disorder we think of good generals; when the family is poor we think of a worthy wife.",
+     "note": "Only in hardship do we feel the worth of the able and the good."
+    },
+    {
+     "line": "根深不怕風搖動，樹正無愁月影斜",
+     "en": "With deep roots one need not fear the shaking of the wind; a straight tree need not worry about the slanting shadow of the moon.",
+     "note": "With a firm base and upright conduct, one need not fear outside disturbance."
+    },
+    {
+     "line": "愚者千慮，必有一得，智者千慮，必有一失",
+     "en": "A fool in a thousand thoughts must have one right; a wise man in a thousand thoughts must have one wrong.",
+     "note": "From the Annals of Master Yan (Yanzi chunqiu): even the wise err and even the foolish have something worth taking."
+    },
+    {
+     "line": "始吾於人也，聽其言而信其行。今吾於人也，聽其言而觀其行",
+     "en": "At first, with people, I listened to their words and trusted their conduct. Now, with people, I listen to their words and watch their conduct.",
+     "note": "Confucius's words in the Analects, 'Gongye Chang': check that a person's words and deeds agree."
+    },
+    {
+     "line": "久旱逢甘霖，他鄉遇故知；洞房花燭夜，金榜題名時",
+     "en": "A long drought meets sweet rain; far from home one meets an old friend; the night of the wedding chamber candles; the time of one's name on the golden list.",
+     "note": "The 'four joys of life' of the old days, said to come from the Four Joys Poem of Wang Zhu of the Song dynasty (960-1279)."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "抱佛腳",
+     "en": "bao fo jiao - 'to clasp the Buddha's foot'",
+     "note": "To seek help only at the last moment; a figure for working hard only when the matter is on top of you."
+    },
+    {
+     "term": "東君",
+     "en": "dong jun - 'the Lord of the East'",
+     "note": "The god of spring, meaning spring itself."
+    },
+    {
+     "term": "栽桑栽柘",
+     "en": "zai sang zai zhe - 'plant mulberry, plant cudrania'",
+     "note": "The cudrania is a tree whose leaves can feed silkworms; the saying is that farming and silk matter more than growing flowers."
+    },
+    {
+     "term": "掬水月在手",
+     "en": "ju shui yue zai shou - 'scooping water, the moon is in hand'",
+     "note": "From the Tang poet Yu Liangshi's 'Moon on a Spring Mountain': when cupping water, the moon's reflection is in your hands."
+    },
+    {
+     "term": "珠沉淵而川媚",
+     "en": "zhu chen yuan er chuan mei - 'a pearl sunk in the deep makes the river lovely'",
+     "note": "From Lu Ji's 'Rhapsody on Literature': 'jade in the stone makes the hill shine; a pearl in the water makes the river lovely'."
+    },
+    {
+     "term": "官有正條，民有和約",
+     "en": "guan you zheng tiao, min you he yue - 'the official has his rules, the people their agreements'",
+     "note": "Officialdom has formal laws, and the common people have their agreements for peace."
+    },
+    {
+     "term": "禽獸之徒",
+     "en": "qin shou zhi tu - 'a company of beasts'",
+     "note": "People who forget kindness and have no humanity."
+    }
+   ],
+   "background": "This section quotes the words of Confucius in the Analects, Lu Ji's 'Rhapsody on Literature' (Wen fu) and a poem by Yu Liangshi, which shows how the book gathers lines from literati poetry and folk proverbs. Lines such as 'to forget kindness and betray rightness is to be a beast' reflect the traditional respect for teachers and rightness."
+  },
+  "pian16": {
+   "summary": "This last section is mostly about urging study, accumulating virtue, thrift, contentment and keeping to one's lot, as in 'rather than pile up money, pile up virtue; rather than buy land, buy books', and closes with 'to the gentleman I would say: each should keep to himself'.",
+   "translation": "I urge you not to fry vegetables in oil, but to leave the oil for your sons and grandsons to read by at night. In books there is a thousand bushels of grain; in books there is a face like jade. Do not blame Heaven and do not blame men; the five phases and the eight characters decide one's fate. Do not grumble at being poor; if you are poor, be cleanly poor. Do not envy others for being rich; if you are rich, be nobly rich. Others ride horses and I ride a donkey; thinking it over I am worse off, but when I turn and look, there is still the porter carrying loads. There are hungry people on the road, and leftover rice at home. Pile up virtue for your sons and grandsons; do people favours widely. When you do good, spirits respect you; when you do evil, Heaven punishes you. To pile up money and grain is not as good as to pile up virtue; to buy fields and land is not as good as to buy books. One day's spring work is worth ten days' grain; ten days' spring work is worth half a year's grain. The lazy have nothing to eat; the diligent and thrifty have full granaries. People are close but wealth is not close, so keep gain clearly separate. Of ten parts of cleverness use seven, always leaving three for your sons and grandsons; if you use all ten, it is far from your descendants and close to yourself. The noble person is glad to be a noble person; the petty man is a petty man to no purpose. Those who love learning, even the child of a commoner may become a minister; those who do not, even the child of a minister may become a commoner. The one who begrudges money should not teach his son; the one who shields his own faults should not follow a teacher. If you remember the old essays you are a new graduate. A man sitting at home may find disaster falling from the sky. Only ask that your heart be without shame, and do not fear later calamity. Only meet people with harmony; what quarrel ever kept the peace? The honest and generous have their honest reward; the violent and overbearing will surely suffer the punishment of officials. When a man enters the magistrate's gate, it is a good time to cultivate himself and to leave some hidden virtue for later. Why contend over high and low? When life is gone, all is over. The mountain is high, but not as high as the human heart, which is higher than Heaven. He turns water into wine to sell, and still grumbles that the pig has no lees. Do not complain in poverty; do not be proud in wealth and honour. Good and bad are done by people; fortune and misfortune are called down by themselves. I urge you, gentlemen, each to keep to yourself. If this alone is presented, ten thousand times there is no failure.",
+   "keyLines": [
+    {
+     "line": "書中自有千鍾粟，書中自有顏如玉",
+     "en": "In books there is a thousand bushels of grain; in books there is a face like jade.",
+     "note": "Said to come from Emperor Zhenzong's 'Poem Urging Study' of the Song dynasty (960-1279); it uses fame and wealth to urge people to read."
+    },
+    {
+     "line": "別人騎馬我騎驢，仔細思量我不如，待我回頭看，還有挑腳漢",
+     "en": "Others ride horses and I ride a donkey; thinking it over I am worse off, but when I turn and look, there is still the porter carrying loads.",
+     "note": "Comparing downwards to teach contentment."
+    },
+    {
+     "line": "積錢積穀不如積德，買田買地不如買書",
+     "en": "To pile up money and grain is not as good as to pile up virtue; to buy fields and land is not as good as to buy books.",
+     "note": "Virtue and learning are worth more than money and land."
+    },
+    {
+     "line": "十分伶俐使七分，常留三分與兒孫",
+     "en": "Of ten parts of cleverness use seven, always leaving three for your sons and grandsons.",
+     "note": "Leave room in everything, and do not use up your own cleverness and fortune."
+    },
+    {
+     "line": "好學者則庶民之子為公卿，不好學者則公卿之子為庶民",
+     "en": "Those who love learning, even the child of a commoner may become a minister; those who do not, even the child of a minister may become a commoner.",
+     "note": "Learning can change one's station in society."
+    },
+    {
+     "line": "奉勸君子，各宜守己。只此呈示，萬無一失",
+     "en": "I urge you, gentlemen, each to keep to yourself. If this alone is presented, ten thousand times there is no failure.",
+     "note": "The closing words of the whole first part, urging people to keep to their station."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "千鍾粟",
+     "en": "qian zhong su - 'a thousand zhong of grain'",
+     "note": "A large salary. 「鍾」 was an ancient measure."
+    },
+    {
+     "term": "顏如玉",
+     "en": "yan ru yu - 'a face like jade'",
+     "note": "A jade-like face, meaning a beautiful woman."
+    },
+    {
+     "term": "挑腳漢",
+     "en": "tiao jiao han - 'a porter'",
+     "note": "In old times, a carrier who bore baggage and goods for others."
+    },
+    {
+     "term": "春工",
+     "en": "chun gong - 'spring work'",
+     "note": "The work of ploughing and sowing in spring."
+    },
+    {
+     "term": "舉子",
+     "en": "ju zi - 'candidate'",
+     "note": "A scholar sitting the imperial examinations."
+    },
+    {
+     "term": "陰德",
+     "en": "yin de - 'hidden virtue'",
+     "note": "Good done in secret."
+    },
+    {
+     "term": "五行八字",
+     "en": "wu xing ba zi - 'the five phases and the eight characters'",
+     "note": "Telling a person's fate from the hour of birth: a popular system of fortune-telling."
+    }
+   ],
+   "background": "This is the last section of the part collected here. The lines urging study are said to come from Emperor Zhenzong of the Northern Song (960-1127), though the attribution is disputed. The title Zengguang Xianwen means 'wise words added to and widened', and the lines come from many sources; the text has been added to and trimmed in copying."
+  }
+ }
+}

@@ -1,0 +1,1083 @@
+{
+ "id": "songci",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "shuidiaogetou": {
+   "summary": "A two-part long song lyric (ci) to the tune Shuidiao getou. Su Shi looks at the moon on the Mid-Autumn night and misses his brother Su Zhe. He moves from questioning Heaven to imagining flying up there, then back to the human world, and finally eases the pain of parting with the lines 'I only wish that we may live long, and share the moon's beauty, a thousand li apart'. It is open-hearted and deeply felt.",
+   "translation": "When did the bright moon first appear?\nI raise my cup and ask the blue sky.\nI do not know, in the palaces of the heavens,\nwhat year it is tonight.\nI would ride the wind and go back there,\nbut I fear the jade towers and crystal halls\nare too cold to bear, so high up.\nI rise and dance, playing with my clear shadow -\nhow can that compare with the human world?\nShe turns round the red pavilion, stoops to the carved windows,\nand shines on those who cannot sleep.\nShe should have no grievance,\nso why is she always full when people part?\nPeople have sorrow and joy, parting and meeting;\nthe moon has dim and bright, full and waning:\nfrom of old, nothing is ever whole.\nI only wish that we may live long,\nand share the moon's beauty, a thousand li apart.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "丙辰",
+     "en": "Bingchen - the year 1076",
+     "note": "The ninth year of Xining under Emperor Shenzong of the Song (1076)."
+    },
+    {
+     "term": "瓊樓玉宇",
+     "en": "qiong lou yu yu - jade towers and crystal halls",
+     "note": "Splendid palaces built of fine jade; the palace of the moon."
+    },
+    {
+     "term": "不應有恨",
+     "en": "bu ying you hen - she should have no grievance",
+     "note": "The moon should have no reason for resentment; the poet is complaining that the moon is always full just when people part."
+    },
+    {
+     "term": "嬋娟",
+     "en": "chan juan - beautiful and graceful",
+     "note": "Of fine and lovely bearing; here, the moon."
+    }
+   ],
+   "background": "Su Shi (Su Dongpo) wrote this on the Mid-Autumn night of 1076 in Mizhou (today's Zhucheng in Shandong). The poem has a short preface saying that he wrote it after drinking, thinking of his younger brother Su Zhe (Ziyou)."
+  },
+  "niannujiao_chibi": {
+   "summary": "A long song lyric (ci) to the tune Niannujiao. Su Shi climbs to the Red Cliff, and from the grand scenery thinks of the heroic bearing and deeds of Zhou Yu of the Three Kingdoms. He contrasts that with his own age and unfinished career, and ends with 'Life is like a dream - let me pour one cup back to the river moon', where bold feeling mixes with detachment and sadness.",
+   "translation": "The great river flows east,\nits waves washing away all the heroes of a thousand ages.\nWest of the old fortress, people say,\nis the Red Cliff of Zhou Lang of the Three Kingdoms.\nJagged rocks pierce the sky, startling waves beat the shore,\nrolling up a thousand heaps of snow.\nRivers and hills like a painting -\nhow many heroes there were in one age!\nI think of Gongjin in those years:\nXiao Qiao had just become his bride,\nand his bearing was bold and radiant.\nWith a feather fan and silk headband, laughing and talking,\nthe enemy's masts and oars flew off as ash and smoke.\nMy mind roams the old country;\nthe tender-hearted would laugh at me\nfor having grey hair so soon.\nLife is like a dream -\nlet me pour one cup back to the river moon.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "淘",
+     "en": "tao - to wash away",
+     "note": "To scour or wash."
+    },
+    {
+     "term": "周郎",
+     "en": "Zhou lang - Zhou Yu",
+     "note": "Zhou Yu, a famous general of Wu in the Three Kingdoms, who commanded at the Battle of Red Cliff."
+    },
+    {
+     "term": "羽扇綸巾",
+     "en": "yu shan guan jin - feather fan and silk headband",
+     "note": "Holding a fan of feathers and wearing a headband of green silk; the look of a scholar-general."
+    },
+    {
+     "term": "檣艣",
+     "en": "qiang lu - masts and oars",
+     "note": "Qiang is a mast and lu an oar (a variant writing of the same word): ships."
+    },
+    {
+     "term": "酹",
+     "en": "lei - to pour a libation",
+     "note": "To pour wine on the ground as an offering. Read lei."
+    }
+   ],
+   "background": "Su Shi wrote this in 1082 while exiled to Huangzhou. The 'Red Cliff' he visited was in fact the Red Nose Rock at Huangzhou, not the real site of the battle, and Su Shi kept his doubt in the words 'people say'. This lyric opened the bold and unrestrained style of ci."
+  },
+  "jiangchengzi": {
+   "summary": "A two-part song lyric (ci) to the tune Jiangchengzi. Su Shi dreams of his dead wife: ten years of separation by death, a meeting in the dream where they face each other without a word and tears fall in a thousand lines. It ends by imagining her grave on a moonlit night under short pines, and is a famous elegy for a dead spouse.",
+   "translation": "Ten years, living and dead, both vast and blurred;\nI do not try to think of you, yet cannot forget.\nA lonely grave a thousand li away -\nnowhere to tell of my desolation.\nEven if we met, you would not know me:\ndust over my face, my temples like frost.\nLast night in a deep dream I suddenly went home;\nby the small window of the little room, you were at your dressing.\nWe looked at each other without a word,\nand only tears ran in a thousand lines.\nI know the place that breaks my heart year after year:\na moonlit night, on a hill of short pines.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "乙卯",
+     "en": "Yimao - the year 1075",
+     "note": "The eighth year of Xining under Emperor Shenzong of the Song (1075)."
+    },
+    {
+     "term": "千里孤墳",
+     "en": "qian li gu fen - a lonely grave a thousand li away",
+     "note": "His wife Wang Fu was buried at Meishan in Sichuan, a thousand li from Mizhou where he was."
+    },
+    {
+     "term": "軒窗",
+     "en": "xuan chuang - a room with a window",
+     "note": "A small room with a window."
+    },
+    {
+     "term": "短松岡",
+     "en": "duan song gang - a hill of short pines",
+     "note": "A hill planted with small pine trees; a grave."
+    }
+   ],
+   "background": "The poem's title reads 'Recording a dream on the night of the twentieth of the first month, Yimao'. In 1075, in Mizhou, Su Shi dreamed of his wife Wang Fu, who had died ten years earlier, and wrote this."
+  },
+  "dingfengbo": {
+   "summary": "A two-part song lyric (ci) to the tune Dingfengbo. Su Shi is caught in rain on the road while his companions are in a sorry state, but he walks slowly and chants calmly. With a bamboo staff, straw sandals and a straw cloak in mist and rain, he shows no fear of storms, and ends with 'no wind and rain, and no clearing either', a mind free and open.",
+   "translation": "Do not listen to the rain beating through the woods and on the leaves;\nwhy not chant and whistle and walk slowly?\nA bamboo staff and straw sandals are lighter than a horse -\nwho is afraid?\nA straw cloak in mist and rain, for all my life.\nThe sharp spring wind blows me sober;\na little cold,\nbut the slanting sun on the hilltop comes to greet me.\nLooking back at the place of bleak wind and rain,\nI go home:\nno wind and rain, and no clearing either.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "穿林打葉",
+     "en": "chuan lin da ye - beating through the woods and on the leaves",
+     "note": "Rain falling through the trees and striking the leaves."
+    },
+    {
+     "term": "芒鞋",
+     "en": "mang xie - straw sandals",
+     "note": "Sandals made of straw."
+    },
+    {
+     "term": "料峭",
+     "en": "liao qiao - sharp and chill",
+     "note": "Describes the chill of early spring."
+    },
+    {
+     "term": "蕭瑟處",
+     "en": "xiao se chu - the place of bleak wind and rain",
+     "note": "A place where wind and rain beat the trees."
+    }
+   ],
+   "background": "A short preface says that on the seventh day of the third month, on the road to Sha Lake, they met rain; the rain gear had gone ahead, and everyone in the party was in a sorry state except Su Shi, who did not notice, and soon it cleared, so he wrote this. It dates from 1082, while he was exiled to Huangzhou."
+  },
+  "busuanzi_su": {
+   "summary": "A short two-part song lyric (ci) to the tune Busuanzi. Su Shi uses a lone wild goose as a picture of himself: a waning moon, sparse parasol trees, the still of deep night, and the goose that starts up and looks back. It expresses a proud loneliness in exile that will not follow the common way.",
+   "translation": "A waning moon hangs on the sparse parasol trees;\nthe water-clock has stopped and people are just quiet.\nWho sees the lone recluse come and go,\nlike the faint shadow of a lonely wild goose?\nStartled, it rises and looks back,\nwith a grief no one understands.\nIt picks over every cold branch and will not perch,\nand lodges on the lonely cold sandbar.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "漏斷",
+     "en": "lou duan - the water-clock has stopped",
+     "note": "The lou is the old water-clock; when it has stopped, the night is deep."
+    },
+    {
+     "term": "幽人",
+     "en": "you ren - a recluse",
+     "note": "One who lives in retirement; the poet himself."
+    },
+    {
+     "term": "縹緲",
+     "en": "piao miao - faint and far",
+     "note": "Dim and indistinct."
+    },
+    {
+     "term": "省",
+     "en": "xing - to understand",
+     "note": "To comprehend. Read xing."
+    }
+   ],
+   "background": "Su Shi wrote this during his exile in Huangzhou (about 1080-1081). The poem's title is 'Written While Lodging at the Dinghui Temple in Huangzhou'."
+  },
+  "shengshengman": {
+   "summary": "A two-part long song lyric (ci) to the tune Shengshengman. Li Qingzhao opens with fourteen repeated characters to describe the desolation of living alone after the fall of her country and the death of her husband. The wild goose, the yellow flowers, the parasol trees and the fine rain all stir her sorrow, and the last line 'how can a single word, sorrow, cover it?' says that the grief is too heavy to put into words.",
+   "translation": "Searching, seeking,\ncold, bleak,\nmiserable, sorrowful and sad.\nIn the time of sudden warmth and returning cold,\nit is hardest to take rest.\nHow can three or two cups of thin wine\nstand against the wind rising in the evening?\nThe wild geese pass over,\njust when I am heartbroken -\nthey are old acquaintances.\nThe ground is heaped with yellow flowers,\nwithered and spoiled; now who would pick them?\nKeeping by the window,\nhow can I get through to dark alone?\nThe parasol trees, and fine rain besides,\ndrip and drop till dusk.\nAt a time like this,\nhow can a single word, 'sorrow', cover it!",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "乍暖還寒",
+     "en": "zha nuan huan han - suddenly warm, then cold again",
+     "note": "Sudden warmth followed by cold."
+    },
+    {
+     "term": "將息",
+     "en": "jiang xi - to rest and recover",
+     "note": "To rest, look after oneself."
+    },
+    {
+     "term": "黃花",
+     "en": "huang hua - yellow flowers",
+     "note": "Chrysanthemums."
+    },
+    {
+     "term": "次第",
+     "en": "ci di - state of things",
+     "note": "The situation, the circumstances."
+    },
+    {
+     "term": "怎生",
+     "en": "zen sheng - how",
+     "note": "How, in what way."
+    }
+   ],
+   "background": "Li Qingzhao wrote this in her later years, after the court fled south. Her husband Zhao Mingcheng had died, and she was drifting alone. The opening in repeated characters is the greatest feature of this lyric."
+  },
+  "zuihuayin": {
+   "summary": "A two-part short song lyric (ci) to the tune Zuihuayin. On the Double Ninth festival Li Qingzhao thinks of her far-away husband. She draws thin mist and thick cloud, the incense burned out in its golden beast, and drinking at the eastern hedge in loneliness, and ends with the famous line 'the person is thinner than the yellow flowers', showing the pain of longing.",
+   "translation": "Thin mist and thick cloud, sorrow through the long day;\nthe camphor burns out in the golden beast.\nAnother festival day, the Double Ninth -\non the jade pillow, within the gauze curtain,\nthe chill of midnight has just come through.\nAfter dusk I drink at the eastern hedge,\nand a hidden fragrance fills my sleeves.\nDo not say it does not melt the soul!\nThe curtain is rolled up by the west wind,\nand the person is thinner than the yellow flowers.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "永晝",
+     "en": "yong zhou - the long day",
+     "note": "A long daytime."
+    },
+    {
+     "term": "瑞腦",
+     "en": "rui nao - camphor incense",
+     "note": "A fragrance, borneol (dragon-brain) incense."
+    },
+    {
+     "term": "金獸",
+     "en": "jin shou - the golden beast",
+     "note": "A bronze incense burner in the shape of an animal."
+    },
+    {
+     "term": "紗廚",
+     "en": "sha chu - a gauze curtain",
+     "note": "A mosquito-net bed hanging of gauze."
+    },
+    {
+     "term": "消魂",
+     "en": "xiao hun - to melt the soul",
+     "note": "Describes the extreme of sorrow or of joy."
+    }
+   ],
+   "background": "This is an early work by Li Qingzhao, a poem of longing sent to her husband Zhao Mingcheng. The story goes that when Zhao Mingcheng read it he felt he could not match it, shut himself away to think hard, and still could not surpass it."
+  },
+  "rumengling": {
+   "summary": "A one-part short song lyric (ci) to the tune Rumengling. Li Qingzhao recalls the evening when, as a young girl, she was drinking at a stream pavilion and lost her way home by boat, drifting deep into the lotus and startling gulls and herons. The language is bright and quick, full of the spirit of youth.",
+   "translation": "I often remember an evening at the stream pavilion,\ndrunk and unaware of the way home.\nWhen the fun was done I turned the boat late,\nand strayed into the depths of the lotus.\nHow do we get out? How do we get out?\nUp flew a whole shoal of gulls and herons.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "溪亭",
+     "en": "xi ting - a stream pavilion",
+     "note": "A pavilion on the bank of a stream."
+    },
+    {
+     "term": "日暮",
+     "en": "ri mu - dusk",
+     "note": "Evening."
+    },
+    {
+     "term": "藕花",
+     "en": "ou hua - lotus flowers",
+     "note": "Lotus blossoms."
+    },
+    {
+     "term": "爭渡",
+     "en": "zheng du - how to get across",
+     "note": "Zheng here means 'how'; the line asks how to row through."
+    }
+   ],
+   "background": "Li Qingzhao wrote this in her early years in Jinan. The style is fresh and lively, very different from the sorrowful style of her later years."
+  },
+  "yijianmei": {
+   "summary": "A two-part song lyric (ci) to the tune Yijianmei. Li Qingzhao writes of longing after parting from her husband: the withered lotus, the chill bamboo mat of autumn, going alone onto the orchid boat, the lines of wild geese and the moon full over the west tower. It ends with 'just gone from the brows, it climbs into the heart', for a sorrow that cannot be got rid of.",
+   "translation": "The red lotus has lost its scent, the jade mat is cold with autumn.\nI loosen my gauze skirt lightly\nand step alone onto the orchid boat.\nWho sends a brocade letter from beyond the clouds?\nWhen the wild geese return in their lines,\nthe moon is full over the west tower.\nFlowers drift and fall by themselves, the water flows by itself;\none kind of longing, in two places, an idle sorrow.\nThere is no way to put this feeling away:\njust gone from the brows,\nit climbs into the heart.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "玉簟",
+     "en": "yu dian - a fine bamboo mat",
+     "note": "A beautiful bamboo sleeping mat. Dian is read dian."
+    },
+    {
+     "term": "錦書",
+     "en": "jin shu - a brocade letter",
+     "note": "A letter. The phrase comes from Su Hui, who wove a palindrome poem in brocade and sent it to her husband."
+    },
+    {
+     "term": "雁字",
+     "en": "yan zi - characters of wild geese",
+     "note": "Wild geese in flight form a line like the character for 'one' or 'person'."
+    },
+    {
+     "term": "閒愁",
+     "en": "xian chou - an idle sorrow",
+     "note": "A sorrow with no clear cause."
+    }
+   ],
+   "background": "Not long after Li Qingzhao's marriage, Zhao Mingcheng went away to study, and she wrote this to express her feelings. Lines such as 'flowers drift and fall by themselves, the water flows by itself' are among her most famous."
+  },
+  "yulinling": {
+   "summary": "A two-part long song lyric (ci) to the tune Yulinling. Liu Yong writes of parting from his lover: the sudden rain at the long pavilion, the orchid boat urging departure, hands held in silence. He then imagines the dawn wind and waning moon when the wine wears off after parting. It is one of the great Song poems of parting.",
+   "translation": "Cold cicadas sing, shrill and sad;\nI face the long pavilion at evening, the sudden rain just stopped.\nDrinking in a tent at the city gate, I have no heart for it;\njust as I linger, the orchid boat urges departure.\nHand in hand we look at each other, eyes full of tears,\nand in the end no words come, only a choking throat.\nI think of going, going, a thousand li of misty waves,\nevening mist heavy, the Chu sky wide.\nTender hearts have always been hurt by parting,\nand how much worse in the bleak season of clear autumn!\nWhere shall I be tonight when the wine wears off?\nOn a willow bank, in morning wind and a waning moon.\nThis journey will last years;\nthe good days and fine scenes will be set out for nothing.\nEven if I had a thousand kinds of feeling,\nto whom could I tell them?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "長亭",
+     "en": "chang ting - the long pavilion",
+     "note": "A roadside pavilion of the old days where travellers rested and farewells were held."
+    },
+    {
+     "term": "都門帳飲",
+     "en": "du men zhang yin - a farewell drink in a tent outside the capital gate",
+     "note": "A tent set up outside the capital for a parting feast."
+    },
+    {
+     "term": "蘭舟",
+     "en": "lan zhou - orchid boat",
+     "note": "A boat of magnolia wood; a pleasing name for a boat."
+    },
+    {
+     "term": "凝噎",
+     "en": "ning ye - a choking throat",
+     "note": "The throat closes so that no words come."
+    },
+    {
+     "term": "曉風殘月",
+     "en": "xiao feng can yue - morning wind and waning moon",
+     "note": "The wind just before dawn and the moon about to set."
+    }
+   ],
+   "background": "Liu Yong was a Northern Song poet of the 'delicate and restrained' (wanyue) school who excelled at the long form of ci. This lyric describes a parting from a lover in Bianjing (the capital) and is his best-known work."
+  },
+  "bashengganzhou": {
+   "summary": "A two-part long song lyric (ci) to the tune Bashengganzhou. Liu Yong paints an autumn dusk on his travels - evening rain over river and sky, frosty wind, passes and rivers - and climbs high with thoughts of home. He then imagines his lover waiting at home, so that distance and longing weigh on both sides.",
+   "translation": "Facing the pouring evening rain that sprays over the river sky,\nit has washed the clear autumn once over.\nSlowly the frosty wind turns bleak and sharp,\nthe passes and rivers are cold and empty,\nand the last light rests on the tower.\nEverywhere the red fades and the green wanes;\nlittle by little the beauty of things is finished.\nOnly the waters of the Yangtze\nflow east without a word.\nI cannot bear to climb high and look far,\nto gaze at my far-off home,\nmy longing to return hard to rein in.\nI sigh at my travels these years -\nwhy do I stay so long in pain?\nI think of my lovely one in her dressing tower, craning her neck:\nhow many times has she mistaken\na boat at the edge of the sky for my homecoming?\nHow could she know that I, leaning on the railing,\nam just as lost in sorrow?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "八聲甘州",
+     "en": "Bashengganzhou - a tune name",
+     "note": "The name of the tune, originally a Tang frontier song."
+    },
+    {
+     "term": "關河",
+     "en": "guan he - passes and rivers",
+     "note": "Mountain passes and rivers."
+    },
+    {
+     "term": "物華",
+     "en": "wu hua - beauty of things",
+     "note": "The fine sights of the season."
+    },
+    {
+     "term": "顒望",
+     "en": "yong wang - to gaze up",
+     "note": "To lift the head and gaze. Read yong."
+    },
+    {
+     "term": "恁",
+     "en": "nen - like this",
+     "note": "So, in this way."
+    }
+   ],
+   "background": "This is the best-known example of Liu Yong's travel poems. It is said that Su Shi once praised the three lines 'Slowly the frosty wind turns bleak and sharp, the passes and rivers are cold and empty, and the last light rests on the tower', saying that even the Tang poets at their best did no better."
+  },
+  "dielianhua_liu": {
+   "summary": "A two-part song lyric (ci) to the tune Dielianhua. Liu Yong climbs a high place and looks into the distance, with a spring sorrow that has no cause. He tries to drown it in wine, but forced cheer is tasteless. He ends with 'My belt grows looser and I never regret it; for her, I am glad to grow haggard', a loyalty that does not regret wasting away for love.",
+   "translation": "I stand long leaning on the high tower, the wind soft and thin;\ngazing as far as I can, a spring sorrow\nrises dark from the edge of the sky.\nThe colour of grass, the haze of light, in the last sun -\nno one speaks; who will understand why I lean on the rail?\nI thought to give way to wildness and get drunk,\nto sing to the wine,\nbut forced cheer has no taste.\nMy belt grows looser and I never regret it:\nfor her, I am glad to grow haggard.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "佇倚",
+     "en": "zhu yi - to stand and lean",
+     "note": "To stand a long time leaning on something."
+    },
+    {
+     "term": "危樓",
+     "en": "wei lou - a high tower",
+     "note": "A tall building."
+    },
+    {
+     "term": "黯黯",
+     "en": "an an - dim",
+     "note": "Dark and gloomy."
+    },
+    {
+     "term": "疏狂",
+     "en": "shu kuang - wild and unrestrained",
+     "note": "Free of restraint, unruly."
+    },
+    {
+     "term": "伊",
+     "en": "yi - she, her",
+     "note": "A pronoun for 'she'."
+    }
+   ],
+   "background": "By Liu Yong. Wang Guowei quoted the last two lines as the second stage of those who 'succeed in great enterprises and great learning, from ancient times to now'. One tradition says the lyric is by Ouyang Xiu."
+  },
+  "manjianghong": {
+   "summary": "A two-part long song lyric (ci) to the tune Manjianghong. Yue Fei sets out his resolve to recover the Central Plains, his anger at the shame of Jingkang, and his vow to kill the enemy and win merit and restore the land. It is bold and grand, full of patriotic fire.",
+   "translation": "Hair on end with rage, lifting my cap,\nI lean on the rail as the whistling rain stops.\nI raise my eyes and, facing the sky, give a long cry;\nmy fierce heart burns high.\nThirty years of fame and merit are dust and earth;\neight thousand li of road under cloud and moon.\nDo not idly let the young head turn white\nand grieve in vain.\nThe shame of Jingkang is not yet washed away;\nthe vassal's regret - when will it be gone?\nI will drive long chariots and trample down\nthe gap in Helan Mountain.\nWith high resolve, I eat the flesh of the barbarian foe when hungry;\nlaughing and talking, I drink the blood of the Xiongnu when thirsty.\nLet me start again from the beginning,\ngather up the old rivers and mountains,\nand present myself at the heavenly gate.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "憑闌",
+     "en": "ping lan - to lean on the rail",
+     "note": "To lean on a railing."
+    },
+    {
+     "term": "靖康恥",
+     "en": "Jingkang chi - the shame of Jingkang",
+     "note": "In the second year of Jingkang (1127), the Jin army broke into Bianjing and carried off the two emperors, Huizong and Qinzong."
+    },
+    {
+     "term": "賀蘭山",
+     "en": "Helan shan - Helan Mountain",
+     "note": "On the border of today's Ningxia and Inner Mongolia; here it stands for the Jin frontier."
+    },
+    {
+     "term": "天闕",
+     "en": "tian que - the heavenly gate",
+     "note": "The imperial palace, the court."
+    }
+   ],
+   "background": "This lyric is traditionally ascribed to Yue Fei, but scholars dispute who wrote it and when. 'The shame of Jingkang' in the poem means the shame of the fall of the Northern Song."
+  },
+  "qingyuan_xi": {
+   "summary": "A two-part song lyric (ci) to the tune Qingyuan'an. Xin Qiji describes the lantern night of the first full moon: flower lanterns, fireworks, perfumed carriages and the fish and dragon lanterns dancing. But the one he looks for in the crowd stands alone where the lamplight is thin, which carries the poet's own lofty solitude that will not follow the crowd.",
+   "translation": "The east wind opens a thousand trees of flowers in the night,\nand blows down stars like rain.\nPrecious horses and carved carriages leave fragrance all along the road;\nphoenix flutes sound, the jade jar of the moon turns its light,\nand all night the fish and dragon lanterns dance.\nMoth ornaments, snow willows, golden threads,\nlaughing voices full of charm pass by with a hidden fragrance.\nI search for her in the crowd a thousand, a hundred times;\nthen suddenly I turn my head -\nand there she is, where the lamplight is thin.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "元夕",
+     "en": "yuan xi - the night of the Lantern Festival",
+     "note": "The night of the fifteenth of the first lunar month, the Lantern Festival."
+    },
+    {
+     "term": "星如雨",
+     "en": "xing ru yu - stars like rain",
+     "note": "Fireworks falling like a shower of shooting stars."
+    },
+    {
+     "term": "玉壺",
+     "en": "yu hu - the jade jar",
+     "note": "The moon; another reading takes it as a lantern made of jade."
+    },
+    {
+     "term": "魚龍舞",
+     "en": "yu long wu - fish and dragon dancing",
+     "note": "Lanterns shaped like fish and dragons being waved in the dance."
+    },
+    {
+     "term": "闌珊",
+     "en": "lan shan - thin and fading",
+     "note": "Sparse, nearly out."
+    }
+   ],
+   "background": "By Xin Qiji. In his Remarks on Lyrics in the Human World (Renjian cihua), Wang Guowei took the line 'then suddenly I turn my head, and there she is, where the lamplight is thin' as an image of the third stage of success in scholarship."
+  },
+  "pozhenzi": {
+   "summary": "A two-part song lyric (ci) to the tune Pozhenzi. Xin Qiji recalls his army years as a young man: looking at his sword by lamplight in drink, dreaming of the camps, reviewing troops on the field. The last line, 'alas, white hair has grown', laments that his high purpose is unfulfilled and his hair has turned white.",
+   "translation": "Drunk, I trim the lamp and look at my sword;\nin dream I am back to horns sounding through the linked camps.\nRoast meat is shared out beneath the banners across eight hundred li;\nfifty strings play music of the frontier;\non the field in autumn the troops are reviewed.\nThe horse flies fast as the Dilu;\nthe bow twangs like thunder and startles the string.\nTo finish the lord's task of the realm,\nto win a name in life and after death -\nalas, white hair has grown.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "陳同甫",
+     "en": "Chen Tongfu - Chen Liang",
+     "note": "Chen Liang, courtesy name Tongfu, a friend of Xin Qiji who also argued for war with the north."
+    },
+    {
+     "term": "麾下",
+     "en": "hui xia - under the banner",
+     "note": "Under one's command, one's men."
+    },
+    {
+     "term": "炙",
+     "en": "zhi - roast meat",
+     "note": "Meat roasted over a fire."
+    },
+    {
+     "term": "五十弦",
+     "en": "wu shi xian - fifty strings",
+     "note": "The ancient zither (se) had fifty strings; here it means all kinds of instruments."
+    },
+    {
+     "term": "的盧",
+     "en": "Dilu - a swift horse",
+     "note": "The name of a fast horse ridden by Liu Bei."
+    }
+   ],
+   "background": "The title is 'Written in Bold Words for Chen Tongfu, and Sent to Him'. Xin Qiji wrote it while living in retirement in Jiangxi, and sent it to Chen Liang, who shared his aims."
+  },
+  "yongyule": {
+   "summary": "A two-part long song lyric (ci) to the tune Yongyule. Xin Qiji climbs the Beigu Pavilion at Jingkou and remembers heroes such as Sun Quan and Liu Yu. He criticises the Southern Song rulers for a hasty northern campaign and for being content with a corner of the land, and he compares himself to Lian Po, old and unemployed.",
+   "translation": "The rivers and hills of a thousand ages:\nnowhere to find a hero like Sun Zhongmou.\nDancing halls and singing terraces,\nall that grace and glamour swept away by wind and rain.\nGrass and trees in the slanting sun,\nan ordinary lane - people say\nJinu once lived there.\nI think of those years: golden spears and iron horses,\na spirit swallowing ten thousand li like a tiger.\nIn Yuanjia, in haste,\nthey sealed the hill at Wolf-Dwelling and won only a panicked look north.\nForty-three years:\nin my sight I still remember\nthe lamplit road to Yangzhou.\nHow can I bear to look back?\nBeneath the Temple of Foli,\na crowd of sacred crows and village drums.\nWhom can I ask:\nLian Po is old - can he still eat his rice?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "京口",
+     "en": "Jingkou - a place name",
+     "note": "Today's Zhenjiang in Jiangsu."
+    },
+    {
+     "term": "孫仲謀",
+     "en": "Sun Zhongmou - Sun Quan",
+     "note": "Sun Quan, courtesy name Zhongmou, who made Jingkou his capital."
+    },
+    {
+     "term": "寄奴",
+     "en": "Jinu - Liu Yu's childhood name",
+     "note": "The childhood name of Liu Yu, founder of the Liu Song dynasty (420-479) of the Southern Dynasties, a native of Jingkou."
+    },
+    {
+     "term": "封狼居胥",
+     "en": "feng Langjuxu - sealing Wolf-Dwelling Hill",
+     "note": "The Han general Huo Qubing chased the Xiongnu to Wolf-Dwelling Hill and made an altar to Heaven there; it stands for a great victory."
+    },
+    {
+     "term": "佛狸祠",
+     "en": "Foli ci - the Temple of Foli",
+     "note": "A palace built during the southern invasion of Emperor Taiwu of the Northern Wei (whose childhood name was Foli), later turned into a temple."
+    },
+    {
+     "term": "廉頗老矣",
+     "en": "Lian Po lao yi - Lian Po is old",
+     "note": "Lian Po was set aside by the king of Zhao yet in old age could still eat well; the poet uses it of himself."
+    }
+   ],
+   "background": "Xin Qiji wrote this in 1205, when he was prefect of Zhenjiang at the age of sixty-six. Forty-three years had passed since he came south at twenty-two."
+  },
+  "moyuer": {
+   "summary": "A two-part long song lyric (ci) to the tune Moyuer. Xin Qiji uses cherishing, resenting and trying to keep spring as a cover for his worries and disappointments in politics. The end warns those in favour not to be too proud, and 'the slanting sun is there, over the misty willows, a place of heartbreak' leaves a long lingering feeling.",
+   "translation": "How many more storms of wind and rain can it take?\nIn haste, spring is going again.\nI cherish spring, always afraid the flowers open too early -\nhow much more now, with fallen red beyond counting!\nSpring, stay a while!\nI hear that at the edge of the sky the fragrant grass leaves no road home.\nI resent spring for saying nothing;\nonly, it seems, the spider webs on the painted eaves are attentive,\ncatching drifting catkins all day long.\nThe matter of Changmen:\na happy meeting promised was missed again,\nand once there was someone who envied the moth-eyebrows.\nThough a thousand gold could buy Xiangru's rhapsody,\nto whom can this unspoken feeling be told?\nDo not dance, my lord!\nDo you not see how Yuhuan and Feiyan have all turned to dust?\nIdle sorrow is the bitterest.\nDo not go and lean on the high rail:\nthe slanting sun is there\nover the misty willows, a place of heartbreak.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "消",
+     "en": "xiao - to endure",
+     "note": "To bear."
+    },
+    {
+     "term": "長門事",
+     "en": "Changmen shi - the matter of Changmen",
+     "note": "Empress Chen Ajiao of Emperor Wu of Han fell out of favour and was sent to the Changmen Palace."
+    },
+    {
+     "term": "相如賦",
+     "en": "Xiangru fu - Xiangru's rhapsody",
+     "note": "Sima Xiangru wrote the 'Rhapsody of Changmen' to plead the Empress's case to the emperor."
+    },
+    {
+     "term": "玉環飛燕",
+     "en": "Yuhuan Feiyan - Yang Yuhuan and Zhao Feiyan",
+     "note": "Both were loved by their emperors and both met a bad end."
+    },
+    {
+     "term": "危闌",
+     "en": "wei lan - a high rail",
+     "note": "A railing in a high place."
+    }
+   ],
+   "background": "Xin Qiji wrote this in 1179 when he was transferred from Hubei to Hunan as vice commissioner for transport. The fleeting spring carries his worry about the state."
+  },
+  "pusaman_xin": {
+   "summary": "A two-part short song lyric (ci) to the tune Pusaman. Xin Qiji climbs Yugu Terrace and sees the Gan River rushing along, and remembers how the Jin army once chased Empress Dowager Longyou. The hills cannot hold back the river, as they cannot hide the grief for the lost northern lands, and the partridge's cry at the end deepens his sorrow.",
+   "translation": "Below Yugu Terrace flows the clear river,\nand in between, how many travellers' tears.\nTo the north-west is Chang'an,\nand alas, countless hills in between.\nGreen hills cannot hold it back;\nafter all the river flows on.\nAt evening on the river, just as I grieve,\ndeep in the hills I hear the partridge.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "鬱孤臺",
+     "en": "Yugu tai - Yugu Terrace",
+     "note": "In today's Ganzhou in Jiangxi, above the Gan River."
+    },
+    {
+     "term": "清江",
+     "en": "Qing jiang - the clear river",
+     "note": "The upper reaches of the Gan River."
+    },
+    {
+     "term": "造口",
+     "en": "Zaokou - a place name",
+     "note": "In today's Wan'an county in Jiangxi, where Empress Dowager Longyou was chased by the Jin army in the early Southern Song."
+    },
+    {
+     "term": "鷓鴣",
+     "en": "zhegu - the partridge",
+     "note": "A bird whose call sounds to Chinese ears like 'you cannot go, elder brother'."
+    }
+   ],
+   "background": "Xin Qiji wrote this on the wall at Zaokou when he passed through as Jiangxi's criminal justice commissioner (around the third or fourth year of Chunxi)."
+  },
+  "yumeiren": {
+   "summary": "A two-part short song lyric (ci) to the tune Yumeiren. Li Yu, imprisoned after the fall of his state, remembers spring flowers, the autumn moon and the old country, and contrasts then and now. The question 'how much sorrow do you have?' is answered with 'like a river of spring water flowing east', a line known for a thousand years, said to be his last lyric.",
+   "translation": "When will spring flowers and autumn moon be done?\nHow much of the past do I know?\nLast night the east wind came again to the small tower -\nI cannot bear to look back on my old country in the bright moonlight.\nThe carved rails and jade steps must still be there,\nonly the rosy faces have changed.\nIf you ask how much sorrow I have,\nit is like a river of spring water flowing east.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "了",
+     "en": "liao - to end",
+     "note": "To finish, to come to an end."
+    },
+    {
+     "term": "故國",
+     "en": "guo guo - the old country",
+     "note": "Here, the Southern Tang."
+    },
+    {
+     "term": "雕闌玉砌",
+     "en": "diao lan yu qi - carved rails and jade steps",
+     "note": "Carved railings and jade-stone steps; the palace."
+    },
+    {
+     "term": "朱顏改",
+     "en": "zhu yan gai - rosy faces changed",
+     "note": "Faces have aged; it also means that people and times have changed."
+    }
+   ],
+   "background": "Li Yu was the last ruler of the Southern Tang. After his state fell he was taken to Bianjing and given the title of Marquis Who Defied His Orders. The story is that Emperor Taizong of the Song heard of this lyric and sent him poisoned wine."
+  },
+  "xianghuan": {
+   "summary": "A two-part short song lyric (ci) to the tune Xianghuan. Imprisoned, Li Yu climbs the west tower alone: a hooked moon, lonely parasol trees, a courtyard that locks up the clear autumn. 'Cut, it will not break; sorted, it only tangles worse' is how he describes the grief of parting, and the last line says the strange taste of this sorrow cannot be named.",
+   "translation": "Without a word, alone I climb the west tower;\nthe moon is like a hook.\nLonely parasol trees, a deep courtyard locking in the clear autumn.\nCut, it will not break; sorted, it only tangles worse -\nthis is the grief of parting.\nAnother kind of taste sits in the heart.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "西樓",
+     "en": "xi lou - the west tower",
+     "note": "The tower where he was held."
+    },
+    {
+     "term": "月如鉤",
+     "en": "yue ru gou - the moon like a hook",
+     "note": "A crescent moon like a hook."
+    },
+    {
+     "term": "鎖清秋",
+     "en": "suo qing qiu - locking in clear autumn",
+     "note": "Autumn shut inside the deep courtyard."
+    },
+    {
+     "term": "離愁",
+     "en": "li chou - the grief of parting",
+     "note": "Sorrow at parting."
+    }
+   ],
+   "background": "Li Yu wrote this when he was held in Bianjing after the fall of his state. Like 'Yumeiren', it is one of his best-known later works."
+  },
+  "sumuzhe": {
+   "summary": "A two-part song lyric (ci) to the tune Sumuzhe. Fan Zhongyan paints an autumn scene on a grand scale - blue clouds, yellow leaves, setting sun, fragrant grass - which leads to homesickness. The second part describes sleepless nights and wine that turns into tears of longing for home.",
+   "translation": "Blue clouds in the sky, yellow leaves on the ground;\nautumn colour joins the waves, and on the waves cold mist is green.\nThe hills catch the slanting sun and the sky meets the water.\nThe fragrant grass, heartless,\nlies still further beyond the setting sun.\nMy homesick soul is dimmed, and traveller's thoughts pursue me;\nevery night, unless a good dream\nkeeps me asleep.\nWhen the bright moon lights the high tower, do not lean there alone:\nwine enters the sorrowing gut\nand turns to tears of longing.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "黯鄉魂",
+     "en": "an xiang hun - a dimmed homesick soul",
+     "note": "The spirit darkened by thoughts of home."
+    },
+    {
+     "term": "追旅思",
+     "en": "zhui lv si - travel thoughts that pursue",
+     "note": "The sorrow of a traveller follows close behind."
+    },
+    {
+     "term": "夜夜除非",
+     "en": "ye ye chu fei - every night, unless",
+     "note": "Each night, only a good dream will let him sleep."
+    },
+    {
+     "term": "愁腸",
+     "en": "chou chang - a sorrowing gut",
+     "note": "A heart full of sorrow."
+    }
+   ],
+   "background": "Fan Zhongyan was a famous minister of the Northern Song. He wrote this while guarding the north-western frontier, describing the autumn scenes of the border and his longing for home in a heavy, sombre style."
+  },
+  "huanxisha": {
+   "summary": "A two-part short song lyric (ci) to the tune Huanxisha. Yan Shu listens to a new song and drinks beside a pond and terrace, sighing over passing time: flowers fall and nothing can be done, swallows return as if known, and he paces alone on the scented garden path. There is a light sadness and a thought about the way of things.",
+   "translation": "A new song, a cup of wine;\nthe weather of last year, the same old pond and terrace.\nThe sun is setting in the west - when will it return?\nFlowers fall, and nothing can be done;\nswallows come back, as though I knew them,\nand I pace alone on the little garden's scented path.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "新詞",
+     "en": "xin ci - a new song",
+     "note": "A newly written lyric."
+    },
+    {
+     "term": "去年天氣舊亭臺",
+     "en": "qu nian tian qi jiu ting tai - last year's weather, the old pavilion",
+     "note": "The same weather and the same terrace as last year."
+    },
+    {
+     "term": "無可奈何",
+     "en": "wu ke nai he - nothing can be done",
+     "note": "There is no way out."
+    },
+    {
+     "term": "香徑",
+     "en": "xiang jing - a scented path",
+     "note": "A path full of the scent of flowers."
+    }
+   ],
+   "background": "Yan Shu was a Northern Song poet of the delicate school who rose to be chief minister. The matching pair 'Flowers fall, and nothing can be done; swallows come back, as though I knew them' first appeared in one of his poems and was then used in this lyric, where it became a famous couplet."
+  },
+  "dielianhua_ouyang": {
+   "summary": "A two-part song lyric (ci) to the tune Dielianhua. A wife in the inner rooms keeps an empty courtyard in late spring while her husband roams and does not come home. Layers of curtains, slanting rain and raging wind, and asking the flowers with tearful eyes show deep resentment, and the scattered red petals flying past the swing at the end add to the sadness.",
+   "translation": "The courtyard is deep, deep, deep - how deep?\nWillows pile up like mist,\nand the curtains are past counting.\nJade-bridled horses, carved saddles, where he goes to play;\nthe tower is high and cannot see the Zhangtai road.\nRain slants and wind rages at the end of the third month;\nthe door is shut at dusk, and there is no way to keep spring.\nWith tearful eyes I ask the flowers; the flowers do not speak,\nand scattered red blossoms fly past the swing.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "玉勒雕鞍",
+     "en": "yu le diao an - jade bridle, carved saddle",
+     "note": "A bridle set with jade and a carved saddle; a rich horse and carriage."
+    },
+    {
+     "term": "游冶處",
+     "en": "you ye chu - a place of pleasure",
+     "note": "A place for wandering and enjoyment."
+    },
+    {
+     "term": "章臺路",
+     "en": "Zhangtai lu - Zhangtai Road",
+     "note": "A street in Chang'an in the Han dynasty (206 BC-220 AD), where singing girls lived."
+    },
+    {
+     "term": "亂紅",
+     "en": "luan hong - scattered red",
+     "note": "Fallen petals tossed about."
+    }
+   ],
+   "background": "Who wrote this lyric has long been argued, with Ouyang Xiu and Feng Yanji both named; it is included in both Liuyi ci and Yangchun ji."
+  },
+  "queqiaoxian": {
+   "summary": "A two-part short song lyric (ci) to the tune Queqiaoxian. Qin Guan writes of the meeting of the Cowherd and the Weaver Girl on the seventh night of the seventh month: their yearly meeting is better than countless meetings in the human world. The last lines, 'If two hearts are bound for a long time, why must they be together morning and evening?', give a new thought, that love does not depend on being together day and night.",
+   "translation": "Slender clouds play at clever shapes, shooting stars carry their grief,\nand across the far Silver River they cross unseen.\nOnce they meet in the golden wind and jade dew,\nit is better than countless meetings in the human world.\nTenderness like water, a happy meeting like a dream -\nhow can they bear to look back on the road over the magpie bridge?\nIf two hearts are bound for a long time,\nwhy must they be together morning and evening?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "弄巧",
+     "en": "nong qiao - to play at cleverness",
+     "note": "To make clever patterns; the seventh night is also called the festival of begging for skill."
+    },
+    {
+     "term": "銀漢",
+     "en": "Yin Han - the Silver River",
+     "note": "The Milky Way."
+    },
+    {
+     "term": "金風玉露",
+     "en": "jin feng yu lu - golden wind and jade dew",
+     "note": "Autumn wind and white dew; autumn."
+    },
+    {
+     "term": "鵲橋",
+     "en": "que qiao - the magpie bridge",
+     "note": "The legend that on the seventh night magpies make a bridge for the Cowherd and Weaver Girl to meet."
+    }
+   ],
+   "background": "Qin Guan was a Northern Song poet, one of the 'Four Scholars of Su's Circle', with a delicate style. This is a famous poem for the Qixi festival."
+  },
+  "manTingfang": {
+   "summary": "A two-part long song lyric (ci) to the tune Manting fang. Qin Guan writes of parting from a singing girl: thin cloud brushing the hills, the sky sticking to the withered grass, slanting sun, cold crows, a stream round a lone village. He remembers old times, the sachet quietly loosened and the silk belt lightly parted, and at last strains to see the high city, where the lamps already show at dusk. It is full of grief and tenderness.",
+   "translation": "The hills are brushed with thin cloud, the sky sticks to the withered grass,\nand the sound of the painted horn breaks off at the watchtower gate.\nI halt my travelling oars for a while,\nand lift this parting cup with you.\nSo many old affairs of Penglai -\nI look back in vain at the swirling mist.\nBeyond the slanting sun,\nten thousand specks of cold crows,\nand flowing water winding round a lone village.\nSoul-melting, at such a moment:\nthe scented sachet is quietly loosened, the silk belt lightly parted.\nIn vain I have won only a name in the green houses -\nthe name of a fickle man remains.\nWhen shall we meet again after this journey?\nOn my sleeves, only the traces of tears.\nAt the place of sorrow, I strain my eyes at the high city,\nwhere the lamps already show at dusk.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "抹",
+     "en": "mo - to brush over",
+     "note": "To smear or lightly sweep across."
+    },
+    {
+     "term": "譙門",
+     "en": "qiao men - the watchtower gate",
+     "note": "The gate tower on a city wall."
+    },
+    {
+     "term": "引離樽",
+     "en": "yin li zun - to lift the parting cup",
+     "note": "To raise a farewell cup."
+    },
+    {
+     "term": "蓬萊舊事",
+     "en": "Penglai jiu shi - old affairs of Penglai",
+     "note": "The happy past with the singing girl."
+    },
+    {
+     "term": "青樓",
+     "en": "qing lou - the green houses",
+     "note": "Brothels, singing houses."
+    },
+    {
+     "term": "薄倖",
+     "en": "bo xing - fickle",
+     "note": "Heartless, unfaithful."
+    }
+   ],
+   "background": "By Qin Guan. Because the opening line 'The hills are brushed with thin cloud' was so fine, Qin Guan was nicknamed 'Master Hills-Brushed-with-Cloud'."
+  },
+  "guizhixiang": {
+   "summary": "A two-part long song lyric (ci) to the tune Guizhixiang. Wang Anshi climbs high at Jinling and describes the grandeur of the land in late autumn, then looks back at the rise and fall of the Six Dynasties and criticises those who only chase pleasure. It ends with the leftover tune 'Flowers in the Rear Courtyard' and carries a deep warning.",
+   "translation": "Climbing up to gaze far,\nit is just late autumn in the old capital, the air newly stern.\nA thousand li of clear river like white silk,\ngreen peaks gathered like clusters.\nReturning sails and departing oars in the setting sun;\nagainst the west wind, the tavern flag stands slanting.\nPainted boats in thin cloud, egrets rising from the Milky Way -\na picture could hardly capture it.\nI think of the past, of rivalry in splendour,\nand sigh: outside the gate, atop the tower,\ngrief and regret followed one another.\nLooking down from a height through a thousand years,\npeople idly sigh over glory and disgrace.\nThe old affairs of the Six Dynasties went with the flowing water;\nonly cold mist and fragrant grass stand green.\nEven now the singing girls\nstill, from time to time, sing\nthe leftover tune of 'Flowers in the Rear Courtyard'.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "故國",
+     "en": "gu guo - the old capital",
+     "note": "Jinling, the old capital of the Six Dynasties."
+    },
+    {
+     "term": "澄江似練",
+     "en": "cheng jiang si lian - the clear river like white silk",
+     "note": "The clear river like a length of white silk."
+    },
+    {
+     "term": "門外樓頭",
+     "en": "men wai lou tou - outside the gate, atop the tower",
+     "note": "From Du Mu's poem on Taicheng: 'Han Qinhu is outside the gate, Zhang Lihua atop the tower'. It means that when the Sui troops attacked Chen, the last Chen ruler was still enjoying himself in the palace."
+    },
+    {
+     "term": "六朝",
+     "en": "Liu Chao - the Six Dynasties",
+     "note": "Wu, Eastern Jin, Song, Qi, Liang and Chen, all with their capital at Jinling."
+    },
+    {
+     "term": "《後庭》",
+     "en": "Hou ting - 'Rear Courtyard'",
+     "note": "'Flowers of Jade Trees in the Rear Courtyard', written by the last ruler of Chen, a tune of a doomed state."
+    }
+   ],
+   "background": "Wang Anshi wrote this in his later years at Jinling (today's Nanjing). The lyric looks back on the past and also holds a criticism of the court of his day."
+  },
+  "qingyuan_he": {
+   "summary": "A two-part song lyric (ci) to the tune Qingyuan'an. He Zhu writes of the sadness of watching a beautiful woman go and never seeing her again. The last three images, 'a plain of misty grass, a town full of willow down, the rain when plums are yellow', measure how much sorrow he has, and for this he was nicknamed 'He of the Plums'.",
+   "translation": "She does not cross, with her wave-treading step, the road to Hengtang;\nI can only watch with my eyes as her fragrant dust goes.\nWith whom does she spend her brocade-zither youth?\nThe moon bridge, the flowered courtyard, the latticed window and red door -\nonly spring knows the place.\nFlying clouds drift slowly over the evening marsh of fragrant grass;\nwith a coloured brush I write new heartbreaking lines.\nIf you ask how much idle sorrow there is:\na plain of misty grass,\na town full of willow down,\nand the rain when plums are yellow.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "凌波",
+     "en": "ling bo - treading the waves",
+     "note": "Describes a woman's light step; the phrase comes from Cao Zhi's 'Rhapsody on the Goddess of the Luo'."
+    },
+    {
+     "term": "橫塘",
+     "en": "Hengtang - a place name",
+     "note": "To the south-west of today's Suzhou."
+    },
+    {
+     "term": "錦瑟華年",
+     "en": "jin se hua nian - brocade zither, flowering years",
+     "note": "The beautiful years of youth."
+    },
+    {
+     "term": "蘅皋",
+     "en": "heng gao - a bank of fragrant grass",
+     "note": "A high bank by the water, grown with fragrant du heng plants."
+    },
+    {
+     "term": "梅子黃時雨",
+     "en": "mei zi huang shi yu - rain when plums turn yellow",
+     "note": "The long drizzle of the plum-rain season in the Jiangnan region."
+    }
+   ],
+   "background": "By He Zhu. Because the closing lines were so good, he was called 'He of the Plums'. He wrote this when he had retired to Hengtang in Suzhou."
+  },
+  "yangzhoumanl": {
+   "summary": "A two-part long song lyric (ci) to the tune Yangzhou man. Jiang Kui passes through Yangzhou after the wars and finds the old famous city desolate. In the empty city, with the cold horn, he sighs that even Du Mu could not write such deep feeling; the Twenty-four Bridges still stand, a cold moon rocks silently on the water, and he asks for whom the red peonies bloom each year. It is a lament for a ruined homeland.",
+   "translation": "A famous city east of the Huai, the fine place at Zhuxi:\nI unsaddle and stop a little at the start of my journey.\nPassing ten li of spring wind,\nall is green with shepherd's purse and wheat.\nSince the Tartar horses peered at the river and left,\nthe ruined pools and tall trees\nstill hate to speak of war.\nSlowly dusk comes, the clear horn blows cold,\nall in an empty city.\nMaster Du Mu, that keen admirer of fine sights -\nI reckon that if he came again now he would be startled.\nThough his cardamom poem was skilful\nand his dream of the green houses sweet,\nit would be hard for him to write this deep feeling.\nThe Twenty-four Bridges still stand;\na cold moon rocks silent in the heart of the waves.\nI think of the red peonies by the bridge:\nfor whom do they know to bloom, year after year?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "淮左",
+     "en": "Huai zuo - east of the Huai",
+     "note": "East of the Huai River; Yangzhou was once part of the eastern circuit of Huainan."
+    },
+    {
+     "term": "竹西",
+     "en": "Zhuxi - Bamboo West Pavilion",
+     "note": "A pavilion that is a famous sight in Yangzhou."
+    },
+    {
+     "term": "胡馬窺江",
+     "en": "Hu ma kui jiang - Tartar horses peering at the river",
+     "note": "The Jin army's attacks on the south, which reached Yangzhou."
+    },
+    {
+     "term": "豆蔻詞",
+     "en": "doukou ci - the cardamom poem",
+     "note": "From Du Mu's 'Parting Gift': 'Slender and graceful, a little over thirteen, like a cardamom bud at the start of the second month'."
+    },
+    {
+     "term": "二十四橋",
+     "en": "Ershisi qiao - Twenty-four Bridges",
+     "note": "A famous bridge in Yangzhou; some say it means twenty-four bridges, others that it is the name of one bridge."
+    }
+   ],
+   "background": "At the winter solstice of 1176 Jiang Kui passed through Yangzhou, saw the desolation after the war, and composed this tune himself (a self-made tune, zidu qu). Jiang Kui was a Southern Song poet and a gifted musician, whose style is pure, spare and elegant."
+  },
+  "tangduoling": {
+   "summary": "A two-part song lyric (ci) to the tune Tangduoling. Wu Wenying splits the character for 'sorrow' into 'autumn' above 'heart', saying that parting sorrow grows in the heart. He writes of plantain, cool wind and a bright moon he fears to climb a tower under; in the second part, flowers are gone, the swallows return, the guest lingers, and even drooping willows cannot tie a boat, leaving a helpless sadness.",
+   "translation": "Where is sorrow put together?\nAutumn upon the heart of the parted one.\nEven if the plantain gets no rain, it rustles all the same.\nEveryone says the evening cool is fine weather,\nand there is a bright moon,\nbut I fear to climb the tower.\nThe affairs of years end in dreams;\nthe flowers are gone and the misty water flows;\nthe swallows have taken leave and gone home, but the traveller still lingers.\nThe drooping willows do not wind round her skirt-sash to hold her;\nthey only, in vain, tie up the travelling boat.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "合",
+     "en": "he - to put together",
+     "note": "To assemble. Here the poet splits a character: above the heart of a parting person is the character for sorrow (autumn plus heart)."
+    },
+    {
+     "term": "縱",
+     "en": "zong - even if",
+     "note": "Even if."
+    },
+    {
+     "term": "颼颼",
+     "en": "sou sou - the sound of wind",
+     "note": "The rustle of wind."
+    },
+    {
+     "term": "淹留",
+     "en": "yan liu - to linger",
+     "note": "To be held up, to stay long."
+    },
+    {
+     "term": "縈",
+     "en": "ying - to wind round",
+     "note": "To coil around."
+    }
+   ],
+   "background": "Wu Wenying was a Southern Song poet with the literary name Mengchuang. His style is dense and ornate, and this is one of his plainer and smoother works."
+  },
+  "busuanzi_lu": {
+   "summary": "A two-part short song lyric (ci) to the tune Busuanzi. Lu You writes about the plum blossom: it blooms alone beyond the post station by a broken bridge, with no master, meeting wind and rain; it does not fight for spring or fear the envy of other flowers, and even fallen into mud its scent remains. It stands for the poet's own lofty and steadfast character.",
+   "translation": "Beyond the post station, beside the broken bridge,\nit blooms lonely, with no owner.\nAlready alone at dusk with its sorrow,\nand then wind and rain besides.\nIt has no wish to struggle for spring,\nand leaves the crowd of flowers to envy it.\nFallen, turned to mud and ground to dust,\nonly its scent remains as before.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "驛外",
+     "en": "yi wai - beyond the post station",
+     "note": "Outside the post station, a remote place."
+    },
+    {
+     "term": "無主",
+     "en": "wu zhu - without a master",
+     "note": "With no one to admire or look after it."
+    },
+    {
+     "term": "著",
+     "en": "zhuo - to suffer",
+     "note": "To meet with, to be subjected to."
+    },
+    {
+     "term": "碾",
+     "en": "nian - to crush",
+     "note": "To press, to grind."
+    }
+   ],
+   "background": "Lu You was a patriotic poet of the Southern Song who all his life urged resistance against the Jin and had a rough career. In this lyric he compares himself to the plum blossom, which does not follow common ways."
+  },
+  "chaitoufeng": {
+   "summary": "A two-part song lyric (ci) to the tune Chaitoufeng. Lu You meets his former wife Tang Wan again at Shen Garden and looks back, sighing that the east wind is cruel and joy is thin. The vows remain but letters cannot be sent. The three 'wrong!' and the three 'let it be!' are tragic and painful.",
+   "translation": "Red, soft hands, yellow-sealed wine,\nspring colour fills the city, willows over the palace wall.\nThe east wind was cruel, joy was thin;\na heart full of sorrow, years of separation and loneliness -\nwrong! wrong! wrong!\nSpring is as before, but you are thin for nothing;\ntear marks, red, soak through your mermaid-silk handkerchief.\nPeach blossoms fall, the pond and pavilion are idle;\nthe mountain vows still stand, but a brocade letter is hard to send -\nlet it be! let it be! let it be!",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "紅酥手",
+     "en": "hong su shou - soft red hands",
+     "note": "A woman's hands, rosy and delicate."
+    },
+    {
+     "term": "黃縢酒",
+     "en": "huang teng jiu - yellow-sealed wine",
+     "note": "Official wine sealed in yellow. Teng is read teng."
+    },
+    {
+     "term": "離索",
+     "en": "li suo - separation",
+     "note": "To live apart, away from one's group."
+    },
+    {
+     "term": "鮫綃",
+     "en": "jiao xiao - mermaid silk",
+     "note": "The silk said to be woven by mermaids; here a handkerchief."
+    },
+    {
+     "term": "閒池閣",
+     "en": "xian chi ge - idle pond and pavilion",
+     "note": "The pond and pavilions of Shen Garden left empty and neglected."
+    }
+   ],
+   "background": "Lu You and Tang Wan were husband and wife, but were forced apart because Lu You's mother did not like her. Some years later they met by chance at Shen Garden in Shaoxing, and Lu You wrote this on the wall. Tang Wan later wrote an answering lyric and soon died of grief. The account is in Zhou Mi's Qidong yeyu, and some scholars doubt it is true."
+  },
+  "niannujiao_zhang": {
+   "summary": "A two-part long song lyric (ci) to the tune Niannujiao. Zhang Xiaoxiang crosses Lake Dongting near the Mid-Autumn night: the water is clear and windless under the moon, a world of jade. He compares his pure heart to the scene, pours the Dipper slowly, makes the ten thousand things his guests, and at the end taps the boat's side and whistles alone, forgetting self and things. The vision is wide.",
+   "translation": "Dongting and Qingcao, near Mid-Autumn, not a breath of wind.\nThirty thousand acres of jade realm, fields of gems,\nand I a single leaf of boat in the midst.\nThe white moon shares its light, the Milky Way joins its reflection,\ninside and out all is clear.\nHappy, the heart understands;\nthe wonder is hard to tell you.\nI think of years in the Lingnan seas,\nmy lonely light shining on itself, my liver and gall all ice and snow.\nMy short hair is thin and rustling, my sleeves cold,\nbut I float steadily over the vast Canglang.\nI scoop up the whole West River,\nslowly pour out the Northern Dipper,\nand make the ten thousand things my guests.\nTapping the gunwale, I whistle alone,\nand do not know what night this night is.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "洞庭青草",
+     "en": "Dongting Qingcao - Lake Dongting and Lake Qingcao",
+     "note": "Dongting Lake and Qingcao Lake are joined."
+    },
+    {
+     "term": "玉界瓊田",
+     "en": "yu jie qiong tian - a realm of jade, fields of gems",
+     "note": "The lake under moonlight like a field of jade."
+    },
+    {
+     "term": "嶺海經年",
+     "en": "Ling hai jing nian - years in the south",
+     "note": "Many years in Lingnan. Zhang Xiaoxiang had served as military commissioner of Guangxi."
+    },
+    {
+     "term": "滄浪",
+     "en": "Canglang - the blue waves",
+     "note": "Blue-green water; the wide river and lake."
+    },
+    {
+     "term": "挹",
+     "en": "yi - to scoop",
+     "note": "To ladle up. Read yi."
+    }
+   ],
+   "background": "Zhang Xiaoxiang was a Southern Song poet. In 1166 he was dismissed from office and went north, and wrote this lyric as he passed Lake Dongting. It has the open-hearted manner of Su Shi."
+  },
+  "linjiangxian_yan": {
+   "summary": "A two-part song lyric (ci) to the tune Linjiangxian. When he wakes from dream and drink, Yan Jidao sits in a locked tower with curtains hanging, remembering when he first saw Little Ping and how she spoke of longing on the pipa. The bright moon is the same, but the coloured cloud has gone, and he mourns a person gone and a tower empty.",
+   "translation": "After the dream, the tower is locked high;\nwhen the wine wears off, the curtains hang low.\nLast year's spring sorrow has come again.\nFallen flowers, a person standing alone;\nfine rain, a pair of swallows flying.\nI remember when I first saw Little Ping,\nin a gauze dress with a double heart-character.\nOn the pipa strings she spoke of her longing;\nthe bright moon was there then,\nand once lit her going home like a coloured cloud.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "小蘋",
+     "en": "Xiao Ping - Little Ping",
+     "note": "A singing girl in the house of a friend of Yan Jidao."
+    },
+    {
+     "term": "心字羅衣",
+     "en": "xin zi luo yi - a gauze dress with the heart character",
+     "note": "A gauze robe embroidered with a design of the character for heart, or a robe perfumed with 'heart-character' incense."
+    },
+    {
+     "term": "彩雲",
+     "en": "cai yun - coloured cloud",
+     "note": "A figure for a beautiful woman; here, Little Ping."
+    },
+    {
+     "term": "落花人獨立，微雨燕雙飛",
+     "en": "luo hua ren du li, wei yu yan shuang fei - fallen flowers, a person alone; fine rain, a pair of swallows",
+     "note": "Adapted from lines by Weng Hong of the Five Dynasties."
+    }
+   ],
+   "background": "Yan Jidao was a son of Yan Shu and a Northern Song poet. His lyrics mostly deal with the past and with singing girls, and carry deep feeling."
+  },
+  "zhegutian_yan": {
+   "summary": "A two-part song lyric (ci) to the tune Zhegutian. Yan Jidao remembers the dream of meeting a singing girl again: in the old days she offered wine and sang and danced; after parting, he thought of her and dreamed of her. In the last lines, holding a silver lamp at the reunion, he still fears it is a dream. The feeling is true and deep.",
+   "translation": "Coloured sleeves, so eagerly offering the jade cup;\nin those days I was ready to drink till my face turned red.\nDancing low, the willow-tower moon sank;\nsinging on, until the wind from the peach-blossom fan was spent.\nSince we parted, I have remembered meeting;\nhow many times in dreams I was with you.\nTonight I hold the silver lamp up to look at you,\nstill afraid that this meeting is only a dream.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "拚卻",
+     "en": "pan que - to be ready to risk",
+     "note": "To be ready to throw oneself in. Read pan."
+    },
+    {
+     "term": "舞低楊柳樓心月",
+     "en": "wu di yang liu lou xin yue - dancing until the moon sank to the willow tops",
+     "note": "The dance went on so long that the moon over the tower sank down to the tips of the willows."
+    },
+    {
+     "term": "歌盡桃花扇底風",
+     "en": "ge jin tao hua shan di feng - singing until the wind of the peach-blossom fan died",
+     "note": "They sang until the fan stopped stirring the air: a joy in song and dance."
+    },
+    {
+     "term": "銀釭",
+     "en": "yin gang - a silver lamp",
+     "note": "A lamp of silver."
+    }
+   ],
+   "background": "This is one of Yan Jidao's best-known lyrics. The line 'still afraid that this meeting is only a dream' draws on the sense of Du Fu's lines, 'late in the night we light the candle again and face each other as if in a dream'."
+  },
+  "busuanzi_li": {
+   "summary": "A two-part short song lyric (ci) to the tune Busuanzi. In the plain voice of a folk song, Li Zhiyi writes that the two live at the head and foot of the Yangtze and drink the same river's water, using the endless river as a picture of endless longing, and hopes their hearts are alike and will not fail their longing.",
+   "translation": "I live at the head of the Long River,\nyou live at the foot of the Long River;\nevery day I think of you and do not see you,\nbut we drink of the same river water.\nWhen will this water stop?\nWhen will this sorrow end?\nI only wish your heart were like mine,\nand then you will not fail my longing.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "長江頭、長江尾",
+     "en": "Chang Jiang tou, Chang Jiang wei - the head and foot of the Yangtze",
+     "note": "The upper and lower reaches of the Yangtze."
+    },
+    {
+     "term": "休",
+     "en": "xiu - to stop",
+     "note": "To cease."
+    },
+    {
+     "term": "已",
+     "en": "yi - to end",
+     "note": "To finish."
+    },
+    {
+     "term": "定不負",
+     "en": "ding bu fu - surely will not fail",
+     "note": "Will certainly not let down."
+    }
+   ],
+   "background": "Li Zhiyi was a Northern Song poet who was good at the short lyric. This poem is plain in language like a folk song, and the feeling is sincere."
+  }
+ }
+}

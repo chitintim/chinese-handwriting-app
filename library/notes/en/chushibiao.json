@@ -1,0 +1,97 @@
+{
+ "id": "chushibiao",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Before his northern campaign, Zhuge Liang sends a memorial to the young emperor Liu Shan. He urges him to open his ears to advice, to reward and punish fairly, and to keep close to able ministers and away from petty men. He recalls the late emperor's trust in him and states his resolve to pacify the Central Plain and restore the Han. It is full of loyalty and feeling.",
+   "translation": "Your servant Liang says: The late emperor had not finished even half of his enterprise when he died midway. Now the empire is divided in three, and Yizhou is worn out and poor. This is truly a moment when survival and ruin hang in the balance. Yet the guards and attendants do not slacken within the court, and men of loyal purpose forget themselves in the field, because they remember the late emperor's special favour and wish to repay it to Your Majesty. You should truly open wide your hearing, to make bright the late emperor's lasting virtue and to raise the spirit of men of purpose. You should not belittle yourself without cause, nor use comparisons that miss what is right, and so block the road of loyal counsel.\n\nThe palace and the ministry are one body. In promotion and punishment, in praising and blaming, they ought not to differ. If there are those who do wrong and break the law, or those who are loyal and good, hand them to the proper officials to decide their punishment or reward, so as to show the fairness and clarity of Your Majesty's rule. You should not favour anyone, so that the inner court and the outer government come to have different laws.\n\nThe palace attendants and gentlemen Guo Youzhi, Fei Yi, Dong Yun and the others are all good and honest men, whose purposes and thoughts are loyal and pure. That is why the late emperor chose them and left them to Your Majesty. In my foolish view, in the affairs of the palace, whether great or small, ask them about everything before you act, and they will surely make up for what is missing and bring much benefit. General Xiang Chong is gentle and even in nature and conduct, and understands military affairs. He was tried in former days, and the late emperor praised him as capable; that is why the general opinion put Chong forward as commander. In my view, in the affairs of the camp, ask him about everything, and he will surely make the ranks harmonious and see that the able and the weak are each put in their right place.\n\nTo keep close to able ministers and keep away from petty men - that is how the Former Han rose and flourished. To keep close to petty men and keep away from able ministers - that is how the Later Han fell into ruin. When the late emperor was alive, whenever he discussed this with me, he never failed to sigh and to grieve bitterly over Emperors Huan and Ling. The palace attendants, the secretaries, the chief clerks and the staff officers are all upright and loyal men who would die for their principles. I hope Your Majesty will keep close to them and trust them, and then the flourishing of the Han house can be counted in days.\n\nYour servant was a commoner, ploughing my own fields in Nanyang, trying only to keep myself alive in troubled times, not seeking fame among the feudal lords. The late emperor did not think me lowly or base, and demeaned himself to come three times to my thatched hut, asking me about the affairs of the age. I was moved by this, and promised to run and strive for him. Then came the collapse. I took up my charge in the midst of a beaten army and received my orders in the midst of danger and hardship, and twenty-one years have passed since. The late emperor knew that I was careful, and so, as he neared his death, he entrusted me with a great task. Since I received his command, I have worried and sighed day and night, afraid that what he entrusted to me would not bear fruit and would harm the late emperor's clear judgement. So in the fifth month I crossed the River Lu and went deep into the barren lands. Now the south is settled and arms and armour are sufficient. I should lead and encourage the three armies, march north to settle the Central Plains, spend whatever poor and dull ability I have, drive out the wicked and the evil, restore the Han house and return to the old capital. This is the duty by which I repay the late emperor and am loyal to Your Majesty.\n\nAs for weighing what to cut and what to add, and offering loyal words without reserve, that is the charge of Youzhi, Yi and Yun. I hope Your Majesty will entrust me with the task of destroying the traitors and restoring the house. If I do not succeed, punish me and report it to the spirit of the late emperor. If there are no words that foster virtue, then blame Youzhi, Yi and Yun for their negligence and make their fault plain. Your Majesty too should take counsel with yourself, ask about the good way, and weigh and accept fine words. Follow closely the late emperor's last edict. I cannot bear how grateful I am for his kindness. Now that I am to leave you for far away, I weep as I look at this memorial, and do not know what I am saying.",
+   "keyLines": [
+    {
+     "line": "此誠危急存亡之秋也",
+     "en": "This is truly a moment when survival and ruin hang in the balance.",
+     "note": "The opening gives the situation: the realm is divided in three and Yizhou is exhausted, so the danger is acute."
+    },
+    {
+     "line": "誠宜開張聖聽，以光先帝遺德，恢弘志士之氣",
+     "en": "You should truly open wide your hearing, to make bright the late emperor's lasting virtue and to raise the spirit of men of purpose.",
+     "note": "He urges the young emperor to widen the channels of advice, accept criticism and carry on the late emperor's example."
+    },
+    {
+     "line": "宮中府中，俱為一體，陟罰臧否，不宜異同",
+     "en": "The palace and the ministry are one body. In promotion and punishment, in praising and blaming, they ought not to differ.",
+     "note": "The palace and the Chancellor's office must act as one, and the standards of reward, punishment, praise and blame must not differ."
+    },
+    {
+     "line": "親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，此後漢所以傾頹也",
+     "en": "To keep close to able ministers and keep away from petty men - that is how the Former Han rose and flourished. To keep close to petty men and keep away from able ministers - that is how the Later Han fell into ruin.",
+     "note": "He takes the rise and fall of the two Han dynasties as a warning, and urges the emperor to favour the capable and avoid flatterers."
+    },
+    {
+     "line": "臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於諸侯",
+     "en": "Your servant was a commoner, ploughing my own fields in Nanyang, trying only to keep myself alive in troubled times, not seeking fame among the feudal lords.",
+     "note": "He describes his own origins: he had no wish to hold office and wanted only to stay alive in an age of chaos."
+    },
+    {
+     "line": "先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中",
+     "en": "The late emperor did not think me lowly or base, and demeaned himself to come three times to my thatched hut.",
+     "note": "He recalls the kindness of Liu Bei, who visited him three times at his thatched hut."
+    },
+    {
+     "line": "受命以來，夙夜憂歎，恐託付不效，以傷先帝之明",
+     "en": "Since I received his command, I have worried and sighed day and night, afraid that what he entrusted to me would not bear fruit and would harm the late emperor's good judgement.",
+     "note": "He expresses how he has worried day and night since receiving the charge, afraid of failing the trust of the late emperor."
+    },
+    {
+     "line": "今當遠離，臨表涕泣，不知所云",
+     "en": "Now that I am to leave you for far away, I weep as I look at this memorial, and do not know what I am saying.",
+     "note": "The ending closes in tears, with heartfelt feeling."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "崩殂",
+     "en": "beng cu - to die (of an emperor)",
+     "note": "The death of an emperor. The second character is read cu."
+    },
+    {
+     "term": "秋",
+     "en": "qiu - season, critical time",
+     "note": "A time or season; here it means a critical moment."
+    },
+    {
+     "term": "陟罰臧否",
+     "en": "zhi fa zang pi - promote, punish, praise, blame",
+     "note": "Zhi is promotion, fa is punishment, and zang pi means good and bad, or praise and blame."
+    },
+    {
+     "term": "有司",
+     "en": "you si - the proper officials",
+     "note": "The officials in charge, a department with the specific duty."
+    },
+    {
+     "term": "布衣",
+     "en": "bu yi - commoner",
+     "note": "A common person; literally, one who wears cloth."
+    },
+    {
+     "term": "三顧",
+     "en": "san gu - three visits",
+     "note": "Liu Bei visited the thatched hut three times to invite Zhuge Liang to come out."
+    },
+    {
+     "term": "不毛",
+     "en": "bu mao - barren land",
+     "note": "Desolate land where nothing grows; it means the remote south."
+    },
+    {
+     "term": "駑鈍",
+     "en": "nu dun - a slow and dull horse",
+     "note": "A figure for poor ability; a modest word for oneself."
+    }
+   ],
+   "background": "In 227, the fifth year of Jianxing in Shu Han, Zhuge Liang presented this memorial to the second emperor Liu Shan before his northern campaign against Cao Wei, setting out his reasons and resolve for attacking Wei. Because a second memorial was written later, this one is called the 'Former Memorial on Setting Out' (qian chu shi biao)."
+  }
+ }
+}

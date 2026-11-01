@@ -1,0 +1,1302 @@
+{
+ "id": "chuci",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "lisao01": {
+   "summary": "The first of ten parts into which this library divides the Lisao (\"Encountering Sorrow\"). The poet speaks of his lineage, birth and names, boasts of his inner worth and rare talent, and wears fragrant plants as ornaments to stand for a pure character. He then laments the passing of time, fears that the king is ageing and the state declining, urges the king to change course, and longs to follow the ancient kings. The poem is in the Chu style, with the particle 「兮」 in its lines, and uses fragrant plants and beautiful persons as metaphors, a model of the 'comparison and evocation' technique.",
+   "translation": "I am a descendant of the ancient sovereign Gaoyang, and my late father was called Boyong.\nWhen Jupiter stood in the tiger year, in the first month, on the gengyin day I came down into the world.\nMy father looked at the moment of my first measure, and began by giving me a fine name.\nHe named me Zhengze, and gave me the style name Lingjun.\nI already had so much inner beauty, and I added to it by cultivating my talents.\nI draped myself in river angelica and shady angelica, and strung autumn orchids as my girdle.\nTime rushed on as if I could not catch up, fearing that the years would not wait for me.\nAt dawn I picked magnolia on the hill, and at dusk gathered winter-lasting herbs from the islets.\nThe sun and moon hurry by and do not linger; spring and autumn take turns without end.\nI think of grasses and trees withering and falling, and fear that the beautiful one will grow late in life.\nWhy not seize your prime, cast out the foulness, and change these ways?\nMount a fine steed and gallop; come, and I will lead you down the road ahead.\nLong ago the three sage kings were pure in virtue, and so all the fragrant things gathered about them.\nThey mixed pepper and cassia together; did they string only thoroughwort and angelica?\nYao and Shun were bright and upright, followed the Way and found the road.\nHow wild and wayward were Jie and Zhou, who took short cuts and so ended in difficulty.\nThose partisans snatch at pleasure, and their road is dark and narrow.\nHow could I fear disaster for myself? I only fear the royal carriage will be overturned.\nI hurry about before and behind the king, hoping to catch up with the footsteps of the kings of old.",
+   "keyLines": [
+    {
+     "line": "日月忽其不淹兮，春與秋其代序",
+     "en": "Time is quick: sun and moon do not linger, and spring and autumn follow each other without end.",
+     "note": "The sun and moon race by without stopping, and spring and autumn keep taking turns."
+    },
+    {
+     "line": "惟草木之零落兮，恐美人之遲暮",
+     "en": "I think of grasses and trees withering, and fear the beautiful one will grow late in life.",
+     "note": "Seeing the plants fade, the poet fears the king too will grow old and miss his moment to achieve something."
+    },
+    {
+     "line": "彼堯舜之耿介兮，既遵道而得路",
+     "en": "Yao and Shun were bright and upright; they followed the Way and found the road.",
+     "note": "Yao and Shun, legendary sage kings, were bright and upright, followed the right way and walked a smooth road."
+    },
+    {
+     "line": "豈余身之憚殃兮，恐皇輿之敗績",
+     "en": "How could I fear disaster for myself? I only fear the royal carriage will be overturned.",
+     "note": "It is not that he fears harm to himself; he fears the state, pictured as the king's carriage, will be overturned."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "帝高陽",
+     "en": "Di Gaoyang - the ancient sovereign Gaoyang",
+     "note": "The legendary ancient emperor Zhuanxu, from whom the Chu royal house claimed descent."
+    },
+    {
+     "term": "皇考",
+     "en": "huang kao - 'august father'",
+     "note": "A respectful term for one's late father."
+    },
+    {
+     "term": "攝提貞于孟陬",
+     "en": "she ti zhen yu meng zou - 'when Jupiter stood in the tiger year, in the first month'",
+     "note": "She ti is the tiger year in the cycle that follows Jupiter (the 'year star'); meng zou is the first month. So the poet was born in a tiger year, in a tiger month."
+    },
+    {
+     "term": "初度",
+     "en": "chu du - the first measure, the moment of birth",
+     "note": "The circumstances of one's first appearance in the world, that is, the birth date and hour."
+    },
+    {
+     "term": "正則、靈均",
+     "en": "Zhengze, Lingjun - the poet's given name and style name",
+     "note": "The names the poet gives himself. They are generally taken as fine-sounding versions of Qu Yuan's real name Ping and style name Yuan."
+    },
+    {
+     "term": "江離、辟芷、秋蘭",
+     "en": "jiang li, bi zhi, qiu lan - river angelica, shady angelica, autumn orchid",
+     "note": "Three fragrant plants, worn here as ornaments and standing for a pure character."
+    },
+    {
+     "term": "內美、脩能",
+     "en": "nei mei, xiu neng - inner beauty, cultivated talent",
+     "note": "Nei mei is natural goodness of character; xiu neng is outstanding ability."
+    },
+    {
+     "term": "美人",
+     "en": "mei ren - the beautiful one",
+     "note": "In the Lisao it usually means the king, but it can also refer to an ideal person in general."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He served as left counsellor and as master of the three royal clans, argued for sound laws and for an alliance with Qi against Qin, was slandered, pushed aside and exiled, and in the end drowned himself in the Miluo River. The Lisao is his best-known work and the longest lyric poem in the Chuci (Songs of Chu), with over 370 lines; it is regarded as the beginning and the model of the whole Chu tradition. Han readers already read the title in different ways, such as 'meeting with sorrow' or 'parting from sorrow'. This part sets out the poet's lineage and, with the fear that the beautiful one will grow late, voices his worry for king and state; it works as the outline of the whole poem. By opening with 「帝高陽之苗裔兮」 (\"a descendant of the ancient sovereign Gaoyang\") he declares he shares the royal house's ancestry, and so shares its duty to the country."
+  },
+  "lisao02": {
+   "summary": "The poet is grieved that his loyalty is doubted and the king has changed his mind. He describes raising talented people the way one grows orchids and angelica, only to watch the fragrant plants run to weeds. He also criticises the crowd for greed, envy and scrambling for place, and says he will drink dew and eat chrysanthemum petals, keeping himself clean and not following the fashion. Planting orchids and gathering fragrant herbs stand for training worthy people and for self-cultivation.",
+   "translation": "The king did not look into my loyal heart, but believed slander and flew into a rage.\nI knew well that honest speech brings trouble, yet I could not bear to give it up.\nI point to the nine heavens as my witness: all of it was for the sake of the king.\nHe first agreed with me and gave his word, but later regretted it and turned to other things.\nI did not find parting hard; I grieved that the king changed so often.\nI had already watered nine fields of orchids, and planted a hundred acres of angelica.\nI set out plots of peony and Chinese iris, mixing in asarum and sweet angelica.\nI hoped the branches and leaves would grow tall and lush, and wished to wait for the time to reap.\nEven if they wither, what harm is that? I grieve that all the fragrant plants have run to waste.\nThe crowd all push forward in greed, and are never sated in their grasping.\nLooking inward they forgive themselves and judge others, and each stirs up envy in his heart.\nThey rush about in pursuit, which is not what my heart is anxious about.\nOld age creeps steadily towards me, and I fear my good name will not be made.\nAt dawn I drink the dew that falls from the magnolia, at dusk I eat the petals that drop from the autumn chrysanthemum.\nIf my feelings are truly fair and pure, what harm is there in a long face thin with hunger?\nI take hold of tree roots to tie up angelica, and thread the fallen blossoms of climbing fig.\nI straighten cassia bark to string with thoroughwort, and twist a long cord of fragrant vine.\nI take the early sages as my model, which is not what the customs of the day admire.",
+   "keyLines": [
+    {
+     "line": "指九天以為正兮，夫唯靈脩之故也",
+     "en": "I point to the nine heavens as my witness: all of it was for the sake of the king.",
+     "note": "He calls on the highest heavens to bear witness that everything he did was for the king."
+    },
+    {
+     "line": "朝飲木蘭之墜露兮，夕餐秋菊之落英",
+     "en": "At dawn I drink the dew fallen from the magnolia, at dusk I eat the petals dropped by the autumn chrysanthemum.",
+     "note": "Drinking dew and eating fallen petals is an image of keeping oneself pure and apart from the world."
+    },
+    {
+     "line": "苟余情其信姱以練要兮，長顑頷亦何傷",
+     "en": "If my feelings are truly fair and pure, what harm is there in a long face thin with hunger?",
+     "note": "As long as his heart is truly fine and refined, being gaunt and sallow does not matter to him."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "荃",
+     "en": "quan - a fragrant plant, standing for the king",
+     "note": "Here it means the king; some take it as a variant of 'sun', another fragrant plant."
+    },
+    {
+     "term": "靈脩",
+     "en": "ling xiu - 'the spirited and fair one', the king",
+     "note": "A title for the king. Wang Yi, the Han commentator, took it to mean King Huai of Chu. Ling is 'fine'; xiu is 'well adorned'."
+    },
+    {
+     "term": "成言",
+     "en": "cheng yan - to give one's word",
+     "note": "To settle something by agreement."
+    },
+    {
+     "term": "畹",
+     "en": "wan - a land measure",
+     "note": "An ancient unit of field area; sources differ, giving it as twelve or thirty mu."
+    },
+    {
+     "term": "留夷、揭車、杜衡、芳芷",
+     "en": "liu yi, jie che, du heng, fang zhi - peony, Chinese iris, asarum, sweet angelica",
+     "note": "Four fragrant plants, standing for the talented people the poet had nurtured."
+    },
+    {
+     "term": "羌",
+     "en": "qiang - a Chu exclamation",
+     "note": "A sentence-opening word in the Chu dialect, roughly 'indeed' or 'what is more'."
+    },
+    {
+     "term": "顑頷",
+     "en": "kan han - sallow and gaunt (pronounced kan han)",
+     "note": "Describes a face yellow and thin from hunger."
+    },
+    {
+     "term": "落英",
+     "en": "luo ying - fallen blossoms",
+     "note": "Blossoms that have dropped; another reading takes it as blossoms just opening."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He held the posts of left counsellor and master of the three royal clans, urged sound laws and an alliance with Qi against Qin, was slandered, kept at a distance and exiled, and finally drowned himself in the Miluo River. The Lisao is his masterpiece and the longest lyric in the Chuci (Songs of Chu), with more than 370 lines, taken as the start and the model of Chu poetry. Han scholars already read the title differently, as 'parting from sorrow' or 'meeting with sorrow'. In this part the couplet 「朝飲木蘭之墜露兮，夕餐秋菊之落英」 (\"at dawn I drink the dew fallen from the magnolia, at dusk I eat the petals dropped by the autumn chrysanthemum\") has always been read as a portrait of the poet's pure ideals. The word 'ling xiu' recurs through the Lisao as a name for the king; some take it to be King Huai."
+  },
+  "lisao03": {
+   "summary": "This part is the poet's outburst and self-defence. He wants to follow Peng Xian and keep himself pure; though he gives advice in the morning and is dismissed by evening, and though a crowd of women envy and slander him, he says that even nine deaths would not make him regret it. He attacks a world that cuts corners and abandons the rules, says he would rather die than join in, and in the end turns his carriage back to the right road and rests among the orchid banks and pepper hills. The mood moves from grief and anger to resolve.",
+   "translation": "Though I do not suit the people of today, I wish to follow the example Peng Xian left behind.\nI sigh long and wipe away tears, grieving that the life of the people is so hard.\nThough I love purity and am bridled and halter-led by it, I am rebuked at dawn and cast out by dusk.\nHaving cast me out for wearing a thoroughwort girdle, they added to it for gathering sweet angelica.\nThis too is what my heart holds dear; even if I died nine times I would not regret it.\nI resent the king's reckless ways, that in the end he never looked into the hearts of the people.\nThe crowd of women envied my moth-wing brows, and spread rumours that I was wanton.\nTruly the world of today is clever with its tricks: it turns its back on the compass and square and changes the measures.\nIt goes against the plumb-line to chase what is crooked, and competes in flattery as its standard.\nGloomy and downcast, I stand baffled; only I am left in want at this time.\nI would rather die suddenly and drift into exile than bear to behave like that.\nThe bird of prey does not flock; it has always been so, since former ages.\nHow can round and square fit together? Who lives at peace with someone on a different road?\nTo bend the heart and hold down the will, to bear blame and swallow insults,\nTo keep clean and pure and die for what is right - this was prized by the sages of old.\nI regret that I did not look carefully at the road; I stand a long while, ready to turn back.\nTurn my carriage round to the old road, before I have wandered too far into error.\nI pace my horses on the orchid bank, and gallop to the pepper hill, and there rest awhile.",
+   "keyLines": [
+    {
+     "line": "長太息以掩涕兮，哀民生之多艱",
+     "en": "I sigh long and wipe away tears, grieving that the life of the people is so hard.",
+     "note": "He sighs deeply, covers his face and weeps, sorrowing for how hard ordinary people's lives are."
+    },
+    {
+     "line": "亦余心之所善兮，雖九死其猶未悔",
+     "en": "This too is what my heart holds dear; even if I died nine times I would not regret it.",
+     "note": "This is also what my heart loves; nine deaths would still leave him without regret."
+    },
+    {
+     "line": "眾女嫉余之蛾眉兮，謠諑謂余以善淫",
+     "en": "The crowd of women envied my moth-wing brows, and spread rumours that I was wanton.",
+     "note": "The women envy his lovely brows and spread the rumour that he is licentious; this stands for a worthy minister being slandered."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "彭咸",
+     "en": "Peng Xian - a worthy minister of the old Yin (Shang) dynasty",
+     "note": "Tradition says he drowned himself after his advice to the ruler was ignored. Qu Yuan takes him as his example."
+    },
+    {
+     "term": "鞿羈",
+     "en": "ji ji - bridle and halter",
+     "note": "The headstall and reins of a horse, a figure for holding oneself in check."
+    },
+    {
+     "term": "誶",
+     "en": "sui - to advise, to remonstrate",
+     "note": "To give honest counsel to a superior."
+    },
+    {
+     "term": "替",
+     "en": "ti - to discard, to dismiss",
+     "note": "To cast aside or remove from office."
+    },
+    {
+     "term": "蛾眉",
+     "en": "e mei - moth-antenna brows",
+     "note": "Fine curved eyebrows like the feelers of a silk moth, standing for fine talent and virtue."
+    },
+    {
+     "term": "偭規矩而改錯",
+     "en": "mian gui ju er gai cuo - to turn from the compass and square and change the measures",
+     "note": "Mian means to turn away from; cuo means measures. So: to abandon the rules and alter the way things are done."
+    },
+    {
+     "term": "鷙鳥",
+     "en": "zhi niao - bird of prey",
+     "note": "A raptor, standing for a straight person who does not run with the flock."
+    },
+    {
+     "term": "溘死",
+     "en": "ke si - to die suddenly",
+     "note": "To pass away abruptly."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He was left counsellor and master of the three royal clans, argued for sound laws and an alliance with Qi against Qin, was slandered, pushed to the margins and exiled, and ended by drowning himself in the Miluo River. The Lisao is his best-known work and the longest lyric poem in the Chuci (Songs of Chu), more than 370 lines long, regarded as the opening and the model of the Chu poetic tradition. Han scholars read the title as 'parting from sorrow' or 'meeting with sorrow'. The line 「雖九死其猶未悔」 (\"even if I died nine times I would not regret it\") is among Qu Yuan's most famous, showing how firmly he held to his ideals. The line about the crowd of women envying his brows uses a woman who is envied to stand for a worthy minister who is slandered."
+  },
+  "lisao04": {
+   "summary": "After his setback the poet resolves to withdraw and mend his 'first garments', making a coat and skirt of water-chestnut leaves and lotus, and not to change because nobody understands him. He imagines the scolding and advice of Nuxu, yet holds to the claim that he would not change even if his limbs were cut apart. Finally he crosses the Yuan and Xiang rivers to the south and lays out his heart before the ancient sovereign Chonghua (Shun), which begins a review of ancient history.",
+   "translation": "Advancing, I was not admitted and met with blame; retreating, I will mend my first garments.\nI cut water-chestnut and lotus leaves for a coat, and gather lotus blossoms for a skirt.\nIf no one knows me, so be it, so long as my feelings are truly fragrant.\nI raise my cap high and tall, and let my pendants hang long and gleaming.\nFragrance and lustre are mingled together, yet my bright nature is still undiminished.\nSuddenly I look back and let my eyes roam, and I will go to see the four wild corners of the world.\nMy pendants are many and richly adorned, and their fragrance grows ever stronger.\nEach person in life has what delights him; I alone love purity and make it my habit.\nEven if my body were cut apart I would not change; how could my heart be made to repent?\nNuxu, full of concern, scolds me again and again.\nShe says: Gun was stubborn and upright and lost his life, and in the end died young on the plain of Yu.\nWhy are you so outspoken and so fond of purity, alone possessing this splendid integrity?\nThorny weeds fill the room, yet you stand apart and will not wear them.\nThe crowd cannot be persuaded door by door; who will examine my inner heart?\nThe world lifts one another up and loves cliques; why are you so alone and will not listen to me?\nI rely on the sages of old to steady my heart; sighing, I have come through all this by the strength of my feelings.\nI cross the Yuan and the Xiang going south, and go to Chonghua to lay out my words:\nQi obtained the Nine Arguments and the Nine Songs; Kang of Xia amused himself and gave himself free rein.",
+   "keyLines": [
+    {
+     "line": "雖體解吾猶未變兮，豈余心之可懲",
+     "en": "Even if my body were cut apart I would not change; how could my heart be made to repent?",
+     "note": "Even if his limbs were hacked off he would not change; his heart cannot be punished into giving way."
+    },
+    {
+     "line": "民生各有所樂兮，余獨好脩以為常",
+     "en": "Each person in life has what delights him; I alone love purity and make it my habit.",
+     "note": "People take pleasure in different things; he alone loves keeping himself clean, and does so as a matter of course."
+    },
+    {
+     "line": "濟沅湘以南征兮，就重華而敶詞",
+     "en": "I cross the Yuan and the Xiang going south, and go to Chonghua to lay out my words.",
+     "note": "He crosses the Yuan and Xiang rivers southward and goes before Chonghua (Shun) to state his case."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "初服",
+     "en": "chu fu - first garments",
+     "note": "The clothes he first wore, standing for his original aims and principles."
+    },
+    {
+     "term": "芰荷、芙蓉",
+     "en": "ji he, fu rong - water-chestnut and lotus leaves, lotus blossoms",
+     "note": "Ji he are lotus leaves (or water-chestnut leaves) and fu rong are lotus flowers."
+    },
+    {
+     "term": "岌岌、陸離",
+     "en": "ji ji, lu li - towering, gleaming",
+     "note": "Ji ji describes something rising high; lu li describes bright, many-coloured splendour."
+    },
+    {
+     "term": "女嬃",
+     "en": "Nuxu - a woman close to the poet (pronounced nu xu)",
+     "note": "Wang Yi, the Han commentator, took her to be the poet's elder sister; another view makes her a maidservant."
+    },
+    {
+     "term": "鯀",
+     "en": "Gun - father of the legendary flood-tamer Yu",
+     "note": "Tradition says he failed to control the flood and was put to death by Shun at Mount Yu."
+    },
+    {
+     "term": "薋、菉、葹",
+     "en": "zi, lu, shi - three weeds: caltrop, Wang chu grass and cocklebur",
+     "note": "Three bad weeds, standing for petty people."
+    },
+    {
+     "term": "重華",
+     "en": "Chonghua - Shun",
+     "note": "An alternative name of Yu Shun, a legendary sage ruler."
+    },
+    {
+     "term": "《九辯》《九歌》",
+     "en": "Jiu Bian, Jiu Ge - the Nine Arguments and the Nine Songs",
+     "note": "Said to be music Qi of Xia obtained from heaven."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He served as left counsellor and master of the three royal clans, argued for sound laws and an alliance with Qi against Qin, was slandered, pushed aside and exiled, and in the end drowned himself in the Miluo River. The Lisao is his best-known work and the longest lyric poem in the Chuci (Songs of Chu), with over 370 lines, regarded as the beginning and the model of the Chu tradition. Han readers already read the title in different ways, such as 'meeting with sorrow' or 'parting from sorrow'. Who exactly Nuxu was has long been disputed, with an elder sister and a maidservant among the suggestions. The closing couplet, 「就重華而敶詞」 (\"go to Chonghua and lay out my words\"), is the turning point where the Lisao passes from the present into historical review and spirit journeys; from here the poet goes through the rise and fall of earlier ages to prove his case."
+  },
+  "lisao05": {
+   "summary": "The poet speaks to Shun and names those who fell through licence and misrule: the sons of Qi of Xia, Hou Yi, Han Zhuo, Ao, Jie of Xia and Zhou of Shang. He sets against them Tang, Yu and the Zhou kings, who revered virtue and promoted the worthy and so flourished. Heaven, he says, has no favourites and helps only the virtuous. He then grieves that his own loyalty brings him harm and that he is not used, soaks his lapel with tears, and after kneeling to finish his speech rises on the wind.",
+   "translation": "Not thinking of the troubles to come or planning ahead, the five sons lost their home in the quarrels.\nYi roamed to excess and hunted for pleasure, and loved to shoot the great fox.\nWild ways like his seldom end well; and Zhuo coveted Yi's household as well.\nAo was clad in strength and might, gave free rein to his desires and could not hold back.\nDay after day he amused himself and forgot himself, and so his head fell.\nJie of Xia was forever going against what was right, and so in the end he met disaster.\nLord Xin made men into mincemeat, and so the line of Yin did not last long.\nTang and Yu were grave and reverent; the Zhou discussed the Way and made no error.\nThey raised the worthy and gave office to the able, followed the plumb-line and did not lean.\nAugust Heaven has no favourites; it looks at the people's virtue and then places its help.\nOnly sages and the wise with abundant conduct may hold this land below.\nLooking ahead and glancing back, I study how the people reckon the final outcome.\nWho that is not righteous can be employed? Who that is not good can be followed?\nThough I stand at the brink of danger and death, looking back at my beginnings I still do not regret them.\nTo trim the tenon without measuring the mortise - for this the worthy men of old were made into mincemeat.\nAgain and again I sob, heavy-hearted, grieving that my time is not right.\nI take thoroughwort roots to wipe my tears, and they soak my lapel in streams.\nKneeling, I spread my lapel and lay out my words; clear, for I have found this middle way of rightness;\nI yoke four jade dragons to a phoenix-bird carriage, and ride the dusty wind upward.",
+   "keyLines": [
+    {
+     "line": "皇天無私阿兮，覽民德焉錯輔",
+     "en": "August Heaven has no favourites; it looks at the people's virtue and then places its help.",
+     "note": "Heaven is not partial. It watches the virtue of the people and then gives its support."
+    },
+    {
+     "line": "夫維聖哲以茂行兮，苟得用此下土",
+     "en": "Only sages and the wise with abundant conduct may hold this land below.",
+     "note": "Only the wise and holy, rich in good conduct, can rightly hold the world."
+    },
+    {
+     "line": "不量鑿而正枘兮，固前脩以菹醢",
+     "en": "To trim the tenon without measuring the mortise - for this the worthy men of old were made into mincemeat.",
+     "note": "Cutting the peg without measuring the hole, forcing together what does not fit: this is exactly how worthies of old came to be minced."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "五子",
+     "en": "wu zi - the five sons",
+     "note": "The five sons of Qi of Xia, brothers of Taikang, who lost their home through quarrels among themselves."
+    },
+    {
+     "term": "羿",
+     "en": "Yi - Hou Yi, ruler of the Youqiong clan",
+     "note": "A famous archer who seized power from the Xia and was later killed by Han Zhuo."
+    },
+    {
+     "term": "浞",
+     "en": "Zhuo - Han Zhuo",
+     "note": "A minister of Yi who killed him and took his place."
+    },
+    {
+     "term": "澆",
+     "en": "Ao - son of Han Zhuo",
+     "note": "Strong and warlike, he was finally destroyed by Shaokang."
+    },
+    {
+     "term": "后辛",
+     "en": "Hou Xin - Zhou, last king of Shang",
+     "note": "The Shang tyrant, whose personal name was Xin."
+    },
+    {
+     "term": "菹醢",
+     "en": "zu hai - to mince a person (pronounced zu hai)",
+     "note": "A cruel punishment in which a man was chopped into mincemeat."
+    },
+    {
+     "term": "不量鑿而正枘",
+     "en": "bu liang zao er zheng rui - trimming the tenon without measuring the mortise",
+     "note": "A figure for being out of step with the times, or for trying to force together things that do not fit."
+    },
+    {
+     "term": "玉虯、鷖",
+     "en": "yu qiu, yi - jade dragon, a sacred bird",
+     "note": "A yu qiu is a hornless dragon the colour of jade; yi is a divine bird of the phoenix kind."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He served as left counsellor and master of the three royal clans, argued for sound laws and an alliance with Qi against Qin, was slandered, pushed aside and exiled, and in the end drowned himself in the Miluo River. The Lisao is his best-known work and the longest lyric poem in the Chuci (Songs of Chu), with over 370 lines, regarded as the beginning and the model of the Chu tradition. Han readers already read the title in different ways, such as 'meeting with sorrow' or 'parting from sorrow'. The review of history in this part aims to use the past as a mirror, showing how important it is to employ the worthy and cultivate virtue. The couplet 「皇天無私阿兮，覽民德焉錯輔」 (\"August Heaven has no favourites; it looks at the people's virtue and then places its help\") is a poetic form of the old belief in the Mandate of Heaven: Heaven has no kin, and helps only the virtuous."
+  },
+  "lisao06": {
+   "summary": "The first of the poet's journeys through the heavens. He sets out from Cangwu and passes Xuanpu, tells Xihe to slow the sun, waters his horses at the Pool of Xian and ties his reins at the Fusang tree, with the moon's charioteer and the wind god before and behind and phoenixes flying day and night. At the gate of heaven the keeper will not open, and the poet laments a muddied world that hides beauty and envies it. He then turns to the search for a woman, breaks a jade branch for his pendants and sends the cloud god Fenglong to find the goddess Fufei.",
+   "translation": "At dawn I set out from Cangwu, and at dusk I reached Xuanpu;\nI wanted to linger a little at this sacred gate, but the sun was hurrying towards evening.\nI ordered Xihe to slow his pace, and not to press close to Mount Yanzi.\nThe road is long and far; I will search above and below.\nI watered my horses at the Pool of Xian, and gathered my reins at the Fusang tree.\nI broke a branch of the Ruo tree to brush the sun, and wandered idly here and there.\nWangshu went ahead as my outrider, and Feilian ran behind as my attendant.\nThe luan and phoenix birds kept watch in advance for me, but the Thunder Master told me he was not ready.\nI ordered the phoenix to fly up, continuing day and night.\nThe whirlwind gathered, then parted, leading clouds and rainbows to meet me.\nCrowding and thronging, they parted and joined, a gleaming motley moving up and down.\nI ordered the keeper of heaven's gate to open it, but he leaned on the gate and only watched me.\nThe day grew dim and was about to end; I knotted hidden orchids and stood a long while.\nThe world is muddied and cannot tell good from bad, and likes to hide beauty and envy it.\nAt dawn I would cross the White Water, and climb Langfeng to tether my horses.\nSuddenly I looked back and wept, grieving that the high hill has no maiden.\nQuickly I wandered to this Spring Palace, and broke a jade branch to add to my pendants.\nWhile the blossoms had not yet fallen, I looked for a maiden below to whom I could give it.\nI ordered Fenglong to ride the clouds and seek where Fufei dwelt.",
+   "keyLines": [
+    {
+     "line": "路曼曼其脩遠兮，吾將上下而求索",
+     "en": "The road is long and far; I will search above and below.",
+     "note": "The way is endless and distant, and he will go up to heaven and down to earth to seek what he wants."
+    },
+    {
+     "line": "吾令帝閽開關兮，倚閶闔而望予",
+     "en": "I ordered the keeper of heaven's gate to open it, but he leaned on the gate and only watched me.",
+     "note": "The gatekeeper will not let him through, and simply leans on the gate looking at him."
+    },
+    {
+     "line": "世溷濁而不分兮，好蔽美而嫉妒",
+     "en": "The world is muddied and cannot tell good from bad, and likes to hide beauty and envy it.",
+     "note": "A muddy age cannot tell good from bad, and loves to cover beauty over and be jealous of it."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "發軔",
+     "en": "fa ren - to set out",
+     "note": "Ren is the block that wedges a cart wheel; it has to be taken away before the cart can move."
+    },
+    {
+     "term": "蒼梧、縣圃",
+     "en": "Cangwu, Xuanpu - Cangwu and Xuanpu",
+     "note": "Cangwu is where Shun is said to be buried; Xuanpu is the dwelling of immortals on Mount Kunlun."
+    },
+    {
+     "term": "羲和",
+     "en": "Xihe - the sun's charioteer",
+     "note": "In myth, the god who drives the sun's carriage."
+    },
+    {
+     "term": "崦嵫",
+     "en": "Yanzi - Mount Yanzi (pronounced yan zi)",
+     "note": "The mountain where the sun is said to set."
+    },
+    {
+     "term": "咸池、扶桑、若木",
+     "en": "Xian Chi, Fusang, Ruo mu - the Pool of Xian, the Fusang tree, the Ruo tree",
+     "note": "Mythical places where the sun bathes, rises and sets."
+    },
+    {
+     "term": "望舒、飛廉",
+     "en": "Wangshu, Feilian - the moon's charioteer, the wind god",
+     "note": "Wangshu drives the moon's carriage; Feilian is the god of the wind."
+    },
+    {
+     "term": "帝閽",
+     "en": "di hun - keeper of the gate of heaven",
+     "note": "The doorkeeper of the Lord on High. Chang he is the gate of heaven."
+    },
+    {
+     "term": "豐隆、宓妃",
+     "en": "Fenglong, Fufei - the cloud god, the goddess of the Luo",
+     "note": "Fenglong is the cloud god (some say thunder god); Fufei is the legendary goddess of the Luo River."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He served as left counsellor and master of the three royal clans, argued for sound laws and an alliance with Qi against Qin, was slandered, pushed aside and exiled, and in the end drowned himself in the Miluo River. The Lisao is his best-known work and the longest lyric poem in the Chuci (Songs of Chu), with over 370 lines, regarded as the beginning and the model of the Chu tradition. Han readers already read the title in different ways, such as 'meeting with sorrow' or 'parting from sorrow'. From this part the Lisao enters the long section of 'searching above and below', in which the poet looks in the heavens for like-minded companions; it is a symbolic journey. The couplet 「路曼曼其脩遠兮，吾將上下而求索」 (\"the road is long and far; I will search above and below\") became one of the best-loved lines in Chinese."
+  },
+  "lisao07": {
+   "summary": "The symbolic search for a woman continues. The poet wants Jianxiu to carry his proposal to the goddess Fufei, but gives her up as proud and without manners. He then sees the fair maiden of Yousong and the two Yao daughters of Youyu, and fails again because his go-betweens are unreliable. Finally he laments a world that envies the worthy, and asks Lingfen to divine for him. The 'search for a woman' is usually read as the search for a worthy ruler or minister, a symbol of his ideals.",
+   "translation": "I untied my girdle to seal my message, and ordered Jianxiu to be my go-between.\nIn a crowded tangle of meeting and parting, she was suddenly obstinate and hard to move.\nAt dusk she went back to lodge at Qiongshi; at dawn she washed her hair at Weipan.\nProud of her beauty she grew haughty, and day after day she enjoyed herself and roamed idly.\nThough truly lovely she has no manners; come, I will leave her and seek elsewhere.\nI looked about to the four ends of the earth, wandered all round the heavens, and then came down.\nI saw the jade tower rising high, and the fair maiden of Yousong.\nI ordered the zhen bird to be my matchmaker, but the zhen reported that it was not good.\nThe male dove went off cooing, but I disliked its flighty cleverness.\nMy heart hesitated and doubted; I wanted to go myself but could not.\nThe phoenix had already carried the gift, but I feared Gaoxin would be there before me.\nI wanted to settle far away but had nowhere to stop, so I drifted and wandered at ease.\nBefore Shaokang had taken a wife, the two Yao maidens of Youyu were still there to be won.\nMy envoy was weak and my matchmaker clumsy; I feared my words would not hold.\nThe world is muddied and jealous of the worthy, fond of hiding beauty and praising ugliness.\nThe women's chambers are deep and far away, and the wise king does not awake.\nI hold my feelings and cannot let them out; how can I bear to live with this till the end of time?\nI took qiongmao grass and bamboo slips, and asked Lingfen to divine for me.\nHe said: Two beauties are sure to meet; who truly good would not be admired?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "蹇脩",
+     "en": "Jianxiu - a go-between",
+     "note": "A person's name, interpreted in various ways; Wang Yi says he was a minister of Fuxi."
+    },
+    {
+     "term": "理",
+     "en": "li - envoy, matchmaker",
+     "note": "A go-between or messenger."
+    },
+    {
+     "term": "有娀之佚女",
+     "en": "You Song zhi yi nu - the fair maiden of the You Song clan",
+     "note": "That is Jiandi, said to be a consort of Emperor Ku and mother of Xie, ancestor of the Shang people."
+    },
+    {
+     "term": "鴆",
+     "en": "zhen - the poison bird",
+     "note": "A legendary bird whose feathers are poisonous."
+    },
+    {
+     "term": "高辛",
+     "en": "Gaoxin - Emperor Ku",
+     "note": "Emperor Ku, whose title was Lord Gaoxin."
+    },
+    {
+     "term": "少康、二姚",
+     "en": "Shaokang, er Yao - Shaokang and the two Yao maidens",
+     "note": "Shaokang was the ruler who restored the Xia dynasty (c. 2070-1600 BC); the two Yao were two women of the Yao family of the state of Youyu."
+    },
+    {
+     "term": "靈氛",
+     "en": "Lingfen - a diviner",
+     "note": "A man of legend who was skilled at divination."
+    },
+    {
+     "term": "藑茅、筳篿",
+     "en": "qiong mao, ting zhuan - spirit grass, divining slips",
+     "note": "Qiong mao is a magical grass; ting zhuan are thin slips of bamboo used for divination."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He served as left counsellor and master of the three royal clans, argued for sound laws and an alliance with Qi against Qin, was slandered, pushed aside and exiled, and in the end drowned himself in the Miluo River. The Lisao is his best-known work and the longest lyric poem in the Chuci (Songs of Chu), with over 370 lines, regarded as the beginning and the model of the Chu tradition. Han readers already read the title in different ways, such as 'meeting with sorrow' or 'parting from sorrow'. The episode of 'searching for a woman' has been explained in several ways. Since Wang Yi most readers have taken it as a figure for seeking a worthy minister or ruler; some scholars instead read it through myth and shamanic practice, as the poet's shaman-like spirit journey in search of an ideal partner. This part has many figures from myth and legend, so it helps to read it with the notes."
+  },
+  "lisao08": {
+   "summary": "Here the diviner Lingfen and the shaman Wuxian give their advice. Lingfen urges the poet to go far away, since the world is wide and Chu is not the only place with fragrant plants. The poet hesitates and asks Wuxian, who cites men such as Yi Yin, Fu Yue, Lu Wang and Ning Qi, raised by wise rulers, and tells him to roam above and below without relying on a go-between. It is the sharpest statement of his inner struggle over leaving or staying.",
+   "translation": "I think of how vast the Nine Provinces are; is it only here that there are maidens?\nHe said: Make an effort, go far and do not doubt; who that seeks beauty would let you go?\nWhere is there no fragrant grass? Why do you cling to your old home?\nThe world is dim and dazzled; who will say that they judge my good and bad?\nPeople differ in what they like and hate, but this faction is stranger than all.\nEvery house wears mugwort heaped at the waist, and says the hidden orchid is not fit to wear.\nThey cannot even judge plants and trees; how could they weigh a fine jade?\nThey stuff their pouches with dung and say the shen pepper is not fragrant.\nI wanted to follow Lingfen's lucky divination, but my heart hesitated and doubted.\nWuxian is to descend this evening; I carry pepper and fine rice to meet him.\nA hundred gods darken the sky as they all come down, and the spirits of Jiuyi come thronging to welcome him.\nThe august one, blazing bright, shows his spirit, and tells me the reason for good fortune.\nHe said: Make an effort, rise and descend, above and below, and seek those who share your rule and measure.\nTang and Yu were stern and looked for a match, and found Zhi and Gaoyao, who could harmonise with them.\nIf your inner feelings love what is fair, why need you make use of a go-between?\nYue took up his rammer at Fuyan, and Wuding used him without doubt.\nLu Wang plied his butcher's knife, met King Wen of Zhou and was raised up.\nNing Qi sang his song, and Duke Huan of Qi heard it and took him as helper.\nWhile the years are not yet late, and the season is not yet spent.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "故宇",
+     "en": "gu yu - the old home",
+     "note": "The old dwelling, meaning the poet's native land of Chu."
+    },
+    {
+     "term": "艾",
+     "en": "ai - mugwort",
+     "note": "A rank weed, standing for petty people."
+    },
+    {
+     "term": "巫咸",
+     "en": "Wuxian - a shaman",
+     "note": "A great shaman of ancient legend."
+    },
+    {
+     "term": "椒糈",
+     "en": "jiao xu - pepper and fine rice",
+     "note": "Pepper and polished rice, offered to the gods."
+    },
+    {
+     "term": "九疑",
+     "en": "Jiuyi - Mount Jiuyi",
+     "note": "The mountain where Shun is said to be buried; here it means the spirits of that mountain."
+    },
+    {
+     "term": "榘矱",
+     "en": "ju yue - rule, standard (pronounced ju yue)",
+     "note": "A measure or norm."
+    },
+    {
+     "term": "說操築於傅巖",
+     "en": "Yue cao zhu yu Fuyan - Yue ramming earth at Fuyan",
+     "note": "Fu Yue was a convict who built walls at Fuyan; King Wuding of Shang made him his chief minister."
+    },
+    {
+     "term": "呂望之鼓刀",
+     "en": "Lu Wang zhi gu dao - Lu Wang wielding his knife",
+     "note": "Lu Wang (Jiang Taigong) once slaughtered cattle at Zhaoge before King Wen of Zhou raised him to high office."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He served as left counsellor and master of the three royal clans, argued for sound laws and an alliance with Qi against Qin, was slandered, pushed aside and exiled, and in the end drowned himself in the Miluo River. The Lisao is his best-known work and the longest lyric poem in the Chuci (Songs of Chu), with over 370 lines, regarded as the beginning and the model of the Chu tradition. Han readers already read the title in different ways, such as 'meeting with sorrow' or 'parting from sorrow'. Yi Yin (here called Zhi), Gaoyao, Fu Yue, Lu Wang and Ning Qi were all men of humble origin whom wise rulers promoted. The poet uses them to show that a worthy man can meet a bright ruler without anyone recommending him. This part also shows his torn feelings about leaving Chu."
+  },
+  "lisao09": {
+   "summary": "Before deciding to travel far, the poet mourns how the fragrant plants have changed: orchid, angelica and thoroughwort have turned into thatch grass and wormwood, and nothing but the harm of not loving purity explains it. Men like Ziqiao and Zilan are overbearing and flattering and follow the fashion. He stresses that his own ornaments are still fragrant, and resolves to go far while his years are at their prime, with fine jade ready for food.",
+   "translation": "I fear the shrike will cry before the season, and make all the plants lose their fragrance.\nMy jade pendants stand so high, yet the crowd darkens them and covers them from view.\nThis faction cannot be trusted, and I fear they will break them out of envy.\nThe times change in confusion; how can I stay here any longer?\nOrchid and angelica change and lose their scent; the fragrant plant and thoroughwort turn into thatch.\nWhy are the fragrant plants of old now nothing but wormwood and mugwort?\nCan there be any other reason? It is only the harm of not loving what is fair.\nI thought the orchid could be relied on, but it has no substance, only the look of height.\nIt threw away its beauty to follow the crowd, just to take its place among the fragrant ones.\nThe pepper is all flattery and arrogance, and the dogwood too wants to fill the pouch.\nHaving pushed forward and struggled to get in, what fragrance can it still honour?\nTruly the customs of the age flow along together; who can fail to change?\nSeeing pepper and orchid like this, what of jieche and river angelica?\nOnly my pendant is to be treasured, though its beauty has been left to lie and has come to this.\nIts scent is strong and hard to diminish; its fragrance has not faded to this day.\nI tune my pace and bearing to please myself, and for a while drift on in search of a maiden.\nWhile my adornments are still at their prime, I wander round to view the heights and depths.\nLingfen has told me the divination is lucky; choosing a good day I shall set out.\nI break jade branches for my food, and grind fine jade for provisions.",
+   "keyLines": [
+    {
+     "line": "蘭芷變而不芳兮，荃蕙化而為茅",
+     "en": "Orchid and angelica change and lose their scent; the fragrant plant and thoroughwort turn into thatch.",
+     "note": "The orchid and angelica no longer smell sweet, and the fine plants have turned to common grass: worthy people have been spoiled."
+    },
+    {
+     "line": "何昔日之芳草兮，今直為此蕭艾也",
+     "en": "Why are the fragrant plants of old now nothing but wormwood and mugwort?",
+     "note": "How is it that the sweet plants of the past have now become mere wormwood and mugwort?"
+    },
+    {
+     "line": "芳菲菲而難虧兮，芬至今猶未沬",
+     "en": "Its scent is strong and hard to diminish; its fragrance has not faded to this day.",
+     "note": "His fragrance is rich and cannot be lessened; it has not died away even now."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "鵜鴃",
+     "en": "ti jue - shrike (pronounced ti jue)",
+     "note": "The shrike, which cries after the spring equinox; when it does, the plants are said to wither."
+    },
+    {
+     "term": "偃蹇",
+     "en": "yan jian - towering",
+     "note": "Rising high."
+    },
+    {
+     "term": "薆然",
+     "en": "ai ran - hidden, covered",
+     "note": "The look of something screened from view."
+    },
+    {
+     "term": "蕭艾",
+     "en": "xiao ai - wormwood and mugwort",
+     "note": "Common weeds, standing for petty people."
+    },
+    {
+     "term": "椒、蘭",
+     "en": "jiao, lan - Zijiao and Zilan",
+     "note": "Wang Yi took these to be Zijiao, a grandee of Chu, and Zilan, a younger son of King Huai of Chu; they are the turncoats the poet criticises."
+    },
+    {
+     "term": "樧",
+     "en": "sha - dogwood (pronounced sha)",
+     "note": "A pungent plant with a weaker scent than pepper, standing for inferior people."
+    },
+    {
+     "term": "干進",
+     "en": "gan jin - to push for advancement",
+     "note": "To scheme to get ahead."
+    },
+    {
+     "term": "揭車、江離",
+     "en": "jieche, jiang li - two fragrant plants",
+     "note": "Plants standing for other worthy men."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He served as left counsellor and master of the three royal clans, argued for sound laws and an alliance with Qi against Qin, was slandered, pushed aside and exiled, and in the end drowned himself in the Miluo River. The Lisao is his best-known work and the longest lyric poem in the Chuci (Songs of Chu), with over 370 lines, regarded as the beginning and the model of the Chu tradition. Han readers already read the title in different ways, such as 'meeting with sorrow' or 'parting from sorrow'. The couplet 「蘭芷變而不芳兮，荃蕙化而為茅」 (\"orchid and angelica change and lose their scent; the fragrant plant and thoroughwort turn into thatch\") has always been read as the poet's deep lament at the decline of talent and morals in Chu. Who exactly Zijiao and Zilan were is debated; the main account is Wang Yi's."
+  },
+  "lisao10": {
+   "summary": "The last part of the Lisao. The poet rides flying dragons on a long journey through Kunlun, the Heavenly Ford, the far west, the Flowing Sands, the Red River and Buzhou, playing the Nine Songs and dancing the Shao. As he rises into the sky he suddenly sees his old home; the groom grieves and the horses will not go on. The closing 'envoi' sums up the whole: no one in the state knows him, a good government cannot be made, so he will follow Peng Xian. It ends in grief and grandeur.",
+   "translation": "I yoke flying dragons for myself, and make a carriage inlaid with jade and ivory.\nHow can hearts that have parted be joined? I will go far away and keep myself apart.\nI turn my way towards Kunlun; the road is long and I circle on.\nI raise banners of dim, thick cloud and rainbow, and the jade bells chime tinkling.\nAt dawn I set out from the Heavenly Ford, at dusk I reached the far west.\nPhoenixes with wings spread bear up my banners, soaring high in good order.\nSuddenly I was travelling over the Flowing Sands, and followed the Red River, easy and unhurried.\nI waved the water-dragons to bridge the ford, and bade the Western Sovereign help me cross.\nThe road is long and full of hardship; I sent my host of carriages ahead to wait on the way.\nThe road passes Buzhou and turns left; I name the Western Sea as our meeting place.\nI massed a thousand carriages, with jade hubs level, and raced side by side.\nI drove eight dragons, winding and graceful, and carried cloud banners rippling.\nI held down my will and slowed my pace, but my spirit raced on high, far away.\nI played the Nine Songs and danced the Shao, borrowing the day for a stolen pleasure.\nI climbed into the dazzling glory of heaven, and suddenly looked down on my old home.\nMy groom grew sad and my horses longed for home; they curled up, looked back and would not go.\nEnvoi: Enough! There is no one in the state who knows me, so why long for the old capital?\nSince there is no one with whom to build a good government, I will go where Peng Xian dwells.",
+   "keyLines": [
+    {
+     "line": "忽臨睨夫舊鄉",
+     "en": "Suddenly I looked down on my old home.",
+     "note": "All at once he looks down and sees his homeland."
+    },
+    {
+     "line": "僕夫悲余馬懷兮，蜷局顧而不行",
+     "en": "My groom grew sad and my horses longed for home; they curled up, looked back and would not go.",
+     "note": "The groom is sad and the horses are full of longing; they huddle, look back, and refuse to go on."
+    },
+    {
+     "line": "已矣哉，國無人莫我知兮，又何懷乎故都",
+     "en": "Enough! There is no one in the state who knows me, so why long for the old capital?",
+     "note": "It is over. Nobody in Chu understands him, so why cling to the old capital?"
+    },
+    {
+     "line": "既莫足與為美政兮，吾將從彭咸之所居",
+     "en": "Since there is no one with whom to build a good government, I will go where Peng Xian dwells.",
+     "note": "With no one to share in a good government, he will follow Peng Xian and die as he did."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "瑤象",
+     "en": "yao xiang - jade and ivory",
+     "note": "Fine jade and ivory, used to decorate the carriage."
+    },
+    {
+     "term": "崑崙",
+     "en": "Kunlun - Kunlun",
+     "note": "A mythical holy mountain in the west."
+    },
+    {
+     "term": "天津",
+     "en": "Tianjin - the Heavenly Ford",
+     "note": "A crossing on the River of Heaven (the Milky Way), also a star's name."
+    },
+    {
+     "term": "流沙、赤水",
+     "en": "liu sha, Chi shui - the Flowing Sands, the Red River",
+     "note": "A desert and a river of the far west, part of mythical geography."
+    },
+    {
+     "term": "西皇",
+     "en": "Xi Huang - the Western Sovereign",
+     "note": "Shaohao, the ruler of the heavens in the west."
+    },
+    {
+     "term": "不周",
+     "en": "Buzhou - Mount Buzhou",
+     "note": "A mythical mountain in the north-west."
+    },
+    {
+     "term": "《九歌》《韶》",
+     "en": "Jiu Ge, Shao - the Nine Songs, the Shao",
+     "note": "Ancient pieces of music; the Shao is said to be the music and dance of Shun's time."
+    },
+    {
+     "term": "亂曰",
+     "en": "luan yue - 'envoi', the closing section",
+     "note": "The last passage of a piece of music; in the fu and Chuci it sums up the whole piece."
+    }
+   ],
+   "background": "Qu Yuan (about 340 - about 278 BC), personal name Ping, was a noble of the state of Chu in the Warring States period. He served as left counsellor and master of the three royal clans, argued for sound laws and an alliance with Qi against Qin, was slandered, pushed aside and exiled, and in the end drowned himself in the Miluo River. The Lisao is his best-known work and the longest lyric poem in the Chuci (Songs of Chu), with over 370 lines, regarded as the beginning and the model of the Chu tradition. Han readers already read the title in different ways, such as 'meeting with sorrow' or 'parting from sorrow'. The poem ends with a wish to leave that cannot be fulfilled: as the poet flies skyward he sees Chu below and finally cannot go, so he chooses to follow Peng Xian into death, which foreshadows his own end. The 「亂曰」 (\"envoi\") is a fixed closing form in Chu-style works, gathering up the main theme."
+  },
+  "donghuangtaiyi": {
+   "summary": "The first of the Nine Songs, for the Lord of the East, Taiyi, the highest god of the Chu people. It is a hymn to welcome and delight the god. A lucky day is chosen, the officiant wears a sword and fine robes, offerings of jade, fragrant herbs, cassia wine and pepper drink are laid out, and drums and music are played while the shamans dance, with incense filling the hall. The mood is solemn and joyful. The god himself is not described; the poem shows only the rite, music and dance.",
+   "translation": "A lucky day, a fine hour: solemnly we mean to delight the August One above.\nI stroke my long sword with its jade hilt, and the pendants ring clear, jade on jade.\nJade mats weighted with jade: shall we not take up the fine fragrant flowers?\nMeats steamed with thoroughwort, laid on orchid mats; we set out cassia wine and pepper drink.\nRaise the drumsticks and strike the drum; keep a slow, spaced beat and a calm song.\nSet out the pipes and zithers for a grand chant.\nThe spirit-mediums sway in lovely dress, and fragrance fills the hall.\nThe five notes mingle in rich harmony, and the Lord is glad and at ease.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "東皇太一",
+     "en": "Donghuang Taiyi - Taiyi, the Lord of the East",
+     "note": "The highest heavenly god worshipped in Chu. Donghuang means the god of the east and Taiyi is the supreme god."
+    },
+    {
+     "term": "上皇",
+     "en": "shang huang - the August One above",
+     "note": "A respectful title for Donghuang Taiyi."
+    },
+    {
+     "term": "玉珥",
+     "en": "yu er - jade hilt ornament",
+     "note": "Jade decoration on a sword hilt."
+    },
+    {
+     "term": "璆鏘",
+     "en": "qiu qiang - the sound of jade pendants (qiu qiang)",
+     "note": "The clink of jade pendants striking together."
+    },
+    {
+     "term": "瑤席玉瑱",
+     "en": "yao xi yu tian - jade mats, jade weights",
+     "note": "Yao xi are splendid mats; yu tian are jade weights that hold the mats down."
+    },
+    {
+     "term": "蕙肴蒸、蘭藉",
+     "en": "hui yao zheng, lan jie - meat steamed with thoroughwort, orchid mats",
+     "note": "Sacrificial meat steamed with thoroughwort and laid on orchid leaves."
+    },
+    {
+     "term": "枹",
+     "en": "fu - drumstick (pronounced fu)",
+     "note": "A stick for beating the drum."
+    },
+    {
+     "term": "靈",
+     "en": "ling - shaman, or spirit",
+     "note": "A shaman medium; it can also mean the god."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. 'Donghuang Taiyi' is the song of welcome. Its lines are regular and often carry the particle 「兮」. Because the god is the highest of the Chu people, the piece stands first in the set."
+  },
+  "yunzhongjun": {
+   "summary": "A song for the Lord of the Clouds. The officiating shaman first bathes and dresses to welcome the god. The cloud god is shown in glittering splendour, driving dragons and wearing the robes of the Lord on High, roaming between heaven and earth, suddenly coming down and then flying far off again. At the end the worshipper watches the departing god, sighs and longs for him.",
+   "translation": "I bathe in orchid water and wash my hair in fragrance; my bright, many-coloured robe is like the flower of the duruo.\nThe spirit coils and lingers, glorious and shining, without end.\nGladly he will rest in the Hall of Long Life, shining as bright as the sun and moon.\nDrawn by dragons, in the robes of the Lord on High, he soars and roams everywhere.\nThe spirit, resplendent, has come down, then swiftly rises far off into the clouds.\nHe surveys Jizhou and more beyond, crosses the four seas and finds no end.\nI think of my lord and sigh deeply; my heart is wearied and unsettled to the utmost.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "蘭湯",
+     "en": "lan tang - orchid bath",
+     "note": "A fragrant bath-water boiled from orchid leaves, for washing before the rite."
+    },
+    {
+     "term": "華采衣",
+     "en": "hua cai yi - bright coloured robe",
+     "note": "A gorgeous, many-coloured garment."
+    },
+    {
+     "term": "若英",
+     "en": "ruo ying - the blossom of the duruo",
+     "note": "The flower of duruo, a fragrant plant."
+    },
+    {
+     "term": "連蜷",
+     "en": "lian quan - coiled, curving",
+     "note": "Bending and winding; the pose of the spirit as it descends and lingers."
+    },
+    {
+     "term": "壽宮",
+     "en": "shou gong - the Hall of Long Life",
+     "note": "The shrine in which the god is worshipped."
+    },
+    {
+     "term": "帝服",
+     "en": "di fu - the robes of the Lord on High",
+     "note": "Garments of the Lord of Heaven, meaning the cloud god is gorgeously dressed."
+    },
+    {
+     "term": "周章",
+     "en": "zhou zhang - to roam everywhere",
+     "note": "To wander and sightsee in all directions."
+    },
+    {
+     "term": "猋",
+     "en": "biao - whirlwind (pronounced biao)",
+     "note": "A swift wind, here meaning great speed."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. The Lord of the Clouds is generally taken to be the cloud god; some say he is the god of the Yunmeng marsh, and Wang Yi took him to be the cloud god Fenglong."
+  },
+  "xiangjun": {
+   "summary": "A song for the god of the Xiang River, a companion piece to 'Lady of the Xiang'. Speaking as a goddess, it tells of sailing out to meet the Lord of the Xiang, waiting in vain, then doubting, resenting and searching, and finally throwing her jade ring and pendant into the river yet still picking duruo to give away. The whole poem is the longing, wandering and unrequited love of one who seeks and does not find.",
+   "translation": "My lord does not come, but hesitates; for whom does he linger on the island in mid-stream?\nLovely and fair, I have dressed with care; swiftly I ride my cassia boat.\nLet the Yuan and Xiang have no waves; let the great river flow calmly.\nI watch for my lord, who has not come; I blow the panpipes - for whom do I long?\nI drive flying dragons north, turning my way to Dongting.\nClimbing fig for curtains, thoroughwort for bindings, iris for oars, orchid for pennants.\nI look towards Cenyang at the far shore, cross the great river and spread my spirit.\nI spread my spirit, but cannot reach him; my maid, full of care, sighs for me.\nTears stream across my face in a rippling flow; I long for you in secret, aching to the core.\nCassia oars and orchid sweeps, cutting through ice and heaped snow.\nPicking climbing fig in the water, plucking lotus from the treetops.\nHearts that differ make the go-between toil in vain; where affection is thin, ties are lightly cut.\nWater runs shallow and swift over the stones; the flying dragons soar and glide.\nIf friendship is not true, resentment lasts; if the tryst is broken, you tell me you had no time.\nAt dawn I gallop on the river bank; at dusk I rein in at the northern islet.\nBirds rest on the roof, and the water winds round beneath the hall.\nI throw my jade ring into the river, and leave my pendant on the shore of the Li.\nI pick fragrant duruo on the island, to give to the maids below.\nThis time cannot be had again; for now I wander at ease.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "湘君",
+     "en": "Xiangjun - the Lord of the Xiang",
+     "note": "The male god of the Xiang River; another view makes it the god of the river in general."
+    },
+    {
+     "term": "夷猶",
+     "en": "yi you - hesitating",
+     "note": "Holding back and not coming forward."
+    },
+    {
+     "term": "要眇",
+     "en": "yao miao - lovely, delicate",
+     "note": "A beautiful appearance."
+    },
+    {
+     "term": "參差",
+     "en": "can ci - panpipes",
+     "note": "A set of pipes of unequal length; the word also means 'uneven'."
+    },
+    {
+     "term": "薜荔、蕙、蓀",
+     "en": "bi li, hui, sun - climbing fig, thoroughwort, iris",
+     "note": "Three fragrant plants used to decorate the boat."
+    },
+    {
+     "term": "橈、旌",
+     "en": "rao, jing - oar, pennant",
+     "note": "Rao is a boat's oar; jing is a banner."
+    },
+    {
+     "term": "涔陽",
+     "en": "Cenyang - Cenyang, north bank of the Cen",
+     "note": "A place on the north bank of the Cen River, near Lixian in present-day Hunan."
+    },
+    {
+     "term": "玦",
+     "en": "jue - jade ring with a gap",
+     "note": "A ring of jade with a break, a token of decision or of breaking off."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. 'Lord of the Xiang' and 'Lady of the Xiang' have traditionally been taken to honour the two consorts of Shun, E Huang and Nu Ying; later readers also take them as a god and goddess of the Xiang River who are a pair. In this piece a goddess waits for the Lord of the Xiang; in 'Lady of the Xiang' a god waits for the Lady. The two read as a matched pair."
+  },
+  "xiangfuren": {
+   "summary": "A song for the goddess of the Xiang, set against 'Lord of the Xiang'. Speaking as the god, it tells how in autumn wind the princess comes down to the northern isle and he longs for her but dares not speak. He imagines the tryst and builds a splendid house of fragrant plants in the water to welcome her; when the lovely one never arrives, he throws his sleeve into the river and picks duruo for someone far away. The scene is bleak with autumn and the feeling mournful. The couplet 「嫋嫋兮秋風，洞庭波兮木葉下」 (\"soft blows the autumn wind; on Dongting the waves rise and the leaves fall\") is famous for ever.",
+   "translation": "The daughter of the Lord descends to the northern isle; my eyes strain into the distance, and I grieve.\nSoft, soft blows the autumn wind; on Dongting the waves rise and the leaves fall.\nI climb the white sedge-flats and gaze afar; with the lovely one I have set a tryst, and at dusk I make ready.\nWhy are the birds gathering in the duckweed? Why is the net hung up in the tree?\nThe Yuan has angelica and the Li has orchid; I think of the noble one but dare not speak.\nDim and hazy, I gaze far; I watch the water flow rippling.\nWhy do deer feed in the courtyard? Why does the dragon lie at the water's edge?\nAt dawn I gallop my horse along the river bank; at dusk I cross to the western shore.\nI hear the lovely one is calling me; I will race my carriage and go with her.\nI build a house in the water, and roof it with lotus.\nWalls of iris, a purple courtyard, fragrant pepper scattered to make the hall.\nCassia for the ridgepole, orchid for rafters, magnolia for the lintel, angelica for the inner room.\nI weave climbing fig into curtains, split thoroughwort to make screens, and have hung them.\nWhite jade for weights, and rock orchid spread for fragrance.\nThe lotus house is thatched with angelica, and wound round with asarum.\nI gather a hundred plants to fill the courtyard, and set sweet scents at the gallery gate.\nThe gods of Jiuyi crowd in together to greet her, and the spirits come like clouds.\nI throw my sleeve into the river, and leave my shirt on the shore of the Li.\nI pluck duruo from the sandbar, to give to one who is far away.\nSuch a time cannot be had again quickly; for now I wander at ease.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "帝子",
+     "en": "di zi - the daughter of the Lord",
+     "note": "The daughter of the Lord of Heaven, meaning the Lady of the Xiang; another reading takes it as Yao's daughter, one of Shun's two consorts."
+    },
+    {
+     "term": "北渚",
+     "en": "bei zhu - the northern isle",
+     "note": "A small island in the water to the north."
+    },
+    {
+     "term": "眇眇",
+     "en": "miao miao - straining into the distance",
+     "note": "Gazing far off until the view grows dim."
+    },
+    {
+     "term": "罾",
+     "en": "zeng - a lift net (pronounced zeng)",
+     "note": "A square fishing net lifted on a frame of poles."
+    },
+    {
+     "term": "葯房",
+     "en": "yao fang - the angelica room",
+     "note": "A bedroom lined with angelica (yao is angelica)."
+    },
+    {
+     "term": "擗",
+     "en": "pi - to split (pronounced pi)",
+     "note": "To cut open."
+    },
+    {
+     "term": "褋",
+     "en": "die - a single shirt (pronounced die)",
+     "note": "A light unlined garment."
+    },
+    {
+     "term": "九嶷",
+     "en": "Jiuyi - Mount Jiuyi",
+     "note": "The mountain where Shun is said to be buried."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. The couplet 「嫋嫋兮秋風，洞庭波兮木葉下」 (\"soft blows the autumn wind; on Dongting the waves rise and the leaves fall\") began the tradition of using autumn scenery to express sorrow, and later poets and lyricists often echo it. The passage beginning 「築室兮水中」 (\"I build a house in the water\"), a building made of fragrant plants, is an imagined splendid house in which to welcome the spirit."
+  },
+  "dasiming": {
+   "summary": "A song for the Great Director of Fates, the god who governs life and death, sung in turns between god and worshipper. The god descends on clouds, the whirlwind goes before and heavy rain washes the dust, he flies high and rules long and short lives. The worshipper breaks a stalk of magic hemp as a gift, but can only watch the god ride off on dragons. It ends by sighing that each life has its fixed share and partings and meetings cannot be forced.",
+   "translation": "Throw wide the gates of heaven; in a rush I ride the dark cloud.\nI order the whirlwind to go before me, and the downpour to wash the dust.\nMy lord wheels and glides down, crossing Kongsang to follow you.\nCrowds upon crowds fill the Nine Provinces; who lives long or dies young rests with me.\nI fly high and glide calmly, riding the pure qi and steering yin and yang.\nI and my lord, purified, hasten to lead the Lord on High over the nine hills.\nThe spirit's robe sways and flutters; the jade pendants gleam.\nNow yin, now yang: none of the crowd knows what I do.\nI break the jade-white flowers of the magic hemp, to give to one who lives apart.\nOld age creeps on and has reached its limit; if we do not draw near, we grow further apart.\nRiding dragons that rumble on, I race high and pierce the sky.\nI twine cassia boughs and stand a long while; the more I think, the more I grieve.\nWhat can a grieving person do? I wish things to stay as they are now, without loss.\nTruly human life has its set portion; who can decide partings and meetings?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "大司命",
+     "en": "Da Siming - the Great Director of Fates",
+     "note": "The god who governs human lifespan, life and death."
+    },
+    {
+     "term": "玄雲",
+     "en": "xuan yun - dark cloud",
+     "note": "A black cloud."
+    },
+    {
+     "term": "涷雨",
+     "en": "dong yu - downpour (pronounced dong yu)",
+     "note": "Heavy rain."
+    },
+    {
+     "term": "空桑",
+     "en": "Kongsang - Kongsang",
+     "note": "A legendary mountain."
+    },
+    {
+     "term": "九坑",
+     "en": "jiu keng - the nine hills",
+     "note": "The hills of the Nine Provinces."
+    },
+    {
+     "term": "被被",
+     "en": "pi pi - fluttering",
+     "note": "The look of a robe blown about."
+    },
+    {
+     "term": "疏麻",
+     "en": "shu ma - magic hemp",
+     "note": "A legendary hemp with jade-coloured flowers; it was broken off as a parting gift."
+    },
+    {
+     "term": "寖",
+     "en": "jin - gradually",
+     "note": "Little by little."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. The Great Director of Fates and the Lesser Director of Fates are both star gods worshipped in Chu; the Great Director rules long and short lives, and the Lesser rules descendants and children. The view of life and death in this piece shows how the Chu people held fate in awe."
+  },
+  "shaosiming": {
+   "summary": "A song for the Lesser Director of Fates, the god who rules offspring and the fate of children. First the hall is full of the scent of orchid and thoroughwort and every person has fine children of their own, but the god singles out the officiant with a glance. Next the god comes and goes in a flash: no sorrow is greater than parting alive, no joy greater than a new friendship. Last the god lodges at night among the clouds, bathes with the officiant in the Pool of Xian, then climbs the ninth heaven, strokes the comet and protects the young, ruler of the people.",
+   "translation": "Autumn orchid and mi-wu grow in rows below the hall.\nGreen leaves and white blossoms; their sweet scent steals over me.\nEveryone has fine children of their own; why should you, my iris-lord, be so troubled?\nAutumn orchid so green, with green leaves and purple stems.\nThe hall is full of lovely people, yet suddenly you alone exchange a glance with me.\nYou come in without a word and go out without farewell, riding the whirlwind with cloud banners.\nNo sorrow is greater than parting alive; no joy is greater than a new friendship.\nA lotus robe and a thoroughwort belt; you come in a flash and vanish in an instant.\nAt dusk you lodge in the Lord's outskirts; whom do you wait for at the edge of the clouds?\nI bathe with you in the Pool of Xian, and dry your hair on the sunlit slope.\nI watch for the lovely one who has not come; facing the wind, dazed, I sing aloud.\nWith a peacock canopy and a kingfisher banner, you climb the ninth heaven and stroke the comet.\nHolding a long sword upright, you shelter the young; you alone are fit to be the people's guardian.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "少司命",
+     "en": "Shao Siming - the Lesser Director of Fates",
+     "note": "The god who rules descendants and the fate of children."
+    },
+    {
+     "term": "麋蕪",
+     "en": "mi wu - mi wu herb",
+     "note": "A fragrant herb, also written with a different first character."
+    },
+    {
+     "term": "美子",
+     "en": "mei zi - fine children",
+     "note": "Good sons and daughters."
+    },
+    {
+     "term": "蓀",
+     "en": "sun - iris, a name for the god",
+     "note": "A fragrant plant, used here to address the god."
+    },
+    {
+     "term": "目成",
+     "en": "mu cheng - to settle by eye contact",
+     "note": "To exchange feelings with a look and understand one another."
+    },
+    {
+     "term": "悲莫悲兮生別離",
+     "en": "bei mo bei xi sheng bie li - no sorrow is greater than parting alive",
+     "note": "The greatest sorrow there is is to part from someone who is still living."
+    },
+    {
+     "term": "儵",
+     "en": "shu - in a flash",
+     "note": "A variant of the word meaning 'suddenly'."
+    },
+    {
+     "term": "咸池",
+     "en": "Xian Chi - the Pool of Xian",
+     "note": "In myth, the pool where the sun bathes."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. The couplet 「悲莫悲兮生別離，樂莫樂兮新相知」 (\"no sorrow is greater than parting alive; no joy is greater than a new friendship\") is one of the best-known lines of the Nine Songs, and later poets and lyricists often quote it."
+  },
+  "dongjun": {
+   "summary": "A song for Dongjun, the Sun god. The sun rises in the east and lights the Fusang tree; the god drives a dragon chariot, rides thunder and trails cloud banners, a delight to hear and see. At the rite the zithers and drums, pipes and reed organs play and the shamans dance like kingfishers. The god, in a robe of blue cloud and a skirt of white rainbow, raises a long arrow to shoot Sirius, comes back down with his bow, ladles cassia wine from the Dipper and drives east. The scene is grand, the most majestic of the Nine Songs.",
+   "translation": "The sun is about to rise in the east, shining on my rail beneath the Fusang tree.\nI pat my horses and drive them steadily; the night turns white and then bright.\nI drive a dragon-shafted chariot, riding thunder, with cloud banners winding behind.\nI sigh long as I am about to rise; my heart lingers and looks back with longing.\nSounds and colours delight people, and the watchers rest content, forgetting to go home.\nStrum the taut zithers, beat the drums in turn, sound the bells hung on jade stands to the pipes,\nSound the flutes, blow the reed pipes, and think of the fair and gifted shamans.\nThey flutter like kingfishers rising; they spread out the verse and dance in unison.\nIn keeping with the pitch and in time with the beat, the spirits come, hiding the sun.\nIn a robe of blue cloud and a skirt of white rainbow, I lift a long arrow and shoot Sirius.\nI take up my bow and sink down again, seize the Northern Dipper and pour cassia wine.\nI gather my reins and race high; far into the dark I go east.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "東君",
+     "en": "Dongjun - the Lord of the East, the sun god",
+     "note": "The god of the sun."
+    },
+    {
+     "term": "暾",
+     "en": "tun - the rising sun (pronounced tun)",
+     "note": "The newly risen sun."
+    },
+    {
+     "term": "扶桑",
+     "en": "Fusang - the Fusang tree",
+     "note": "The mythical tree from which the sun rises."
+    },
+    {
+     "term": "龍輈",
+     "en": "long zhou - dragon shaft",
+     "note": "A carriage with dragon-shaped shafts; zhou is the shaft."
+    },
+    {
+     "term": "緪瑟",
+     "en": "geng se - to tighten the strings of a zither",
+     "note": "To string the zither tight (geng, pronounced geng)."
+    },
+    {
+     "term": "靈保",
+     "en": "ling bao - priest-shaman",
+     "note": "The shaman who leads the sacrifice in ancient rites."
+    },
+    {
+     "term": "天狼",
+     "en": "Tianlang - Sirius",
+     "note": "A star the ancients saw as a fierce star of greed and invasion."
+    },
+    {
+     "term": "弧",
+     "en": "hu - bow",
+     "note": "A bow."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. Dongjun is the sun god. The line 「舉長矢兮射天狼」 (\"I lift a long arrow and shoot Sirius\") at the end of the piece makes the sun god a hero who defends the human world and drives out evil; Su Shi (Su Dongpo) of the Song dynasty (960-1279) echoes it in his lyric 'Jiangchengzi: hunting at Mizhou', with the words 'looking north-west, shoot Sirius'."
+  },
+  "hebo": {
+   "summary": "A song for Hebo, god of the Yellow River, written as an outing and parting of lovers. First 'I' roam the Nine Rivers with you, ride a water chariot under a lotus canopy and drive dragons up Kunlun, my spirit soaring. Then comes the god's watery palace, with roofs of fish scales, a dragon hall, and the god riding a white turtle among the fish. At the end you clasp hands and go east, and I see you off at the southern shore, with waves and shoals of fish coming to greet and escort us. The imagery is rich and has a romantic feeling.",
+   "translation": "I roam with you on the Nine Rivers; a fierce wind rises and waves run crosswise.\nI ride a water chariot with a lotus canopy, drawn by two dragons with hornless dragons beside.\nI climb Kunlun and look all round; my heart soars, vast and free.\nThe day is nearly done, and wistful I forget to go home; I think only of the far shore.\nA house roofed with fish scales, a hall of dragons, a gate tower of purple shells, a palace of red.\nWhat does the spirit do in the water? He rides a white turtle chasing the speckled fish.\nI roam with you on the river islet, where drifting ice is flowing down in a crowd.\nYou clasp hands and go east; I see the lovely one off at the southern shore.\nThe waves surge to meet us, and the fish in their scales escort me.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "河伯",
+     "en": "Hebo - the Lord of the River",
+     "note": "The god of the Yellow River."
+    },
+    {
+     "term": "九河",
+     "en": "jiu he - the Nine Rivers",
+     "note": "The nine branches of the lower Yellow River."
+    },
+    {
+     "term": "螭",
+     "en": "chi - hornless dragon",
+     "note": "A legendary dragon without horns."
+    },
+    {
+     "term": "魚鱗屋",
+     "en": "yu lin wu - roof of fish scales",
+     "note": "A roof tiled with fish-scale shapes."
+    },
+    {
+     "term": "紫貝闕",
+     "en": "zi bei que - gate tower of purple shells",
+     "note": "A gate tower decorated with purple cowries."
+    },
+    {
+     "term": "黿",
+     "en": "yuan - great turtle (pronounced yuan)",
+     "note": "A big soft-shelled turtle or tortoise."
+    },
+    {
+     "term": "流澌",
+     "en": "liu si - drifting ice",
+     "note": "Floating pieces of ice."
+    },
+    {
+     "term": "南浦",
+     "en": "nan pu - the southern shore",
+     "note": "A bank on the south side of the water; in later poetry it came to mean a place for parting."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. The word 'southern shore' (nan pu) comes from this piece, and later became a stock name for a place where friends part. Stories of Hebo are also found in pre-Qin texts outside the Chuci, but here he is shown on an outing and farewell with a companion, with a strong flavour of love."
+  },
+  "shangui": {
+   "summary": "A song for the mountain goddess. In her own voice she waits on the hill for her lover, splendidly dressed, riding a red leopard with spotted civets behind her, but he is slow to come. She grieves that her years are late and doubts whether he really thinks of her. In the end, in a night of thunder, rain, gibbons' cries and sighing wind, she is left alone with her sorrow. The whole poem makes a sad and vivid portrait of a goddess of the mountains.",
+   "translation": "There seems to be someone on the bend of the hill, draped in climbing fig and sashed with moss-vine.\nHer eyes hold a look, and her smile is fitting; you admire me for my grace.\nI ride a red leopard with spotted civets following, in a magnolia carriage with cassia banners.\nClad in rock orchid and girdled with asarum, I break off sweet blossoms to give to the one I long for.\nI dwell in a dark bamboo grove where I never see the sky; the road is steep and hard, so I came alone and late.\nI stand alone, plain to see, on the mountain top, with clouds rolling below me.\nDeep and dim, the day is dark; the east wind blows and the spirit sends rain.\nI wait for my lord, content, forgetting to go home; the year is late - who will make me bloom?\nI pick the three-times-blooming fungus among the hills, where rocks lie heaped and kudzu vines creep.\nI resent the young lord, and sadly forget to go home; you think of me but have no time to come.\nThe one in the mountains is fragrant as duruo, drinks from rock springs and shelters under pines and cypresses; you think of me - and doubt arises.\nThunder rumbles, rain darkens the air; gibbons whimper and black apes cry in the night.\nThe wind sighs, the trees rustle; I think of the young lord and meet only sorrow.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "山鬼",
+     "en": "Shan Gui - the mountain spirit",
+     "note": "A goddess of the mountains; one view says she is the Goddess of Mount Wu."
+    },
+    {
+     "term": "被薜荔兮帶女羅",
+     "en": "bei bi li xi dai nu luo - draped in climbing fig, sashed with moss-vine",
+     "note": "Both are trailing fragrant plants of the mountains."
+    },
+    {
+     "term": "含睇",
+     "en": "han di - to gaze with feeling",
+     "note": "To look at someone with love in one's eyes."
+    },
+    {
+     "term": "子慕予兮善窈窕",
+     "en": "zi mu yu xi shan yao tiao - you admire me for my grace",
+     "note": "Zi is the one she longs for, who admires her beauty."
+    },
+    {
+     "term": "幽篁",
+     "en": "you huang - a dark bamboo grove",
+     "note": "A deep, shady thicket of bamboo."
+    },
+    {
+     "term": "靈脩",
+     "en": "ling xiu - a fond name for the loved one",
+     "note": "A term of praise for the one she longs for, here the lover of the mountain spirit."
+    },
+    {
+     "term": "三秀",
+     "en": "san xiu - the three-times-blooming fungus",
+     "note": "The lingzhi fungus, said to flower three times a year."
+    },
+    {
+     "term": "狖",
+     "en": "you - black long-tailed ape (pronounced you)",
+     "note": "A dark monkey with a long tail."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. The Mountain Spirit is one of the most romantic figures of the Nine Songs and has often appeared in later poetry and painting. Since she is female and lives in the mountains she is usually counted as an earth goddess; some scholars think she is an early form of the Goddess of Mount Wu."
+  },
+  "guoshang": {
+   "summary": "A song for the soldiers who died for their country, both a fierce war song and a hymn of sacrifice. The first half gives the battle: Wu spears, rhinoceros armour, chariots tangled, banners hiding the sun, enemies like clouds, men racing to the front, a horse falling, yet the drum is still beaten. The second half says all the warriors died, but their wills did not bend: 「身既死兮神以靈，魂魄毅兮為鬼雄」 (\"their bodies are dead but their spirits live on; their souls are resolute, heroes among ghosts\"), praising their courage and their lasting fame.",
+   "translation": "We grip Wu spears and wear rhinoceros armour; chariot hubs clash and short weapons meet.\nBanners hide the sun, the enemy are like clouds; arrows fall crossing, and our men vie to be first.\nThey charge our formation and trample our ranks; the left outer horse falls dead, the right is wounded by blades.\nTwo wheels are buried in mud, the four horses tethered; I seize the jade drumsticks and beat the sounding drum.\nHeaven's time is hostile and the powers are angry; the grim slaughter ends and the dead are left on the plain.\nGone out, they will not come in; gone forth, they will not return; the plain is vast and the road far.\nGirded with long swords and carrying Qin bows, their heads were severed from their bodies yet their hearts did not give way.\nTruly brave, and skilled in arms, to the end firm and strong, not to be overcome.\nTheir bodies are dead but their spirits live on; their souls are resolute, heroes among ghosts.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "國殤",
+     "en": "Guo Shang - those who died for the state",
+     "note": "People who died fighting for their country. Shang originally meant one who dies young, and here includes the war dead."
+    },
+    {
+     "term": "吳戈",
+     "en": "Wu ge - Wu spear",
+     "note": "A dagger-axe or spear made in the region of Wu, known for sharpness."
+    },
+    {
+     "term": "犀甲",
+     "en": "xi jia - rhinoceros armour",
+     "note": "Armour made from rhinoceros hide."
+    },
+    {
+     "term": "錯轂",
+     "en": "cuo gu - hubs clashing",
+     "note": "The hubs of chariot wheels crossing, meaning chariots locked in battle."
+    },
+    {
+     "term": "驂",
+     "en": "can - outer horse of a team",
+     "note": "The horse at the side in a team harnessed to a chariot."
+    },
+    {
+     "term": "玉枹",
+     "en": "yu fu - jade drumsticks",
+     "note": "Drumsticks inlaid with jade."
+    },
+    {
+     "term": "秦弓",
+     "en": "Qin gong - Qin bow",
+     "note": "A bow made in Qin, known for its strength."
+    },
+    {
+     "term": "鬼雄",
+     "en": "gui xiong - hero among ghosts",
+     "note": "A hero in the world of the dead."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. 'Guo Shang' is the only one of the eleven pieces that honours human spirits, the war dead, usually taken to be the soldiers of Chu who fell for their state. Its style is resolute and sorrowful, unlike the tender tone of the other pieces. The line 「魂魄毅兮為鬼雄」 (\"their souls are resolute, heroes among ghosts\") has been widely quoted; the Song poet Li Qingzhao echoed it in a quatrain with the words 'in death a hero among ghosts'."
+  },
+  "lihun": {
+   "summary": "The last of the Nine Songs, sung at the end of the rite to see the gods off. The ceremony is finished, drums sound together, fragrant flowers are passed from hand to hand as dancers take their turns, and lovely girls sing at an easy pace. It ends with a wish, through spring orchid and autumn chrysanthemum, that the rite continue from age to age without end. It is the shortest piece, only five lines, light in tone and solemn.",
+   "translation": "The rite is complete, the drums beat together; flowers are passed on and dancers take turns; lovely maids sing, calm and unhurried.\nSpring orchid and autumn chrysanthemum, may it never cease, through all ages.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "成禮",
+     "en": "cheng li - the rite complete",
+     "note": "The sacrifice has been carried out."
+    },
+    {
+     "term": "會鼓",
+     "en": "hui gu - drums beating together",
+     "note": "Many drums struck as one."
+    },
+    {
+     "term": "傳芭",
+     "en": "chuan ba - passing flowers",
+     "note": "Passing round fragrant flowers; ba is a form of a character meaning 'flower'."
+    },
+    {
+     "term": "代舞",
+     "en": "dai wu - taking turns to dance",
+     "note": "Dancers in turn."
+    },
+    {
+     "term": "姱女",
+     "en": "kua nu - lovely maids",
+     "note": "Beautiful women, meaning the dancers."
+    },
+    {
+     "term": "容與",
+     "en": "rong yu - calm, unhurried",
+     "note": "Easy and slow in manner."
+    },
+    {
+     "term": "春蘭兮秋菊",
+     "en": "chun lan xi qiu ju - spring orchid and autumn chrysanthemum",
+     "note": "Orchid in spring and chrysanthemum in autumn; the rites go on in every season."
+    }
+   ],
+   "background": "The Nine Songs (Jiu Ge) began as hymns to the gods used in ritual in the Chu region. Wang Yi of the Eastern Han thought that Qu Yuan, in exile, saw the folk rites and songs along the Yuan and Xiang rivers, found the words crude and reworked them. There are eleven pieces in all; 'nine' is only a round number, and each piece is for a different god. Readers have long disagreed about what this piece is: one view takes it as a song to send off the gods, sung alone after the first ten; another takes it as a closing song common to all ten rites. Since it names no particular god, it reads most like a general farewell hymn."
+  },
+  "buju": {
+   "summary": "A Chuci piece in question and answer. Three years into exile, Qu Yuan is lost and goes to the Grand Diviner Zheng Zhanyin to ask which way to go. In a run of paired choices he asks whether he should be loyal and straight or follow custom, keep clean or drift with the world, and finally rails at a muddy age where black and white are turned upside down. The diviner puts down his stalks and says that tortoise and stalks cannot replace his own judgement. The writing is full of parallels and questions, with a restless rhythm and an angry tone.",
+   "translation": "Three years after Qu Yuan was exiled he still could not see the king again. He had used up his knowledge and given all his loyalty, yet was walled off by slander. His heart was vexed and his mind in turmoil, and he did not know which way to follow. He went to see the Grand Diviner Zheng Zhanyin and said: \"I have doubts, and would like you, sir, to settle them for me.\" Zhanyin then set the stalks straight and brushed the tortoise shell, and said: \"What would you have me teach you?\"\nQu Yuan said: \"Should I be sincere and earnest, plain and loyal? Or should I see people off and welcome them in, wearing myself out in endless social rounds? Should I weed out the grass and thatch and work the land with my strength? Or should I go roaming among the great to make a name? Should I speak straight without avoidance and put myself in danger? Or follow the customs of the day for wealth and rank, and cling to life by stealth? Should I rise above it all and keep my true self? Or should I creep and cringe, whisper and fawn like a mumbling child, to serve a woman? Should I be incorruptible and upright and keep myself clean? Or be smooth and slippery, like grease or soft leather, to keep the pillar wiped clean? Should I be lofty like a colt that runs a thousand li? Or drift like a duck on the water, rising and falling with the waves, saving my skin by stealth? Should I pull the yoke beside a thoroughbred? Or follow the tracks of a worn-out nag? Should I fly wing to wing with the swan? Or squabble for food with chickens and ducks? Which of these is lucky, which unlucky? What should I leave, what should I follow? The world is muddy and unclear: the wing of a cicada is thought heavy, and a thousand weights light; the Yellow Bell is smashed and cast aside, while clay pots thunder; slanderers are exalted, and worthy men have no name. Alas, in silence - who knows my integrity and purity!\"\nZhanyin then put down the stalks and declined, saying: \"A foot is short in some places, an inch is long in others. Things have their shortfalls, wisdom has its blind spots, calculation has its limits, and the spirits cannot reach everything. Use your own heart and carry out your own intention; the tortoise and the stalks truly cannot know this matter.\"",
+   "keyLines": [
+    {
+     "line": "屈原既放三年，不得復見",
+     "en": "Three years after Qu Yuan was exiled he still could not see the king again.",
+     "note": "Banished for three years, Qu Yuan has not been able to see the king again."
+    },
+    {
+     "line": "吾寧悃悃款款，樸以忠乎",
+     "en": "Should I be sincere and earnest, plain and loyal?",
+     "note": "Should I stay honest and sincere and serve loyally in a plain way?"
+    },
+    {
+     "line": "世溷濁而不清，蟬翼為重，千鈞為輕",
+     "en": "The world is muddy and unclear: the wing of a cicada is thought heavy, and a thousand weights light.",
+     "note": "The world is muddy and unclear, so that a cicada's wing counts as heavy and a thousand-weight counts as light."
+    },
+    {
+     "line": "黃鐘毀棄，瓦釜雷鳴；讒人高張，賢士無名",
+     "en": "The Yellow Bell is smashed and cast aside, while clay pots thunder; slanderers are exalted, and worthy men have no name.",
+     "note": "The noble Yellow Bell is destroyed while the lowly clay pot is loud; slanderers rise and worthy men go unknown."
+    },
+    {
+     "line": "夫尺有所短，寸有所長",
+     "en": "A foot is short in some places, an inch is long in others.",
+     "note": "A foot has its shortcomings and an inch its strengths; everything has its own length and shortness."
+    },
+    {
+     "line": "用君之心，行君之意，龜策誠不能知事",
+     "en": "Use your own heart and carry out your own intention; the tortoise and the stalks truly cannot know this matter.",
+     "note": "Follow your own mind; the tortoise shell and stalks cannot actually decide this for you."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "太卜",
+     "en": "tai bu - Grand Diviner",
+     "note": "The official in charge of divination."
+    },
+    {
+     "term": "鄭詹尹",
+     "en": "Zheng Zhanyin - the diviner Zheng Zhanyin",
+     "note": "A name for the Grand Diviner; some think he is an invented figure."
+    },
+    {
+     "term": "端策拂龜",
+     "en": "duan ce fu gui - to straighten the stalks and brush the tortoise shell",
+     "note": "To set the yarrow stalks straight and wipe dust from the tortoise shell, in preparation to divine. Ce are the stalks; gui is the shell."
+    },
+    {
+     "term": "悃悃款款",
+     "en": "kun kun kuan kuan - sincere and earnest",
+     "note": "Honest and devoted."
+    },
+    {
+     "term": "送往勞來",
+     "en": "song wang lao lai - to see off and welcome",
+     "note": "To greet and send off visitors, meaning social flattery and entertaining."
+    },
+    {
+     "term": "哫訾栗斯，喔咿儒兒",
+     "en": "zu zi li si, wo yi ru er - fawning and cringing",
+     "note": "Describes grovelling and ingratiating behaviour."
+    },
+    {
+     "term": "突梯滑稽",
+     "en": "tu ti gu ji - smooth and slippery",
+     "note": "Rounded off, going along with the fashion, adapting to everything."
+    },
+    {
+     "term": "黃鐘毀棄，瓦釜雷鳴",
+     "en": "Huang Zhong hui qi, wa fu lei ming - the Yellow Bell is smashed, the clay pot thunders",
+     "note": "The Yellow Bell is a noble musical instrument and the clay pot a lowly cooking vessel; the saying means worthy men are cast aside while petty men prosper."
+    }
+   ],
+   "background": "The 'Bu Ju' (Divination) and 'Yu Fu' (The Fisherman) are usually credited to Qu Yuan, but the text speaks of 'Qu Yuan' in the third person, and many scholars think they were written later from his story and thought, or are accounts by people of Chu. The string of parallel questions influenced the elaborate style of later fu. 'An inch has its strengths and a foot its shortfalls' is a saying still used today."
+  },
+  "yufu": {
+   "summary": "A Chuci piece written as a dialogue between Qu Yuan and a fisherman. Qu Yuan says the whole world is muddy and he alone is clear, everyone is drunk and he alone is sober; the fisherman urges him to go with the times and not be so unbending. Qu Yuan answers that he would rather die than let his clean body gather the dust of the world, and the fisherman smiles and leaves singing the Canglang song. The two attitudes to life are set against each other, with strong tension.",
+   "translation": "After Qu Yuan was exiled, he wandered by the river pools, walking and chanting on the marsh bank, his face worn and his body wasted. A fisherman saw him and asked: \"Are you not the Grand Master of the Three Clans? What has brought you to this?\"\nQu Yuan said: \"The whole world is muddy and I alone am clear; everyone is drunk and I alone am sober. That is why I was exiled.\"\nThe fisherman said: \"The sage does not cling to things, but can move with the world. If the whole world is muddy, why not stir the mud and raise the waves? If everyone is drunk, why not eat the dregs and sip the thin wine? Why brood so deeply and hold yourself so high that you bring exile on yourself?\"\nQu Yuan said: \"I have heard that one who has just washed his hair must flick his cap, and one who has just bathed must shake out his clothes. How can I let a body so clear take in the filth of things? I would rather throw myself into the Xiang and be buried in the bellies of river fish than let my gleaming white be covered in the dust of the world.\"\nThe fisherman smiled, beat the oar and left, singing: \"When the water of Canglang is clear, I can wash my cap strings in it; when the water of Canglang is muddy, I can wash my feet in it.\" Then he went off and said no more to him.",
+   "keyLines": [
+    {
+     "line": "舉世皆濁我獨清，眾人皆醉我獨醒",
+     "en": "The whole world is muddy and I alone am clear; everyone is drunk and I alone am sober.",
+     "note": "The whole world is murky and only he is pure; everyone is muddled with drink and only he is awake."
+    },
+    {
+     "line": "聖人不凝滯於物，而能與世推移",
+     "en": "The sage does not cling to things, but can move with the world.",
+     "note": "A sage is not stuck on things and can change with the times; this is the fisherman's way of living."
+    },
+    {
+     "line": "新沐者必彈冠，新浴者必振衣",
+     "en": "One who has just washed his hair must flick his cap, and one who has just bathed must shake out his clothes.",
+     "note": "A person who has just washed his hair brushes his cap, and one who has bathed shakes out his clothes: neither wants a clean body to pick up dust."
+    },
+    {
+     "line": "寧赴湘流，葬於江魚之腹中",
+     "en": "I would rather throw myself into the Xiang and be buried in the bellies of river fish.",
+     "note": "He would rather drown in the Xiang and feed the fish than go along with the filth."
+    },
+    {
+     "line": "滄浪之水清兮，可以濯吾纓；滄浪之水濁兮，可以濯吾足",
+     "en": "When the water of Canglang is clear, I can wash my cap strings in it; when the water of Canglang is muddy, I can wash my feet in it.",
+     "note": "If the water is clear one washes the cap strings; if muddy, the feet. It means adapting to circumstances and being content wherever one is."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "三閭大夫",
+     "en": "San Lu dafu - Grand Master of the Three Clans",
+     "note": "The post in Chu that oversaw the three royal clans of Qu, Jing and Zhao; Qu Yuan held it."
+    },
+    {
+     "term": "凝滯",
+     "en": "ning zhi - to cling, to be stuck",
+     "note": "To be inflexible and unable to move on."
+    },
+    {
+     "term": "淈其泥而揚其波",
+     "en": "gu qi ni er yang qi bo - to stir the mud and raise the waves",
+     "note": "To churn up mud and make waves, meaning to go with the flow."
+    },
+    {
+     "term": "餔其糟而歠其釃",
+     "en": "bu qi zao er chuo qi li - to eat the dregs and sip the thin wine",
+     "note": "To eat the lees and drink the weak wine, meaning to get drunk along with everyone else (li is thin wine)."
+    },
+    {
+     "term": "察察、汶汶",
+     "en": "cha cha, men men - spotless, murky",
+     "note": "Cha cha is clean and pure; wen wen is dirty and dim."
+    },
+    {
+     "term": "鼓枻",
+     "en": "gu yi - to beat the oar",
+     "note": "To strike the oar against the boat, or to row."
+    },
+    {
+     "term": "滄浪",
+     "en": "Canglang - the Canglang water",
+     "note": "A river name, in the lower Han, and also a general term for clear water."
+    },
+    {
+     "term": "纓",
+     "en": "ying - cap string",
+     "note": "The ribbon that ties a cap."
+    }
+   ],
+   "background": "The 'Yu Fu' is also usually credited to Qu Yuan, but it is told in the third person like 'Bu Ju', and modern scholars mostly doubt that he wrote it. The fisherman became a lasting image of the recluse. The lines 「滄浪之水清兮，可以濯吾纓」 (\"when the water of Canglang is clear, I can wash my cap strings in it\") also appear in the 'Song of the Boy' recorded in the Mencius, showing the verse was an old folk song. Qu Yuan's reply stands for his refusal to go with the current."
+  }
+ }
+}

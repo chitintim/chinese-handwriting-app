@@ -2,15 +2,18 @@
  "id": "chunye-yan",
  "title": {
   "trad": "春夜宴從弟桃花園序",
-  "simp": "春夜宴从弟桃花园序"
+  "simp": "春夜宴从弟桃花园序",
+  "en": "Spring Night Banquet in the Peach Garden"
  },
  "author": {
   "trad": "李白",
-  "simp": "李白"
+  "simp": "李白",
+  "en": "Li Bai"
  },
  "dynasty": {
   "trad": "唐",
-  "simp": "唐"
+  "simp": "唐",
+  "en": "Tang"
  },
  "source": "https://zh.wikisource.org/wiki/春夜宴桃李園序",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/春夜宴桃李園序",
@@ -20,7 +23,8 @@
    "id": "main",
    "title": {
     "trad": "春夜宴從弟桃花園序",
-    "simp": "春夜宴从弟桃花园序"
+    "simp": "春夜宴从弟桃花园序",
+    "en": "Spring Night Banquet in the Peach Garden"
    },
    "body": {
     "trad": "夫天地者，萬物之逆旅也；光陰者，百代之過客也。而浮生若夢，為歡幾何？古人秉燭夜遊，良有以也。況陽春召我以煙景，大塊假我以文章；會桃花之芳園，序天倫之樂事。群季俊秀，皆為惠連；吾人詠歌，獨慚康樂。幽賞未已，高談轉清。開瓊筵以坐花，飛羽觴而醉月。不有佳詠，何伸雅懷？如詩不成，罰依金谷酒數。",

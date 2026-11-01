@@ -1,0 +1,2158 @@
+{
+ "id": "pianpang-bushou",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "shui": {
+   "summary": "The mark 氵 is how 「水」 (water) is written as a left-hand component. It is called the three-dot water radical and builds characters to do with water, liquids, rivers, seas and flowing.",
+   "translation": "The character 「水」 began as a picture of flowing water; in oracle bone script it shows a winding stream with drops of spray. As a component it usually stands on the left, and its strokes are reduced to three dots, hence 'three-dot water'. Write the three dots from top to bottom along a slight curve that hollows to the left. The upper two dots are small, and the third becomes a rising stroke that flicks out to the upper right to answer the part on the right. Keep the whole narrow, within about a third of the width of the character, and do not crowd the right-hand part. Common faults: setting the three dots in a straight line, making all the dots the same size, and making the last rising stroke so long that it presses on the right-hand part.",
+   "keyLines": [
+    {
+     "line": "江河湖",
+     "en": "Jiang, he, hu - 'river', 'river', 'lake'.",
+     "note": "All three characters have 氵 on the left as their meaning part. Keep 氵 narrow and upright, with the right-hand part a little taller and larger."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "江",
+     "en": "jiang - great river",
+     "note": "A large river, especially the Yangtze; the water radical shows that it is a river."
+    },
+    {
+     "term": "河",
+     "en": "he - river",
+     "note": "A river, especially the Yellow River; the water radical shows river water."
+    },
+    {
+     "term": "湖",
+     "en": "hu - lake",
+     "note": "A large body of water; the water radical shows water."
+    },
+    {
+     "term": "海",
+     "en": "hai - sea",
+     "note": "The ocean; the water radical shows a wide expanse of water."
+    },
+    {
+     "term": "流",
+     "en": "liu - to flow",
+     "note": "Water moving; the water radical shows a liquid flowing."
+    },
+    {
+     "term": "清",
+     "en": "qing - clear",
+     "note": "Water that is not muddy; the water radical shows clean water."
+    },
+    {
+     "term": "潮",
+     "en": "chao - tide",
+     "note": "The rise and fall of sea water; the water radical shows sea water."
+    }
+   ],
+   "background": "氵 developed from 「水」 and belongs to Kangxi radical no. 85, the water radical. Characters under it are mostly about rivers, lakes, seas, liquids, flowing and dampness, and it is one of the radicals with the most characters in Chinese."
+  },
+  "ren": {
+   "summary": "The mark 亻 is how 「人」 (person) is written as a left-hand component. It is called the single-person radical and builds characters to do with people, their status, actions and character.",
+   "translation": "The character 「人」 is a picture of a person standing sideways, and in oracle bone script a figure with a bent back and hanging arms can be seen. As a component it stands on the left and is written as a left-falling stroke plus a vertical, called the single-person radical. The left-falling stroke should be short and slanting, and its start is roughly level with the top of the right-hand part or a little lower. The vertical starts a little below the middle of the left-falling stroke and drops straight down; it may be slightly longer than the right-hand part, giving the sense of a person standing upright. The radical must be narrow and tall, about a quarter of the width of the character, and the two strokes should not join. Common faults: a left-falling stroke so long it presses over the right-hand part, and a curved vertical.",
+   "keyLines": [
+    {
+     "line": "你他仁",
+     "en": "Ni, ta, ren - 'you', 'he', 'humane'.",
+     "note": "All three are 亻 on the left with a part on the right. The right parts of 你 and 他 are wide, so 亻 has to give way and be narrow and tall."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "你",
+     "en": "ni - you",
+     "note": "The second person pronoun, referring to the person spoken to."
+    },
+    {
+     "term": "他",
+     "en": "ta - he (third person)",
+     "note": "The third person pronoun, referring to another person."
+    },
+    {
+     "term": "仁",
+     "en": "ren - humaneness",
+     "note": "Kindness and affection between people; the character is made of 'person' and 'two'."
+    },
+    {
+     "term": "作",
+     "en": "zuo - to make",
+     "note": "To make something or do something; it relates to what people do."
+    },
+    {
+     "term": "住",
+     "en": "zhu - to live",
+     "note": "To dwell or to stay; the place where a person stays."
+    },
+    {
+     "term": "信",
+     "en": "xin - to trust",
+     "note": "Honesty and belief; the character is made of 'person' and 'speech'."
+    },
+    {
+     "term": "休",
+     "en": "xiu - to rest",
+     "note": "To rest; a person leaning against a tree."
+    }
+   ],
+   "background": "亻 comes from 「人」 and belongs to Kangxi radical no. 9, the person radical. This radical has a very large number of characters, mostly to do with a person's status, actions, virtue and relations, such as 傳, 傑, 位 and 住."
+  },
+  "mu": {
+   "summary": "木 is a picture of a tree. As a radical it can stand on the left, the bottom or the top, and builds characters to do with trees, plants and timber.",
+   "translation": "In oracle bone script 「木」 is a picture of a tree, with branches above and roots below. As a left-hand component it is called the wood radical, and its last right-falling stroke becomes a dot to leave space on the right. The horizontal should be fairly short, the vertical drops straight through the centre, and the left-falling stroke and the dot are balanced beneath the horizontal. The wood radical is narrow and tall as a whole, and the part on its right is a little higher and larger. When 木 is at the bottom of a character, as in 桑, the right-falling stroke stays open to support what is above. When it is doubled, as in 林 and 森, the parts yield to each other: in 林 the left is small and the right large, and in 森 the top is small and the bottom large, so that the layout is like the character 品. Common faults: leaving the right-falling stroke on the left-hand wood radical, making the wood radical as wide as the right-hand part, and a vertical that is not straight.",
+   "keyLines": [
+    {
+     "line": "林森",
+     "en": "Lin, sen - 'woods', 'forest'.",
+     "note": "林 is two trees side by side, the left one narrow and the right one wide; 森 is three trees, one on top in the middle and two below on the left and right."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "林",
+     "en": "lin - woods",
+     "note": "A place where trees grow in clumps; two trees standing together."
+    },
+    {
+     "term": "森",
+     "en": "sen - forest",
+     "note": "Trees growing thickly and in great numbers; three trees piled together."
+    },
+    {
+     "term": "桃",
+     "en": "tao - peach",
+     "note": "The peach tree; the wood radical shows a tree."
+    },
+    {
+     "term": "李",
+     "en": "li - plum",
+     "note": "The plum tree; the wood radical shows a tree, and the word can also mean fruit trees in general."
+    },
+    {
+     "term": "松",
+     "en": "song - pine",
+     "note": "The pine, an evergreen tree."
+    },
+    {
+     "term": "柏",
+     "en": "bai - cypress",
+     "note": "The cypress, an evergreen tree."
+    },
+    {
+     "term": "柳",
+     "en": "liu - willow",
+     "note": "The willow, whose slender branches droop."
+    }
+   ],
+   "background": "木 belongs to Kangxi radical no. 75, the wood radical, and is one of the radicals with the most characters. Characters under it are mostly about trees, plants, wooden objects or buildings, such as 樹, 桌, 椅, 橋 and 梁."
+  },
+  "kou": {
+   "summary": "口 is a picture of a mouth. As a radical it builds characters to do with the mouth, speaking, eating and drinking, and sound.",
+   "translation": "In oracle bone script 「口」 is a picture of an open mouth. As a left-hand component it is called the mouth radical; it should be written small and a little high, roughly level with the upper half of the right-hand part, and not as tall as it. The order of the three strokes is the left vertical first, then the turning horizontal, then the bottom horizontal, and the box must be closed. The square is slightly flattened and kept a little apart from the right-hand part, not joined to it. 口 also often appears at the bottom of a character, as in 哭 and 吾, where it should be written steady and solid. Common faults: a mouth radical that is too big, a box that is not closed, and one that is too close to the right-hand part.",
+   "keyLines": [
+    {
+     "line": "吃喝呼",
+     "en": "Chi, he, hu - 'eat', 'drink', 'call'.",
+     "note": "The mouth radical in all three stands on the left and a little high. The mouth should be small and the right-hand part larger, giving a small left, large right structure."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "吃",
+     "en": "chi - to eat",
+     "note": "To take food; the mouth shows that the mouth is used."
+    },
+    {
+     "term": "喝",
+     "en": "he - to drink",
+     "note": "To drink; also to shout aloud."
+    },
+    {
+     "term": "呼",
+     "en": "hu - to call",
+     "note": "To breathe out or to shout; the mouth shows sound."
+    },
+    {
+     "term": "吸",
+     "en": "xi - to breathe in",
+     "note": "To draw in through the mouth or nose; the mouth shows that the action involves the mouth."
+    },
+    {
+     "term": "吟",
+     "en": "yin - to chant",
+     "note": "To recite aloud; the mouth shows making a sound."
+    },
+    {
+     "term": "問",
+     "en": "wen - to ask",
+     "note": "To ask a question; the mouth shows speaking."
+    },
+    {
+     "term": "唱",
+     "en": "chang - to sing",
+     "note": "To sing; the mouth shows making a sound."
+    },
+    {
+     "term": "哭",
+     "en": "ku - to cry",
+     "note": "To make a sound and shed tears from sorrow."
+    }
+   ],
+   "background": "口 belongs to Kangxi radical no. 30, the mouth radical, which has a great many characters. Characters under it are mostly about the mouth, speaking, making sounds, and eating and drinking, though in a few the mouth has no real meaning."
+  },
+  "shou": {
+   "summary": "The mark 扌 is how 「手」 (hand) is written as a left-hand component. It is called the hand radical (tishou) and builds characters to do with movements of the hand.",
+   "translation": "The character 「手」 is a picture of an open hand with five fingers. As a left-hand component it is written 扌, in three strokes in the order horizontal, vertical hook and rising stroke. The horizontal is short; the vertical hook goes straight down and flicks to the upper left at the foot; the last stroke is a rising stroke from lower left to upper right that answers the right-hand part, and should not sit too close to it. The radical is narrow and tall, and the hook and the rising stroke should both be light and quick. Take care that the hook of the vertical is not too long and the rising stroke not too flat. Common faults: running the three strokes together into a lump, a vertical with no hook, and a rising stroke so long it presses on the right-hand part.",
+   "keyLines": [
+    {
+     "line": "打扶拉",
+     "en": "Da, fu, la - 'hit', 'support', 'pull'.",
+     "note": "All three are the hand radical with a part on the right. 扌 is narrow and tall, the vertical hook is straight, and the rising stroke goes to the upper right and answers the part on the right."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "打",
+     "en": "da - to hit",
+     "note": "To strike or knock; the character is made of 'hand' and 'ding'."
+    },
+    {
+     "term": "扶",
+     "en": "fu - to support",
+     "note": "To hold up with the hand so that something does not fall."
+    },
+    {
+     "term": "拉",
+     "en": "la - to pull",
+     "note": "To draw something towards oneself with force."
+    },
+    {
+     "term": "持",
+     "en": "chi - to hold",
+     "note": "To grip or keep hold of."
+    },
+    {
+     "term": "拿",
+     "en": "na - to take",
+     "note": "To take or hold in the hand; the lower part of the character is 'hand'."
+    },
+    {
+     "term": "指",
+     "en": "zhi - finger",
+     "note": "A finger, and also to point to a place."
+    },
+    {
+     "term": "推",
+     "en": "tui - to push",
+     "note": "To push forward with the hand."
+    },
+    {
+     "term": "提",
+     "en": "ti - to carry",
+     "note": "To carry hanging from the hand, and also to raise."
+    }
+   ],
+   "background": "扌 comes from the hand radical, and Kangxi radical no. 64 is the hand radical. Characters under it are mostly about movements, skills and handling by the hand, such as 握, 擊, 揮, 持 and 捧."
+  },
+  "cao": {
+   "summary": "The mark 艹 is how 「艸」 (grass) is written as a top component. It is called the grass radical (caozitou) and builds characters to do with grass, flowers and plants.",
+   "translation": "The character 「艸」 is a picture of two small shoots of grass, which were originally side by side. As a head component it is written 艹 and put at the top of the character. Its horizontal should be long, covering the part beneath, and the two verticals stand apart on the left and right with a space between them. They may lean slightly inward or be parallel, but should be symmetrical and not too tall, so as not to squeeze the space for the part below. The grass radical is wide and flat as a whole, and the part beneath should sit steadily at the centre. Common faults: a horizontal that is too short, verticals that are too long, verticals squeezed together in the middle, and too wide a gap between 艹 and the part below.",
+   "keyLines": [
+    {
+     "line": "花草茶",
+     "en": "Hua, cao, cha - 'flower', 'grass', 'tea'.",
+     "note": "All three have 艹 as their head. Its horizontal spreads wide to cover, and the 化, 早 and 余 beneath sit in the middle as support."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "花",
+     "en": "hua - flower",
+     "note": "The bloom of a plant; the grass radical shows a plant."
+    },
+    {
+     "term": "草",
+     "en": "cao - grass",
+     "note": "A herbaceous plant; the grass radical shows grasses."
+    },
+    {
+     "term": "茶",
+     "en": "cha - tea",
+     "note": "The tea plant and its leaves; the grass radical shows a plant."
+    },
+    {
+     "term": "菜",
+     "en": "cai - vegetable",
+     "note": "A vegetable; the grass radical shows a herbaceous plant."
+    },
+    {
+     "term": "荷",
+     "en": "he - lotus",
+     "note": "The lotus, a water plant."
+    },
+    {
+     "term": "葉",
+     "en": "ye - leaf",
+     "note": "The leaf of a plant."
+    },
+    {
+     "term": "蘭",
+     "en": "lan - orchid",
+     "note": "The orchid, with a fine fragrance."
+    },
+    {
+     "term": "菊",
+     "en": "ju - chrysanthemum",
+     "note": "The chrysanthemum, which blooms in autumn."
+    }
+   ],
+   "background": "艹 comes from 艸 and belongs to Kangxi radical no. 140, the grass radical. Characters under it are very many, mostly about flowers and grasses, vegetables and fruit, medicines and plants, and it is one of the most common top radicals."
+  },
+  "chuo": {
+   "summary": "The mark 辶 is how the radical 「辵」 is written. It is called zouzhi (the walking radical) and builds characters to do with walking, roads and movement.",
+   "translation": "辶 developed from 「辵」, which joins 「彳」 and 「止」 and shows walking on a road. It stands at the lower left of a character and wraps around the part at the upper right. The stroke order is first the dot at the top, then the turning horizontal with a second turn and a left-falling stroke, and finally the long flat right-falling stroke. The flat right-falling stroke is the soul of the radical: it starts light, grows heavier as it goes right, and at the end presses and then pushes out in a flat foot. Write it wide and long to support the part above and to the right. Note that the part at the upper right is written first, and 辶 afterwards. Common faults: a flat right-falling stroke that is too short, a foot that turns up, and a dot and turn that do not answer each other.",
+   "keyLines": [
+    {
+     "line": "道過遠",
+     "en": "Dao, guo, yuan - 'road', 'pass', 'far'.",
+     "note": "In all three, 辶 is at the lower left and carries the part at the upper right (首, 咼, 袁). The flat right-falling stroke must be wide and long to carry what is above."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "道",
+     "en": "dao - road",
+     "note": "A road, and also a method or a principle."
+    },
+    {
+     "term": "過",
+     "en": "guo - to pass",
+     "note": "To go past, or to exceed."
+    },
+    {
+     "term": "遠",
+     "en": "yuan - far",
+     "note": "A long distance, the opposite of near."
+    },
+    {
+     "term": "近",
+     "en": "jin - near",
+     "note": "A short distance, the opposite of far."
+    },
+    {
+     "term": "送",
+     "en": "song - to send",
+     "note": "To take a person or thing to a place."
+    },
+    {
+     "term": "迎",
+     "en": "ying - to welcome",
+     "note": "To receive someone, by going towards the one who comes."
+    },
+    {
+     "term": "迷",
+     "en": "mi - to be lost",
+     "note": "To lose one's way and be unable to tell where one is."
+    },
+    {
+     "term": "追",
+     "en": "zhui - to chase",
+     "note": "To run after someone behind them."
+    }
+   ],
+   "background": "辶 belongs to Kangxi radical no. 162, the walking radical. Characters under it are mostly about walking, roads, movement and distance, such as 通, 運, 達, 遊 and 逃."
+  },
+  "yan": {
+   "summary": "言 is a picture of speaking. As a left-hand component it is called the speech radical and builds characters to do with words, speech and writing.",
+   "translation": "The character 「言」 is connected with the mouth and tongue, and shows speaking. As a component it usually stands on the left and keeps its strokes whole: a dot at the top, three horizontals below it, and a mouth at the bottom. As a left-hand component it must be narrow and tall, its horizontals short and slightly rising to the right, and the mouth at the foot should be small and not level with the right-hand part. The right-hand part is comparatively wide and large. When 言 is at the bottom of a character, as in 警, it is spread out and steady. Common faults: a speech radical that is too wide, horizontals that are too long, a mouth that is too big, and a last horizontal that touches the right-hand part.",
+   "keyLines": [
+    {
+     "line": "說話語",
+     "en": "Shuo, hua, yu - 'say', 'words', 'language'.",
+     "note": "All three have 言 as their left-hand component. The speech radical is narrow and a little high, and the right-hand part is larger, making a narrow left, wide right structure."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "說",
+     "en": "shuo - to say",
+     "note": "To speak or to explain."
+    },
+    {
+     "term": "話",
+     "en": "hua - words",
+     "note": "Speech, or talk."
+    },
+    {
+     "term": "語",
+     "en": "yu - language",
+     "note": "Speech, or a language."
+    },
+    {
+     "term": "詩",
+     "en": "shi - poem",
+     "note": "Poetry; the speech radical shows spoken or written words."
+    },
+    {
+     "term": "請",
+     "en": "qing - to request",
+     "note": "To ask for something, and also a polite word for 'please'."
+    },
+    {
+     "term": "謝",
+     "en": "xie - to thank",
+     "note": "To thank or give thanks."
+    },
+    {
+     "term": "論",
+     "en": "lun - to discuss",
+     "note": "To discuss or debate."
+    },
+    {
+     "term": "讀",
+     "en": "du - to read",
+     "note": "To read aloud, or to read."
+    }
+   ],
+   "background": "言 belongs to Kangxi radical no. 149, the speech radical. Characters under it are mostly about speaking, language, writing and comment, such as 談, 課, 誰, 謙 and 誠."
+  },
+  "xin": {
+   "summary": "The mark 忄 is how 「心」 (heart) is written as a left-hand component. It is called the vertical heart radical (shuxinpang) and builds characters to do with feelings, thought and emotion.",
+   "translation": "The character 「心」 is a picture of the heart, and the ancients thought that the heart was where thought and feeling were found. As a left-hand component it is written 忄, with the order left dot, right dot, vertical, and is called the vertical heart radical. The two dots stand apart on the left and right, with the left dot shorter and the right dot slightly higher and longer, and the vertical goes straight down between them, with a dot on each side. The radical is narrow and tall, about a quarter of the width of the character. The two dots should answer the vertical but not join it; the vertical may be slightly longer than the right-hand part. Common faults: two dots of the same size and at the same height, a slanting vertical, and a radical so wide that it squeezes the right-hand side.",
+   "keyLines": [
+    {
+     "line": "情怕快",
+     "en": "Qing, pa, kuai - 'feeling', 'fear', 'fast'.",
+     "note": "In all three the vertical heart radical stands on the left, narrow and upright, with a larger part on the right."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "情",
+     "en": "qing - feeling",
+     "note": "Emotion or mood."
+    },
+    {
+     "term": "怕",
+     "en": "pa - to fear",
+     "note": "To be afraid or worried."
+    },
+    {
+     "term": "快",
+     "en": "kuai - fast",
+     "note": "To be glad, or speed that is high."
+    },
+    {
+     "term": "慢",
+     "en": "man - slow",
+     "note": "Speed that is low; slow."
+    },
+    {
+     "term": "憶",
+     "en": "yi - to recall",
+     "note": "To think back and remember."
+    },
+    {
+     "term": "懷",
+     "en": "huai - to cherish",
+     "note": "To think fondly of, and also the bosom."
+    },
+    {
+     "term": "忙",
+     "en": "mang - busy",
+     "note": "Having much to do and no free time."
+    },
+    {
+     "term": "悟",
+     "en": "wu - to realise",
+     "note": "To understand, or to awaken."
+    }
+   ],
+   "background": "忄 developed from 心 and belongs to Kangxi radical no. 61, the heart radical. Characters under it are mostly about feeling, thought and character. The heart is also often written at the foot of a character, as in 憂, 思 and 念, where it keeps its original form."
+  },
+  "ri": {
+   "summary": "日 is a picture of the sun. As a radical it builds characters to do with the sun, days, time and light.",
+   "translation": "In oracle bone script 「日」 is a picture of a round sun with a dot in the middle. In regular script it is written as a square with a horizontal inside it. As a left-hand component it is called the sun radical and should be written narrow and tall, a little higher and smaller than the right-hand part; at the top of a character, as in 早 and 星, it is written flat. Write the left vertical first, then the turning horizontal, then the middle horizontal and the bottom horizontal, and close the box. Take care that the bottom horizontal rises a little to the right, to answer the right-hand part. Common faults: a sun radical that is too wide, a box that is not closed, a middle horizontal that is off-centre, and a radical too close to the right-hand part.",
+   "keyLines": [
+    {
+     "line": "明暗晴",
+     "en": "Ming, an, qing - 'bright', 'dark', 'clear'.",
+     "note": "In all three the sun radical is on the left, narrow and a little high, and the parts on the right, 月, 音 and 青, are comparatively wide."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "明",
+     "en": "ming - bright",
+     "note": "Light and clear; made of 'sun' and 'moon'."
+    },
+    {
+     "term": "暗",
+     "en": "an - dark",
+     "note": "Not enough light, the opposite of bright."
+    },
+    {
+     "term": "晴",
+     "en": "qing - fine weather",
+     "note": "A sky with no cloud and plenty of sunlight."
+    },
+    {
+     "term": "時",
+     "en": "shi - time",
+     "note": "Time, or a time."
+    },
+    {
+     "term": "早",
+     "en": "zao - early",
+     "note": "The early morning of a day."
+    },
+    {
+     "term": "春",
+     "en": "chun - spring",
+     "note": "One of the four seasons, when the sunlight is warm."
+    },
+    {
+     "term": "晚",
+     "en": "wan - evening",
+     "note": "The end of the day or the night."
+    },
+    {
+     "term": "暖",
+     "en": "nuan - warm",
+     "note": "Warm."
+    }
+   ],
+   "background": "日 belongs to Kangxi radical no. 72, the sun radical. Characters under it are mostly about the sun, daytime, time and weather, such as 昨, 時, 晨, 暑 and 晝."
+  },
+  "yue": {
+   "summary": "月 has two sources among radicals: one is the moon, the other is the abbreviation of 肉 (flesh), the 'flesh moon'. Both are written 月, with the same shape and different meanings.",
+   "translation": "The character 「月」 is a picture of a crescent moon. As a component, characters that come from the moon are mostly about time and light, such as 期, 望 and 朗; the 'flesh moon', which comes from 「肉」, is about the body and its organs, such as 胸, 肝, 胃, 腹 and 臂. The two forms are almost the same and are told apart only when looking a character up in a dictionary. In writing, 月 as a left-hand component should be narrow and tall, its left-falling stroke fairly straight, the turning hook on the right, and the two short horizontals inside spread evenly without touching the left-falling stroke. At the bottom of a character, as in 腹 and 臂, it is written flat and open. Common faults: a moon radical that is too wide, two inner horizontals that are too close, and a turning hook with no hook.",
+   "keyLines": [
+    {
+     "line": "朋服有",
+     "en": "Peng, fu, you - 'friend', 'clothes', 'have'.",
+     "note": "The moon component stands in different places in the three: on the left in 朋 and 服, and at the bottom in 有. Mind its width in each."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "朋",
+     "en": "peng - friend",
+     "note": "A friend; the form comes from two strings of cowries, and is now put under the moon radical."
+    },
+    {
+     "term": "服",
+     "en": "fu - clothes",
+     "note": "Clothing, or to submit."
+    },
+    {
+     "term": "有",
+     "en": "you - to have",
+     "note": "To possess, the opposite of not having."
+    },
+    {
+     "term": "期",
+     "en": "qi - period",
+     "note": "An appointed time or date; the moon in the character is tied to time."
+    },
+    {
+     "term": "望",
+     "en": "wang - to gaze",
+     "note": "To look into the distance, or to hope; the moon in the character is the moon itself."
+    },
+    {
+     "term": "朗",
+     "en": "lang - bright",
+     "note": "Bright and clear; made of 良 and 月."
+    },
+    {
+     "term": "胸",
+     "en": "xiong - chest",
+     "note": "The chest of a person; here 月 is the flesh radical."
+    },
+    {
+     "term": "腹",
+     "en": "fu - belly",
+     "note": "The belly of a person; here 月 is the flesh radical."
+    }
+   ],
+   "background": "月 is Kangxi radical no. 74, and the flesh moon belongs to the flesh radical, Kangxi radical no. 130. As a simple rule, characters about the moon and time belong to the moon radical, and those about parts of the body belong to the flesh radical."
+  },
+  "huo": {
+   "summary": "火 is a picture of flames. As a radical it can be written as the fire radical on the left, or, at the bottom of a character, as the four dots 灬, and builds characters to do with fire, heat, burning and cooking.",
+   "translation": "The character 「火」 is a picture of flames rising. As a left-hand component it is called the fire radical, and its last right-falling stroke becomes a dot, to leave space on the right, as in 燈, 燒 and 煙. At the bottom of a character the fire becomes the four dots 「灬」. The four dots run from left to right in a line that arcs slightly upward, evenly spaced, symmetrical on the left and right, with the two ends spreading outwards to support what is above. The four dots do not have to be exactly the same size: the dots at the ends are a little smaller and those in the middle slightly heavier. Common faults: four dots in a straight line, dots that are too big and round, and a fire radical whose right-falling stroke is not changed to a dot.",
+   "keyLines": [
+    {
+     "line": "炎燈燒",
+     "en": "Yan, deng, shao - 'flame', 'lamp', 'burn'.",
+     "note": "炎 is two fires piled one on the other; in 燈 and 燒 the fire radical is on the left, narrow and strong, and its last stroke is a dot."
+    },
+    {
+     "line": "燕然煮",
+     "en": "Yan, ran, zhu - 'swallow', 'so', 'boil'.",
+     "note": "All three have the four dots 灬 below, set in an arc to support the part above."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "炎",
+     "en": "yan - flame",
+     "note": "Fire burning; made of two fires."
+    },
+    {
+     "term": "燈",
+     "en": "deng - lamp",
+     "note": "A tool for light; the fire radical shows giving light."
+    },
+    {
+     "term": "燒",
+     "en": "shao - to burn",
+     "note": "To burn, or to set on fire."
+    },
+    {
+     "term": "熱",
+     "en": "re - hot",
+     "note": "A high temperature, the opposite of cold."
+    },
+    {
+     "term": "照",
+     "en": "zhao - to shine",
+     "note": "Light shining on something; 灬 shows firelight."
+    },
+    {
+     "term": "煮",
+     "en": "zhu - to boil",
+     "note": "To heat in water until cooked."
+    },
+    {
+     "term": "點",
+     "en": "dian - dot",
+     "note": "A small mark, or a drop; the bottom of the character is the four dots."
+    },
+    {
+     "term": "熊",
+     "en": "xiong - bear",
+     "note": "The name of an animal; the four dots at the bottom here do not mean fire."
+    }
+   ],
+   "background": "火 belongs to Kangxi radical no. 86, the fire radical. Characters under it are mostly about flames, burning, light and heat, and cooking. In 燕 and some other characters 灬 does not mean fire; the four dots of 燕 developed from the shape of a swallow's tail."
+  },
+  "jin": {
+   "summary": "金 is the general word for metal. As a left-hand component it is written 釒, called the metal radical, and builds characters to do with metals, money and metal objects.",
+   "translation": "The character 「金」 is the general word for metals, and in ancient times often meant copper in particular. As a left-hand component it is written 釒: at the top is a pointed-roof left-falling stroke and a dot, the horizontals in the middle grow from short to long, the vertical is in the centre, and the last stroke is a rising stroke. The metal radical is narrow and tall, about a quarter of the width of the character, small and pointed at the top, with short horizontals, and the final rising stroke flicks to the upper right to answer the right-hand part. In writing, space the strokes evenly so that they do not crowd into a lump. When 金 is at the bottom of a character, as in 鑫, it keeps its full form. Common faults: a metal radical that is too wide, horizontals that are too long, and a rising stroke that is too flat.",
+   "keyLines": [
+    {
+     "line": "針鈴銀",
+     "en": "Zhen, ling, yin - 'needle', 'bell', 'silver'.",
+     "note": "In all three the metal radical is on the left, narrow and compact, and the last stroke rises to the upper right to answer the part on the right."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "針",
+     "en": "zhen - needle",
+     "note": "A metal needle for sewing or medicine."
+    },
+    {
+     "term": "鈴",
+     "en": "ling - bell",
+     "note": "A bell, a ringing object made of metal."
+    },
+    {
+     "term": "銀",
+     "en": "yin - silver",
+     "note": "A white metal, and also money."
+    },
+    {
+     "term": "銅",
+     "en": "tong - copper",
+     "note": "A reddish metal that can be cast into objects."
+    },
+    {
+     "term": "鐘",
+     "en": "zhong - bell",
+     "note": "A ringing object made of metal; it also means a clock."
+    },
+    {
+     "term": "鏡",
+     "en": "jing - mirror",
+     "note": "A bright metal surface used to see one's reflection."
+    },
+    {
+     "term": "鐵",
+     "en": "tie - iron",
+     "note": "A hard metal, used to cast tools and implements."
+    },
+    {
+     "term": "錢",
+     "en": "qian - money",
+     "note": "Currency, or money."
+    }
+   ],
+   "background": "金 belongs to Kangxi radical no. 167, the metal radical. Characters under it are mostly about metals, utensils, currency and casting, and it is one of the radicals with many later phonetic compounds."
+  },
+  "tu": {
+   "summary": "土 is a picture of earth. As a radical it builds characters to do with soil, the ground, buildings and landforms.",
+   "translation": "The character 「土」 is a picture of a heap of earth rising from the ground. As a left-hand component it is called the earth radical, and its long bottom horizontal becomes a rising stroke, to leave room on the right, as in 地, 坡 and 場. Write the short horizontal first, then the vertical, then the rising stroke, which flicks from lower left to upper right. The earth radical should be narrow and tall, the vertical straight, the upper horizontal short and the lower a little longer, but the rising stroke should be short and light. At the bottom of a character, as in 坐 and 堅, 土 stays whole, and its lower horizontal is slightly longer to support what is above. Common faults: an earth radical that is too wide, a bottom horizontal that is not changed to a rising stroke, and a radical too close to the right-hand part.",
+   "keyLines": [
+    {
+     "line": "地坡場",
+     "en": "Di, po, chang - 'earth', 'slope', 'field'.",
+     "note": "All three have the earth radical on the left, narrow and tall, with the last horizontal turned into a rising stroke to the upper right."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "地",
+     "en": "di - earth",
+     "note": "The earth, or land."
+    },
+    {
+     "term": "坡",
+     "en": "po - slope",
+     "note": "Ground that slants."
+    },
+    {
+     "term": "場",
+     "en": "chang - field",
+     "note": "An open space, or a place."
+    },
+    {
+     "term": "城",
+     "en": "cheng - city wall",
+     "note": "A city wall, and also a city."
+    },
+    {
+     "term": "墓",
+     "en": "mu - tomb",
+     "note": "A place where the dead are buried."
+    },
+    {
+     "term": "塔",
+     "en": "ta - tower",
+     "note": "A tall building."
+    },
+    {
+     "term": "塊",
+     "en": "kuai - lump",
+     "note": "A lump of earth, and later any lump-shaped thing."
+    },
+    {
+     "term": "坐",
+     "en": "zuo - to sit",
+     "note": "To sit down; the lower part of the character is 土."
+    }
+   ],
+   "background": "土 belongs to Kangxi radical no. 32, the earth radical. Characters under it are mostly about soil, landforms, buildings and burial, such as 堂, 堤, 境, 牆 and 基."
+  },
+  "he": {
+   "summary": "禾 is a picture of a grain plant. As a radical it builds characters to do with cereals, grain and farm work.",
+   "translation": "The character 「禾」 is a picture of a ripe cereal plant bowing its head, with a drooping ear at the top. As a left-hand component it is called the grain radical (hemupang), and its last right-falling stroke becomes a dot, to leave room on the right, as in 秋, 科 and 租. First write the left-falling stroke for the ear, then the horizontal; the vertical goes straight through, and the left-falling stroke and the dot are balanced under the horizontal. The grain radical is narrow and tall, about a quarter of the width of the character, and the left-falling stroke and horizontal must be steady. When 禾 is at the top, as in 秀 and 秦, it is written open, and the right-falling stroke is not changed. Common faults: confusing 禾 with 木 (禾 has a left-falling stroke on top for the ear), a grain radical that is too wide, and a right-falling stroke not changed to a dot.",
+   "keyLines": [
+    {
+     "line": "秋秀科",
+     "en": "Qiu, xiu, ke - 'autumn', 'fine', 'subject'.",
+     "note": "The grain component stands in different places: left in 秋 and 科, top in 秀. The left component is narrow and tall and its last stroke becomes a dot."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "秋",
+     "en": "qiu - autumn",
+     "note": "The season when crops ripen."
+    },
+    {
+     "term": "秀",
+     "en": "xiu - to flower",
+     "note": "Grain putting out ears and blossoms; later it means outstanding or lovely."
+    },
+    {
+     "term": "科",
+     "en": "ke - subject, category",
+     "note": "A class or a branch of study; the character is made of grain and a measure, and has to do with measuring grain."
+    },
+    {
+     "term": "秦",
+     "en": "Qin - Qin",
+     "note": "The name of an ancient state; the lower part of the character is 禾."
+    },
+    {
+     "term": "租",
+     "en": "zu - rent",
+     "note": "The renting of land and the rent paid; originally land tax."
+    },
+    {
+     "term": "程",
+     "en": "cheng - journey",
+     "note": "A distance, or regulations; the character has the grain radical, and in ancient times it was tied to measuring."
+    },
+    {
+     "term": "稱",
+     "en": "cheng - to weigh",
+     "note": "To weigh; the grain radical shows grain."
+    },
+    {
+     "term": "稻",
+     "en": "dao - rice",
+     "note": "The rice plant, a food crop."
+    }
+   ],
+   "background": "禾 belongs to Kangxi radical no. 115, the grain radical. Characters under it are mostly about cereals, farming, harvests and weighing, such as 種, 積, 穀, 稅 and 秒."
+  },
+  "zhu": {
+   "summary": "竹 is a picture of bamboo. As a top component it is called the bamboo radical (zhuzitou) and builds characters to do with bamboo, bamboo goods and writing tools.",
+   "translation": "The character 「竹」 is a picture of two bamboo branches with leaves hanging down. As a top component it is written as a flat, wide bamboo head: the left and right halves each have a left-falling stroke, a horizontal and a dot, the two halves are the same shape and stand slightly apart, like two bamboo twigs. Write the horizontal of the bamboo head level, with the dots and left-falling strokes of the two halves leaning inward, so that the whole is wide and flat and covers the part below. The part below must sit steadily at the centre and not be squeezed too narrow by the bamboo head. Common faults: halves of different sizes, a bamboo head that is too tall, dots that are too long, and too great a distance from the part below.",
+   "keyLines": [
+    {
+     "line": "笑筆等",
+     "en": "Xiao, bi, deng - 'laugh', 'brush', 'wait'.",
+     "note": "All three have the bamboo head over the top. It is wide and flat, and the part beneath sits in the middle as support."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "笑",
+     "en": "xiao - to laugh",
+     "note": "To make a sound of laughter when happy."
+    },
+    {
+     "term": "筆",
+     "en": "bi - brush",
+     "note": "A tool for writing; its handle was often made of bamboo."
+    },
+    {
+     "term": "等",
+     "en": "deng - rank, to wait",
+     "note": "A grade, or to wait."
+    },
+    {
+     "term": "第",
+     "en": "di - ordinal",
+     "note": "Order; used to number things in a series."
+    },
+    {
+     "term": "筋",
+     "en": "jin - sinew",
+     "note": "The fibres in muscle, often meaning a tendon."
+    },
+    {
+     "term": "策",
+     "en": "ce - whip, plan",
+     "note": "A horse whip, which came to mean a plan."
+    },
+    {
+     "term": "答",
+     "en": "da - to answer",
+     "note": "To respond, or an answer."
+    },
+    {
+     "term": "簡",
+     "en": "jian - bamboo slip",
+     "note": "A strip of bamboo for writing, later extended to the meaning 'simple'."
+    }
+   ],
+   "background": "竹 belongs to Kangxi radical no. 118, the bamboo radical. Characters under it are mostly about bamboo goods, writing materials and musical instruments. In ancient times writing was done on bamboo slips, so characters such as 簡, 籍 and 策 are under the bamboo radical."
+  },
+  "si": {
+   "summary": "糸 is a picture of silk thread. As a left-hand component it is called the twisted silk radical (jiaosipang) and builds characters to do with thread, cloth, colour and joining.",
+   "translation": "The character 「糸」 is a picture of a skein of silk. As a left-hand component it is called the twisted silk radical. The upper part is two overlapping turning strokes (shaped like 「幺」), the lower part has three strokes in the shape of 「小」, and as a left component its last stroke is usually written as a rising stroke flicking to the upper right. When writing, set the two turns firmly one over the other, with the corners round but with a touch of the square. The radical should be narrow and tall, about a quarter of the width of the character, and not too wide. Make the strokes close but not muddled, and leave a gap between the turns. Common faults: turning strokes crowded together, a last dot that is too big, and a whole radical that leans.",
+   "keyLines": [
+    {
+     "line": "紅綠紙",
+     "en": "Hong, lv, zhi - 'red', 'green', 'paper'.",
+     "note": "In all three the twisted silk radical is on the left, narrow and compact, with a larger part on the right."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "紅",
+     "en": "hong - red",
+     "note": "A vermilion colour; the character has the silk radical and is tied to the dyeing of silk fabric."
+    },
+    {
+     "term": "綠",
+     "en": "lv - green",
+     "note": "The colour of green grass."
+    },
+    {
+     "term": "紙",
+     "en": "zhi - paper",
+     "note": "A material for writing, originally made from plant fibres."
+    },
+    {
+     "term": "線",
+     "en": "xian - thread",
+     "note": "A silk thread, and also a line."
+    },
+    {
+     "term": "約",
+     "en": "yue - to bind",
+     "note": "To bind or restrain; it extends to an agreement."
+    },
+    {
+     "term": "級",
+     "en": "ji - grade",
+     "note": "A rank, or a level."
+    },
+    {
+     "term": "終",
+     "en": "zhong - to end",
+     "note": "To finish, or the last."
+    },
+    {
+     "term": "絲",
+     "en": "si - silk",
+     "note": "The fine thread of the silkworm; the character is made of two 糸."
+    }
+   ],
+   "background": "糸 belongs to Kangxi radical no. 120, the silk radical. Characters under it are mostly about thread, fabrics, ropes and joining, such as 紀, 結, 織 and 繞."
+  },
+  "bei": {
+   "summary": "貝 is a picture of a cowrie shell. In ancient times shells were used as money, so characters under the shell radical are mostly about money, wealth and buying and selling.",
+   "translation": "The character 「貝」 is a picture of a shell. As a component it can stand on the left, the bottom or the top: for instance, in 財 it is on the left and in 貴 at the bottom. As a left-hand component it must be narrow and tall and a little taller than the right-hand part, and the left-falling stroke and the dot at the bottom are made small to leave room on the right. As a bottom component, 貝 is written steady, its two feet spreading like 「八」 to support what is above. In writing, close the box of the 目 part and space the two inner horizontals evenly. Common faults: a shell radical that is too wide, two feet at the bottom that are too long, and crowding the right-hand part.",
+   "keyLines": [
+    {
+     "line": "財貨貴",
+     "en": "Cai, huo, gui - 'wealth', 'goods', 'valuable'.",
+     "note": "In 財 and 貨 the shell is on the left, and in 貴 at the bottom. The left component is narrow and tall and the bottom one wide and steady, each placed differently."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "財",
+     "en": "cai - wealth",
+     "note": "Money and riches."
+    },
+    {
+     "term": "貨",
+     "en": "huo - goods",
+     "note": "Merchandise, and also currency."
+    },
+    {
+     "term": "貴",
+     "en": "gui - expensive, noble",
+     "note": "A high price, and also honoured."
+    },
+    {
+     "term": "買",
+     "en": "mai - to buy",
+     "note": "To get something with money."
+    },
+    {
+     "term": "賣",
+     "en": "mai - to sell",
+     "note": "To exchange goods for money."
+    },
+    {
+     "term": "資",
+     "en": "zi - resources",
+     "note": "Money, or resources."
+    },
+    {
+     "term": "賞",
+     "en": "shang - to reward",
+     "note": "To give a reward, or to praise."
+    },
+    {
+     "term": "賀",
+     "en": "he - to congratulate",
+     "note": "To offer congratulations."
+    }
+   ],
+   "background": "貝 belongs to Kangxi radical no. 154, the shell radical. Characters under it are mostly about money, wealth, buying and selling and trade, such as 貧, 賤, 購 and 貿."
+  },
+  "men": {
+   "summary": "門 is a picture of a double door. As a radical it is like a door frame that wraps the part inside, and builds characters to do with doors, going in and out, and opening and closing.",
+   "translation": "In oracle bone script 「門」 is a picture of two door leaves facing each other. In regular script it is written as a symmetrical frame: a vertical on the left and right, and a turning hook across the top. Write the left leaf first and then the right; the two leaves lean slightly towards each other, leaving room in the middle for the part inside. The inner part in characters such as 開, 關, 問 and 間 must sit in the centre without touching the frame on either side. The last hook of the door should be drawn in with strength. Common faults: left and right leaves that are not symmetrical, an inner part that drifts to one side, a frame that is too narrow, and a weak hook.",
+   "keyLines": [
+    {
+     "line": "開關閉",
+     "en": "Kai, guan, bi - 'open', 'close', 'shut'.",
+     "note": "In all three the door frame wraps the inner part. The leaves of the frame face each other, and the inner part sits in the centre without touching the frame."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "開",
+     "en": "kai - to open",
+     "note": "To open, the opposite of closing."
+    },
+    {
+     "term": "關",
+     "en": "guan - to close",
+     "note": "To shut a door."
+    },
+    {
+     "term": "閉",
+     "en": "bi - to shut",
+     "note": "To close up, or to shut."
+    },
+    {
+     "term": "間",
+     "en": "jian - between",
+     "note": "Originally the moon seen through a gap in a door; later it means space or the middle."
+    },
+    {
+     "term": "閒",
+     "en": "xian - leisure",
+     "note": "Free time, or quiet."
+    },
+    {
+     "term": "問",
+     "en": "wen - to ask",
+     "note": "To ask a question; there is a mouth inside the door."
+    },
+    {
+     "term": "聞",
+     "en": "wen - to hear",
+     "note": "To hear, and also to smell."
+    },
+    {
+     "term": "閱",
+     "en": "yue - to read",
+     "note": "To look over, or to read."
+    }
+   ],
+   "background": "門 belongs to Kangxi radical no. 169, the door radical. Characters under it are mostly about doors, going in and out, and opening and closing, and many are phonetic compounds made of a door frame with a part inside."
+  },
+  "shan": {
+   "summary": "山 is a picture of mountain peaks. As a radical it can stand at the top, the left or the bottom, and builds characters to do with mountains, hills and height.",
+   "translation": "The character 「山」 is a picture of three peaks standing together, a high one in the middle and two lower ones. In regular script it is written as a vertical, a vertical with a turn, and a second vertical, with the one in the middle the tallest. As a left-hand component it must be narrow and small and placed rather high, as in 峰, 峽 and 嶺; as a top component it is broad and steady, as in 崇 and 嶽. In writing, the three verticals should differ in height, and be symmetrical on the left and right, and the bottom horizontal must close tightly so that the mountain sits firmly. Common faults: three verticals of the same height, a mountain too big that presses on the part beneath, and a left-hand mountain that is too wide.",
+   "keyLines": [
+    {
+     "line": "峰峽",
+     "en": "Feng, xia - 'peak', 'gorge'.",
+     "note": "The mountain component is on the left in both, and should be small and a little high, with the right-hand part comparatively larger."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "岸",
+     "en": "an - bank",
+     "note": "Land at the water's edge; the mountain shows the lie of the land."
+    },
+    {
+     "term": "岩",
+     "en": "yan - rock",
+     "note": "A huge stone; the mountain shows hill country."
+    },
+    {
+     "term": "峰",
+     "en": "feng - peak",
+     "note": "The pointed top of a mountain."
+    },
+    {
+     "term": "峽",
+     "en": "xia - gorge",
+     "note": "A narrow valley with water between two mountains."
+    },
+    {
+     "term": "島",
+     "en": "dao - island",
+     "note": "Land in the sea; the shape of the character contains a mountain."
+    },
+    {
+     "term": "嶺",
+     "en": "ling - ridge",
+     "note": "A mountain range, a chain of hills."
+    },
+    {
+     "term": "崖",
+     "en": "ya - cliff",
+     "note": "A steep place at the side of a mountain."
+    },
+    {
+     "term": "嶽",
+     "en": "yue - great mountain",
+     "note": "A tall mountain; the Five Great Mountains are famous ranges."
+    }
+   ],
+   "background": "山 belongs to Kangxi radical no. 46, the mountain radical. Characters under it are mostly about mountains, hill country and height, such as 崗, 崎, 峻, 岡 and 嵐."
+  },
+  "shi": {
+   "summary": "石 is a picture of a stone. As a radical it builds characters to do with stones, minerals and hardness.",
+   "translation": "The character 「石」 is a picture of a stone lying beneath a cliff, with the cliff above and the stone below. In regular script it is made of a horizontal, a left-falling stroke and a mouth. As a left-hand component it is called the stone radical and must be narrow and tall, with a short horizontal, a long left-falling stroke, and the mouth small and a little low, answering the right-hand part. At the bottom of a character, as in 碧, it is written heavy and steady. In writing, join the horizontal and left-falling stroke naturally, and close the mouth. Common faults: a stone radical that is too wide, a horizontal that is too long, a mouth that is too big, and sitting too tight against the right-hand part.",
+   "keyLines": [
+    {
+     "line": "石砂破",
+     "en": "Shi, sha, po - 'stone', 'sand', 'break'.",
+     "note": "石 is a character in its own right; in 砂 and 破 the stone radical is on the left, narrow and tall and drawn in."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "石",
+     "en": "shi - stone",
+     "note": "Rock, or a stone."
+    },
+    {
+     "term": "砂",
+     "en": "sha - sand",
+     "note": "Fine grains of stone."
+    },
+    {
+     "term": "破",
+     "en": "po - to break",
+     "note": "To break or to split."
+    },
+    {
+     "term": "碑",
+     "en": "bei - stele",
+     "note": "A stone carved with writing, set up as a memorial."
+    },
+    {
+     "term": "碧",
+     "en": "bi - jade-green",
+     "note": "A fine stone of blue-green colour."
+    },
+    {
+     "term": "碗",
+     "en": "wan - bowl",
+     "note": "A vessel for food and drink."
+    },
+    {
+     "term": "硯",
+     "en": "yan - inkstone",
+     "note": "A stone writing tool for grinding ink."
+    },
+    {
+     "term": "磨",
+     "en": "mo - to grind",
+     "note": "To grind, to make fine or smooth."
+    }
+   ],
+   "background": "石 belongs to Kangxi radical no. 112, the stone radical. Characters under it are mostly about stones, minerals, stone tools and grinding. The inkstone is one of the Four Treasures of the Study, and its character belongs under the stone radical."
+  },
+  "yu": {
+   "summary": "雨 is a picture of rain falling. As a top component it is called the rain radical (yuzitou) and builds characters to do with rain, clouds, snow and weather.",
+   "translation": "The character 「雨」 is a picture of raindrops falling from the sky: above is the sky and below are falling drops. In regular script it is written as a horizontal, a vertical, a turning hook and four dots. As a top component it should be wide and flat, covering the part beneath, with the four dots in the frame, set in symmetrical pairs and separate from each other. In writing, the horizontal is long, the vertical sits in the centre, and the hook of the turning hook is drawn in; the four dots may be written as short verticals or as dots, as long as they are kept tidy. The part below, as in 雪, 雲 and 電, sits in the centre as support. Common faults: a rain head that is too high, four dots bunched in a clump, a horizontal that is too short, and a lower part that drifts off-centre.",
+   "keyLines": [
+    {
+     "line": "雪雲雷",
+     "en": "Xue, yun, lei - 'snow', 'cloud', 'thunder'.",
+     "note": "All three have the rain head over the top. It is wide and flat, and the parts beneath, 彐, 云 and 田, sit in the middle as support."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "雪",
+     "en": "xue - snow",
+     "note": "The white crystals that fall from clouds in winter."
+    },
+    {
+     "term": "雲",
+     "en": "yun - cloud",
+     "note": "A mass of condensed water vapour in the sky."
+    },
+    {
+     "term": "雷",
+     "en": "lei - thunder",
+     "note": "The roll of thunder, which goes with lightning."
+    },
+    {
+     "term": "電",
+     "en": "dian - lightning",
+     "note": "A flash of lightning; it also means electricity."
+    },
+    {
+     "term": "霜",
+     "en": "shuang - frost",
+     "note": "White crystals that water vapour forms in the cold."
+    },
+    {
+     "term": "露",
+     "en": "lu - dew",
+     "note": "Small drops of water that form from vapour at night."
+    },
+    {
+     "term": "霧",
+     "en": "wu - mist",
+     "note": "Water vapour near the ground."
+    },
+    {
+     "term": "霞",
+     "en": "xia - rosy cloud",
+     "note": "Coloured clouds at sunrise and sunset."
+    }
+   ],
+   "background": "雨 belongs to Kangxi radical no. 173, the rain radical. Characters under it are mostly about rain, weather, clouds and sky phenomena, such as 霖, 零, 霏 and 霽."
+  },
+  "ma": {
+   "summary": "馬 is a picture of a horse. As a radical it builds characters to do with horses, riding, carriages and speed.",
+   "translation": "In oracle bone script 「馬」 is a picture of a horse, with head, mane, four legs and tail. In regular script it is a rather complex shape, with the head and mane above and the four legs below. As a left-hand component it is called the horse radical; it must be narrow and tall, about a third of the width of the character, and the four dots at the bottom shrink to a rising stroke flicking to the upper right to answer the right-hand part. The horizontals of the horse radical should be short and even, with steady turns, and it should not be written too wide. When writing 馬 as a character by itself, keep it whole. Common faults: a horse radical that is too wide, four bottom dots that are not simplified, and too many crowded horizontals that cannot be told apart.",
+   "keyLines": [
+    {
+     "line": "馬騎驚",
+     "en": "Ma, qi, jing - 'horse', 'ride', 'startle'.",
+     "note": "馬 is a character in its own right; in 騎 and 驚 the horse radical is on the left, narrow and tall, and its bottom turns into a rising stroke."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "馬",
+     "en": "ma - horse",
+     "note": "An animal that can be ridden and pulls carts."
+    },
+    {
+     "term": "騎",
+     "en": "qi - to ride",
+     "note": "To sit astride a horse or other animal."
+    },
+    {
+     "term": "驚",
+     "en": "jing - to startle",
+     "note": "To be frightened by a sudden stimulus."
+    },
+    {
+     "term": "驕",
+     "en": "jiao - proud",
+     "note": "Pride; originally it meant a tall, strong horse."
+    },
+    {
+     "term": "駕",
+     "en": "jia - to drive",
+     "note": "To drive a horse and cart, which extends to mean controlling."
+    },
+    {
+     "term": "騰",
+     "en": "teng - to gallop",
+     "note": "To run, or to rise."
+    },
+    {
+     "term": "驅",
+     "en": "qu - to drive on",
+     "note": "To drive, to urge a horse forward."
+    },
+    {
+     "term": "驛",
+     "en": "yi - post station",
+     "note": "A horse station for passing letters in ancient times."
+    }
+   ],
+   "background": "馬 belongs to Kangxi radical no. 187, the horse radical. Characters under it are mostly about horses, riding, fast running and carriages, such as 馳, 駿, 騷 and 騾."
+  },
+  "yu2": {
+   "summary": "魚 is a picture of a fish. As a radical it builds characters to do with fish, seafood and animals that live in water.",
+   "translation": "In oracle bone script 「魚」 is a picture of a fish, with head, body and tail. In regular script the top part is the head, the middle the body, and the four dots at the bottom the tail. As a left-hand component the fish radical must be narrow and tall, and the four dots at the foot are simplified into a horizontal or a rising stroke to leave room on the right. In writing, the left-falling stroke of the head is light and short, the square field of the middle is small and neat, and the final horizontal runs right through to support what is above. Common faults: a fish radical that is too wide, a field that is not closed, four bottom dots that are not simplified, and a head that is too heavy.",
+   "keyLines": [
+    {
+     "line": "魚鮮鯉",
+     "en": "Yu, xian, li - 'fish', 'fresh', 'carp'.",
+     "note": "魚 is a character in its own right; in 鮮 and 鯉 the fish radical is on the left, narrow and tall, with the foot simplified."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "魚",
+     "en": "yu - fish",
+     "note": "An animal that lives in water and breathes through gills."
+    },
+    {
+     "term": "鮮",
+     "en": "xian - fresh",
+     "note": "Fresh, and also tasty."
+    },
+    {
+     "term": "鯉",
+     "en": "li - carp",
+     "note": "A freshwater fish."
+    },
+    {
+     "term": "鯨",
+     "en": "jing - whale",
+     "note": "The largest mammal of the sea."
+    },
+    {
+     "term": "鱗",
+     "en": "lin - scale",
+     "note": "The plate-like covering on a fish's body."
+    },
+    {
+     "term": "鮑",
+     "en": "bao - abalone",
+     "note": "A marine mollusc."
+    },
+    {
+     "term": "鮭",
+     "en": "gui - salmon",
+     "note": "A fish that migrates."
+    },
+    {
+     "term": "鯊",
+     "en": "sha - shark",
+     "note": "A large sea fish."
+    }
+   ],
+   "background": "魚 belongs to Kangxi radical no. 195, the fish radical. Characters under it are mostly about fishes, seafood and water animals, and it is one of the radicals with the most phonetic compounds."
+  },
+  "niao": {
+   "summary": "鳥 is a picture of a long-tailed bird. As a radical it builds characters to do with birds, fowl and birdsong.",
+   "translation": "The character 「鳥」 is a picture of a long-tailed bird standing sideways, with a head and eye above and feet and tail below. In regular script the top has a dot for the eye, the middle is the body with a final horizontal that runs through, and the four dots below stand for the feet and tail. As a left-hand component the bird radical must be narrow and tall, with the eye dot at the top and the body small and square, and the four dots below simplified into a horizontal or a rising stroke, to leave room on the right. Space the strokes evenly so that they do not crowd into a lump. When 鳥 is at the bottom of a character, as in 鷹 and 鶯, it keeps its full form and supports the part above. Common faults: a bird radical that is too wide, an eye dot separated from the body, and four lower dots that are too long.",
+   "keyLines": [
+    {
+     "line": "鳥鳴鴨",
+     "en": "Niao, ming, ya - 'bird', 'cry', 'duck'.",
+     "note": "鳥 is a character in its own right; in 鳴 and 鴨 the bird radical is on the left, narrow and tall, and the part on the right is comparatively wide."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "鳥",
+     "en": "niao - bird",
+     "note": "An animal with feathers that can fly."
+    },
+    {
+     "term": "鳴",
+     "en": "ming - to cry",
+     "note": "Birds and animals making a sound; made of 'mouth' and 'bird'."
+    },
+    {
+     "term": "鴨",
+     "en": "ya - duck",
+     "note": "A water bird, often seen on ponds."
+    },
+    {
+     "term": "鵝",
+     "en": "e - goose",
+     "note": "A fairly large water bird."
+    },
+    {
+     "term": "鷗",
+     "en": "ou - gull",
+     "note": "A white sea bird that lives by the water."
+    },
+    {
+     "term": "鴻",
+     "en": "hong - wild goose",
+     "note": "A large wild goose, and a figure for something great."
+    },
+    {
+     "term": "鶴",
+     "en": "he - crane",
+     "note": "A big white long-legged bird, often a symbol of long life."
+    },
+    {
+     "term": "鷹",
+     "en": "ying - eagle",
+     "note": "A bird of prey with sharp sight."
+    }
+   ],
+   "background": "鳥 belongs to Kangxi radical no. 196, the bird radical. Characters under it are mostly about birds, fowl and birdsong, and it is a radical with many phonetic compounds."
+  },
+  "nv": {
+   "summary": "女 is a picture of a woman. As a radical it builds characters to do with women, family, marriage and surnames.",
+   "translation": "In oracle bone script 「女」 is a picture of a woman kneeling with her hands crossed in front of her. In regular script it is made of three strokes: a left-falling dot, a left-falling stroke and a horizontal. As a left-hand component it is called the woman radical and must be narrow and tall, the turn of the left-falling dot rounded, the crossing of the left-falling stroke and the horizontal low, and the last horizontal often rising slightly to the right to answer the right-hand part. The radical is about a quarter of the width of the character, and the right-hand part is a little higher and larger. When 女 is at the bottom of a character, as in 姿, it is written open, with a slightly longer horizontal to support what is above. Common faults: a woman radical that is too wide, a left-falling dot that is not smooth and round, and a crossing of three strokes too far from the centre.",
+   "keyLines": [
+    {
+     "line": "好姓妹",
+     "en": "Hao, xing, mei - 'good', 'surname', 'younger sister'.",
+     "note": "In all three the woman radical is on the left, narrow and drawn in, and the right-hand part is comparatively large."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "好",
+     "en": "hao - good",
+     "note": "Fine, good; originally made of 'woman' and 'child'."
+    },
+    {
+     "term": "姓",
+     "en": "xing - surname",
+     "note": "The name of a family."
+    },
+    {
+     "term": "妹",
+     "en": "mei - younger sister",
+     "note": "A woman of the same generation who is younger than oneself."
+    },
+    {
+     "term": "姊",
+     "en": "zi - elder sister",
+     "note": "A sister who is older than oneself."
+    },
+    {
+     "term": "姑",
+     "en": "gu - father's sister",
+     "note": "A father's sister."
+    },
+    {
+     "term": "娘",
+     "en": "niang - mother",
+     "note": "A mother, and also a young woman."
+    },
+    {
+     "term": "婚",
+     "en": "hun - marriage",
+     "note": "A man and woman becoming husband and wife."
+    },
+    {
+     "term": "嫁",
+     "en": "jia - to marry",
+     "note": "A woman marrying out."
+    }
+   ],
+   "background": "女 belongs to Kangxi radical no. 38, the woman radical. Characters under it are mostly about women, family relations, marriage and surnames, such as 媽, 姨, 嬌 and 婦."
+  },
+  "zi": {
+   "summary": "子 is a picture of a small child. As a radical it builds characters to do with children, offspring, upbringing and teaching.",
+   "translation": "In oracle bone script 「子」 is a picture of a small child with a large head, a small body and open arms. In regular script it is made of a turning stroke, a vertical hook and a horizontal, and can be a left-hand, bottom or top component. As a left-hand component it is called the child radical and should be narrow and small, with its horizontal changed to a rising stroke flicking to the upper right, as in 孔, 孫 and 孩. At the bottom of a character, as in 字, 存 and 孝, it keeps its original shape, the horizontal slightly longer and the vertical hook in the centre with its hook drawn out to support the part above. In writing, the corner of the turning hook is rounded and the vertical hook is of medium length. Common faults: a child radical that is too wide, a horizontal not changed to a rising stroke, and a vertical hook that is too long.",
+   "keyLines": [
+    {
+     "line": "孔孕字",
+     "en": "Kong, yun, zi - 'hole', 'pregnant', 'character'.",
+     "note": "The child component stands in different places in the three: left in 孔, bottom in 孕 and 字. The left one is narrow and small, and the bottom one supports steadily."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "孔",
+     "en": "kong - hole",
+     "note": "A small opening, and also a surname."
+    },
+    {
+     "term": "孕",
+     "en": "yun - pregnant",
+     "note": "To carry a child in the womb."
+    },
+    {
+     "term": "字",
+     "en": "zi - character",
+     "note": "A written word; originally it meant to give birth under a roof, and was extended to mean written characters."
+    },
+    {
+     "term": "存",
+     "en": "cun - to keep",
+     "note": "To preserve, or to exist."
+    },
+    {
+     "term": "孝",
+     "en": "xiao - filial piety",
+     "note": "Dutiful respect and love of children for their parents."
+    },
+    {
+     "term": "孩",
+     "en": "hai - child",
+     "note": "A young child."
+    },
+    {
+     "term": "孫",
+     "en": "sun - grandson",
+     "note": "The son of a son."
+    },
+    {
+     "term": "學",
+     "en": "xue - to learn",
+     "note": "To study; the lower part of the character is 子."
+    }
+   ],
+   "background": "子 belongs to Kangxi radical no. 39, the child radical. There are not many characters under it, and they are mostly about children, offspring and learning, such as 孤, 孟, 季 and 學."
+  },
+  "mian": {
+   "summary": "宀 is a picture of a house. It is called the roof radical (baogaitou) and builds characters to do with houses, dwelling, safety and containing.",
+   "translation": "In oracle bone script 「宀」 is a picture of a house seen from the side. In regular script it has a dot in the centre at the top, a horizontal beneath it, a short stroke going down at the left end and a hook going down at the right end, like the eaves of a roof. When writing, set the top dot in the centre, leaning a little to the lower right, and let the short stroke and the hook at the two ends of the horizontal come down like eaves. The whole is wide and flat, covering the part below, which sits in the centre. Take care that the two ends of the horizontal are not too long, so that they are in proportion to the part beneath. Common faults: a dot too far left or right, a horizontal too short, two ends that are not symmetrical, and too big a gap above the part below.",
+   "keyLines": [
+    {
+     "line": "家安室",
+     "en": "Jia, an, shi - 'home', 'peace', 'room'.",
+     "note": "In all three the roof covers the part beneath. The 豕 of 家, the 女 of 安 and the 至 of 室 sit in the middle, sheltered by the roof."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "家",
+     "en": "jia - home",
+     "note": "A place to live, and also a family."
+    },
+    {
+     "term": "安",
+     "en": "an - peace",
+     "note": "Safety and stability; a woman under a roof."
+    },
+    {
+     "term": "室",
+     "en": "shi - room",
+     "note": "A room, or a house."
+    },
+    {
+     "term": "宮",
+     "en": "gong - palace",
+     "note": "A tall building, the dwelling of a ruler."
+    },
+    {
+     "term": "寶",
+     "en": "bao - treasure",
+     "note": "A precious thing; the character contains jade and a shell."
+    },
+    {
+     "term": "定",
+     "en": "ding - to settle",
+     "note": "Steady, or to decide."
+    },
+    {
+     "term": "宇",
+     "en": "yu - eaves",
+     "note": "The eaves of a house, which extends to mean space."
+    },
+    {
+     "term": "客",
+     "en": "ke - guest",
+     "note": "A person from outside, a visitor."
+    }
+   ],
+   "background": "宀 belongs to Kangxi radical no. 40, the roof radical. Characters under it are mostly about houses, living, safety and containing, such as 宿, 寒, 富 and 察."
+  },
+  "guang": {
+   "summary": "广 is a picture of a house built against a hillside. It is called the guang head (guangzitou) and builds characters to do with houses, halls, storehouses and buildings.",
+   "translation": "The character 「广」 originally meant a house built against a cliff, similar to 「宀」 but with a wall on one side only. In regular script it has three strokes, a dot, a horizontal and a left-falling stroke: the top dot sits left of centre, the horizontal spreads to the right, and the left-falling stroke starts from the left end of the horizontal and sweeps long to the lower left. The head is wide and long, the left-falling stroke is its main trunk and stretches to the lower left, and covers the part at the lower right. The part at the lower right must be written to the right of the left-falling stroke and not pressed by it. Common faults: a dot too far to the right, a horizontal too long, a left-falling stroke too short, and a covered part that drifts to one side.",
+   "keyLines": [
+    {
+     "line": "廣庭店",
+     "en": "Guang, ting, dian - 'wide', 'courtyard', 'shop'.",
+     "note": "All three have the guang head. The left-falling stroke stretches to the lower left, and the part at the lower right sits within it."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "廣",
+     "en": "guang - wide",
+     "note": "Broad and spacious."
+    },
+    {
+     "term": "庭",
+     "en": "ting - courtyard",
+     "note": "A courtyard, and also a household."
+    },
+    {
+     "term": "店",
+     "en": "dian - shop",
+     "note": "A shop or an inn."
+    },
+    {
+     "term": "序",
+     "en": "xu - order",
+     "note": "Order or sequence."
+    },
+    {
+     "term": "庫",
+     "en": "ku - storehouse",
+     "note": "A building for storing goods."
+    },
+    {
+     "term": "座",
+     "en": "zuo - seat",
+     "note": "A seat or a place to sit."
+    },
+    {
+     "term": "廟",
+     "en": "miao - temple",
+     "note": "A building where gods, Buddhas or ancestors are honoured."
+    },
+    {
+     "term": "度",
+     "en": "du - degree",
+     "note": "A standard for measuring length."
+    }
+   ],
+   "background": "广 belongs to Kangxi radical no. 53, the guang radical. Characters under it are mostly about houses, halls and buildings, such as 庫, 廊, 府, 廚 and 庸."
+  },
+  "chi": {
+   "summary": "彳 is the left half of 「行」. It is called the double-person radical (shuangrenpang) and builds characters to do with walking, roads and conduct.",
+   "translation": "The character 「行」 is a picture of a crossroads, and 彳 is its left half, meaning to walk with small steps. In regular script it is written in three strokes: two left-falling strokes and a vertical, and is called the double-person radical. The upper left-falling stroke is shorter and the lower one longer, both running parallel to the lower left, with their starts roughly on one vertical line; the vertical starts from the middle of the lower left-falling stroke, goes straight down, and does not go below the base line of the character. The radical must be narrow and tall, about a quarter of the width of the character, and is different from the single-person radical in having one more left-falling stroke. Common faults: writing the double-person radical as a single-person radical, two left-falling strokes not in the same direction, a vertical that is too long, and a radical that is too wide.",
+   "keyLines": [
+    {
+     "line": "行往彼",
+     "en": "Xing, wang, bi - 'walk', 'go', 'that'.",
+     "note": "彳 is on the left in all three. The 彳 of 行 faces 亍, while in 往 and 彼 the radical is narrow and tall, and the right-hand part is larger."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "行",
+     "en": "xing - to walk",
+     "note": "To walk, and also conduct."
+    },
+    {
+     "term": "往",
+     "en": "wang - to go",
+     "note": "To go, to arrive at a place."
+    },
+    {
+     "term": "彼",
+     "en": "bi - that",
+     "note": "That one, as opposed to this."
+    },
+    {
+     "term": "後",
+     "en": "hou - behind",
+     "note": "At the back, as opposed to in front."
+    },
+    {
+     "term": "徒",
+     "en": "tu - on foot",
+     "note": "To go on foot; it also means disciple or in vain."
+    },
+    {
+     "term": "得",
+     "en": "de - to get",
+     "note": "To obtain."
+    },
+    {
+     "term": "從",
+     "en": "cong - to follow",
+     "note": "To follow, and also 'from'."
+    },
+    {
+     "term": "德",
+     "en": "de - virtue",
+     "note": "Moral character."
+    }
+   ],
+   "background": "彳 belongs to Kangxi radical no. 60, the double-person radical. Characters under it are mostly about walking, roads, conduct and virtue, such as 役, 待, 很 and 律."
+  },
+  "quan": {
+   "summary": "The mark 犭 is how 「犬」 (dog) is written as a left-hand component. It is called the reversed dog radical (fanquanpang) and builds characters to do with dogs, beasts, fierce animals and wildness.",
+   "translation": "The character 「犬」 is a picture of a dog standing sideways with its tail up. As a left-hand component it is written 犭 in three strokes: a left-falling stroke, a curved hook and a left-falling stroke, and is called the reversed dog radical. The first left-falling stroke is short; the curved hook starts above it, bends to the lower right and then hooks to the lower left; the last left-falling stroke starts below the curved hook and leaves to the lower left. The three strokes form one connected whole that is narrow and tall, about a quarter of the width of the character. In writing, space the strokes evenly, and make the curved hook round and strong. Common faults: writing the reversed dog radical too wide, writing the curved hook as an angled turn, and a last left-falling stroke so long it presses on the right-hand part.",
+   "keyLines": [
+    {
+     "line": "狗猫猛",
+     "en": "Gou, mao, meng - 'dog', 'cat', 'fierce'.",
+     "note": "In all three the reversed dog radical is on the left, narrow and tall, with a flowing movement and a larger part on the right."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "狗",
+     "en": "gou - dog",
+     "note": "A domestic animal, the common dog."
+    },
+    {
+     "term": "猫",
+     "en": "mao - cat",
+     "note": "A variant form of the character for 'cat', a small domestic animal."
+    },
+    {
+     "term": "猛",
+     "en": "meng - fierce",
+     "note": "Brave and fierce."
+    },
+    {
+     "term": "獅",
+     "en": "shi - lion",
+     "note": "A large fierce cat of the cat family."
+    },
+    {
+     "term": "狼",
+     "en": "lang - wolf",
+     "note": "A wild beast like a dog."
+    },
+    {
+     "term": "猴",
+     "en": "hou - monkey",
+     "note": "A kind of primate."
+    },
+    {
+     "term": "獨",
+     "en": "du - alone",
+     "note": "Single, only one."
+    },
+    {
+     "term": "狂",
+     "en": "kuang - mad",
+     "note": "Crazy, and also violent."
+    }
+   ],
+   "background": "犭 developed from 犬 and Kangxi radical no. 94 is the dog radical. Characters under it are mostly about dogs, beasts, wild nature and movement, such as 猿, 狐, 獵, 獲 and 狀."
+  },
+  "fu": {
+   "summary": "The mark 阝 on the left is the abbreviation of 「阜」. It is called the left ear radical (zuo'erpang) and builds characters to do with hills, mounds, steps and the lie of the land.",
+   "translation": "The character 「阜」 is a picture of an earth hill with steps on it. As a left-hand component it is written 阝 and stands on the left of a character; it differs from the right ear radical (邑) by position: 阜 is on the left and 邑 on the right. The left ear radical is made of a horizontal-left-falling stroke with a curved hook and a vertical: the top is a small ear shape and below it is a long vertical. When writing, make the ear small and round, and begin the vertical at the lower left of the ear, drop it straight down, a little longer than the right-hand part. The whole is narrow and tall, about a quarter of the width of the character. Common faults: an ear that is too big, a vertical that drifts, failing to tell the left and right ear radicals apart, and a whole radical that is too wide.",
+   "keyLines": [
+    {
+     "line": "阿院陽",
+     "en": "A, yuan, yang - 'a', 'courtyard', 'sun side'.",
+     "note": "In all three the left ear radical is on the left. The ear is small and a little high, the vertical stands upright, and the part on the right is larger."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "阿",
+     "en": "a - big slope",
+     "note": "A large hillside, also used in forms of address."
+    },
+    {
+     "term": "院",
+     "en": "yuan - courtyard",
+     "note": "A building with a surrounding wall; a courtyard."
+    },
+    {
+     "term": "陽",
+     "en": "yang - sunny side",
+     "note": "The south side of a hill, where the sun shines."
+    },
+    {
+     "term": "陰",
+     "en": "yin - shady side",
+     "note": "The north side of a hill, away from the light."
+    },
+    {
+     "term": "除",
+     "en": "chu - steps, to remove",
+     "note": "Steps, which extended to the meaning 'to get rid of'."
+    },
+    {
+     "term": "陸",
+     "en": "lu - land",
+     "note": "High, level ground, as opposed to the sea."
+    },
+    {
+     "term": "階",
+     "en": "jie - steps",
+     "note": "A flight of steps."
+    },
+    {
+     "term": "險",
+     "en": "xian - dangerous",
+     "note": "A steep, strategic place that is hard to pass."
+    }
+   ],
+   "background": "阝 on the left belongs to Kangxi radical no. 170, the mound radical; on the right it belongs to no. 163, the town radical. Characters under the mound radical are mostly about hills, mounds and steps, such as 陵, 陣, 隔 and 隨."
+  },
+  "dao": {
+   "summary": "The mark 刂 is how 「刀」 (knife) is written as a right-hand component. It is called the standing knife radical (lidaopang) and builds characters to do with knives, cutting, harm and dividing.",
+   "translation": "The character 「刀」 is a picture of a knife with a handle and a blade. As a right-hand component it is written 刂 in two strokes: a short vertical on the left and a vertical hook on the right. The left vertical is short and straight, and the right one is long and hooks at its foot, flicking to the upper left. The standing knife is narrow and tall, about a quarter of the width of the character, stands on the right side of the character, and its vertical hook is slightly longer than the left-hand part so that the character is steady. When writing, leave a gap between the two verticals, short on the left and long on the right, and do not join them. Common faults: writing the standing knife as two verticals of the same length, a hook that is too long, and a standing knife too tight against the left-hand part.",
+   "keyLines": [
+    {
+     "line": "別刻到",
+     "en": "Bie, ke, dao - 'part', 'carve', 'arrive'.",
+     "note": "In all three the standing knife is on the right. The left-hand part is wide and large, and the 刂 on the right is narrow and upright."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "別",
+     "en": "bie - to part",
+     "note": "To separate, and also to take leave."
+    },
+    {
+     "term": "刻",
+     "en": "ke - to carve",
+     "note": "To engrave, and also a unit of time."
+    },
+    {
+     "term": "到",
+     "en": "dao - to arrive",
+     "note": "To reach a place; the character is made of 至 and 刂."
+    },
+    {
+     "term": "刺",
+     "en": "ci - to stab",
+     "note": "A sharp thing, and also to pierce."
+    },
+    {
+     "term": "前",
+     "en": "qian - front",
+     "note": "In front, as opposed to behind."
+    },
+    {
+     "term": "則",
+     "en": "ze - rule",
+     "note": "A rule, and also 'then'."
+    },
+    {
+     "term": "創",
+     "en": "chuang - to begin",
+     "note": "To start something new, and also a wound."
+    },
+    {
+     "term": "割",
+     "en": "ge - to cut",
+     "note": "To cut through, to divide."
+    }
+   ],
+   "background": "刂 developed from 刀 and belongs to Kangxi radical no. 18, the knife radical. Characters under it are mostly about knives, cutting, separation and harm, such as 分, 切, 剪, 劍 and 列."
+  },
+  "pu": {
+   "summary": "The mark 攵 is a variant of 「攴」. It is called the reversed writing radical (fanwenpang) and builds characters to do with hand movements, striking, teaching and governing.",
+   "translation": "The character 「攴」 is made of 卜 and 又 and is a picture of a hand holding a stick and tapping lightly. As a right-hand component in regular script it is written 攵 in four strokes: a left-falling stroke, a horizontal-left-falling stroke, a left-falling stroke and a right-falling stroke. The first left-falling stroke is short, the second, a horizontal with a left-falling stroke, crosses the third left-falling stroke, and the last right-falling stroke spreads out to the lower right. The radical is narrow and tall, about a quarter of the width of the character, and stands on the right; the left-falling and right-falling strokes cross in the shape of an 'X', and the foot of the right-falling stroke should come out with strength. In writing, space the strokes evenly and do not make the right-falling stroke too long. Common faults: confusing it with 「夂」, a right-falling stroke that is too short, a left-falling stroke that is too flat, and a radical that is too wide.",
+   "keyLines": [
+    {
+     "line": "收改放",
+     "en": "Shou, gai, fang - 'receive', 'change', 'put'.",
+     "note": "In all three the 攵 is on the right. The left-hand part is comparatively wide, and 攵 is narrow and tall, with its left-falling and right-falling strokes spread."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "收",
+     "en": "shou - to receive",
+     "note": "To take in, or to put away."
+    },
+    {
+     "term": "改",
+     "en": "gai - to change",
+     "note": "To alter, or to correct."
+    },
+    {
+     "term": "放",
+     "en": "fang - to put down",
+     "note": "To let go, or to place."
+    },
+    {
+     "term": "政",
+     "en": "zheng - government",
+     "note": "Politics, and governing."
+    },
+    {
+     "term": "故",
+     "en": "gu - reason",
+     "note": "A cause, and also 'old'."
+    },
+    {
+     "term": "教",
+     "en": "jiao - to teach",
+     "note": "To instruct, to pass on knowledge."
+    },
+    {
+     "term": "敢",
+     "en": "gan - to dare",
+     "note": "To have the courage, to dare to."
+    },
+    {
+     "term": "敬",
+     "en": "jing - respect",
+     "note": "To honour, to show respect."
+    }
+   ],
+   "background": "攵 developed from 攴 and belongs to Kangxi radical no. 66, the strike radical. Characters under it are mostly about striking, hand movements and management, such as 救, 牧, 散, 整 and 敵."
+  },
+  "mu2": {
+   "summary": "目 is a picture of an eye. As a radical it builds characters to do with the eye, seeing, looking and sleep.",
+   "translation": "In oracle bone script 「目」 is a picture of an eye, which was later turned upright into a rectangle. In regular script it is made of a box and two horizontals. As a left-hand component it is called the eye radical and must be narrow and tall, with a closed box and evenly spaced inner horizontals, and the last horizontal often rises slightly to the right to answer the right-hand part. The eye radical takes about a quarter of the width of the character and sits slightly high. When 目 is at the top of a character, as in 眾, it is written flat and steady. In writing, first the left vertical, then the turning stroke, and last the inner horizontals and the bottom horizontal. Common faults: an eye radical that is too wide, a box that is not closed, uneven inner horizontals, and sitting too close to the right-hand part.",
+   "keyLines": [
+    {
+     "line": "目看眉",
+     "en": "Mu, kan, mei - 'eye', 'look', 'eyebrow'.",
+     "note": "目 is a character in its own right; in 看 and 眉 the 目 is in the lower part of the character and supports the part above."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "目",
+     "en": "mu - eye",
+     "note": "The eye."
+    },
+    {
+     "term": "看",
+     "en": "kan - to look",
+     "note": "To watch with the eyes."
+    },
+    {
+     "term": "眉",
+     "en": "mei - eyebrow",
+     "note": "The hair above the eye."
+    },
+    {
+     "term": "眼",
+     "en": "yan - eye",
+     "note": "The eye."
+    },
+    {
+     "term": "眠",
+     "en": "mian - to sleep",
+     "note": "To sleep, resting with the eyes closed."
+    },
+    {
+     "term": "睡",
+     "en": "shui - to sleep",
+     "note": "To sleep."
+    },
+    {
+     "term": "眾",
+     "en": "zhong - crowd",
+     "note": "Many people; the 目 is at the top."
+    },
+    {
+     "term": "睛",
+     "en": "jing - eyeball",
+     "note": "The eyeball."
+    }
+   ],
+   "background": "目 belongs to Kangxi radical no. 109, the eye radical. Characters under it are mostly about the eye, vision, looking and sleep, such as 瞪, 睹, 瞻 and 瞬."
+  },
+  "shi2": {
+   "summary": "示 is a picture of sacrifice. As a left-hand component it is written 礻 and builds characters to do with sacrifice, spirits, blessing and ritual.",
+   "translation": "In oracle bone script 「示」 is a picture of an altar, and shows sacrifice to the spirits. As a left-hand component it is written 礻 in four strokes: a dot, a horizontal-left-falling stroke, a vertical and a dot; it is called the altar radical (shizipang). Be careful to tell it from the clothing radical 「衤」: 礻 has only one top dot and 衤 has two dots. The altar radical is narrow and tall, about a quarter of the width of the character, with the top dot in the centre, the horizontal-left-falling stroke going to the lower left, the vertical straight, and the last dot answering the right-hand part. In writing, space the strokes evenly, with a short dot and a straight vertical. Common faults: writing 礻 as 衤, a curved vertical, and an altar radical that is too wide.",
+   "keyLines": [
+    {
+     "line": "示社祖",
+     "en": "Shi, she, zu - 'show', 'altar', 'ancestor'.",
+     "note": "示 is a character in its own right; in 社 and 祖 the 礻 is on the left. It is narrow and tall, and differs from 衤 by one fewer dot."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "示",
+     "en": "shi - to show",
+     "note": "To display, and also sacrifice."
+    },
+    {
+     "term": "社",
+     "en": "she - altar to the earth",
+     "note": "The god of the land, and also society."
+    },
+    {
+     "term": "祖",
+     "en": "zu - ancestor",
+     "note": "A forefather."
+    },
+    {
+     "term": "神",
+     "en": "shen - spirit",
+     "note": "A god, and also spirit."
+    },
+    {
+     "term": "祝",
+     "en": "zhu - to wish",
+     "note": "To give a blessing, or to pray."
+    },
+    {
+     "term": "福",
+     "en": "fu - blessing",
+     "note": "Happiness and good fortune."
+    },
+    {
+     "term": "禮",
+     "en": "li - ritual",
+     "note": "Ritual, and politeness."
+    },
+    {
+     "term": "祥",
+     "en": "xiang - auspicious",
+     "note": "Lucky."
+    }
+   ],
+   "background": "礻 developed from 示 and Kangxi radical no. 113 is the altar radical. Characters under it are mostly about sacrifice, spirits, ritual and omens, such as 祭, 祈, 禍 and 禪."
+  },
+  "yi": {
+   "summary": "衣 is a picture of a garment. As a left-hand component it is written 衤 and builds characters to do with clothes, cloth and dressing.",
+   "translation": "The character 「衣」 is a picture of the shape of a coat: the collar above, sleeves at the sides, and the front panels below. As a left-hand component it is written 衤 in five strokes: a dot, a horizontal-left-falling stroke, a vertical, a left-falling stroke and a dot; it is called the clothing radical (yizipang). Be careful to tell it from the altar radical 「礻」: 衤 has two dots and 礻 only one. The clothing radical is narrow and tall, about a quarter of the width of the character, with the top dot in the centre, the horizontal-left-falling stroke going to the lower left, the vertical straight, and the left-falling stroke and dot on the right answering each other. In writing, space the strokes evenly and keep the two dots distinct. When 衣 is at the bottom of a character, as in 裝 and 裁, it keeps its full form and steadily supports the part above. Common faults: confusing 衤 and 礻, a curved vertical, and a radical that is too wide.",
+   "keyLines": [
+    {
+     "line": "衣被袖",
+     "en": "Yi, bei, xiu - 'clothes', 'quilt', 'sleeve'.",
+     "note": "衣 is a character in its own right; in 被 and 袖 the 衤 is on the left. The 衤 has one more dot, which tells it from 礻."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "衣",
+     "en": "yi - clothes",
+     "note": "Clothing, the garments worn on the body."
+    },
+    {
+     "term": "被",
+     "en": "bei - quilt",
+     "note": "A quilt, and it also marks the passive."
+    },
+    {
+     "term": "袖",
+     "en": "xiu - sleeve",
+     "note": "The part of a garment that covers the arm."
+    },
+    {
+     "term": "裙",
+     "en": "qun - skirt",
+     "note": "A garment worn on the lower body."
+    },
+    {
+     "term": "裝",
+     "en": "zhuang - to dress",
+     "note": "To dress up, and clothing."
+    },
+    {
+     "term": "裁",
+     "en": "cai - to cut out",
+     "note": "To cut cloth; the lower part of the character is 衣."
+    },
+    {
+     "term": "補",
+     "en": "bu - to mend",
+     "note": "To mend clothes."
+    },
+    {
+     "term": "褲",
+     "en": "ku - trousers",
+     "note": "Clothing worn on the legs."
+    }
+   ],
+   "background": "衤 developed from 衣 and belongs to Kangxi radical no. 145, the clothing radical. Characters under it are mostly about clothes, cloth and dressing, such as 襪, 襯, 裕 and 複."
+  },
+  "che": {
+   "summary": "車 is a picture of a cart. As a radical it builds characters to do with vehicles, transport, wheels and axles.",
+   "translation": "In oracle bone script 「車」 is a picture of a cart seen from above, with wheels, an axle and a carriage. In regular script it is written in a straighter form: horizontals with a vertical through them. As a left-hand component it is called the cart radical and must be narrow and tall, about a quarter of the width of the character; the vertical goes through the centre, the horizontals are spaced evenly from top to bottom, and the last horizontal becomes a rising stroke flicking to the upper right to answer the right-hand part. When 車 is at the bottom of a character, as in 軍, it is written steady, with a slightly longer horizontal to support what is above. In writing, space the horizontals evenly and keep the vertical straight. Common faults: a cart radical that is too wide, a last horizontal not changed to a rising stroke, and a leaning vertical.",
+   "keyLines": [
+    {
+     "line": "車軍輕",
+     "en": "Che, jun, qing - 'cart', 'army', 'light'.",
+     "note": "車 is a character in its own right; in 軍 the 車 is at the bottom, and in 輕 the cart radical is on the left. The left-hand one is narrow and tall and its last horizontal becomes a rising stroke."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "車",
+     "en": "che - cart",
+     "note": "A means of land transport."
+    },
+    {
+     "term": "軍",
+     "en": "jun - army",
+     "note": "Troops; the lower part of the character is 車."
+    },
+    {
+     "term": "輕",
+     "en": "qing - light",
+     "note": "Of little weight, as opposed to heavy."
+    },
+    {
+     "term": "轉",
+     "en": "zhuan - to turn",
+     "note": "To rotate, or to change direction."
+    },
+    {
+     "term": "輪",
+     "en": "lun - wheel",
+     "note": "The wheel of a vehicle, and also 'in turn'."
+    },
+    {
+     "term": "輛",
+     "en": "liang - measure word for vehicles",
+     "note": "A classifier used for counting vehicles."
+    },
+    {
+     "term": "載",
+     "en": "zai - to carry",
+     "note": "To transport, to load."
+    },
+    {
+     "term": "輸",
+     "en": "shu - to transport",
+     "note": "To carry something somewhere, and also to lose."
+    }
+   ],
+   "background": "車 belongs to Kangxi radical no. 159, the cart radical. Characters under it are mostly about vehicles, transport, tracks and wheels, such as 較, 軌, 轄 and 輝."
+  },
+  "shou2": {
+   "summary": "手 is a picture of the palm and five fingers. As a radical it builds characters to do with the hand, actions and handling.",
+   "translation": "The character 「手」 is a picture of an open hand with five fingers and a palm. In regular script it is made of four strokes: a left-falling stroke, two horizontals and a vertical hook. 手 can stand alone as a character, or at the bottom of one, as in 拿, 掌, 拳 and 摩; as a left-hand component it is written 扌 (the hand radical). At the bottom of a character 手 should be wide and steady, the vertical hook running down the centre and hooking to the upper left, with the two horizontals growing from short to long. In writing, the left-falling stroke is short, and a gap is left between the two horizontals. Common faults: confusing 手 with 扌, a vertical hook that is too short, and a lower 手 that is too narrow.",
+   "keyLines": [
+    {
+     "line": "掌拳摩",
+     "en": "Zhang, quan, mo - 'palm', 'fist', 'rub'.",
+     "note": "In all three the 手 is in the lower part of the character, wide and steady, supporting the part above."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "手",
+     "en": "shou - hand",
+     "note": "The end of the upper limb of the body, used to take hold of things."
+    },
+    {
+     "term": "拜",
+     "en": "bai - to bow",
+     "note": "To make a salute; the character contains a hand."
+    },
+    {
+     "term": "拿",
+     "en": "na - to take",
+     "note": "To take with the hand."
+    },
+    {
+     "term": "掌",
+     "en": "zhang - palm",
+     "note": "The palm of the hand, and also to hold."
+    },
+    {
+     "term": "拳",
+     "en": "quan - fist",
+     "note": "A hand clenched tight."
+    },
+    {
+     "term": "摩",
+     "en": "mo - to rub",
+     "note": "To rub lightly with the hand."
+    },
+    {
+     "term": "擊",
+     "en": "ji - to strike",
+     "note": "To knock, to hit."
+    },
+    {
+     "term": "攀",
+     "en": "pan - to climb",
+     "note": "To grip something and climb up."
+    }
+   ],
+   "background": "手 is Kangxi radical no. 64, the hand radical, in the same class as the hand component 扌. Characters under it are mostly about hand actions, handling and holding, such as 拇, 揉, 捧 and 擊."
+  },
+  "ge": {
+   "summary": "戈 is a picture of an ancient weapon. As a radical it builds characters to do with weapons, war and fighting.",
+   "translation": "The character 「戈」 is a picture of a long-handled weapon with a cross blade and a long shaft. In regular script it is made of four strokes: a horizontal, a slanting hook, a left-falling stroke and a dot. Write the horizontal first, then the slanting hook, which curves to the lower right and then hooks up, then the left-falling stroke, and last the dot. The slanting hook of 戈 is the most important stroke: it needs a curved movement from top to bottom, the hook flicking up with weight behind it. The left-falling stroke crosses the slanting hook and goes out to the lower left; the dot sits to the upper right of the slanting hook and answers the left-falling stroke. Common faults: a slanting hook that is too straight, a hook that is too small, a dot too far away, and an unnatural crossing of the left-falling stroke and the slanting hook.",
+   "keyLines": [
+    {
+     "line": "戰戒我",
+     "en": "Zhan, jie, wo - 'war', 'warn', 'I'.",
+     "note": "The position of 戈 differs in the three, but in each the slanting hook is the longest and heaviest main stroke."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "戈",
+     "en": "ge - dagger-axe",
+     "note": "A long-handled weapon of ancient times."
+    },
+    {
+     "term": "戰",
+     "en": "zhan - war",
+     "note": "To fight, and warfare."
+    },
+    {
+     "term": "戒",
+     "en": "jie - to guard against",
+     "note": "To be on guard, to take precautions."
+    },
+    {
+     "term": "我",
+     "en": "wo - I (first person)",
+     "note": "The first person, referring to oneself."
+    },
+    {
+     "term": "成",
+     "en": "cheng - to complete",
+     "note": "To finish, or to succeed."
+    },
+    {
+     "term": "戲",
+     "en": "xi - play",
+     "note": "Games, and also drama."
+    },
+    {
+     "term": "戚",
+     "en": "qi - relatives",
+     "note": "Kin; it also has the sense of sorrow."
+    },
+    {
+     "term": "截",
+     "en": "jie - to cut off",
+     "note": "To cut through, and also to stop."
+    }
+   ],
+   "background": "戈 belongs to Kangxi radical no. 62, the dagger-axe radical. Characters under it are mostly about weapons, war and fighting, such as 戍, 戮, 戴 and 戲."
+  }
+ }
+}

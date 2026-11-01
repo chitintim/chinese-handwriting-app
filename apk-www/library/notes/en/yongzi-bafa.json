@@ -1,0 +1,265 @@
+{
+ "id": "yongzi-bafa",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "ce": {
+   "summary": "Ce (「側」), the dot, is the first stroke of 永. It sits at the top of the character, a little left of centre, and sets the character's opening movement and its centre of gravity.",
+   "translation": "Touch the paper lightly near the top against the direction of travel: the tip first meets the paper towards the upper left, then turns and moves towards the lower right. Pause with a press, then draw the brush back to the left so that the end of the dot is round and solid. The whole movement is: hide the tip at the start, press, then return the tip to finish. It is not a quick jab with the point of the brush. The dot should lean to the right like a person standing sideways, at roughly forty-five degrees towards the lower right; do not make it a round blob or a vertical stroke. There are three common faults: starting without hiding the tip so a point sticks out, making the dot so large that it presses down on the horizontal, and setting the dot too far right so that it loses its link with the vertical hook.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "藏鋒",
+     "en": "cang feng - hiding the tip",
+     "note": "At the start, the tip first touches the paper against the direction of travel and then turns, so that the head of the stroke shows no sharp corner and looks reserved and full."
+    },
+    {
+     "term": "頓筆",
+     "en": "dun bi - pressing and pausing",
+     "note": "Pressing down slightly and pausing for a moment at a certain point in the stroke, which gives the stroke a feeling of strength."
+    },
+    {
+     "term": "回鋒",
+     "en": "hui feng - returning the tip",
+     "note": "Bringing the tip back at the end of the stroke so the end is round and nothing leaks out of it."
+    },
+    {
+     "term": "側",
+     "en": "ce - leaning",
+     "note": "The word means tilted. Traditionally it describes this dot as not level, but as having a sloping posture."
+    }
+   ],
+   "background": "Ce (「側」) is the first of the traditional Eight Methods. The old teachers used the saying that the dot 'is not level' to remind learners that the dot must not be a flat block, but has a leaning, moving shape."
+  },
+  "le": {
+   "summary": "Le (「勒」), the horizontal, is the horizontal stroke of 永. It holds up the structure in the upper half of the character and is the key to its balance.",
+   "translation": "Begin the horizontal by touching lightly towards the upper left, against the direction of travel, then turn to the right. After a press, move along a path that rises slightly to the right, and at the end press once more and bring the tip back to close the stroke. The movement needs a feeling of 'resistance': the wrist holds a little against the paper and does not glide through in a single slide, like reining in a horse. A horizontal is not perfectly level; it is low on the left and a few degrees higher on the right, and there may be a slight rise and fall in the middle so that the stroke does not look stiff. Common faults: making both ends equally thick like a plank, giving neither start nor finish a return of the tip, and writing the stroke flat and straight with no rhythm.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "逆入平出",
+     "en": "ni ru ping chu - enter against, leave level",
+     "note": "Enter the paper against the direction of travel, then move steadily forward; this is the basic way to write a horizontal."
+    },
+    {
+     "term": "提按",
+     "en": "ti an - lift and press",
+     "note": "The change in pressure while writing: pressing gives a thick, heavy line, lifting a thin, light one."
+    },
+    {
+     "term": "澀勢",
+     "en": "se shi - the feeling of resistance",
+     "note": "Moving with a sense of friction, never sliding lightly, so the stroke feels settled and weighty."
+    },
+    {
+     "term": "勒",
+     "en": "le - to rein in",
+     "note": "Originally to pull on the reins so that a horse stops. It is used for the horizontal to say that the movement must be controlled."
+    }
+   ],
+   "background": "A traditional saying is that the 「勒」 does not value being level. It means that a horizontal is not asked to be rigidly flat, but to have a natural slope and changes of strength."
+  },
+  "nu": {
+   "summary": "Nu (「努」), the vertical, is the trunk that runs through the middle of 永 from top to bottom and bears the weight of the whole character.",
+   "translation": "Begin the vertical by hiding the tip as before. As you move down, keep the tip in the centre of the line and let the force flow from top to bottom without breaking off or shaking in the middle. The word nu means to exert strength, so the vertical must not be weak; but straighter is not always better. The old saying is that the vertical does not value being straight, which means that some reserved tension should remain inside the straightness, like a bow that bends slightly in its back. In 永 the vertical does not simply stop at the bottom, but turns into the hook, so slow down at the end and gather your strength. Common faults: a pointed start, a middle that swells and thins, a vertical as stiff as a bamboo pole, and a stroke that drifts away from the central axis of the character.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "中鋒",
+     "en": "zhong feng - centred tip",
+     "note": "The tip stays on the centre line of the stroke as it moves, so the line is round, thick and strong."
+    },
+    {
+     "term": "努",
+     "en": "nu - to exert strength",
+     "note": "Originally to use strength or draw a crossbow, to say that a vertical needs sinew and bone."
+    },
+    {
+     "term": "蓄力",
+     "en": "xu li - gathering strength",
+     "note": "Pausing briefly where a stroke is about to change, and saving your strength for the next movement."
+    },
+    {
+     "term": "中軸",
+     "en": "zhong zhou - central axis",
+     "note": "The vertical centre line of the character; the vertical of 永 sits roughly on it."
+    }
+   ],
+   "background": "In 永 the 「努」 is in fact joined with the next section's 「趯」 (the hook) as one stroke: the end of the vertical is the start of the hook. For teaching, they are explained separately for convenience."
+  },
+  "ti": {
+   "summary": "Ti (「趯」), the hook, is the small hook that flicks up to the upper left at the end of the vertical, and is the movement in 永 that most needs stored strength and a burst of power.",
+   "translation": "When the vertical reaches its end, press down first to hold the tip, then lift the brush quickly towards the upper left. The point of the hook must be strong, not limp. The word ti means to leap, so the hook should come out cleanly and briskly, like a foot rising on tiptoe and springing. The hook should be short, only a small part of the length of the vertical, and aimed up and to the left; too flat or too upright both look poor. Common faults: lifting the brush and then drawing a hook separately, a hook that is long and soft like a tail, a hook that points straight up and loses its spring, and a hook with no force at the tip that ends blunt.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "鉤",
+     "en": "gou - hook",
+     "note": "A turn at the end of a stroke where the tip leaves the paper. In 永 it means the hook turning up to the upper left from the bottom of the vertical."
+    },
+    {
+     "term": "頓筆",
+     "en": "dun bi - pressing and pausing",
+     "note": "On reaching the start of the hook, stop and press the tip to store strength for flicking it out."
+    },
+    {
+     "term": "出鋒",
+     "en": "chu feng - leaving with the tip",
+     "note": "The point left when the stroke ends and the brush lifts off in its natural movement; it should be natural and not drawn on deliberately."
+    },
+    {
+     "term": "趯",
+     "en": "ti - to leap",
+     "note": "The word means to jump. Traditionally it says that a hook needs a spring in it."
+    }
+   ],
+   "background": "In the traditional Eight Methods, 「趯」 is often called the 'hook' and is a movement joined to the vertical. Many regular-script vertical hooks, horizontal hooks and curved hooks can be worked out from this one movement, so practising it well builds the foundation for all hook strokes."
+  },
+  "ce2": {
+   "summary": "Ce (「策」), the rising stroke (also called tiao or ti), is the short diagonal at the lower left of 永 that flicks from lower left to upper right with a light, upward movement.",
+   "translation": "Begin the rising stroke by touching lightly against the direction of travel, press down, then turn up and to the right, with the force going from heavy to light and the tip leaving cleanly. The word ce suggests a whip being cracked, so this stroke needs a lifting force and cannot lie flat and weak. It is short, at an angle of about thirty to forty-five degrees, and should answer the bottom of the previous stroke (the vertical hook), neither too far from it nor so close that it crowds. Common faults: no press at the start, so the stroke is a thin line; too flat an angle; a rising stroke so long it becomes a left-falling stroke; and a sudden release of pressure at the end so the tip comes out empty.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "挑",
+     "en": "tiao - rising stroke",
+     "note": "A short stroke going from lower left to upper right, also called ti; for example, the last stroke of the earth radical."
+    },
+    {
+     "term": "提",
+     "en": "ti - rising stroke",
+     "note": "The same as tiao: a diagonal stroke going to the upper right, often the last stroke of a radical."
+    },
+    {
+     "term": "策",
+     "en": "ce - whip",
+     "note": "Originally a horse whip. Traditionally it says that this stroke needs the force of a raised whip."
+    },
+    {
+     "term": "呼應",
+     "en": "hu ying - echo",
+     "note": "Strokes within a character answer one another in direction and position, so that the whole has a connected flow."
+    }
+   ],
+   "background": "The name 「策」 is taken from the whip for urging a horse, and the stroke looks like the tip of a lifted whip. To tell it apart from the first stroke 「側」, this section's title marks it as 策 (挑). In writing, the emphasis is on the press at the start and a light, brisk exit."
+  },
+  "lve": {
+   "summary": "Lve (「掠」), the long left-falling stroke, is the long sweep at the left of 永 that runs out to the lower left, one of the longest strokes in the character.",
+   "translation": "Begin the long left-falling stroke like a horizontal, hiding the tip as it lightly touches, press, and then follow through towards the lower left. The start is heavier, the line thins gradually in the middle, and the end leaves the paper with a light tip. The word lve suggests combing through hair, so the whole stroke should be done in one breath at an even speed, without pausing or trembling on the way. The curve should be natural, a slight outward bow rather than dead straight, and not too strongly bent. Common faults: a tail that flicks up, a start that is too light and looks thin, too little slope so it hugs the vertical, and a sudden stop that leaves a blunt end.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "撇",
+     "en": "pie - left-falling stroke",
+     "note": "A stroke going from upper right to lower left, one of the most common diagonal strokes in Chinese characters."
+    },
+    {
+     "term": "掠",
+     "en": "lve - to brush past",
+     "note": "Means to sweep lightly past, as in combing hair. It says the left-falling stroke should move smoothly."
+    },
+    {
+     "term": "出鋒",
+     "en": "chu feng - leaving with the tip",
+     "note": "The point where the end of the stroke thins out and leaves the paper naturally."
+    },
+    {
+     "term": "弓形",
+     "en": "gong xing - bow shape",
+     "note": "A shape with a slight curve and no stiffness; it describes the curve of the long left-falling stroke."
+    }
+   ],
+   "background": "Lve and the next section's 「啄」 are both left-falling strokes, and differ in length and speed: the 掠 is long and open, the 啄 short and quick. In 永 the left side uses a long left-falling stroke and the right a short one, facing each other to give a sense of balance between left and right."
+  },
+  "zhuo": {
+   "summary": "Zhuo (「啄」), the short left-falling stroke, is the shorter stroke on the right side of 永, quick and strong like a bird pecking.",
+   "translation": "Begin the short left-falling stroke with a press, then move swiftly to the lower left and leave the paper, in one short, sharp movement without dragging. The word zhuo originally means a bird pecking at something with its beak, so this stroke needs a rhythm that is quick, exact and firm, but not so hurried that control is lost. The angle is steeper than the long left-falling stroke, between about forty-five and sixty degrees, and the length is about half of it. Common faults: making it so long that it loses its short character, no press at the start so it is like a thin line, too flat an angle so it looks like a horizontal, and a weak exit at the end.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "短撇",
+     "en": "duan pie - short left-falling stroke",
+     "note": "A left-falling stroke which is shorter and steeper, often found on the right side or the top of a character."
+    },
+    {
+     "term": "啄",
+     "en": "zhuo - to peck",
+     "note": "A bird pecking at something with its beak; it says the short stroke must be clean and brisk."
+    },
+    {
+     "term": "節奏",
+     "en": "jie zou - rhythm",
+     "note": "The changes of speed and weight while writing that give a stroke life."
+    },
+    {
+     "term": "陡",
+     "en": "dou - steep",
+     "note": "An angle close to vertical, as opposed to a gentle slanting line."
+    }
+   ],
+   "background": "The traditional Eight Methods use a bird's peck to describe this stroke's speed. In 永 the short left-falling stroke is on the right, and with the long left-falling stroke on the left and the right-falling stroke below it forms a triangle of support that keeps the character steady."
+  },
+  "zhe": {
+   "summary": "Zhe (「磔」), the right-falling stroke, is the long stroke that stretches to the lower right of 永. It closes the character and carries its weight.",
+   "translation": "Begin the right-falling stroke by placing the tip lightly on the paper, then travel slowly to the lower right, gradually increasing the pressure. At the end press down, set the tip firmly, and then push out to the right in a flat foot. The full movement has four stages - start, travel, press, exit - and is traditionally called 'one wave, three turns', meaning that the stroke rises and falls and is not a straight line. The whole slope is about thirty to forty degrees, flatter than the left-falling stroke; the foot goes out to the right, wide and strong, so the character stretches rightward and balances the long left-falling stroke on the left. Common faults: a start so heavy it looks like a big head, a foot that is too long or too sharp, a stroke of the same width from beginning to end, and a slope so steep it looks like a slanting stick.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "捺",
+     "en": "na - right-falling stroke",
+     "note": "A long stroke going from upper left to lower right, ending in a foot that goes out to the right."
+    },
+    {
+     "term": "捺腳",
+     "en": "na jiao - the foot",
+     "note": "The part at the end of the right-falling stroke which pushes out flat to the right after the press; it is the main point of the stroke."
+    },
+    {
+     "term": "一波三折",
+     "en": "yi bo san zhe - one wave, three turns",
+     "note": "Means that the stroke has rises, turns and pauses, so it has rhythm."
+    },
+    {
+     "term": "磔",
+     "en": "zhe - to split open",
+     "note": "Originally to split, to spread outward. Traditionally it describes the way the right-falling stroke opens outward."
+    }
+   ],
+   "background": "The 「磔」 is the last of the traditional Eight Methods. The way the foot flicks out to the right is related to the wave-and-flick stroke of clerical script; regular script kept it but reined it in. In 永 the right-falling stroke ends the character, giving it a sense of stretching to the right."
+  },
+  "quan": {
+   "summary": "Writing the whole of 永 brings together the Eight Methods practised stroke by stroke, so that stroke order, position and overall balance can be checked.",
+   "translation": "When writing the whole character, first see where each of the eight strokes sits: the dot at the top; the horizontal and the vertical hook forming the central axis; the rising stroke and the long left-falling stroke on the left; the short left-falling stroke and the right-falling stroke on the right. The usual order is the dot first, then the horizontal and the vertical hook, then the rising stroke, the long left-falling stroke, the short left-falling stroke, and finally the right-falling stroke. Each stroke should keep its own shape and also answer the strokes before and after it, and you should not spoil the whole for the sake of one pretty stroke. Slow down, first get each stroke into place, and only then work towards flow. The centre of gravity should fall on the axis of the vertical hook, the left-falling and right-falling strokes on either side should differ in weight, and the right-falling stroke should be fuller than the left-falling one. Common faults: strokes that stand alone, positions that drift, left and right out of balance, and rough strokes from writing too fast.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "筆順",
+     "en": "bi shun - stroke order",
+     "note": "The order of strokes in writing a character, usually top before bottom and left before right."
+    },
+    {
+     "term": "結字",
+     "en": "jie zi - structure",
+     "note": "The way of placing strokes and components to make a steady character; also called jieti."
+    },
+    {
+     "term": "重心",
+     "en": "zhong xin - centre of gravity",
+     "note": "The visual centre of balance of a character; for 永 it falls roughly on the axis of the vertical hook."
+    },
+    {
+     "term": "呼應",
+     "en": "hu ying - echo",
+     "note": "Strokes within a character answer one another in direction, weight and position."
+    },
+    {
+     "term": "永字八法",
+     "en": "yong zi ba fa - the Eight Methods of the character 永",
+     "note": "The traditional way of teaching basic brush technique through the eight strokes contained in 永."
+    }
+   ],
+   "background": "The Eight Methods of the character 永 are the best-known beginner's method in traditional calligraphy teaching. Their origin and author are traditionally attributed to Wang Xizhi, or to the Sui-dynasty monk Zhiyong, said to be a descendant of Wang Xizhi, with later calligraphers adding explanations; this is the traditional account and no firm early source confirms it. The character 永 was chosen because, with only about five strokes, it contains the eight common movements of regular script: dot, horizontal, vertical, hook, rising stroke, long left-falling stroke, short left-falling stroke and right-falling stroke. It should be noted that regular script has other strokes, such as the turning stroke and the horizontal hook, which 永 does not cover, so the Eight Methods are only a basic introduction and not the whole of brush technique."
+  }
+ }
+}

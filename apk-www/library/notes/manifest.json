@@ -5,7 +5,8 @@
    "id": "heart-sutra",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "diamond-sutra",
@@ -42,31 +43,36 @@
     "fen30",
     "fen31",
     "fen32"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "amitabha-sutra",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "guanyin-pumen",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "dabei-zhou",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "wangsheng-zhou",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "daodejing",
@@ -152,25 +158,29 @@
     "ch79",
     "ch80",
     "ch81"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "qingjing-jing",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "qianziwen",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "sanzijing",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "dizigui",
@@ -183,13 +193,15 @@
     "aizhong",
     "qinren",
     "xuewen"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "daxue",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "zhongyong",
@@ -227,7 +239,8 @@
     "ch31",
     "ch32",
     "ch33"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "lunyu",
@@ -252,242 +265,282 @@
     "pian18",
     "pian19",
     "pian20"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "lantingji-xu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "loushi-ming",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "ailian-shuo",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "taohuayuan-ji",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "yueyanglou-ji",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "zuiweng-ting-ji",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "chushibiao",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "qian-chibifu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "hou-chibifu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "guiqulai-xi",
    "sections": [
     "xu",
     "ci"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "tengwangge-xu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "luoshen-fu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "shishuo",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "afanggong-fu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "chunye-yan",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "houchushibiao",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "chenqingbiao",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "wuliuxiansheng",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "yuzhuyuansishu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "dixiezhongshushu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "xiaoshitanji",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "mashuo",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "shesheshe",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "jinxuejie",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "yuanhui",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "songliyuanguipangu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "jishierlangwen",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "huanggangzhulouji",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "qiushengfu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "shizhongshanji",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "liuguolun",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "shangshumiyuan",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "lingguanzhuanxu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "xiangjixuanzhi",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "songdongyangmasheng",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "diaoguzhanchangwen",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "qiuxingfu",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "caoguilunzhan",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "zoujifengqiwang",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "quanxue",
@@ -495,7 +548,8 @@
     "pian01",
     "pian02",
     "pian03"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "xiaoyaoyou",
@@ -504,13 +558,15 @@
     "pian02",
     "pian03",
     "pian04"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "yugongyishan",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "tangshi",
@@ -576,7 +632,8 @@
     "pipaxing",
     "dengyoujoutai",
     "bingchexing"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "tangsong-buyi",
@@ -617,7 +674,8 @@
     "tixilinbi",
     "yinhushangchuqinghouyu",
     "huichongchunjiangwanjing"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "qianjiashi",
@@ -698,7 +756,8 @@
     "chunxilvhuai",
     "dadingyuanzhen",
     "qingmingriduijiu"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "gushi-shijiu",
@@ -722,7 +781,8 @@
     "shi17",
     "shi18",
     "shi19"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "hanwei-yuefu",
@@ -740,7 +800,8 @@
     "qibushi",
     "yinjiu5",
     "yuantian1"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "songci",
@@ -780,21 +841,24 @@
     "linjiangxian_yan",
     "zhegutian_yan",
     "busuanzi_li"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "jiuchenggong",
    "sections": [
     "xu",
     "ming"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "xuanmita",
    "sections": [
     "xu",
     "ming"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "shengjiaoxu",
@@ -803,13 +867,15 @@
     "pian02",
     "pian03",
     "pian04"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "caoquan-bei",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "shupu",
@@ -822,33 +888,38 @@
     "pian06",
     "pian07",
     "pian08"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "jizhi-wengao",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "hanshi-tie",
    "sections": [
     "qi1",
     "qi2"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "shusu-tie",
    "sections": [
     "nigu",
     "wujiang"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "leyi-lun",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "xiaojing",
@@ -871,19 +942,22 @@
     "zhang16",
     "zhang17",
     "zhang18"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "dongfangshuo-huazan",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "caoe-bei",
    "sections": [
     "main"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "shijing",
@@ -975,7 +1049,8 @@
     "mian",
     "shengmin",
     "qingmiao"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "chuci",
@@ -1003,7 +1078,8 @@
     "lihun",
     "buju",
     "yufu"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "yuanqu-xiaoling",
@@ -1026,7 +1102,8 @@
     "tianjingsha_xia",
     "tianjingsha_qiu",
     "tianjingsha_dong"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "zhuzi-jiaxun",
@@ -1035,7 +1112,8 @@
     "pian02",
     "pian03",
     "pian04"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "zengguang-xianwen",
@@ -1056,7 +1134,8 @@
     "pian14",
     "pian15",
     "pian16"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "caigentan",
@@ -1071,7 +1150,8 @@
     "q08",
     "q09",
     "q10"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "yongzi-bafa",
@@ -1085,7 +1165,8 @@
     "zhuo",
     "zhe",
     "quan"
-   ]
+   ],
+   "en": true
   },
   {
    "id": "pianpang-bushou",
@@ -1130,7 +1211,8 @@
     "che",
     "shou2",
     "ge"
-   ]
+   ],
+   "en": true
   }
  ]
 }

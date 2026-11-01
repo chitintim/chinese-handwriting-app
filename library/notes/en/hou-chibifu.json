@@ -1,0 +1,77 @@
+{
+ "id": "hou-chibifu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "In the tenth month of the same year Su Shi visited the Red Cliff again. He writes about fetching wine and catching fish on a moonlit night, climbing the crags and whistling long, a lone crane that brushed past the boat, and a dream of a Daoist. The river and hills no longer look as they did in autumn. Real and unreal are woven together, and through the dream and the crane runs a loneliness and release that sits within his open-minded spirit.",
+   "translation": "In the tenth month of that year, on the night of the full moon, I walked from the Snow Hall, meaning to go back to Lingao. Two guests followed me, and we crossed the slope of Yellow Mud. Frost and dew had already fallen, and the leaves of the trees were all gone. Our shadows lay on the ground; looking up, we saw the bright moon. We looked about and were glad, and walked along singing, answering each other. After a while I sighed: 'We have guests but no wine; we have wine but no food. The moon is white and the breeze is clear - what shall we do with such a fine night?'\nA guest said: 'Just now at dusk I cast a net and caught a fish, with a big mouth and fine scales, shaped like the perch of the Songjiang. But where could we find wine?' I went home and talked it over with my wife. My wife said: 'I have a measure of wine, which I have kept for a long time, waiting for when you might need it suddenly.'\nSo we took the wine and the fish and went on an outing again beneath the Red Cliff. The river flowed with a sound; the cut banks rose a thousand feet. The hills were high and the moon was small; the water had gone down and the rocks stood out. It had been only a short while since the last visit, and yet the river and hills could no longer be recognised.\nI lifted my robe and went up, stepping on steep crags, parting thick tangled growth, crouching on stones like tigers and leopards, climbing branches like coiling dragons. I clambered to the perilous nests of hawks and looked down on the dark palace of the river god Feng Yi. My two guests could not follow. I let out a long whistle that rang out, and the grass and trees shook; the hills echoed, the valleys answered, the wind rose and the water surged. I too was suddenly sad and, with awe, afraid; I felt a chill and could not stay. I went back and boarded the boat, let it drift into midstream, and let it stop where it would. It was near midnight, and all around was silent and empty.\nJust then a lone crane came across the river from the east. Its wings were like cartwheels, with black skirt and white robe. It gave one long, clear cry, brushed past my boat and went west. Soon the guests left and I too went to sleep. I dreamed of a Daoist in a feathered robe, floating lightly, who passed below Lingao, bowed to me and said: 'Did you enjoy your trip to the Red Cliff?' I asked his name, but he bowed his head and did not answer. 'Alas! Ah! I know now. The one who flew past me, calling, last night - was that not you?' The Daoist looked back and laughed, and I woke with a start. I opened the door and looked, but there was no sign of him.",
+   "keyLines": [
+    {
+     "line": "月白風清，如此良夜何",
+     "en": "The moon is white and the breeze is clear - what shall we do with such a fine night?",
+     "note": "The worry of having a fine moon and no wine or food, which leads into fetching the wine."
+    },
+    {
+     "line": "山高月小，水落石出",
+     "en": "The hills were high and the moon was small; the water had gone down and the rocks stood out.",
+     "note": "The winter view of the river differs from the earlier visit, and the line later became a common idiom for 'the truth comes out'."
+    },
+    {
+     "line": "曾日月之幾何，而江山不可復識矣",
+     "en": "It had been only a short while since the last visit, and yet the river and hills could no longer be recognised.",
+     "note": "He sighs at how fast the seasons change and how much the scene has altered."
+    },
+    {
+     "line": "予亦悄然而悲，肅然而恐",
+     "en": "I too was suddenly sad and, with awe, afraid.",
+     "note": "After whistling from the height, he is struck by sadness and fear, which reflects Su Shi's loneliness during his exile."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "望",
+     "en": "wang - full moon",
+     "note": "The fifteenth day of each lunar month."
+    },
+    {
+     "term": "雪堂",
+     "en": "Xue Tang - Snow Hall",
+     "note": "A house Su Shi built at Huangzhou."
+    },
+    {
+     "term": "臨皋",
+     "en": "Lin Gao - Lingao pavilion",
+     "note": "The Lingao pavilion, where Su Shi lived in Huangzhou."
+    },
+    {
+     "term": "坂",
+     "en": "ban - slope",
+     "note": "A slope; the character is read ban."
+    },
+    {
+     "term": "松江之鱸",
+     "en": "Songjiang zhi lu - perch of the Songjiang",
+     "note": "The Songjiang is now called the Wusong river; its perch is prized for its flavour."
+    },
+    {
+     "term": "馮夷",
+     "en": "Feng Yi - river god",
+     "note": "The legendary water god of the Yellow River; here, a water god in general."
+    },
+    {
+     "term": "疇昔",
+     "en": "chou xi - formerly",
+     "note": "In the past, or yesterday."
+    },
+    {
+     "term": "寤",
+     "en": "wu - to wake",
+     "note": "To wake from sleep; the character is read wu."
+    }
+   ],
+   "background": "Su Shi wrote the Former Ode on the Red Cliff in the seventh month of 1082 (the fifth year of Yuanfeng in the Northern Song, 960-1127), and visited the cliff again in the tenth month of the same year, writing this ode. At the time he had been demoted to Huangzhou because of the Crow Terrace poetry case. The 'Red Cliff' in the text is actually the Red Nose Cliff at Huangzhou, and not the old battlefield of the Three Kingdoms."
+  }
+ }
+}

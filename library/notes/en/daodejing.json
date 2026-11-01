@@ -1,0 +1,2137 @@
+{
+ "id": "daodejing",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "ch01": {
+   "summary": "The overture to the whole book: the true Dao cannot be fully grasped by words or concepts. From non-being one can watch the Dao's subtlety, from being one can watch its outline; the two come from one source, deep and mysterious, the gateway to all that is subtle.",
+   "translation": "A Dao that can be spoken is not the constant Dao; a name that can be named is not the constant name. The nameless is the beginning of heaven and earth; the named is the mother of the ten thousand things.\nSo always free of desire, one may watch its subtlety; always with desire, one may watch its boundary. These two come from the same source and differ only in name; together they are called the Mystery. Mystery upon mystery - the gate of all that is subtle.",
+   "glossary": [
+    {
+     "term": "道",
+     "en": "dao - the Dao (the Way)",
+     "note": "The central idea of Laozi's thought: the source of all things and the pattern by which they move. It has no form and no name, yet it is the ground of all coming-to-be and change."
+    },
+    {
+     "term": "常",
+     "en": "chang - constant",
+     "note": "Lasting, unchanging. The Mawangdui silk manuscript has a different character, 'heng', which Han scribes changed to 'chang' to avoid the personal name of Emperor Wen of Han."
+    },
+    {
+     "term": "妙與徼",
+     "en": "miao yu jiao - the subtle and the boundary",
+     "note": "'Miao' is the subtle essence and 'jiao' is the edge or outline (some read it as 'destination'); they correspond to the two ways of watching, through non-being and through being."
+    },
+    {
+     "term": "玄",
+     "en": "xuan - the Mystery",
+     "note": "Deep, far-reaching and hard to put into words: a word used to describe the Dao."
+    },
+    {
+     "term": "斷句異讀",
+     "en": "duanju yidu - another way of punctuating",
+     "note": "Some read it as 'always without, in order to watch its subtlety; always with, in order to watch its boundary' (Wang Anshi, Sima Guang and others). Here the reading of Heshang Gong and Wang Bi is followed."
+    }
+   ],
+   "background": "This is the first chapter of the Daodejing. In Wang Bi's edition the book opens with the Dao part (37 chapters), followed by the De part (44 chapters)."
+  },
+  "ch02": {
+   "summary": "Opposite ideas give rise to and complete each other. So the sage handles affairs by non-action and teaches without words, helping the ten thousand things to grow without claiming credit.",
+   "translation": "When all the world knows beauty as beauty, ugliness has already come into being. When all know the good as good, what is not good has already come into being.\nSo being and non-being give birth to each other, hard and easy complete each other, long and short measure each other, high and low lean on each other, tone and voice harmonise with each other, before and after follow each other.\nTherefore the sage deals with affairs through non-action and carries out the teaching that uses no words. The ten thousand things arise, and he does not turn them away. He gives them life without owning them, acts without relying on it, and when the work is done does not dwell in it. Because he does not dwell in it, it never leaves him.",
+   "glossary": [
+    {
+     "term": "相對相生",
+     "en": "xiangdui xiangsheng - opposites give rise to each other",
+     "note": "Every idea exists only because of its opposite, so distinctions are relative and not absolute."
+    },
+    {
+     "term": "無為",
+     "en": "wuwei - non-action (wuwei)",
+     "note": "Not acting rashly or against the grain of nature. It does not mean doing nothing; it means following the nature of things and not forcing anything."
+    },
+    {
+     "term": "不言之教",
+     "en": "bu yan zhi jiao - teaching without words",
+     "note": "Teaching that does not rely on speech and commands, but works quietly by example."
+    },
+    {
+     "term": "弗居",
+     "en": "fu ju - not dwelling in it",
+     "note": "Not claiming credit. 'When the work is done, do not dwell in it' became a famous Daoist saying about how to live."
+    }
+   ]
+  },
+  "ch03": {
+   "summary": "The way to govern is not to exalt the worthy, not to prize goods, and not to display what can be desired, so the people's hearts stay at peace. The sage governs by non-action, and the world is well ordered of itself.",
+   "translation": "Do not exalt the worthy, and the people will not contend. Do not prize goods that are hard to get, and the people will not become thieves. Do not show what can be desired, and the people's hearts will not be disturbed.\nTherefore the sage governs by emptying their hearts and filling their bellies, weakening their ambitions and strengthening their bones. He keeps the people always without cunning and without desire, and makes the clever not dare to act. Practise non-action, and nothing is left ungoverned.",
+   "glossary": [
+    {
+     "term": "尚賢",
+     "en": "shang xian - exalting the worthy",
+     "note": "Honouring the worthy and competing over a reputation for worth. What Laozi opposes is the contention this brings, not worthy people themselves."
+    },
+    {
+     "term": "虛其心，實其腹",
+     "en": "xu qi xin, shi qi fu - empty the heart, fill the belly",
+     "note": "To empty the heart is to drop cleverness and idle thoughts; to fill the belly is to make sure the people are fed. It leans towards a simple, life-nourishing way of government."
+    },
+    {
+     "term": "為無為",
+     "en": "wei wuwei - practise non-action",
+     "note": "To act in the manner of non-action: follow nature and do not force."
+    },
+    {
+     "term": "無知無欲",
+     "en": "wu zhi wu yu - without cunning and without desire",
+     "note": "This does not mean keeping people stupid, but making them less clever and less greedy so that they stay simple."
+    }
+   ]
+  },
+  "ch04": {
+   "summary": "The body of the Dao is empty, yet its working is inexhaustible; it seems the ancestor of the ten thousand things. It blunts what is sharp, unties what is tangled, softens the glare and joins the dust; deep and clear, it seems to be there, and it came before the Lord.",
+   "translation": "The Dao is empty, yet in use it seems never to be filled. Fathomless, it seems the ancestor of the ten thousand things.\nIt blunts the sharp, unties the tangled, softens the glare, joins the dust. Deep and clear, it seems somehow to exist.\nI do not know whose child it is; it seems to come before the Lord.",
+   "glossary": [
+    {
+     "term": "沖",
+     "en": "chong - empty",
+     "note": "Empty, hollow. One reading takes it as the same as 'zhong', an empty vessel; the silk manuscript has 'zhong'."
+    },
+    {
+     "term": "挫其銳，解其紛，和其光，同其塵",
+     "en": "cuo qi rui, jie qi fen, he qi guang, tong qi chen - blunt the sharp, untie the tangled, soften the glare, join the dust",
+     "note": "A picture of the Dao's humility and harmony, and also a Daoist way of living: do not show your edge, and mix with the world."
+    },
+    {
+     "term": "象帝之先",
+     "en": "xiang di zhi xian - before the Lord",
+     "note": "'Xiang' means 'seems', and 'di' is the Lord, the supreme god of Heaven. It says that the Dao existed before any personal god."
+    },
+    {
+     "term": "湛",
+     "en": "zhan - deep and clear",
+     "note": "Clear and deep, and so quiet and far-reaching."
+    }
+   ],
+   "background": "The line 'blunt the sharp, untie the tangled, soften the glare, join the dust' appears again in chapter 56, and commentators have long suspected that one of the two is a displaced passage."
+  },
+  "ch05": {
+   "summary": "Heaven and earth have no favourites, and the sage has no private feeling. Between heaven and earth is like a bellows, empty and never exhausted. Many words quickly lead to poverty, so it is better to hold to the empty centre.",
+   "translation": "Heaven and earth are not humane; they treat the ten thousand things as straw dogs. The sage is not humane; he treats the people as straw dogs.\nThe space between heaven and earth - is it not like a bellows? Empty, yet it does not collapse; the more it moves, the more comes out.\nMany words soon come to their limit; it is better to hold to the centre.",
+   "glossary": [
+    {
+     "term": "不仁",
+     "en": "bu ren - not humane",
+     "note": "Not favouring anyone and not granting special kindness. It means treating all alike and following nature; it does not mean being cruel."
+    },
+    {
+     "term": "芻狗",
+     "en": "chugou - straw dogs",
+     "note": "Dogs made of straw and used in sacrifice, thrown away afterwards. They stand for the way heaven and earth show no special favour to the ten thousand things."
+    },
+    {
+     "term": "橐籥",
+     "en": "tuoyue - bellows",
+     "note": "A bellows of ancient times: 'tuo' is the skin bag, 'yue' the tube the air goes through. It pictures heaven and earth, empty and yet able to bring things forth."
+    },
+    {
+     "term": "守中",
+     "en": "shou zhong - hold to the centre",
+     "note": "One reading takes 'zhong' as 'chong', emptiness, so it means keeping to the empty; another takes it as the state of being upright. Either way it means holding to inner emptiness and stillness."
+    }
+   ]
+  },
+  "ch06": {
+   "summary": "The 'valley spirit' and the 'mysterious female' picture the power of the Dao to bring things into being: it is unbroken and never used up.",
+   "translation": "The valley spirit does not die; this is called the mysterious female. The gate of the mysterious female is called the root of heaven and earth. Unbroken, it seems to exist; use it, and it never wears out.",
+   "glossary": [
+    {
+     "term": "谷神",
+     "en": "gushen - the valley spirit",
+     "note": "A valley is empty and 'shen' is spiritual and marvellous: a picture of the Dao's empty and inexhaustible power to give life. Heshang Gong, however, reads it as the spirits of the five organs."
+    },
+    {
+     "term": "玄牝",
+     "en": "xuanpin - the mysterious female",
+     "note": "'Xuan' is deep and mysterious, 'pin' is the female organ of birth: a picture of the Dao's power of bringing things forth."
+    },
+    {
+     "term": "天地根",
+     "en": "tiandi gen - the root of heaven and earth",
+     "note": "The source from which heaven and earth come."
+    },
+    {
+     "term": "不勤",
+     "en": "bu qin - never wears out",
+     "note": "Does not tire and is not exhausted; one reading takes 'qin' as meaning 'exhausted'."
+    }
+   ]
+  },
+  "ch07": {
+   "summary": "Heaven and earth last because they do not live for themselves. The sage likewise gains by not putting himself first or acting for himself.",
+   "translation": "Heaven is long and earth is lasting. The reason heaven and earth can be long and lasting is that they do not live for themselves, and so they can live long.\nTherefore the sage puts himself last and comes first; he sets himself outside, and himself is preserved. Is it not because he has no private interest that he can fulfil his own interest?",
+   "glossary": [
+    {
+     "term": "不自生",
+     "en": "bu zi sheng - not living for oneself",
+     "note": "Not working for one's own survival, having no selfish heart."
+    },
+    {
+     "term": "後其身而身先",
+     "en": "hou qi shen er shen xian - putting oneself last and coming first",
+     "note": "By placing oneself behind others one is put in front by them: an example of 'the soft overcomes the hard'."
+    },
+    {
+     "term": "外其身",
+     "en": "wai qi shen - setting oneself outside",
+     "note": "Taking oneself lightly and leaving oneself out of account."
+    },
+    {
+     "term": "成其私",
+     "en": "cheng qi si - fulfilling one's own interest",
+     "note": "The result is that having no self-interest brings one's own interest; it is not something sought on purpose."
+    }
+   ]
+  },
+  "ch08": {
+   "summary": "The highest good is like water: it benefits all things without contending, and settles in the low places people dislike, and so it is close to the Dao.",
+   "translation": "The highest good is like water. Water is good at benefiting the ten thousand things without contending. It dwells in places that people dislike, and so it is close to the Dao.\nIn dwelling, be good at the ground; in the heart, be good at depth; in giving, be good at humaneness; in speech, be good at trust; in government, be good at order; in affairs, be good at ability; in action, be good at timing.\nOnly because it does not contend, it is without blame.",
+   "glossary": [
+    {
+     "term": "上善若水",
+     "en": "shang shan ruo shui - the highest good is like water",
+     "note": "Water is the picture Laozi uses most: softness, humility and nourishment."
+    },
+    {
+     "term": "幾於道",
+     "en": "ji yu dao - close to the Dao",
+     "note": "Near to the Dao. 'Ji' means near."
+    },
+    {
+     "term": "七善",
+     "en": "qi shan - the seven goods",
+     "note": "Dwelling, heart, giving, speech, government, affairs and action: seven sides of the virtue of water."
+    },
+    {
+     "term": "尤",
+     "en": "you - blame",
+     "note": "Fault, and the resentment that follows it."
+    }
+   ]
+  },
+  "ch09": {
+   "summary": "Things should be stopped at fullness: wealth and rank with pride bring disaster, and withdrawing when the work is done is in accord with the Way of Heaven.",
+   "translation": "To hold something and keep it full is not as good as stopping. To pound it and sharpen it, you cannot keep it for long. When gold and jade fill the hall, no one can guard them. To be rich and honoured and proud is to leave a disaster for oneself.\nWhen the work is done, withdraw oneself: this is the Way of Heaven.",
+   "glossary": [
+    {
+     "term": "持而盈之",
+     "en": "chi er ying zhi - holding it and keeping it full",
+     "note": "Holding something so that it is brim-full, a picture of the pursuit of fullness."
+    },
+    {
+     "term": "揣而梲之",
+     "en": "chuai er rui zhi - pounding and sharpening it",
+     "note": "To hammer and grind to a point. The character 'rui' (sharp) is written differently in some texts; the silk manuscript has another character again."
+    },
+    {
+     "term": "功遂身退",
+     "en": "gong sui shen tui - withdraw when the work is done",
+     "note": "To retire once achievements are complete, not clinging to position. In history Fan Li and Zhang Liang are held to have done this."
+    },
+    {
+     "term": "天之道",
+     "en": "tian zhi dao - the Way of Heaven",
+     "note": "The law of nature: what is full must wane, and what is at its height must decline."
+    }
+   ]
+  },
+  "ch10": {
+   "summary": "Through discipline - concentrating qi to become soft, cleansing away stray thoughts, acting without forcing - one reaches mysterious virtue: giving life without owning, acting without relying, leading without ruling.",
+   "translation": "Carrying the soul and the vital spirit and embracing the One, can you keep from being parted? Gathering your qi to the point of softness, can you be like an infant? Cleansing and clearing the dark mirror, can you leave it without a flaw? Loving the people and governing the state, can you do it without cleverness? When the gates of heaven open and close, can you be like the female? Understanding all within the four directions, can you do it without acting?\nGive them life, nourish them. Give life without owning, act without relying, lead without ruling: this is called mysterious virtue.",
+   "glossary": [
+    {
+     "term": "載營魄抱一",
+     "en": "zai yingpo bao yi - carrying the soul and embracing the One",
+     "note": "'Zai' is a particle. 'Yingpo' means the soul and spirit (some say body and spirit). 'Embracing the One' is to become one, and some read it as holding to the Dao."
+    },
+    {
+     "term": "玄覽",
+     "en": "xuanlan - the dark mirror",
+     "note": "'Lan' is the same as 'jian', a mirror: the heart as a deep and bright mirror. The silk manuscript has a different character, 'xuanjian'."
+    },
+    {
+     "term": "天門開闔",
+     "en": "tianmen kaihe - the gates of heaven opening and closing",
+     "note": "One reading takes it as the opening and closing of the senses (ears, eyes, mouth and nose); another as the workings of nature; another as the mouth."
+    },
+    {
+     "term": "玄德",
+     "en": "xuande - mysterious virtue",
+     "note": "Deep and subtle virtue: giving life without owning, acting without relying, leading without ruling. The same line appears in chapter 51."
+    }
+   ]
+  },
+  "ch11": {
+   "summary": "What is 'there' is useful only because of what is 'not there'. The cart, the vessel and the room show the use of emptiness.",
+   "translation": "Thirty spokes share one hub; it is the empty space in the middle that makes the use of the cart. Clay is shaped into a vessel; it is the emptiness inside that makes the use of the vessel. Doors and windows are cut to make a room; it is the emptiness that makes the use of the room.\nTherefore what is there gives benefit, and what is not there gives use.",
+   "glossary": [
+    {
+     "term": "輻、轂",
+     "en": "fu, gu - spokes, hub",
+     "note": "The spokes are the rods of a wheel; the hub is the wooden centre of the wheel, with a hole through which the axle passes."
+    },
+    {
+     "term": "埏埴",
+     "en": "shanzhi - to shape clay",
+     "note": "To work clay with water and knead it into a vessel. 'Shan' is to knead and 'zhi' is sticky clay."
+    },
+    {
+     "term": "戶牖",
+     "en": "huyou - doors and windows",
+     "note": "The door and the window."
+    },
+    {
+     "term": "有之以為利，無之以為用",
+     "en": "you zhi yi wei li, wu zhi yi wei yong - what is there gives benefit, what is not there gives use",
+     "note": "Being gives form and convenience; non-being gives function. The two depend on and complete each other."
+    }
+   ]
+  },
+  "ch12": {
+   "summary": "Chasing sensory pleasure too far makes people lose their nature. The sage asks only for enough to eat and a quiet life, and is not greedy for pleasures of eye and ear.",
+   "translation": "The five colours make the eye blind. The five notes make the ear deaf. The five flavours spoil the palate. Racing and hunting drive the heart wild. Goods that are hard to get hinder a person's conduct.\nTherefore the sage cares for the belly and not for the eye. He leaves that and takes this.",
+   "glossary": [
+    {
+     "term": "五色、五音、五味",
+     "en": "wuse, wuyin, wuwei - the five colours, notes and flavours",
+     "note": "Blue-green, yellow, red, white, black; the five notes gong, shang, jue, zhi, yu; and sour, bitter, sweet, pungent, salty. They stand for all kinds of sensory stimulation."
+    },
+    {
+     "term": "口爽",
+     "en": "kou shuang - spoiled palate",
+     "note": "The sense of taste is damaged and cannot tell flavours. 'Shuang' means to go wrong."
+    },
+    {
+     "term": "為腹不為目",
+     "en": "wei fu bu wei mu - for the belly and not for the eye",
+     "note": "The belly stands for basic, inner needs; the eye stands for outward temptations of the senses."
+    },
+    {
+     "term": "去彼取此",
+     "en": "qu bi qu ci - leave that and take this",
+     "note": "To give up the chase after outward things and keep inner contentment."
+    }
+   ]
+  },
+  "ch13": {
+   "summary": "Favour and disgrace both disturb us because we value our own selves too much. Only one who does not hold the self precious, and loves it as he would love the world, can be trusted with the world.",
+   "translation": "Favour and disgrace both bring alarm; honour great calamity as you honour your own body.\nWhat does it mean that favour and disgrace both bring alarm? Favour is a low thing: gaining it brings alarm and losing it brings alarm. This is what is meant by favour and disgrace both bringing alarm.\nWhat does it mean to honour great calamity as you honour your own body? The reason I have great calamity is that I have a body. If I had no body, what calamity could I have?\nTherefore one who values his body as he would the world can be trusted with the world; one who loves his body as he would the world can be given the world to keep.",
+   "glossary": [
+    {
+     "term": "寵辱若驚",
+     "en": "chong ru ruo jing - favour and disgrace both bring alarm",
+     "note": "Whether in favour or in disgrace the mind is unsettled, which shows how people are pulled about by praise and blame from outside."
+    },
+    {
+     "term": "貴大患若身",
+     "en": "gui da huan ruo shen - honour great calamity as you honour your body",
+     "note": "To count great calamity as seriously as one's own body, meaning that people suffer worry because they cling to the body."
+    },
+    {
+     "term": "寵為下",
+     "en": "chong wei xia - favour is low",
+     "note": "To be favoured is to stand in a lower position. Some editions read 'disgrace is low' instead."
+    },
+    {
+     "term": "寄天下、託天下",
+     "en": "ji tianxia, tuo tianxia - to be trusted with the world, to be given the world to keep",
+     "note": "To be entrusted with the world. It means that only one who does not cling to life or hold things as his own is fit to take charge of the world."
+    }
+   ],
+   "background": "Readers through the ages have understood the line about valuing the body as one would the world in different ways. One reading is that only one who holds himself in high regard can be trusted with the world."
+  },
+  "ch14": {
+   "summary": "The Dao cannot be grasped by the senses: it is not seen, heard or touched. It seems to be and not to be, with no head and no tail, and holding to the ancient Dao one can master the present.",
+   "translation": "Look at it and you do not see it: it is called the Plain. Listen to it and you do not hear it: it is called the Faint. Grasp it and you do not get hold of it: it is called the Subtle. These three cannot be probed to the end, and so they blend into one.\nIts upper side is not bright; its lower side is not dark. Unbroken, it cannot be named, and it returns again to the state of no-thing. This is called the shape without shape, the image of no thing. This is called the dim and the vague. Go to meet it and you do not see its head; follow it and you do not see its back.\nHold to the Dao of old to manage what exists today. To be able to know the ancient beginning is called the thread of the Dao.",
+   "glossary": [
+    {
+     "term": "夷、希、微",
+     "en": "yi, xi, wei - the Plain, the Faint, the Subtle",
+     "note": "Words for the Dao that cannot be seen, heard or touched. The three blend into one and describe the Dao as a whole."
+    },
+    {
+     "term": "惚恍",
+     "en": "huhuang - dim and vague",
+     "note": "Indistinct, as if there and not there. It means the same as 'huanghu' in chapter 21."
+    },
+    {
+     "term": "繩繩",
+     "en": "shengsheng - unbroken",
+     "note": "Stretching on without a break."
+    },
+    {
+     "term": "道紀",
+     "en": "dao ji - the thread of the Dao",
+     "note": "The guiding rule and pattern of the Dao. To grasp it is to know the origin of things."
+    }
+   ]
+  },
+  "ch15": {
+   "summary": "Those of old who were good at the Way were subtle, mysterious, penetrating and too deep to fathom. Their bearing was careful, simple and open; by not seeking fullness they could keep renewing themselves.",
+   "translation": "Those of old who were good at being masters were subtle, mysterious and penetrating, and so deep that they could not be understood. Because they cannot be understood, I will describe them by force:\nHesitant, like one crossing a river in winter. Wary, like one fearing his neighbours on every side. Dignified, like a guest. Loosening, like ice about to melt. Solid, like uncarved wood. Open, like a valley. Murky, like muddy water.\nWho can make muddy water clear by keeping still, slowly? Who can keep still for long and slowly bring life to birth? One who holds to this Dao does not wish to be full. Only because he is not full can he wear out and yet be made anew.",
+   "glossary": [
+    {
+     "term": "士",
+     "en": "shi - master (or 'Dao')",
+     "note": "In the silk manuscript this word is 'dao', so it means someone good at following the Way."
+    },
+    {
+     "term": "微妙玄通",
+     "en": "weimiao xuantong - subtle, mysterious and penetrating",
+     "note": "Fine and deep, reaching into what is hidden."
+    },
+    {
+     "term": "豫、猶",
+     "en": "yu, you - hesitant, wary",
+     "note": "The 'yu' is a beast that hesitates and takes care, and the 'you' is also a cautious, suspicious animal. Both describe someone who acts carefully."
+    },
+    {
+     "term": "蔽不新成",
+     "en": "bi bu xin cheng - wear out and be made anew",
+     "note": "'Bi' means worn and old. One reading takes the line as 'can be worn out and yet be made new', meaning that one renews oneself even in old age."
+    }
+   ]
+  },
+  "ch16": {
+   "summary": "Reach emptiness and hold to stillness, and watch the ten thousand things return to their roots. Returning to the root is returning to one's destiny; only one who knows the constant is clear, and in the end one joins the Dao and is free from danger all one's life.",
+   "translation": "Reach the utmost emptiness; keep to the deepest stillness. The ten thousand things rise together, and I watch them return. Things flourish in great numbers, and each goes back to its root.\nGoing back to the root is called stillness. This is called returning to one's destiny. Returning to destiny is called the constant. Knowing the constant is called clarity. Not knowing the constant, one acts blindly and meets disaster.\nKnowing the constant, one is all-embracing; all-embracing, one is impartial; impartial, one is complete; complete, one is in accord with Heaven; in accord with Heaven, one is in accord with the Dao; in accord with the Dao, one lasts. To the end of one's life, one is free from danger.",
+   "glossary": [
+    {
+     "term": "致虛極，守靜篤",
+     "en": "zhi xu ji, shou jing du - reach utmost emptiness, hold to deep stillness",
+     "note": "To take emptiness and stillness as far as they go and keep to them firmly: Laozi's practice of cultivation."
+    },
+    {
+     "term": "復",
+     "en": "fu - to return",
+     "note": "To go round and come back. Things that have grown must in the end go back to their source, showing that 'returning is the movement of the Dao'."
+    },
+    {
+     "term": "復命",
+     "en": "fu ming - returning to destiny",
+     "note": "Going back to the nature of one's life (ming)."
+    },
+    {
+     "term": "常、明",
+     "en": "chang, ming - the constant, clarity",
+     "note": "The constant is the unchanging law; clarity is the wisdom that sees through to it."
+    }
+   ]
+  },
+  "ch17": {
+   "summary": "The best ruler is one whom the people barely know exists; next comes one they love and praise, then one they fear, and the worst is one they despise. The ideal government is one where, when the work is done, the people say 'it happened naturally'.",
+   "translation": "The best rulers: the people below only know that they exist. The next: the people love them and praise them. The next: the people fear them. The next: the people despise them.\nWhere trust is not enough, there will be distrust. How carefully he speaks, and values his words! When the work is done and affairs are completed, the people all say: \"We did it by ourselves, naturally.\"",
+   "glossary": [
+    {
+     "term": "太上",
+     "en": "taishang - the best",
+     "note": "The highest class, the highest state."
+    },
+    {
+     "term": "下知有之",
+     "en": "xia zhi you zhi - the people below know that they exist",
+     "note": "The people only know there is a ruler and do not feel his influence. Some editions read 'do not know that they exist', so that the people do not know of any ruler at all."
+    },
+    {
+     "term": "貴言",
+     "en": "gui yan - value words",
+     "note": "Be careful of speech and give few commands."
+    },
+    {
+     "term": "自然",
+     "en": "ziran - naturally, of itself",
+     "note": "Being so of itself, not forced from outside."
+    }
+   ]
+  },
+  "ch18": {
+   "summary": "Only after the great Dao is abandoned is there need for humaneness and rightness; only when cleverness appears does deceit appear; only when families are at odds is there talk of filial piety; only when the state is in chaos are there loyal ministers.",
+   "translation": "When the great Dao is abandoned, there is humaneness and rightness. When cleverness appears, there is great deceit. When the six family relations are not in harmony, there are filial piety and parental kindness. When the state is in darkness and chaos, there are loyal ministers.",
+   "glossary": [
+    {
+     "term": "大道廢，有仁義",
+     "en": "da dao fei, you ren yi - when the great Dao is abandoned, there is humaneness and rightness",
+     "note": "It is only because morality has fallen that humaneness and rightness stand out as needed. Laozi uses this to criticise virtue that is displayed on purpose."
+    },
+    {
+     "term": "大偽",
+     "en": "da wei - great deceit",
+     "note": "Serious falseness and trickery."
+    },
+    {
+     "term": "六親",
+     "en": "liuqin - the six relations",
+     "note": "Father and son, elder and younger brother, husband and wife; or more generally all relatives."
+    },
+    {
+     "term": "與三十八章呼應",
+     "en": "yu sanshiba zhang huying - an echo of chapter 38",
+     "note": "The chapter is a reflection: the displaying of virtue presupposes a loss of virtue, in the same spirit as 'after the Dao is lost, there is virtue' in chapter 38."
+    }
+   ],
+   "background": "This chapter and chapter 19 criticise the Confucian virtues of humaneness, rightness, ritual propriety and wisdom. The Guodian bamboo-slip version reads 'when the old great Dao was abandoned, how could there be humaneness and rightness', which is milder in tone."
+  },
+  "ch19": {
+   "summary": "It argues for cutting off sageliness and cleverness, discarding humaneness and rightness, and cutting off skill and profit, and returning to simplicity: show plainness, embrace the uncarved, have little self-interest and few desires.",
+   "translation": "Cut off sageliness and discard cleverness, and the people will benefit a hundredfold. Cut off humaneness and discard rightness, and the people will return to filial piety and kindness. Cut off skill and discard profit, and robbers and thieves will be no more.\nThese three sayings, taken as mere adornment, are not enough. So let there be something people can hold to: show plainness, embrace the uncarved block, have little self-interest and few desires.",
+   "glossary": [
+    {
+     "term": "絕聖棄智",
+     "en": "jue sheng qi zhi - cut off sageliness, discard cleverness",
+     "note": "To get rid of the sageliness and wisdom that are held up on purpose. It does not deny true wisdom. The Guodian slip version reads 'cut off cleverness, discard argument'."
+    },
+    {
+     "term": "絕仁棄義",
+     "en": "jue ren qi yi - cut off humaneness, discard rightness",
+     "note": "As above. The Warring States slip version reads 'cut off falseness, discard scheming', which is milder."
+    },
+    {
+     "term": "見素抱樸",
+     "en": "jian su bao pu - show plainness, embrace the uncarved",
+     "note": "Outwardly plain, inwardly holding to simplicity: the ideal Daoist character."
+    },
+    {
+     "term": "少私寡欲",
+     "en": "shao si gua yu - few private aims, few desires",
+     "note": "To reduce selfishness and desire."
+    }
+   ],
+   "background": "The Guodian bamboo-slip version of this chapter differs a great deal from the received text. Many scholars think the received text is a later revision from the late Warring States period, in a much harsher tone."
+  },
+  "ch20": {
+   "summary": "Setting the crowd against himself, Laozi draws one who has the Dao as someone who seems dull and alone. He does not follow the fashion, and values 'feeding from the Mother', which is holding to the Dao.",
+   "translation": "Cut off learning and there is no worry. 'Yes' and 'yeah' - how far apart are they? Good and evil - how far apart are they? What people fear, one cannot help but fear.\nHow wasteful and endless it is! The crowd are merry, as if feasting on the great sacrifice, as if climbing a terrace in spring. I alone am quiet, giving no sign, like an infant who has not yet smiled; so weary, as if I had nowhere to return to. The crowd all have more than enough, and I alone seem to have lost everything. I have the heart of a fool indeed - how muddled!\nOrdinary people are bright; I alone am dim. Ordinary people are sharp; I alone am dull. Calm like the sea, blowing as if it will never stop. The crowd all have some purpose, and I alone am stubborn, like a rustic.\nI alone am different from others, and I value feeding from the Mother.",
+   "glossary": [
+    {
+     "term": "絕學無憂",
+     "en": "jue xue wu you - cut off learning and there is no worry",
+     "note": "Without the learning of the world (the learning of cleverness) there is no trouble. Some put this line at the end of the previous chapter."
+    },
+    {
+     "term": "唯與阿",
+     "en": "wei yu e - 'yes' and 'yeah'",
+     "note": "'Wei' is a respectful reply and 'e' is a rude one. It is a picture of how worldly distinctions are relative."
+    },
+    {
+     "term": "太牢",
+     "en": "tailao - the great sacrifice",
+     "note": "The most solemn of ancient sacrifices, with ox, sheep and pig. 'Feasting on the great sacrifice' stands for the crowd's merriment."
+    },
+    {
+     "term": "食母",
+     "en": "shi mu - feeding from the Mother",
+     "note": "'Shi' is to draw nourishment and 'mother' is the Dao. To value it is to prize the nourishment one gets from the Dao."
+    }
+   ]
+  },
+  "ch21": {
+   "summary": "A person of great virtue follows only the Dao. The Dao is dim and hard to see, yet within it are image, thing, essence and trust, the ground of the beginnings of all things.",
+   "translation": "The form of great virtue follows the Dao alone. The Dao as a thing is only vague and dim. Dim and vague, yet within it is an image; vague and dim, yet within it is a thing. Deep and dark, yet within it is an essence; this essence is very real, and within it is trust.\nFrom now back to antiquity, its name has never gone away, and through it we survey the beginnings of all things. How do I know what the beginnings of all things are like? By this.",
+   "glossary": [
+    {
+     "term": "孔德",
+     "en": "kongde - great virtue",
+     "note": "'Kong' means great or very, so 'kongde' is great virtue."
+    },
+    {
+     "term": "恍惚",
+     "en": "huanghu - dim and vague",
+     "note": "Seeming to be and not to be, and hard to pin down: a picture of how the Dao cannot be put into words."
+    },
+    {
+     "term": "窈冥",
+     "en": "yaoming - deep and dark",
+     "note": "Far-reaching and dim, a picture of the Dao's depth."
+    },
+    {
+     "term": "眾甫",
+     "en": "zhongfu - the beginnings of all things",
+     "note": "'Fu' is the same as 'father', and one reading takes it as 'beginning'. The word means the origin of the ten thousand things."
+    }
+   ]
+  },
+  "ch22": {
+   "summary": "Through the bent, the crooked, the hollow and the worn, the chapter shows that what is soft and low in the end achieves completion. The sage does not show off or assert himself, and so he becomes clear, has merit and lasts.",
+   "translation": "The bent is made whole. The crooked is made straight. The hollow is filled. The worn is made new. Having little, one gains; having much, one is confused.\nTherefore the sage embraces the One as a model for the world. Not showing himself, he is clear. Not asserting himself, he is distinguished. Not boasting, he has merit. Not being proud, he lasts. Only because he does not contend, no one in the world can contend with him.\nWhat the ancients called 'the bent is made whole' - were these empty words? Truly, wholeness returns to him.",
+   "glossary": [
+    {
+     "term": "曲則全",
+     "en": "qu ze quan - the bent is made whole",
+     "note": "By bending and yielding, one is kept whole. Laozi uses reversed sayings to show the strength of the soft."
+    },
+    {
+     "term": "抱一",
+     "en": "bao yi - embrace the One",
+     "note": "To hold to the Dao. 'The One' is the Dao."
+    },
+    {
+     "term": "自見",
+     "en": "zi xian - showing oneself",
+     "note": "Putting oneself forward and parading. The character stands for the word meaning to appear."
+    },
+    {
+     "term": "不自伐",
+     "en": "bu zi fa - not boasting",
+     "note": "Not praising one's own achievements. 'Fa' is to brag."
+    }
+   ]
+  },
+  "ch23": {
+   "summary": "Speaking little accords with nature; even whirlwind and downpour do not last. Those who follow the Dao are at one with the Dao, with virtue or with loss, and where trust is lacking, people do not trust.",
+   "translation": "To speak little is natural. So a whirlwind does not last a morning, and a sudden downpour does not last a day. Who makes these? Heaven and earth. If heaven and earth cannot make them last, how much less can a human being?\nSo one who follows the Dao in his work: one who is of the Dao is at one with the Dao; one who is of virtue is at one with virtue; one who is of loss is at one with loss. When one is at one with the Dao, the Dao is glad to receive him. When one is at one with virtue, virtue is glad to receive him. When one is at one with loss, loss is glad to receive him.\nWhere trust is not enough, there is distrust.",
+   "glossary": [
+    {
+     "term": "希言",
+     "en": "xi yan - speak little",
+     "note": "To speak little, meaning to give few commands. 'Xi' means rare."
+    },
+    {
+     "term": "飄風、驟雨",
+     "en": "piaofeng, zhouyu - whirlwind, downpour",
+     "note": "Violent wind and rain cannot last, and so they picture a harsh government that cannot endure."
+    },
+    {
+     "term": "從事於道者",
+     "en": "congshi yu dao zhe - one who follows the Dao in his work",
+     "note": "Someone who devotes himself to the Dao."
+    },
+    {
+     "term": "信不足焉，有不信焉",
+     "en": "xin bu zu yan, you bu xin yan - where trust is not enough, there is distrust",
+     "note": "The same sentence as in chapter 17. One view holds that it is an intrusion here."
+    }
+   ]
+  },
+  "ch24": {
+   "summary": "Standing on tiptoe or striding does not last. Showing oneself, being self-righteous, boasting and being proud are all 'leftover food and superfluous growths' that are against the Dao.",
+   "translation": "One who stands on tiptoe does not stand firm. One who straddles does not walk well. One who shows himself is not clear. One who asserts himself is not distinguished. One who boasts has no merit. One who is proud does not last.\nIn the Dao, these are called leftover food and superfluous growths. Things may well despise them, so one who has the Dao does not dwell in them.",
+   "glossary": [
+    {
+     "term": "企者不立",
+     "en": "qi zhe bu li - one on tiptoe does not stand",
+     "note": "To raise oneself on tiptoe: forced effort that cannot last."
+    },
+    {
+     "term": "跨者不行",
+     "en": "kua zhe bu xing - one who straddles does not walk",
+     "note": "To take wide strides; haste makes no speed."
+    },
+    {
+     "term": "餘食贅行",
+     "en": "yu shi zhui xing - leftover food and superfluous growths",
+     "note": "Leftover food and growths on the body: pictures of excess behaviour that people dislike."
+    },
+    {
+     "term": "自矜",
+     "en": "zi jin - being proud",
+     "note": "Pride and arrogance."
+    }
+   ]
+  },
+  "ch25": {
+   "summary": "It describes the body of the Dao: born before heaven and earth, silent, standing alone and moving everywhere without tiring, the mother of the world. It is called Dao, or by force 'great'; humans follow earth, earth follows heaven, heaven follows the Dao, and the Dao follows what is natural.",
+   "translation": "There is something formless yet complete, born before heaven and earth. Silent and empty, it stands alone and does not change; it moves everywhere and does not tire. It can be the mother of the world.\nI do not know its name. I style it 'Dao', and, forcing a name on it, I call it 'great'. Great means going; going means far; far means returning.\nSo the Dao is great, heaven is great, earth is great, and the king too is great. Within the realm there are four great ones, and the king is one of them.\nHumans follow earth. Earth follows heaven. Heaven follows the Dao. The Dao follows what is natural.",
+   "glossary": [
+    {
+     "term": "有物混成",
+     "en": "you wu huncheng - something formless yet complete",
+     "note": "There is something that is whole by its own nature, meaning the Dao."
+    },
+    {
+     "term": "字之曰道",
+     "en": "zi zhi yue dao - style it 'Dao'",
+     "note": "'Zi' is a style name, 'ming' is a name: to call it 'Dao' only for want of a better word."
+    },
+    {
+     "term": "四大",
+     "en": "sida - the four great",
+     "note": "Dao, heaven, earth and the king (or 'person'). Wang Bi's text reads 'the king is also great'; the silk manuscript and the Fu Yi edition read 'king', and Heshang Gong's edition reads 'person'."
+    },
+    {
+     "term": "道法自然",
+     "en": "Dao fa ziran - the Dao follows what is natural",
+     "note": "The Dao takes naturalness as its model. This does not mean there is a 'nature' above the Dao; it means that the Dao's own nature is to be natural and without forcing."
+    }
+   ]
+  },
+  "ch26": {
+   "summary": "The heavy is the root of the light, and stillness is the master of restlessness. A ruler must not act lightly and lose his root.",
+   "translation": "The heavy is the root of the light; stillness is the lord of restlessness. Therefore the sage, travelling all day, never leaves his baggage wagons. Though there are splendid sights, he stays calm and aloof.\nHow can the ruler of ten thousand chariots treat his own person lightly in the eyes of the world? If light, he loses his root; if restless, he loses his throne.",
+   "glossary": [
+    {
+     "term": "輜重",
+     "en": "zizhong - baggage wagons",
+     "note": "The carts that carry supplies on a march. Here they stand for the weighty foundation one must not leave."
+    },
+    {
+     "term": "燕處",
+     "en": "yanchu - to stay at ease",
+     "note": "To live quietly at home."
+    },
+    {
+     "term": "榮觀",
+     "en": "rongguan - splendid sights",
+     "note": "Grand and glittering things, meaning luxurious enjoyment."
+    },
+    {
+     "term": "萬乘之主",
+     "en": "wansheng zhi zhu - ruler of ten thousand chariots",
+     "note": "The ruler of a great state that could field ten thousand war chariots."
+    }
+   ]
+  },
+  "ch27": {
+   "summary": "One who is good at acting leaves no trace. The sage is good at saving people and things, so that no one and nothing is wasted. The good person is the teacher of the not-good, and the not-good is the material of the good.",
+   "translation": "Good walking leaves no tracks. Good speech has no flaw to find fault with. Good counting uses no counting rods. Good closing uses no bolt or bar, yet cannot be opened. Good tying uses no cord, yet cannot be undone.\nTherefore the sage is always good at saving people, and so no one is cast aside; always good at saving things, and so nothing is cast aside. This is called following the light.\nSo the good person is the teacher of the not-good person, and the not-good person is the material for the good person. One who does not value his teacher or love his material, though clever, is greatly lost. This is called the essential mystery.",
+   "glossary": [
+    {
+     "term": "轍迹",
+     "en": "zheji - wheel tracks",
+     "note": "The marks of cart wheels."
+    },
+    {
+     "term": "籌策",
+     "en": "chouce - counting rods",
+     "note": "Small bamboo rods used for calculating in ancient times."
+    },
+    {
+     "term": "襲明",
+     "en": "xi ming - following the light",
+     "note": "'Xi' is to carry on or to hold within, and 'ming' is clear wisdom: to keep one's light within and not show it."
+    },
+    {
+     "term": "資",
+     "en": "zi - material",
+     "note": "Something to draw on or learn from. It means that even the not-good person gives the good person something to be warned by."
+    }
+   ]
+  },
+  "ch28": {
+   "summary": "Know the male but hold to the female, know the white but hold to the black, know glory but hold to disgrace: by being the ravine, the pattern and the valley of the world through softness and humility, one returns to the infant, the limitless and the uncarved. When the uncarved is cut up it becomes vessels, and the sage uses them as chief of officials.",
+   "translation": "Know the male, hold to the female: be the ravine of the world. Being the ravine of the world, constant virtue does not leave, and one returns to being an infant.\nKnow the white, hold to the black: be the pattern of the world. Being the pattern of the world, constant virtue does not err, and one returns to the limitless.\nKnow glory, hold to disgrace: be the valley of the world. Being the valley of the world, constant virtue is sufficient, and one returns to the uncarved.\nWhen the uncarved is cut up, it becomes vessels. The sage uses them and becomes chief of officials. Therefore the great carving does not cut.",
+   "glossary": [
+    {
+     "term": "雄與雌",
+     "en": "xiong yu ci - male and female",
+     "note": "The male stands for strength and advance, the female for gentleness and humility. Laozi advises knowing the male but keeping to the female."
+    },
+    {
+     "term": "谿、谷",
+     "en": "xi, gu - ravine, valley",
+     "note": "A stream and a valley lie low and take in many waters, a picture of humility that contains."
+    },
+    {
+     "term": "樸",
+     "en": "pu - the uncarved",
+     "note": "A block of wood not yet carved, a picture of the natural, original state of the Dao."
+    },
+    {
+     "term": "大制不割",
+     "en": "da zhi bu ge - the great carving does not cut",
+     "note": "The most complete order is not cut up, and keeps its wholeness and naturalness."
+    }
+   ]
+  },
+  "ch29": {
+   "summary": "The world is a sacred thing and cannot be forced. Whoever forces or grasps it fails; the sage puts away the extreme, the extravagant and the excessive.",
+   "translation": "If you want to take the world and act upon it, I see that you will not succeed. The world is a sacred vessel and cannot be acted upon. Whoever acts upon it ruins it; whoever grasps it loses it.\nAmong things, some go ahead and some follow; some breathe softly and some blow hard; some are strong and some weak; some are broken and some toppled. Therefore the sage rejects the extreme, the extravagant and the excessive.",
+   "glossary": [
+    {
+     "term": "神器",
+     "en": "shenqi - sacred vessel",
+     "note": "A sacred object, meaning the power to rule the world; a picture of the world as something that cannot be taken by force."
+    },
+    {
+     "term": "為者敗之，執者失之",
+     "en": "wei zhe bai zhi, zhi zhe shi zhi - whoever acts on it ruins it, whoever grasps it loses it",
+     "note": "Forced action is bound to fail, and clinging is bound to lose."
+    },
+    {
+     "term": "歔、吹",
+     "en": "xu, chui - breathe softly, blow hard",
+     "note": "One breathes out slowly and the other blows quickly: a picture of how things differ in their natures."
+    },
+    {
+     "term": "去甚、去奢、去泰",
+     "en": "qu shen, qu she, qu tai - reject the extreme, the extravagant, the excessive",
+     "note": "To get rid of what goes too far, what is lavish and what is arrogant, and so keep to moderation."
+    }
+   ]
+  },
+  "ch30": {
+   "summary": "One who helps a ruler with the Dao does not dominate the world by force of arms. War brings evil results, and even in victory one should not boast, for what has reached its peak turns back.",
+   "translation": "One who assists a ruler with the Dao does not use weapons to dominate the world. Such things tend to come back. Where an army has camped, thorns and brambles grow. After a great war, there are always years of famine.\nA good commander gets his result and stops; he does not dare to use it to take strength. Get the result, but do not be proud of it. Get the result, but do not boast. Get the result, but do not be arrogant. Get the result because you had no choice. Get the result, but do not use force.\nWhen things are strong they grow old. This is called being against the Dao, and what is against the Dao comes early to its end.",
+   "glossary": [
+    {
+     "term": "好還",
+     "en": "hao huan - tends to come back",
+     "note": "Likely to bring retribution; 'huan' means to return."
+    },
+    {
+     "term": "果",
+     "en": "guo - to achieve the result",
+     "note": "To reach the desired effect, to succeed. Laozi says one should stop once the aim is reached and not use force to show strength."
+    },
+    {
+     "term": "矜、伐、驕",
+     "en": "jin, fa, jiao - pride, boasting, arrogance",
+     "note": "Self-importance, bragging and arrogance: the states of mind that arise easily after a victory."
+    },
+    {
+     "term": "物壯則老",
+     "en": "wu zhuang ze lao - when things are strong they grow old",
+     "note": "After a thing is in its prime it turns towards old age."
+    }
+   ]
+  },
+  "ch31": {
+   "summary": "Weapons are instruments of ill omen, and a noble person uses them only when he has no choice and does not praise victory. When many have been killed they should be met with the rites of mourning.",
+   "translation": "Fine weapons are instruments of ill omen. Things may well hate them, so one who has the Dao does not dwell among them.\nThe noble person at home honours the left; in war he honours the right. Weapons are instruments of ill omen, not the instruments of the noble person. When he has no choice but to use them, calm and plain restraint is best. Victory is nothing to praise; to praise it is to delight in killing people. One who delights in killing people cannot succeed in the world.\nIn happy affairs the left is honoured; in sad affairs the right. The lieutenant general stands on the left; the commanding general stands on the right - which is to say, they are placed as at a funeral. When many people have been killed, one should weep for them with grief. A victory in war should be treated with the rites of mourning.",
+   "glossary": [
+    {
+     "term": "佳兵",
+     "en": "jia bing - fine weapons",
+     "note": "Excellent weapons. Another reading takes 'jia' as a loan for a word meaning 'only', so that it means 'delighting in war'."
+    },
+    {
+     "term": "貴左、貴右",
+     "en": "gui zuo, gui you - honour the left, honour the right",
+     "note": "The ancients held the left to be yang and life and the right yin and killing; so the left was honoured in peacetime, and the right in war."
+    },
+    {
+     "term": "恬淡",
+     "en": "tiandan - calm and plain",
+     "note": "Calm and not greedy."
+    },
+    {
+     "term": "以喪禮處之",
+     "en": "yi sangli chu zhi - treat it with the rites of mourning",
+     "note": "Even a victory is to be treated as a funeral, showing reverence for life."
+    }
+   ],
+   "background": "Some sentences in this chapter, such as those from 'in happy affairs the left is honoured' to the end, are thought to be an old commentary that got mixed into the text."
+  },
+  "ch32": {
+   "summary": "The Dao is constant and nameless, simple. If lords and kings can hold to it, the ten thousand things will come to them of themselves. Once a system is set up there are names, and one must know where to stop in order to be safe.",
+   "translation": "The Dao is constant and nameless. Though the uncarved is small, no one in the world can make it a subject. If lords and kings could hold to it, the ten thousand things would come to them of themselves.\nHeaven and earth unite and send down sweet dew; the people, with no one commanding them, are even of themselves.\nWhen the system first begins, there are names. Once there are names, one must also know where to stop. Knowing where to stop is how to avoid danger.\nThe Dao in the world is like the valley streams to the rivers and the sea.",
+   "glossary": [
+    {
+     "term": "樸",
+     "en": "pu - the uncarved",
+     "note": "A block of wood not yet carved, a picture of the original nature of the Dao."
+    },
+    {
+     "term": "賓",
+     "en": "bin - to submit",
+     "note": "To come as a guest, to submit and give allegiance."
+    },
+    {
+     "term": "始制有名",
+     "en": "shi zhi you ming - when the system begins there are names",
+     "note": "When people first set up systems and titles."
+    },
+    {
+     "term": "知止",
+     "en": "zhi zhi - to know where to stop",
+     "note": "To know when enough is enough: the virtue of restraint and self-reflection."
+    }
+   ]
+  },
+  "ch33": {
+   "summary": "Through knowing others and knowing oneself, overcoming others and overcoming oneself, contentment, perseverance, keeping one's place and not perishing in death, the chapter says what true wisdom, strength, wealth and long life are.",
+   "translation": "One who knows others is clever; one who knows himself is clear. One who overcomes others has force; one who overcomes himself is strong.\nOne who knows contentment is rich. One who presses on has purpose. One who does not lose his place lasts long. One who dies and yet does not perish has long life.",
+   "glossary": [
+    {
+     "term": "自知者明",
+     "en": "zizhi zhe ming - one who knows himself is clear",
+     "note": "Knowing oneself is real understanding, and 'clarity' is a step above 'cleverness'."
+    },
+    {
+     "term": "自勝者強",
+     "en": "zisheng zhe qiang - one who overcomes himself is strong",
+     "note": "The one who can overcome his own selfish desires is the strongest."
+    },
+    {
+     "term": "知足者富",
+     "en": "zhizu zhe fu - one who knows contentment is rich",
+     "note": "Content with what one has, one is rich within."
+    },
+    {
+     "term": "死而不亡者壽",
+     "en": "si er bu wang zhe shou - one who dies and does not perish has long life",
+     "note": "One whose virtue, Dao or spirit lasts after death is truly long-lived. Another reading is 'dies and is not forgotten' (the silk manuscript has 'forgotten')."
+    }
+   ]
+  },
+  "ch34": {
+   "summary": "The great Dao spreads everywhere; the ten thousand things live by it and it does not refuse them. It does its work without claiming it and nourishes all without being their master, and so it can be great.",
+   "translation": "The great Dao overflows; it can go to the left and to the right. The ten thousand things rely on it for life and it does not turn them away. When its work is done, it does not claim to own it.\nIt clothes and nourishes the ten thousand things and does not act as their master. Always without desire, it may be called small. The ten thousand things return to it and it does not act as their master; it may be called great.\nBecause to the end it does not make itself great, it can accomplish its greatness.",
+   "glossary": [
+    {
+     "term": "氾",
+     "en": "fan - to overflow",
+     "note": "A variant of the character for spreading widely."
+    },
+    {
+     "term": "衣養",
+     "en": "yi yang - to clothe and nourish",
+     "note": "To cover and feed. 'Yi' here is a verb, meaning to drape over."
+    },
+    {
+     "term": "不為主",
+     "en": "bu wei zhu - not acting as master",
+     "note": "Not ruling over things and not possessing them."
+    },
+    {
+     "term": "可名於小、可名為大",
+     "en": "keming yu xiao, keming wei da - may be called small, may be called great",
+     "note": "The Dao has no desire and does not show itself, so it can be called small; the ten thousand things return to it, so it can also be called great."
+    }
+   ]
+  },
+  "ch35": {
+   "summary": "When a person holds the great Dao, the world comes to him without harm. Music and food stop a passing guest only for a time, but the Dao is plain and without taste, and yet it cannot be used up.",
+   "translation": "Hold the great image, and the world comes to you. They come and are not harmed; there is peace, calm and ease.\nMusic and good food make a passing guest stop. But the Dao when it comes out of the mouth is plain and without taste. Look at it, and it is not enough to see; listen to it, and it is not enough to hear; use it, and it cannot be used up.",
+   "glossary": [
+    {
+     "term": "大象",
+     "en": "daxiang - the great image",
+     "note": "The image of the great Dao, that is, the Dao itself."
+    },
+    {
+     "term": "安平太",
+     "en": "an ping tai - peace, calm and ease",
+     "note": "Settled, peaceful and well."
+    },
+    {
+     "term": "樂與餌",
+     "en": "yue yu er - music and food",
+     "note": "Music and good food: a picture of sensory pleasure, set against the Dao that is 'plain and without taste'."
+    },
+    {
+     "term": "用之不足既",
+     "en": "yong zhi bu zu ji - use it and it cannot be used up",
+     "note": "It cannot be exhausted. 'Ji' means to use up."
+    }
+   ]
+  },
+  "ch36": {
+   "summary": "When things reach their limit they turn back: what is to be shrunk must first be stretched. This is subtle insight; the soft and weak overcome the hard and strong, and the sharp instruments of a state must not be shown.",
+   "translation": "What is to be shrunk must first be stretched. What is to be weakened must first be strengthened. What is to be abolished must first be raised up. What is to be taken away must first be given.\nThis is called subtle insight. The soft and weak overcome the hard and strong.\nA fish must not leave the deep; the sharp instruments of a state must not be shown to people.",
+   "glossary": [
+    {
+     "term": "歙",
+     "en": "xi - to draw in",
+     "note": "To contract, to shrink."
+    },
+    {
+     "term": "微明",
+     "en": "weiming - subtle insight",
+     "note": "A principle that is hidden yet clear: the law by which things change into their opposite."
+    },
+    {
+     "term": "柔弱勝剛強",
+     "en": "rouruo sheng gangqiang - the soft and weak overcome the hard and strong",
+     "note": "One of Laozi's central claims."
+    },
+    {
+     "term": "國之利器",
+     "en": "guo zhi liqi - the sharp instruments of a state",
+     "note": "One view takes these to be the arts of power and the use of rewards and punishments, another takes them to be weapons; opinions have long differed."
+    }
+   ],
+   "background": "This chapter is often misread as a handbook of scheming. The more usual view is that it explains the law that things at their extreme turn back, and does not encourage plots."
+  },
+  "ch37": {
+   "summary": "The Dao does nothing and yet nothing is left undone. If lords and kings hold to it, the ten thousand things transform of themselves, and where desires stir, the nameless uncarved quiets them; with no desire and with stillness the world settles of itself.",
+   "translation": "The Dao is always without action, and yet there is nothing left undone. If lords and kings could hold to it, the ten thousand things would transform of themselves.\nIf, in transforming, desires should stir, I would still them with the nameless uncarved. The nameless uncarved is itself free of desire. Without desire, there is stillness, and the world will settle of itself.",
+   "glossary": [
+    {
+     "term": "無為而無不為",
+     "en": "wuwei er wu bu wei - without action, yet nothing left undone",
+     "note": "The Dao does nothing on purpose, and yet it accomplishes everything."
+    },
+    {
+     "term": "自化",
+     "en": "zi hua - transform of themselves",
+     "note": "To grow and change of themselves."
+    },
+    {
+     "term": "無名之樸",
+     "en": "wuming zhi pu - the nameless uncarved",
+     "note": "The simple state that has no name; the original nature of the Dao."
+    },
+    {
+     "term": "自定",
+     "en": "zi ding - settle of themselves",
+     "note": "To become calm by themselves."
+    }
+   ],
+   "background": "This is the last chapter of the Dao part (the first part) in Wang Bi's edition; the second part, the De part, begins with chapter 38, 'the highest virtue is not virtuous'. The chapter is about non-action and the uncarved: if the ruler holds to the Dao, the ten thousand things transform of themselves, and even desires are quieted by the nameless uncarved."
+  },
+  "ch38": {
+   "summary": "The highest virtue does not think itself virtuous and so has virtue. After the Dao is lost there is virtue, then humaneness, then rightness, then ritual; ritual is a thinning of loyalty and trust and the beginning of disorder.",
+   "translation": "The highest virtue is not virtuous, and therefore it has virtue. The lowest virtue never lets go of virtue, and therefore it has no virtue.\nThe highest virtue does not act and has no reason to act. The lowest virtue acts and has a reason to act. The highest humaneness acts and has no reason to act. The highest rightness acts and has a reason to act. The highest ritual acts, and when no one responds, it rolls up its sleeves and forces people.\nSo when the Dao is lost, there is virtue; when virtue is lost, there is humaneness; when humaneness is lost, there is rightness; when rightness is lost, there is ritual. Ritual is the thin edge of loyalty and trust, and the beginning of disorder. Foreknowledge is the flower of the Dao, and the beginning of folly.\nTherefore the great person dwells in the thick and not the thin; he dwells in the fruit and not the flower. So he leaves that and takes this.",
+   "glossary": [
+    {
+     "term": "上德不德",
+     "en": "shang de bu de - the highest virtue is not virtuous",
+     "note": "The highest virtue does not think itself virtuous. It follows nature, and therefore it has virtue."
+    },
+    {
+     "term": "失道而後德",
+     "en": "shi dao er hou de - when the Dao is lost, there is virtue",
+     "note": "The levels go down step by step: Dao, virtue, humaneness, rightness, ritual, each a loss of the one before."
+    },
+    {
+     "term": "前識",
+     "en": "qianshi - foreknowledge",
+     "note": "Prior knowledge and fixed judgements; what the world calls wisdom, which Laozi sees as the showy flower of the Dao."
+    },
+    {
+     "term": "攘臂而扔之",
+     "en": "rang bi er reng zhi - roll up the sleeves and force",
+     "note": "To bare the arm and pull people by force: the compulsion of ritual when it cannot move people."
+    }
+   ],
+   "background": "This is the first chapter of the De part (the second part); the name Daodejing 'Classic of the Dao and De' comes from this. The Mawangdui silk manuscript puts the De part before the Dao part."
+  },
+  "ch39": {
+   "summary": "Everything that has attained the One is what it is: Heaven is clear, earth calm, spirits divine, the valley full, the ten thousand things alive, and lords and kings the standard of the world. The noble takes the humble as root, and the high takes the low as foundation.",
+   "translation": "Of those in the past who attained the One: Heaven attained the One and became clear. Earth attained the One and became calm. Spirits attained the One and became divine. The valley attained the One and became full. The ten thousand things attained the One and came to life. Lords and kings attained the One and became the standard for the world.\nTaken to the limit: if Heaven had nothing to make it clear, it might split. If earth had nothing to make it calm, it might erupt. If spirits had nothing to make them divine, they might fade. If the valley had nothing to make it full, it might run dry. If the ten thousand things had nothing to make them live, they might perish. If lords and kings had nothing to make them noble and high, they might fall.\nSo the noble takes the humble as its root, and the high takes the low as its foundation. That is why lords and kings call themselves the Orphan, the Lonely One and the Unworthy. Is this not taking the humble as the root? Is it not?\nTherefore, count the parts of a carriage one by one and there is no carriage. Do not wish to gleam like jade; be rather like rough stone.",
+   "glossary": [
+    {
+     "term": "一",
+     "en": "yi - the One",
+     "note": "The Dao, or the whole, harmony and unity of the Dao. Heaven, earth and all things are what they are by attaining the One."
+    },
+    {
+     "term": "貞",
+     "en": "zhen - standard",
+     "note": "A leader or what is upright; some editions write 'zheng', upright."
+    },
+    {
+     "term": "孤、寡、不穀",
+     "en": "gu, gua, bugu - the Orphan, the Lonely One, the Unworthy",
+     "note": "Humble terms kings used of themselves in ancient times, meaning lonely, of little virtue and not good."
+    },
+    {
+     "term": "致數輿無輿",
+     "en": "zhi shu yu wu yu - count the carriage parts and there is no carriage",
+     "note": "One reading is that 'shu yu' means the parts of a carriage, which if taken apart leave no carriage. It pictures how chasing after honour can leave one with nothing."
+    },
+    {
+     "term": "琭琭、珞珞",
+     "en": "lulu, luoluo - gleaming, rough",
+     "note": "'Lulu' is the gleam of fine jade, 'luoluo' the hardness of stone."
+    }
+   ]
+  },
+  "ch40": {
+   "summary": "The movement of the Dao is a cycle of return, and its use is softness. The ten thousand things are born from being, and being is born from non-being.",
+   "translation": "Returning is the movement of the Dao. Weakness is the use of the Dao.\nThe ten thousand things under heaven are born from being, and being is born from non-being.",
+   "glossary": [
+    {
+     "term": "反者道之動",
+     "en": "fan zhe dao zhi dong - returning is the movement of the Dao",
+     "note": "'Fan' means both to return and to turn into the opposite. It says that things turning into their opposites and going round and round is the movement of the Dao."
+    },
+    {
+     "term": "弱者道之用",
+     "en": "ruo zhe dao zhi yong - weakness is the use of the Dao",
+     "note": "Softness is the way the Dao is put to use."
+    },
+    {
+     "term": "有生於無",
+     "en": "you sheng yu wu - being is born from non-being",
+     "note": "The ten thousand things come from visible 'being', and visible being comes from invisible 'non-being'. Here 'non-being' is not mere nothingness but the Dao that has not yet appeared."
+    }
+   ],
+   "background": "This chapter is short but is often treated as the outline of Laozi's metaphysics. The line 'being is born from non-being' later became the basis for the Wei-Jin Mysterious Learning school that honoured non-being."
+  },
+  "ch41": {
+   "summary": "The highest, middling and lowest sort of people respond differently on hearing the Dao. The Dao often takes the shape of its opposite, as in 'the great sound is faint' and 'the great image has no form'; it is hidden and nameless, yet good at beginning and at completing.",
+   "translation": "When the highest sort of person hears of the Dao, he diligently practises it. When the middling sort hears of the Dao, it seems to him to be there and not there. When the lowest sort hears of the Dao, he laughs loudly at it. If he did not laugh, it would not be fit to be the Dao.\nSo the old sayings have it: The bright Way seems dark. The way forward seems to go back. The level way seems rough. The highest virtue seems like a valley. The greatest purity seems sullied. Broad virtue seems not enough. Established virtue seems stolen. True substance seems to change. The great square has no corners. The great vessel is completed late. The great sound is faint in sound. The great image has no form. The Dao is hidden and has no name.\nOnly the Dao is good at lending and at completing.",
+   "glossary": [
+    {
+     "term": "建言",
+     "en": "jianyan - old sayings",
+     "note": "Sayings set down by people of old, or old proverbs."
+    },
+    {
+     "term": "夷道若纇",
+     "en": "yi dao ruo lei - the level way seems rough",
+     "note": "The smooth Way seems to have knots in it. 'Lei' means a knot in silk."
+    },
+    {
+     "term": "大方無隅",
+     "en": "da fang wu yu - the great square has no corners",
+     "note": "The greatest square has no corner."
+    },
+    {
+     "term": "大器晚成",
+     "en": "da qi wan cheng - the great vessel is completed late",
+     "note": "The greatest vessel is finished last. The silk manuscript has a different reading, 'does not become complete'; the modern idiom takes 'completed late'."
+    },
+    {
+     "term": "大音希聲",
+     "en": "da yin xi sheng - the great sound is faint in sound",
+     "note": "The greatest sound is so faint it seems silent. It became a famous line in later theories of art."
+    }
+   ]
+  },
+  "ch42": {
+   "summary": "It gives the order in which the Dao produces the ten thousand things and the harmony of yin and yang; loss and gain complete each other, and the violent do not die a natural death.",
+   "translation": "The Dao gives birth to one. One gives birth to two. Two give birth to three. Three give birth to the ten thousand things.\nThe ten thousand things carry yin on their backs and embrace yang, and the blending of their qi makes harmony.\nWhat people hate is to be called the Orphan, the Lonely One and the Unworthy, and yet kings and lords use these as their titles. So things are sometimes added to by being taken from, and sometimes taken from by being added to.\nWhat others teach, I also teach: the violent do not die a natural death. I will take this as the father of my teaching.",
+   "glossary": [
+    {
+     "term": "道生一，一生二，二生三",
+     "en": "Dao sheng yi, yi sheng er, er sheng san - the Dao gives birth to one, one to two, two to three",
+     "note": "A short statement of how the cosmos came to be. Readings differ: for example one is primal qi, two is yin and yang, three is yin, yang and the harmonising qi."
+    },
+    {
+     "term": "負陰抱陽",
+     "en": "fu yin bao yang - carry yin and embrace yang",
+     "note": "All things are made of two kinds of qi, yin and yang."
+    },
+    {
+     "term": "沖氣",
+     "en": "chongqi - the blending qi",
+     "note": "The harmonious qi produced when yin and yang qi stir against each other."
+    },
+    {
+     "term": "強梁",
+     "en": "qiangliang - the violent",
+     "note": "People who are overbearing and who show off their strength."
+    }
+   ]
+  },
+  "ch43": {
+   "summary": "The softest thing in the world can pass through the hardest; the formless can enter where there is no gap, and so we know the benefit of non-action.",
+   "translation": "The softest thing in the world gallops through the hardest thing in the world. What has no being enters where there is no gap. From this I know the benefit of non-action.\nThe teaching without words and the benefit of non-action - few in the world can reach them.",
+   "glossary": [
+    {
+     "term": "至柔馳騁至堅",
+     "en": "zhi rou chiping zhi jian - the softest gallops over the hardest",
+     "note": "Water wearing through stone is the picture: the soft can overcome the hard."
+    },
+    {
+     "term": "無有入無間",
+     "en": "wu you ru wu jian - what has no being enters where there is no gap",
+     "note": "Something without form can enter a place with no gap, as air and water do."
+    },
+    {
+     "term": "不言之教",
+     "en": "bu yan zhi jiao - the teaching without words",
+     "note": "See chapter 2: teaching by example."
+    },
+    {
+     "term": "希及",
+     "en": "xi ji - few reach",
+     "note": "Few can attain it."
+    }
+   ]
+  },
+  "ch44": {
+   "summary": "A reminder to value life above fame and gain; by knowing contentment and knowing where to stop, one avoids disgrace and danger and lasts long.",
+   "translation": "Which is dearer, fame or the body? Which is worth more, the body or goods? Which is the greater harm, gaining or losing?\nTherefore great love must bring great cost, and great hoarding must bring heavy loss. One who knows contentment is not disgraced; one who knows where to stop is not in danger, and can last long.",
+   "glossary": [
+    {
+     "term": "孰親、孰多、孰病",
+     "en": "shu qin, shu duo, shu bing - which is dearer, which is more, which is the harm",
+     "note": "Three pairs of contrasts that tell people to value themselves above outer things."
+    },
+    {
+     "term": "甚愛必大費",
+     "en": "shen ai bi da fei - great love must bring great cost",
+     "note": "Excessive craving leads to heavy expense."
+    },
+    {
+     "term": "知足不辱，知止不殆",
+     "en": "zhizu bu ru, zhizhi bu dai - knowing contentment, no disgrace; knowing where to stop, no danger",
+     "note": "One who knows enough is not shamed, and one who knows when to stop meets no danger."
+    },
+    {
+     "term": "多藏必厚亡",
+     "en": "duo cang bi hou wang - great hoarding brings heavy loss",
+     "note": "The more one has stored up, the greater the loss when it goes."
+    }
+   ]
+  },
+  "ch45": {
+   "summary": "The most complete seems to lack something, the fullest seems empty, and true straightness, skill and eloquence all look like their opposites. Purity and stillness are the right way of the world.",
+   "translation": "Great completeness seems to be lacking, yet its use is never worn out. Great fullness seems empty, yet its use is never exhausted.\nGreat straightness seems bent, yet its use does not settle in one place. Great skill seems clumsy, yet its use never stops. Great eloquence seems halting, yet its use is never at fault. Movement overcomes cold; stillness overcomes heat. Purity and stillness are what set the world right.",
+   "glossary": [
+    {
+     "term": "大成若缺",
+     "en": "da cheng ruo que - great completeness seems lacking",
+     "note": "The greatest achievement looks as if it has gaps; because it is never self-satisfied, it can go on."
+    },
+    {
+     "term": "大巧若拙",
+     "en": "da qiao ruo zhuo - great skill seems clumsy",
+     "note": "The finest skill looks clumsy, because it does not show off."
+    },
+    {
+     "term": "大辯若訥",
+     "en": "da bian ruo ne - great eloquence seems halting",
+     "note": "The best debater looks as if he is poor at speaking."
+    },
+    {
+     "term": "躁勝寒，靜勝熱",
+     "en": "zao sheng han, jing sheng re - movement overcomes cold, stillness overcomes heat",
+     "note": "Some read it as 'stillness overcomes restlessness, cold overcomes heat' (Zhu Qianzhi and others). Here Wang Bi's text is followed."
+    }
+   ]
+  },
+  "ch46": {
+   "summary": "When the world has the Dao, horses work the fields; when it lacks the Dao, war horses are bred on the outskirts. The greatest calamity is not knowing contentment and the greatest fault is wanting to gain; one who knows contentment always has enough.",
+   "translation": "When the world has the Dao, swift horses are sent back to haul manure. When the world lacks the Dao, war horses are bred in the outskirts.\nNo calamity is greater than not knowing contentment. No fault is greater than wanting to gain. So the contentment of knowing contentment is always enough.",
+   "glossary": [
+    {
+     "term": "卻走馬以糞",
+     "en": "que zou ma yi fen - sending back swift horses to haul manure",
+     "note": "War horses are turned back to work in the fields, hauling manure."
+    },
+    {
+     "term": "戎馬生於郊",
+     "en": "rong ma sheng yu jiao - war horses bred in the outskirts",
+     "note": "Mares give birth to foals in the open country, which shows that war is constant."
+    },
+    {
+     "term": "咎",
+     "en": "jiu - fault",
+     "note": "A mistake or calamity."
+    },
+    {
+     "term": "知足之足，常足矣",
+     "en": "zhizu zhi zu, chang zu yi - the contentment of knowing contentment is always enough",
+     "note": "Satisfaction that comes from being content within is lasting."
+    }
+   ]
+  },
+  "ch47": {
+   "summary": "One can know the world without going out of the door and know the Way of Heaven without looking out of the window. The further one goes out, the less one knows; the sage knows without travelling, understands without seeing, and accomplishes without acting.",
+   "translation": "Without going out of the door, one may know the world. Without looking out of the window, one may see the Way of Heaven. The further one goes out, the less one knows.\nTherefore the sage knows without travelling, understands without seeing, and accomplishes without acting.",
+   "glossary": [
+    {
+     "term": "不出戶，知天下",
+     "en": "bu chu hu, zhi tianxia - without going out of the door, one knows the world",
+     "note": "This does not mean that experience is not needed. It stresses that if one returns inward and embodies the Dao, all principles can be understood."
+    },
+    {
+     "term": "闚牖",
+     "en": "kui you - to look out of the window",
+     "note": "To peek out through a window."
+    },
+    {
+     "term": "其出彌遠，其知彌少",
+     "en": "qi chu mi yuan, qi zhi mi shao - the further out, the less one knows",
+     "note": "The more one chases outward, the easier it is to lose one's root."
+    },
+    {
+     "term": "不見而名",
+     "en": "bu jian er ming - understands without seeing",
+     "note": "To understand without seeing with the eyes. 'Ming' here stands for the word meaning clear."
+    }
+   ]
+  },
+  "ch48": {
+   "summary": "In study, one gains day by day; in the Dao, one loses day by day. Loss upon loss reaches non-action, and with non-action nothing is left undone; to win the world, one must always be free of meddling.",
+   "translation": "In the pursuit of learning, one gains day by day. In the pursuit of the Dao, one loses day by day. Loss upon loss, until one reaches non-action. With non-action, nothing is left undone.\nTo win the world, always be free of meddling. Once there is meddling, one is not fit to win the world.",
+   "glossary": [
+    {
+     "term": "為學日益，為道日損",
+     "en": "wei xue ri yi, wei dao ri sun - learning adds daily, the Dao subtracts daily",
+     "note": "Learning piles up knowledge; following the Dao reduces artifice, fixed views and desires."
+    },
+    {
+     "term": "損之又損",
+     "en": "sun zhi you sun - loss upon loss",
+     "note": "To keep on reducing, getting rid of all contrivance."
+    },
+    {
+     "term": "無事",
+     "en": "wu shi - freedom from meddling",
+     "note": "Not stirring up trouble and not disturbing the people."
+    },
+    {
+     "term": "無為而無不為",
+     "en": "wuwei er wu bu wei - non-action and nothing left undone",
+     "note": "See chapter 37."
+    }
+   ]
+  },
+  "ch49": {
+   "summary": "The sage has no fixed heart of his own and takes the people's heart as his heart. He is good to the good and also to the not good, and trusts the trustworthy and also the untrustworthy, so that hearts in the world return to simplicity.",
+   "translation": "The sage has no fixed heart; he takes the hearts of the people as his heart.\nTo the good I am good, and to the not good I am also good: virtue is goodness. To the trustworthy I am trusting, and to the untrustworthy I am also trusting: virtue is trust.\nThe sage in the world draws himself in; for the world he makes his heart blend into one. The people all fix their ears and eyes on him, and the sage treats them all as children.",
+   "glossary": [
+    {
+     "term": "無常心",
+     "en": "wu chang xin - no fixed heart",
+     "note": "No fixed opinions; he changes with the people's wishes."
+    },
+    {
+     "term": "德善、德信",
+     "en": "de shan, de xin - virtue is goodness, virtue is trust",
+     "note": "Using virtue to transform people so that all become good and trusting. Some editions write a different character for 'de'."
+    },
+    {
+     "term": "歙歙",
+     "en": "xixi - drawn in",
+     "note": "The look of someone restrained and gentle."
+    },
+    {
+     "term": "渾其心",
+     "en": "hun qi xin - blend the heart into one",
+     "note": "To make the heart simple, without cleverness."
+    }
+   ]
+  },
+  "ch50": {
+   "summary": "People come out into life and go into death: three in ten are long-lived, three in ten are short-lived, and three in ten seek their own death. One who is good at caring for life does not enter the land of death.",
+   "translation": "Coming out into life, going into death. Three in ten are followers of life. Three in ten are followers of death. And among people who live, those whose movements take them to the land of death are also three in ten. Why? Because they feed on life too richly.\nI have heard that one who is good at caring for his life does not meet rhinoceros or tiger when walking on land, and when he goes into an army he is not struck by weapons. The rhinoceros finds nowhere to thrust its horn, the tiger nowhere to set its claws, and the weapon nowhere to lodge its blade. Why? Because he has no place of death.",
+   "glossary": [
+    {
+     "term": "生之徒、死之徒",
+     "en": "sheng zhi tu, si zhi tu - followers of life, followers of death",
+     "note": "'Tu' means kind or class. 'Shi you san' can be read as 'three in ten' or as 'thirteen'; another reading takes it as thirteen organs."
+    },
+    {
+     "term": "生生之厚",
+     "en": "sheng sheng zhi hou - feeding on life too richly",
+     "note": "Looking after oneself too lavishly in order to live."
+    },
+    {
+     "term": "攝生",
+     "en": "she sheng - preserving life",
+     "note": "Looking after life, keeping oneself in health."
+    },
+    {
+     "term": "兕",
+     "en": "si - rhinoceros",
+     "note": "A fierce animal of the rhinoceros kind."
+    }
+   ],
+   "background": "The phrase 'shi you san' has been explained in different ways. Wang Bi and others read it as three in ten; Han Feizi reads it as the four limbs and nine openings, thirteen in all. Both readings exist side by side."
+  },
+  "ch51": {
+   "summary": "The Dao gives birth, virtue nourishes, things give form and circumstance completes. The ten thousand things honour the Dao and prize virtue not because they are ordered to, but naturally. The Dao gives life and nourishes without owning, and this is called mysterious virtue.",
+   "translation": "The Dao gives birth to them. Virtue nourishes them. Things give them form. Circumstances complete them. Therefore the ten thousand things all honour the Dao and prize virtue.\nThe honour of the Dao and the prize of virtue are not ordered by anyone, and are always natural. So the Dao gives birth to them and virtue nourishes them; it raises them and rears them, shapes them and ripens them, shelters them and covers them.\nIt gives life without owning, acts without relying, leads without ruling: this is called mysterious virtue.",
+   "glossary": [
+    {
+     "term": "德",
+     "en": "de - virtue (de)",
+     "note": "The Dao's concrete working and endowment in things; each thing receives its own de and so fulfils its nature."
+    },
+    {
+     "term": "勢",
+     "en": "shi - circumstances",
+     "note": "Surroundings and conditions."
+    },
+    {
+     "term": "亭之毒之",
+     "en": "ting zhi du zhi - shape them, ripen them",
+     "note": "'Ting' is to give form and 'du' is to bring to ripeness: to settle and mature them."
+    },
+    {
+     "term": "玄德",
+     "en": "xuande - mysterious virtue",
+     "note": "See chapter 10."
+    }
+   ]
+  },
+  "ch52": {
+   "summary": "To know the Dao, the 'mother', is to be able to know the ten thousand things, her 'children'. Blocking the openings and shutting the doors, seeing the small and holding to softness, is the way of practising the constant.",
+   "translation": "The world had a beginning, which can be taken as the mother of the world. Having found the mother, one can know the children. Having known the children, one goes back to hold the mother, and to the end of life is free from danger.\nBlock the openings, shut the doors, and to the end of life there is no toil. Open the openings, add to your affairs, and to the end of life there is no rescue.\nSeeing the small is called clarity. Holding to softness is called strength. Use its light and return to its clarity; do not leave disaster to your own person. This is called practising the constant.",
+   "glossary": [
+    {
+     "term": "母、子",
+     "en": "mu, zi - mother, children",
+     "note": "The mother is the Dao and the children are the ten thousand things."
+    },
+    {
+     "term": "塞其兌，閉其門",
+     "en": "sai qi dui, bi qi men - block the openings, shut the doors",
+     "note": "'Dui' is the mouth and by extension the openings of the senses; it means shutting the gates of craving."
+    },
+    {
+     "term": "見小曰明",
+     "en": "jian xiao yue ming - seeing the small is called clarity",
+     "note": "To see into things from their fine details is real understanding."
+    },
+    {
+     "term": "習常",
+     "en": "xi chang - practising the constant",
+     "note": "To follow the unchanging law; 'xi' is the same as 'xi', to carry on."
+    }
+   ]
+  },
+  "ch53": {
+   "summary": "The great Way is level, yet people like side paths. Rulers live in splendour while the people go without; this is how robber chieftains behave, and it is not the Dao.",
+   "translation": "If I had even a little knowledge, I would walk the great Way, and fear only to stray off it. The great Way is very level, but people love the side paths.\nThe court is very clean, yet the fields are very overgrown and the granaries very empty. They wear embroidered clothes, carry sharp swords, are sated with food and drink, and have more goods than they need. This is called robber chieftains. It is not the Dao!",
+   "glossary": [
+    {
+     "term": "介然",
+     "en": "jieran - slightly",
+     "note": "In a small way, a little."
+    },
+    {
+     "term": "施",
+     "en": "shi - side road",
+     "note": "Read as 'yi', a crooked or evil path; it means a slanting road."
+    },
+    {
+     "term": "徑",
+     "en": "jing - path",
+     "note": "A small road, a short cut."
+    },
+    {
+     "term": "盜夸",
+     "en": "dao kua - robber chieftain",
+     "note": "'Kua' means leader. The Han Feizi has 'robber piper' instead."
+    }
+   ]
+  },
+  "ch54": {
+   "summary": "What is well planted is not uprooted and what is well held does not slip. Cultivated from the person to the family, village, state and world, virtue grows and spreads.",
+   "translation": "What is well planted is not uprooted. What is well held does not slip away. Sons and grandsons will offer sacrifice without end.\nCultivate it in yourself, and its virtue will be genuine. Cultivate it in the family, and its virtue will overflow. Cultivate it in the village, and its virtue will grow long. Cultivate it in the state, and its virtue will be abundant. Cultivate it in the world, and its virtue will be universal.\nSo judge a person by the person, a family by the family, a village by the village, a state by the state, the world by the world. How do I know that the world is so? By this.",
+   "glossary": [
+    {
+     "term": "善建、善抱",
+     "en": "shan jian, shan bao - well planted, well held",
+     "note": "One who is good at establishing virtue and holding to the great Dao cannot be robbed of it."
+    },
+    {
+     "term": "修之於身",
+     "en": "xiu zhi yu shen - cultivate it in yourself",
+     "note": "Self-cultivation is the root and extends to family, village, state and world. The order is close to that of the Great Learning (Daxue)."
+    },
+    {
+     "term": "以身觀身",
+     "en": "yi shen guan shen - judge a person by the person",
+     "note": "To judge each level by looking at that level itself, and so understand all of them by analogy."
+    },
+    {
+     "term": "餘、長、豐、普",
+     "en": "yu, chang, feng, pu - overflowing, long, abundant, universal",
+     "note": "The way virtue widens step by step in the family, village, state and world."
+    }
+   ]
+  },
+  "ch55": {
+   "summary": "A person who holds virtue in full is like a newborn child: poisonous creatures and fierce beasts do not harm him, his bones are soft yet his grip is firm, and his vital essence is pure and harmonious. One who knows harmony and the constant is clear, but forcing life, or letting the mind drive the qi, only brings early decline.",
+   "translation": "One who holds virtue in fullness is like a newborn child. Wasps, scorpions, vipers and snakes do not sting him. Fierce beasts do not seize him. Birds of prey do not strike him.\nHis bones are weak and his sinews soft, yet his grip is firm. He does not yet know the union of male and female, yet his body stirs: this is the utmost of vital essence. He cries all day without growing hoarse: this is the utmost of harmony.\nTo know harmony is called the constant. To know the constant is called clarity. To add to life is called ominous. For the mind to drive the qi is called forcing.\nWhen things are strong they grow old. This is called against the Dao, and what is against the Dao comes early to its end.",
+   "glossary": [
+    {
+     "term": "赤子",
+     "en": "chizi - newborn child",
+     "note": "A baby just born."
+    },
+    {
+     "term": "蜂蠆虺蛇",
+     "en": "fengchai huishe - wasps, scorpions, vipers and snakes",
+     "note": "Stinging insects and poisonous snakes."
+    },
+    {
+     "term": "嗄",
+     "en": "sha - hoarse",
+     "note": "A voice that has become rough."
+    },
+    {
+     "term": "益生曰祥",
+     "en": "yi sheng yue xiang - adding to life is ominous",
+     "note": "To try to add to life by force is a bad omen. 'Xiang' here means a sign of evil or calamity."
+    }
+   ]
+  },
+  "ch56": {
+   "summary": "The wise do not talk much, and those who talk much are not necessarily wise. Putting away craving, blunting the sharp, untying tangles and joining the dust, one becomes mysteriously one with the Dao, and so is not swayed by closeness or distance, gain or harm, honour or disgrace.",
+   "translation": "One who knows does not speak; one who speaks does not know.\nBlock the openings, shut the doors, blunt the sharp, untie the tangles, soften the glare, join the dust: this is called mysterious sameness. So one cannot be made close and cannot be made distant. One cannot be benefited and cannot be harmed. One cannot be honoured and cannot be disgraced. Therefore he is honoured by the world.",
+   "glossary": [
+    {
+     "term": "知者不言",
+     "en": "zhi zhe bu yan - one who knows does not speak",
+     "note": "True knowing does not lie in speech. It echoes 'a Dao that can be spoken is not the constant Dao' in chapter 1."
+    },
+    {
+     "term": "和光同塵",
+     "en": "he guang tong chen - soften the glare, join the dust",
+     "note": "To hide one's edge and blend in with the world. It became a well-known maxim for how to live."
+    },
+    {
+     "term": "玄同",
+     "en": "xuantong - mysterious sameness",
+     "note": "A mysterious unity with the Dao, without distinction."
+    },
+    {
+     "term": "解其分",
+     "en": "jie qi fen - untie the tangles",
+     "note": "The same as 'untie the tangles' in chapter 4; Wang Bi's text writes a different character."
+    }
+   ]
+  },
+  "ch57": {
+   "summary": "Govern a state with correctness, use troops with surprise, and win the world by not meddling. The more laws there are, the more thieves there are; the sage does not act, and the people transform of themselves.",
+   "translation": "Govern a state with correctness. Use troops with surprise. Win the world by not meddling. How do I know it is so? By this:\nThe more taboos and prohibitions there are in the world, the poorer the people become. The more sharp weapons the people have, the darker the state grows. The more skills and cleverness people have, the more strange things appear. The more laws and decrees are displayed, the more robbers and thieves there are.\nTherefore the sage says: I do not act, and the people transform of themselves. I love stillness, and the people become upright of themselves. I do not meddle, and the people become rich of themselves. I have no desire, and the people become simple of themselves.",
+   "glossary": [
+    {
+     "term": "以正治國，以奇用兵",
+     "en": "yi zheng zhi guo, yi qi yong bing - govern with correctness, use troops with surprise",
+     "note": "'Zheng' is the upright way and 'qi' is surprise and trickery: in ruling use correctness, in war surprise may be used."
+    },
+    {
+     "term": "忌諱",
+     "en": "jihui - taboos and prohibitions",
+     "note": "Bans and prohibitions."
+    },
+    {
+     "term": "利器",
+     "en": "liqi - sharp tools",
+     "note": "Sharp weapons, or else the arts of scheming and technique."
+    },
+    {
+     "term": "伎巧",
+     "en": "jiqiao - skill and cleverness",
+     "note": "Technique, cleverness."
+    }
+   ]
+  },
+  "ch58": {
+   "summary": "A mild government makes the people honest; a prying one makes them cunning. Disaster and good fortune lean on and hide in each other with no fixed standard, and the sage is upright without wounding.",
+   "translation": "When the government is dull and muddled, the people are honest and simple. When the government is sharp and prying, the people are cunning and lacking.\nDisaster is what good fortune leans on; good fortune is what disaster hides in. Who knows where it ends? There is no fixed standard. The upright turns again into the strange, and the good turns again into the ominous. People's confusion has lasted a long time.\nTherefore the sage is square but does not cut, has edges but does not pierce, is straight but does not run wild, is bright but does not dazzle.",
+   "glossary": [
+    {
+     "term": "悶悶、淳淳",
+     "en": "menmen, chunchun - dull and muddled, honest and simple",
+     "note": "'Menmen' is a generous, plain way of governing, and 'chunchun' is the plainness of the people."
+    },
+    {
+     "term": "察察、缺缺",
+     "en": "chacha, queque - sharp and prying, cunning and lacking",
+     "note": "'Chacha' is harsh and exacting scrutiny, and 'quequek' is slyness and deceit."
+    },
+    {
+     "term": "禍福相倚",
+     "en": "huo fu xiang yi - disaster and good fortune lean on each other",
+     "note": "Laozi's dialectical thought, behind the story of the old man at the frontier who lost his horse, which gave rise to the saying."
+    },
+    {
+     "term": "方而不割，廉而不劌",
+     "en": "fang er bu ge, lian er bu gui - square but not cutting, edged but not piercing",
+     "note": "Upright without hurting others, with corners that do not prick."
+    }
+   ]
+  },
+  "ch59": {
+   "summary": "In governing people and serving Heaven, nothing is better than thrift (sparing one's spirit and strength). Thrift leads to early submission, to accumulated virtue and to overcoming all, which is the Way of deep roots, a firm stem, long life and lasting vision.",
+   "translation": "In governing people and serving Heaven, nothing is better than thrift. Only thrift can be called early submission. Early submission is called repeated accumulation of virtue. With repeated accumulation of virtue, nothing cannot be overcome. When nothing cannot be overcome, no one knows his limit. When no one knows his limit, he can hold a state. One who holds the mother of the state can last long.\nThis is called deep roots and a firm stem, the Way of long life and lasting vision.",
+   "glossary": [
+    {
+     "term": "嗇",
+     "en": "se - thrift",
+     "note": "Being sparing and economical, especially sparing of spirit and strength."
+    },
+    {
+     "term": "早服",
+     "en": "zao fu - early submission",
+     "note": "Submitting early to the Dao."
+    },
+    {
+     "term": "重積德",
+     "en": "zhong ji de - repeated accumulation of virtue",
+     "note": "Storing up virtue and then storing up more."
+    },
+    {
+     "term": "長生久視",
+     "en": "changsheng jiushi - long life and lasting vision",
+     "note": "To make life long. 'Jiushi' means to last for a long time."
+    }
+   ]
+  },
+  "ch60": {
+   "summary": "Govern a great state as you cook a small fish, without turning it over too often. When the world is governed by the Dao, spirits have no power, the sage does not harm people either, and virtue returns to the people.",
+   "translation": "Govern a great state as you would cook a small fish. When the world is governed with the Dao, the ghosts have no power. It is not that the ghosts have no power, but their power does not harm people. It is not that their power does not harm people, but the sage does not harm people either. When neither harms the other, virtue returns to both.",
+   "glossary": [
+    {
+     "term": "烹小鮮",
+     "en": "peng xiaoxian - cook a small fish",
+     "note": "Small fish must not be turned over too much when cooked: a picture of governing with non-action and not disturbing the people."
+    },
+    {
+     "term": "莅",
+     "en": "li - to oversee",
+     "note": "To face, to govern."
+    },
+    {
+     "term": "其鬼不神",
+     "en": "qi gui bu shen - the ghosts have no power",
+     "note": "The spirits show no efficacy, so there are no hauntings."
+    },
+    {
+     "term": "德交歸",
+     "en": "de jiao gui - virtue returns to both",
+     "note": "Virtue comes together and returns to the people."
+    }
+   ]
+  },
+  "ch61": {
+   "summary": "A great state should be humble like the lower reaches of a river, and so win small states. A small state should also take the lower place before a great one; each gets what it wants, but the great one should especially keep below.",
+   "translation": "A great state is the lower reaches of a river, the meeting place of the world, the female of the world. The female always overcomes the male by stillness, and takes the lower place in stillness.\nSo if a great state places itself below a small state, it wins the small state. If a small state places itself below a great state, it wins the great state. So some place themselves below in order to win, and some win because they are below.\nA great state wants no more than to unite and nurture people. A small state wants no more than to join and serve others. For both to get what they want, the great one should take the lower place.",
+   "glossary": [
+    {
+     "term": "下流",
+     "en": "xialiu - lower reaches",
+     "note": "The lower part of a river, which lies low and gathers a hundred streams."
+    },
+    {
+     "term": "牝",
+     "en": "pin - the female",
+     "note": "The female, a picture of soft stillness and the lower place."
+    },
+    {
+     "term": "下",
+     "en": "xia - to be humble",
+     "note": "To take a humble attitude and the lower place."
+    },
+    {
+     "term": "兼畜",
+     "en": "jianxu - to unite and nurture",
+     "note": "To bring together and look after; another view reads it as gathering and raising."
+    }
+   ]
+  },
+  "ch62": {
+   "summary": "The Dao is the hidden depth of the ten thousand things; the good treasure it and the not-good take refuge in it. What can be offered to others is not treasure but 'to offer this Dao'.",
+   "translation": "The Dao is the hidden depth of the ten thousand things. It is the treasure of the good person and the refuge of the not-good.\nFine words can be traded. Honoured conduct can be added to others. Why should anyone be cast away because he is not good?\nTherefore when an emperor is set up and the three ministers are appointed, though one offers a great jade disc ahead of a team of four horses, it is better to sit and offer this Dao.\nWhy did the ancients prize this Dao? Did they not say: seek and find it, and the guilty are forgiven? So it is honoured by the world.",
+   "glossary": [
+    {
+     "term": "奧",
+     "en": "ao - the hidden depth",
+     "note": "The deep inner part, or a place of shelter, a place to hide."
+    },
+    {
+     "term": "美言可以市",
+     "en": "meiyan keyi shi - fine words can be traded",
+     "note": "Wang Bi reads it as 'fine words can be traded, honoured conduct can be added to others'. Others (Heshang Gong and so on) read it as 'fine words can buy honour, fine deeds can be added to others'. Either way it means that fine words and deeds win respect and put one above others."
+    },
+    {
+     "term": "拱璧、駟馬",
+     "en": "gongbi, sima - jade disc, team of four horses",
+     "note": "A 'gongbi' is a large jade disc that takes both hands to hold, and 'sima' is a carriage drawn by four horses: both are precious gifts."
+    },
+    {
+     "term": "坐進此道",
+     "en": "zuo jin ci dao - sit and offer this Dao",
+     "note": "To present this Dao while sitting; it means one gets it without effort."
+    }
+   ]
+  },
+  "ch63": {
+   "summary": "Handle things with non-action, plan the hard while it is easy and do the great while it is small. One who promises lightly keeps few promises; the sage treats things as hard, and so in the end has no difficulty.",
+   "translation": "Act without acting. Work without working. Taste the tasteless. Whether big or small, many or few, repay resentment with virtue.\nPlan for the difficult while it is easy; do the great while it is small. The difficult things of the world must start from the easy; the great things of the world must start from the small. Therefore the sage never does anything great, and so he can accomplish the great.\nOne who lightly promises is sure to keep few promises; one who thinks everything easy is sure to meet many difficulties. Therefore the sage treats even easy things as difficult, and so in the end he has no difficulties.",
+   "glossary": [
+    {
+     "term": "為無為，事無事，味無味",
+     "en": "wei wuwei, shi wushi, wei wuwei - act without acting, work without working, taste the tasteless",
+     "note": "To deal with everything in the spirit of non-action, non-meddling and plainness."
+    },
+    {
+     "term": "報怨以德",
+     "en": "bao yuan yi de - repay resentment with virtue",
+     "note": "To answer hatred with kindness. In the Analects (Xianwen) Confucius took a different view: 'repay resentment with uprightness, and virtue with virtue'."
+    },
+    {
+     "term": "圖難於其易",
+     "en": "tu nan yu qi yi - plan for the difficult while it is easy",
+     "note": "To begin while a difficulty can still be handled."
+    },
+    {
+     "term": "輕諾必寡信",
+     "en": "qing nuo bi gua xin - one who promises lightly keeps few promises",
+     "note": "What is lightly agreed to often cannot be done."
+    }
+   ]
+  },
+  "ch64": {
+   "summary": "Deal with things before disorder arises: a journey of a thousand li begins beneath one's feet. Do not act on it, do not grasp it, be as careful at the end as at the beginning, and help the ten thousand things be natural.",
+   "translation": "What is at peace is easy to hold. What has not yet shown signs is easy to plan for. What is brittle is easy to break. What is tiny is easy to scatter. Act on it before it exists; put it in order before there is disorder.\nA tree of arm's span grows from a tiny shoot. A tower of nine storeys rises from a heap of earth. A journey of a thousand li begins beneath one's feet.\nWhoever acts ruins it; whoever grasps it loses it. So the sage does not act, and therefore does not ruin; he does not grasp, and therefore does not lose. In their undertakings, people often fail when they are nearly done. Be as careful at the end as at the beginning, and there will be no failed undertakings.\nTherefore the sage desires not to desire, and does not prize goods that are hard to get; he learns not to learn, and goes back to what the many have passed by. He helps the ten thousand things to be natural, and does not dare to act.",
+   "glossary": [
+    {
+     "term": "毫末",
+     "en": "haomo - tiny tip",
+     "note": "A fine, small shoot."
+    },
+    {
+     "term": "累土",
+     "en": "leitu - heaped earth",
+     "note": "Earth piled up basket by basket. The word is also written with a different character meaning a basket of earth."
+    },
+    {
+     "term": "千里之行，始於足下",
+     "en": "qianli zhi xing, shi yu zu xia - a journey of a thousand li begins beneath one's feet",
+     "note": "The source of this saying: great things start from small ones, and one should not fear the difficulty."
+    },
+    {
+     "term": "慎終如始",
+     "en": "shen zhong ru shi - be as careful at the end as at the beginning",
+     "note": "Be as careful at the end as one was at the start."
+    }
+   ]
+  },
+  "ch65": {
+   "summary": "Those of old who were good at the Dao did not make the people clever but kept them simple. To govern a state by cleverness is to rob the state; not to do so is a blessing for it.",
+   "translation": "Those of old who were good at practising the Dao did not use it to make the people clear-minded, but to make them simple. The people are hard to govern because they have too much cleverness. So to govern a state by cleverness is a robber of the state; not to govern a state by cleverness is a blessing for the state.\nTo know these two is also to know a pattern. Always to know the pattern is called mysterious virtue. Mysterious virtue is deep and far-reaching; it is the opposite of things, and only then does it reach complete accord.",
+   "glossary": [
+    {
+     "term": "愚之",
+     "en": "yu zhi - to make them simple",
+     "note": "This does not mean to fool them but to bring them back to simplicity and away from cunning tricks."
+    },
+    {
+     "term": "稽式",
+     "en": "jishi - a pattern",
+     "note": "A rule or model."
+    },
+    {
+     "term": "玄德",
+     "en": "xuande - mysterious virtue",
+     "note": "See chapters 10 and 51."
+    },
+    {
+     "term": "大順",
+     "en": "da shun - complete accord",
+     "note": "The greatest harmony, that is, going along with nature."
+    }
+   ]
+  },
+  "ch66": {
+   "summary": "Rivers and seas are kings of the hundred valleys because they are good at staying below. A sage who wants to be above the people must speak humbly to them, and one who wants to lead must put himself behind; because he does not contend, no one can contend with him.",
+   "translation": "The reason rivers and seas can be kings of the hundred valleys is that they are good at being below, and so they can be kings of the hundred valleys.\nTherefore, wishing to be above the people, one must speak humbly to them. Wishing to be ahead of the people, one must put oneself behind them. So the sage stands above and the people do not feel him a burden; he stands in front and the people are not harmed. Therefore the whole world is glad to push him forward and does not tire of him. Because he does not contend, no one in the world can contend with him.",
+   "glossary": [
+    {
+     "term": "百谷王",
+     "en": "bai gu wang - king of the hundred valleys",
+     "note": "The king to whom all the streams of the valleys flow: the rivers and the sea."
+    },
+    {
+     "term": "善下",
+     "en": "shan xia - good at being below",
+     "note": "Skilled at taking the lower place."
+    },
+    {
+     "term": "以言下之、以身後之",
+     "en": "yi yan xia zhi, yi shen hou zhi - speak humbly, put oneself behind",
+     "note": "Humble in words and in the rear in action."
+    },
+    {
+     "term": "樂推不厭",
+     "en": "le tui bu yan - glad to push forward and never tired",
+     "note": "The people are glad to raise him up and do not weary of it."
+    }
+   ]
+  },
+  "ch67": {
+   "summary": "Laozi says he has three treasures: compassion, frugality, and not daring to be first in the world. Through compassion there is courage, through frugality there is breadth, through staying behind one becomes chief; compassion wins in attack and holds firm in defence.",
+   "translation": "Everyone in the world says my Dao is great, yet it seems like nothing. It is just because it is great that it seems like nothing. If it were like something, it would long ago have become small!\nI have three treasures, which I hold and keep. The first is compassion. The second is frugality. The third is not daring to be first in the world. Being compassionate, one can be brave. Being frugal, one can be broad. Not daring to be first in the world, one can become chief of vessels.\nNow people give up compassion and seek courage, give up frugality and seek breadth, give up staying behind and seek to be first: this is death! Compassion wins in attack and holds firm in defence. When Heaven is about to save someone, it guards him with compassion.",
+   "glossary": [
+    {
+     "term": "不肖",
+     "en": "bu xiao - like nothing",
+     "note": "Not resembling anything: the Dao is too great to be compared with any particular thing."
+    },
+    {
+     "term": "三寶",
+     "en": "sanbao - three treasures",
+     "note": "Compassion, frugality and not daring to be first in the world: Laozi's three principles for living."
+    },
+    {
+     "term": "成器長",
+     "en": "cheng qi zhang - chief of vessels",
+     "note": "To become the head of all things or of all officials. 'Qi' means things and 'zhang' means chief."
+    },
+    {
+     "term": "慈故能勇",
+     "en": "ci gu neng yong - through compassion, courage",
+     "note": "Courage that grows from real love lasts longer than courage that shows off strength."
+    }
+   ]
+  },
+  "ch68": {
+   "summary": "A good commander does not parade his force, a good fighter is not quick to anger, a good winner does not meet the enemy head on, and a good user of men is humble. This is called the virtue of not contending.",
+   "translation": "One who is good at being an officer is not warlike. One who is good at fighting is not angry. One who is good at conquering enemies does not engage them. One who is good at using people puts himself below them.\nThis is called the virtue of not contending. This is called using the strength of others. This is called matching Heaven, the ancient ultimate.",
+   "glossary": [
+    {
+     "term": "士",
+     "en": "shi - officer",
+     "note": "A warrior or commander."
+    },
+    {
+     "term": "不與",
+     "en": "bu yu - not engaging",
+     "note": "Not meeting head on and not contending."
+    },
+    {
+     "term": "為之下",
+     "en": "wei zhi xia - putting oneself below",
+     "note": "To be humble before others."
+    },
+    {
+     "term": "配天",
+     "en": "pei tian - matching Heaven",
+     "note": "To be in accord with the Way of Heaven."
+    }
+   ]
+  },
+  "ch69": {
+   "summary": "Those who use troops hold to defence and do not look down on the enemy; underestimating the enemy is the worst disaster. When two armies are equal in strength, the side that feels compassion wins.",
+   "translation": "There is a saying among those who use troops: \"I dare not play host but play guest; I dare not advance an inch but retreat a foot.\" This is called marching without lines, rolling up sleeves without arms, seizing without an enemy, holding without weapons.\nNo calamity is greater than underestimating the enemy; underestimating the enemy nearly loses my treasures. Therefore when armies meet in equal strength, the one that grieves wins.",
+   "glossary": [
+    {
+     "term": "為主、為客",
+     "en": "wei zhu, wei ke - to be host, to be guest",
+     "note": "The host is the one who attacks on his own initiative, and the guest is the one who responds when attacked."
+    },
+    {
+     "term": "行無行，攘無臂",
+     "en": "xing wu xing, rang wu bi - march without lines, roll up sleeves without arms",
+     "note": "'Xing' is a line or formation and 'rang' is to roll up one's sleeves: both mean not showing one's edge."
+    },
+    {
+     "term": "輕敵幾喪吾寶",
+     "en": "qing di ji sang wu bao - underestimating the enemy nearly loses my treasures",
+     "note": "To look down on the enemy would almost cost me my three treasures (compassion, frugality, not daring to be first)."
+    },
+    {
+     "term": "抗兵相加，哀者勝",
+     "en": "kang bing xiang jia, ai zhe sheng - armies meet, the grieving win",
+     "note": "When strength is equal, the side with compassion wins."
+    }
+   ]
+  },
+  "ch70": {
+   "summary": "Laozi's words are easy to understand and practise, yet no one in the world can understand or practise them. Since few know him, he is the more precious; the sage wears coarse cloth and carries jade within.",
+   "translation": "My words are very easy to understand and very easy to practise. Yet no one in the world can understand them, and no one can practise them.\nWords have an ancestor, and affairs have a lord. It is just because people do not know this that they do not know me. Those who know me are few, and those who take me as a model are precious. Therefore the sage wears coarse cloth and carries jade within his bosom.",
+   "glossary": [
+    {
+     "term": "言有宗，事有君",
+     "en": "yan you zong, shi you jun - words have an ancestor, affairs have a lord",
+     "note": "Speech has its guiding purpose and affairs have their master, meaning the Dao."
+    },
+    {
+     "term": "則我者貴",
+     "en": "ze wo zhe gui - those who take me as model are precious",
+     "note": "Those who can follow my example are rare and precious. 'Ze' here means to take as a model."
+    },
+    {
+     "term": "被褐懷玉",
+     "en": "bei he huai yu - wear coarse cloth and carry jade",
+     "note": "Dressed in rough clothes with jade held close to the heart: plain outside and gifted within."
+    },
+    {
+     "term": "夫唯無知",
+     "en": "fu wei wu zhi - only because they do not know",
+     "note": "It means that people do not truly understand."
+    }
+   ]
+  },
+  "ch71": {
+   "summary": "To know that one does not know is best. Only by treating faults as faults does one avoid faults.",
+   "translation": "To know that one does not know is best. Not to know, and to think that one knows, is a sickness.\nOnly one who is sick of the sickness is not sick. The sage is not sick: because he is sick of the sickness, he is not sick.",
+   "glossary": [
+    {
+     "term": "知不知上",
+     "en": "zhi bu zhi shang - to know that one does not know is best",
+     "note": "To know the limit of one's knowledge is best. It echoes the Analects: 'to know what you know and know what you do not know, that is knowledge'."
+    },
+    {
+     "term": "病",
+     "en": "bing - sickness, fault",
+     "note": "A fault, a defect."
+    },
+    {
+     "term": "夫唯病病",
+     "en": "fu wei bing bing - only by taking the sickness as sickness",
+     "note": "Precisely because one treats the fault as a fault."
+    },
+    {
+     "term": "不知知，病",
+     "en": "bu zhi zhi, bing - not knowing and thinking one knows is a sickness",
+     "note": "Not knowing but believing that one knows is the real fault."
+    }
+   ]
+  },
+  "ch72": {
+   "summary": "If rulers do not make the people feel awe, a great disaster will come. Do not press upon where people live or weigh down how they make a living; the sage knows himself but does not show himself, and loves himself but does not exalt himself.",
+   "translation": "When the people do not fear authority, then a great terror comes. Do not narrow the places where they live. Do not oppress how they make their living. Only if you do not oppress them will they not tire of you.\nTherefore the sage knows himself but does not show himself; he loves himself but does not exalt himself. So he leaves that and takes this.",
+   "glossary": [
+    {
+     "term": "民不畏威",
+     "en": "min bu wei wei - the people do not fear authority",
+     "note": "When the people are no longer afraid of the ruler's power, they may rise in revolt."
+    },
+    {
+     "term": "狎",
+     "en": "xia - to press in",
+     "note": "Written for the word meaning narrow; it means to squeeze."
+    },
+    {
+     "term": "厭",
+     "en": "yan - to oppress, to tire of",
+     "note": "The first 'yan' is to weigh down on, and the second is to be tired of."
+    },
+    {
+     "term": "自知不自見",
+     "en": "zizhi bu zixian - knows himself but does not show himself",
+     "note": "Knowing oneself and not putting oneself on show."
+    }
+   ]
+  },
+  "ch73": {
+   "summary": "One who is brave in daring is killed; one who is brave in not daring lives. The Way of Heaven wins without contending, answers without speaking, and its net is wide yet lets nothing through.",
+   "translation": "One who is brave in daring is killed. One who is brave in not daring lives. Of these two, one brings benefit and one brings harm. Who knows why Heaven dislikes what it dislikes? Therefore even the sage finds it hard.\nThe Way of Heaven does not contend and yet wins well; does not speak and yet answers well; is not summoned and yet comes of itself; is relaxed and yet plans well.\nThe net of Heaven is vast; its mesh is wide, yet nothing slips through.",
+   "glossary": [
+    {
+     "term": "勇於敢、勇於不敢",
+     "en": "yong yu gan, yong yu bu gan - brave in daring, brave in not daring",
+     "note": "The first is rash boldness and the second is humble restraint."
+    },
+    {
+     "term": "繟然",
+     "en": "chanran - relaxed",
+     "note": "Easy and unhurried."
+    },
+    {
+     "term": "天網恢恢，疏而不失",
+     "en": "tianwang huihui, shu er bu shi - the net of Heaven is vast, wide yet nothing slips through",
+     "note": "The source of this saying. The Way of Heaven is vast, and though it seems loose it lets no evil deed escape."
+    },
+    {
+     "term": "猶難之",
+     "en": "you nan zhi - even the sage finds it hard",
+     "note": "Even the sage finds it hard to judge."
+    }
+   ]
+  },
+  "ch74": {
+   "summary": "If the people do not fear death, threatening them with death is useless. Killing belongs to the Way of Heaven; to kill on its behalf is like cutting wood for the master carpenter, and few do not hurt their own hands.",
+   "translation": "If the people do not fear death, why frighten them with death? Suppose the people always feared death, and I could seize and kill those who do strange things - who would dare?\nThere is always one who has charge of killing. To kill in the place of the one who has charge of killing is called cutting wood in place of the master carpenter. Of those who cut in place of the master carpenter, few do not hurt their own hands.",
+   "glossary": [
+    {
+     "term": "民不畏死",
+     "en": "min bu wei si - the people do not fear death",
+     "note": "Under harsh rule life is no better than death, and so the people stop fearing it."
+    },
+    {
+     "term": "司殺者",
+     "en": "si sha zhe - the one who has charge of killing",
+     "note": "The one in charge of killing: the Way of Heaven or the law of nature."
+    },
+    {
+     "term": "大匠斲",
+     "en": "da jiang zhuo - the master carpenter cutting",
+     "note": "A skilled carpenter cutting and trimming wood."
+    },
+    {
+     "term": "奈何以死懼之",
+     "en": "naihe yi si ju zhi - why frighten them with death",
+     "note": "It is close in meaning to 'harsh government is fiercer than a tiger' in the Book of Rites."
+    }
+   ]
+  },
+  "ch75": {
+   "summary": "The people go hungry because their rulers tax too much, are hard to govern because their rulers meddle, and take death lightly because their rulers live too richly. Those who do not live for the sake of living are wiser than those who prize life.",
+   "translation": "The people are hungry because those above eat up so much in taxes; that is why they are hungry. The people are hard to govern because those above meddle; that is why they are hard to govern. The people take death lightly because those above seek life too richly; that is why they take death lightly.\nOnly those who do not act for the sake of life are wiser than those who prize life.",
+   "glossary": [
+    {
+     "term": "食稅",
+     "en": "shi shui - eating taxes",
+     "note": "To consume what is taken in taxes; to levy taxes."
+    },
+    {
+     "term": "有為",
+     "en": "youwei - meddling",
+     "note": "Meaning that the ruler acts rashly and does too much."
+    },
+    {
+     "term": "求生之厚",
+     "en": "qiu sheng zhi hou - seeking life too richly",
+     "note": "Indulging oneself too lavishly."
+    },
+    {
+     "term": "貴生",
+     "en": "gui sheng - prizing life",
+     "note": "Valuing the pleasures of life too much."
+    }
+   ]
+  },
+  "ch76": {
+   "summary": "A living person is soft and a dead one is stiff, and it is the same with grass and trees. So the hard and strong belong with death, the soft and weak with life, and the strong and big stay below.",
+   "translation": "A person is born soft and weak, and at death is hard and stiff. The ten thousand things, the grass and trees, are born soft and tender, and at death are dry and brittle.\nSo the hard and stiff are the companions of death, and the soft and weak are the companions of life. Therefore an army that is strong does not win; a tree that is strong is cut down. The strong and big stay below; the soft and weak stay above.",
+   "glossary": [
+    {
+     "term": "柔弱、堅強",
+     "en": "rouruo, jianqiang - soft and weak, hard and strong",
+     "note": "Laozi's central contrast: softness stands for life and vitality, hardness for rigidity and death."
+    },
+    {
+     "term": "死之徒、生之徒",
+     "en": "si zhi tu, sheng zhi tu - companions of death, companions of life",
+     "note": "'Tu' means kind or class."
+    },
+    {
+     "term": "兵強則不勝",
+     "en": "bing qiang ze bu sheng - a strong army does not win",
+     "note": "A strong army tends to underestimate the enemy and lose. One reading changes 'win' to 'be destroyed'."
+    },
+    {
+     "term": "木強則兵",
+     "en": "mu qiang ze bing - a strong tree is cut down",
+     "note": "A sturdy tree is felled. Some texts read 'bing' differently, as 'together' or 'broken'."
+    }
+   ]
+  },
+  "ch77": {
+   "summary": "The Way of Heaven takes from what has too much and gives to what lacks, like drawing a bow; the way of people is the opposite. Only one who has the Dao can offer his surplus to the world, and the sage acts without relying on it and completes without dwelling in it.",
+   "translation": "The Way of Heaven is like drawing a bow, is it not? What is high is pressed down; what is low is lifted up. What has too much is reduced; what is lacking is made up. The Way of Heaven takes from what has excess and makes up what is lacking.\nThe way of people is not so. It takes from what is lacking to serve what has excess. Who can use his excess to serve the world? Only one who has the Dao.\nTherefore the sage acts without relying on it, completes the work without dwelling in it, and does not wish to show his worth.",
+   "glossary": [
+    {
+     "term": "張弓",
+     "en": "zhang gong - drawing a bow",
+     "note": "When a bow is drawn, the high end is pressed down and the low end raised: a picture of balancing and adjusting."
+    },
+    {
+     "term": "損有餘而補不足",
+     "en": "sun youyu er bu bu zu - take from excess and make up what is lacking",
+     "note": "The principle of balance in the Way of Heaven."
+    },
+    {
+     "term": "奉",
+     "en": "feng - to offer",
+     "note": "To present, to give for others' use."
+    },
+    {
+     "term": "不欲見賢",
+     "en": "bu yu xian xian - not wishing to show worth",
+     "note": "Not wanting to show off one's own ability."
+    }
+   ]
+  },
+  "ch78": {
+   "summary": "Nothing in the world is softer than water, yet nothing beats it at wearing down the hard and strong. Everyone knows that the soft overcomes the hard, but no one practises it; one who takes on the shame of the state becomes king of the world. 'Straight words seem to be their opposite.'",
+   "translation": "Nothing in the world is softer or weaker than water, yet in attacking the hard and strong nothing can surpass it, since nothing can take its place.\nThat the weak overcomes the strong and the soft overcomes the hard, everyone in the world knows, yet no one can practise it.\nTherefore the sage says: \"One who takes upon himself the filth of the state is called lord of the altars of the land and grain. One who takes upon himself the misfortunes of the state is king of the world.\" Straight words seem to be their opposite.",
+   "glossary": [
+    {
+     "term": "水",
+     "en": "shui - water",
+     "note": "For Laozi water is the symbol of what is soft and weak and yet overcomes the hard and strong. See chapter 8."
+    },
+    {
+     "term": "受國之垢",
+     "en": "shou guo zhi gou - to take upon oneself the filth of the state",
+     "note": "To bear the shame and the dirt of the country."
+    },
+    {
+     "term": "社稷主",
+     "en": "sheji zhu - lord of the altars of the land and grain",
+     "note": "Master of the state. 'Sheji' is the god of the soil and the god of grain, and stands for the state."
+    },
+    {
+     "term": "正言若反",
+     "en": "zheng yan ruo fan - straight words seem opposite",
+     "note": "True words seem to go against common sense."
+    }
+   ]
+  },
+  "ch79": {
+   "summary": "Even when a great grievance is settled, some resentment remains, so the sage keeps the debtor's tally and does not press for payment. Those with virtue keep the tally, those without collect; the Way of Heaven has no favourites and always helps the good.",
+   "translation": "When a great grievance is reconciled, some grievance is sure to remain. How can this be counted as good?\nTherefore the sage holds the left half of the tally and does not press people for payment. One with virtue takes charge of the tally; one without virtue takes charge of collecting.\nThe Way of Heaven has no favourites; it is always with the good person.",
+   "glossary": [
+    {
+     "term": "左契",
+     "en": "zuo qi - the left half of the tally",
+     "note": "In ancient times a contract tally was split into a left and a right half, and the creditor held the left half to claim a debt."
+    },
+    {
+     "term": "司契、司徹",
+     "en": "si qi, si che - in charge of the tally, in charge of collecting",
+     "note": "One keeps the contract without pressing for the debt; the other collects taxes ('che' was the tax system of the Zhou)."
+    },
+    {
+     "term": "天道無親",
+     "en": "tian dao wu qin - the Way of Heaven has no favourites",
+     "note": "The Way of Heaven has no partiality and no closer or more distant relatives."
+    },
+    {
+     "term": "與善人",
+     "en": "yu shan ren - with the good person",
+     "note": "Helping the good."
+    }
+   ]
+  },
+  "ch80": {
+   "summary": "It draws the ideal of a small state with few people: simple and content, not valuing clever tools, and not moving about; though the neighbouring state is in sight, they grow old and die without visiting each other.",
+   "translation": "A small state with few people. Let there be tools worth ten or a hundred men and yet not use them. Let the people take death seriously and not move far away. Though there are boats and carriages, there is no occasion to ride them; though there are armour and weapons, there is no occasion to display them.\nLet the people go back to knotted cords and use them. Let them find their food sweet, their clothes beautiful, their homes peaceful, their customs happy.\nNeighbouring states may look across to each other, and the sounds of cocks and dogs may be heard from one to the other, yet the people grow old and die without going back and forth.",
+   "glossary": [
+    {
+     "term": "什伯之器",
+     "en": "shi bai zhi qi - tools worth ten or a hundred men",
+     "note": "Implements with ten or a hundred times a person's ability; another reading takes them to be weapons."
+    },
+    {
+     "term": "結繩",
+     "en": "jie sheng - knotted cords",
+     "note": "In remote antiquity people kept records by tying knots in cords, a sign of a simple life."
+    },
+    {
+     "term": "重死",
+     "en": "zhong si - to take death seriously",
+     "note": "To value death, which is to cherish life."
+    },
+    {
+     "term": "老死不相往來",
+     "en": "lao si bu xiang wanglai - grow old and die without going back and forth",
+     "note": "This is not isolation. Each lives content in its own place and no quarrels arise."
+    }
+   ],
+   "background": "This chapter is seen as Laozi's political ideal, and also as a criticism of the disorder of the Warring States. Later, Tao Yuanming's 'Peach Blossom Spring' echoes it at a distance."
+  },
+  "ch81": {
+   "summary": "The conclusion of the whole book: true words are not beautiful, the good do not argue, one with the Dao does not store things up and has more the more he does for others. The Way of Heaven benefits and does not harm; the Way of the sage acts and does not contend.",
+   "translation": "True words are not beautiful; beautiful words are not true. The good do not argue; those who argue are not good. Those who know are not learned; the learned do not know.\nThe sage does not store things up. The more he does for others, the more he has; the more he gives to others, the more he has.\nThe Way of Heaven benefits and does not harm. The Way of the sage acts and does not contend.",
+   "glossary": [
+    {
+     "term": "信言不美",
+     "en": "xin yan bu mei - true words are not beautiful",
+     "note": "Words that are real and trustworthy are not always fine-sounding."
+    },
+    {
+     "term": "辯",
+     "en": "bian - to argue",
+     "note": "To dispute, to argue cleverly."
+    },
+    {
+     "term": "不積",
+     "en": "bu ji - not storing up",
+     "note": "Not piling up goods, not possessing."
+    },
+    {
+     "term": "利而不害，為而不爭",
+     "en": "li er bu hai, wei er bu zheng - benefits and does not harm, acts and does not contend",
+     "note": "The book ends with the Way of Heaven and the Way of the sage."
+    }
+   ],
+   "background": "This is the last chapter in Wang Bi's edition, and serves as a summing up of the whole book."
+  }
+ }
+}

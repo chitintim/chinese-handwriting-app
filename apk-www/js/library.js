@@ -11,16 +11,20 @@
       return r.json();
     });
   }
-  // {trad, simp} from a {trad, simp} object or a plain string (either schema)
+  // {trad, simp[, en]} from a {trad, simp[, en]} object or a plain string (either schema). `en` = the optional English name (docs/LIBRARY.md "English names"), kept only when there is one.
   function dual(v) {
-    if (v && typeof v === 'object') return { trad: String(v.trad || v.simp || ''), simp: String(v.simp || v.trad || '') };
+    if (v && typeof v === 'object') {
+      var o = { trad: String(v.trad || v.simp || ''), simp: String(v.simp || v.trad || '') };
+      if (typeof v.en === 'string' && v.en) o.en = v.en;
+      return o;
+    }
     var s = v === undefined || v === null ? '' : String(v);
     return { trad: s, simp: s };
   }
   // Both schemas are understood: the previous one had no categories / sections (title + body at the top of the text, a plain description).
   function normIndex(raw) {
     var cats = raw.categories && raw.categories.length ? raw.categories.map(function (c) { return { id: c.id, title: dual(c.title) }; })
-      : [{ id: 'all', title: { trad: '文庫', simp: '文库', en: 'Library 文庫' } }];
+      : [{ id: 'all', title: { trad: '文庫', simp: '文库', en: 'Library' } }];
     var texts = (raw.texts || []).map(function (e) {
       return {
         id: e.id, category: e.category || cats[0].id, title: dual(e.title), author: dual(e.author), dynasty: dual(e.dynasty), file: e.file,
@@ -72,6 +76,22 @@
     });
     return { id: raw && raw.id, disclaimer: normNote(raw && raw.disclaimer), sections: secs };
   }
+  // ---- English explanations: library/notes/en/<textId>.json (docs/NOTES-EN.md), listed by `en: true` in the manifest. Plain English strings; the quoted lines / terms stay Chinese (shown in the
+  // script of the copy: the Chinese file's {trad, simp} of the same item, found by position) with their `en` rendering.
+  var notesEnCache = {};
+  function str(v) { return typeof v === 'string' ? v : ''; }
+  function normNotesEn(raw, zh) {
+    var secs = {};
+    Object.keys((raw && raw.sections) || {}).forEach(function (id) {
+      var s = raw.sections[id] || {}, z = (zh && zh.sections[id]) || null;
+      secs[id] = {
+        summary: str(s.summary), translation: str(s.translation), background: str(s.background),
+        keyLines: (s.keyLines || []).map(function (k, i) { return { line: z && z.keyLines[i] && z.keyLines[i].line.trad === k.line ? z.keyLines[i].line : dual(k.line), en: str(k.en), note: str(k.note) }; }),
+        glossary: (s.glossary || []).map(function (g, i) { return { term: z && z.glossary[i] && z.glossary[i].term.trad === g.term ? z.glossary[i].term : dual(g.term), en: str(g.en), note: str(g.note) }; })
+      };
+    });
+    return { id: raw && raw.id, disclaimer: str(raw && raw.disclaimer), sections: secs };
+  }
 
   var L = MX.Library = {
     CUSTOM: CUSTOM, MAX_CUSTOM: MAX_CUSTOM,
@@ -79,6 +99,7 @@
     bundledVersion: 0,
     otaActive: false,
     notesIdx: {},            // {textId: {sectionId: true}} from library/notes/manifest.json
+    notesEn: {},             // {textId: true}: texts that also have an English file library/notes/en/<id>.json (manifest `en: true`)
     dual: dual,
 
     load: async function () {
@@ -91,7 +112,7 @@
       return L.index;
     },
     loadNotesManifest: async function () {
-      L.notesIdx = {};
+      L.notesIdx = {}; L.notesEn = {};
       try {
         var m = await fetchJson('library/notes/manifest.json');
         (m && m.texts || []).forEach(function (t) {
@@ -99,8 +120,9 @@
           var o = {};
           (t.sections || []).forEach(function (sid) { o[sid] = true; });
           L.notesIdx[t.id] = o;
+          if (t.en === true) L.notesEn[t.id] = true;
         });
-      } catch (e) { L.notesIdx = {}; }       // no notes shipped (or offline without a cache): the app works without
+      } catch (e) { L.notesIdx = {}; L.notesEn = {}; }       // no notes shipped (or offline without a cache): the app works without
       return L.notesIdx;
     },
     // true when a 解說 exists for the section (sectionId omitted: for any section of the text)
@@ -110,6 +132,22 @@
       return sectionId ? !!o[sectionId] : Object.keys(o).length > 0;
     },
     notesSections: function (textId) { return Object.keys(L.notesIdx[textId] || {}); },
+    // true when the text has English explanations (all its sections)
+    hasNotesEn: function (textId) { return !!L.notesEn[textId] && L.hasNotes(textId); },
+    getNotesEn: async function (textId) {
+      if (notesEnCache[textId]) return notesEnCache[textId];
+      var raw = await fetchJson('library/notes/en/' + encodeURIComponent(textId) + '.json'), zh = null;
+      try { zh = await L.getNotes(textId); } catch (e) { zh = null; }       // the Chinese file gives the 简 form of the quoted lines
+      var n = normNotesEn(raw, zh);
+      notesEnCache[textId] = n;
+      return n;
+    },
+    // the English notes of one section ({summary, translation, background (strings), keyLines [{line, en, note}], glossary [{term, en, note}], disclaimer, english: true}), null when there are none
+    getSectionNotesEn: async function (textId, sectionId) {
+      if (!L.hasNotesEn(textId) || !L.hasNotes(textId, sectionId)) return null;
+      var n = await L.getNotesEn(textId), s = n.sections[sectionId || 'main'];
+      return s ? { english: true, summary: s.summary, translation: s.translation, background: s.background, keyLines: s.keyLines, glossary: s.glossary, disclaimer: n.disclaimer } : null;
+    },
     getNotes: async function (textId) {
       if (notesCache[textId]) return notesCache[textId];
       var n = normNotes(await fetchJson('library/notes/' + encodeURIComponent(textId) + '.json'));
@@ -122,14 +160,50 @@
       var n = await L.getNotes(textId), s = n.sections[sectionId || 'main'];
       return s ? { summary: s.summary, translation: s.translation, background: s.background, keyLines: s.keyLines, glossary: s.glossary, disclaimer: n.disclaimer } : null;
     },
+    // does the entry's title / author / dynasty contain q (either script; the English name too in the English interface; case-insensitive; q already lower-cased)
+    matches: function (e, q) {
+      var en = MX.I18n.isEn();
+      return [e.title, e.author, e.dynasty].some(function (v) {
+        return v && ((v.trad || '').toLowerCase().indexOf(q) >= 0 || (v.simp || '').toLowerCase().indexOf(q) >= 0 || (en && (v.en || '').toLowerCase().indexOf(q) >= 0));
+      });
+    },
+    // ---- bilingual names (English interface only; 繁 / 简 show the Chinese alone)
+    // the Chinese of a name in the library script (or the given one)
+    zh: function (v, script) {
+      var sc = script || (MX.Model && MX.Model.settings && MX.Model.settings.libScript === 'simp' ? 'simp' : 'trad');
+      return v ? (v[sc] || v.trad || v.simp || '') : '';
+    },
+    // the English name to show: only in the English interface, '' when there is none (custom texts, a dash for "no dynasty")
+    en: function (v) { return MX.I18n.isEn() && v && v.en && v.en !== '-' ? v.en : ''; },
+    // "中文 (English)" for a sentence / a plain-text place (a title in a message); the Chinese alone when there is no English to show
+    ts: function (v, script) {
+      var z = L.zh(v, script), e = L.en(v);
+      return e ? z + ' (' + e + ')' : z;
+    },
+    // the node of a name: the Chinese, and in the English interface the English next to it in a smaller, quieter span (.bi > .zh + .en). stack: the English on its own line below
+    // (rows, tiles, titles). Without English: a plain text node, so the page is exactly the old one.
+    bi: function (v, stack, script) {
+      var z = L.zh(v, script), e = L.en(v);
+      if (!e) return document.createTextNode(z);
+      return MX.h('span', { class: 'bi' + (stack ? ' stack' : '') }, [MX.h('span', { class: 'zh', text: z }), ' ', MX.h('span', { class: 'en', text: e })]);
+    },
+    // names joined with a separator ("text · section"): a name object again; it has English only when every part has
+    join: function (parts, sep) {
+      var o = { trad: '', simp: '' }, all = true, en = [];
+      parts.forEach(function (v, i) {
+        v = v || {};
+        o.trad += (i ? sep : '') + (v.trad || ''); o.simp += (i ? sep : '') + (v.simp || '');
+        if (v.en) en.push(v.en); else all = false;
+      });
+      if (all && en.length) o.en = en.join(sep);
+      return o;
+    },
     // entries (library + 自訂) whose title / author / dynasty contain q (either script, case-insensitive)
     search: function (q) {
       q = String(q || '').trim().toLowerCase();
       if (!q) return [];
       var all = ((L.index && L.index.texts) || []).concat(L.customs().map(customEntry));
-      return all.filter(function (e) {
-        return [e.title, e.author, e.dynasty].some(function (v) { return v && ((v.trad || '').toLowerCase().indexOf(q) >= 0 || (v.simp || '').toLowerCase().indexOf(q) >= 0); });
-      });
+      return all.filter(function (e) { return L.matches(e, q); });
     },
     // Downloaded library (APK): a newer index than the bundled one wins; an older one (the app was updated past it) is dropped.
     applyOta: function () {
@@ -153,7 +227,7 @@
     // categories as shown on the home screen: the library's, then 自訂 (always, so a new text can be added)
     categories: function () {
       var cats = (L.index ? L.index.categories : []).filter(function (c) { return L.texts(c.id).length > 0; });
-      cats.push({ id: CUSTOM, title: { trad: '自訂', simp: '自定义', en: 'My texts 自訂' }, custom: true });
+      cats.push({ id: CUSTOM, title: { trad: '自訂', simp: '自定义', en: 'My texts' }, custom: true });
       return cats;
     },
     category: function (id) {

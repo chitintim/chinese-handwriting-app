@@ -564,3 +564,35 @@ html[data-ui=en] .ptop .prow.head>button:first-child{min-width:48px}
 html[data-ui=en] .autopill{min-width:0;font-size:14px}
 html.phone[data-ui=en] .lrow.work .lbtns{flex-wrap:wrap}
 html.phone[data-ui=en] .lrow.work .lbtns button{flex:1 1 auto;margin-bottom:6px;padding:0 8px}
+
+/* ---- bilingual library names and English notes (docs/SPEC.md revision 23). .bi / .nlang / .nen are only drawn in the English interface: Chinese first, the English smaller and quieter beside it
+   (.bi) or below it (.bi.stack: list rows, tiles, titles). Rows and tiles are taller there (js/screens.js EN_ROW = 16). ---- */
+.bi .en{font-size:max(.62em,13px);color:#333;margin-left:.45em;font-weight:normal}
+.bi.stack{display:block}
+.bi.stack>.zh,.bi.stack>.en{display:block;margin-left:0}
+.bi.stack>.en{line-height:1.25;margin-top:1px}
+.lmain .t .bi.stack>*,.tile .t .bi.stack>*{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[data-ui=en] .lmain .t{line-height:1.2}
+html[data-ui=en] .lrow{height:104px}
+html[data-ui=en] .lrow.compact{height:92px}
+html.phone[data-ui=en] .lrow{height:148px}
+html.phone[data-ui=en] .lrow.compact{height:140px}
+html.wide[data-ui=en] .lrow.compact{height:180px}
+html[data-ui=en] .lrow.work{height:160px}
+html[data-ui=en] .lrow.work .lbtns{max-width:340px}
+html.phone[data-ui=en] .lrow.work{height:232px;grid-template-rows:112px auto}
+html.phone[data-ui=en] .lrow.work .lbtns{max-width:none}
+html[data-ui=en] .tile{height:82px}
+html.phone[data-ui=en] .tile{height:80px}
+html.wide[data-ui=en] .tile{height:108px}
+html[data-ui=en] .screen h1 .bi.stack>.en{margin-top:2px}
+html[data-ui=en] .qstart .qt{line-height:1.3}
+.nlang{display:flex;margin:0 0 var(--sp-3)}
+.nlang button{min-height:44px;min-width:96px;padding:0 14px;font-size:var(--t-s);margin-right:-2px}
+.nlang button.on{background:#000;color:#fff}
+.ncols .ntext.en,.ncols .nnote.en,.ncols .ndisc.en{text-align:left;white-space:pre-line}
+.ncols .nitem .nen{display:block;padding-left:17px;font-size:21px}
+.ncols .nitem.gl .nen{display:inline;padding:0;font-size:20px}
+.ncols .nitem.gl .nnote.en{display:block;padding-left:17px}
+.ncols .nmiss{font-size:var(--t-s);line-height:1.5;border:2px solid #000;padding:6px 10px;margin:0 0 var(--sp-3);text-align:left}
+.pnotes .ssum.en{white-space:pre-line}

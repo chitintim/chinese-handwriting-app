@@ -2,15 +2,18 @@
  "id": "tangshi",
  "title": {
   "trad": "唐詩精選",
-  "simp": "唐诗精选"
+  "simp": "唐诗精选",
+  "en": "Selected Tang Poems"
  },
  "author": {
   "trad": "唐代諸家",
-  "simp": "唐代诸家"
+  "simp": "唐代诸家",
+  "en": "Tang poets"
  },
  "dynasty": {
   "trad": "唐",
-  "simp": "唐"
+  "simp": "唐",
+  "en": "Tang"
  },
  "source": "https://zh.wikisource.org/wiki/唐詩三百首",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/唐詩三百首",
@@ -20,11 +23,13 @@
    "id": "jingyesi",
    "title": {
     "trad": "靜夜思 · 李白",
-    "simp": "静夜思 · 李白"
+    "simp": "静夜思 · 李白",
+    "en": "Quiet Night Thoughts · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "牀前明月光，疑是地上霜。舉頭望明月，低頭思故鄉。",
@@ -35,11 +40,13 @@
    "id": "chunxiao",
    "title": {
     "trad": "春曉 · 孟浩然",
-    "simp": "春晓 · 孟浩然"
+    "simp": "春晓 · 孟浩然",
+    "en": "Spring Dawn · Meng Haoran"
    },
    "author": {
     "trad": "孟浩然",
-    "simp": "孟浩然"
+    "simp": "孟浩然",
+    "en": "Meng Haoran"
    },
    "body": {
     "trad": "春眠不覺曉，處處聞啼鳥。夜來風雨聲，花落知多少。",
@@ -50,11 +57,13 @@
    "id": "dengguanquelou",
    "title": {
     "trad": "登鸛雀樓 · 王之渙",
-    "simp": "登鹳雀楼 · 王之涣"
+    "simp": "登鹳雀楼 · 王之涣",
+    "en": "Climbing Stork Tower · Wang Zhihuan"
    },
    "author": {
     "trad": "王之渙",
-    "simp": "王之涣"
+    "simp": "王之涣",
+    "en": "Wang Zhihuan"
    },
    "body": {
     "trad": "白日依山盡，黃河入海流。欲窮千里目，更上一層樓。",
@@ -65,11 +74,13 @@
    "id": "xiangsi",
    "title": {
     "trad": "相思 · 王維",
-    "simp": "相思 · 王维"
+    "simp": "相思 · 王维",
+    "en": "Longing · Wang Wei"
    },
    "author": {
     "trad": "王維",
-    "simp": "王维"
+    "simp": "王维",
+    "en": "Wang Wei"
    },
    "body": {
     "trad": "紅豆生南國，春來發幾枝。願君多采擷，此物最相思。",
@@ -80,11 +91,13 @@
    "id": "luzhai",
    "title": {
     "trad": "鹿柴 · 王維",
-    "simp": "鹿柴 · 王维"
+    "simp": "鹿柴 · 王维",
+    "en": "Deer Park · Wang Wei"
    },
    "author": {
     "trad": "王維",
-    "simp": "王维"
+    "simp": "王维",
+    "en": "Wang Wei"
    },
    "body": {
     "trad": "空山不見人，但聞人語響。返景入深林，復照青苔上。",
@@ -95,11 +108,13 @@
    "id": "zhuliguan",
    "title": {
     "trad": "竹里館 · 王維",
-    "simp": "竹里馆 · 王维"
+    "simp": "竹里馆 · 王维",
+    "en": "Bamboo Lodge · Wang Wei"
    },
    "author": {
     "trad": "王維",
-    "simp": "王维"
+    "simp": "王维",
+    "en": "Wang Wei"
    },
    "body": {
     "trad": "獨坐幽篁裏，彈琴復長嘯。深林人不知，明月來相照。",
@@ -110,11 +125,13 @@
    "id": "jiangxue",
    "title": {
     "trad": "江雪 · 柳宗元",
-    "simp": "江雪 · 柳宗元"
+    "simp": "江雪 · 柳宗元",
+    "en": "River Snow · Liu Zongyuan"
    },
    "author": {
     "trad": "柳宗元",
-    "simp": "柳宗元"
+    "simp": "柳宗元",
+    "en": "Liu Zongyuan"
    },
    "body": {
     "trad": "千山鳥飛絕，萬徑人蹤滅。孤舟蓑笠翁，獨釣寒江雪。",
@@ -125,11 +142,13 @@
    "id": "youziyin",
    "title": {
     "trad": "遊子吟 · 孟郊",
-    "simp": "游子吟 · 孟郊"
+    "simp": "游子吟 · 孟郊",
+    "en": "Song of the Traveller's Mother · Meng Jiao"
    },
    "author": {
     "trad": "孟郊",
-    "simp": "孟郊"
+    "simp": "孟郊",
+    "en": "Meng Jiao"
    },
    "body": {
     "trad": "慈母手中線，遊子身上衣。臨行密密縫，意恐遲遲歸。誰言寸草心，報得三春暉。",
@@ -140,11 +159,13 @@
    "id": "susdejiang",
    "title": {
     "trad": "宿建德江 · 孟浩然",
-    "simp": "宿建德江 · 孟浩然"
+    "simp": "宿建德江 · 孟浩然",
+    "en": "Mooring on the Jiande River · Meng Haoran"
    },
    "author": {
     "trad": "孟浩然",
-    "simp": "孟浩然"
+    "simp": "孟浩然",
+    "en": "Meng Haoran"
    },
    "body": {
     "trad": "移舟泊煙渚，日暮客愁新。野曠天低樹，江清月近人。",
@@ -155,11 +176,13 @@
    "id": "xunyinzhe",
    "title": {
     "trad": "尋隱者不遇 · 賈島",
-    "simp": "寻隐者不遇 · 贾岛"
+    "simp": "寻隐者不遇 · 贾岛",
+    "en": "Visiting a Hermit, Not Finding Him · Jia Dao"
    },
    "author": {
     "trad": "賈島",
-    "simp": "贾岛"
+    "simp": "贾岛",
+    "en": "Jia Dao"
    },
    "body": {
     "trad": "松下問童子，言師採藥去。只在此山中，雲深不知處。",
@@ -170,11 +193,13 @@
    "id": "wenliushijiu",
    "title": {
     "trad": "問劉十九 · 白居易",
-    "simp": "问刘十九 · 白居易"
+    "simp": "问刘十九 · 白居易",
+    "en": "Asking Liu Nineteen · Bai Juyi"
    },
    "author": {
     "trad": "白居易",
-    "simp": "白居易"
+    "simp": "白居易",
+    "en": "Bai Juyi"
    },
    "body": {
     "trad": "綠螘新醅酒，紅泥小火爐。晚來天欲雪，能飲一杯無？",
@@ -185,11 +210,13 @@
    "id": "dengleyouyuan",
    "title": {
     "trad": "登樂遊原 · 李商隱",
-    "simp": "登乐游原 · 李商隐"
+    "simp": "登乐游原 · 李商隐",
+    "en": "Climbing Leyou Plain · Li Shangyin"
    },
    "author": {
     "trad": "李商隱",
-    "simp": "李商隐"
+    "simp": "李商隐",
+    "en": "Li Shangyin"
    },
    "body": {
     "trad": "向晚意不適，驅車登古原。夕陽無限好，只是近黃昏。",
@@ -200,11 +227,13 @@
    "id": "zaofabaidi",
    "title": {
     "trad": "早發白帝城 · 李白",
-    "simp": "早发白帝城 · 李白"
+    "simp": "早发白帝城 · 李白",
+    "en": "Leaving Baidi City at Dawn · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "朝辭白帝彩雲間，千里江陵一日還。兩岸猿聲啼不盡，輕舟已過萬重山。",
@@ -215,11 +244,13 @@
    "id": "fengqiaoyebo",
    "title": {
     "trad": "楓橋夜泊 · 張繼",
-    "simp": "枫桥夜泊 · 张继"
+    "simp": "枫桥夜泊 · 张继",
+    "en": "Night Mooring at Maple Bridge · Zhang Ji"
    },
    "author": {
     "trad": "張繼",
-    "simp": "张继"
+    "simp": "张继",
+    "en": "Zhang Ji"
    },
    "body": {
     "trad": "月落烏啼霜滿天，江楓漁火對愁眠。姑蘇城外寒山寺，夜半鐘聲到客船。",
@@ -230,11 +261,13 @@
    "id": "liangzhouci",
    "title": {
     "trad": "涼州詞 · 王翰",
-    "simp": "凉州词 · 王翰"
+    "simp": "凉州词 · 王翰",
+    "en": "Liangzhou Song · Wang Han"
    },
    "author": {
     "trad": "王翰",
-    "simp": "王翰"
+    "simp": "王翰",
+    "en": "Wang Han"
    },
    "body": {
     "trad": "葡萄美酒夜光杯，欲飲琵琶馬上催。醉臥沙場君莫笑，古來征戰幾人回。",
@@ -245,11 +278,13 @@
    "id": "chusai",
    "title": {
     "trad": "出塞 · 王昌齡",
-    "simp": "出塞 · 王昌龄"
+    "simp": "出塞 · 王昌龄",
+    "en": "Beyond the Frontier · Wang Changling"
    },
    "author": {
     "trad": "王昌齡",
-    "simp": "王昌龄"
+    "simp": "王昌龄",
+    "en": "Wang Changling"
    },
    "body": {
     "trad": "秦時明月漢時關，萬里長征人未還。但使龍城飛將在，不教胡馬度陰山。",
@@ -260,11 +295,13 @@
    "id": "furongloususong",
    "title": {
     "trad": "芙蓉樓送辛漸 · 王昌齡",
-    "simp": "芙蓉楼送辛渐 · 王昌龄"
+    "simp": "芙蓉楼送辛渐 · 王昌龄",
+    "en": "Seeing Off Xin Jian at Lotus Tower · Wang Changling"
    },
    "author": {
     "trad": "王昌齡",
-    "simp": "王昌龄"
+    "simp": "王昌龄",
+    "en": "Wang Changling"
    },
    "body": {
     "trad": "寒雨連江夜入吳，平明送客楚山孤。洛陽親友如相問，一片冰心在玉壺。",
@@ -275,11 +312,13 @@
    "id": "huanghelousong",
    "title": {
     "trad": "黃鶴樓送孟浩然之廣陵 · 李白",
-    "simp": "黄鹤楼送孟浩然之广陵 · 李白"
+    "simp": "黄鹤楼送孟浩然之广陵 · 李白",
+    "en": "Seeing Meng Haoran Off to Guangling · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "故人西辭黃鶴樓，煙花三月下揚州。孤帆遠影碧山盡，唯見長江天際流。",
@@ -290,11 +329,13 @@
    "id": "huixiangouShu",
    "title": {
     "trad": "回鄉偶書 · 賀知章",
-    "simp": "回乡偶书 · 贺知章"
+    "simp": "回乡偶书 · 贺知章",
+    "en": "Chance Lines on Returning Home · He Zhizhang"
    },
    "author": {
     "trad": "賀知章",
-    "simp": "贺知章"
+    "simp": "贺知章",
+    "en": "He Zhizhang"
    },
    "body": {
     "trad": "少小離家老大回，鄉音無改鬢毛衰。兒童相見不相識，笑問客從何處來。",
@@ -305,11 +346,13 @@
    "id": "boqinhuai",
    "title": {
     "trad": "泊秦淮 · 杜牧",
-    "simp": "泊秦淮 · 杜牧"
+    "simp": "泊秦淮 · 杜牧",
+    "en": "Mooring on the Qinhuai · Du Mu"
    },
    "author": {
     "trad": "杜牧",
-    "simp": "杜牧"
+    "simp": "杜牧",
+    "en": "Du Mu"
    },
    "body": {
     "trad": "煙籠寒水月籠沙，夜泊秦淮近酒家。商女不知亡國恨，隔江猶唱後庭花。",
@@ -320,11 +363,13 @@
    "id": "jiangnanfeng",
    "title": {
     "trad": "江南逢李龜年 · 杜甫",
-    "simp": "江南逢李龟年 · 杜甫"
+    "simp": "江南逢李龟年 · 杜甫",
+    "en": "Meeting Li Guinian in Jiangnan · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "岐王宅裏尋常見，崔九堂前幾度聞。正是江南好風景，落花時節又逢君。",
@@ -335,11 +380,13 @@
    "id": "jiuyuejiuri",
    "title": {
     "trad": "九月九日憶山東兄弟 · 王維",
-    "simp": "九月九日忆山东兄弟 · 王维"
+    "simp": "九月九日忆山东兄弟 · 王维",
+    "en": "Thinking of My Brothers on Double Ninth · Wang Wei"
    },
    "author": {
     "trad": "王維",
-    "simp": "王维"
+    "simp": "王维",
+    "en": "Wang Wei"
    },
    "body": {
     "trad": "獨在異鄉為異客，每逢佳節倍思親。遙知兄弟登高處，遍插茱萸少一人。",
@@ -350,11 +397,13 @@
    "id": "weichengqu",
    "title": {
     "trad": "渭城曲 · 王維",
-    "simp": "渭城曲 · 王维"
+    "simp": "渭城曲 · 王维",
+    "en": "Song of Weicheng · Wang Wei"
    },
    "author": {
     "trad": "王維",
-    "simp": "王维"
+    "simp": "王维",
+    "en": "Wang Wei"
    },
    "body": {
     "trad": "渭城朝雨浥輕塵，客舍青青柳色新。勸君更盡一杯酒，西出陽關無故人。",
@@ -365,11 +414,13 @@
    "id": "wuyixiang",
    "title": {
     "trad": "烏衣巷 · 劉禹錫",
-    "simp": "乌衣巷 · 刘禹锡"
+    "simp": "乌衣巷 · 刘禹锡",
+    "en": "Black Robe Lane · Liu Yuxi"
    },
    "author": {
     "trad": "劉禹錫",
-    "simp": "刘禹锡"
+    "simp": "刘禹锡",
+    "en": "Liu Yuxi"
    },
    "body": {
     "trad": "朱雀橋邊野草花，烏衣巷口夕陽斜。舊時王謝堂前燕，飛入尋常百姓家。",
@@ -380,11 +431,13 @@
    "id": "chibi",
    "title": {
     "trad": "赤壁 · 杜牧",
-    "simp": "赤壁 · 杜牧"
+    "simp": "赤壁 · 杜牧",
+    "en": "Red Cliff · Du Mu"
    },
    "author": {
     "trad": "杜牧",
-    "simp": "杜牧"
+    "simp": "杜牧",
+    "en": "Du Mu"
    },
    "body": {
     "trad": "折戟沉沙鐵未銷，自將磨洗認前朝。東風不與周郎便，銅雀春深鎖二喬。",
@@ -395,11 +448,13 @@
    "id": "qiuxi",
    "title": {
     "trad": "秋夕 · 杜牧",
-    "simp": "秋夕 · 杜牧"
+    "simp": "秋夕 · 杜牧",
+    "en": "Autumn Evening · Du Mu"
    },
    "author": {
     "trad": "杜牧",
-    "simp": "杜牧"
+    "simp": "杜牧",
+    "en": "Du Mu"
    },
    "body": {
     "trad": "銀燭秋光冷畫屏，輕羅小扇撲流螢。天階夜色涼如水，臥看牽牛織女星。",
@@ -410,11 +465,13 @@
    "id": "yeyujibei",
    "title": {
     "trad": "夜雨寄北 · 李商隱",
-    "simp": "夜雨寄北 · 李商隐"
+    "simp": "夜雨寄北 · 李商隐",
+    "en": "Night Rain, to the North · Li Shangyin"
    },
    "author": {
     "trad": "李商隱",
-    "simp": "李商隐"
+    "simp": "李商隐",
+    "en": "Li Shangyin"
    },
    "body": {
     "trad": "君問歸期未有期，巴山夜雨漲秋池。何當共剪西窗燭，卻話巴山夜雨時。",
@@ -425,11 +482,13 @@
    "id": "change",
    "title": {
     "trad": "嫦娥 · 李商隱",
-    "simp": "嫦娥 · 李商隐"
+    "simp": "嫦娥 · 李商隐",
+    "en": "Chang E · Li Shangyin"
    },
    "author": {
     "trad": "李商隱",
-    "simp": "李商隐"
+    "simp": "李商隐",
+    "en": "Li Shangyin"
    },
    "body": {
     "trad": "雲母屏風燭影深，長河漸落曉星沉。嫦娥應悔偷靈藥，碧海青天夜夜心。",
@@ -440,11 +499,13 @@
    "id": "chuzhouxijian",
    "title": {
     "trad": "滁州西澗 · 韋應物",
-    "simp": "滁州西涧 · 韦应物"
+    "simp": "滁州西涧 · 韦应物",
+    "en": "West Stream at Chuzhou · Wei Yingwu"
    },
    "author": {
     "trad": "韋應物",
-    "simp": "韦应物"
+    "simp": "韦应物",
+    "en": "Wei Yingwu"
    },
    "body": {
     "trad": "獨憐幽草澗邊生，上有黃鸝深樹鳴。春潮帶雨晚來急，野渡無人舟自橫。",
@@ -455,11 +516,13 @@
    "id": "chunwang",
    "title": {
     "trad": "春望 · 杜甫",
-    "simp": "春望 · 杜甫"
+    "simp": "春望 · 杜甫",
+    "en": "Spring View · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "國破山河在，城春草木深。感時花濺淚，恨別鳥驚心。烽火連三月，家書抵萬金。白頭搔更短，渾欲不勝簪。",
@@ -470,11 +533,13 @@
    "id": "shanjuqiuming",
    "title": {
     "trad": "山居秋暝 · 王維",
-    "simp": "山居秋暝 · 王维"
+    "simp": "山居秋暝 · 王维",
+    "en": "Autumn Dusk in the Mountains · Wang Wei"
    },
    "author": {
     "trad": "王維",
-    "simp": "王维"
+    "simp": "王维",
+    "en": "Wang Wei"
    },
    "body": {
     "trad": "空山新雨後，天氣晚來秋。明月松間照，清泉石上流。竹喧歸浣女，蓮動下漁舟。隨意春芳歇，王孫自可留。",
@@ -485,11 +550,13 @@
    "id": "guoguren",
    "title": {
     "trad": "過故人莊 · 孟浩然",
-    "simp": "过故人庄 · 孟浩然"
+    "simp": "过故人庄 · 孟浩然",
+    "en": "Visiting an Old Friend's Farm · Meng Haoran"
    },
    "author": {
     "trad": "孟浩然",
-    "simp": "孟浩然"
+    "simp": "孟浩然",
+    "en": "Meng Haoran"
    },
    "body": {
     "trad": "故人具雞黍，邀我至田家。綠樹村邊合，青山郭外斜。開筵面場圃，把酒話桑麻。待到重陽日，還來就菊花。",
@@ -500,11 +567,13 @@
    "id": "songdushaofu",
    "title": {
     "trad": "送杜少府之任蜀州 · 王勃",
-    "simp": "送杜少府之任蜀州 · 王勃"
+    "simp": "送杜少府之任蜀州 · 王勃",
+    "en": "Seeing Off Vice-Magistrate Du to Shuzhou · Wang Bo"
    },
    "author": {
     "trad": "王勃",
-    "simp": "王勃"
+    "simp": "王勃",
+    "en": "Wang Bo"
    },
    "body": {
     "trad": "城闕輔三秦，風煙望五津。與君離別意，同是宦遊人。海內存知己，天涯若比鄰。無為在岐路，兒女共霑巾。",
@@ -515,11 +584,13 @@
    "id": "dengyueyanglou",
    "title": {
     "trad": "登岳陽樓 · 杜甫",
-    "simp": "登岳阳楼 · 杜甫"
+    "simp": "登岳阳楼 · 杜甫",
+    "en": "Climbing Yueyang Tower · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "昔聞洞庭水，今上岳陽樓。吳楚東南坼，乾坤日夜浮。親朋無一字，老病有孤舟。戎馬關山北，憑軒涕泗流。",
@@ -530,11 +601,13 @@
    "id": "lvyeshuhuai",
    "title": {
     "trad": "旅夜書懷 · 杜甫",
-    "simp": "旅夜书怀 · 杜甫"
+    "simp": "旅夜书怀 · 杜甫",
+    "en": "Night Journey Thoughts · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "細草微風岸，危檣獨夜舟。星垂平野闊，月湧大江流。名豈文章著，官應老病休。飄飄何所似？天地一沙鷗。",
@@ -545,11 +618,13 @@
    "id": "songyouren",
    "title": {
     "trad": "送友人 · 李白",
-    "simp": "送友人 · 李白"
+    "simp": "送友人 · 李白",
+    "en": "Seeing a Friend Off · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "青山橫北郭，白水繞東城。此地一為別，孤蓬萬里征。浮雲遊子意，落日故人情。揮手自茲去，蕭蕭班馬鳴。",
@@ -560,11 +635,13 @@
    "id": "yueyejishe",
    "title": {
     "trad": "月夜憶舍弟 · 杜甫",
-    "simp": "月夜忆舍弟 · 杜甫"
+    "simp": "月夜忆舍弟 · 杜甫",
+    "en": "Moonlit Night, Thinking of My Brothers · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "戍鼓斷人行，邊秋一雁聲。露從今夜白，月是故鄉明。有弟皆分散，無家問死生。寄書長不達，況乃未休兵。",
@@ -575,11 +652,13 @@
    "id": "linDongting",
    "title": {
     "trad": "望洞庭湖贈張丞相 · 孟浩然",
-    "simp": "望洞庭湖赠张丞相 · 孟浩然"
+    "simp": "望洞庭湖赠张丞相 · 孟浩然",
+    "en": "Gazing at Lake Dongting · Meng Haoran"
    },
    "author": {
     "trad": "孟浩然",
-    "simp": "孟浩然"
+    "simp": "孟浩然",
+    "en": "Meng Haoran"
    },
    "body": {
     "trad": "八月湖水平，涵虛混太清。氣蒸雲夢澤，波撼岳陽城。欲濟無舟楫，端居恥聖明。坐觀垂釣者，徒有羨魚情。",
@@ -590,11 +669,13 @@
    "id": "dujingmen",
    "title": {
     "trad": "渡荊門送別 · 李白",
-    "simp": "渡荆门送别 · 李白"
+    "simp": "渡荆门送别 · 李白",
+    "en": "Crossing Jingmen, a Farewell · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "渡遠荊門外，來從楚國遊。山隨平野盡，江入大荒流。月下飛天鏡，雲生結海樓。仍憐故鄉水，萬里送行舟。",
@@ -605,11 +686,13 @@
    "id": "cibeigushan",
    "title": {
     "trad": "次北固山下 · 王灣",
-    "simp": "次北固山下 · 王湾"
+    "simp": "次北固山下 · 王湾",
+    "en": "Moored below Beigu Mountain · Wang Wan"
    },
    "author": {
     "trad": "王灣",
-    "simp": "王湾"
+    "simp": "王湾",
+    "en": "Wang Wan"
    },
    "body": {
     "trad": "客路青山外，行舟綠水前。潮平兩岸闊，風正一帆懸。海日生殘夜，江春入舊年。鄉書何處達，歸雁洛陽邊。",
@@ -620,11 +703,13 @@
    "id": "huanghelou",
    "title": {
     "trad": "黃鶴樓 · 崔顥",
-    "simp": "黄鹤楼 · 崔颢"
+    "simp": "黄鹤楼 · 崔颢",
+    "en": "Yellow Crane Tower · Cui Hao"
    },
    "author": {
     "trad": "崔顥",
-    "simp": "崔颢"
+    "simp": "崔颢",
+    "en": "Cui Hao"
    },
    "body": {
     "trad": "昔人已乘黃鶴去，此地空餘黃鶴樓。黃鶴一去不復返，白雲千載空悠悠。晴川歷歷漢陽樹，芳草萋萋鸚鵡洲。日暮鄉關何處是？煙波江上使人愁。",
@@ -635,11 +720,13 @@
    "id": "denggao",
    "title": {
     "trad": "登高 · 杜甫",
-    "simp": "登高 · 杜甫"
+    "simp": "登高 · 杜甫",
+    "en": "Climbing the Heights · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "風急天高猿嘯哀，渚清沙白鳥飛回。無邊落木蕭蕭下，不盡長江滾滾來。萬里悲秋常作客，百年多病獨登臺。艱難苦恨繁霜鬢，潦倒新停濁酒杯。",
@@ -650,11 +737,13 @@
    "id": "dengfenghuangtai",
    "title": {
     "trad": "登金陵鳳凰臺 · 李白",
-    "simp": "登金陵凤凰台 · 李白"
+    "simp": "登金陵凤凰台 · 李白",
+    "en": "Climbing Phoenix Terrace at Jinling · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "鳳凰臺上鳳凰遊，鳳去臺空江自流。吳宮花草埋幽徑，晉代衣冠成古丘。三山半落青天外，二水中分白鷺洲。總為浮雲能蔽日，長安不見使人愁。",
@@ -665,11 +754,13 @@
    "id": "jinse",
    "title": {
     "trad": "錦瑟 · 李商隱",
-    "simp": "锦瑟 · 李商隐"
+    "simp": "锦瑟 · 李商隐",
+    "en": "The Brocade Zither · Li Shangyin"
    },
    "author": {
     "trad": "李商隱",
-    "simp": "李商隐"
+    "simp": "李商隐",
+    "en": "Li Shangyin"
    },
    "body": {
     "trad": "錦瑟無端五十絃，一絃一柱思華年。莊生曉夢迷蝴蝶，望帝春心託杜鵑。滄海月明珠有淚，藍田日暖玉生煙。此情可待成追憶，只是當時已惘然。",
@@ -680,11 +771,13 @@
    "id": "wuti1",
    "title": {
     "trad": "無題·相見時難別亦難 · 李商隱",
-    "simp": "无题·相见时难别亦难 · 李商隐"
+    "simp": "无题·相见时难别亦难 · 李商隐",
+    "en": "Untitled: Hard to Meet, Hard to Part · Li Shangyin"
    },
    "author": {
     "trad": "李商隱",
-    "simp": "李商隐"
+    "simp": "李商隐",
+    "en": "Li Shangyin"
    },
    "body": {
     "trad": "相見時難別亦難，東風無力百花殘。春蠶到死絲方盡，蠟炬成灰淚始乾。曉鏡但愁雲鬢改，夜吟應覺月光寒。蓬山此去無多路，青鳥殷勤為探看。",
@@ -695,11 +788,13 @@
    "id": "wuti2",
    "title": {
     "trad": "無題·昨夜星辰昨夜風 · 李商隱",
-    "simp": "无题·昨夜星辰昨夜风 · 李商隐"
+    "simp": "无题·昨夜星辰昨夜风 · 李商隐",
+    "en": "Untitled: Last Night's Stars and Wind · Li Shangyin"
    },
    "author": {
     "trad": "李商隱",
-    "simp": "李商隐"
+    "simp": "李商隐",
+    "en": "Li Shangyin"
    },
    "body": {
     "trad": "昨夜星辰昨夜風，畫樓西畔桂堂東。身無彩鳳雙飛翼，心有靈犀一點通。隔座送鉤春酒暖，分曹射覆蠟燈紅。嗟余聽鼓應官去，走馬蘭臺類轉蓬。",
@@ -710,11 +805,13 @@
    "id": "shuxiang",
    "title": {
     "trad": "蜀相 · 杜甫",
-    "simp": "蜀相 · 杜甫"
+    "simp": "蜀相 · 杜甫",
+    "en": "The Prime Minister of Shu · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "丞相祠堂何處尋，錦官城外柏森森。映階碧草自春色，隔葉黃鸝空好音。三顧頻煩天下計，兩朝開濟老臣心。出師未捷身先死，長使英雄淚滿襟。",
@@ -725,11 +822,13 @@
    "id": "kezhi",
    "title": {
     "trad": "客至 · 杜甫",
-    "simp": "客至 · 杜甫"
+    "simp": "客至 · 杜甫",
+    "en": "A Guest Arrives · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "舍南舍北皆春水，但見群鷗日日來。花徑不曾緣客掃，蓬門今始為君開。盤飧市遠無兼味，樽酒家貧只舊醅。肯與鄰翁相對飲，隔籬呼取盡餘杯。",
@@ -740,11 +839,13 @@
    "id": "wenguanjun",
    "title": {
     "trad": "聞官軍收河南河北 · 杜甫",
-    "simp": "闻官军收河南河北 · 杜甫"
+    "simp": "闻官军收河南河北 · 杜甫",
+    "en": "Hearing the Army Has Retaken Henan and Hebei · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "劍外忽傳收薊北，初聞涕淚滿衣裳。卻看妻子愁何在？漫卷詩書喜欲狂。白日放歌須縱酒，青春作伴好還鄉。即從巴峽穿巫峽，便下襄陽向洛陽。",
@@ -755,11 +856,13 @@
    "id": "xisaishan",
    "title": {
     "trad": "西塞山懷古 · 劉禹錫",
-    "simp": "西塞山怀古 · 刘禹锡"
+    "simp": "西塞山怀古 · 刘禹锡",
+    "en": "Thoughts at Xisai Mountain · Liu Yuxi"
    },
    "author": {
     "trad": "劉禹錫",
-    "simp": "刘禹锡"
+    "simp": "刘禹锡",
+    "en": "Liu Yuxi"
    },
    "body": {
     "trad": "王濬樓船下益州，金陵王氣黯然收。千尋鐵鎖沈江底，一片降旛出石頭。人世幾回傷往事，山形依舊枕寒流。今逢四海為家日，故壘蕭蕭蘆荻秋。",
@@ -770,11 +873,13 @@
    "id": "wangyue",
    "title": {
     "trad": "望嶽 · 杜甫",
-    "simp": "望岳 · 杜甫"
+    "simp": "望岳 · 杜甫",
+    "en": "Gazing at the Peak · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "岱宗夫如何，齊魯青未了。造化鍾神秀，陰陽割昏曉。盪胸生層雲，決眥入歸鳥。會當凌絕頂，一覽眾山小。",
@@ -785,11 +890,13 @@
    "id": "yuexiadouzhuo",
    "title": {
     "trad": "月下獨酌 · 李白",
-    "simp": "月下独酌 · 李白"
+    "simp": "月下独酌 · 李白",
+    "en": "Drinking Alone under the Moon · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "花間一壺酒，獨酌無相親。舉杯邀明月，對影成三人。月既不解飲，影徒隨我身。暫伴月將影，行樂須及春。我歌月徘徊，我舞影零亂。醒時同交歡，醉後各分散。永結無情遊，相期邈雲漢。",
@@ -800,11 +907,13 @@
    "id": "jiangjinjiu",
    "title": {
     "trad": "將進酒 · 李白",
-    "simp": "将进酒 · 李白"
+    "simp": "将进酒 · 李白",
+    "en": "Bring in the Wine · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "君不見，黃河之水天上來，奔流到海不復回！君不見，高堂明鏡悲白髮，朝如青絲暮成雪！人生得意須盡歡，莫使金樽空對月。天生我材必有用，千金散盡還復來。烹羊宰牛且為樂，會須一飲三百杯。岑夫子，丹丘生，將進酒，杯莫停。與君歌一曲，請君為我傾耳聽。鐘鼓饌玉不足貴，但願長醉不復醒。古來聖賢皆寂寞，惟有飲者留其名。陳王昔時宴平樂，斗酒十千恣歡謔。主人何為言少錢？徑須沽取對君酌。五花馬，千金裘。呼兒將出換美酒，與爾同銷萬古愁。",
@@ -815,11 +924,13 @@
    "id": "xinglunan1",
    "title": {
     "trad": "行路難·其一 · 李白",
-    "simp": "行路难·其一 · 李白"
+    "simp": "行路难·其一 · 李白",
+    "en": "The Road Is Hard, No. 1 · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "金樽清酒斗十千，玉盤珍羞直萬錢。停杯投箸不能食，拔劍四顧心茫然。欲渡黃河冰塞川，將登太行雪滿山。閒來垂釣碧溪上，忽復乘舟夢日邊。行路難！行路難！多岐路，今安在？長風破浪會有時，直掛雲帆濟滄海。",
@@ -830,11 +941,13 @@
    "id": "shudaonan",
    "title": {
     "trad": "蜀道難 · 李白",
-    "simp": "蜀道难 · 李白"
+    "simp": "蜀道难 · 李白",
+    "en": "The Road to Shu Is Hard · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "噫吁嚱！危乎高哉！蜀道之難，難於上青天！蠶叢及魚鳧，開國何茫然！爾來四萬八千歲，不與秦塞通人煙。西當太白有鳥道，可以橫絕峨眉巔。地崩山摧壯士死，然後天梯石棧相鉤連。上有六龍回日之高標，下有衝波逆折之回川。黃鶴之飛尚不得過，猿猱欲度愁攀援。青泥何盤盤！百步九折縈巖巒。捫參歷井仰脅息，以手撫膺坐長歎。問君西遊何時還？畏途巉巖不可攀。但見悲鳥號古木，雄飛雌從繞林間。又聞子規啼夜月，愁空山。蜀道之難，難於上青天，使人聽此凋朱顏！連峯去天不盈尺，枯松倒掛倚絕壁。飛湍瀑流爭喧豗，砯崖轉石萬壑雷。其險也若此，嗟爾遠道之人胡為乎來哉？劍閣崢嶸而崔嵬，一夫當關，萬夫莫開。所守或匪親，化為狼與豺。朝避猛虎，夕避長蛇。磨牙吮血，殺人如麻。錦城雖云樂，不如早還家。蜀道之難，難於上青天，側身西望長咨嗟！",
@@ -845,11 +958,13 @@
    "id": "tianmuyin",
    "title": {
     "trad": "夢遊天姥吟留別 · 李白",
-    "simp": "梦游天姥吟留别 · 李白"
+    "simp": "梦游天姥吟留别 · 李白",
+    "en": "Dreaming of Mount Tianmu · Li Bai"
    },
    "author": {
     "trad": "李白",
-    "simp": "李白"
+    "simp": "李白",
+    "en": "Li Bai"
    },
    "body": {
     "trad": "海客談瀛洲，煙濤微茫信難求。越人語天姥，雲霞明滅或可覩。天姥連天向天橫，勢拔五嶽掩赤城。天台四萬八千丈，對此欲倒東南傾。我欲因之夢吳越，一夜飛度鏡湖月。湖月照我影，送我至剡溪。謝公宿處今尚在，淥水蕩漾清猿啼。腳著謝公屐，身登青雲梯。半壁見海日，空中聞天雞。千巖萬轉路不定，迷花倚石忽已暝。熊咆龍吟殷巖泉，慄深林兮驚層巔。雲青青兮欲雨，水澹澹兮生煙。列缺霹靂，丘巒崩摧。洞天石扉，訇然中開。青冥浩蕩不見底，日月照耀金銀臺。霓為衣兮風為馬，雲之君兮紛紛而來下。虎鼓瑟兮鸞迴車，仙之人兮列如麻。忽魂悸以魄動，怳驚起而長嗟。惟覺時之枕席，失向來之煙霞。世間行樂亦如此，古來萬事東流水。別君去兮何時還？且放白鹿青崖間，須行即騎訪名山。安能摧眉折腰事權貴，使我不得開心顏。",
@@ -860,11 +975,13 @@
    "id": "chunjianghuayueye",
    "title": {
     "trad": "春江花月夜 · 張若虛",
-    "simp": "春江花月夜 · 张若虚"
+    "simp": "春江花月夜 · 张若虚",
+    "en": "Spring River, Flowers, Moon, Night · Zhang Ruoxu"
    },
    "author": {
     "trad": "張若虛",
-    "simp": "张若虚"
+    "simp": "张若虚",
+    "en": "Zhang Ruoxu"
    },
    "body": {
     "trad": "春江潮水連海平，海上明月共潮生。灩灩隨波千萬里，何處春江無月明？江流宛轉遶芳甸，月照花林皆似霰。空裏流霜不覺飛，汀上白沙看不見。江天一色無纖塵，皎皎空中孤月輪。江畔何人初見月，江月何年初照人？人生代代無窮已，江月年年望相似。不知江月待何人？但見長江送流水。白雲一片去悠悠，青楓浦上不勝愁。誰家今夜扁舟子，何處相思明月樓？可憐樓上月徘徊，應照離人妝鏡臺。玉戶簾中卷不去，擣衣砧上拂還來。此時相望不相聞，願逐月華流照君。鴻雁長飛光不度，魚龍潛躍水成文。昨夜閒潭夢落花，可憐春半不還家。江水流春去欲盡，江潭落月復西斜。斜月沉沉藏海霧，碣石瀟湘無限路。不知乘月幾人歸，落月搖情滿江樹。",
@@ -875,11 +992,13 @@
    "id": "changhenge",
    "title": {
     "trad": "長恨歌 · 白居易",
-    "simp": "长恨歌 · 白居易"
+    "simp": "长恨歌 · 白居易",
+    "en": "Song of Everlasting Regret · Bai Juyi"
    },
    "author": {
     "trad": "白居易",
-    "simp": "白居易"
+    "simp": "白居易",
+    "en": "Bai Juyi"
    },
    "body": {
     "trad": "漢皇重色思傾國，御宇多年求不得。楊家有女初長成，養在深閨人未識。天生麗質難自棄，一朝選在君王側。迴眸一笑百媚生，六宮粉黛無顏色。春寒賜浴華清池，溫泉水滑洗凝脂。侍兒扶起嬌無力，始是新承恩澤時。雲鬢花顏金步搖，芙蓉帳暖度春宵。春宵苦短日高起，從此君王不早朝。承歡侍宴無閑暇，春從春遊夜專夜。後宮佳麗三千人，三千寵愛在一身。金屋粧成嬌侍夜，玉樓宴罷醉和春。姊妹弟兄皆列土，可憐光彩生門戶。遂令天下父母心，不重生男重生女。驪宮高處入青雲，仙樂風飄處處聞。緩歌慢舞凝絲竹，盡日君王看不足。漁陽鞞鼓動地來，驚破霓裳羽衣曲。九重城闕煙塵生，千乘萬騎西南行。翠華搖搖行復止，西出都門百餘里。六軍不發無奈何，宛轉娥眉馬前死。花鈿委地無人收，翠翹金雀玉搔頭。君王掩面救不得，迴看血淚相和流。黃埃散漫風蕭索，雲棧縈紆登劍閣。峨嵋山下少人行，旌旗無光日色薄。蜀江水碧蜀山青，聖主朝朝暮暮情。行宮見月傷心色，夜雨聞鈴腸斷聲。天旋日轉迴龍馭，到此躊躇不能去。馬嵬坡下泥土中，不見玉顏空死處。君臣相顧盡霑衣，東望都門信馬歸。歸來池苑皆依舊，太液芙蓉未央柳。芙蓉如面柳如眉，對此如何不淚垂。春風桃李花開夜，秋雨梧桐葉落時。西宮南苑多秋草，宮葉滿階紅不掃。梨園弟子白髮新，椒房阿監青娥老。夕殿螢飛思悄然，孤燈挑盡未成眠。遲遲鐘鼓初長夜，耿耿星河欲曙天。鴛鴦瓦冷霜華重，翡翠衾寒誰與共。悠悠生死別經年，魂魄不曾來入夢。臨邛道士鴻都客，能以精誠致魂魄。為感君王輾轉思，遂教方士殷勤覓。排空馭氣奔如電，昇天入地求之遍。上窮碧落下黃泉，兩處茫茫皆不見。忽聞海上有仙山，山在虛無縹緲間。樓閣玲瓏五雲起，其中綽約多仙子。中有一人字太真，雪膚花貌參差是。金闕西廂叩玉扃，轉教小玉報雙成。聞道漢家天子使，九華帳裏夢魂驚。攬衣推枕起徘徊，珠箔銀屏邐迤開。雲鬢半偏新睡覺，花冠不整下堂來。風吹仙袂飄颻舉，猶似霓裳羽衣舞。玉容寂寞淚闌干，梨花一枝春帶雨。含情凝睇謝君王，一別音容兩渺茫。昭陽殿裏恩愛絕，蓬萊宮中日月長。迴頭下望人寰處，不見長安見塵霧。唯將舊物表深情，鈿合金釵寄將去。釵留一股合一扇，釵擘黃金合分鈿。但令心似金鈿堅，天上人間會相見。臨別殷勤重寄詞，詞中有誓兩心知。七月七日長生殿，夜半無人私語時。在天願作比翼鳥，在地願為連理枝。天長地久有時盡，此恨綿綿無絕期。",
@@ -890,11 +1009,13 @@
    "id": "pipaxing",
    "title": {
     "trad": "琵琶行 · 白居易",
-    "simp": "琵琶行 · 白居易"
+    "simp": "琵琶行 · 白居易",
+    "en": "Song of the Pipa · Bai Juyi"
    },
    "author": {
     "trad": "白居易",
-    "simp": "白居易"
+    "simp": "白居易",
+    "en": "Bai Juyi"
    },
    "body": {
     "trad": "潯陽江頭夜送客，楓葉荻花秋瑟瑟。主人下馬客在船，舉酒欲飲無管絃。醉不成歡慘將別，別時茫茫江浸月。忽聞水上琵琶聲，主人忘歸客不發。尋聲暗問彈者誰，琵琶聲停欲語遲。移船相近邀相見，添酒迴燈重開宴。千呼萬喚始出來，猶抱琵琶半遮面。轉軸撥絃三兩聲，未成曲調先有情。絃絃掩抑聲聲思，似訴平生不得意。低眉信手續續彈，說盡心中無限事。輕攏慢撚抹復挑，初為霓裳後綠腰。大絃嘈嘈如急雨，小絃切切如私語。嘈嘈切切錯雜彈，大珠小珠落玉盤。間關鶯語花底滑，幽咽泉流冰下難。冰泉冷澀絃凝絕，凝絕不通聲暫歇。別有幽愁暗恨生，此時無聲勝有聲。銀瓶乍破水漿迸，鐵騎突出刀槍鳴。曲終收撥當心畫，四絃一聲如裂帛。東船西舫悄無言，唯見江心秋月白。沉吟放撥插絃中，整頓衣裳起斂容。自言本是京城女，家在蝦蟆陵下住。十三學得琵琶成，名屬教坊第一部。曲罷曾教善才伏，妝成每被秋娘妬。五陵年少爭纏頭，一曲紅綃不知數。鈿頭雲篦擊節碎，血色羅裙翻酒汙。今年歡笑復明年，秋月春風等閒度。弟走從軍阿姨死，暮去朝來顏色故。門前冷落鞍馬稀，老大嫁作商人婦。商人重利輕別離，前月浮梁買茶去。去來江口守空船，繞船月明江水寒。夜深忽夢少年事，夢啼妝淚紅闌干。我聞琵琶已歎息，又聞此語重唧唧。同是天涯淪落人，相逢何必曾相識。我從去年辭帝京，謫居臥病潯陽城。潯陽地僻無音樂，終歲不聞絲竹聲。住近湓江地低濕，黃蘆苦竹繞宅生。其間旦暮聞何物，杜鵑啼血猿哀鳴。春江花朝秋月夜，往往取酒還獨傾。豈無山歌與村笛，嘔啞嘲哳難為聽。今夜聞君琵琶語，如聽仙樂耳暫明。莫辭更坐彈一曲，為君翻作琵琶行。感我此言良久立，卻坐促絃絃轉急。淒淒不似向前聲，滿座重聞皆掩泣。座中泣下誰最多，江州司馬青衫濕。",
@@ -905,11 +1026,13 @@
    "id": "dengyoujoutai",
    "title": {
     "trad": "登幽州臺歌 · 陳子昂",
-    "simp": "登幽州台歌 · 陈子昂"
+    "simp": "登幽州台歌 · 陈子昂",
+    "en": "Song on Climbing Youzhou Terrace · Chen Ziang"
    },
    "author": {
     "trad": "陳子昂",
-    "simp": "陈子昂"
+    "simp": "陈子昂",
+    "en": "Chen Ziang"
    },
    "body": {
     "trad": "前不見古人，後不見來者。念天地之悠悠，獨愴然而涕下。",
@@ -920,11 +1043,13 @@
    "id": "bingchexing",
    "title": {
     "trad": "兵車行 · 杜甫",
-    "simp": "兵车行 · 杜甫"
+    "simp": "兵车行 · 杜甫",
+    "en": "Ballad of the War Chariots · Du Fu"
    },
    "author": {
     "trad": "杜甫",
-    "simp": "杜甫"
+    "simp": "杜甫",
+    "en": "Du Fu"
    },
    "body": {
     "trad": "車轔轔，馬蕭蕭，行人弓箭各在腰。耶孃妻子走相送，塵埃不見咸陽橋。牽衣頓足攔道哭，哭聲直上干雲霄。道傍過者問行人，行人但云點行頻。或從十五北防河，便至四十西營田。去時里正與裹頭，歸來頭白還戍邊。邊庭流血成海水，武皇開邊意未已。君不聞漢家山東二百州，千村萬落生荊杞。縱有健婦把鋤犁，禾生隴畝無東西。況復秦兵耐苦戰，被驅不異犬與雞。長者雖有問，役夫敢申恨？且如今年冬，未休關西卒。縣官急索租，租稅從何出？信知生男惡，反是生女好。生女猶得嫁比鄰，生男埋沒隨百草。君不見青海頭，古來白骨無人收。新鬼煩冤舊鬼哭，天陰雨濕聲啾啾。",

@@ -1,0 +1,87 @@
+{
+ "id": "heart-sutra",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "The Heart Sutra is the essence of the large Prajnaparamita (perfection of wisdom) sutras, and in a few lines it says that the five aggregates are empty: everything arises from conditions and has no fixed, unchanging self-nature. One who awakens to this passes beyond suffering, and the sutra closes with a mantra that gathers up the power of prajna.",
+   "translation": "When Guanzizai Bodhisattva (Avalokiteshvara, the bodhisattva also known as Guanyin) was practising the profound perfection of wisdom, he saw that the five aggregates are all empty, and he passed beyond all suffering and distress.\nShariputra, form is not different from emptiness, and emptiness is not different from form. Form is emptiness, and emptiness is form. Feeling, perception, volition and consciousness are also like this.\nShariputra, the empty nature of all things is not born and does not cease, is not stained and is not pure, does not increase and does not decrease. Therefore, in emptiness there is no form; there is no feeling, perception, volition or consciousness; no eye, ear, nose, tongue, body or mind; no form, sound, smell, taste, touch or object of mind; no realm of the eye, and so on up to no realm of mind-consciousness; no ignorance, and no ending of ignorance, and so on up to no old age and death, and no ending of old age and death; no suffering, no origin of suffering, no cessation, no path; no wisdom, and also no attainment.\nBecause there is nothing to attain, the bodhisattva relies on the perfection of wisdom, and the mind has no obstruction. Because there is no obstruction, there is no fear. Far from upside-down views and dreaming thoughts, he reaches final nirvana.\nThe buddhas of the three times, relying on the perfection of wisdom, attain supreme, perfect awakening. Therefore know that the perfection of wisdom is the great mantra of spiritual power, the great mantra of light, the supreme mantra, the mantra that has no equal. It can remove all suffering; it is true and not false.\nTherefore the mantra of the perfection of wisdom is spoken. The mantra says: gate gate paragate parasamgate bodhi svaha. (Mantras are traditionally recited in the original sounds rather than translated. The meaning usually given is: gone, gone, gone to the other shore, gone altogether to the other shore - awakening, so be it!)",
+   "keyLines": [
+    {
+     "line": "照見五蘊皆空，度一切苦厄",
+     "en": "He saw that the five aggregates are all empty, and passed beyond all suffering and distress.",
+     "note": "The heart of the whole sutra. By the light of prajna, Guanzizai sees that the five parts that make up body and mind have no fixed self-nature, and so suffering is dissolved. 'Empty' here does not mean nothing at all; it means that things have no nature of their own and arise from conditions."
+    },
+    {
+     "line": "色不異空，空不異色，色即是空，空即是色",
+     "en": "Form is not different from emptiness, emptiness is not different from form; form is emptiness, emptiness is form.",
+     "note": "The most famous four lines. Form (material things) and emptiness are not two separate things: whatever comes together from conditions has no self-nature of its own, and that is what emptiness means. Emptiness also never exists apart from appearances. So the lines dissolve clinging to things as solid, and equally clinging to 'emptiness' itself."
+    },
+    {
+     "line": "不生不滅，不垢不淨，不增不減",
+     "en": "Not born and not ceasing, not stained and not pure, not increasing and not decreasing.",
+     "note": "Three pairs of negations describe the true face of the empty nature of things. It lies beyond birth and death, defilement and purity, gain and loss, so it cannot be grasped with dualistic ideas."
+    },
+    {
+     "line": "無苦集滅道，無智亦無得",
+     "en": "No suffering, origin, cessation or path; no wisdom and no attainment.",
+     "note": "Even the Four Noble Truths (suffering, its origin, its cessation and the path), and even wisdom and attainment, are not to be clung to. Seen from the ultimate meaning of emptiness, not even the stages of practice may be taken as solid realities."
+    },
+    {
+     "line": "遠離顛倒夢想，究竟涅槃",
+     "en": "Far from upside-down views and dreaming thoughts, he reaches final nirvana.",
+     "note": "When the mind is without obstruction, fear falls away. 'Upside-down views' means mistakes such as taking the impermanent to be permanent, or taking what has no self to be a self. Leaving these behind, one reaches the stillness of nirvana."
+    },
+    {
+     "line": "故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒",
+     "en": "Therefore know that the perfection of wisdom is the great mantra of spiritual power, the great mantra of light, the supreme mantra, the mantra that has no equal.",
+     "note": "Four times the word 'mantra' praises the power of prajna: wonderful beyond thought, a light that dispels ignorance, nothing higher, nothing to compare with it."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "觀自在菩薩",
+     "en": "Guanzizai Pusa - Guanzizai Bodhisattva (Avalokiteshvara)",
+     "note": "This is Guanyin. Xuanzang's newer translation says 'Guanzizai', meaning one who contemplates with wisdom and so is free; the older translation of Kumarajiva says 'Guanshiyin', 'who perceives the sounds of the world'."
+    },
+    {
+     "term": "般若",
+     "en": "bore - prajna, wisdom",
+     "note": "A transliteration of the Sanskrit prajna, meaning wisdom. It means in particular the ultimate wisdom that sees the emptiness of all things and carries one beyond birth and death, as distinct from worldly cleverness."
+    },
+    {
+     "term": "波羅蜜多",
+     "en": "boluomiduo - paramita, perfection",
+     "note": "A transliteration of the Sanskrit paramita, meaning 'gone to the other shore' or 'perfection': the practice of crossing from this shore of birth and death to the other shore of nirvana. 'Prajnaparamita', the perfection of wisdom, is crossing over by means of wisdom."
+    },
+    {
+     "term": "五蘊",
+     "en": "wuyun - the five aggregates",
+     "note": "The five heaps that make up body and mind: form (matter, the body), feeling, perception (picking out features and forming ideas), volition (acts of will) and consciousness (knowing). 'Aggregate' means a gathering together."
+    },
+    {
+     "term": "舍利子",
+     "en": "Shelizi - Shariputra",
+     "note": "Shariputra, the disciple of the Buddha who was foremost in wisdom. Here he is the one being addressed."
+    },
+    {
+     "term": "六根六塵十八界",
+     "en": "liugen liuchen shibajie - the six sense organs, six sense objects and eighteen realms",
+     "note": "The eye, ear, nose, tongue, body and mind are the six sense organs, and form, sound, smell, taste, touch and mental objects are the six sense objects; together with the six kinds of consciousness they make eighteen realms. The sutra denies them one by one to say that none has a solid, unchanging nature of its own."
+    },
+    {
+     "term": "十二因緣與四諦",
+     "en": "shi'er yinyuan yu sidi - the twelve links and the Four Noble Truths",
+     "note": "'Ignorance' and 'old age and death' are the first and last of the twelve links of dependent origination, and 'suffering, origin, cessation, path' are the Four Noble Truths. The denials speak from the ultimate meaning of emptiness; they do not reject the stages of Buddhist practice."
+    },
+    {
+     "term": "菩提薩埵、阿耨多羅三藐三菩提",
+     "en": "putisaduo, anouduoluo sanmiao sanputi - bodhisattva; supreme, complete awakening",
+     "note": "Bodhisattva (Sanskrit bodhisattva) means a being devoted to awakening. Anuttara-samyak-sambodhi means supreme, perfect awakening: the final awakening of a Buddha."
+    }
+   ],
+   "background": "This is the translation made by Xuanzang in the Tang dynasty (618-907), in the 23rd year of the Zhenguan era (649). It runs to 260 characters and is the most widely used version in Chinese Buddhism, recited in the Chan (Zen), Tiantai and Pure Land schools alike. For the mantra, Xuanzang followed the principle of the 'five things not translated' and kept the Sanskrit sounds. Its general sense is 'gone, gone, gone to the other shore, gone altogether to the other shore - awakening, so be it' (gate gate paragate parasamgate bodhi svaha). The closing word, svaha, is an auspicious word of fulfilment often placed at the end of mantras. Mantras are traditionally recited, not translated, so the English above is only a guide to the usual meaning."
+  }
+ }
+}

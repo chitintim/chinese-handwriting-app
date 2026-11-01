@@ -2,15 +2,18 @@
  "id": "yongzi-bafa",
  "title": {
   "trad": "永字八法",
-  "simp": "永字八法"
+  "simp": "永字八法",
+  "en": "Eight Principles of Yong"
  },
  "author": {
   "trad": "傳隋智永",
-  "simp": "传隋智永"
+  "simp": "传隋智永",
+  "en": "Attributed to Zhiyong"
  },
  "dynasty": {
   "trad": "隋唐",
-  "simp": "隋唐"
+  "simp": "隋唐",
+  "en": "Sui-Tang"
  },
  "source": "https://zh.wikisource.org/wiki/%E6%B0%B8%E5%AD%97%E5%85%AB%E6%B3%95",
  "license": "Public domain (a single character, repeated)",
@@ -20,7 +23,8 @@
    "id": "ce",
    "title": {
     "trad": "永字八法 · 側（點）",
-    "simp": "永字八法 · 侧（点）"
+    "simp": "永字八法 · 侧（点）",
+    "en": "Eight Principles · Ce (dot)"
    },
    "body": {
     "trad": "永永永永永，永永永永永。",
@@ -31,7 +35,8 @@
    "id": "le",
    "title": {
     "trad": "永字八法 · 勒（橫）",
-    "simp": "永字八法 · 勒（横）"
+    "simp": "永字八法 · 勒（横）",
+    "en": "Eight Principles · Le (horizontal)"
    },
    "body": {
     "trad": "永永永永永，永永永永永。",
@@ -42,7 +47,8 @@
    "id": "nu",
    "title": {
     "trad": "永字八法 · 努（豎）",
-    "simp": "永字八法 · 努（竖）"
+    "simp": "永字八法 · 努（竖）",
+    "en": "Eight Principles · Nu (vertical)"
    },
    "body": {
     "trad": "永永永永永，永永永永永。",
@@ -53,7 +59,8 @@
    "id": "ti",
    "title": {
     "trad": "永字八法 · 趯（鉤）",
-    "simp": "永字八法 · 趯（钩）"
+    "simp": "永字八法 · 趯（钩）",
+    "en": "Eight Principles · Ti (hook)"
    },
    "body": {
     "trad": "永永永永永，永永永永永。",
@@ -64,7 +71,8 @@
    "id": "ce2",
    "title": {
     "trad": "永字八法 · 策（挑）",
-    "simp": "永字八法 · 策（挑）"
+    "simp": "永字八法 · 策（挑）",
+    "en": "Eight Principles · Ce (rising)"
    },
    "body": {
     "trad": "永永永永永，永永永永永。",
@@ -75,7 +83,8 @@
    "id": "lve",
    "title": {
     "trad": "永字八法 · 掠（長撇）",
-    "simp": "永字八法 · 掠（长撇）"
+    "simp": "永字八法 · 掠（长撇）",
+    "en": "Eight Principles · Lue (long left-fall)"
    },
    "body": {
     "trad": "永永永永永，永永永永永。",
@@ -86,7 +95,8 @@
    "id": "zhuo",
    "title": {
     "trad": "永字八法 · 啄（短撇）",
-    "simp": "永字八法 · 啄（短撇）"
+    "simp": "永字八法 · 啄（短撇）",
+    "en": "Eight Principles · Zhuo (short left-fall)"
    },
    "body": {
     "trad": "永永永永永，永永永永永。",
@@ -97,7 +107,8 @@
    "id": "zhe",
    "title": {
     "trad": "永字八法 · 磔（捺）",
-    "simp": "永字八法 · 磔（捺）"
+    "simp": "永字八法 · 磔（捺）",
+    "en": "Eight Principles · Zhe (right-fall)"
    },
    "body": {
     "trad": "永永永永永，永永永永永。",
@@ -108,7 +119,8 @@
    "id": "quan",
    "title": {
     "trad": "永字八法 · 永字全",
-    "simp": "永字八法 · 永字全"
+    "simp": "永字八法 · 永字全",
+    "en": "Eight Principles · The whole character"
    },
    "body": {
     "trad": "永永永永永，永永永永永，永永永永永，永永永永永。",

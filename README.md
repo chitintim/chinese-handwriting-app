@@ -89,7 +89,7 @@ The web app and the APK keep separate storage (設定 → 資料 says so too). T
 ## Features
 
 ### Interface language
-- **繁 | 简 | EN** in the top bar of every screen (and 設定 → 顯示 → 介面語言) switches the language of the *controls*: traditional Chinese (default), simplified Chinese, or English. A new device picks it from the browser language. The texts, the characters you trace, the 解說 notes and the 落款 stay Chinese, and so do the file names of exports and backups. This is separate from the traditional / simplified choice for the text you write (字體).
+- **繁 | 简 | EN** in the top bar of every screen (and 設定 → 顯示 → 介面語言) switches the language of the *controls*: traditional Chinese (default), simplified Chinese, or English. A new device picks it from the browser language. The texts, the characters you trace and the 落款 stay Chinese, and so do the file names of exports and backups. In English, the library shows **both languages**: every category, title, author, dynasty, description and chapter name has the English under the Chinese (search finds either), and the 解說 notes are shown in English (key lines and terms keep their Chinese, with an English rendering) with an English | 中文 switch; the writing sheet itself, exports and prints stay Chinese. This is separate from the traditional / simplified choice for the text you write (字體).
 
 ### Templates and fonts
 - **Modes:** 描 (trace the grey template, default), 臨 (copy from a small reference), 默 (write from memory, with a hint button).
@@ -169,31 +169,31 @@ Export re-flows the whole text into a finished piece instead of stitching screen
 
 ### Format
 
-`library/index.json`: `{ version, categories: [{id, title:{trad,simp}}], texts: [{id, category, title, author, dynasty, file, chars, sections, description}] }`
+`library/index.json`: `{ version, categories: [{id, title:{trad,simp,en}}], texts: [{id, category, title, author, dynasty, file, chars, sections, description}] }`
 
 `library/texts/<id>.json`:
 
 ```json
 {
   "id": "example-text",
-  "title":   {"trad": "題", "simp": "题"},
-  "author":  {"trad": "作者", "simp": "作者"},
-  "dynasty": {"trad": "唐", "simp": "唐"},
+  "title":   {"trad": "題", "simp": "题", "en": "Title"},
+  "author":  {"trad": "作者", "simp": "作者", "en": "Author"},
+  "dynasty": {"trad": "唐", "simp": "唐", "en": "Tang"},
   "source":  "https://zh.wikisource.org/wiki/...",
   "license": "Public domain (text); transcription from <source>",
   "notes":   "edition, what was left out, editorial choices",
   "sections": [
-    {"id": "main", "title": {"trad": "", "simp": ""},
+    {"id": "main", "title": {"trad": "題", "simp": "题", "en": "Title"},
      "body": {"trad": "…。", "simp": "…。"}}
   ]
 }
 ```
 
-Single-section works use the section id `main`; longer ones use stable short ids (`ch01`, `pian01`, pinyin slugs for poems). Optional notes live in `library/notes/<textId>.json`: `{id, version, disclaimer, sections: {<sectionId>: {summary, translation, keyLines, glossary, background}}}`, every field as `{trad, simp}`. For examples, see [`library/index.json`](library/index.json) and [`library/texts/heart-sutra.json`](library/texts/heart-sutra.json).
+Single-section works use the section id `main`; longer ones use stable short ids (`ch01`, `pian01`, pinyin slugs for poems). Every `{trad, simp}` name that the app shows (category `title`; text `title`, `author`, `dynasty`, `description`; section `title` and `author`) also needs an `"en"` string: **printable ASCII**, short, pinyin without tone marks (authors: `Wang Xizhi`; dynasties: `Tang`; section titles like `1 · The assembly`, `Chapter 1`). The English interface shows it under the Chinese name; the build refuses a library text without it. Optional notes live in `library/notes/<textId>.json`: `{id, version, disclaimer, sections: {<sectionId>: {summary, translation, keyLines, glossary, background}}}`, every field as `{trad, simp}`. English notes go in `library/notes/en/<textId>.json` (plain English strings, quoted lines and terms stay Chinese with an English rendering; format in [`docs/NOTES-EN.md`](docs/NOTES-EN.md), checked by the build). For examples, see [`library/index.json`](library/index.json) and [`library/texts/heart-sutra.json`](library/texts/heart-sutra.json).
 
 ### Propose a new text
 
-Open an Issue or a Pull Request with the title, author and dynasty, a link to the public-domain source page (zh.wikisource or similar) and the category you'd like. For a PR, a Traditional body is enough; Simplified can be derived with OpenCC. Please check it against the invariants above.
+Open an Issue or a Pull Request with the title, author and dynasty (an English title, pinyin author and English dynasty too, if you can), a link to the public-domain source page (zh.wikisource or similar) and the category you'd like. For a PR, a Traditional body is enough; Simplified can be derived with OpenCC. Please check it against the invariants above.
 
 This repo is generated from a private source repository, so accepted PRs are merged into the source by hand and republished. You'll be credited in the commit log or acknowledgements, though this repo's history may not preserve your commit verbatim.
 
@@ -263,7 +263,7 @@ android/             Android WebView shell source (Gradle, Java; package com.chi
 |---|---|
 | **App code** | All rights reserved for now; license to be decided by the author. |
 | **Texts** | Classical originals are public domain, transcribed from zh.wikisource (whose site content has its own CC BY-SA terms, see [zh.wikisource.org](https://zh.wikisource.org)). Each text file's `source` and `license` fields record provenance. |
-| **Notes** (`library/notes/`) | AI-assisted, drawing on standard commentaries, for study only (stated in the files). License: **TBD by the author**. |
+| **Notes** (`library/notes/`, English: `library/notes/en/`) | AI-assisted, drawing on standard commentaries, for study only (stated in the files). The English translations were checked against the public-domain versions of James Legge, Herbert A. Giles, William Gemmell and Samuel Beal. License: **TBD by the author**. |
 | **文鼎 PL 中楷** AR PL UKai | Arphic Public License, (c) 1999 Arphic Technology Co., Ltd. Modified (reduced subset, renamed MoUKai). Source: [freedesktop.org CJKUnifonts](http://www.freedesktop.org/wiki/Software/CJKUnifonts). License text: `library/fonts/ARPHICPL.txt` |
 | **全字庫正楷體** TW-Kai | Taiwan Ministry of Digital Affairs; dual-licensed (Open Government Data License v1 / SIL OFL 1.1). Used here under **SIL OFL 1.1**: `library/fonts/OFL-TWKai.txt` |
 | **馬善政** Ma Shan Zheng | SIL OFL 1.1, (c) 2018 The Ma Shan Zheng Project Authors: `library/fonts/OFL-MaShanZheng.txt` |
@@ -278,6 +278,7 @@ Fonts are subsets with only the needed characters, renamed MoUKai / MoTWKai / Mo
 
 From the [Releases](https://github.com/chitintim/chinese-handwriting-app/releases) tags.
 
+- **v0.11.0** English mode shows the library bilingually: categories, titles, authors and every section title in Chinese with English beside them, and English search. **English 解說 notes** for all 82 texts with notes: summaries, a translation of every section, key lines and glossary terms in Chinese with their English, background; checked against the public-domain translations of Legge, Giles, Gemmell and Beal. An English | 中文 switch in the notes.
 - **v0.10.0** Interface language **繁 | 简 | EN** in the top bar (and 設定 → 顯示): every button, setting, menu and message in traditional Chinese, simplified Chinese or English. The texts, the characters you trace and the 解說 notes stay Chinese, and calligraphy terms keep their Chinese name next to the English (描 Trace, 臨 Copy, 默 Memory, 落款 Signature …). The download page and the Android app follow the choice too.
 - **v0.9.0** **My works 我的作品**: every writing in one place with previews and filters. 再抄一遍 keeps the finished writing and starts a fresh one. Storage you can see (設定 → 資料) and a 建議備份 reminder. Smaller `.moxie` backups (about 4–5× smaller), backups of one text or one writing, and imports that merge instead of overwriting (nothing on the device is deleted). A notice when a text was corrected after you wrote it. Backup import now works in the Android app.
 - **v0.8.0** Simpler settings with live samples (書寫方式 / 字帖外觀 / 筆觸 / 書寫工具 …), 繁體 / 简体 on the start page. Full-resolution exports of any length (螢幕 / 列印 / 高清; long scrolls stay sharp, numbered strips when huge). Print-ready PDF (A4 / A3 / Letter, 150–600 dpi) and blank 描紅 practice sheets. Export names with 第N遍 and the finishing date. Anonymous visit count (GoatCounter, no cookies).

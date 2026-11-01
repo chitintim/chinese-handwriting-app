@@ -1,0 +1,72 @@
+{
+ "id": "shishuo",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Han Yu, answering the habit of scorning teachers in his day, sets out why one should learn from a teacher. A teacher is one who passes on the Way, gives instruction and clears up doubts, and whoever has the Way is a teacher, whatever age or rank. He criticises scholar-officials who are ashamed to learn from one another and do worse than craftsmen, and he encourages people to learn humbly and ignore custom.",
+   "translation": "The scholars of old always had teachers. A teacher is one who passes on the Way, gives instruction in the craft and resolves doubts. People are not born knowing; who can be without doubts? If one has doubts and does not follow a teacher, those doubts will never be resolved. If someone was born before me and heard the Way before me, I follow and take him as my teacher; if someone was born after me and also heard the Way before me, I follow and take him as my teacher. What I take as teacher is the Way - why should I care whether he was born before or after me? So there is no high or low, no old or young: where the Way is, there the teacher is.\nAlas! The way of the teacher has not been handed down for a long time! It is hard to expect people to be without doubts! The sages of old far surpassed ordinary people, and yet they followed teachers and asked questions. The common people of today are far below the sages, yet they are ashamed to learn from a teacher. So sages become more sage, and fools more foolish. The reasons sages are sages and fools are fools probably all come from this.\nThey love their children and choose a teacher to teach them, but for themselves they are ashamed of having a teacher. That is confused! The teacher of a child, who gives him books and teaches him to read the pauses in sentences, is not what I call one who passes on the Way and resolves doubts. If one does not know the pauses in sentences, or does not have doubts resolved, and in one case takes a teacher and in the other does not, then he studies the small and leaves out the great; I do not see the wisdom of it.\nShamans, doctors, musicians and craftsmen are not ashamed to take one another as teachers. Among the class of scholar-officials, if someone speaks of 'teacher' and 'pupil', the crowd gathers and laughs at them. If you ask why, they say: 'That man and that man are about the same age, and their learning is about the same. If the teacher's rank is low it is shameful; if his office is high it comes near to flattery.' Alas! It is plain that the way of the teacher cannot be restored. Shamans, doctors, musicians and craftsmen - the noble person does not rank them with himself, yet now his wisdom turns out to be unable to match theirs. Is that not strange!\nThe sage has no fixed teacher. Confucius took Tanzi, Chang Hong, Shi Xiang and Lao Dan as teachers. The likes of Tanzi were not as worthy as Confucius. Confucius said: 'When three people walk together, there is bound to be a teacher for me among them.' So a pupil need not be inferior to his teacher, and a teacher need not be wiser than his pupil. Some hear the Way earlier and some later; each has his own special field of skill. That is all.\nThe young man Li Pan, seventeen, likes ancient prose and has studied the Six Arts, the classics and commentaries, all of them thoroughly; he is not bound by the fashion of the times, and has studied with me. I commend him for being able to follow the ancient way, and wrote this 'On Teachers' to give to him.",
+   "keyLines": [
+    {
+     "line": "師者，所以傳道受業解惑也",
+     "en": "A teacher is one who passes on the Way, gives instruction in the craft and resolves doubts.",
+     "note": "The core of the essay: it defines a teacher's duties, which are to pass on the Way, teach the craft and resolve doubts."
+    },
+    {
+     "line": "無貴、無賤、無長、無少，道之所存，師之所存也",
+     "en": "There is no high or low, no old or young: where the Way is, there the teacher is.",
+     "note": "The standard for taking a teacher is the Way, not age or status."
+    },
+    {
+     "line": "聖人無常師",
+     "en": "The sage has no fixed teacher.",
+     "note": "A sage has no set teacher and can learn from anyone anywhere."
+    },
+    {
+     "line": "弟子不必不如師，師不必賢於弟子，聞道有先後，術業有專攻",
+     "en": "A pupil need not be inferior to his teacher, and a teacher need not be wiser than his pupil. Some hear the Way earlier and some later; each has his own special field of skill.",
+     "note": "The relation of teacher and pupil is not one of absolute rank, but of each having his own strengths and one coming earlier than the other."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "傳道受業解惑",
+     "en": "chuan dao shou ye jie huo - pass on the Way, teach the craft, resolve doubts",
+     "note": "To hand on principles, give instruction in a subject and answer doubts; shou here is a variant of another character for 'to give'."
+    },
+    {
+     "term": "句讀",
+     "en": "ju dou - sentence pauses",
+     "note": "Pauses in ancient texts: a full stop at the end of a sentence is called ju, a pause within a sentence is dou."
+    },
+    {
+     "term": "六藝",
+     "en": "liu yi - the Six Arts",
+     "note": "The six classics: the Songs, Documents, Rites, Music, Changes and Spring and Autumn Annals."
+    },
+    {
+     "term": "百工",
+     "en": "bai gong - craftsmen",
+     "note": "Workmen of all kinds."
+    },
+    {
+     "term": "不齒",
+     "en": "bu chi - to not rank with",
+     "note": "To not count among one's own kind, that is, to look down on."
+    },
+    {
+     "term": "郯子",
+     "en": "Tan zi - ruler of Tan",
+     "note": "The ruler of the state of Tan in the Spring and Autumn period, whom Confucius asked about the offices of government."
+    },
+    {
+     "term": "貽",
+     "en": "yi - to present",
+     "note": "To give as a gift."
+    }
+   ],
+   "background": "Han Yu was the leader of the 'ancient prose' movement of the Tang (618-907). He wrote this essay around 802, when he was a Doctor in the Four Gates School at the Imperial Academy. Scholar-officials generally were ashamed to take teachers, and he ignored the fashion, took in younger students, and wrote this piece in answer to the sneers of the world."
+  }
+ }
+}

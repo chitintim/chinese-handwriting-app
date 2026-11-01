@@ -2,15 +2,18 @@
  "id": "hanwei-yuefu",
  "title": {
   "trad": "漢魏樂府古詩選",
-  "simp": "汉魏乐府古诗选"
+  "simp": "汉魏乐府古诗选",
+  "en": "Han-Wei Yuefu and Old Poems"
  },
  "author": {
   "trad": "漢魏六朝諸家",
-  "simp": "汉魏六朝诸家"
+  "simp": "汉魏六朝诸家",
+  "en": "Han to Six Dynasties poets"
  },
  "dynasty": {
   "trad": "漢至北朝",
-  "simp": "汉至北朝"
+  "simp": "汉至北朝",
+  "en": "Han to Northern Dynasties"
  },
  "source": "https://zh.wikisource.org/wiki/樂府詩集",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/樂府詩集",
@@ -20,11 +23,13 @@
    "id": "dafengge",
    "title": {
     "trad": "大風歌 · 劉邦",
-    "simp": "大风歌 · 刘邦"
+    "simp": "大风歌 · 刘邦",
+    "en": "Song of the Great Wind · Liu Bang"
    },
    "author": {
     "trad": "劉邦",
-    "simp": "刘邦"
+    "simp": "刘邦",
+    "en": "Liu Bang"
    },
    "body": {
     "trad": "大風起兮雲飛揚，威加海內兮歸故鄉。安得猛士兮守四方？",
@@ -35,11 +40,13 @@
    "id": "gaixiage",
    "title": {
     "trad": "垓下歌 · 項羽",
-    "simp": "垓下歌 · 项羽"
+    "simp": "垓下歌 · 项羽",
+    "en": "Song of Gaixia · Xiang Yu"
    },
    "author": {
     "trad": "項羽",
-    "simp": "项羽"
+    "simp": "项羽",
+    "en": "Xiang Yu"
    },
    "body": {
     "trad": "力拔山兮氣蓋世，時不利兮騅不逝。騅不逝兮可奈何，虞兮虞兮奈若何。",
@@ -50,11 +57,13 @@
    "id": "shangye",
    "title": {
     "trad": "上邪 · 漢樂府",
-    "simp": "上邪 · 汉乐府"
+    "simp": "上邪 · 汉乐府",
+    "en": "Oath of Love (Shang Ye) · Han yuefu"
    },
    "author": {
     "trad": "漢樂府",
-    "simp": "汉乐府"
+    "simp": "汉乐府",
+    "en": "Han yuefu"
    },
    "body": {
     "trad": "上邪，我欲與君相知，長命無絕衰，山無陵，江水為竭，冬雷震震，夏雨雪，天地合，乃敢與君絕。",
@@ -65,11 +74,13 @@
    "id": "jiangnan",
    "title": {
     "trad": "江南 · 漢樂府",
-    "simp": "江南 · 汉乐府"
+    "simp": "江南 · 汉乐府",
+    "en": "Jiangnan · Han yuefu"
    },
    "author": {
     "trad": "漢樂府",
-    "simp": "汉乐府"
+    "simp": "汉乐府",
+    "en": "Han yuefu"
    },
    "body": {
     "trad": "江南可採蓮，蓮葉何田田。魚戲蓮葉間。魚戲蓮葉東，魚戲蓮葉西，魚戲蓮葉南，魚戲蓮葉北。",
@@ -80,11 +91,13 @@
    "id": "changgexing",
    "title": {
     "trad": "長歌行 · 漢樂府",
-    "simp": "长歌行 · 汉乐府"
+    "simp": "长歌行 · 汉乐府",
+    "en": "Long Song · Han yuefu"
    },
    "author": {
     "trad": "漢樂府",
-    "simp": "汉乐府"
+    "simp": "汉乐府",
+    "en": "Han yuefu"
    },
    "body": {
     "trad": "青青園中葵，朝露待日晞。陽春布德澤，萬物生光輝。常恐秋節至，焜黃華葉衰。百川東到海，何時復西歸？少壯不努力，老大徒傷悲。",
@@ -95,11 +108,13 @@
    "id": "shiwucongjun",
    "title": {
     "trad": "十五從軍征 · 漢樂府",
-    "simp": "十五从军征 · 汉乐府"
+    "simp": "十五从军征 · 汉乐府",
+    "en": "Joined the Army at Fifteen · Han yuefu"
    },
    "author": {
     "trad": "漢樂府",
-    "simp": "汉乐府"
+    "simp": "汉乐府",
+    "en": "Han yuefu"
    },
    "body": {
     "trad": "十五從軍征，八十始得歸。道逢鄉里人：家中有阿誰？遙看是君家，松柏冢纍纍。兔從狗竇入，雉從樑上飛。中庭生旅穀，井上生旅葵。舂穀持作飯，採葵持作羹。羹飯一時熟，不知貽阿誰！出門東向看，淚落沾我衣。",
@@ -110,11 +125,13 @@
    "id": "chilege",
    "title": {
     "trad": "敕勒歌 · 北朝民歌",
-    "simp": "敕勒歌 · 北朝民歌"
+    "simp": "敕勒歌 · 北朝民歌",
+    "en": "Song of the Chile · Northern Dynasties folk song"
    },
    "author": {
     "trad": "北朝民歌",
-    "simp": "北朝民歌"
+    "simp": "北朝民歌",
+    "en": "Northern Dynasties folk song"
    },
    "body": {
     "trad": "敕勒川，陰山下。天似穹廬，籠蓋四野。天蒼蒼，野茫茫，風吹草低見牛羊。",
@@ -125,11 +142,13 @@
    "id": "mulanci",
    "title": {
     "trad": "木蘭辭 · 北朝民歌",
-    "simp": "木兰辞 · 北朝民歌"
+    "simp": "木兰辞 · 北朝民歌",
+    "en": "Ballad of Mulan · Northern Dynasties folk song"
    },
    "author": {
     "trad": "北朝民歌",
-    "simp": "北朝民歌"
+    "simp": "北朝民歌",
+    "en": "Northern Dynasties folk song"
    },
    "body": {
     "trad": "唧唧復唧唧，木蘭當戶織。不聞機杼聲，惟聞女嘆息。問女何所思？問女何所憶？女亦無所思，女亦無所憶。昨夜見軍帖，可汗大點兵。軍書十二卷，卷卷有爺名。阿爺無大兒，木蘭無長兄。願為市鞍馬，從此替爺征。東市買駿馬，西市買鞍韉。南市買轡頭，北市買長鞭。朝辭爺孃去，暮宿黃河邊。不聞爺孃喚女聲，但聞黃河流水鳴濺濺。旦辭黃河去，暮至黑山頭。不聞爺孃喚女聲，但聞燕山胡騎聲啾啾。萬里赴戎機，關山度若飛。朔氣傳金柝，寒光照鐵衣。將軍百戰死，壯士十年歸。歸來見天子，天子坐明堂。策勳十二轉，賞賜百千強。可汗問所欲，「木蘭不用尚書郎。願借明駝千里足，送兒還故鄉。」爺孃聞女來，出郭相扶將。阿姊聞妹來，當戶理紅妝。小弟聞姊來，磨刀霍霍向豬羊。開我東閣門，坐我西閣床。脫我戰時袍，著我舊時裳。當窗理雲鬢，對鏡貼花黃。出門看火伴，火伴皆驚忙：「同行十二年，不知木蘭是女郎。」雄兔腳撲朔，雌兔眼迷離。兩兔傍地走，安能辨我是雄雌？",
@@ -140,11 +159,13 @@
    "id": "duangexing",
    "title": {
     "trad": "短歌行 · 曹操",
-    "simp": "短歌行 · 曹操"
+    "simp": "短歌行 · 曹操",
+    "en": "Short Song · Cao Cao"
    },
    "author": {
     "trad": "曹操",
-    "simp": "曹操"
+    "simp": "曹操",
+    "en": "Cao Cao"
    },
    "body": {
     "trad": "對酒當歌，人生幾何？譬如朝露，去日苦多。慨當以慷，憂思難忘。何以解憂？唯有杜康。青青子衿，悠悠我心。但為君故，沉吟至今。呦呦鹿鳴，食野之苹。我有嘉賓，鼓瑟吹笙。明明如月，何時可掇？憂從中來，不可斷絕。越陌度阡，枉用相存。契闊談讌，心念舊恩。月明星稀，烏鵲南飛。繞樹三匝，何枝可依？山不厭高，海不厭深。周公吐哺，天下歸心。",
@@ -155,11 +176,13 @@
    "id": "guancanghai",
    "title": {
     "trad": "觀滄海 · 曹操",
-    "simp": "观沧海 · 曹操"
+    "simp": "观沧海 · 曹操",
+    "en": "Viewing the Vast Sea · Cao Cao"
    },
    "author": {
     "trad": "曹操",
-    "simp": "曹操"
+    "simp": "曹操",
+    "en": "Cao Cao"
    },
    "body": {
     "trad": "東臨碣石，以觀滄海。水何澹澹，山島竦峙。樹木叢生，百草豐茂。秋風蕭瑟，洪波湧起。日月之行，若出其中；星漢燦爛，若出其裏。幸甚至哉，歌以詠志。",
@@ -170,11 +193,13 @@
    "id": "qibushi",
    "title": {
     "trad": "七步詩 · 曹植",
-    "simp": "七步诗 · 曹植"
+    "simp": "七步诗 · 曹植",
+    "en": "Poem in Seven Paces · Cao Zhi"
    },
    "author": {
     "trad": "曹植",
-    "simp": "曹植"
+    "simp": "曹植",
+    "en": "Cao Zhi"
    },
    "body": {
     "trad": "煮豆燃豆萁，豆在釜中泣。本是同根生，相煎何太急？",
@@ -185,11 +210,13 @@
    "id": "yinjiu5",
    "title": {
     "trad": "飲酒·其五 · 陶淵明",
-    "simp": "饮酒·其五 · 陶渊明"
+    "simp": "饮酒·其五 · 陶渊明",
+    "en": "Drinking Wine, No. 5 · Tao Yuanming"
    },
    "author": {
     "trad": "陶淵明",
-    "simp": "陶渊明"
+    "simp": "陶渊明",
+    "en": "Tao Yuanming"
    },
    "body": {
     "trad": "結廬在人境，而無車馬喧。問君何能爾？心遠地自偏。採菊東籬下，悠然見南山。山氣日夕佳，飛鳥相與還。此中有真意，欲辨已忘言。",
@@ -200,11 +227,13 @@
    "id": "yuantian1",
    "title": {
     "trad": "歸園田居·其一 · 陶淵明",
-    "simp": "归园田居·其一 · 陶渊明"
+    "simp": "归园田居·其一 · 陶渊明",
+    "en": "Returning to the Countryside, No. 1 · Tao Yuanming"
    },
    "author": {
     "trad": "陶淵明",
-    "simp": "陶渊明"
+    "simp": "陶渊明",
+    "en": "Tao Yuanming"
    },
    "body": {
     "trad": "少無適俗韻，性本愛丘山。誤落塵網中，一去三十年。羈鳥戀舊林，池魚思故淵。開荒南野際，守拙歸園田。方宅十餘畝，草屋八九間，榆柳蔭後簷，桃李羅堂前。曖曖遠人村，依依墟里煙；狗吠深巷中，雞鳴桑樹巔。戶庭無塵雜，虛室有餘閑。久在樊籠裏，復得返自然。",

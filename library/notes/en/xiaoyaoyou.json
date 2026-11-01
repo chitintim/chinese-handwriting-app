@@ -1,0 +1,339 @@
+{
+ "id": "xiaoyaoyou",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "pian01": {
+   "summary": "It opens with the fish Kun of the Northern Ocean turning into the bird Peng and flying nine thousand li. The mockery of the cicada and the little dove, and the contrast between the morning mushroom and cicada on one side and the Mingling and Great Chun trees on the other, show that 'small knowledge cannot reach great knowledge, nor a short life a long one'. This leads to the idea that carefree wandering means rising above the limits of knowledge and lifespan.",
+   "translation": "In the Northern Darkness there is a fish named Kun. How big Kun is, no one knows - many thousands of li. It changes into a bird named Peng. How wide Peng's back is, no one knows - many thousands of li. When it rouses itself and flies, its wings are like clouds hanging from the sky. When the sea stirs, this bird will migrate to the Southern Darkness. The Southern Darkness is the Pool of Heaven.\nQi Xie is a record of marvels. Its words say: 'When Peng migrates to the Southern Darkness, it beats the water for three thousand li, and spirals up on the whirlwind for ninety thousand li, and goes off on the wind of the sixth month.' The wandering vapours and the dust are living things blowing their breath at one another. Is the blue of the sky its true colour? Or is it just the distance, which has no end? When it looks down from there, it is probably the same as what we see.\nMoreover, if the water is not piled thick, it has no strength to bear a big boat. Pour a cup of water into a dip in the floor, and a tiny blade of grass will be its boat; put a cup there and it sticks, because the water is shallow and the boat is big. If the wind is not piled thick, it has no strength to bear great wings. So at ninety thousand li, the wind is beneath it; only then does it ride on the wind with the blue sky on its back, with nothing to block it, and only then does it set out to the south.\nThe cicada and the little dove laughed at it, saying: 'When we make an effort and fly up, we reach the elm or the sapanwood tree, and sometimes we don't get there and just drop to the ground; what is the use of going ninety thousand li to the south?' One who goes to the green outskirts takes three meals and comes back with his belly still full; one who goes a hundred li has to pound grain overnight; one who goes a thousand li has to gather provisions for three months. What do these two creatures know? Small knowledge cannot reach great knowledge, and a short life cannot reach a long life. How do we know this? The morning mushroom does not know the dark and the bright of the month; the cicada does not know spring and autumn. These are short lives. In the south of Chu there is a tree called Mingling, for which five hundred years are a spring and five hundred years an autumn. In high antiquity there was a tree called Great Chun, for which eight thousand years were a spring and eight thousand years an autumn.",
+   "keyLines": [
+    {
+     "line": "北冥有魚，其名為鯤",
+     "en": "In the Northern Darkness there is a fish named Kun.",
+     "note": "The opening of the whole piece, which sets off the fable world with the huge imagined Kun."
+    },
+    {
+     "line": "鯤之大，不知其幾千里也，化而為鳥，其名為鵬",
+     "en": "How big Kun is, no one knows - many thousands of li. It changes into a bird named Peng.",
+     "note": "Kun changes into Peng, standing for a change of form and of level."
+    },
+    {
+     "line": "鵬之徙於南冥也，水擊三千里，摶扶搖而上者九萬里",
+     "en": "When Peng migrates to the Southern Darkness, it beats the water for three thousand li, and spirals up on the whirlwind for ninety thousand li.",
+     "note": "It describes the force of the Peng's flight south, the source of sayings like 'Peng's ten-thousand-li journey'."
+    },
+    {
+     "line": "風之積也不厚，則其負大翼也無力",
+     "en": "If the wind is not piled thick, it has no strength to bear great wings.",
+     "note": "The great Peng can fly high only on a thick bed of wind; even flight depends on something, which sets up the later 'depending' and 'not depending'."
+    },
+    {
+     "line": "小知不及大知，小年不及大年",
+     "en": "Small knowledge cannot reach great knowledge, and a short life cannot reach a long life.",
+     "note": "The point of this section: knowledge and lifespan vary in size, and the small cannot understand the large."
+    },
+    {
+     "line": "朝菌不知晦朔，蟪蛄不知春秋",
+     "en": "The morning mushroom does not know the dark and the bright of the month; the cicada does not know spring and autumn.",
+     "note": "The brief lives of the morning mushroom and the cicada illustrate what a 'short life' is."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "北冥、南冥",
+     "en": "bei ming, nan ming - Northern and Southern Darkness",
+     "note": "Ming is the same as the character 溟, 'sea'. The Northern and Southern Darkness are the north and south seas; the Southern Darkness is also called the Pool of Heaven."
+    },
+    {
+     "term": "鯤、鵬",
+     "en": "Kun, Peng - Kun and Peng",
+     "note": "Kun originally meant fish roe; Zhuangzi uses it for a huge fish. Peng is a giant bird into which Kun changes."
+    },
+    {
+     "term": "海運",
+     "en": "hai yun - the sea stirs",
+     "note": "The sea moving, meaning great winds and waves on the sea."
+    },
+    {
+     "term": "摶扶搖",
+     "en": "tuan fu yao - spiralling on the whirlwind",
+     "note": "Tuan is to spiral upward; fu yao is a whirlwind rising from below."
+    },
+    {
+     "term": "野馬",
+     "en": "ye ma - wandering vapours",
+     "note": "Drifting mist and dust-haze, like galloping horses."
+    },
+    {
+     "term": "蜩與鷽鳩",
+     "en": "tiao yu xue jiu - the cicada and the little dove",
+     "note": "The tiao is a cicada, the xue jiu a small dove; both stand for those of narrow outlook."
+    },
+    {
+     "term": "朝菌",
+     "en": "zhao jun - morning mushroom",
+     "note": "A fungus that lives from morning to evening; accounts differ."
+    },
+    {
+     "term": "蟪蛄",
+     "en": "hui gu - the cicada",
+     "note": "The cold cicada; some say a cicada that is born in summer and dies in autumn."
+    },
+    {
+     "term": "冥靈、大椿",
+     "en": "Ming ling, Da chun - Mingling and Great Chun trees",
+     "note": "Legendary trees of immense age."
+    }
+   ],
+   "background": "Free and Easy Wandering is the first of the Inner Chapters of the Zhuangzi, traditionally ascribed to Zhuang Zhou of the Warring States period. 'Xiaoyao' means unconstrained and at ease. This section is the opening fable: the huge Kun and Peng are set against the tiny cicada and dove, to show differences of size, and at the same time to hint that even the Peng must wait for something (the wind), which prepares the way for the carefree wandering of 'waiting for nothing' later in the piece."
+  },
+  "pian02": {
+   "summary": "It goes on with the debate of small and great: the quail laughs at the Peng. Then, in rising order, the official who is fit for one post, Song Rongzi and Liezi are all said to be still waiting on something. True free wandering is 'the perfect man has no self, the spirit man has no merit, the sage has no name'. The last part records Yao's wish to hand the empire to Xu You.",
+   "translation": "And Pengzu is now known for his long life, and ordinary people try to match him - is that not sad! This is what Tang asked Ji about. In the barren north there is a dark sea, which is the Pool of Heaven. In it there is a fish, several thousand li wide, and no one knows its length. Its name is Kun. There is a bird, named Peng. Its back is like Mount Tai, its wings are like clouds hanging from the sky. It spirals up on the whirlwind, the ram's-horn wind, ninety thousand li, passes beyond the cloud-vapour, bears the blue sky on its back, and then sets out south, going to the Southern Darkness.\nA marsh quail laughed at it, saying: 'Where does he think he is going? I spring up and rise, and before I have gone a few ren I come down again, and flutter among the weeds and brambles. That is the utmost of flying too. Where does he think he is going?' This is the argument of small and great.\nSo there are those whose knowledge is enough for one office, whose conduct suits one village, whose virtue fits one ruler, and who are trusted by one state; their view of themselves is like this, and Song Rongzi laughs at them. And if the whole world praised him, he would not be urged on, and if the whole world blamed him, he would not be put off. He fixes the division between inner and outer, and distinguishes the bounds of honour and disgrace, and that is all. He has not been anxious in worldly matters, yet there is something he has not established.\nLiezi rode the wind and travelled, light and fine, and came back after fifteen days. He too was not anxious about seeking good fortune. Though he was spared walking, there was still something he waited on. But if one rides the correct course of heaven and earth and drives the changes of the six qi to wander in the limitless, what then does he wait on? So it is said: 'The perfect man has no self; the spirit man has no merit; the sage has no name.'\nYao wished to give the empire to Xu You and said: 'The sun and moon have come out, yet the torch is not put out; to try to give light, is that not hard? The seasonal rain has fallen, and yet one is still irrigating; for moistening the fields, is that not wasted effort? If you stand, the world is in order, and yet I still occupy the seat; I look on myself as lacking, and ask to hand over the world.'",
+   "keyLines": [
+    {
+     "line": "斥鴳笑之曰",
+     "en": "A marsh quail laughed at it.",
+     "note": "The sparrow of a small marsh mocks the great Peng, stressing the difference between small and great again."
+    },
+    {
+     "line": "此小大之辯也",
+     "en": "This is the argument of small and great.",
+     "note": "It names the point of the earlier fable: the difference between small and great."
+    },
+    {
+     "line": "夫列子御風而行，泠然善也，旬有五日而後反",
+     "en": "Liezi rode the wind and travelled, light and fine, and came back after fifteen days.",
+     "note": "Liezi could ride the wind and was already at ease, but still depended on the wind, so he still had something to wait on."
+    },
+    {
+     "line": "若夫乘天地之正，而御六氣之辯，以遊無窮者，彼且惡乎待哉",
+     "en": "If one rides the correct course of heaven and earth and drives the changes of the six qi to wander in the limitless, what then does he wait on?",
+     "note": "The core of the whole piece: only by following the natural course of heaven and earth, depending on nothing, is one truly free."
+    },
+    {
+     "line": "至人無己，神人無功，聖人無名",
+     "en": "The perfect man has no self; the spirit man has no merit; the sage has no name.",
+     "note": "The marks of three ideal figures: no self, no merit, no fame. It is the best-known line in the piece."
+    },
+    {
+     "line": "日月出矣，而爝火不息，其於光也，不亦難乎",
+     "en": "The sun and moon have come out, yet the torch is not put out; to try to give light, is that not hard?",
+     "note": "Yao compares himself to a torch and Xu You to the sun and moon, saying he falls short and is willing to yield the empire."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "彭祖",
+     "en": "Peng Zu - Pengzu",
+     "note": "A legendary long-lived man, said to have lived eight hundred years."
+    },
+    {
+     "term": "斥鴳",
+     "en": "chi yan - marsh quail",
+     "note": "A little bird living by a small marsh."
+    },
+    {
+     "term": "仞",
+     "en": "ren - a measure of length",
+     "note": "An ancient unit of length, about seven or eight feet."
+    },
+    {
+     "term": "宋榮子",
+     "en": "Song Rong zi - Song Rongzi",
+     "note": "A man of Song in the Warring States who taught not being moved by outside things; Zhuangzi thinks his level still falls short."
+    },
+    {
+     "term": "列子",
+     "en": "Lie zi - Liezi",
+     "note": "Lie Yukou, a Daoist figure of the Warring States."
+    },
+    {
+     "term": "六氣",
+     "en": "liu qi - the six qi",
+     "note": "The six natural influences: yin, yang, wind, rain, dark and bright."
+    },
+    {
+     "term": "至人、神人、聖人",
+     "en": "zhi ren, shen ren, sheng ren - perfect man, spirit man, sage",
+     "note": "Different names Zhuangzi uses for the highest kind of person; here they refer to the same level."
+    },
+    {
+     "term": "爝火",
+     "en": "jue huo - a small torch",
+     "note": "A little flame or torch."
+    },
+    {
+     "term": "許由",
+     "en": "Xu You - Xu You",
+     "note": "A legendary recluse to whom Yao wished to hand over the empire."
+    }
+   ],
+   "background": "This section is the theoretical core of 'Free and Easy Wandering'. Zhuangzi lists figures in turn: officials with talent and virtue, Song Rongzi and Liezi. However high their level, if they depend on something they are not truly free. Finally he states that 'the perfect man has no self, the spirit man has no merit, the sage has no name'. The ending, in which Yao yields the empire, leads into the next section's discussion of 'no name' and 'uselessness'."
+  },
+  "pian03": {
+   "summary": "Xu You refuses Yao's offer of the empire, saying 'name is the guest of reality'. Jian Wu tells Lian Shu what Jieyu said about the spirit man of Mount Miaoguye, and Lian Shu explains that ordinary wits cannot reach this. The last part uses the Song man who sold ceremonial caps in Yue to show how Yao, after meeting the Four Masters, forgot his empire.",
+   "translation": "Xu You said: 'You govern the world, and the world is already well governed. If I took your place, would I be doing it for the name? Name is the guest of reality - am I to be a guest? The wren nests in a deep forest, but needs no more than one branch; the mole drinks at the river, but needs no more than its belly full. Go back and rest, my lord; I have no use for the world. Even if the cook does not tend the kitchen, the priest of the dead and the invoker do not leap over their wine vessels and meat stands to take his place.'\nJian Wu asked Lian Shu: 'I heard words from Jieyu, big and without limit, going on and not returning. I was alarmed by his words; they are like the Milky Way, without end. They are far from the ordinary, and do not suit human feeling.' Lian Shu said: 'What did he say?' 'He said: \"On the mountain of far Guye lives a spirit man. His skin is like ice and snow, his grace is like a young girl's. He does not eat the five grains, but sucks the wind and drinks the dew; he rides the cloud-vapour and drives flying dragons, and wanders beyond the four seas. His spirit is gathered, and keeps creatures from sickness and plague, and makes the harvests ripen.\" I thought this was mad, and did not believe it.'\nLian Shu said: 'So. A blind man cannot share in the sight of patterns and colours; a deaf man cannot share in the sound of bells and drums. Is it only the body that is deaf and blind? Knowledge too can be. These words of his are like that. This man, his virtue will embrace the ten thousand things and make them one. The age begs to be set in order; why should he toil to make the world his business? Nothing can harm such a man. A flood that reaches the sky would not drown him; in a great drought that melts metal and stone and scorches the hills, he would not feel hot. Even his dust and chaff could mould Yao and Shun - why would he want to make things his business?'\nA man of Song took ceremonial caps to sell in Yue. The people of Yue cut their hair short and tattooed their bodies, and had no use for them. Yao ruled the people of the world and put the government within the seas in order; then he went to see the Four Masters on far Guye mountain, north of the Fen river, and was dazed, and lost the world.",
+   "keyLines": [
+    {
+     "line": "名者，實之賓也",
+     "en": "Name is the guest of reality.",
+     "note": "Xu You's words: name is only an adjunct of reality, and he does not wish to be a guest; this is the view of 'no name'."
+    },
+    {
+     "line": "鷦鷯巢於深林，不過一枝；偃鼠飲河，不過滿腹",
+     "en": "The wren nests in a deep forest, but needs no more than one branch; the mole drinks at the river, but needs no more than its belly full.",
+     "note": "With birds and animals whose needs are few, it shows that a person needs only enough and has no need to own the world."
+    },
+    {
+     "line": "肌膚若冰雪，淖約若處子，不食五穀，吸風飲露",
+     "en": "His skin is like ice and snow, his grace is like a young girl's. He does not eat the five grains, but sucks the wind and drinks the dew.",
+     "note": "The figure of the spirit man of Mount Miaoguye, a mythical picture of Zhuangzi's ideal person."
+    },
+    {
+     "line": "瞽者無以與乎文章之觀，聾者無以與乎鍾鼓之聲",
+     "en": "A blind man cannot share in the sight of patterns and colours; a deaf man cannot share in the sound of bells and drums.",
+     "note": "Blindness and deafness stand for a blindness and deafness of understanding, saying that ordinary people cannot grasp the great Way."
+    },
+    {
+     "line": "宋人資章甫而適諸越，越人斷髮文身，無所用之",
+     "en": "A man of Song took ceremonial caps to sell in Yue. The people of Yue cut their hair short and tattooed their bodies, and had no use for them.",
+     "note": "The Song man's caps are useless in Yue, which compares to Yao's rule of the world meaning nothing to one who has the Way."
+    },
+    {
+     "line": "窅然喪其天下焉",
+     "en": "Dazed, he lost the world.",
+     "note": "After meeting the Four Masters, Yao is lost and forgets the world: the close of this section."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "鷦鷯",
+     "en": "jiao liao - wren",
+     "note": "A small bird that takes up little space for its nest."
+    },
+    {
+     "term": "偃鼠",
+     "en": "yan shu - mole",
+     "note": "A mole or similar burrowing rodent."
+    },
+    {
+     "term": "尸祝",
+     "en": "shi zhu - priest of the dead and invoker",
+     "note": "Those who in ancient times presided at sacrifices and read the prayers."
+    },
+    {
+     "term": "接輿",
+     "en": "Jie Yu - Jieyu",
+     "note": "A madman of the state of Chu, who also appears in the Analects."
+    },
+    {
+     "term": "藐姑射之山",
+     "en": "Miao Guye zhi shan - Mount Miaoguye",
+     "note": "A legendary mountain on which the spirit man in the text lives."
+    },
+    {
+     "term": "淖約",
+     "en": "chuo yue - gentle and graceful",
+     "note": "The look of softness and beauty."
+    },
+    {
+     "term": "章甫",
+     "en": "zhang fu - ceremonial cap",
+     "note": "A kind of ceremonial cap handed down from the Yin (Shang) period."
+    },
+    {
+     "term": "四子",
+     "en": "si zi - the Four Masters",
+     "note": "One view takes them to be four men who had the Way: Wang Ni, Nie Que, Bei Yi and Xu You."
+    }
+   ],
+   "background": "With the three stories of Xu You, the spirit man and the Song man, this section draws out the meaning of 'no name', 'no merit' and 'no self'. Xu You's refusal shows that one who has the Way is not burdened by rank; the spirit man of Mount Miaoguye is the picture of the ideal person; the Song man selling caps hints that worldly values are worth nothing from another standpoint. The fables are strange and bold in imagination, and typical of Zhuangzi's style."
+  },
+  "pian04": {
+   "summary": "Huizi and Zhuangzi debate 'uselessness' twice. The huge gourd can be made into a great float for rivers and lakes, and the huge shu tree can be planted in the land of nothing-at-all as shade; Zhuangzi uses this to show that the 'use of the useless' is the final form of free wandering.",
+   "translation": "Huizi said to Zhuangzi: 'The King of Wei gave me seeds of a big gourd. I planted them and they grew, and the fruit held five dan. When I filled it with water or broth, it was too heavy to lift by itself. When I split it to make dippers, they were flat and wide and held nothing. It was not that it was not big and hollow, but I broke it up because it was useless.'\nZhuangzi said: 'You are really clumsy in using large things. There was a man of Song who was good at making a salve to keep hands from chapping, and his family for generations had worked at bleaching silk floss. A visitor heard of it and asked to buy the recipe for a hundred pieces of gold. The man gathered his clan and discussed it: \"We have bleached floss for generations and made only a few pieces of gold. Now we can sell the skill in one morning for a hundred. Let us give it.\" The visitor got it and persuaded the King of Wu with it. When Yue made trouble, the King of Wu made him a commander. In winter he fought the men of Yue on the water and beat them badly, and was given land and a fief. The ability to keep hands from chapping was one thing; some used it to gain a fief, while others could not escape bleaching floss. It is a difference in how it is used. Now you have a gourd that holds five dan; why not think of tying it as a great float, and drifting on rivers and lakes? You worry that it is flat and holds nothing - then you, sir, still have a mind full of tangled weeds!'\nHuizi said to Zhuangzi: 'I have a big tree, which people call the shu. Its great trunk is swollen and knotted and does not fit the cord and ink-line; its small branches are curled and twisted and do not fit the compass and square. It stands by the road, and carpenters will not look at it. Now your words are big and useless, and everyone alike turns away from them.'\nZhuangzi said: 'Have you not seen the wildcat and the weasel? They crouch low and lie in wait for what comes by, leaping east and west, not avoiding high or low, until they are caught in a trap or die in a net. Now the yak is as big as a cloud hanging from the sky; it can do great things, but it cannot catch a rat. Now you have a big tree and worry that it is useless; why not plant it in the land of nothing-at-all, in the wide empty fields, and wander idly by its side, doing nothing, or lie and sleep freely beneath it? Axes will not cut it short, nothing will harm it. If it has no use, what trouble can it have?'",
+   "keyLines": [
+    {
+     "line": "吾為其無用而掊之",
+     "en": "It was not that it was not big and hollow, but I broke it up because it was useless.",
+     "note": "Huizi smashes the big gourd because it is useless, standing for the worldly view that judges by practical use."
+    },
+    {
+     "line": "宋人有善為不龜手之藥者，世世以洴澼絖為事",
+     "en": "There was a man of Song who was good at making a salve to keep hands from chapping, and his family for generations had worked at bleaching silk floss.",
+     "note": "The same recipe, used differently, has very different results, showing that 'use' depends on insight."
+    },
+    {
+     "line": "何不慮以為大樽，而浮乎江湖",
+     "en": "Why not think of tying it as a great float, and drifting on rivers and lakes?",
+     "note": "Zhuangzi suggests making the huge gourd into a float to drift on rivers and lakes, turning 'useless' into great use."
+    },
+    {
+     "line": "今子之言，大而無用，眾所同去也",
+     "en": "Now your words are big and useless, and everyone alike turns away from them.",
+     "note": "Huizi uses the big shu tree to mock Zhuangzi's words as big and useless."
+    },
+    {
+     "line": "何不樹之於無何有之鄉，廣莫之野，彷徨乎無為其側，逍遙乎寢臥其下",
+     "en": "Why not plant it in the land of nothing-at-all, in the wide empty fields, and wander idly by its side, doing nothing, or lie and sleep freely beneath it?",
+     "note": "The point of the whole piece: only by not clinging to what is useful can one wander freely in the land of nothing-at-all."
+    },
+    {
+     "line": "不夭斤斧，物無害者，無所可用，安所困苦哉",
+     "en": "Axes will not cut it short, nothing will harm it. If it has no use, what trouble can it have?",
+     "note": "Being useless lets it survive: Zhuangzi's famous idea of 'the use of the useless'."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "瓠",
+     "en": "hu - gourd",
+     "note": "A calabash; 'da hu' is a big gourd."
+    },
+    {
+     "term": "五石",
+     "en": "wu dan - five dan",
+     "note": "A unit of capacity; five dan means a very large capacity."
+    },
+    {
+     "term": "瓠落",
+     "en": "hu luo - flat and wide",
+     "note": "Describes a shallow, wide, empty shape."
+    },
+    {
+     "term": "洴澼絖",
+     "en": "ping pi kuang - bleaching floss",
+     "note": "To rinse and bleach silk floss in water."
+    },
+    {
+     "term": "不龜手之藥",
+     "en": "bu jun shou zhi yao - salve against chapped hands",
+     "note": "A salve that prevents chapped skin; the character 龜 is here read jun and stands for 皸, chapped skin."
+    },
+    {
+     "term": "樗",
+     "en": "chu - the shu tree",
+     "note": "The stinking ailanthus, with poor wood, often used as a symbol of useless timber."
+    },
+    {
+     "term": "狸狌",
+     "en": "li sheng - wildcat and weasel",
+     "note": "A wildcat and a weasel; some take it to mean only the weasel."
+    },
+    {
+     "term": "犛牛",
+     "en": "li niu - yak",
+     "note": "The long-haired ox, a huge animal."
+    },
+    {
+     "term": "無何有之鄉",
+     "en": "wu he you zhi xiang - the land of nothing-at-all",
+     "note": "A place where there is nothing; a state of emptiness and naturalness."
+    }
+   ],
+   "background": "This section is the end of 'Free and Easy Wandering', a debate between Zhuangzi and his friend Hui Shi, a common form in the Zhuangzi. Huizi stresses usefulness, while Zhuangzi answers from another angle, saying one should drop the frame of 'useful' and wander freely in the land of nothing-at-all. 'The use of the useless' became a sign of the Daoist way of living, and it is the conclusion of the whole piece."
+  }
+ }
+}

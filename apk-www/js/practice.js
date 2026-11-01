@@ -382,7 +382,7 @@
       S.pnotes = h('div', { class: 'pnotes', 'data-role': 'notes-strip' });
       S.root.appendChild(S.pnotes);
       var box = S.pnotes;
-      MX.Library.getSectionNotes(S.copy.textId, Model.sid(S.copy)).then(function (n) {
+      MX.Notes.load(S.copy.textId, Model.sid(S.copy)).then(function (n) {
         if (!S || S.pnotes !== box) return;
         S.nsec = n || false;
         fillStrip();

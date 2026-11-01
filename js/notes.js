@@ -5,6 +5,7 @@
   var MX = window.MX, h = MX.h, Model = MX.Model, Lib = MX.Library;
   var N = MX.Notes = {};
   var cur = null;            // the open reading page: {el, listeners, ...}
+  var LANG_KEY = 'notesLang:v1';    // which notes the English interface shows when a text has both: 'en' (default) or 'zh'; device-local (js/store.js LOCAL_ONLY)
   var GAP = 40;              // px between two columns (pages)
 
   function pick(v, script) { return v ? (v[script] || v.trad || v.simp || '') : ''; }
@@ -14,6 +15,22 @@
     var c = Model.activeCopy(textId, sectionId);
     return c ? (c.cfg.script === 'simp' ? 'simp' : 'trad') : libScript();
   }
+  // English notes (docs/NOTES-EN.md): shown in the English interface for a text that has library/notes/en/<id>.json, unless the reader chose 中文 (remembered per device)
+  N.pref = function () {
+    var v = null;
+    try { v = MX.Store.get(LANG_KEY); } catch (e) { v = null; }
+    return v === 'zh' ? 'zh' : 'en';
+  };
+  N.setPref = function (v) { try { MX.Store.set(LANG_KEY, v === 'zh' ? 'zh' : 'en'); } catch (e) { MX.err(e); } };
+  N.hasEn = function (textId) { return MX.I18n.isEn() && Lib.hasNotesEn(textId); };
+  N.english = function (textId) { return N.hasEn(textId) && N.pref() !== 'zh'; };
+  // the notes of a section in the form to show: English when N.english(), else (or when the English file cannot be read) the Chinese ones
+  N.load = async function (textId, sectionId) {
+    if (N.english(textId)) {
+      try { var en = await Lib.getSectionNotesEn(textId, sectionId); if (en) return en; } catch (e) { MX.err(e); }
+    }
+    return Lib.getSectionNotes(textId, sectionId);
+  };
   function qs(query) {
     var o = {};
     String(query || '').split('&').forEach(function (p) { if (p) { var i = p.indexOf('='); o[decodeURIComponent(i < 0 ? p : p.slice(0, i))] = i < 0 ? '' : decodeURIComponent(p.slice(i + 1)); } });
@@ -23,7 +40,28 @@
   var PARTS = [
     ['summary', '要旨'], ['translation', '白話'], ['keyLines', '重點句'], ['glossary', '字詞'], ['background', '背景']
   ];
+  // the English form: summary / translation / background are English paragraphs; a key line is the Chinese line, its English, then the note; a term is the Chinese term with its English, then the note
+  function buildBlocksEn(nt, script) {
+    var out = [];
+    PARTS.forEach(function (p) {
+      var k = p[0], kids = [];
+      if (k === 'summary' || k === 'translation' || k === 'background') {
+        if (nt[k]) kids.push(h('p', { class: 'ntext en', text: nt[k] }));
+      } else if (k === 'keyLines') {
+        (nt.keyLines || []).forEach(function (kl) {
+          kids.push(h('div', { class: 'nitem' }, [h('div', { class: 'nline', 'data-zh': '', text: pick(kl.line, script) }), kl.en ? h('div', { class: 'nen', text: kl.en }) : null, kl.note ? h('div', { class: 'nnote en', text: kl.note }) : null]));
+        });
+      } else if (k === 'glossary') {
+        (nt.glossary || []).forEach(function (g) {
+          kids.push(h('div', { class: 'nitem gl' }, [h('div', null, [h('span', { class: 'nterm', 'data-zh': '', text: pick(g.term, script) }), g.en ? h('span', { class: 'nen', text: '  ' + g.en }) : null]), g.note ? h('div', { class: 'nnote en', text: g.note }) : null]));
+        });
+      }
+      if (kids.length) out.push(h('div', { class: 'npart', 'data-part': k }, [h('h2', { text: MX.t(p[1]) })].concat(kids)));
+    });
+    return out;
+  }
   function buildBlocks(nt, script) {
+    if (nt.english) return buildBlocksEn(nt, script);
     var out = [];
     PARTS.forEach(function (p) {
       var k = p[0], kids = [];
@@ -112,12 +150,27 @@
     var pg = paged(el, C, 'notes'), cols = pg.cols, go = pg.go, repage = pg.repage;
 
     var nt = null, text = null, failure = '';
-    try { text = await Lib.getText(textId); nt = await Lib.getSectionNotes(textId, sectionId); } catch (e) { MX.err(e); failure = String(e && e.message || e); }
+    try { text = await Lib.getText(textId); nt = await N.load(textId, sectionId); } catch (e) { MX.err(e); failure = String(e && e.message || e); }
     if (cur !== C) return;
     var sec = text ? text.sections.filter(function (s) { return s.id === sectionId; })[0] : null;
-    var ttl = text ? pick(text.title, script) + (sec && text.sections.length > 1 ? ' · ' + pick(sec.title, script) : '') : pick(entry.title, script);
-    title.textContent = MX.t('解說 · {title}', { title: ttl });
-    cols.appendChild(h('h1', { class: 'ntitle', 'data-zh': '', text: ttl }));
+    var ttlV = text ? (sec && text.sections.length > 1 ? Lib.join([text.title, sec.title], ' · ') : text.title) : entry.title;
+    title.textContent = MX.t('解說 · {title}', { title: Lib.ts(ttlV, script) });       // the English interface adds the English title: "Notes · 中文 (English)"
+    cols.appendChild(h('h1', { class: 'ntitle', 'data-zh': '' }, [Lib.bi(ttlV, true, script)]));
+    if (N.hasEn(textId)) {
+      // 中文 / English: the notes to read (default English in the English interface; remembered on this device)
+      var seg = h('div', { class: 'nlang', role: 'group', 'data-role': 'notes-lang', 'aria-label': MX.t('解說語言') });
+      [['en', 'English'], ['zh', '中文']].forEach(function (o) {
+        var on = (nt && nt.english ? 'en' : 'zh') === o[0];
+        seg.appendChild(h('button', { type: 'button', class: on ? 'on' : '', 'data-lang': o[0], 'aria-pressed': on ? 'true' : 'false', 'data-zh': o[0] === 'zh' ? '' : null, text: o[1], onclick: function () {
+          if (on) return;
+          N.setPref(o[0]);
+          if (MX.route) MX.route();
+        } }));
+      });
+      cols.appendChild(seg);
+    } else if (MX.I18n.isEn() && nt) {
+      cols.appendChild(h('p', { class: 'ntext nmiss', 'data-role': 'notes-en-missing', text: MX.t('這篇文本還沒有英文解說，以下是中文解說。') }));
+    }
     if (done) {
       var n = Model.doneCount(textId, Model.sid(copy));
       cols.appendChild(h('div', { class: 'ndone', 'data-role': 'notes-done', text: MX.t('圓滿完成！這是第 {n} 遍，用時約 {time}。', { n: n, time: MX.fmtDuration(copy.activeMs) }) }));
@@ -147,7 +200,7 @@
       } }));
       cols.appendChild(acts);
     }
-    if (nt && nt.disclaimer) cols.appendChild(h('p', { class: 'ndisc', 'data-zh': '', 'data-role': 'notes-disclaimer', text: pick(nt.disclaimer, script) }));
+    if (nt && nt.disclaimer) cols.appendChild(h('p', nt.english ? { class: 'ndisc en', 'data-role': 'notes-disclaimer', text: nt.disclaimer } : { class: 'ndisc', 'data-zh': '', 'data-role': 'notes-disclaimer', text: pick(nt.disclaimer, script) }));
     C.script = script;
     repage();
     go(Math.max(0, parseInt(q.p, 10) - 1 || 0));
@@ -194,6 +247,7 @@
   N.CREDITS = {
     font: '字型：文鼎 PL 中楷 AR PL UKai（Arphic Public License）；全字庫正楷體 TW-Kai、馬善政 Ma Shan Zheng、霞鶩文楷 LXGW WenKai（SIL OFL 1.1）。已裁切字集並改名，授權全文在 library/fonts/。',
     privacy: '私隱：你寫的字只存在這部裝置。開啟時會匿名計一次到訪（GoatCounter，不用 cookie），只是想知道值不值得繼續花心思維護。瀏覽器設定「不追蹤」時不計。',
+    notes: '英文解說由 AI 協助撰寫，譯文對照 James Legge、Herbert A. Giles、William Gemmell 與 Samuel Beal 的公有領域譯本核對，僅供學習參考。',
     stroke: '筆順資料：hanzi-writer-data／Make Me a Hanzi（取自文鼎 Arphic 字型，Arphic Public License，授權全文在 library/strokes/LICENSE）。筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。'
   };
   MX.I18n.live(N.CREDITS);
@@ -206,11 +260,12 @@
     var body = h('div', { class: 'sbody', 'data-role': 'strip-body', style: 'font-family:' + MX.Draw.uiFam(script) });
     box.appendChild(head); box.appendChild(body);
     if (!nsec) { body.appendChild(h('p', { class: 'ntext', text: MX.t('沒有解說。') })); return; }
-    var sum = pick(nsec.summary, script);
-    if (sum) body.appendChild(h('div', { class: 'ssum', 'data-zh': '', text: sum }));
+    var en = !!nsec.english, sum = en ? nsec.summary : pick(nsec.summary, script);
+    if (sum) body.appendChild(h('div', en ? { class: 'ssum en', text: sum } : { class: 'ssum', 'data-zh': '', text: sum }));
     var items = [];
     (nsec.glossary || []).forEach(function (g) {
-      var it = h('div', { class: 'sgl', 'data-zh': '' }, [h('span', { class: 'nterm', text: pick(g.term, script) }), h('span', { text: '　' + pick(g.note, script) })]);
+      var it = en ? h('div', { class: 'sgl' }, [h('span', { class: 'nterm', 'data-zh': '', text: pick(g.term, script) }), h('span', { text: '  ' + (g.en ? g.en + (g.note ? ' - ' : '') : '') + g.note })])
+        : h('div', { class: 'sgl', 'data-zh': '' }, [h('span', { class: 'nterm', text: pick(g.term, script) }), h('span', { text: '　' + pick(g.note, script) })]);
       body.appendChild(it); items.push(it);
     });
     // no scrolling: drop glossary entries from the end until everything fits, then the summary is shortened

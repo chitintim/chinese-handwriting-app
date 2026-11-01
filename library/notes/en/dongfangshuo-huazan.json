@@ -1,0 +1,87 @@
+{
+ "id": "dongfangshuo-huazan",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Xiahou Zhan writes a eulogy for a portrait of Dongfang Shuo, the court jester-sage of Emperor Wu of Han. He first gives Dongfang Shuo's home and learning, and says he lived by humour while keeping his Way clean and hiding his purity behind a rough surface. He then describes his own visit to the portrait and shrine, and ends with a verse in four-character lines praising his lofty integrity.",
+   "translation": "The Grand Master's given name was Shuo and his courtesy name Manqian; he was a man of Yanci in Pingyuan. In the Jian'an years under Wei, part of Yanci was split off to form the commandery of Leling, so he is also counted a man of that commandery. He served Emperor Wu of Han, and the Book of Han records his deeds in full.\nThe master was a man of rare gifts and wide learning, and his thought reached into everything and bent with change. He judged that in a muddied age one cannot gain wealth and rank by honest means, so he took office lightly and drifted through posts to get a place. He judged that to go out into the world by the straight road was impossible, so he rose and dipped and looked down on the age. He judged that scorn for the age could teach no one anything, so he remonstrated openly to show his integrity. He judged that open integrity could not keep him safe for long, so he joked and played the clown to be tolerated. He kept his Way clean and soiled his tracks; he kept his nature pure and muddied his words. He slackened and drew tight without turning crooked; he advanced and withdrew without leaving the crowd.\nAs for his far-reaching heart and broad measure, his plentiful wit and great talent, he was free of restraint, learned in many things, and capable in every field he touched. He met change with calculation to show its pattern, and read the hidden signs to know what was coming. He knew the Three Mounds, Five Canons, Eight Cords and Nine Hills, the learning of yin and yang and of charts and apocrypha, the doctrines of the hundred schools, quick and ready debate, and the tangled reckonings of reversal; the arts of the channels and pulses and of medicines and stone needles; and the skills of archery, charioteering, writing and counting. He studied them closely to master their principles, and reached the results without practice. What his eyes passed over he could recite; what passed his ears he held in his heart.\nHis clear judgement was open and far-reaching and his breadth was great. He overrode ministers and chancellors, laughed at the powerful and the heroic, overshadowed all who had come before, and trampled on the mighty. In office he took no pride in distinction, and in low estate he had no sorrow. He joked with the Emperor as with a colleague and looked on his peers as straw. His heroic spirit outstripped his fellows and his lofty temper covered the age; one may say that he stood out from the crowd and wandered beyond the bounds of the world.\nThose who speak of him add that the master breathed in the pure harmony, breathed out the old and drew in the new; that he shed his skin like a cicada and changed like a dragon, left the world behind and became an immortal; that his spirit joined the work of creation and became a star. These are strange and dim matters, and cannot be fully discussed.\nMy father has come to govern this state, and I have come home from the capital to pay him my respects. I have seen the master's county town and thought of his lofty bearing; I have lingered in the old hall and seen the portrait he left; I have strolled about the city and looked at his shrine. Moved, with feelings rising, I have written this eulogy. It says:\nProud and upright is the master, who withdrew in ease and held to what was true.\nWithdrawing, he did not end in obstruction; advancing, he still shunned glory.\nFacing his age he washed his feet; admiring the ancients he shook out his cap-strings.\nHe was dyed black but left no dregs; though muddied, he could be clear.\nWhat is 'no dregs'? A lofty brightness that can be gentle.\nWhat is 'able to be clear'? Seeing filth as floating scum.\nHis joy lay in doing what he had to; sunk low, he felt no sorrow.\nHe strode across the ages and overtook his time, treading a far path alone.\nI look back to past generations and think of his distant traces.\nFar-off master, whose Way was like a dragon's.\nHe stained his tracks by hiding at court; he was harmonious, yet not the same as others.\nHe lingered in a low rank, easy and unhurried.\nI have come from the east and reached this town.\nRespectfully I ask after the mounds and graves, and stand looking over the plain and the wet lowlands.\nThe old grave stands in vain, and his spirit is stilled for ever.\nThe people remember his example, and so this shrine was raised.\nI linger in the temple hall, where his portrait remains in the picture.\nI walk about the shrine; the courtyard is overgrown,\nthe rafters and beams have fallen and the weeds are not cleared.\nSolemn master, how could this be where you dwell?\nThat you dwell here has no form, and my feelings stretch on and on.\nIn the past those who had virtue always left a spirit behind.\nHeaven's order has its rites, and the spirits watch with great clarity.\nAs if in wind and dust, I offer this song of praise to be passed down.",
+   "keyLines": [
+    {
+     "line": "大夫諱朔，字曼倩，平原厭次人也",
+     "en": "The Grand Master's given name was Shuo and his courtesy name Manqian; he was a man of Yanci in Pingyuan",
+     "note": "The opening gives Dongfang Shuo's name, courtesy name and home."
+    },
+    {
+     "line": "潔其道而穢其跡，清其質而濁其文",
+     "en": "He kept his Way clean and soiled his tracks; he kept his nature pure and muddied his words",
+     "note": "The central judgement of the whole piece: his Way and nature were pure, though his conduct and speech seemed unrestrained."
+    },
+    {
+     "line": "弛張而不為邪，進退而不離群",
+     "en": "He slackened and drew tight without turning crooked; he advanced and withdrew without leaving the crowd",
+     "note": "He knew when to relax and when to tighten, never fell into wrongdoing, and never cut himself off from other people."
+    },
+    {
+     "line": "戲萬乘若寮友，視儔列如草芥",
+     "en": "He joked with the Emperor as with a colleague and looked on his peers as straw",
+     "note": "Describes his proud character, which looked down on the powerful and made fun of the ruler."
+    },
+    {
+     "line": "矯矯先生，肥遯居貞",
+     "en": "Proud and upright is the master, who withdrew in ease and held to what was true",
+     "note": "The eulogy begins by praising the way he hid himself and held to what was right."
+    },
+    {
+     "line": "既濁能清",
+     "en": "Though muddied, he could be clear",
+     "note": "The central image of the verse: living in a muddy age, he kept himself clean."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "曼倩",
+     "en": "Manqian - Dongfang Shuo's courtesy name",
+     "note": "In the reign of Emperor Wu of Han he was famous for his wit and cleverness."
+    },
+    {
+     "term": "厭次、樂陵",
+     "en": "Yanci, Leling - place names",
+     "note": "Yanci was a county in the Han dynasty (206 BC-220 AD), in today's Shandong; Leling commandery was split off from it under Wei."
+    },
+    {
+     "term": "三墳五典八索九丘",
+     "en": "san fen wu dian ba suo jiu qiu - the Three Mounds, Five Canons, Eight Cords and Nine Hills",
+     "note": "Legendary ancient books, used to mean all the writings of high antiquity."
+    },
+    {
+     "term": "圖緯",
+     "en": "tu wei - charts and apocrypha",
+     "note": "Books of prophecy and divination popular in the Han, mixing prediction with religious teaching."
+    },
+    {
+     "term": "濯足、振纓",
+     "en": "zhuo zu, zhen ying - washing the feet, shaking the cap-strings",
+     "note": "From the 'Fisherman' in the Chuci (Songs of Chu): washing the feet stands for living in retirement, shaking the cap-strings for taking office."
+    },
+    {
+     "term": "朝隱",
+     "en": "chao yin - hiding at court",
+     "note": "To be in the court in body while keeping a hermit's heart."
+    },
+    {
+     "term": "涅而無滓",
+     "en": "nie er wu zi - dyed black without dregs",
+     "note": "Adapted from the Analects, where something can be dyed black and still not be stained; it means staying unsoiled in a dirty world."
+    },
+    {
+     "term": "肥遯",
+     "en": "fei dun - to withdraw in comfort",
+     "note": "To retire to a hidden life at ease."
+    }
+   ],
+   "background": "'Eulogy for a Portrait of Dongfang Shuo' was written by Xiahou Zhan of the Western Jin dynasty (265-316) for a portrait of Dongfang Shuo and is included in the Wenxuan anthology. The preface gives his life, and a four-character verse then praises his lofty integrity. Two famous copies have come down: a small regular script version attributed to Wang Xizhi, and a regular script stele by Yan Zhenqing. The first is graceful and refined and is a famous model for the small script of the Jin, but the original is lost and most surviving copies are later tracings and rubbings. The second is known for its dignified, thick and powerful style."
+  }
+ }
+}

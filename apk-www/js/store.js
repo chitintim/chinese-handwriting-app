@@ -9,7 +9,7 @@
   var idbBad = false;       // an IndexedDB write failed: further writes also go to localStorage (merged back on next start)
   var warned = false;
   var errCount = 0;         // writes that could not be stored anywhere (IndexedDB and localStorage both failed): the import reports them
-  var LOCAL_ONLY = /^(ota|sys|introSeen|setupAdv):/;       // introSeen:v1 = the first-visit intro was closed, setupAdv:v2 = 進階選項 of the setup screen is open (device-local: not in a backup, survive an import)
+  var LOCAL_ONLY = /^(ota|sys|introSeen|setupAdv|notesLang):/;       // introSeen:v1 = the first-visit intro was closed, setupAdv:v2 = 進階選項 of the setup screen is open, notesLang:v1 = 中文 / English notes (device-local: not in a backup, survive an import)
 
   function open() {
     return new Promise(function (res, rej) {

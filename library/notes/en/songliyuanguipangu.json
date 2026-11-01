@@ -1,0 +1,87 @@
+{
+ "id": "songliyuanguipangu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Han Yu sees his friend Li Yuan off to retire to Pangu. He first describes the valley, then gives Li Yuan's account of three ways of life, the successful official, the recluse and the man who rushes about for favour, and ends with a farewell song wishing him a happy old age in Pangu.",
+   "translation": "On the sunny side of Mount Taihang lies Pangu valley. In the valley the springs are sweet and the earth rich, grass and trees grow thick, and few people live there. Some say: 'It is called pan, \"coiling\", because it winds between two hills.' Others say: 'This valley is secluded and its position is hard to reach; it is where hermits come to wander and linger.' My friend Li Yuan lives there.\nYuan said: 'I know what people call a great man. His benefits reach others, his name shines in his time; he sits at court and presides over promotions and dismissals of all officials, helping the Son of Heaven issue orders. When he is outside the capital, he raises banners and arrays bows and arrows. Soldiers shout in front, followers fill the road, and the suppliers each carry their goods, running along both sides. When he is pleased there are rewards; when he is angry there are punishments. Talented men crowd before him, speaking of past and present and praising his great virtue, and it never wearies his ears. Women with curved brows and full cheeks, clear voices and agile bodies, fair outside and clever within, in light skirts and long sleeves, powdered white and painted green, fill the rooms at their leisure, jealous of favour and proud of it, competing in beauty to win affection. This is what a great man does, one who has been recognised by the Son of Heaven and gives his strength to his age.\nIt is not that I hate this and run from it. It is a matter of fate, which cannot be won by luck. I live in poverty and in the wilds; I climb high and look far; I sit under thick trees all day, and wash in clear springs to make myself clean. What I gather in the hills tastes good enough to eat; what I fish from the water is fresh enough to eat. I rise and rest at no set time, and only what is comfortable counts. Rather than be praised to my face, better not to be slandered behind my back; rather than have pleasure in my body, better to have no worry in my heart. No carriage or robes bind me, no knives or saws are laid on me; I do not know whether the state is in order or in chaos, and hear nothing of demotions or promotions. This is what a great man does when the times do not suit him, and I follow it.\nThen there is the one who waits at the doors of dukes and ministers and runs along the roads of power; his feet are about to go forward but hesitate, his mouth is about to speak but mumbles; he lives in foulness without shame, and falls foul of punishment and is put to death; he hopes for a one-in-ten-thousand lucky chance, and does not stop till he grows old and dies. As a man, is he better or worse?'\nI, Han Yu of Changli, heard his words and thought them fine. I gave him wine and made him a song: 'In the coil of the valley stands your house. The soil of the coil can be sown. The spring of the coil can be used to wash and to follow along. The difficult ground of the coil - who will contend with you for your place? Secluded and deep, wide enough to hold, winding and bending, as if going and returning. Ah! the joy of Pangu, a joy without end! Tigers and leopards keep far away, dragons and monsters hide; spirits stand guard and drive off ill luck. Drink and eat, and live long and well; with nothing lacking, what is there to wish for? I will grease my cart and feed my horse, and follow you to Pangu, to wander at ease to the end of my life.'",
+   "keyLines": [
+    {
+     "line": "太行之陽有盤谷",
+     "en": "On the sunny side of Mount Taihang lies Pangu valley.",
+     "note": "The opening gives the place of Pangu, the setting of the piece."
+    },
+    {
+     "line": "人之稱大丈夫者，我知之矣",
+     "en": "I know what people call a great man.",
+     "note": "From here come Li Yuan's words, beginning with what the world calls a successful great man."
+    },
+    {
+     "line": "吾非惡此而逃之，是有命焉，不可幸而致也",
+     "en": "It is not that I hate this and run from it. It is a matter of fate, which cannot be won by luck.",
+     "note": "Li Yuan says that he does not despise wealth and rank, but is unwilling to seek them by luck."
+    },
+    {
+     "line": "與其有譽於前，孰若無毀於其後；與其有樂於身，孰若無憂於其心",
+     "en": "Rather than be praised to my face, better not to be slandered behind my back; rather than have pleasure in my body, better to have no worry in my heart.",
+     "note": "A famous saying: better not to be slandered behind one's back than praised to the face; better to have no care in the heart than pleasure in the body."
+    },
+    {
+     "line": "足將進而趦趄，口將言而囁嚅",
+     "en": "His feet are about to go forward but hesitate, his mouth is about to speak but mumbles.",
+     "note": "A vivid picture of the shabby manner of those who run to the doors of the powerful, hesitating and half-speaking."
+    },
+    {
+     "line": "盤之樂兮，樂且無央",
+     "en": "Ah! the joy of Pangu, a joy without end!",
+     "note": "In the song, he says the joy of Pangu has no limit, echoing the earlier praise of a hidden life."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "陽",
+     "en": "yang - sunny side",
+     "note": "The south side of a hill."
+    },
+    {
+     "term": "利澤施於人",
+     "en": "li ze shi yu ren - benefits reaching others",
+     "note": "Kindness bestowed on others."
+    },
+    {
+     "term": "旗旄",
+     "en": "qi mao - banners",
+     "note": "Flags; mao is an ornament on the flagpole."
+    },
+    {
+     "term": "趦趄",
+     "en": "zi ju - hesitating",
+     "note": "Wanting to advance but not daring to. Read zi ju."
+    },
+    {
+     "term": "囁嚅",
+     "en": "nie ru - mumbling",
+     "note": "Wanting to speak but not daring to. Read nie ru."
+    },
+    {
+     "term": "昌黎",
+     "en": "Changli - Changli",
+     "note": "Han Yu called himself of Changli, his family's home commandery, and later people also called him Han Changli."
+    },
+    {
+     "term": "呵禁不祥",
+     "en": "he jin bu xiang - driving off ill luck",
+     "note": "To scold and ban unlucky things."
+    },
+    {
+     "term": "膏吾車兮秣吾馬",
+     "en": "gao wu che xi mo wu ma - greasing the cart, feeding the horse",
+     "note": "Oil the axle and feed the horse: to get ready for a journey."
+    }
+   ],
+   "background": "Preface to Li Yuan's Return to Pangu was written by Han Yu to send off his friend Li Yuan. Through Li Yuan's words it describes three kinds of life and criticises those who rush to the doors of the powerful. A song follows the preface, and the piece is a famous Tang 'farewell preface'."
+  }
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "id": "ailian-shuo",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Zhou Dunyi uses the lotus to praise the character of the noble person: clean though it grows from mud, upright, fragrant and pure. He likens the chrysanthemum, the peony and the lotus to the recluse, the rich and the noble person, and laments that the world loves wealth and few share the noble person's way.",
+   "translation": "Of the flowers of water and land, grass and tree, many are lovely. In the Jin dynasty (265-420) Tao Yuanming loved only the chrysanthemum. Since the Tang came to power, people have loved the peony above all. I love only the lotus: it comes out of the mud yet is not stained, it is washed in clear ripples yet is not coquettish; hollow within and straight without, it sends out no tendrils and no side branches; its fragrance carries far and grows clearer, and it stands tall and clean. It can be looked at from a distance, but not handled or played with.\nI would say that the chrysanthemum is the recluse among flowers; the peony is the rich and noble among flowers; the lotus is the noble person among flowers. Ah! Of love for the chrysanthemum, little has been heard since Tao. Of love for the lotus, who shares it with me? Of love for the peony, naturally there are many.",
+   "keyLines": [
+    {
+     "line": "出淤泥而不染，濯清漣而不妖",
+     "en": "It comes out of the mud yet is not stained, washed in clear ripples yet not coquettish.",
+     "note": "The core of the lotus's character: it stays clean in a muddy setting without trying to please the crowd."
+    },
+    {
+     "line": "中通外直，不蔓不枝",
+     "en": "Hollow within and straight without, no tendrils and no side branches.",
+     "note": "The lotus stalk stands for a noble person who is open-minded inside, upright in conduct, and does not cling to others."
+    },
+    {
+     "line": "香遠益清，亭亭淨植",
+     "en": "Its fragrance carries far and grows clearer; it stands tall and clean.",
+     "note": "The scent is purer the farther it goes and the bearing is erect and clean, like a good name that spreads without losing its integrity."
+    },
+    {
+     "line": "菊，花之隱逸者也；牡丹，花之富貴者也；蓮，花之君子者也",
+     "en": "The chrysanthemum is the recluse among flowers; the peony is the rich among flowers; the lotus is the noble person among flowers.",
+     "note": "Three flowers set side by side: the recluse, the wealthy, the noble person. It shows where the author stands."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "蕃",
+     "en": "fan - many",
+     "note": "Stands in for fan (abundant); it means numerous."
+    },
+    {
+     "term": "淤泥",
+     "en": "yu ni - mud",
+     "note": "The black sludge that settles at the bottom of rivers and lakes."
+    },
+    {
+     "term": "濯",
+     "en": "zhuo - to wash",
+     "note": "To wash or rinse."
+    },
+    {
+     "term": "清漣",
+     "en": "qing lian - clear ripples",
+     "note": "Clear waves on the water."
+    },
+    {
+     "term": "妖",
+     "en": "yao - coquettish",
+     "note": "Showy and seductive, not dignified."
+    },
+    {
+     "term": "植",
+     "en": "zhi - to stand",
+     "note": "To stand upright; 'jing zhi' means to stand there clean."
+    },
+    {
+     "term": "褻玩",
+     "en": "xie wan - to handle idly",
+     "note": "To toy with something in a disrespectful way. The first character is read xie."
+    },
+    {
+     "term": "鮮",
+     "en": "xian - few",
+     "note": "Means 'few'; read xian."
+    }
+   ],
+   "background": "Zhou Dunyi was a Neo-Confucian thinker of the Northern Song dynasty (960-1127), regarded as the founder of the Neo-Confucian school. He wrote this piece in 1063. It belongs to the short genre called shuo ('discourse'), in which an object is used to state the writer's ideals and a flower stands for a kind of person."
+  }
+ }
+}

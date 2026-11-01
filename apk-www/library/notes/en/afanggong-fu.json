@@ -1,0 +1,97 @@
+{
+ "id": "afanggong-fu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Du Mu describes the vast and extravagant Epang Palace of the Qin, then turns to argument: the Qin rulers lived in excess and drained the people, and so brought about their own fall. He ends by urging later generations to learn from history. The piece criticises the present through the past, warning the Tang rulers not to repeat the mistake.",
+   "translation": "The six kings were finished; the four seas were one. The hills of Shu were bare, and the Epang rose. It spread over more than three hundred li and shut out the sun and the sky. From Mount Li it was built northward, then turned west and ran straight to Xianyang. Two rivers, broad and slow, flowed in through its walls. Every five paces a tower, every ten paces a pavilion. Covered corridors wound about like girdles; eaves lifted like beaks pecking at the sky. Each building held to the lie of the land, hooking hearts and jostling corners. Coiling and curling, like honeycombs, like whirlpools, they towered up, I know not how many thousands of them. A long bridge lay on the water: no cloud had risen, so what dragon was this? A double causeway walked through the air: no rain had cleared, so what rainbow was this? High and low, dim and bewildering, one could not tell west from east. On the singing terraces the sound was warm, and the spring light glowed softly; in the dancing halls the sleeves were cold, and wind and rain were bleak. Within a single day, within a single palace, the weather was not the same.\n\nConsorts, ladies and attendants, the princes and grandsons of the kings, left their towers and came down from their halls, and were carried in carriages to Qin. In the morning they sang, in the night they played the strings, and they became people of the Qin palace. Bright stars glimmering: they were opening their dressing mirrors. Green clouds in tumult: they were combing their morning coils of hair. The River Wei ran thick and greasy: it was the water where they threw away their rouge. Smoke slanted and mist lay across: they were burning pepper and orchid. Thunder suddenly startled: a palace carriage was passing. Its rumbling was heard far off, then faint, and no one knew where it had gone. Each one in her skin and her looks showed every charm to the utmost; they stood long, gazing into the distance and hoping for a royal visit, and some were never seen at all, for thirty-six years.\n\nThe treasures that Yan and Zhao had stored up, that Han and Wei had laboured to gather, the finest things of Qi and Chu, over how many generations and years, plundered from their people and piled up like mountains. One day they could no longer keep them, and they were carried in here. Tripods and cauldrons were treated like pots, jade like stones, gold like clods and pearls like gravel; they were flung down and scattered in long trails. The people of Qin looked at them and did not much mind.\n\nAlas! The heart of one man is the heart of thousands. Qin loved splendour and excess; the people too thought of their homes. Why then take every last fraction of an ounce, and spend it like mud and sand! It made the pillars that bore the beams more numerous than the farmers in the southern fields; the rafters that carried the roof, more numerous than the women weaving at their looms; the nail-heads gleaming, more numerous than the grains of millet in the granaries; the seams between the tiles, more numerous than the threads in the clothes on a body; the straight rails and cross-bars, more numerous than the city walls of the nine lands; the pipes and strings, shrill and clattering, more numerous than the words of the people in the market. It made the people of the world afraid to speak, yet bold to be angry. The heart of the lone tyrant grew prouder and harder with each day. A conscript cried out, and the Hangu Pass was taken. A man of Chu put one torch to it, and, what a pity, it was scorched earth.\n\nAh! It was the six states that destroyed the six states, not Qin. It was Qin that wiped out Qin, not the world. Alas! If each of the six states had cherished its own people, that would have been enough to hold Qin off. If Qin in turn had cherished the people of the six states, then from the third generation it might have passed on to ten thousand generations of rulers, and who could have wiped it out? The people of Qin had no time to mourn for themselves, and those who came after mourned for them. If those who come after mourn them but do not take warning, then those who come after will in turn be mourned by the ones after them.",
+   "keyLines": [
+    {
+     "line": "六王畢，四海一。蜀山兀，阿房出",
+     "en": "The six kings were finished, the four seas were one. The hills of Shu were bare, and the Epang rose.",
+     "note": "The opening is very spare: the six states were gone and the empire united; the timber of the Shu mountains was cut down, and only then could the palace be built."
+    },
+    {
+     "line": "五步一樓，十步一閣",
+     "en": "Every five paces a tower, every ten paces a pavilion.",
+     "note": "It conveys how densely the towers and pavilions stood, building after building without a break."
+    },
+    {
+     "line": "一日之內，一宮之間，而氣候不齊",
+     "en": "Within one day, within one palace, the weather was not the same.",
+     "note": "A way of showing how huge the palace was: different halls had different warmth and cold."
+    },
+    {
+     "line": "嗟乎！一人之心，千萬人之心也",
+     "en": "Alas! The heart of one man is the heart of thousands.",
+     "note": "The turn into argument: the king has his desires, but ordinary people have families and loved ones of their own."
+    },
+    {
+     "line": "奈何取之盡錙銖，用之如泥沙",
+     "en": "Why then take every last grain, and spend it like mud and sand?",
+     "note": "It criticises rulers who weigh out the tiniest amounts when they collect taxes, then waste the proceeds like mud."
+    },
+    {
+     "line": "使天下之人不敢言而敢怒",
+     "en": "It made the people of the world afraid to speak, yet bold to be angry.",
+     "note": "People who dared only to be angry and not to speak out planted the root of rebellion."
+    },
+    {
+     "line": "滅六國者，六國也，非秦也。族秦者，秦也，非天下也",
+     "en": "It was the six states that destroyed the six states, not Qin. It was Qin that wiped out Qin, not the world.",
+     "note": "The most famous judgement in the essay: the cause of ruin lies within, not in outside forces."
+    },
+    {
+     "line": "後人哀之，而不鑑之，亦使後人而復哀後人也",
+     "en": "If those who come later mourn them but do not take warning, then those who come later will in turn be mourned by the ones after them.",
+     "note": "The ending states the point: if later generations only sigh and do not learn, they too will be sighed over by those who follow."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "六王",
+     "en": "liu wang - the six kings",
+     "note": "The kings of the six states of Qi, Chu, Yan, Han, Zhao and Wei, whom Qin conquered."
+    },
+    {
+     "term": "兀",
+     "en": "wu - bare",
+     "note": "Describes a mountain stripped of trees."
+    },
+    {
+     "term": "鈎心鬥角",
+     "en": "gou xin dou jiao - hooking hearts, jostling corners",
+     "note": "Originally describes the intricate, interlocking construction of palace buildings. It later became a saying for people scheming against one another."
+    },
+    {
+     "term": "複道",
+     "en": "fu dao - double causeway",
+     "note": "An elevated passage with two levels running between towers and pavilions."
+    },
+    {
+     "term": "妃嬪媵嬙",
+     "en": "fei pin ying qiang - consorts and ladies",
+     "note": "A general term for the concubines, attendants and women officials of a palace."
+    },
+    {
+     "term": "錙銖",
+     "en": "zi zhu - a tiny weight",
+     "note": "An ancient unit of very small weight; both zi and zhu are tiny amounts."
+    },
+    {
+     "term": "戍卒叫，函谷舉",
+     "en": "shu zu jiao, Hangu ju - the conscripts cried out, Hangu was taken",
+     "note": "Refers to the uprising of the garrison conscripts Chen Sheng and Wu Guang, and the fall of the Hangu Pass."
+    },
+    {
+     "term": "楚人一炬",
+     "en": "Chu ren yi ju - one torch from a man of Chu",
+     "note": "Refers to Xiang Yu, a man of Chu, who burned the Epang Palace."
+    }
+   ],
+   "background": "Du Mu was a poet of the Tang dynasty (618-907). He wrote this rhapsody (fu) around 825, when the Tang emperor Jingzong was building lavishly and indulging in luxury, and Du Mu used the fall of the Qin to give a warning. The Epang Palace was a huge palace begun by the First Emperor of Qin. The histories record that Xiang Yu set fire to Xianyang when he entered it, but in recent years archaeologists have still been debating whether the palace was ever completed."
+  }
+ }
+}

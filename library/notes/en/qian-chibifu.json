@@ -1,0 +1,97 @@
+{
+ "id": "qian-chibifu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "On a night trip to the Red Cliff, drifting under the moon, Su Shi's guest plays the flute and sighs over how short life is. Su Shi answers with water and the moon as images, explaining what changes and what does not, and so frees himself from the gloom of exile and finds ease in the clear breeze and bright moon.",
+   "translation": "In the autumn of the renxu year, on the sixteenth day of the seventh month, Master Su and his guests drifted in a boat beneath the Red Cliff. A clear breeze came slowly, and the water raised no waves. I lifted my cup and urged my guests to drink, and we chanted the poem 'The Moon Comes Out' and sang its verse on the graceful maiden. After a little while the moon rose above the eastern hills and wandered between the Dipper and the Ox. White mist lay across the river, and the shining water met the sky. We let our single reed of a boat go where it would, and crossed the vast, hazy expanse of ten thousand acres of water. Boundless, as if riding the void and driving the wind, not knowing where it would stop; weightless, as if leaving the world behind to stand alone, growing wings and rising to immortality.\nThen we drank, and our joy was great. I beat on the side of the boat and sang: 'Cassia oars, orchid paddles, strike the clear emptiness and go up against the flowing light. Far, far are my thoughts; I look for my fair one at the other side of the sky.' One of the guests played the vertical flute and followed the song, joining in. Its sound was mournful, as if in resentment, as if in longing, as if weeping, as if pleading; the last notes trailed on, slender, not breaking like a thread. It could make the hidden dragon in the dark ravine dance, and the widow in the lone boat weep.\nMaster Su, saddened, straightened his robe and sat upright, and asked the guest: 'Why is it so?' The guest said: \"'The moon is bright, the stars are few; the crows and magpies fly south' - are these not the lines of Cao Mengde? To the west we look to Xiakou, to the east to Wuchang, where hills and rivers wind about one another, thick and dark green. Is this not where Mengde was hemmed in by Zhou Yu? When he broke Jingzhou and took Jiangling and went down the river to the east, his ships stretched stem to stern for a thousand li and his banners hid the sky. He poured wine as he faced the river and, lance across his saddle, made verses. He was truly a hero of his age - and where is he now? And you and I fish and gather firewood on the river islets, with fish and shrimp for companions and elk and deer for friends. We steer a leaf of a boat and raise gourd cups to pledge one another. We are mayflies lodged between heaven and earth, a single grain in the blue sea. I grieve that our life is only a moment, and envy the endless Yangtze. I would like to hold a flying immortal's arm and roam far, to embrace the bright moon and last for ever. But I know it cannot be had in an instant, so I entrust these lingering notes to the sad wind.'\nMaster Su said: 'Do you know the water and the moon, sir? What passes is like this, yet has never gone; what waxes and wanes is like that, yet in the end neither grows nor shrinks. If we look at it from what changes, heaven and earth cannot last even a blink; if we look at it from what does not change, then things and I are both without end. So what is there to envy? Moreover, between heaven and earth everything has its owner. If it is not mine, I will not take even a hair of it. Only the clear breeze on the river and the bright moon among the hills: the ear receives them as sound, the eye meets them and they become colour. No one forbids us to take them, and they cannot be used up. They are the inexhaustible store of the Creator, and you and I may share the enjoyment of them.'\nThe guest was glad and laughed. We washed our cups and poured again. When the meat and fruit were finished, cups and plates lay in a muddle. We lay pillowed on one another in the boat, not knowing that the east had already turned white.",
+   "keyLines": [
+    {
+     "line": "清風徐來，水波不興",
+     "en": "A clear breeze comes slowly, and the water makes no waves.",
+     "note": "The opening paints the still beauty of the night trip, with calm wind and water and a restful mood."
+    },
+    {
+     "line": "縱一葦之所如，凌萬頃之茫然",
+     "en": "We let the little boat go where it wished, and rode out over the boundless expanse of water.",
+     "note": "The small boat, like a single reed, moves over a wide stretch of water."
+    },
+    {
+     "line": "浩浩乎如馮虛御風，而不知其所止",
+     "en": "Boundless, as if riding the void and driving the wind, not knowing where it would stop.",
+     "note": "He feels light as if riding the air on the wind, not knowing where he will land, with a wish to leave the world behind."
+    },
+    {
+     "line": "寄蜉蝣於天地，渺滄海之一粟",
+     "en": "We are mayflies lodged between heaven and earth, a single grain in the blue sea.",
+     "note": "The guest's lament: human life is tiny, like a mayfly, like one grain of millet in the sea."
+    },
+    {
+     "line": "客亦知夫水與月乎？逝者如斯，而未嘗往也",
+     "en": "Do you know the water and the moon, sir? What passes is like this, and yet has never gone.",
+     "note": "The start of Su Shi's reply: he uses water and the moon to speak of what changes and what does not."
+    },
+    {
+     "line": "自其變者而觀之，則天地曾不能以一瞬；自其不變者而觀之，則物與我皆無盡也",
+     "en": "Seen from what changes, heaven and earth cannot last even a blink; seen from what does not change, things and I are both without end.",
+     "note": "The philosophical heart of the piece: from the side of change, all things are brief; from the side of the unchanging, people and things are limitless."
+    },
+    {
+     "line": "惟江上之清風，與山間之明月，耳得之而為聲，目遇之而成色",
+     "en": "Only the clear breeze on the river and the bright moon among the hills: the ear receives them as sound, the eye meets them and they become colour.",
+     "note": "He turns to real enjoyment: the breeze and moon can be taken without end and used without running out."
+    },
+    {
+     "line": "相與枕藉乎舟中，不知東方之既白",
+     "en": "We lay pillowed on one another in the boat, not knowing that the east had already turned white.",
+     "note": "It ends with the open-minded sleep of the party, leaving a long aftertaste."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "既望",
+     "en": "ji wang - the day after the full moon",
+     "note": "The sixteenth of the lunar month; wang is the fifteenth and ji wang is the day after."
+    },
+    {
+     "term": "屬客",
+     "en": "zhu ke - to urge the guest to drink",
+     "note": "To press wine on a guest. Read zhu."
+    },
+    {
+     "term": "《明月》之詩，《窈窕》之章",
+     "en": "Ming yue zhi shi, Yao tiao zhi zhang - the Moon poem, the Graceful chapter",
+     "note": "Refers to the Book of Songs poem 'Moonrise' (Chenfeng), which has the phrase 'yao jiu', the graceful one."
+    },
+    {
+     "term": "馮虛御風",
+     "en": "ping xu yu feng - riding the void and driving the wind",
+     "note": "To ride the wind through the air; ping is a variant of another character for 'to rely on'."
+    },
+    {
+     "term": "嫠婦",
+     "en": "li fu - widow",
+     "note": "A widow."
+    },
+    {
+     "term": "舳艫",
+     "en": "zhu lu - stern and bow",
+     "note": "The stern and the prow of a boat; boats in general."
+    },
+    {
+     "term": "蜉蝣",
+     "en": "fu you - mayfly",
+     "note": "A small insect that lives for a day, a figure for a short life."
+    },
+    {
+     "term": "造物者之無盡藏",
+     "en": "zao wu zhe zhi wu jin zang - the inexhaustible store of the Creator",
+     "note": "The endless treasure that nature gives; read zang for the last character."
+    }
+   ],
+   "background": "On the sixteenth day of the seventh month of 1082 (the fifth year of Yuanfeng in the Northern Song), after being demoted to Huangzhou through the Crow Terrace poetry case, Su Shi toured the Red Nose Rock outside Huangzhou (the 'Red Cliff') with friends and wrote this ode. It is not in fact the real old battlefield of the Three Kingdoms, but Su Shi uses it to give voice to thoughts of the past."
+  }
+ }
+}

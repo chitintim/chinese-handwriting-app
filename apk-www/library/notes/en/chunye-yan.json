@@ -1,0 +1,72 @@
+{
+ "id": "chunye-yan",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Li Bai takes as his subject a spring-night banquet with his cousins in a peach garden. Life is like a dream and time is short, so he says one should enjoy the moment, with flowers, wine and poems. The piece is short and refined, mixing parallel and free prose, and full of bold ease.",
+   "translation": "Heaven and earth are the inn of the ten thousand things; time is the passing guest of a hundred generations. And this floating life is like a dream - how many joys does it hold? The ancients who held candles to wander at night surely had their reasons. How much more so when the warm spring calls me with its misty scenery and great Nature lends me her patterns and colours. We gather in the fragrant garden of the peach blossoms to set out the happy affairs of brotherhood.\nMy younger brothers, gifted and fine, are all like Hui Lian; as for my own songs and chanting, I alone feel shame before Kangle. Our quiet delight in the view has not ended, and our high talk grows ever clearer. We open a jewelled feast and sit among the flowers; we pass the winged cups around and grow drunk on the moon. If there are no good poems, how can we give voice to our graceful feelings? And if a poem is not finished, the penalty will follow the number of cups at Golden Valley.",
+   "keyLines": [
+    {
+     "line": "夫天地者，萬物之逆旅也；光陰者，百代之過客也",
+     "en": "Heaven and earth are the inn of the ten thousand things; time is the passing guest of a hundred generations.",
+     "note": "The opening makes the universe an inn and time a traveller, to show how brief a life is."
+    },
+    {
+     "line": "古人秉燭夜遊，良有以也",
+     "en": "The ancients who held candles to wander at night surely had their reasons.",
+     "note": "It echoes a line in the Nineteen Old Poems: the day is short and the night long, so why not take a candle and go roaming. It gives grounds for enjoying the moment."
+    },
+    {
+     "line": "開瓊筵以坐花，飛羽觴而醉月",
+     "en": "We open a jewelled feast and sit among the flowers; we pass the winged cups around and grow drunk on the moon.",
+     "note": "A banquet under flowers and under the moon: the most visual passage in the piece."
+    },
+    {
+     "line": "如詩不成，罰依金谷酒數",
+     "en": "And if a poem is not finished, the penalty will follow the number of cups at Golden Valley.",
+     "note": "It uses the story of Shi Chong's Golden Valley garden, where failing to write a poem cost three measures of wine. The ending is light and witty."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "逆旅",
+     "en": "ni lu - inn",
+     "note": "An inn or lodging house."
+    },
+    {
+     "term": "大塊",
+     "en": "da kuai - the great clod",
+     "note": "Nature, heaven and earth."
+    },
+    {
+     "term": "群季",
+     "en": "qun ji - the younger brothers",
+     "note": "All the younger brothers. In the old order of brothers, bo, zhong, shu and ji, ji is the youngest."
+    },
+    {
+     "term": "惠連",
+     "en": "Hui Lian - Xie Huilian",
+     "note": "Xie Huilian of the Liu Song dynasty (420-479), who could write at ten years old and was a younger kinsman of Xie Lingyun. Here he stands for the talented brothers of Li Bai."
+    },
+    {
+     "term": "康樂",
+     "en": "Kang Le - Lord of Kangle (Xie Lingyun)",
+     "note": "Xie Lingyun, who inherited the title Duke of Kangle. Li Bai compares himself to him, and modestly says he does not measure up."
+    },
+    {
+     "term": "羽觴",
+     "en": "yu shang - winged cup",
+     "note": "An ancient wine vessel shaped like a bird, with two handles like wings."
+    },
+    {
+     "term": "金谷酒數",
+     "en": "Jin Gu jiu shu - the Golden Valley number of cups",
+     "note": "In Western Jin (265-316), Shi Chong held banquets in his Golden Valley garden, and anyone who failed to write a poem had to drink three measures of wine."
+    }
+   ],
+   "background": "Written by Li Bai of the Tang dynasty (618-907), it records a gathering with his younger cousins in a peach garden on a spring night. The title is also given as 'Banquet in the Peach and Plum Garden on a Spring Night'. In under 150 characters it combines scenery, feeling and narrative, and it is a famous short preface of the Tang."
+  }
+ }
+}

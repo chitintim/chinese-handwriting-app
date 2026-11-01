@@ -1,0 +1,707 @@
+{
+ "id": "yuanqu-xiaoling",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "tianjingsha_qiusi": {
+   "summary": "A short song (xiaoling) to the tune Tianjingsha, in the Yue mode: five lines and twenty-eight characters, without a single verb. The first three lines pile up nine noun images into a desolate autumn dusk in the countryside, and the last two name the heartbreak of a wanderer at the ends of the earth. Feeling is carried entirely by scenery, and later generations called it the 'ancestor of autumn-thought poems'.",
+   "translation": "Withered vines, old trees, evening crows.\nA small bridge, flowing water, a few houses.\nAn ancient road, the west wind, a lean horse.\nThe sun sinks in the west;\na heartbroken traveller at the edge of the sky.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "枯藤",
+     "en": "kuteng - withered vines",
+     "note": "Vines that have dried up."
+    },
+    {
+     "term": "昏鴉",
+     "en": "hunya - evening crows",
+     "note": "Crows returning to their nests at dusk."
+    },
+    {
+     "term": "古道",
+     "en": "gudao - ancient road",
+     "note": "An old and lonely road."
+    },
+    {
+     "term": "西風",
+     "en": "xifeng - west wind",
+     "note": "The autumn wind."
+    },
+    {
+     "term": "瘦馬",
+     "en": "shouma - lean horse",
+     "note": "A thin, weak horse, standing for the hardship of the journey."
+    },
+    {
+     "term": "斷腸人",
+     "en": "duanchang ren - heartbroken person",
+     "note": "Someone whose grief has reached its limit; here, a traveller far from home."
+    },
+    {
+     "term": "天涯",
+     "en": "tianya - the edge of the sky",
+     "note": "The ends of the sky, a place very far away."
+    }
+   ],
+   "background": "Ma Zhiyuan (c. 1250 - after 1321), whose style name was Dongli, came from Dadu (present-day Beijing). He was a playwright and writer of sanqu songs of the Yuan dynasty (1271-1368), ranked with Guan Hanqing, Bai Pu and Zheng Guangzu as one of the 'four great masters of Yuan drama'. His best-known play is 'Autumn in the Han Palace'. Tianjingsha is a common tune title in Yuan song, and this piece shares its name with the theme 'Autumn Thoughts'. Zhou Deqing of the Yuan, in his 'Zhongyuan Yinyun', praised it as the 'ancestor of autumn-thought poems'. Its images are laid side by side with no connecting words, the typical way a Yuan xiaoling piles up images."
+  },
+  "shanpoyang_tongguan": {
+   "summary": "A short song to the tune Shanpoyang, in the Zhonglu mode, and Zhang Yanghao's masterpiece of lament for the past. Passing Tongguan, the poet looks west to the old capital Chang'an and mourns the rise and fall of Qin and Han. It ends with 'when a dynasty rises, the people suffer; when it falls, the people suffer': whether a dynasty rises or falls, it is always the people who suffer. The thought is deep and strongly on the side of the people.",
+   "translation": "Peaks and ridges crowd together,\nthe waves surge as if in anger,\nmountains and river guard both sides of the road to Tongguan.\nI look towards the western capital,\nmy mind wavers;\nheartbreaking are the places Qin and Han once passed,\nwhere ten thousand palaces have all turned to dust.\nWhen a dynasty rises, the people suffer;\nwhen it falls, the people suffer.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "山河表裏",
+     "en": "shanhe biaoli - mountains and river outside and in",
+     "note": "The Yellow River lies outside and Mount Hua within, and Tongguan sits between mountain and river in a place of great natural strength."
+    },
+    {
+     "term": "潼關",
+     "en": "Tongguan - Tong Pass",
+     "note": "A fortress pass in what is now Tongguan county, Shaanxi, the gateway from the Guanzhong plain to the Central Plain."
+    },
+    {
+     "term": "西都",
+     "en": "xidu - the western capital",
+     "note": "The capital in the west, meaning Chang'an, which was the capital under the Han and Tang."
+    },
+    {
+     "term": "躊躇",
+     "en": "chouchu - to waver",
+     "note": "To hesitate, with the mind pacing back and forth."
+    },
+    {
+     "term": "宮闕",
+     "en": "gongque - palaces",
+     "note": "Palaces, and the watchtowers before their gates."
+    },
+    {
+     "term": "都做了土",
+     "en": "dou zuo le tu - all turned to dust",
+     "note": "All have become earth and dust."
+    },
+    {
+     "term": "興、亡",
+     "en": "xing, wang - rise, fall",
+     "note": "A dynasty's flourishing and its end."
+    }
+   ],
+   "background": "Zhang Yanghao (1270-1329), style name Ximeng and pen name Yunzhuang, was from Jinan and rose to be Minister of Rites before he resigned and went into retirement. Tradition says that in 1329, when there was a great drought in Guanzhong, he was called back as Vice Censor-in-Chief of the Shaanxi circuit, and wrote this song when he passed Tongguan on his way to take up the post. Shanpoyang is a common Yuan song tune, and Zhang used it for several poems of lament for the past."
+  },
+  "shanpoyang_lishan": {
+   "summary": "A short song to the tune Shanpoyang, another lament for the past by Zhang Yanghao. Climbing Mount Li, the poet thinks of the burning of the Epang Palace of the Qin, whose splendour has left no trace, and then of the warring states from Zhou to Chu: winners and losers alike end as dust. There is a feeling of historical desolation and emptiness.",
+   "translation": "I look all round from Mount Li:\nthe Epang Palace went up in one torch of fire -\nwhere is the extravagance of those days now?\nI see only sparse grass\nand a winding stream.\nTo this day old regret lingers, lost among the misty trees.\nThe states: Zhou, Qi, Qin, Han, Chu.\nThe winners all turned to dust;\nthe losers all turned to dust.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "驪山",
+     "en": "Lishan - Mount Li",
+     "note": "In what is now Lintong, Xi'an. Since Qin and Han it was a place of pleasure and burial for emperors, and the tomb of the First Emperor of Qin lies at its foot."
+    },
+    {
+     "term": "阿房",
+     "en": "Epang - the Epang Palace",
+     "note": "The huge palace built by the First Emperor of Qin, said to have been burned later by Xiang Yu."
+    },
+    {
+     "term": "一炬",
+     "en": "yi ju - a torch",
+     "note": "A single fire."
+    },
+    {
+     "term": "縈紆",
+     "en": "yingyu - winding",
+     "note": "The look of something curving and circling."
+    },
+    {
+     "term": "遺恨",
+     "en": "yihen - lingering regret",
+     "note": "The sorrow and sense of loss that are left behind."
+    },
+    {
+     "term": "列國周齊秦漢楚",
+     "en": "lieguo Zhou Qi Qin Han Chu - the states Zhou, Qi, Qin, Han, Chu",
+     "note": "A general reference to the states of the past, from Zhou and the Warring States of Qi, Qin and Chu to Han."
+    },
+    {
+     "term": "贏、輸",
+     "en": "ying, shu - winning, losing",
+     "note": "The victorious and the defeated."
+    }
+   ],
+   "background": "Zhang Yanghao wrote several Shanpoyang songs of lament for the past, including those on Tongguan, Mount Li, Luoyang and Mount Beimang. Shanpoyang is in the Zhonglu mode, and its lines are of uneven length, which suits narrative and the expression of feeling. It is an important vehicle for the Yuan song of reflection on history."
+  },
+  "shouyangqu_yuanpu": {
+   "summary": "A short song to the tune Shouyangqu (also called Luomeifeng), the 'Returning Sails from a Distant Shore' of Ma Zhiyuan's Eight Views of Xiao and Xiang. At dusk by the river the wine-shop banner hangs idle; a few far-travelling boats have not yet reached the shore; petals fall, the water is fragrant, and the fish-sellers on the bank have gone. The scene is quiet, with a faint wish to go home.",
+   "translation": "Beneath the setting sun,\nthe wine-shop banner hangs idle,\ntwo or three boats have not yet reached the shore.\nBlossoms fall, the water is fragrant, thatched cottages at evening;\nat the head of the broken bridge, the fish-sellers have dispersed.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "遠浦",
+     "en": "yuanpu - distant shore",
+     "note": "The water's edge far away. 'Pu' means a river bank."
+    },
+    {
+     "term": "酒旆",
+     "en": "jiupei - wine-shop banner",
+     "note": "The flag hung at the door of a tavern as its sign."
+    },
+    {
+     "term": "閑",
+     "en": "xian - idle",
+     "note": "Leisurely and at ease; also quiet and still."
+    },
+    {
+     "term": "航",
+     "en": "hang - boat",
+     "note": "A boat."
+    },
+    {
+     "term": "著岸",
+     "en": "zhuo'an - to reach the shore",
+     "note": "To come in to land. 'Zhuo' here means to arrive."
+    },
+    {
+     "term": "茅舍",
+     "en": "maoshe - thatched cottage",
+     "note": "A house roofed with thatch."
+    }
+   ],
+   "background": "Ma Zhiyuan (c. 1250 - after 1321), whose style name was Dongli, came from Dadu (present-day Beijing). He was a playwright and writer of sanqu songs of the Yuan dynasty (1271-1368), ranked with Guan Hanqing, Bai Pu and Zheng Guangzu as one of the 'four great masters of Yuan drama'. His best-known play is 'Autumn in the Han Palace'. The 'Eight Views of Xiao and Xiang' is a set of poems on eight scenes of the Xiao and Xiang rivers, taken from paintings by the Song painter Song Di, and has been a favourite subject of poems and paintings ever since."
+  },
+  "shouyangqu_shanshi": {
+   "summary": "A short song to the tune Shouyangqu, the 'Clearing Mist at a Mountain Market' of Ma Zhiyuan's Eight Views of Xiao and Xiang. A mountain village after rain: flowering village and thatched inn, a bright sunset glow, and slanting sunlight a pole's length above the horizon on the encircling hills, as if a fresh layer of green had been added to a brocade screen. The colours are rich, like a painting.",
+   "translation": "Outside the flowering village,\nwest of the thatched inn,\nthe sunset glow is bright, the rain has stopped and the sky has cleared.\nMountains all around, in the last light a pole's height above the horizon:\na brocade screen with a fresh layer of green spread over it.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "山市",
+     "en": "shanshi - mountain market",
+     "note": "A market in the hills; a mountain village."
+    },
+    {
+     "term": "晴嵐",
+     "en": "qinglan - mountain mist in clear weather",
+     "note": "Haze among the mountains on a fine day. 'Lan' means the mist of mountains and woods."
+    },
+    {
+     "term": "草店",
+     "en": "caodian - thatched inn",
+     "note": "A small shop built of thatch."
+    },
+    {
+     "term": "雨收天霽",
+     "en": "yu shou tian ji - the rain has stopped and the sky has cleared",
+     "note": "The rain has ended and the sky is bright. 'Ji' means clearing after rain."
+    },
+    {
+     "term": "一竿殘照",
+     "en": "yi gan can zhao - a pole's length of slanting light",
+     "note": "The slanting sun when it is about a pole's height above the horizon."
+    },
+    {
+     "term": "錦屏風",
+     "en": "jin pingfeng - brocade screen",
+     "note": "A screen of embroidered silk, here describing hills as lovely as a painting."
+    }
+   ],
+   "background": "Ma Zhiyuan (c. 1250 - after 1321), whose style name was Dongli, came from Dadu (present-day Beijing). He was a playwright and writer of sanqu songs of the Yuan dynasty (1271-1368), ranked with Guan Hanqing, Bai Pu and Zheng Guangzu as one of the 'four great masters of Yuan drama'. His best-known play is 'Autumn in the Han Palace'. The 'Eight Views of Xiao and Xiang' is a set of poems on eight scenes of the Xiao and Xiang rivers, taken from paintings by the Song painter Song Di, and has been a favourite subject of poems and paintings ever since."
+  },
+  "shouyangqu_pingsha": {
+   "summary": "A short song to the tune Shouyangqu, the 'Wild Geese Settling on a Sandy Shore' of Ma Zhiyuan's Eight Views of Xiao and Xiang. The wild goose is the main figure: it carries news south and north, half of the flock rests in the trees of a flowery sandbank by the shore, and the rest, like mandarin ducks that have lost their flock, slant off in lines towards the river mouth. It conveys loneliness and separation.",
+   "translation": "Carrying word to the south,\nsending letters to the north,\nhalf of them rest on the shore, in the trees of the flowery sandbar.\nLike mandarin ducks that have lost the flock and their mates,\ntwo or three lines slant away towards the mouth of the sea.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "平沙落雁",
+     "en": "pingsha luoyan - wild geese settling on a flat sandbank",
+     "note": "One of the eight views: geese coming down on a level sandy shoal."
+    },
+    {
+     "term": "南傳信，北寄書",
+     "en": "nan chuanxin, bei jishu - carrying news south, sending letters north",
+     "note": "An allusion to the old idea of the wild goose as a letter-carrier: geese fly south and north and were thought to deliver news."
+    },
+    {
+     "term": "汀",
+     "en": "ting - sandbar",
+     "note": "Level ground or a small islet at the water's edge."
+    },
+    {
+     "term": "鴛鴦",
+     "en": "yuanyang - mandarin ducks",
+     "note": "Water birds that live in pairs, often a picture of husband and wife or of companions."
+    },
+    {
+     "term": "伴侶",
+     "en": "banlu - companions",
+     "note": "Partners and mates."
+    },
+    {
+     "term": "海門",
+     "en": "haimen - mouth of the sea",
+     "note": "The place where a river flows into the sea."
+    }
+   ],
+   "background": "Ma Zhiyuan (c. 1250 - after 1321), whose style name was Dongli, came from Dadu (present-day Beijing). He was a playwright and writer of sanqu songs of the Yuan dynasty (1271-1368), ranked with Guan Hanqing, Bai Pu and Zheng Guangzu as one of the 'four great masters of Yuan drama'. His best-known play is 'Autumn in the Han Palace'. The 'Eight Views of Xiao and Xiang' is a set of poems on eight scenes of the Xiao and Xiang rivers, taken from paintings by the Song painter Song Di, and has been a favourite subject of poems and paintings ever since."
+  },
+  "shouyangqu_jiangtian": {
+   "summary": "A short song to the tune Shouyangqu, the 'Evening Snow over River and Sky' of Ma Zhiyuan's Eight Views of Xiao and Xiang. Heavy snow falls at dusk, half like plum blossom and half like willow floss; the river is as lovely as a painting, and an angler in a straw cape goes home. The picture is clean and quiet.",
+   "translation": "Evening is coming on,\nsnow dances wildly,\nhalf like plum blossom, half like drifting willow floss.\nThe river at dusk is a place worth painting:\nan angler in a straw cape goes home.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "江天暮雪",
+     "en": "jiangtian mu xue - evening snow over river and sky",
+     "note": "One of the eight views: snow on the river at dusk."
+    },
+    {
+     "term": "亂舞",
+     "en": "luan wu - dancing wildly",
+     "note": "Snowflakes whirling in confusion."
+    },
+    {
+     "term": "柳絮",
+     "en": "liuxu - willow floss",
+     "note": "The white down on willow seeds, often used as a picture of flying snow."
+    },
+    {
+     "term": "堪畫處",
+     "en": "kan hua chu - a place worth painting",
+     "note": "A place fit to be put in a painting. 'Kan' means can, or is worth."
+    },
+    {
+     "term": "鉤魚人",
+     "en": "gou yu ren - angler",
+     "note": "A person who fishes."
+    },
+    {
+     "term": "一蓑",
+     "en": "yi suo - a straw cape",
+     "note": "One rain cape. 'Suo' is a rain coat woven of grass."
+    }
+   ],
+   "background": "Ma Zhiyuan (c. 1250 - after 1321), whose style name was Dongli, came from Dadu (present-day Beijing). He was a playwright and writer of sanqu songs of the Yuan dynasty (1271-1368), ranked with Guan Hanqing, Bai Pu and Zheng Guangzu as one of the 'four great masters of Yuan drama'. His best-known play is 'Autumn in the Han Palace'. The 'Eight Views of Xiao and Xiang' is a set of poems on eight scenes of the Xiao and Xiang rivers, taken from paintings by the Song painter Song Di, and has been a favourite subject of poems and paintings ever since."
+  },
+  "shouyangqu_dongting": {
+   "summary": "A short song to the tune Shouyangqu, the 'Autumn Moon over Lake Dongting' of Ma Zhiyuan's Eight Views of Xiao and Xiang. The reed blossoms have faded and the poet has just parted from a friend; a leaf of a boat floats on moonlight. The last two lines bring an old friend again and close the picture of the autumn moon on Dongting, with an airy mood of meeting and parting.",
+   "translation": "The reed blossoms have faded,\nthe traveller has just said farewell,\na leaf of a boat floats on the moonlight.\nAn old friend comes to Yuzhang city -\nand so the autumn moon on Dongting is brought to its close.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "洞庭秋月",
+     "en": "Dongting qiuyue - autumn moon over Dongting",
+     "note": "One of the eight views: the moonlit autumn night on Lake Dongting."
+    },
+    {
+     "term": "蘆花謝",
+     "en": "lu hua xie - the reed blossoms have faded",
+     "note": "The reed flowers have withered, which tells us it is late autumn."
+    },
+    {
+     "term": "乍別",
+     "en": "zha bie - just parted",
+     "note": "Having only just said goodbye."
+    },
+    {
+     "term": "蟾光",
+     "en": "chan guang - moonlight",
+     "note": "Light of the moon. A toad was said to live in the moon, so 'toad' is used for it."
+    },
+    {
+     "term": "豫章城",
+     "en": "Yuzhang cheng - Yuzhang city",
+     "note": "Present-day Nanchang in Jiangxi, known anciently as Yuzhang."
+    },
+    {
+     "term": "結末",
+     "en": "jiemo - to end",
+     "note": "To finish, to bring to a close."
+    }
+   ],
+   "background": "Ma Zhiyuan (c. 1250 - after 1321), whose style name was Dongli, came from Dadu (present-day Beijing). He was a playwright and writer of sanqu songs of the Yuan dynasty (1271-1368), ranked with Guan Hanqing, Bai Pu and Zheng Guangzu as one of the 'four great masters of Yuan drama'. His best-known play is 'Autumn in the Han Palace'. The 'Eight Views of Xiao and Xiang' is a set of poems on eight scenes of the Xiao and Xiang rivers, taken from paintings by the Song painter Song Di, and has been a favourite subject of poems and paintings ever since."
+  },
+  "shouyangqu_yucun": {
+   "summary": "A short song to the tune Shouyangqu, the 'Evening Glow over a Fishing Village' of Ma Zhiyuan's Eight Views of Xiao and Xiang. At sunset the fishermen stop tapping on their boats, a few snatches of fishing song drift from the willow bank, and nets hang drying outside brushwood gates, as if all had been gathered into a picture of fishing. The scene is peaceful.",
+   "translation": "The tapping on the boat sides has stopped,\nthe evening light flickers,\non the green-willow embankment, a few snatches of fishermen's song.\nOutside brushwood gates, nets hung idly to dry in several households,\nall gathered into a picture of fishing.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "鳴榔",
+     "en": "minglang - tapping the boat",
+     "note": "Fishermen knock on the side of the boat with a stick to drive fish into the nets. 'Lang' is a stick."
+    },
+    {
+     "term": "暮光",
+     "en": "muguang - evening light",
+     "note": "The sunlight of late afternoon."
+    },
+    {
+     "term": "漁唱",
+     "en": "yuchang - fishing song",
+     "note": "A song sung by fishermen."
+    },
+    {
+     "term": "柴門",
+     "en": "chaimen - brushwood gate",
+     "note": "A gate made of branches, meaning a simple home."
+    },
+    {
+     "term": "曬網",
+     "en": "shai wang - to dry the nets",
+     "note": "To hang fishing nets out to dry."
+    },
+    {
+     "term": "撮",
+     "en": "cuo - to gather",
+     "note": "To collect, to draw together."
+    }
+   ],
+   "background": "Ma Zhiyuan (c. 1250 - after 1321), whose style name was Dongli, came from Dadu (present-day Beijing). He was a playwright and writer of sanqu songs of the Yuan dynasty (1271-1368), ranked with Guan Hanqing, Bai Pu and Zheng Guangzu as one of the 'four great masters of Yuan drama'. His best-known play is 'Autumn in the Han Palace'. The 'Eight Views of Xiao and Xiang' is a set of poems on eight scenes of the Xiao and Xiang rivers, taken from paintings by the Song painter Song Di, and has been a favourite subject of poems and paintings ever since."
+  },
+  "shouyangqu_xiaoxiang": {
+   "summary": "A short song to the tune Shouyangqu, the 'Night Rain on the Xiao and Xiang' of Ma Zhiyuan's Eight Views of Xiao and Xiang. The fishing lamp is dim and the traveller wakes from a dream; rain falls drop by drop on the heart. A lone boat, home ten thousand li away, and a few more lines of tears from one far from home: the saddest of the Eight Views.",
+   "translation": "The fishing lamp burns low,\nthe traveller wakes from his dream,\ndrop after drop (of rain) breaks the heart.\nA lone boat at the fifth watch, home ten thousand li away -\nhow many lines of clear tears from one who is far from home.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "瀟湘",
+     "en": "Xiaoxiang - the Xiao and Xiang",
+     "note": "The area of the Xiang River and Lake Dongting; the place where the Xiao and Xiang rivers meet is called Xiaoxiang."
+    },
+    {
+     "term": "漁燈",
+     "en": "yudeng - fishing lamp",
+     "note": "The light on a fishing boat."
+    },
+    {
+     "term": "客夢回",
+     "en": "ke meng hui - the traveller wakes from his dream",
+     "note": "The traveller wakes from sleep."
+    },
+    {
+     "term": "滴人心碎",
+     "en": "di ren xin sui - dripping, heartbreaking",
+     "note": "The sound of rain drops on the heart and breaks it."
+    },
+    {
+     "term": "五更",
+     "en": "wugeng - the fifth watch",
+     "note": "The time just before dawn, about three to five in the morning."
+    },
+    {
+     "term": "離人",
+     "en": "liren - one who has left home",
+     "note": "A person who is far from home."
+    }
+   ],
+   "background": "Ma Zhiyuan (c. 1250 - after 1321), whose style name was Dongli, came from Dadu (present-day Beijing). He was a playwright and writer of sanqu songs of the Yuan dynasty (1271-1368), ranked with Guan Hanqing, Bai Pu and Zheng Guangzu as one of the 'four great masters of Yuan drama'. His best-known play is 'Autumn in the Han Palace'. The 'Eight Views of Xiao and Xiang' is a set of poems on eight scenes of the Xiao and Xiang rivers, taken from paintings by the Song painter Song Di, and has been a favourite subject of poems and paintings ever since."
+  },
+  "shouyangqu_yansi": {
+   "summary": "A short song to the tune Shouyangqu, the 'Evening Bell from a Misty Temple' of Ma Zhiyuan's Eight Views of Xiao and Xiang. Cold mist rises thinly, the old temple is clear and still, and the worshippers have gone quiet near dusk. Then the west wind brings three or four strokes of the evening bell, and even the old monk cannot settle into meditation. The bell breaks the stillness, and the poem suggests that even a monk has a mind of the dust of the world.",
+   "translation": "Cold mist is thin,\nthe old temple is clear and still,\nnear dusk the worshippers have gone quiet.\nDown the west wind, three or four strokes of the evening bell -\nhow could the old monk possibly stay in meditation?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "煙寺晚鐘",
+     "en": "yansi wanzhong - evening bell from a misty temple",
+     "note": "One of the eight views: the evening bell of an old temple wrapped in mist."
+    },
+    {
+     "term": "寒煙",
+     "en": "hanyan - cold mist",
+     "note": "Mist and smoke in cold weather."
+    },
+    {
+     "term": "禮佛",
+     "en": "lifo - to worship the Buddha",
+     "note": "To bow before an image of the Buddha."
+    },
+    {
+     "term": "晚鐘",
+     "en": "wanzhong - evening bell",
+     "note": "The bell struck at dusk."
+    },
+    {
+     "term": "怎生",
+     "en": "zensheng - how",
+     "note": "How, in what way."
+    },
+    {
+     "term": "禪定",
+     "en": "chanding - meditative concentration (dhyana)",
+     "note": "A Buddhist practice in which the mind is focused and settled, without distraction."
+    }
+   ],
+   "background": "Ma Zhiyuan (c. 1250 - after 1321), whose style name was Dongli, came from Dadu (present-day Beijing). He was a playwright and writer of sanqu songs of the Yuan dynasty (1271-1368), ranked with Guan Hanqing, Bai Pu and Zheng Guangzu as one of the 'four great masters of Yuan drama'. His best-known play is 'Autumn in the Han Palace'. The 'Eight Views of Xiao and Xiang' is a set of poems on eight scenes of the Xiao and Xiang rivers, taken from paintings by the Song painter Song Di, and has been a favourite subject of poems and paintings ever since."
+  },
+  "sikuaiyu_bieqing": {
+   "summary": "A short song to the tune Sikuaiyu, in the Nanlu mode: 'Parting Feelings' by Guan Hanqing. A woman misses her lover after seeing him off. In very spoken language, she says her heart cannot let go; leaning on the rail she brushes away willow-down like snow, and sees the winding stream and the hills in the way - he is gone. It is tender and direct, and moving.",
+   "translation": "Since I saw him off,\nmy heart can hardly let go;\nwhen will this one thread of longing end?\nLeaning on the rail, I brush the willow-down like snow from my sleeve.\nThe stream bends away,\nthe hills block the view -\nhe is gone!",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "別情",
+     "en": "bieqing - parting feelings",
+     "note": "The title: the emotion of separation."
+    },
+    {
+     "term": "心難舍",
+     "en": "xin nan she - the heart cannot let go",
+     "note": "The heart finds it hard to give up. 'She' means to put down."
+    },
+    {
+     "term": "憑闌",
+     "en": "pinglan - leaning on the rail",
+     "note": "Leaning against a railing."
+    },
+    {
+     "term": "楊花雪",
+     "en": "yanghua xue - willow-down like snow",
+     "note": "Poplar or willow catkins flying, as white as snow."
+    },
+    {
+     "term": "溪又斜，山又遮",
+     "en": "xi you xie, shan you zhe - the stream bends away, the hills block the view",
+     "note": "The stream winds and the hills stand in the way, cutting off the view."
+    },
+    {
+     "term": "也",
+     "en": "ye - sentence-final particle",
+     "note": "A particle of mood, roughly equal to 'le' (it is done)."
+    }
+   ],
+   "background": "Guan Hanqing (c. 1220 - c. 1300), whose literary name was Yizhai Sou, was from Dadu and is first of the four great masters of Yuan drama, famed for plays such as 'The Injustice to Dou E' and 'Rescuing a Courtesan', and he also wrote many sanqu songs. Sikuaiyu is a Nanlu-mode tune with short lines that suits everyday speech. The plain language of this piece, unlike the restraint of poems and song lyrics (shi and ci), is typical of the 'natural' style of Yuan song."
+  },
+  "chenzuidongfeng": {
+   "summary": "A short song to the tune Chenzui Dongfeng, in the Shuangdiao mode: 'The Fisherman' by Bai Pu. It describes the life of a hermit fisherman: a bank of yellow reeds, a ford with white duckweed, a sandbar of green willow and red knotweed. He has no friend who would die with him, but he has friends who have forgotten scheming - white egrets and gulls - and he looks down on the marquises of ten thousand households, an unlettered old angler on the misty waves. It shows scorn for fame and a longing for freedom.",
+   "translation": "Yellow reeds on the bank, white duckweed at the ford,\ngreen willows and red knotweed on the sandbar.\nNo friends to the death,\nbut friends who have forgotten scheming:\nwhite egrets and gulls dotting the autumn river,\nwho look down on the marquises of ten thousand households in the human world -\nan unlettered old angler on the misty waves.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "白蘋",
+     "en": "baipin - white duckweed",
+     "note": "A water plant that bears white flowers in autumn."
+    },
+    {
+     "term": "蓼",
+     "en": "liao - knotweed",
+     "note": "A plant of the water's edge whose flower spikes turn red in autumn."
+    },
+    {
+     "term": "刎頸交",
+     "en": "wenjing jiao - a friend to the death",
+     "note": "A friend you could die with. 'Wenjing' means cutting the throat, a picture of a bond of life and death."
+    },
+    {
+     "term": "忘機友",
+     "en": "wangji you - a friend who has forgotten scheming",
+     "note": "A friend free of calculation: the gulls that did not fly away, from the story in the Liezi."
+    },
+    {
+     "term": "萬戶侯",
+     "en": "wanhu hou - marquis of ten thousand households",
+     "note": "A marquis with a fief of ten thousand households, meaning a high official or noble."
+    },
+    {
+     "term": "煙波釣叟",
+     "en": "yanbo diaosou - old angler on the misty waves",
+     "note": "An old man fishing among mist and ripples. 'Sou' means an old man."
+    }
+   ],
+   "background": "Bai Pu (1226 - c. 1306), style name Taisu and pen name Langu, came from Zhending (present-day Zhengding, Hebei). He is one of the four great masters of Yuan drama, and his plays include 'Rain on the Wutong Tree' and 'Over the Wall on Horseback'. He lived through the chaos of the fall of the Jin, and refused to serve the Yuan. The contempt for rank in this song reflects his own state of mind. Chenzui Dongfeng is a Shuangdiao-mode tune often used for hermit life and leisure."
+  },
+  "pinglanren": {
+   "summary": "A short song to the tune Pinglanren, in the Yue mode: 'Sending Winter Clothes' by Yao Sui. In four lines, with parallel phrasing and repetition, it shows a wife's dilemma over whether to send winter clothes: if she sends them, she fears her husband will not come back; if she does not, she fears he will be cold. Plain words carry a complicated feeling, and it is deeply moving.",
+   "translation": "If I send you clothes, you will not come home;\nif I do not send them, you will be cold.\nBetween sending and not sending,\nhow hard it is for me, a thousand times over!",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "征衣",
+     "en": "zhengyi - clothes for the traveller",
+     "note": "Clothes for someone far away on a journey or at war, mostly winter clothes."
+    },
+    {
+     "term": "君",
+     "en": "jun - you (husband)",
+     "note": "A way of addressing one's husband."
+    },
+    {
+     "term": "寄與不寄間",
+     "en": "ji yu bu ji jian - between sending and not sending",
+     "note": "Caught between sending and not sending."
+    },
+    {
+     "term": "妾身",
+     "en": "qieshen - your humble wife",
+     "note": "A woman's word for herself."
+    },
+    {
+     "term": "千萬難",
+     "en": "qianwan nan - a thousand times hard",
+     "note": "Extremely hard and painful."
+    }
+   ],
+   "background": "Yao Sui (1238-1313), style name Duanfu and pen name Muan, came from Luoyang. He was a Yuan writer and song poet who rose to be Hanlin Academician Recipient of Edicts. Pinglanren is a short Yue-mode tune, and this piece is held to be the leading song about a wife who longs for her husband; it is plain in language and close to a folk song."
+  },
+  "tianjingsha_chun": {
+   "summary": "A short song to the tune Tianjingsha: 'Spring', one of Bai Pu's four songs on the four seasons. It opens with spring hills, a warm sun and a soft wind, then moves to towers and curtained windows, willows and a swing, singing orioles and dancing swallows, a small bridge and flowing water: a bright and lively picture, with clear colours, a light language and a rhythm like painting.",
+   "translation": "Spring hills, a warm sun and a gentle wind,\nrailings, towers and curtained windows,\nwillows and a swing in the courtyard.\nOrioles sing, swallows dance;\na small bridge, flowing water, flying red petals.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "闌幹",
+     "en": "langan - railing",
+     "note": "A railing."
+    },
+    {
+     "term": "簾櫳",
+     "en": "lianlong - curtained window",
+     "note": "A window hung with a curtain. 'Long' is the lattice of a window."
+    },
+    {
+     "term": "秋千",
+     "en": "qiuqian - swing",
+     "note": "A swing, a game played in spring in old times."
+    },
+    {
+     "term": "啼鶯舞燕",
+     "en": "tiying wuyan - singing orioles and dancing swallows",
+     "note": "Orioles calling and swallows flying, a picture of spring."
+    },
+    {
+     "term": "飛紅",
+     "en": "feihong - flying red",
+     "note": "Petals falling in the wind."
+    },
+    {
+     "term": "和風",
+     "en": "hefeng - gentle wind",
+     "note": "The mild breeze of spring."
+    }
+   ],
+   "background": "Bai Pu's four songs 'Spring, Summer, Autumn and Winter' to the tune Tianjingsha describe the four seasons. Tianjingsha is in the Yue mode, and the set follows Ma Zhiyuan's 'Autumn Thoughts' in setting images side by side, each song building its picture from nouns. For Bai Pu's life, see 'The Fisherman' (Chenzui Dongfeng)."
+  },
+  "tianjingsha_xia": {
+   "summary": "A short song to the tune Tianjingsha: 'Summer', one of Bai Pu's four songs on the four seasons. The clouds have cleared after rain and the water has risen; there is coolness in the high tower, sweet melon, and green tree-shade hanging over painted eaves. A gauze net, a rattan mat, a beauty with a silk fan and thin dress: a cool picture of escaping the heat.",
+   "translation": "Clouds gone, rain passed, the water risen;\nthe tower is high, the water cool, the melon sweet,\ngreen tree-shade hangs over the painted eaves.\nA gauze net, a rattan mat,\nand a jade-fair beauty with a silk fan and thin silk dress.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "雲收雨過",
+     "en": "yunshou yuguo - the clouds gone, the rain passed",
+     "note": "The clouds have scattered and the rain has stopped."
+    },
+    {
+     "term": "波添",
+     "en": "bo tian - the waves have risen",
+     "note": "The ripples are higher: the water level has risen."
+    },
+    {
+     "term": "畫簷",
+     "en": "huayan - painted eaves",
+     "note": "Eaves decorated with colours."
+    },
+    {
+     "term": "紗幮",
+     "en": "shachu - gauze net",
+     "note": "A net of gauze used against mosquitoes. 'Chu' means a curtain."
+    },
+    {
+     "term": "藤簟",
+     "en": "tengdian - rattan mat",
+     "note": "A mat woven of rattan, used for keeping cool in summer."
+    },
+    {
+     "term": "玉人",
+     "en": "yuren - jade-like person",
+     "note": "A beauty with a face like jade."
+    },
+    {
+     "term": "羅扇、輕縑",
+     "en": "luoshan, qingjian - silk fan, thin silk",
+     "note": "A luo fan is a round fan of woven silk; jian is fine silk, here meaning light cloth."
+    }
+   ],
+   "background": "The four songs 'Spring, Summer, Autumn and Winter' describe the four seasons in turn, each in a different style: the brightness of spring, the coolness of summer, the bleakness of autumn and the loneliness of winter. The 'Summer' song pays special attention to touch and taste (cool water, sweet melon) and goes beyond description of sight alone."
+  },
+  "tianjingsha_qiu": {
+   "summary": "A short song to the tune Tianjingsha: 'Autumn', one of Bai Pu's four songs on the four seasons. It gives a lone village, setting sun, fading glow, light smoke, old trees and cold crows, and the shadow of a single wild goose coming down; then green hills, green water, white grass, red leaves and yellow flowers burst into colour. It is both desolate and brilliant, and unlike the sorrow of Ma Zhiyuan's 'Autumn Thoughts', it ends on a bright note.",
+   "translation": "A lone village, the setting sun, the last of the sunset glow;\nlight smoke, old trees, cold crows,\nthe shadow of a single wild goose drops below.\nGreen hills and green water,\nwhite grass, red leaves, yellow flowers.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "殘霞",
+     "en": "canxia - fading sunset glow",
+     "note": "The evening glow that is about to fade away."
+    },
+    {
+     "term": "輕煙",
+     "en": "qingyan - light smoke",
+     "note": "Thin smoke, such as the smoke of cooking fires."
+    },
+    {
+     "term": "寒鴉",
+     "en": "hanya - cold crows",
+     "note": "Crows in autumn."
+    },
+    {
+     "term": "飛鴻",
+     "en": "feihong - flying wild goose",
+     "note": "A wild goose in flight."
+    },
+    {
+     "term": "白草",
+     "en": "baicao - white grass",
+     "note": "Grass that has dried to a yellowish white, the colour of autumn grass."
+    },
+    {
+     "term": "黃花",
+     "en": "huanghua - yellow flowers",
+     "note": "Chrysanthemums."
+    }
+   ],
+   "background": "This piece is often set beside Ma Zhiyuan's 'Autumn Thoughts'. 'Autumn Thoughts' ends with 'a heartbroken person at the edge of the sky', a sorrow of wandering. Bai Pu's ends instead with many colours set side by side, bleak yet bright, and its tone is more open."
+  },
+  "tianjingsha_dong": {
+   "summary": "A short song to the tune Tianjingsha: 'Winter', one of Bai Pu's four songs on the four seasons. At dusk a call of the painted horn comes from the watchtower gate, a new moon hangs over the pavilion, and in the snow before the hills, at the water's edge, are a bamboo fence and thatched cottages, with pale smoke and withered grass around a lone village. The picture is cold and still.",
+   "translation": "A call of the painted horn from the watchtower gate,\na new moon half seen above the pavilion at dusk,\nin the snow, before the hills, at the water's edge.\nA bamboo fence, thatched cottages,\npale smoke, withered grass, a lone village.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "畫角",
+     "en": "huajiao - painted horn",
+     "note": "A musical instrument of the ancient army, decorated with colours; its sound is sad and stirring, and it was often used to tell the time."
+    },
+    {
+     "term": "樵門",
+     "en": "qiaomen - watchtower gate",
+     "note": "The lookout tower over a city gate, also written 「譙門」. The character 「樵」 is borrowed for 「譙」."
+    },
+    {
+     "term": "新月",
+     "en": "xinyue - new moon",
+     "note": "The thin crescent moon at the start of the month."
+    },
+    {
+     "term": "水濱",
+     "en": "shuibin - water's edge",
+     "note": "The bank beside the water."
+    },
+    {
+     "term": "竹籬茅舍",
+     "en": "zhuli maoshe - bamboo fence, thatched cottage",
+     "note": "Thatched houses surrounded by a bamboo fence: a plain village home."
+    },
+    {
+     "term": "衰草",
+     "en": "shuai cao - withered grass",
+     "note": "Grass that has wilted."
+    }
+   ],
+   "background": "The four songs 'Spring, Summer, Autumn and Winter' form one set. The winter song begins with a sound, the painted horn, and ends with a lone village; compared with Ma Zhiyuan's 'Autumn Thoughts' it pays more attention to the quiet of the picture. The first character of 「樵門」 is usually taken to be a borrowing for 「譙」, the lookout tower over a city gate."
+  }
+ }
+}

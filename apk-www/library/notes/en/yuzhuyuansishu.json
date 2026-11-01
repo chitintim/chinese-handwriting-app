@@ -1,0 +1,92 @@
+{
+ "id": "yuzhuyuansishu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Wu Jun writes of the scenery of the Fuchun River between Fuyang and Tonglu. In order he describes the clear water, the mountains vying in beauty, the sounds of springs, birds, cicadas and gibbons, and the secluded gloom where the trees shut out the sun; he uses a contrast between the kite and the statesman to voice his longing for landscape.",
+   "translation": "Wind and mist are all gone, and sky and hills share one colour. I drift along with the stream, going east or west as I please. From Fuyang to Tonglu is about a hundred li, and the strange hills and unusual waters there are unmatched in all the world.\nThe water is all a pale blue-green, and one can see to the bottom even at a thousand fathoms; swimming fish and fine stones can be seen straight through, with nothing in the way. The rapids are faster than arrows, and the fierce waves seem to gallop. The high hills on both banks are covered with cold-looking trees, which rely on their position to compete in climbing, each rising above and beyond the others; they vie to point straight up in height, and form peaks by the hundred and by the thousand.\nThe spring water dashes on the rocks and makes a clear ringing sound. Fine birds call to each other, their chirps forming a rhythm. The cicadas turn their song a thousand times without end, and the gibbons cry a hundred times without a break. Those who, like the kite, soar up to the sky look at these peaks and calm their ambition; those who manage the affairs of the world glance into these valleys and forget to go home.\nCross branches cover the sky, so that it is dim even by day; thin twigs reflect one another, and now and then the sun is seen.",
+   "keyLines": [
+    {
+     "line": "風煙俱淨，天山共色",
+     "en": "Wind and mist are all gone, and sky and hills share one colour.",
+     "note": "The opening shows the sky and the hills as one colour, setting a clear and bright mood."
+    },
+    {
+     "line": "奇山異水，天下獨絕",
+     "en": "Strange hills and unusual waters, unmatched in all the world.",
+     "note": "A summary of the scenery of the Fuchun River, which leads into the separate descriptions of water and hills."
+    },
+    {
+     "line": "水皆縹碧，千丈見底，游魚細石，直視無礙",
+     "en": "The water is all a pale blue-green, and one can see to the bottom even at a thousand fathoms; swimming fish and fine stones can be seen straight through, with nothing in the way.",
+     "note": "It writes the clearness of the water, using fish and stones to bring out the transparency."
+    },
+    {
+     "line": "急湍甚箭，猛浪若奔",
+     "en": "The rapids are faster than arrows, and the fierce waves seem to gallop.",
+     "note": "Arrows and galloping horses are used as images for the swift force of the water."
+    },
+    {
+     "line": "泉水激石，泠泠作響。好鳥相鳴，嚶嚶成韻",
+     "en": "The spring water dashes on the rocks and makes a clear ringing sound. Fine birds call to each other, their chirps forming a rhythm.",
+     "note": "It moves from sight to sound, with spring and birdsong evoking the quiet of the hills."
+    },
+    {
+     "line": "鳶飛戾天者，望峰息心；經綸世務者，窺谷忘返",
+     "en": "Those who, like the kite, soar up to the sky look at these peaks and calm their ambition; those who manage the affairs of the world glance into these valleys and forget to go home.",
+     "note": "He uses the landscape to express his feelings and shows his lack of interest in worldly fame, naming the mood behind the description."
+    },
+    {
+     "line": "橫柯上蔽，在晝猶昏；疏條交映，有時見日",
+     "en": "Cross branches cover the sky, so that it is dim even by day; thin twigs reflect one another, and now and then the sun is seen.",
+     "note": "The ending shows dense trees and dappled light, leaving a lasting aftertaste."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "富陽、桐廬",
+     "en": "Fuyang, Tonglu - Fuyang and Tonglu",
+     "note": "Both are in what is now Zhejiang; the Fuchun River flows through both places."
+    },
+    {
+     "term": "縹碧",
+     "en": "piao bi - pale blue-green",
+     "note": "A light blue-green. Read piao."
+    },
+    {
+     "term": "湍",
+     "en": "tuan - rapids",
+     "note": "Fast-flowing water."
+    },
+    {
+     "term": "軒邈",
+     "en": "xuan miao - rising far and high",
+     "note": "Stretching up and far away, as if competing in height."
+    },
+    {
+     "term": "泠泠",
+     "en": "ling ling - ringing",
+     "note": "Describes the clear sound of spring water. Read ling ling."
+    },
+    {
+     "term": "嚶嚶",
+     "en": "ying ying - chirping",
+     "note": "The sound of birds calling to each other."
+    },
+    {
+     "term": "鳶飛戾天",
+     "en": "yuan fei li tian - the kite flies to heaven",
+     "note": "From the Book of Songs: the kite flies up to the sky; here it stands for people who chase high office and fame."
+    },
+    {
+     "term": "經綸世務",
+     "en": "jing lun shi wu - managing worldly affairs",
+     "note": "To run the affairs of the world; those whose minds are all on government business."
+    }
+   ],
+   "background": "Letter to Zhu Yuansi was written by Wu Jun of the Liang dynasty (502-557) to his friend Zhu Yuansi. In short sentences mixing parallel and free prose it describes the landscape of the Fuchun River, and it is a leading example of small landscape pieces of the Six Dynasties."
+  }
+ }
+}

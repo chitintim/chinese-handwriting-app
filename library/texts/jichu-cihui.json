@@ -2,15 +2,18 @@
  "id": "jichu-cihui",
  "title": {
   "trad": "基礎詞語",
-  "simp": "基础词语"
+  "simp": "基础词语",
+  "en": "Basic Vocabulary"
  },
  "author": {
   "trad": "編選",
-  "simp": "编选"
+  "simp": "编选",
+  "en": "Compiled"
  },
  "dynasty": {
   "trad": "—",
-  "simp": "—"
+  "simp": "—",
+  "en": "-"
  },
  "source": "https://zh.wikisource.org/wiki/%E4%BA%8C%E5%8D%81%E5%9B%9B%E7%AF%80%E6%B0%A3",
  "license": "Public domain (traditional word lists)",
@@ -20,7 +23,8 @@
    "id": "shuzi",
    "title": {
     "trad": "數目",
-    "simp": "数目"
+    "simp": "数目",
+    "en": "Numbers"
    },
    "body": {
     "trad": "零一二三四，五六七八九，十百千萬億。",
@@ -31,7 +35,8 @@
    "id": "tiangan",
    "title": {
     "trad": "天干",
-    "simp": "天干"
+    "simp": "天干",
+    "en": "Heavenly Stems"
    },
    "body": {
     "trad": "甲乙丙丁戊，己庚辛壬癸。",
@@ -42,7 +47,8 @@
    "id": "dizhi",
    "title": {
     "trad": "地支",
-    "simp": "地支"
+    "simp": "地支",
+    "en": "Earthly Branches"
    },
    "body": {
     "trad": "子丑寅卯辰，巳午未申酉，戌亥。",
@@ -53,7 +59,8 @@
    "id": "shengxiao",
    "title": {
     "trad": "十二生肖",
-    "simp": "十二生肖"
+    "simp": "十二生肖",
+    "en": "The Twelve Zodiac Animals"
    },
    "body": {
     "trad": "鼠牛虎兔龍，蛇馬羊猴雞，狗豬。",
@@ -64,7 +71,8 @@
    "id": "wuxing",
    "title": {
     "trad": "五行方位",
-    "simp": "五行方位"
+    "simp": "五行方位",
+    "en": "Five Elements and Directions"
    },
    "body": {
     "trad": "金木水火土，東南西北中。",
@@ -75,7 +83,8 @@
    "id": "siji",
    "title": {
     "trad": "四季",
-    "simp": "四季"
+    "simp": "四季",
+    "en": "The Four Seasons"
    },
    "body": {
     "trad": "春夏秋冬。",
@@ -86,7 +95,8 @@
    "id": "jieqi_chun",
    "title": {
     "trad": "二十四節氣 · 春夏",
-    "simp": "二十四节气 · 春夏"
+    "simp": "二十四节气 · 春夏",
+    "en": "24 Solar Terms · Spring, Summer"
    },
    "body": {
     "trad": "立春雨水，驚蟄春分，清明穀雨，立夏小滿，芒種夏至，小暑大暑。",
@@ -97,7 +107,8 @@
    "id": "jieqi_qiu",
    "title": {
     "trad": "二十四節氣 · 秋冬",
-    "simp": "二十四节气 · 秋冬"
+    "simp": "二十四节气 · 秋冬",
+    "en": "24 Solar Terms · Autumn, Winter"
    },
    "body": {
     "trad": "立秋處暑，白露秋分，寒露霜降，立冬小雪，大雪冬至，小寒大寒。",

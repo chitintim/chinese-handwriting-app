@@ -2,15 +2,18 @@
  "id": "yuanqu-xiaoling",
  "title": {
   "trad": "元曲小令",
-  "simp": "元曲小令"
+  "simp": "元曲小令",
+  "en": "Yuan Short Songs (Xiaoling)"
  },
  "author": {
   "trad": "元代諸家",
-  "simp": "元代诸家"
+  "simp": "元代诸家",
+  "en": "Yuan poets"
  },
  "dynasty": {
   "trad": "元",
-  "simp": "元"
+  "simp": "元",
+  "en": "Yuan"
  },
  "source": "https://zh.wikisource.org/wiki/天淨沙·秋思",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/天淨沙·秋思",
@@ -20,11 +23,13 @@
    "id": "tianjingsha_qiusi",
    "title": {
     "trad": "天淨沙·秋思 · 馬致遠",
-    "simp": "天净沙·秋思 · 马致远"
+    "simp": "天净沙·秋思 · 马致远",
+    "en": "Tianjingsha: Autumn Thoughts · Ma Zhiyuan"
    },
    "author": {
     "trad": "馬致遠",
-    "simp": "马致远"
+    "simp": "马致远",
+    "en": "Ma Zhiyuan"
    },
    "body": {
     "trad": "枯藤、老樹、昏鴉。小橋、流水、人家。古道、西風、瘦馬。夕陽西下，斷腸人在天涯。",
@@ -35,11 +40,13 @@
    "id": "shanpoyang_tongguan",
    "title": {
     "trad": "山坡羊·潼關懷古 · 張養浩",
-    "simp": "山坡羊·潼关怀古 · 张养浩"
+    "simp": "山坡羊·潼关怀古 · 张养浩",
+    "en": "Shanpoyang: Memories of Tongguan · Zhang Yanghao"
    },
    "author": {
     "trad": "張養浩",
-    "simp": "张养浩"
+    "simp": "张养浩",
+    "en": "Zhang Yanghao"
    },
    "body": {
     "trad": "峰巒如聚，波濤如怒，山河表裏潼關路。望西都，意躊躕，傷心秦漢經行處，宮闕萬間都做了土。興，百姓苦；亡，百姓苦。",
@@ -50,11 +57,13 @@
    "id": "shanpoyang_lishan",
    "title": {
     "trad": "山坡羊·驪山懷古 · 張養浩",
-    "simp": "山坡羊·骊山怀古 · 张养浩"
+    "simp": "山坡羊·骊山怀古 · 张养浩",
+    "en": "Shanpoyang: Memories of Mount Li · Zhang Yanghao"
    },
    "author": {
     "trad": "張養浩",
-    "simp": "张养浩"
+    "simp": "张养浩",
+    "en": "Zhang Yanghao"
    },
    "body": {
     "trad": "驪山四顧，阿房一炬，當時奢侈今何處？只見草蕭疏，水縈紆。至今遺恨迷煙樹。列國周齊秦漢楚。贏，都變做了土；輸，都變做了土。",
@@ -65,11 +74,13 @@
    "id": "shouyangqu_yuanpu",
    "title": {
     "trad": "壽陽曲·遠浦帆歸 · 馬致遠",
-    "simp": "寿阳曲·远浦帆归 · 马致远"
+    "simp": "寿阳曲·远浦帆归 · 马致远",
+    "en": "Shouyangqu: Sails Returning from Far Shores · Ma Zhiyuan"
    },
    "author": {
     "trad": "馬致遠",
-    "simp": "马致远"
+    "simp": "马致远",
+    "en": "Ma Zhiyuan"
    },
    "body": {
     "trad": "夕陽下，酒旆閑，兩三航未曾著岸。落花水香茅舍晚，斷橋頭賣魚人散。",
@@ -80,11 +91,13 @@
    "id": "shouyangqu_shanshi",
    "title": {
     "trad": "壽陽曲·山市晴嵐 · 馬致遠",
-    "simp": "寿阳曲·山市晴岚 · 马致远"
+    "simp": "寿阳曲·山市晴岚 · 马致远",
+    "en": "Shouyangqu: Mountain Market in Clearing Mist · Ma Zhiyuan"
    },
    "author": {
     "trad": "馬致遠",
-    "simp": "马致远"
+    "simp": "马致远",
+    "en": "Ma Zhiyuan"
    },
    "body": {
     "trad": "花村外，草店西，晚霞明雨收天霽。四圍山一竿殘照裏，錦屏風又添鋪翠。",
@@ -95,11 +108,13 @@
    "id": "shouyangqu_pingsha",
    "title": {
     "trad": "壽陽曲·平沙落雁 · 馬致遠",
-    "simp": "寿阳曲·平沙落雁 · 马致远"
+    "simp": "寿阳曲·平沙落雁 · 马致远",
+    "en": "Shouyangqu: Geese Alighting on the Sand · Ma Zhiyuan"
    },
    "author": {
     "trad": "馬致遠",
-    "simp": "马致远"
+    "simp": "马致远",
+    "en": "Ma Zhiyuan"
    },
    "body": {
     "trad": "南傳信，北寄書，半棲近岸花汀樹。似鴛鴦失群迷伴侶，兩三行海門斜去。",
@@ -110,11 +125,13 @@
    "id": "shouyangqu_jiangtian",
    "title": {
     "trad": "壽陽曲·江天暮雪 · 馬致遠",
-    "simp": "寿阳曲·江天暮雪 · 马致远"
+    "simp": "寿阳曲·江天暮雪 · 马致远",
+    "en": "Shouyangqu: Evening Snow over River and Sky · Ma Zhiyuan"
    },
    "author": {
     "trad": "馬致遠",
-    "simp": "马致远"
+    "simp": "马致远",
+    "en": "Ma Zhiyuan"
    },
    "body": {
     "trad": "天將暮，雪亂舞，半梅花半飄柳絮。江上晚來堪畫處，鉤魚人一蓑歸去。",
@@ -125,11 +142,13 @@
    "id": "shouyangqu_dongting",
    "title": {
     "trad": "壽陽曲·洞庭秋月 · 馬致遠",
-    "simp": "寿阳曲·洞庭秋月 · 马致远"
+    "simp": "寿阳曲·洞庭秋月 · 马致远",
+    "en": "Shouyangqu: Autumn Moon over Dongting · Ma Zhiyuan"
    },
    "author": {
     "trad": "馬致遠",
-    "simp": "马致远"
+    "simp": "马致远",
+    "en": "Ma Zhiyuan"
    },
    "body": {
     "trad": "蘆花謝，客乍別，泛蟾光小舟一葉。豫章城故人來也，結末了洞庭秋月。",
@@ -140,11 +159,13 @@
    "id": "shouyangqu_yucun",
    "title": {
     "trad": "壽陽曲·漁村夕照 · 馬致遠",
-    "simp": "寿阳曲·渔村夕照 · 马致远"
+    "simp": "寿阳曲·渔村夕照 · 马致远",
+    "en": "Shouyangqu: Sunset at the Fishing Village · Ma Zhiyuan"
    },
    "author": {
     "trad": "馬致遠",
-    "simp": "马致远"
+    "simp": "马致远",
+    "en": "Ma Zhiyuan"
    },
    "body": {
     "trad": "鳴榔罷，閃暮光，綠楊堤數聲漁唱。掛柴門幾家閑曬網，都撮在捕魚圖上。",
@@ -155,11 +176,13 @@
    "id": "shouyangqu_xiaoxiang",
    "title": {
     "trad": "壽陽曲·瀟湘夜雨 · 馬致遠",
-    "simp": "寿阳曲·潇湘夜雨 · 马致远"
+    "simp": "寿阳曲·潇湘夜雨 · 马致远",
+    "en": "Shouyangqu: Night Rain on the Xiaoxiang · Ma Zhiyuan"
    },
    "author": {
     "trad": "馬致遠",
-    "simp": "马致远"
+    "simp": "马致远",
+    "en": "Ma Zhiyuan"
    },
    "body": {
     "trad": "漁燈暗，客夢回，一聲聲滴人心碎。孤舟五更家萬里，是離人幾行清淚。",
@@ -170,11 +193,13 @@
    "id": "shouyangqu_yansi",
    "title": {
     "trad": "壽陽曲·煙寺晚鐘 · 馬致遠",
-    "simp": "寿阳曲·烟寺晚钟 · 马致远"
+    "simp": "寿阳曲·烟寺晚钟 · 马致远",
+    "en": "Shouyangqu: Evening Bell from the Misty Temple · Ma Zhiyuan"
    },
    "author": {
     "trad": "馬致遠",
-    "simp": "马致远"
+    "simp": "马致远",
+    "en": "Ma Zhiyuan"
    },
    "body": {
     "trad": "寒煙細，古寺清，近黃昏禮佛人靜。順西風晚鐘三四聲，怎生教老僧禪定？",
@@ -185,11 +210,13 @@
    "id": "sikuaiyu_bieqing",
    "title": {
     "trad": "四塊玉·別情 · 關漢卿",
-    "simp": "四块玉·别情 · 关汉卿"
+    "simp": "四块玉·别情 · 关汉卿",
+    "en": "Sikuaiyu: Parting · Guan Hanqing"
    },
    "author": {
     "trad": "關漢卿",
-    "simp": "关汉卿"
+    "simp": "关汉卿",
+    "en": "Guan Hanqing"
    },
    "body": {
     "trad": "自送別，心難舍，一點相思幾時絕？憑闌袖拂楊花雪。溪又斜，山又遮，人去也！",
@@ -200,11 +227,13 @@
    "id": "chenzuidongfeng",
    "title": {
     "trad": "沉醉東風·漁夫 · 白樸",
-    "simp": "沉醉东风·渔夫 · 白朴"
+    "simp": "沉醉东风·渔夫 · 白朴",
+    "en": "Chenzui Dongfeng: The Fisherman · Bai Pu"
    },
    "author": {
     "trad": "白樸",
-    "simp": "白朴"
+    "simp": "白朴",
+    "en": "Bai Pu"
    },
    "body": {
     "trad": "黃蘆岸白蘋渡口，綠楊紅蓼灘頭。雖無刎頸交，卻有忘機友，點秋江白鷺沙鷗，傲殺人間萬戶侯，不識字煙波釣叟。",
@@ -215,11 +244,13 @@
    "id": "pinglanren",
    "title": {
     "trad": "憑闌人·寄征衣 · 姚燧",
-    "simp": "凭阑人·寄征衣 · 姚燧"
+    "simp": "凭阑人·寄征衣 · 姚燧",
+    "en": "Pinglanren: Sending Winter Clothes · Yao Sui"
    },
    "author": {
     "trad": "姚燧",
-    "simp": "姚燧"
+    "simp": "姚燧",
+    "en": "Yao Sui"
    },
    "body": {
     "trad": "欲寄君衣君不還，不寄君衣君又寒。寄與不寄間，妾身千萬難！",
@@ -230,11 +261,13 @@
    "id": "tianjingsha_chun",
    "title": {
     "trad": "天淨沙·春 · 白樸",
-    "simp": "天净沙·春 · 白朴"
+    "simp": "天净沙·春 · 白朴",
+    "en": "Tianjingsha: Spring · Bai Pu"
    },
    "author": {
     "trad": "白樸",
-    "simp": "白朴"
+    "simp": "白朴",
+    "en": "Bai Pu"
    },
    "body": {
     "trad": "春山暖日和風，闌幹樓閣簾櫳，楊柳秋千院中。啼鶯舞燕，小橋流水飛紅。",
@@ -245,11 +278,13 @@
    "id": "tianjingsha_xia",
    "title": {
     "trad": "天淨沙·夏 · 白樸",
-    "simp": "天净沙·夏 · 白朴"
+    "simp": "天净沙·夏 · 白朴",
+    "en": "Tianjingsha: Summer · Bai Pu"
    },
    "author": {
     "trad": "白樸",
-    "simp": "白朴"
+    "simp": "白朴",
+    "en": "Bai Pu"
    },
    "body": {
     "trad": "雲收雨過波添，樓高水冷瓜甜，綠樹陰垂畫簷。紗幮藤簟，玉人羅扇輕縑。",
@@ -260,11 +295,13 @@
    "id": "tianjingsha_qiu",
    "title": {
     "trad": "天淨沙·秋 · 白樸",
-    "simp": "天净沙·秋 · 白朴"
+    "simp": "天净沙·秋 · 白朴",
+    "en": "Tianjingsha: Autumn · Bai Pu"
    },
    "author": {
     "trad": "白樸",
-    "simp": "白朴"
+    "simp": "白朴",
+    "en": "Bai Pu"
    },
    "body": {
     "trad": "孤村落日殘霞，輕煙老樹寒鴉，一點飛鴻影下。青山綠水，白草紅葉黃花。",
@@ -275,11 +312,13 @@
    "id": "tianjingsha_dong",
    "title": {
     "trad": "天淨沙·冬 · 白樸",
-    "simp": "天净沙·冬 · 白朴"
+    "simp": "天净沙·冬 · 白朴",
+    "en": "Tianjingsha: Winter · Bai Pu"
    },
    "author": {
     "trad": "白樸",
-    "simp": "白朴"
+    "simp": "白朴",
+    "en": "Bai Pu"
    },
    "body": {
     "trad": "一聲畫角樵門，半亭新月黃昏，雪裏山前水濱。竹籬茅舍，淡煙衰草孤村。",

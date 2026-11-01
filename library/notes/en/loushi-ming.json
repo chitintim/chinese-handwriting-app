@@ -1,0 +1,72 @@
+{
+ "id": "loushi-ming",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Liu Yuxi uses mountains and waters as a comparison to say that a dwelling is good not because of how humble it is but because of the character of the one who lives in it. The whole piece is built round 'the fragrance of virtue', describing the surroundings, company and pleasures of a humble room, and shows the noble person's contentment with poverty.",
+   "translation": "A mountain need not be high: if an immortal lives there, it is famous. Water need not be deep: if a dragon lives there, it is sacred. This is a humble room, but my virtue gives it fragrance.\nMoss marks climb the steps in green; the colour of the grass comes through the blinds, blue. Those who talk and laugh with me are great scholars; those who come and go include no commoners. I can tune a plain zither and read the golden scriptures. There is no music of strings and pipes to confuse the ears, no official papers to tire the body. It is like Zhuge Liang's hut at Nanyang, or Ziyun's pavilion in west Shu. Confucius said: 'What is there that is humble about it?'",
+   "keyLines": [
+    {
+     "line": "斯是陋室，惟吾德馨",
+     "en": "This is a humble room, but my virtue gives it fragrance.",
+     "note": "The theme of the whole piece: the house may be simple, but its owner's character spreads like a far-reaching scent."
+    },
+    {
+     "line": "談笑有鴻儒，往來無白丁",
+     "en": "Those who talk and laugh with me are great scholars; those who come and go include no commoners.",
+     "note": "The people he mixes with are all learned, which shows the owner's refined taste."
+    },
+    {
+     "line": "南陽諸葛廬，西蜀子雲亭",
+     "en": "It is like Zhuge Liang's hut at Nanyang, or Ziyun's pavilion in west Shu.",
+     "note": "He compares himself with Zhuge Liang and Yang Xiong, whose dwellings were plain but whose names last."
+    },
+    {
+     "line": "孔子云：何陋之有？",
+     "en": "Confucius said: 'What is there that is humble about it?'",
+     "note": "He closes with a line from the Analects, 'if a noble person lives there, what is humble about it', to show that the noble person does not mind a plain home."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "馨",
+     "en": "xin - fragrance",
+     "note": "A scent that carries far; here a figure for fine conduct."
+    },
+    {
+     "term": "鴻儒",
+     "en": "hong ru - great scholar",
+     "note": "A man of wide learning."
+    },
+    {
+     "term": "白丁",
+     "en": "bai ding - commoner",
+     "note": "An ordinary person with no rank and no learning."
+    },
+    {
+     "term": "素琴",
+     "en": "su qin - plain zither",
+     "note": "A zither without decoration."
+    },
+    {
+     "term": "金經",
+     "en": "jin jing - golden scriptures",
+     "note": "One view takes it as Buddhist sutras (written in gold paste); another takes it as precious classics."
+    },
+    {
+     "term": "案牘",
+     "en": "an du - official papers",
+     "note": "Official documents and papers of a government office."
+    },
+    {
+     "term": "子雲亭",
+     "en": "Ziyun ting - Ziyun's pavilion",
+     "note": "Yang Xiong of the Western Han, courtesy name Ziyun, had a study in Chengdu where he wrote the Taixuan; later it was called the 'Xuan pavilion'."
+    }
+   ],
+   "background": "Liu Yuxi was a poet of the middle Tang (618-907) who was demoted for taking part in the Yongzhen reform. It is said that when he was at Hezhou his dwelling was reduced again and again, and so he wrote this inscription to state his mind. An inscription (ming) is a short rhymed form; this piece rhymes throughout and has a ringing rhythm, and it is a favourite text for practising regular script."
+  }
+ }
+}

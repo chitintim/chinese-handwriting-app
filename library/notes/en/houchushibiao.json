@@ -1,0 +1,92 @@
+{
+ "id": "houchushibiao",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Zhuge Liang explains the pains he took in accepting the charge of a northern campaign. He first says that a state that settles for a corner is doomed and the rebels must be fought, then answers, one by one, six 'things I do not understand' raised by those who urge caution. He ends with the line about giving all his strength until death, whatever the outcome.",
+   "translation": "The late emperor considered that the Han and the rebels could not both stand, and that the royal enterprise could not rest content with a corner of the land. So he entrusted me with the task of striking the rebels. With the late emperor's clear judgement he weighed my ability, and he knew well that to strike the rebels my strength was slight and the enemy's great. Yet if the rebels are not struck, the royal enterprise will also perish; if we only sit and wait for ruin, how is that better than striking them? That is why he entrusted me with it and did not doubt. From the day I received the command, I could not sleep easy on my mat nor find any taste in my food. I thought that to march north I must first go into the south. So in the fifth month I crossed the River Lu and went deep into the barren lands, eating one day's food in two days. It is not that I do not spare myself. But the royal enterprise cannot rest content in the capital of Shu, and so I braved danger and hardship to carry out the late emperor's last wish; yet those who debate the matter say it is not a good plan.\n\nNow the rebels happen to be worn out in the west and are busy in the east. The art of war says to strike when the enemy is weary, and this is the time to advance. I respectfully set out the matter as follows.\n\nEmperor Gao was as bright as the sun and moon, and his counsellors were deep in wisdom, yet he crossed through danger and suffered wounds, and only after peril did he find safety. Now Your Majesty does not yet equal Emperor Gao, and your counsellors are no match for Zhang Liang and Chen Ping, and yet you wish to win by a long and careful plan and to settle the world from your seat. This is the first thing I do not understand.\n\nLiu Yao and Wang Lang each held a province or commandery. When they spoke of safety and of plans, they were always quoting the sages; their bellies were full of doubts and their chests stuffed with objections. This year they did not fight, next year they did not march out, and so they let Sun Ce grow great and take all Jiangdong. This is the second thing I do not understand.\n\nCao Cao's wisdom and schemes were far beyond other men's, and in using troops he was almost like Sun Wu and Wu Qi. Yet he was hard pressed at Nanyang, in danger at Wuchao, in peril at Qilian, squeezed at Liyang, nearly beaten at Beishan and nearly killed at Tong Pass, and only after that did he win a false and passing settlement. How much more so for me, whose ability is weak, who wishes to settle it all without any danger. This is the third thing I do not understand.\n\nCao Cao attacked Chang Ba five times and could not take him; four times he crossed Lake Chao and failed. He employed Li Fu, and Li Fu plotted against him; he entrusted a post to Xiahou, and Xiahou was beaten and killed. The late emperor always called Cao Cao capable, yet he still made such mistakes. How much more would I, dull and poor in ability, be sure to win? This is the fourth thing I do not understand.\n\nSince I came to Hanzhong, barely a full year has passed, and yet we have lost Zhao Yun, Yang Qun, Ma Yu, Yan Zhi, Ding Li, Bai Shou, Liu He, Deng Tong and others, along with more than seventy company commanders and garrison commanders; the assault generals who had no equal in front of them; and more than a thousand of the Cong and Sou tribesmen, the Qingqiang, and the scattered cavalry and martial cavalry. These are the finest troops gathered from all quarters over several decades; they are not what one province alone could produce. If a few more years pass, we shall lose two thirds of them, and with what shall we then plan against the enemy? This is the fifth thing I do not understand.\n\nNow the people are poor and the soldiers weary, and yet the work cannot be stopped. If it cannot be stopped, then to stay and to march cost exactly the same in labour and expense. If we do not plan against the enemy now, but wish to hold out for years against the rebels with the land of one province alone, this is the sixth thing I do not understand.\n\nWhat is hard to settle is the course of events. In the past the late emperor's army was beaten in Chu. At that moment Cao Cao clapped his hands and said the world was settled. Yet after that the late emperor joined with Wu and Yue in the east, took Ba and Shu in the west, raised troops and marched north, and Xiahou's head was handed over. That was Cao Cao's miscalculation, and the Han cause was about to succeed. But then Wu broke the alliance, Guan Yu was ruined and defeated, the stumble came at Zigui, and Cao Pi took the title of emperor. In all matters it is like this, and they are hard to see ahead of time. I will bend my body and spend my strength until I die. As for success or failure, gain or loss, these are not things my judgement can see ahead.",
+   "keyLines": [
+    {
+     "line": "先帝慮漢賊不兩立，王業不偏安",
+     "en": "The late emperor considered that the Han and the rebels could not both stand, and that the royal enterprise could not rest content with a corner of the land.",
+     "note": "The opening sets out the argument: the Han house and Cao Wei cannot coexist, Shu Han cannot be content with one corner, and the northern campaign was the late emperor's wish."
+    },
+    {
+     "line": "臣受命之日，寢不安席，食不甘味",
+     "en": "From the day I received the command, I could not sleep easy on my mat nor find any taste in my food.",
+     "note": "He says that since receiving the charge he has had no rest day or night, to show he is not using troops carelessly."
+    },
+    {
+     "line": "兵法乘勞，此進趨之時也",
+     "en": "The art of war says to strike when the enemy is weary, and this is the time to advance.",
+     "note": "He points out that the enemy is worn out on its western and eastern fronts, so this is the moment to attack, as the art of war advises."
+    },
+    {
+     "line": "此臣之未解一也",
+     "en": "This is the first thing I do not understand.",
+     "note": "From here, six 'things I do not understand' are used one after another to answer, with examples such as Emperor Gao and Cao Cao, the view that one can wait for the realm to settle itself. This is the skeleton of the whole piece."
+    },
+    {
+     "line": "今民窮兵疲，而事不可息，事不可息，則住與行勞費正等",
+     "en": "Now the people are poor and the soldiers weary, and yet the work cannot be stopped. If it cannot be stopped, then to stay and to march cost exactly the same in labour and expense.",
+     "note": "The people of Shu are poor and the army tired, but the war cannot stop; waiting costs as much as marching out, so it is better to attack the enemy soon."
+    },
+    {
+     "line": "夫難平者，事也",
+     "en": "What is hard to settle is the course of events.",
+     "note": "The summing up begins: great matters change in ways that are hard to predict, and success or failure cannot be decided in advance."
+    },
+    {
+     "line": "臣鞠躬盡瘁，死而後已，至於成敗利鈍，非臣之明所能逆覩也",
+     "en": "I will bend my body and spend my strength until I die. As for success or failure, gain or loss, these are not things my judgement can see ahead.",
+     "note": "The best-known line of the piece: he will give all his effort until he dies, and whether things go well or badly is beyond human foresight. Later writers often use it for someone loyal to duty."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "王業",
+     "en": "wang ye - the royal enterprise",
+     "note": "The work of an emperor; here, the great task of restoring the Han house."
+    },
+    {
+     "term": "偏安",
+     "en": "pian an - content with a corner",
+     "note": "To hold only one region and seek comfort there."
+    },
+    {
+     "term": "不毛",
+     "en": "bu mao - barren land",
+     "note": "Land where no grain grows, remote and wild; here, the far south."
+    },
+    {
+     "term": "並日而食",
+     "en": "bing ri er shi - eating one day's food in two days",
+     "note": "Having only one day's food for two days, to describe the hardship of a march and the lack of grain."
+    },
+    {
+     "term": "朞年",
+     "en": "ji nian - a full year",
+     "note": "A full year; the first character, read ji, is a variant of qi, 'period'."
+    },
+    {
+     "term": "突將、賨叟青羌",
+     "en": "tu jiang, Cong Sou Qing Qiang - assault generals and others",
+     "note": "The assault generals were the elite who charged into the enemy; Cong, Sou and Qing Qiang were troops from tribal peoples that had submitted in Shu."
+    },
+    {
+     "term": "髣髴孫、吳",
+     "en": "fang fu Sun Wu - almost like Sun Wu",
+     "note": "Fang fu means 'as if'; Sun and Wu are Sun Wu and Wu Qi, two great masters of military science."
+    },
+    {
+     "term": "利鈍",
+     "en": "li dun - gain and loss",
+     "note": "Li is going well and dun is going badly; success and failure."
+    }
+   ],
+   "background": "The Second Memorial on Deploying the Army (Hou chushi biao) is traditionally said to have been presented by Zhuge Liang in 228, in the sixth year of Jianxing in Shu Han, before a second northern campaign, and it is paired with the earlier memorial. It is not in the main text of the Records of the Three Kingdoms but is quoted in Pei Songzhi's commentary from the Han-Jin Chunqiu, and since ancient times people have argued about whether it is genuine. It is still generally handed down as Zhuge Liang's."
+  }
+ }
+}

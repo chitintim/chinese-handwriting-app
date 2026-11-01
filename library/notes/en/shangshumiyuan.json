@@ -1,0 +1,92 @@
+{
+ "id": "shangshumiyuan",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Su Zhe introduces himself to the Military Affairs Commissioner Han Qi and asks for an audience. He sets out the idea that writing is a form of qi, and explains that he left home to travel and to call on Ouyang Xiu in order to cultivate qi for the sake of writing, and he voices his wish to meet Grand Commandant Han.",
+   "translation": "To the Grand Commandant's attendant: Zhe has loved writing since birth and has thought about it deeply. I take it that writing is the form taken by qi; but writing cannot be mastered by study, while qi can be reached by cultivation. Mencius said: 'I am good at nourishing my flood-like qi.' Looking at his writing now, it is broad, generous and grand, filling the space between heaven and earth, matching the size of his qi. The Grand Historian travelled all over the empire, saw the famous mountains and great rivers of the four seas, and mixed with the heroes and able men of Yan and Zhao; so his writing is open and sweeping, with an unusual force. Did these two men ever take up the brush to learn to write like this? Their qi filled their inner selves and overflowed into their looks, stirred in their words and showed in their writing, and they themselves did not know it.\nZhe is nineteen years old. At home, those with whom I spent time were no more than the people of my neighbourhood and village, and what I saw was no more than a few hundred li; there were no high mountains or wide plains to climb and look over so as to broaden myself. Though I have read the books of the hundred schools, they are all the old traces of men of the past, and are not enough to stir up my spirit. Fearing that I would sink and be lost, I resolved to leave, and look for the strange sights and grand scenes of the world, so as to know how wide heaven and earth are.\nI passed through the old capitals of Qin and Han, looked my fill at the height of Zhongnan, Song and Hua, turned north to see the Yellow River rushing along, and in deep feeling imagined the heroes of old. When I reached the capital, I looked up at the grandeur of the Son of Heaven's palaces, and the wealth and size of the granaries, treasuries, city walls and parks, and only then knew the magnificence of the empire. I saw Academician Ouyang, heard the breadth and eloquence of his talk, and saw his handsome and imposing looks; I travelled with his disciples and scholar-officials, and only then knew that the writing of the whole world gathers here.\nThe Grand Commandant is the foremost of the realm in talent and strategy; the empire relies on you to be free of worry, and the four barbarian peoples fear you and dare not stir. At court you are like the Duke of Zhou and the Duke of Shao; in the field you are like Fang Shu and Shao Hu. And Zhe has not yet seen you. Moreover, when a person studies, if he does not set his heart on what is great, what is the use of much learning? When Zhe came here, among mountains I saw the height of Zhongnan, Song and Hua; among waters I saw the vastness and depth of the Yellow River; among men I saw Master Ouyang; and still I felt that I had not seen the Grand Commandant. So I long to behold the light of a worthy man and hear one word to strengthen myself, and then I could have seen all the great sights of the world without regret.\nZhe is young and has not yet learned to handle official business. My coming earlier was not for the sake of a small official salary; even if I had gained one by chance, it would not be what I take pleasure in. But by good fortune I was allowed to go home and wait for an appointment, so that I might spend a few years at leisure, to improve my writing further and to learn about government. If the Grand Commandant should think me worth teaching and condescend to teach me, that would be another good fortune.",
+   "keyLines": [
+    {
+     "line": "文者，氣之所形，然文不可以學而能，氣可以養而致",
+     "en": "Writing is the form taken by qi; but writing cannot be mastered by study, while qi can be reached by cultivation.",
+     "note": "The thesis of the letter: writing is the expression of qi; it cannot be gained by study alone but by nourishing qi."
+    },
+    {
+     "line": "我善養吾浩然之氣",
+     "en": "I am good at nourishing my flood-like qi.",
+     "note": "He quotes Mencius as the ground of his idea of nourishing qi."
+    },
+    {
+     "line": "太史公行天下，周覽四海名山大川，與燕、趙間豪俊交遊，故其文疏蕩，頗有奇氣",
+     "en": "The Grand Historian travelled all over the empire, saw the famous mountains and great rivers of the four seas, and mixed with the heroes of Yan and Zhao; so his writing is open and sweeping, with an unusual force.",
+     "note": "Using Sima Qian, he shows how travel and experience widen one's outlook and shape one's style."
+    },
+    {
+     "line": "其氣充乎其中而溢乎其貌，動乎其言而見乎其文，而不自知也",
+     "en": "Their qi filled their inner selves and overflowed into their looks, stirred in their words and showed in their writing, and they themselves did not know it.",
+     "note": "Qi comes out naturally from within and is not got by deliberate study."
+    },
+    {
+     "line": "見翰林歐陽公，聽其議論之宏辯，觀其容貌之秀偉",
+     "en": "I saw Academician Ouyang, heard the breadth and eloquence of his talk, and saw his handsome and imposing looks.",
+     "note": "What he gained on meeting Ouyang Xiu: from what he saw and heard he felt the greatness of the writing of the time."
+    },
+    {
+     "line": "入則周公、召公，出則方叔、召虎",
+     "en": "At court you are like the Duke of Zhou and the Duke of Shao; in the field you are like Fang Shu and Shao Hu.",
+     "note": "He praises Han Qi with famous Zhou statesmen as both civil and military and able inside and outside the court, a fitting compliment."
+    },
+    {
+     "line": "故願得觀賢人之光耀，聞一言以自壯",
+     "en": "So I long to behold the light of a worthy man and hear one word to strengthen myself.",
+     "note": "The purpose of his visit: he wishes to meet Han Qi and receive teaching to encourage himself."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "太尉",
+     "en": "tai wei - Grand Commandant",
+     "note": "Here Han Qi, then Military Affairs Commissioner; in the Song 'tai wei' was a polite way to address that post."
+    },
+    {
+     "term": "浩然之氣",
+     "en": "hao ran zhi qi - flood-like qi",
+     "note": "The great, firm and upright qi of which Mencius spoke."
+    },
+    {
+     "term": "太史公",
+     "en": "tai shi gong - the Grand Historian",
+     "note": "Sima Qian, author of the Records of the Grand Historian."
+    },
+    {
+     "term": "汩沒",
+     "en": "gu mo - to sink out of sight",
+     "note": "To be buried and lost."
+    },
+    {
+     "term": "周公、召公",
+     "en": "Zhou Gong, Shao Gong - Duke of Zhou, Duke of Shao",
+     "note": "The wise ministers who helped King Cheng in the early Zhou, named together as great statesmen."
+    },
+    {
+     "term": "方叔、召虎",
+     "en": "Fang Shu, Shao Hu - Fang Shu and Shao Hu",
+     "note": "Famous ministers under King Xuan of Zhou; Fang Shu campaigned against the Jingman, Shao Hu quieted the Huai barbarians."
+    },
+    {
+     "term": "斗升之祿",
+     "en": "dou sheng zhi lu - a peck or a pint of pay",
+     "note": "A figure for a meagre official salary."
+    },
+    {
+     "term": "賜歸待選",
+     "en": "ci gui dai xuan - allowed home to await appointment",
+     "note": "The court allowed him to go home and wait for an official post."
+    }
+   ],
+   "background": "Su Zhe (1039-1112) was the son of Su Xun and the younger brother of Su Shi. He wrote this letter to Han Qi when he was nineteen. It is a letter seeking an introduction, but it is neither servile nor proud and is mainly about writing, and its idea that writing comes from qi has influenced later literary theory."
+  }
+ }
+}

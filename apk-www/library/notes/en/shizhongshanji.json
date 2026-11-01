@@ -1,0 +1,92 @@
+{
+ "id": "shizhongshanji",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Su Shi doubts the explanations of how Stone Bell Mountain got its name given by Li Daoyuan and Li Bo. He anchors his small boat under the cliff at night, hears bell-and-drum sounds made by water striking rock, and concludes that one must see and hear things for oneself and not judge by guesswork.",
+   "translation": "The Classic of Waterways says: 'At the mouth of Pengli there is a Stone Bell Mountain.' Li Yuan thought that below it lay a deep pool, and when a light wind stirred up waves, water and stones struck each other, making a sound like a great bell. People have always doubted this explanation. If you put a bell or a chime-stone in water, even in a great wind and waves it cannot sound, so how much less a stone?\nIn the Tang dynasty (618-907), Li Bo was the first to look for its remains. He found two stones above the pool, and knocked on them and listened. The south one gave a muffled sound, the north one a clear and ringing note; when the mallet stopped, the sound rose up, and the lingering notes died away slowly. He thought he had got it. But this explanation I doubt even more. Stones that ring when struck are found everywhere; why should this one alone be named a bell?\nIn the sixth month of the seventh year of Yuanfeng, on the dingchou day, I travelled by boat from Qi'an, on my way to Linru. My eldest son Mai was going to be a district warden at Dexing in Rao, and I saw him as far as Hukou, and so got to see the so-called Stone Bell. A monk in the temple had a young boy take an axe and, among the tumbled rocks, pick one or two and knock on them. They went kong kong. I certainly laughed and did not believe it.\nAt night, when the moon was bright, I went alone with Mai in a small boat to the foot of the sheer cliff. Great rocks stood on their sides a thousand feet high, like fierce beasts and strange ghosts, grim as if about to seize a man. The hawks that nested on the mountain, hearing human voices, were also startled up and flew screeching in the clouds. There was also something like an old man coughing and laughing in the valley; someone said, 'That is the guan-crane.' Just as I felt my heart stir and wanted to turn back, a great sound burst out above the water, booming like bells and drums without stopping, and the boatmen were terrified.\nI looked slowly and carefully, and saw that at the foot of the hill there were rock caves and clefts, whose depth could not be known. Small waves entered them, surged and broke, and made this sound. The boat turned back between the two hills, and was about to enter the harbour mouth, when a great rock stood in the mid-stream, large enough for a hundred people to sit on. It was hollow and full of holes, and swallowed and spat out wind and water, with a sound of kuan kan tang ta, echoing the earlier booming one, as if music were being played.\nI laughed and said to Mai: 'Do you know it? The booming is the Wuyi bell of King Jing of Zhou; the kuan kan tang ta is the song bells of Wei Zhuangzi. The ancients did not deceive me!' Can one judge by guesswork whether something exists without seeing it with one's eyes and hearing it with one's ears? What Li Yuan saw and heard was probably the same as mine, but he did not describe it in detail. Scholar-officials will never moor a small boat under a sheer cliff at night, and so cannot know it; fishermen and boatmen know it but cannot put it into words; this is why it has not been handed down. And the ignorant try to find it by knocking with axes, and believe they have got the truth. This is why I record it: to sigh at Li Yuan's brevity and to laugh at Li Bo's crudeness.",
+   "keyLines": [
+    {
+     "line": "石之鏗然有聲者，所在皆是也，而此獨以鐘名，何哉",
+     "en": "Stones that ring when struck are found everywhere; why should this one alone be named a bell?",
+     "note": "Su Shi doubts Li Bo's theory from common sense: stones that ring when struck are everywhere, and that does not explain why this one is called a bell."
+    },
+    {
+     "line": "余固笑而不信也",
+     "en": "I certainly laughed and did not believe it.",
+     "note": "After the monk's knocking, he shows he still does not accept knocking as a way of proof."
+    },
+    {
+     "line": "大石側立千尺，如猛獸奇鬼，森然欲搏人",
+     "en": "Great rocks stood on their sides a thousand feet high, like fierce beasts and strange ghosts, grim as if about to seize a man.",
+     "note": "A comparison paints the grimness of the cliff at night and adds to the tension of the search."
+    },
+    {
+     "line": "大聲發於水上，噌吰如鐘鼓不絕",
+     "en": "A great sound burst out above the water, booming like bells and drums without stopping.",
+     "note": "It reveals the truth about the sound of Stone Bell Mountain: water driven into the rock caves. This is the key discovery of the piece."
+    },
+    {
+     "line": "噌吰者，周景王之無射也；窾坎鏜鞳者，魏莊子之歌鐘也",
+     "en": "The booming is the Wuyi bell of King Jing of Zhou; the kuan kan tang ta is the song bells of Wei Zhuangzi.",
+     "note": "He likens the two sounds to ancient bells and so confirms that the old books are reliable."
+    },
+    {
+     "line": "事不目見耳聞，而臆斷其有無，可乎",
+     "en": "Can one judge by guesswork whether something exists without seeing it with one's eyes and hearing it with one's ears?",
+     "note": "The main point of the piece: one must investigate on the spot and not guess subjectively."
+    },
+    {
+     "line": "蓋嘆酈元之簡，而笑李渤之陋也",
+     "en": "This is why I record it: to sigh at Li Yuan's brevity and to laugh at Li Bo's crudeness.",
+     "note": "The ending states the purpose of writing and passes judgement on the two earlier writers."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "彭蠡",
+     "en": "Peng Li - Pengli",
+     "note": "An ancient marsh, now Lake Poyang."
+    },
+    {
+     "term": "酈元",
+     "en": "Li Yuan - Li Daoyuan",
+     "note": "Li Daoyuan (the text writes Li Yuan), a geographer of the Northern Wei, author of the Commentary on the Classic of Waterways."
+    },
+    {
+     "term": "李渤",
+     "en": "Li Bo - a Tang official",
+     "note": "A man of the Tang who served as prefect of Jiangzhou and wrote a note arguing about Stone Bell Mountain."
+    },
+    {
+     "term": "桴",
+     "en": "fu - drumstick",
+     "note": "A drumstick; here the stick used to knock on the stone."
+    },
+    {
+     "term": "齊安、臨汝",
+     "en": "Qi An, Lin Ru - Qi'an and Linru",
+     "note": "Qi'an is Huangzhou, where Su Shi was demoted; Linru is Ruzhou, where he had been ordered to move."
+    },
+    {
+     "term": "無射",
+     "en": "Wu Yi - Wuyi bell",
+     "note": "The name of a great bell cast by King Jing of Zhou."
+    },
+    {
+     "term": "歌鐘",
+     "en": "ge zhong - song bells",
+     "note": "Ancient chime bells; Wei Zhuangzi (Wei Jiang) was once granted a set of song bells."
+    },
+    {
+     "term": "窾坎鏜鞳",
+     "en": "kuan kan tang ta - sound of bells",
+     "note": "An imitation of the sound of bells and drums; here, the sound made by water and rock striking each other."
+    }
+   ],
+   "background": "Su Shi wrote this in 1084 on his way from Huangzhou to Ruzhou, when he saw his eldest son Su Mai off to his post and passed Hukou, and visited Stone Bell Mountain at night. It is a travel record mixed with argument, and uses the trip to show the importance of investigating on the spot."
+  }
+ }
+}

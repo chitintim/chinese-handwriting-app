@@ -1,0 +1,92 @@
+{
+ "id": "jinxuejie",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Han Yu, under the guise of a master at the Imperial Academy, urges his students on; then a student questions the master, who studies hard yet fares badly in office; and the master answers that people are each fit for different uses, with some modesty and self-mockery. In question and answer form, it lets out his grumbling at being a talent unrecognised.",
+   "translation": "The Master of the Imperial Academy went into the Great Academy one morning, called the students to stand below the hall, and instructed them: \"Study is perfected through diligence and ruined by play; conduct is formed through thought and ruined by carelessness. Now sages and worthies have met in one age, and all the means of government are laid out. The wicked and the evil have been pulled out, and the able and the good raised up. Whoever has a small virtue is recorded, whoever is known for a single skill is employed. The officials rake and sift, scrape off the grime and polish to a shine. If anyone is lucky enough to be chosen, who can say that, among so many, he will not be promoted? You students need worry only that your studies are not fine, not that the officials are unclear-sighted. You need worry only that your conduct is not formed, not that the officials are unfair.\"\n\nBefore he had finished, someone in the ranks laughed and said: \"The master is deceiving us! Your pupil has served you for some years now. Your mouth never stops chanting the texts of the Six Arts, and your hands never stop turning the volumes of the hundred schools. For books of record you always pick out the essentials, for books of doctrine you always hook out the depths. Greedy for more, bent on gaining, you let nothing go, small or great; you burn lamp oil to carry on from daylight, and always toil from year's start to year's end. Your studies, master, may be called diligent. You push aside strange doctrines and drive out the Buddhists and Daoists. You patch the cracks and gaps and set out what is faint and subtle. Seeking the threads that had fallen and been lost in the vastness, you searched alone on every side and joined them again across the distance. You dammed a hundred rivers and turned them east; you turned back the mad waves after they had fallen. For the Confucian cause, master, you may be called hard-working. Steeped in what is rich and mellow, chewing the blossom and savouring the flower, you write essays, and your books fill your house. Above, they take the age of Shun and Yu as their measure, vast and without shore. The Proclamations of Zhou and the Pan Geng of Yin are twisted and hard to say; the Spring and Autumn is strict and spare, the Zuo Commentary is lavish; the Changes are strange yet orderly, the Songs are upright yet flowery. Below them come Zhuangzi and the Lisao, and what the Grand Historian recorded, and Yang Xiong and Sima Xiangru: different tunes, equal skill. In writing, master, you may be called ample within and free without. Early in life you came to know learning, and were bold to act; grown, you were versed in method and fit for left or right. As a man, master, you may be called accomplished.\n\n\"And yet in public you are not trusted by others, in private you are not helped by friends. Stepping forward you stumble, stepping back you fall, and at every move you are blamed. For a short while you were a censor, and were banished to the southern barbarians; for three years you were a Doctor, left idle, with nothing to govern. Your fate plots with your enemies; how many times have you been beaten? In a warm winter your children cry of cold; in a year of good harvest your wife weeps from hunger. Your head is bald and your teeth are gapped; what use is it to die like this? Not knowing to worry about this, do you instead go on teaching others?\"\n\nThe Master said: \"Ah! Come forward. Big timber makes the main beam, small timber makes the rafter; brackets, short posts, door pivots, door stops, bolts and wedges, each put to its fitting use and built into a house: that is the craft of the carpenter. Jade slips and cinnabar, red arrow-herb and blue fungus, ox piss and horse fungus, the skin of a broken drum, all gathered and stored so that nothing is wasted when it is needed: that is the skill of the physician. To raise the bright and choose the fair, to bring forward the clever and the clumsy together, to count the supple and roundabout as graceful and the outstanding as heroes, to weigh short against long and pick only what suits the vessel: that is the method of the chief minister.\n\n\"In the past Mencius loved argument, and so the Way of Confucius was made clear; he drove his cart wheels round the world and finally grew old on the road. Xunzi kept to what was upright, and so a great doctrine was spread; he fled slander to Chu, and was dismissed and died at Lanling. These two Confucians: their words became classics, their every step became a model; they stood apart from their kind, beyond all rank, and passed with ease into the realm of the sages. How did they fare in their age? Now you, though your studies are diligent, do not follow their main line; though your words are many, they do not hit the centre; though your writing is strange, it does not serve any use; though your conduct is cultivated, it is not shown to the crowd. Even so, every month you spend salary money and every year you waste the granary's grain. Your son does not know how to plough and your wife does not know how to weave; you ride a horse with followers on foot, and sit at ease to eat. You tread the common road in cramped small steps, and peep into old books to steal from them. Yet the wise ruler does not punish you and the chief minister does not dismiss you: is this not your good luck? To be blamed whenever you move, and to have your name follow after, to be put aside in an idle post: that is only your due. But to haggle over how much wealth there is, to count the height and lowliness of rank, forgetting what you are fit for, and to point at the flaws of those before you: that is what is called faulting the carpenter for not using a stake as a pillar, and blaming the physician for prolonging life with calamus, when one wants him to prescribe one's own polyporus.\"",
+   "keyLines": [
+    {
+     "line": "業精於勤，荒於嬉；行成於思，毀於隨",
+     "en": "Study is perfected through diligence and ruined by play; conduct is formed through thought and ruined by carelessness.",
+     "note": "The famous opening: learning becomes fine through hard work and decays through play; character is built by thinking and ruined by being careless."
+    },
+    {
+     "line": "諸生業患不能精，無患有司之不明",
+     "en": "You students need worry only that your studies are not fine, not that the officials are unclear-sighted.",
+     "note": "The master urges the students to worry only about whether they are good enough, not about whether the authorities will notice them."
+    },
+    {
+     "line": "貪多務得，細大不捐，焚膏油以繼晷，恆兀兀以窮年",
+     "en": "Greedy for more, bent on gaining, he lets nothing go, small or great; he burns lamp oil to carry on from daylight, and always toils from year's start to year's end.",
+     "note": "The student tells how hard the master works, day and night, without stopping all year."
+    },
+    {
+     "line": "障百川而東之，回狂瀾於既倒",
+     "en": "He dammed a hundred rivers and turned them east; he turned back the mad waves after they had fallen.",
+     "note": "It compares the master's fight against Buddhism and Daoism, in defence of Confucian learning, to rescuing a situation that is about to collapse."
+    },
+    {
+     "line": "含英咀華",
+     "en": "Chewing the blossom and savouring the flower",
+     "note": "A figure for tasting the finest essence of writing slowly; it later became an idiom for appreciating what one reads."
+    },
+    {
+     "line": "跋前躓後，動輒得咎",
+     "en": "Stepping forward he stumbles, stepping back he falls, and at every move he is blamed.",
+     "note": "The student sums up the master's dilemma: whatever he does, he is blamed."
+    },
+    {
+     "line": "大木為杗，細木為桷",
+     "en": "Big timber makes the beam, small timber makes the rafter.",
+     "note": "The opening of the master's reply: using a carpenter's use of wood as an analogy, big and small each have their use, and people should be placed where they fit."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "國子先生",
+     "en": "guo zi xian sheng - master of the Imperial Academy",
+     "note": "A teacher at the Guozijian (Imperial Academy); here Han Yu is speaking of himself."
+    },
+    {
+     "term": "六藝",
+     "en": "liu yi - the six arts",
+     "note": "The six Confucian classics: the Songs, Documents, Rites, Music, Changes and Spring and Autumn Annals."
+    },
+    {
+     "term": "焚膏油以繼晷",
+     "en": "fen gao you yi ji gui - burning lamp oil to carry on from the sun",
+     "note": "To read by lamp at night so as to continue the day; gui is the sun's shadow, meaning daytime."
+    },
+    {
+     "term": "兀兀",
+     "en": "wu wu - toiling",
+     "note": "Describes tireless hard work."
+    },
+    {
+     "term": "周誥殷盤",
+     "en": "Zhou gao Yin pan - the Zhou proclamations and Yin Pan",
+     "note": "The Zhou Proclamations and the Pan Geng chapter of the Shang section of the Book of Documents, in difficult ancient language."
+    },
+    {
+     "term": "佶屈聱牙",
+     "en": "ji qu ao ya - twisted and hard to say",
+     "note": "Sentences that are hard and awkward to read."
+    },
+    {
+     "term": "杗、桷、欂櫨",
+     "en": "mang, jue, bo lu - beam, rafter, bracket",
+     "note": "Mang is the great beam, jue the rafter, bo lu the bracket; all are building timbers."
+    },
+    {
+     "term": "昌陽、豨苓",
+     "en": "chang yang, xi ling - calamus and polyporus",
+     "note": "Chang yang is calamus (changpu) and xi ling is zhuling (polyporus); both are medicines."
+    }
+   ],
+   "background": "Jin xue jie ('Explaining the Progress of Learning') was written when Han Yu was a Doctor at the Imperial Academy. It takes the form of a dialogue: through the student's mouth it lists the master's diligence, achievements and misfortunes, and through the master's mouth it uses the carpenter, the physician and the chancellor as images, mocking himself while airing his sense of unfairness."
+  }
+ }
+}

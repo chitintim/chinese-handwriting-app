@@ -9,6 +9,7 @@
   var ROW_H = 98;          // one list row (88 px + 10 px margin, see .lrow)
   var ROW_H_PHONE = 140;   // the same in the phone layout (132 px + 8 px margin)
   var CROW_H = 84;         // one compact shelf row on the home screen (76 px + 8 px margin, .lrow.compact)
+  var EN_ROW = 16;         // the English interface shows the English name under the Chinese one: every list row is this much taller (css html[data-ui=en] .lrow ...)
   var WIDE_CARDS = 4;      // cards per shelf row on the wide (laptop) layout
   var SHELF_MAX = 3;       // rows of a shelf on the home screen (the rest is behind 全部)
   // sentences of this file that are new in revision 21 (kept together so a later interface-language toggle can swap them in one place)
@@ -26,7 +27,7 @@
     var el = h('div', { class: 'screen' });
     var top = h('div', { class: 'topbar' });
     if (backHash) top.appendChild(h('button', { text: MX.t('返回'), class: 'backbtn', 'data-act': 'back', onclick: function () { location.hash = backHash; } }));
-    top.appendChild(h('h1', { class: 'grow', text: title }));
+    top.appendChild(h('h1', { class: 'grow' }, [typeof title === 'string' ? title : Lib.bi(title, true)]));       // title: a string, or a library name (the English interface adds the English below)
     top.appendChild(MX.langToggle());       // 繁 / 简 / EN: on every screen, right after the title (the screen's own buttons stay at the right edge)
     if (extra) extra.forEach(function (n) { top.appendChild(n); });
     el.appendChild(top);
@@ -38,8 +39,9 @@
     var row = h('div', { class: 'crumbs', 'data-role': 'crumbs' });
     crumbs.forEach(function (c, i) {
       if (i) row.appendChild(h('span', { class: 'sep', text: MX.t('〉') }));
-      if (i < crumbs.length - 1) row.appendChild(h('button', { class: 'crumb', 'data-act': 'crumb', text: c[0], onclick: function () { location.hash = c[1]; } }));
-      else row.appendChild(h('span', { class: 'here', text: c[0] }));
+      var label = typeof c[0] === 'string' ? c[0] : Lib.bi(c[0], false);       // a library name (an object) shows its English beside it in the English interface
+      if (i < crumbs.length - 1) row.appendChild(h('button', { class: 'crumb', 'data-act': 'crumb', onclick: function () { location.hash = c[1]; } }, [label]));
+      else row.appendChild(h('span', { class: 'here' }, [label]));
     });
     return row;
   }
@@ -56,7 +58,14 @@
     return o;
   }
   function libScript() { return Model.settings.libScript === 'simp' ? 'simp' : 'trad'; }
-  function T(v) { if (v && v.en && MX.I18n.isEn()) return v.en; return v ? (v[libScript()] || v.trad || '') : ''; }
+  function T(v) { return v ? (v[libScript()] || v.trad || '') : ''; }      // the Chinese name (library script)
+  function TS(v) { return Lib.ts(v); }                                      // "中文 (English)" in the English interface, for a sentence / a line of text
+  function xh() { return MX.I18n.isEn() ? EN_ROW : 0; }                     // extra row height of the English interface
+  // the byline of an entry: "玄奘 唐" (English interface: "玄奘 唐 (Xuanzang, Tang)")
+  function byline(e) {
+    var zh = [T(e.author), T(e.dynasty)].filter(Boolean).join(' '), en = [Lib.en(e.author), Lib.en(e.dynasty)].filter(Boolean).join(', ');
+    return en ? (zh ? zh + ' (' + en + ')' : en) : zh;
+  }
   function uiFont(script) { return MX.Draw.uiFam(script || libScript()); }
   // where 返回 goes from a text's pages: its chapter list, or its category
   S.backFor = function (textId) {
@@ -67,14 +76,14 @@
   };
   function catCrumbs(e) {
     var cat = e ? Lib.category(e.custom ? Lib.CUSTOM : e.category) : null;
-    return [[MX.t('首頁'), '#/'], [cat ? T(cat.title) : MX.t('書庫'), cat ? H('lib', cat.id) : '#/']];
+    return [[MX.t('首頁'), '#/'], [cat ? cat.title : MX.t('書庫'), cat ? H('lib', cat.id) : '#/']];
   }
   function dateOf(ts) { return ts ? MX.fmtDate(ts) : '—'; }
 
   // ---- paged lists (no scrolling on e-ink): as many rows as fit below what is already on the screen. A list is re-rendered in place (search, sort, pager) and keeps its state
   // in the URL (history.replaceState: Back never steps through pages). o = {state:{p,...}, rows(state)->nodes, link(state)->hash, rowH, reserve, empty(state)->node, into (the node the list goes in; default el)}
   function pagedHost(el, o) {
-    var host = h('div', { 'data-role': 'listhost' }), st = o.state, rowH = o.rowH || (MX.Device.isPhone() ? ROW_H_PHONE : ROW_H), reserve = o.reserve === undefined ? 80 : o.reserve;
+    var host = h('div', { 'data-role': 'listhost' }), st = o.state, rowH = (o.rowH || (MX.Device.isPhone() ? ROW_H_PHONE : ROW_H)) + (o.rowH ? 0 : xh()), reserve = o.reserve === undefined ? 80 : o.reserve;
     (o.into || el).appendChild(host);
     function sync() { try { history.replaceState(null, '', o.link(st)); } catch (e) { /* ignore */ } }
     function render() {
@@ -106,7 +115,7 @@
   // a list row: main part (title, meta; tap = primary) + buttons [{label, act, primary, onclick} | {node}]
   function lrow(o) {
     var main = h('div', { class: 'lmain', onclick: o.open }, [
-      h('div', { class: 't', text: o.title, 'data-role': 'title' }),
+      h('div', { class: 't', 'data-role': 'title' }, [typeof o.title === 'string' ? o.title : Lib.bi(o.title, true)]),       // o.title: a string, or a library name (English below it in the English interface)
       h('div', { class: 'm', 'data-role': 'meta', text: o.meta || '' }),
       o.pct === undefined ? null : h('div', { class: 'lbar', 'data-role': 'card-bar' }, [h('i', { style: 'width:' + o.pct + '%' })])      // only the wide layout's cards show it
     ]);
@@ -209,7 +218,10 @@
     Lib.getText(textId).then(function (t) {
       var sec = t.sections.filter(function (s) { return s.id === sectionId; })[0];
       var el = row.querySelector('[data-role=title]');
-      if (sec && el && row.parentNode) el.textContent = T(t.title) + (t.sections.length > 1 ? ' · ' + T(sec.title) : '');
+      if (sec && el && row.parentNode) {
+        el.textContent = '';
+        el.appendChild(Lib.bi(t.sections.length > 1 ? Lib.join([t.title, sec.title], ' · ') : t.title, true));
+      }
     }).catch(function () { /* the text title stays */ });
   }
 
@@ -217,7 +229,7 @@
   function resumeRow(c, compact) {
     var e = Lib.entry(c.textId);
     var r = lrow({
-      title: T(e.title), meta: MX.t('進度 {pct}% · 最後書寫 {date}', { pct: pctOf(c), date: dateOf(c.updatedAt) }), font: uiFont(c.cfg.script), compact: compact, pct: pctOf(c),
+      title: e.title, meta: MX.t('進度 {pct}% · 最後書寫 {date}', { pct: pctOf(c), date: dateOf(c.updatedAt) }), font: uiFont(c.cfg.script), compact: compact, pct: pctOf(c),
       attrs: { 'data-role': 'resume', 'data-copy': c.id, 'data-text': null }, open: function () { location.hash = H('practice', c.id); },
       buttons: [{ label: MX.t('繼續'), act: 'resume', primary: true, onclick: function () { location.hash = H('practice', c.id); } }, exportBtn(c)]
     });
@@ -231,7 +243,7 @@
     if (sec) {
       var copy = Model.activeCopy(f.textId, sec);
       r = lrow({
-        title: T(e.title), meta: MX.t('進度 {pct}% · 已抄 {n} 遍', { pct: pctOf(copy), n: Model.doneCount(f.textId, sec) }), font: uiFont(scriptOf(f.textId, sec)), compact: compact, pct: pctOf(copy),
+        title: e.title, meta: MX.t('進度 {pct}% · 已抄 {n} 遍', { pct: pctOf(copy), n: Model.doneCount(f.textId, sec) }), font: uiFont(scriptOf(f.textId, sec)), compact: compact, pct: pctOf(copy),
         attrs: { 'data-role': 'fav', 'data-fav-text': f.textId, 'data-fav-section': sec }, open: function () { location.hash = startHash(f.textId, sec); },
         buttons: [{ label: startLabel(f.textId, sec), act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, sec); } },
           { node: MX.favButton(f.textId, sec, onFav) }]
@@ -239,10 +251,10 @@
       refineTitle(r, f.textId, sec);
       return r;
     }
-    var byline = [T(e.author), T(e.dynasty)].filter(Boolean).join(' ');
+    var by = byline(e);
     var prog = multi ? Math.floor(100 * Model.textProgress(f.textId, e.sections)) : pctOf(Model.activeCopy(f.textId, 'main'));
     return lrow({
-      title: T(e.title), meta: (byline ? byline + ' · ' : '') + MX.t('{chars}字 · 進度 {pct}%', { chars: e.chars, pct: prog }), font: uiFont(), compact: compact, pct: prog,
+      title: e.title, meta: (by ? by + ' · ' : '') + MX.t('{chars}字 · 進度 {pct}%', { chars: e.chars, pct: prog }), font: uiFont(), compact: compact, pct: prog,
       attrs: { 'data-role': 'fav', 'data-fav-text': f.textId }, open: function () { location.hash = multi ? H('text', f.textId) : startHash(f.textId, 'main'); },
       buttons: [multi ? { label: MX.t('章節'), act: 'sections', primary: true, onclick: function () { location.hash = H('text', f.textId); } }
         : { label: startLabel(f.textId, 'main'), act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, 'main'); } },
@@ -336,7 +348,7 @@
       Lib.texts(c.id).forEach(function (e) { done += Model.doneCount(e.id); });
       var meta = c.custom && !n ? MX.t('貼上文字') : MX.t('{n} 篇', { n: n });
       var t = h('button', { class: 'tile', 'data-cat': c.id, 'data-act': 'open', style: 'font-family:' + uiFont(), onclick: function () { location.hash = H('lib', c.id); } }, [
-        h('div', { class: 't', text: T(c.title) }),
+        h('div', { class: 't' }, [Lib.bi(c.title, true)]),
         h('div', { class: 'm', text: meta, title: done ? MX.t('已抄 {n} 遍', { n: done }) : null })
       ]);
       tiles.appendChild(t);
@@ -366,7 +378,7 @@
       rItems.slice(0, WIDE_CARDS).forEach(function (c) { rRows.appendChild(resumeRow(c, true)); });
       fItems.slice(0, WIDE_CARDS).forEach(function (f) { var r = favRow(f, true, function () { MX.route(); }); if (r) fRows.appendChild(r); });
     } else if (rItems.length || fItems.length) {
-      var total = Math.max(0, Math.floor(left / (MX.Device.isPhone() ? 132 : CROW_H))), a = 0, b = 0, progress = true;
+      var total = Math.max(0, Math.floor(left / ((MX.Device.isPhone() ? 132 : CROW_H) + xh()))), a = 0, b = 0, progress = true;
       if (rItems.length) a = 1;
       if (fItems.length) b = 1;
       total -= a + b;
@@ -414,24 +426,23 @@
   }
   function matches(e, q) {
     q = String(q || '').trim().toLowerCase();
-    if (!q) return true;
-    return [e.title, e.author, e.dynasty].some(function (v) { return v && ((v.trad || '').toLowerCase().indexOf(q) >= 0 || (v.simp || '').toLowerCase().indexOf(q) >= 0); });
+    return !q || Lib.matches(e, q);
   }
   function textRow(e, onFav) {
     var multi = e.sections > 1, buttons = [], meta, custom = !!e.custom;
-    var byline = [T(e.author), T(e.dynasty)].filter(Boolean).join(' ');
+    var by = byline(e);
     if (multi) {
-      meta = (byline ? byline + ' · ' : '') + MX.t('{chars}字 · {secs}章 · 已完成 {done}/{secs} · 進度 {pct}% · 已抄 {n} 遍', { chars: e.chars, secs: e.sections, done: Model.sectionsDone(e.id),
+      meta = (by ? by + ' · ' : '') + MX.t('{chars}字 · {secs}章 · 已完成 {done}/{secs} · 進度 {pct}% · 已抄 {n} 遍', { chars: e.chars, secs: e.sections, done: Model.sectionsDone(e.id),
         pct: Math.floor(100 * Model.textProgress(e.id, e.sections)), n: Model.doneCount(e.id) }) + (Lib.hasNotes(e.id) ? MX.t(' · 有解說') : '');
       buttons.push({ label: MX.t('章節'), act: 'sections', primary: true, onclick: function () { location.hash = H('text', e.id); } });
       buttons.push({ node: MX.favButton(e.id, null, onFav) });
     } else {
-      meta = sectionMeta(e.id, 'main', e.chars, byline);
+      meta = sectionMeta(e.id, 'main', e.chars, by);
       buttons = sectionButtons(e.id, 'main', null, onFav);
     }
     if (custom) buttons.splice(buttons.length - 1, 0, { label: MX.t('編輯'), act: 'edit-custom', onclick: function () { location.hash = H('custom', e.id); } });
     return lrow({
-      title: T(e.title), meta: meta, font: uiFont(multi ? libScript() : scriptOf(e.id, 'main')), attrs: { 'data-text': e.id },
+      title: e.title, meta: meta, font: uiFont(multi ? libScript() : scriptOf(e.id, 'main')), attrs: { 'data-text': e.id },
       open: function () { location.hash = multi ? H('text', e.id) : startHash(e.id, 'main'); },
       buttons: buttons
     });
@@ -466,7 +477,7 @@
     var cat = Lib.category(catId);
     if (!cat) { location.hash = '#/'; return; }
     var custom = catId === Lib.CUSTOM;
-    var el = screen(root, T(cat.title), '#/', null, [[MX.t('首頁'), '#/'], [T(cat.title), H('lib', catId)]]);
+    var el = screen(root, cat.title, '#/', null, [[MX.t('首頁'), '#/'], [cat.title, H('lib', catId)]]);
     el.setAttribute('data-screen', 'category');
     el.setAttribute('data-cat', catId);
     if (custom) {
@@ -516,7 +527,7 @@
     return h('div', { class: 'qstart', 'data-role': 'quickstart', 'data-state': nx.state, 'data-next': sec.id }, [
       h('div', { class: 'qinfo' }, [
         h('div', { class: 'qk', 'data-role': 'qs-kind', text: kind }),
-        h('div', { class: 'qt', 'data-role': 'qs-title', text: T(sec.title), style: 'font-family:' + uiFont(doing && copy ? copy.cfg.script : d.script) }),
+        h('div', { class: 'qt', 'data-role': 'qs-title', style: 'font-family:' + uiFont(doing && copy ? copy.cfg.script : d.script) }, [Lib.bi(sec.title, true)]),
         h('div', { class: 'qm', 'data-role': 'qs-meta', text: meta }),
         h('div', { class: 'qline', 'data-role': 'qs-choices', text: cfgLine(d) })
       ].concat(MX.Form.inputRow() || [])),
@@ -536,12 +547,12 @@
     if (Model.works().some(function (c) { return c.textId === textId; })) {       // a backup of this text's writings only
       extra.push(h('button', { text: STR.backupText, 'data-act': 'backup-text', onclick: function () { MX.Backup.save({ text: textId }).catch(function (e) { MX.err(e); MX.toast(MX.Backup.STR.saveFail); }); } }));
     }
-    var el = screen(root, T(entry.title), H('lib', entry.custom ? Lib.CUSTOM : entry.category), extra, cats.concat([[T(entry.title), H('text', textId)]]));
+    var el = screen(root, entry.title, H('lib', entry.custom ? Lib.CUSTOM : entry.category), extra, cats.concat([[entry.title, H('text', textId)]]));
     el.setAttribute('data-screen', 'text');
     el.setAttribute('data-text-id', textId);
-    var byline = [T(entry.author), T(entry.dynasty)].filter(Boolean).join(' ');
-    if (byline) el.appendChild(h('div', { class: 'note', text: byline }));
-    if (T(entry.description)) el.appendChild(h('div', { class: 'note', text: T(entry.description) }));
+    var by = byline(entry);
+    if (by) el.appendChild(h('div', { class: 'note', 'data-role': 'byline', text: by }));
+    if (T(entry.description)) el.appendChild(h('div', { class: 'note', 'data-role': 'description' }, [Lib.bi(entry.description, true)]));
     // the page is never an empty list: the panel's place is taken by 載入中… while the text loads, and by the error with 重試 when it does not
     var qsBox = h('div', { 'data-role': 'qs-host' }), sum = h('div', { class: 'note', 'data-role': 'summary' }), barBox = h('div'), listBox = h('div', { 'data-role': 'list-host' });
     [qsBox, sum, barBox, listBox].forEach(function (n) { el.appendChild(n); });
@@ -560,7 +571,7 @@
           text.sections.forEach(function (sec) {
             try {
               out.push(lrow({
-                title: T(sec.title), meta: sectionMeta(textId, sec.id, Lib.sectionChars(sec), sec.author ? T(sec.author) : ''), font: uiFont(scriptOf(textId, sec.id)), cls: sec.id === nx.id ? 'next' : '',
+                title: sec.title, meta: sectionMeta(textId, sec.id, Lib.sectionChars(sec), sec.author ? TS(sec.author) : ''), font: uiFont(scriptOf(textId, sec.id)), cls: sec.id === nx.id ? 'next' : '',
                 attrs: { 'data-section': sec.id, 'data-state': Model.sectionState(textId, sec.id), 'data-notes': Lib.hasNotes(textId, sec.id) ? '1' : null }, buttons: sectionButtons(textId, sec.id, sec.id),
                 open: function () { location.hash = startHash(textId, sec.id); }
               }));
@@ -599,9 +610,9 @@
     var locked = !!(copy && Model.recount(copy) > 0);
     var d = assign({}, locked ? copy.cfg : Model.textCfg(textId));         // choices: this copy's when it has ink, else the text's remembered ones (Model.textCfg)
     var crumbs = catCrumbs(entry);
-    if (entry.sections > 1) crumbs.push([T(entry.title), H('text', textId)]);
+    if (entry.sections > 1) crumbs.push([entry.title, H('text', textId)]);
     crumbs.push([MX.t('設定'), H('setup', textId, sectionId)]);
-    var el = screen(root, T(entry.title), S.backFor(textId), null, crumbs);
+    var el = screen(root, entry.title, S.backFor(textId), null, crumbs);
     el.setAttribute('data-screen', 'setup');
     el.setAttribute('data-section', sectionId);
     // Layout of this screen: title (+ section) and the size estimate, ONE big start button right under them (繼續上次 + a quieter 重新開始 when there is ink),
@@ -611,7 +622,7 @@
     var viewP = Lib.getView(textId, sectionId);
     viewP.then(function (v) {
       if (!el.parentNode) return;
-      if (v.multi) el.querySelector('h1').textContent = T(v.textTitle) + ' · ' + T(v.sectionTitle);
+      if (v.multi) { var h1 = el.querySelector('h1'); h1.textContent = ''; h1.appendChild(Lib.bi(Lib.join([v.textTitle, v.sectionTitle], ' · '), true)); }
     }).catch(function () { /* shown below */ });
     // an estimate of the pages in the tablet / laptop layout (the phone shows one cell per page: no page count there)
     function pagesOf(cells) {
@@ -869,6 +880,7 @@
       h('a', { class: 'btnlink plain', 'data-act': 'about-github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: MX.t('完整介紹 · GitHub') })
     ]));
     ab.appendChild(h('div', { class: 'note', 'data-role': 'font-credit', text: MX.Notes.CREDITS.font }));
+    ab.appendChild(h('div', { class: 'note', 'data-role': 'notes-credit', text: MX.Notes.CREDITS.notes }));
     ab.appendChild(h('div', { class: 'note', 'data-role': 'stroke-credit', text: MX.Notes.CREDITS.stroke }));
     ab.appendChild(h('div', { class: 'note', 'data-role': 'privacy-note', text: MX.Notes.CREDITS.privacy }));
   };
@@ -876,7 +888,7 @@
   // ------------------------------------------------------------------ archives (of one section; no section = all sections of the text)
   S.archives = function (root, textId, sectionId) {
     var entry = Lib.entry(textId);
-    var el = screen(root, MX.t('存檔 · {title}', { title: entry ? T(entry.title) : '' }), S.backFor(textId), [
+    var el = screen(root, MX.t('存檔 · {title}', { title: entry ? TS(entry.title) : '' }), S.backFor(textId), [
       h('button', { text: STR.worksTitle, 'data-act': 'works', onclick: function () { location.hash = H('works', null, null, 't=' + encodeURIComponent(textId)); } })]);
     el.setAttribute('data-screen', 'archives');
     var list = Model.archived(textId, sectionId);

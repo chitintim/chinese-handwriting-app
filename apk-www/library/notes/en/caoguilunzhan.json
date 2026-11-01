@@ -1,0 +1,87 @@
+{
+ "id": "caoguilunzhan",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "The state of Qi attacks Lu. Cao Gui asks to see Duke Zhuang of Lu, first questions him on what he can fight with, then at the battle of Changshao picks the moment to beat the drum and the moment to pursue. At the end he explains why morale and reading the enemy's collapse decide a battle.",
+   "translation": "In the spring of the tenth year, the army of Qi attacked us. The duke was about to fight, and Cao Gui asked for an audience. A man from his village said, 'Those who eat meat are planning it. What business have you meddling in it?' Gui said, 'Those who eat meat are shallow and cannot plan far ahead.' So he went in to see the duke.\nHe asked, 'What will you fight with?' The duke said, 'Clothing and food that keep me comfortable I never dare to keep to myself; I always share them with others.' Gui replied, 'Small favours do not reach everyone, and the people will not follow you.' The duke said, 'For the sacrificial animals, jade and silk I never dare to add anything false; I always keep to good faith.' Gui replied, 'Small good faith does not win trust, and the spirits will not bless you.' The duke said, 'In cases big and small I may not be able to examine everything, but I always judge by the true facts.' Gui replied, 'That is a kind of loyalty to the people. You can fight one battle with it. When you fight, I ask to go with you.'\nThe duke let him ride in his chariot, and they fought at Changshao. The duke was about to sound the drum. Gui said, 'Not yet.' When the men of Qi had sounded the drum three times, Gui said, 'Now.' The Qi army was beaten. The duke was about to give chase. Gui said, 'Not yet.' He got down and looked at the tracks of their wheels, then climbed on to the front rail of the chariot and looked into the distance. He said, 'Now.' And so they pursued the Qi army.\nAfter the victory, the duke asked him why. Gui replied, 'In battle, what counts is courage. At the first drum, courage rises; at the second it fades; at the third it is spent. They were spent and we were full, and so we beat them. A great state is hard to read, and I feared an ambush. I saw their wheel tracks in disorder and their banners lying down, and so I pursued them.'",
+   "keyLines": [
+    {
+     "line": "肉食者鄙，未能遠謀",
+     "en": "Those who eat meat are shallow and cannot plan far ahead.",
+     "note": "Cao Gui criticises those in power as short-sighted, which explains why he steps forward himself."
+    },
+    {
+     "line": "小惠未徧，民弗從也",
+     "en": "Small favours do not reach everyone, and the people will not follow you.",
+     "note": "Small acts of generosity are not enough to win the people's hearts; victory in war depends on popular support."
+    },
+    {
+     "line": "小大之獄，雖不能察，必以情",
+     "en": "In cases big and small I may not be able to examine everything, but I always judge by the true facts.",
+     "note": "The duke judges lawsuits by the facts, and Cao Gui sees this as loyal service to the people, so he decides a battle is possible."
+    },
+    {
+     "line": "忠之屬也，可以一戰",
+     "en": "That is a kind of loyalty to the people. You can fight one battle with it.",
+     "note": "Cao Gui approves of the duke's conduct: winning the people's trust is the basic condition for war."
+    },
+    {
+     "line": "夫戰，勇氣也。一鼓作氣，再而衰，三而竭。彼竭我盈，故克之",
+     "en": "In battle, what counts is courage. At the first drum, courage rises; at the second it fades; at the third it is spent. They were spent and we were full, and so we beat them.",
+     "note": "The best-known passage in the piece, about how to use the morale of an army on the field."
+    },
+    {
+     "line": "吾視其轍亂，望其旗靡，故逐之",
+     "en": "I saw their wheel tracks in disorder and their banners lying down, and so I pursued them.",
+     "note": "It explains how he judged the time to pursue: he made sure the enemy was truly routed and not feigning defeat."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "肉食者",
+     "en": "rou shi zhe - those who eat meat",
+     "note": "People who eat meat, meaning nobles who hold office."
+    },
+    {
+     "term": "間",
+     "en": "jian - to meddle",
+     "note": "To take part in, to step into."
+    },
+    {
+     "term": "犧牲玉帛",
+     "en": "xi sheng yu bo - offerings of animals, jade and silk",
+     "note": "The animals, jade and silk fabrics used in sacrifice."
+    },
+    {
+     "term": "孚",
+     "en": "fu - to win trust",
+     "note": "To make people believe in you."
+    },
+    {
+     "term": "長勺",
+     "en": "Changshao - a battlefield",
+     "note": "A place in the state of Lu, in what is now Shandong."
+    },
+    {
+     "term": "鼓",
+     "en": "gu - to beat the drum",
+     "note": "To sound the drum to advance; here it is a verb."
+    },
+    {
+     "term": "軾",
+     "en": "shi - front rail",
+     "note": "The crossbar at the front of an ancient chariot box, used to lean on."
+    },
+    {
+     "term": "靡",
+     "en": "mi - to lie down",
+     "note": "To fall over, to be flattened."
+    }
+   ],
+   "background": "This text comes from the Zuozhuan (Zuo Commentary), the tenth year of Duke Zhuang, and tells the battle of Changshao (684 BC). Later readers usually call it 'Cao Gui on Battle'. Through dialogue and action it shows how political preparation and command on the field are linked, and it is a model of the Zuozhuan's concise storytelling."
+  }
+ }
+}

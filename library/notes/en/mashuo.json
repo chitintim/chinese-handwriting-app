@@ -1,0 +1,82 @@
+{
+ "id": "mashuo",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Han Yu uses the thousand-li horse and the horse connoisseur Bole as an image. Talent is often buried, he says, not because there is none, but because there is no one who can recognise and use it. The last line says outright that those in power in fact do not know talent.",
+   "translation": "Only when there is a Bole are there thousand-li horses. Thousand-li horses are always there, but Bole is not always there. So even if there are famous horses, they are only humiliated in the hands of grooms and slaves, and die side by side in the stables, never to be called thousand-li horses.\nA horse that can go a thousand li may eat a whole picul of grain at one feed. The one who feeds the horse does not know it can go a thousand li, and feeds it as an ordinary horse. So this horse, though it has the ability to go a thousand li, does not eat its fill and lacks the strength; its fine talent does not show outwardly, and it cannot even match ordinary horses, so how could one hope for it to go a thousand li?\nThey whip it without the right method, feed it without being able to bring out its full talent, and when it neighs they cannot grasp what it means. Then they hold the whip, stand before it, and say: 'There are no horses in the world!' Alas! Can it really be that there are no horses? It is truly that they do not know horses.",
+   "keyLines": [
+    {
+     "line": "世有伯樂，然後有千里馬",
+     "en": "Only when there is a Bole are there thousand-li horses.",
+     "note": "The opening statement of the argument: only when there is someone who can recognise talent can a fine horse be found, which shows how talent depends on being appreciated."
+    },
+    {
+     "line": "千里馬常有，而伯樂不常有",
+     "en": "Thousand-li horses are always there, but Bole is not always there.",
+     "note": "The central contrast of the piece: talent is always there, but a person who truly understands it is hard to find."
+    },
+    {
+     "line": "祇辱於奴隸人之手，駢死於槽櫪之間，不以千里稱也",
+     "en": "They are only humiliated in the hands of grooms and slaves, and die side by side in the stables, never to be called thousand-li horses.",
+     "note": "It describes how the thousand-li horse is buried and lost, hinting at gifted men who are ignored."
+    },
+    {
+     "line": "食馬者，不知其能千里而食也",
+     "en": "The one who feeds the horse does not know it can go a thousand li, and feeds it as an ordinary horse.",
+     "note": "It shows that the man who feeds the horse does not know its ability, which is what causes the tragedy."
+    },
+    {
+     "line": "策之不以其道，食之不能盡其材，鳴之而不能通其意",
+     "en": "They whip it without the right method, feed it without being able to bring out its full talent, and when it neighs they cannot grasp what it means.",
+     "note": "Three negatives in parallel describe the different ways talent is misused."
+    },
+    {
+     "line": "嗚呼！其真無馬邪？其真不知馬也",
+     "en": "Can it really be that there are no horses? It is truly that they do not know horses.",
+     "note": "He closes with a rhetorical question and points straight at the people in power, who do not recognise talent. It is the line that makes the point of the piece."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "伯樂",
+     "en": "Bo Le - Bole",
+     "note": "A man of the state of Qin in the Spring and Autumn period, famous for judging horses. Later the name came to mean someone who can spot talent."
+    },
+    {
+     "term": "祇辱",
+     "en": "zhi ru - only humiliated",
+     "note": "To be only disgraced. The first character is a variant of another character for 'only'."
+    },
+    {
+     "term": "駢死",
+     "en": "pian si - to die side by side",
+     "note": "To die in a row, meaning to die together with ordinary horses."
+    },
+    {
+     "term": "槽櫪",
+     "en": "cao li - trough and stable",
+     "note": "The feeding trough, the stable. Read li for the second character."
+    },
+    {
+     "term": "一食或盡粟一石",
+     "en": "yi shi huo jin su yi dan - to finish a picul of grain at a meal",
+     "note": "Sometimes eating a whole picul of grain at one meal; a picul (dan) is a unit of volume."
+    },
+    {
+     "term": "策",
+     "en": "ce - whip",
+     "note": "A horse whip; here a verb meaning to whip, to drive."
+    },
+    {
+     "term": "通其意",
+     "en": "tong qi yi - to understand its meaning",
+     "note": "To grasp what the horse's neigh means."
+    }
+   ],
+   "background": "Ma shuo (On Horses) is the fourth of Han Yu's four pieces called Za shuo (Miscellaneous Discourses). By means of an object that stands for something else, it voices the sorrow of a talent that is not appreciated and criticises those in power for not being able to find and promote able people."
+  }
+ }
+}

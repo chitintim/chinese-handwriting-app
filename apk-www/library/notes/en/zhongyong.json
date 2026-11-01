@@ -1,0 +1,945 @@
+{
+ "id": "zhongyong",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "ch01": {
+   "summary": "The master outline of the book: how Heaven's mandate, human nature, the Way and teaching are linked; why the noble person is watchful when alone; and how the state before feelings arise is 'the mean', while feelings that arise and keep their measure are 'harmony'. When the mean and harmony are fully reached, Heaven and Earth take their places and the myriad things thrive.",
+   "translation": "What Heaven confers is called nature; following one's nature is called the Way; cultivating the Way is called teaching. The Way is something that cannot be left for even a moment; if it could be left, it would not be the Way. So the noble person is careful about what is not seen, and fearful about what is not heard. Nothing shows itself more than what is hidden, and nothing appears more than what is slight; so the noble person is watchful when alone. Before joy, anger, sorrow and delight have arisen, it is called the mean; when they have arisen and all keep to their due measure, it is called harmony. The mean is the great root of the world; harmony is the road all the world travels. When the mean and harmony are fully reached, Heaven and Earth find their places and the myriad things are nourished.",
+   "glossary": [
+    {
+     "term": "天命之謂性",
+     "en": "tian ming zhi wei xing - 'what Heaven confers is called nature'",
+     "note": "「天命」 is the endowment Heaven gives; 「性」 is human nature. This is one of the sources of the Confucian view of human nature."
+    },
+    {
+     "term": "率性",
+     "en": "shuai xing - 'to follow one's nature'",
+     "note": "To act in accord with one's nature. 「率」 means to follow."
+    },
+    {
+     "term": "慎獨",
+     "en": "shen du - 'watchfulness when alone'",
+     "note": "To stay careful and self-examining when alone and unknown to others. The Great Learning (Daxue) uses the same phrase."
+    },
+    {
+     "term": "中和",
+     "en": "zhong he - 'the mean and harmony'",
+     "note": "The mean is the calm state before the feelings arise; harmony is the feelings arising in due measure. These two are the central ideas of the book."
+    },
+    {
+     "term": "致",
+     "en": "zhi - 'to reach'",
+     "note": "To push to the furthest point."
+    }
+   ],
+   "background": "Zhu Xi made this chapter the master outline of the Doctrine of the Mean (Zhongyong), saying that Zisi, the grandson of Confucius, set down the thought that had been passed down to him. The chapters that follow are all developments of it."
+  },
+  "ch02": {
+   "summary": "Confucius distinguishes the noble person from the petty person: the noble person's mean is to hit the mean at each moment, while the petty person's 'mean' is to act with no restraint.",
+   "translation": "Zhongni said: 'The noble person embodies the mean; the petty person goes against the mean. The noble person's mean is that he keeps to the middle at each time; the petty person's 'mean' is that, being a petty person, he has no restraint.'",
+   "glossary": [
+    {
+     "term": "仲尼",
+     "en": "zhong ni - 'Zhongni'",
+     "note": "The courtesy name of Confucius."
+    },
+    {
+     "term": "時中",
+     "en": "shi zhong - 'the mean in its time'",
+     "note": "To find the right measure in each time and place, without clinging to one extreme."
+    },
+    {
+     "term": "無忌憚",
+     "en": "wu ji dan - 'without restraint'",
+     "note": "With no scruple and no sense of awe."
+    },
+    {
+     "term": "小人反中庸",
+     "en": "xiao ren fan zhong yong - 'the petty person goes against the mean'",
+     "note": "Zhu Xi held that the word 「反」 had dropped out before 「小人之中庸」, so that it should read 'the petty person goes against the mean'."
+    }
+   ]
+  },
+  "ch03": {
+   "summary": "Confucius sighs that the mean is the highest virtue, yet few people have been able to keep to it for long.",
+   "translation": "The Master said: 'The mean, surely, is the highest! Few among the people have been able to keep it for long.'",
+   "glossary": [
+    {
+     "term": "中庸",
+     "en": "zhong yong - 'the mean'",
+     "note": "「中」 means neither leaning one way nor the other. 「庸」 is explained as 'to use' by Zheng Xuan and as 'ordinary' by Zhu Xi. Together the term means holding to what is ordinary and fitting."
+    },
+    {
+     "term": "至",
+     "en": "zhi - 'highest'",
+     "note": "The utmost."
+    },
+    {
+     "term": "鮮",
+     "en": "xian - 'few'",
+     "note": "Rare."
+    },
+    {
+     "term": "民鮮能久",
+     "en": "min xian neng jiu - 'few among the people can keep it long'",
+     "note": "The Analects, 'Yongye', also has 'The mean as a virtue, surely it is the highest; few among the people have had it for long'."
+    }
+   ]
+  },
+  "ch04": {
+   "summary": "The Way is neither practised nor made clear because the clever and the dull, the worthy and the unworthy, all go to excess or fall short; everyone eats and drinks, yet few know the taste.",
+   "translation": "The Master said: 'I know why the Way is not practised: the clever overshoot it and the dull fall short of it. I know why the Way is not made clear: the worthy overshoot it and the unworthy fall short of it. There is no one who does not eat and drink, but few can tell the taste.'",
+   "glossary": [
+    {
+     "term": "知者過之，愚者不及",
+     "en": "zhi zhe guo zhi, yu zhe bu ji - 'the clever overshoot, the dull fall short'",
+     "note": "The clever often think the Way is nothing much and reach for what is far and high; the dull lack the capacity to get there."
+    },
+    {
+     "term": "賢者過之，不肖者不及",
+     "en": "xian zhe guo zhi, bu xiao zhe bu ji - 'the worthy overshoot, the unworthy fall short'",
+     "note": "The worthy aim too high and far; the unworthy are content to stay low."
+    },
+    {
+     "term": "鮮能知味",
+     "en": "xian neng zhi wei - 'few can tell the taste'",
+     "note": "A figure for people who use the Way every day without knowing it, who cannot taste the ordinary flavour of the mean."
+    },
+    {
+     "term": "過與不及",
+     "en": "guo yu bu ji - 'excess and falling short'",
+     "note": "Confucius's idea of the middle way. The Analects, 'Xianjin', says 'going too far is just like falling short'."
+    }
+   ]
+  },
+  "ch05": {
+   "summary": "Confucius sighs that the Way will perhaps never be practised.",
+   "translation": "The Master said: 'Alas, the Way will not be practised!'",
+   "glossary": [
+    {
+     "term": "其……矣夫",
+     "en": "qi ... yi fu - 'surely ... alas'",
+     "note": "A pattern that expresses a sigh, with a note of regret."
+    },
+    {
+     "term": "道",
+     "en": "dao - 'the Way'",
+     "note": "The way of the mean, that is, what is fitting in everyday human life."
+    },
+    {
+     "term": "朱熹章句",
+     "en": "zhu xi zhang ju - 'Zhu Xi's Commentary'",
+     "note": "Zhu Xi took this chapter as following on the last: Confucius moves from the Way not being made clear to the sigh that it is not practised."
+    }
+   ],
+   "background": "The whole chapter is only the words 'the Way will not be practised', with 'the Master said', and is the shortest chapter of the Doctrine of the Mean."
+  },
+  "ch06": {
+   "summary": "Confucius praises Shun's great wisdom: he loved to ask questions, weighed plain words, hid the bad and spread the good, and took hold of both extremes to apply the mean.",
+   "translation": "The Master said: 'Shun was a man of great wisdom! Shun liked to ask questions and liked to weigh plain words. He hid what was bad and spread what was good. He took hold of both extremes, and applied the middle between them to the people. This is why he was Shun.'",
+   "glossary": [
+    {
+     "term": "邇言",
+     "en": "er yan - 'plain words'",
+     "note": "Simple, near-at-hand talk, everyday speech."
+    },
+    {
+     "term": "隱惡而揚善",
+     "en": "yin e er yang shan - 'to hide the bad and spread the good'",
+     "note": "Not to publicise others' faults but only to praise their merits."
+    },
+    {
+     "term": "執其兩端",
+     "en": "zhi qi liang duan - 'to take hold of both extremes'",
+     "note": "To grasp the two extremes of a matter and then take the proper middle; this is the method of the mean."
+    },
+    {
+     "term": "舜",
+     "en": "shun - 'Shun'",
+     "note": "A sage-king of high antiquity, held up as a model by the Confucians."
+    }
+   ]
+  },
+  "ch07": {
+   "summary": "Everyone calls themselves clever, yet they cannot avoid disaster; they choose the mean, yet cannot hold it for a month.",
+   "translation": "The Master said: 'Everyone says, \"I am wise,\" yet they are driven into nets, traps and pits, and do not know how to avoid them. Everyone says, \"I am wise,\" yet they choose the mean and cannot keep it for a full month.'",
+   "glossary": [
+    {
+     "term": "罟擭陷阱",
+     "en": "gu huo xian jing - 'nets, traps and pits'",
+     "note": "「罟」 is a net, 「擭」 a trap for catching beasts, 「陷阱」 a pit; together, all kinds of danger."
+    },
+    {
+     "term": "辟",
+     "en": "bi - 'to avoid'",
+     "note": "Borrowed for 「避」: to avoid."
+    },
+    {
+     "term": "期月",
+     "en": "qi yue - 'a full month'",
+     "note": "A whole month, or by some a year. Zhu Xi reads it as a round month."
+    },
+    {
+     "term": "擇乎中庸",
+     "en": "ze hu zhong yong - 'to choose the mean'",
+     "note": "To pick the mean and fix on it as one's standard."
+    }
+   ]
+  },
+  "ch08": {
+   "summary": "Confucius praises Yan Hui, who chose the mean, and when he found one good thing, held it fast in his heart and did not lose it.",
+   "translation": "The Master said: 'Hui was a man who chose the mean; whenever he found one good thing, he held it close to his chest and did not lose it.'",
+   "glossary": [
+    {
+     "term": "回",
+     "en": "hui - 'Hui'",
+     "note": "Yan Hui, Confucius's favourite disciple."
+    },
+    {
+     "term": "拳拳服膺",
+     "en": "quan quan fu ying - 'to hold it close in the heart'",
+     "note": "「拳拳」 means holding earnestly; 「服膺」 means keeping it in one's breast. The idiom 「拳拳服膺」 comes from here."
+    },
+    {
+     "term": "得一善",
+     "en": "de yi shan - 'to find one good'",
+     "note": "One good deed or one good principle."
+    },
+    {
+     "term": "擇乎中庸",
+     "en": "ze hu zhong yong - 'to choose the mean'",
+     "note": "To choose the mean and set it as the standard."
+    }
+   ]
+  },
+  "ch09": {
+   "summary": "It is possible to govern the world, to refuse rank and salary, even to walk on bare blades, yet the mean is the hardest of all.",
+   "translation": "The Master said: 'The world, its states and families, can be brought to even order; rank and salary can be refused; a bare blade can be trodden. But the mean cannot be done.'",
+   "glossary": [
+    {
+     "term": "均",
+     "en": "jun - 'to make even'",
+     "note": "To put in order and make fair."
+    },
+    {
+     "term": "白刃可蹈",
+     "en": "bai ren ke dao - 'a bare blade can be trodden'",
+     "note": "A figure for courageous sacrifice, not shrinking even from treading on sword edges."
+    },
+    {
+     "term": "不可能",
+     "en": "bu ke neng - 'cannot be done'",
+     "note": "Not easy to do. One view is that the mean needs long, plain effort, which is harder than a single heroic act."
+    },
+    {
+     "term": "智仁勇",
+     "en": "zhi ren yong - 'wisdom, humaneness, courage'",
+     "note": "Zhu Xi took ordering the world as wisdom, refusing rank and salary as humaneness, and treading on blades as courage, and said that these three are not yet the mean."
+    }
+   ]
+  },
+  "ch10": {
+   "summary": "Zilu asks about strength. Confucius divides it into the strength of the south and of the north, and says the noble person's strength is to be gentle without being swept along, to stand in the middle without leaning, to keep his character when the state is orderly, and to the death when it is not.",
+   "translation": "Zilu asked about strength. The Master said: 'Do you mean the strength of the south? Or of the north? Or the strength that is your own? To teach with generosity and gentleness, and not to take revenge for lawlessness: this is the strength of the south, and the noble person lives in it. To lie on weapons and armour, and die without regret: this is the strength of the north, and the hard and forceful live in it. So the noble person is gentle and yet not swept along: how strong he is! He stands in the middle and does not lean: how strong he is! When the state follows the Way, he does not change what he was before he rose: how strong he is! When the state does not follow the Way, he does not change even to the point of death: how strong he is!'",
+   "glossary": [
+    {
+     "term": "子路",
+     "en": "zi lu - 'Zilu'",
+     "note": "A disciple of Confucius, known for his bold temper."
+    },
+    {
+     "term": "抑而強",
+     "en": "yi er qiang - 'or your strength'",
+     "note": "「抑」 means 'or', and 「而」 means 'you'. The sense is 'or the strength that is your own'."
+    },
+    {
+     "term": "衽金革",
+     "en": "ren jin ge - 'to sleep on weapons and armour'",
+     "note": "「衽」 is a sleeping mat; to use metal weapons and leather armour as one's mat, meaning to live constantly on the field of battle."
+    },
+    {
+     "term": "和而不流",
+     "en": "he er bu liu - 'gentle but not swept along'",
+     "note": "Mild and accommodating without drifting with the current."
+    },
+    {
+     "term": "強哉矯",
+     "en": "qiang zai jiao - 'how strong!'",
+     "note": "「矯」 describes a look of firm strength."
+    }
+   ]
+  },
+  "ch11": {
+   "summary": "Confucius says that he does not hunt out the obscure and do strange things, nor does he give up half way; the noble person relies on the mean and does not regret being unknown in hiding, a thing only a sage can do.",
+   "translation": "The Master said: 'To go looking for what is hidden and to do strange things: later generations may speak of it, but I will not do it. The noble person follows the Way, and some give up half way; I cannot stop. The noble person relies on the mean; he hides from the world, unknown, and does not regret it. Only a sage can do this.'",
+   "glossary": [
+    {
+     "term": "素隱行怪",
+     "en": "su yin xing guai - 'to seek the hidden and do strange things'",
+     "note": "The Book of Han has 「索隱行怪」: to seek obscure doctrines and do odd things. Zhu Xi held that 「素」 is a mistake for 「索」."
+    },
+    {
+     "term": "半塗而廢",
+     "en": "ban tu er fei - 'to give up half way'",
+     "note": "To stop in the middle of the road. 「塗」 is the same as 「途」."
+    },
+    {
+     "term": "遯世不見知",
+     "en": "dun shi bu jian zhi - 'to hide from the world, unknown'",
+     "note": "To live in retirement and not be known. 「遯」 is the same as 「遁」."
+    },
+    {
+     "term": "唯聖者能之",
+     "en": "wei sheng zhe neng zhi - 'only a sage can do it'",
+     "note": "Only a sage can do this, which shows how high the state of the mean is."
+    }
+   ],
+   "background": "In this chapter Confucius says of himself that he 'cannot stop', showing his resolve to keep to the mean and not to give up half way. The prevailing view is that not regretting being hidden and unknown is the state of the sage in Confucius's mind."
+  },
+  "ch12": {
+   "summary": "The Way of the noble person is wide in its working and hidden in its substance: ordinary couples can know and do something of it, yet at its furthest even a sage cannot know or do all. It begins with husband and wife and, at its utmost, shines through Heaven and Earth.",
+   "translation": "The Way of the noble person is broad and yet hidden. Ordinary men and women, however foolish, can know something of it; but at its furthest, even a sage has something he does not know. Ordinary men and women, however unworthy, can practise something of it; but at its furthest, even a sage has something he cannot do. Great as Heaven and Earth are, people still find things to regret in them. So when the noble person speaks of the great, nothing in the world can contain it; when he speaks of the small, nothing in the world can split it. The Book of Songs says: 'The kite flies up to Heaven; the fish leaps in the deep.' This means that the Way is seen above and below. The Way of the noble person begins with husband and wife, and at its furthest it shines through Heaven and Earth.",
+   "glossary": [
+    {
+     "term": "費而隱",
+     "en": "fei er yin - 'broad and hidden'",
+     "note": "「費」 means wide in its working; 「隱」 means hidden in its substance."
+    },
+    {
+     "term": "夫婦之愚",
+     "en": "fu fu zhi yu - 'foolish husband and wife'",
+     "note": "Ordinary men and women, not necessarily dull people."
+    },
+    {
+     "term": "鳶飛戾天，魚躍于淵",
+     "en": "yuan fei li tian, yu yue yu yuan - 'the kite flies to Heaven, the fish leaps in the deep'",
+     "note": "Quoted from the Book of Songs, 'Daya', ode 'Hanlu'. It shows that the Way is everywhere, visible from the sky above to the deep below."
+    },
+    {
+     "term": "造端乎夫婦",
+     "en": "zao duan hu fu fu - 'beginning with husband and wife'",
+     "note": "To start from husband and wife. 「造端」 means the beginning."
+    }
+   ],
+   "background": "Zhu Xi's Commentary in Chapters and Verses (Zhongyong zhangju) says that this chapter contains words of Zisi, set down to explain the opening claim that the Way cannot be left for a moment. The eight chapters that follow explain it by quoting Confucius."
+  },
+  "ch13": {
+   "summary": "The Way is not far from people, and conscientiousness and reciprocity are not far from the Way. Confucius says modestly that he has not managed even one of the noble person's four duties, and urges plain conduct and careful speech, with words and deeds watching each other.",
+   "translation": "The Master said: 'The Way is not far from people. If people practise a Way that is far from people, it cannot be taken for the Way. The Book of Songs says: \"In cutting an axe handle, in cutting an axe handle, the pattern is not far.\" Yet one holds an axe handle to cut an axe handle, and looking at it sideways, still thinks it far. So the noble person governs people by means of people, and stops once they have changed. Conscientiousness and reciprocity are not far from the Way: what you do not want done to yourself, do not do to others. The Way of the noble person has four parts, and I, Qiu, have not managed one of them. What I ask of a son, I have not done in serving my father; what I ask of a minister, I have not done in serving my ruler; what I ask of a younger brother, I have not done in serving my elder brother; what I ask of a friend, I have not first done to him. In the practice of ordinary virtue and the care of ordinary speech, where something is lacking, do not dare not to strive; where there is a surplus, do not dare to use it all up. Let words look to deeds and deeds look to words. How can the noble person not be steadfast and sincere!'",
+   "glossary": [
+    {
+     "term": "伐柯",
+     "en": "fa ke - 'cutting an axe handle'",
+     "note": "From the Book of Songs, 'Bin feng', ode 'Fa ke'; the pattern for the new handle is already in your hand."
+    },
+    {
+     "term": "忠恕",
+     "en": "zhong shu - 'conscientiousness and reciprocity'",
+     "note": "To do one's utmost is 「忠」; to extend one's own feelings to others is 「恕」. In the Analects, when Confucius said that 'my Way is one thread that runs through it all', Zengzi explained it as conscientiousness and reciprocity."
+    },
+    {
+     "term": "施諸己而不願，亦勿施於人",
+     "en": "shi zhu ji er bu yuan, yi wu shi yu ren - 'what you do not want done to yourself, do not do to others'",
+     "note": "Another way of putting the Analects, 'Wei Linggong' saying: 'do not do to others what you do not wish for yourself'."
+    },
+    {
+     "term": "庸德之行，庸言之謹",
+     "en": "yong de zhi xing, yong yan zhi jin - 'ordinary virtue practised, ordinary words guarded'",
+     "note": "To practise common virtues and be careful in common speech. 「庸」 means ordinary."
+    },
+    {
+     "term": "慥慥",
+     "en": "zao zao - 'steadfast and sincere'",
+     "note": "Earnest and solid."
+    }
+   ]
+  },
+  "ch14": {
+   "summary": "The noble person acts according to his present position and does not long for what lies outside it; in a high place he does not bully those below, in a low place he does not cling to those above, and when an arrow misses he looks to himself.",
+   "translation": "The noble person acts according to his present position and does not wish for anything beyond it. In a position of wealth and rank, he acts as one in wealth and rank; in a position of poverty and lowliness, he acts as one in poverty and lowliness; among the barbarians, he acts as one among the barbarians; in trouble and hardship, he acts as one in trouble and hardship. The noble person, wherever he goes, is at ease with himself. In a high place he does not bully those below; in a low place he does not cling to those above. He sets himself right and asks nothing of others, and so has no resentment. Above, he does not complain of Heaven; below, he does not blame people. So the noble person lives at ease and awaits his fate, while the petty person takes risks in hope of luck. The Master said: 'Archery is something like the way of the noble person: if the arrow misses the centre of the target, he turns and looks for the reason in himself.'",
+   "glossary": [
+    {
+     "term": "素其位",
+     "en": "su qi wei - 'to act according to one's present position'",
+     "note": "To rest content in the position one holds now. 「素」 means 'at present, as one is'."
+    },
+    {
+     "term": "陵",
+     "en": "ling - 'to bully'",
+     "note": "To insult and bully."
+    },
+    {
+     "term": "居易以俟命",
+     "en": "ju yi yi si ming - 'to live at ease and await fate'",
+     "note": "To stay in a level and safe place and wait for Heaven's decree."
+    },
+    {
+     "term": "正鵠",
+     "en": "zheng gu - 'the centre of the target'",
+     "note": "The bull's eye. One drawn on cloth is called 「正」; one drawn on leather is called 「鵠」."
+    },
+    {
+     "term": "反求諸其身",
+     "en": "fan qiu zhu qi shen - 'to look for the cause in oneself'",
+     "note": "To turn back and look for the reason in oneself. Mencius also says 'when what one does does not succeed, look for the cause in oneself'."
+    }
+   ]
+  },
+  "ch15": {
+   "summary": "The Way of the noble person is like going far, which must start from near, and climbing high, which must start from low. The Book of Songs uses a happy family as a picture, and Confucius praises the contentment of parents.",
+   "translation": "The Way of the noble person is like travelling far, which must begin from what is near; like climbing high, which must begin from what is low. The Book of Songs says: 'Wife and children are in harmony, like the playing of zither and lute. Brothers are all together, in harmony and joy that lasts. May your household be at ease and your wife and children happy.' The Master said: 'Then, surely, parents are at peace!'",
+   "glossary": [
+    {
+     "term": "辟如",
+     "en": "pi ru - 'is like'",
+     "note": "The same as 「譬如」. 「辟」 is the same as 「譬」."
+    },
+    {
+     "term": "行遠自邇，登高自卑",
+     "en": "xing yuan zi er, deng gao zi bei - 'going far begins near, climbing high begins low'",
+     "note": "The source of the saying: a task must go from near to far and from low to high."
+    },
+    {
+     "term": "鼓瑟琴",
+     "en": "gu se qin - 'playing the lute and zither'",
+     "note": "Playing the large and small zithers, a figure for the harmony of husband and wife. It is quoted from the Book of Songs, 'Xiaoya', ode 'Changdi'."
+    },
+    {
+     "term": "妻帑",
+     "en": "qi nu - 'wife and children'",
+     "note": "Wife and sons and daughters. 「帑」 is the same as 「孥」."
+    }
+   ]
+  },
+  "ch16": {
+   "summary": "Confucius praises the power of spirits and ghosts: they have no shape or sound, yet are in all things without omission. At sacrifices they seem to be above and beside one, and even a small sincerity shows itself.",
+   "translation": "The Master said: 'How abundant is the power of spirits and ghosts! Look for them and you do not see them; listen for them and you do not hear them; yet they are in all things and nothing is left out. They make all the people of the world fast, purify themselves and put on their finest clothes in order to offer sacrifice. Everywhere they seem to be above, and to be on the left and the right. The Book of Songs says: \"The coming of the spirits cannot be fathomed; how much less may it be treated with weariness!\" The manifestation of what is hidden, and the impossibility of concealing sincerity: it is just like this!'",
+   "glossary": [
+    {
+     "term": "鬼神之為德",
+     "en": "gui shen zhi wei de - 'the power of spirits and ghosts'",
+     "note": "Zhu Xi took ghosts and spirits as the contraction and expansion of the two forces of yin and yang, and as their natural capacity."
+    },
+    {
+     "term": "體物不遺",
+     "en": "ti wu bu yi - 'present in all things without omission'",
+     "note": "Embodied in all things, with nothing left out."
+    },
+    {
+     "term": "矧可射思",
+     "en": "shen ke yi si - 'how much less treated with weariness'",
+     "note": "「射」 is the same as 「斁」, meaning to tire of or to be slack. 「矧」 means 'much less'."
+    },
+    {
+     "term": "微之顯，誠之不可揜",
+     "en": "wei zhi xian, cheng zhi bu ke yan - 'the hidden shows, sincerity cannot be hidden'",
+     "note": "What is faint becomes clear, and a sincere heart cannot be covered up."
+    }
+   ]
+  },
+  "ch17": {
+   "summary": "Confucius praises Shun's great filial piety: in virtue a sage, in rank Son of Heaven, rich in all within the four seas. Great virtue is sure to win position, salary, fame and long life; Heaven gives life to things and favours each according to its stuff, and one of great virtue surely receives the mandate.",
+   "translation": "The Master said: 'Shun was a man of great filial piety! In virtue he was a sage, in honour he was the Son of Heaven, and in wealth he held all within the four seas. The ancestral temple received his offerings, and his descendants preserved what he left. So one of great virtue is sure to gain the position, sure to gain the salary, sure to gain the name, sure to gain long life. When Heaven gives birth to things, it is sure to favour each according to its stuff. So what is planted, it nourishes; what is leaning, it overturns. The Book of Songs says: \"Joyful is the noble man, with shining and excellent virtue. He suits the people and suits the men; he receives his blessing from Heaven. Heaven protects him and appoints him, and again and again sends down blessing.\" So one of great virtue is sure to receive the mandate.'",
+   "glossary": [
+    {
+     "term": "大孝",
+     "en": "da xiao - 'great filial piety'",
+     "note": "Shun was known for his filial piety: his parents and brother plotted against him, but he stayed respectful, and he later succeeded Yao as Son of Heaven."
+    },
+    {
+     "term": "宗廟饗之",
+     "en": "zong miao xiang zhi - 'the ancestral temple makes offerings to him'",
+     "note": "He was sacrificed to in the ancestral temple after his death."
+    },
+    {
+     "term": "栽者培之，傾者覆之",
+     "en": "zai zhe pei zhi, qing zhe fu zhi - 'it nourishes what is planted and overturns what leans'",
+     "note": "What can grow is cultivated; what is about to topple is toppled."
+    },
+    {
+     "term": "受命",
+     "en": "shou ming - 'to receive the mandate'",
+     "note": "To receive the mandate of Heaven and become the Son of Heaven."
+    }
+   ]
+  },
+  "ch18": {
+   "summary": "King Wen had no cause for sorrow: he had a worthy father and a worthy son, and King Wu carried on the work and took the world. The Duke of Zhou perfected the virtue of Wen and Wu, raised his ancestors to the rank of king, and laid down rites for burial and sacrifice, with the three years' mourning going from top to bottom.",
+   "translation": "The Master said: 'The one without sorrow was surely King Wen! He had King Ji for a father and King Wu for a son; the father began the work and the son carried it on. King Wu continued the work of Tai Wang, King Ji and King Wen; he put on armour once and held the whole world, and did not lose the great name he had in the world. In honour he was the Son of Heaven, and in wealth he held all within the four seas. The ancestral temple made offerings to him, and his descendants preserved what he left. King Wu received the mandate in his late years. The Duke of Zhou completed the virtue of Wen and Wu, posthumously made kings of Tai Wang and King Ji, and sacrificed to the earlier lords with the rites of the Son of Heaven. These rites reached to the feudal lords, the grand masters, and to the knights and common people. If the father was a grand master and the son a knight, he was buried as a grand master and sacrificed to as a knight. If the father was a knight and the son a grand master, he was buried as a knight and sacrificed to as a grand master. The one-year mourning reached up to grand masters; the three-year mourning reached up to the Son of Heaven. For the mourning of father and mother there is no high or low; it is one and the same.'",
+   "glossary": [
+    {
+     "term": "文王",
+     "en": "wen wang - 'King Wen'",
+     "note": "Ji Chang, the founder of the Zhou dynasty (c. 1046-256 BC)."
+    },
+    {
+     "term": "壹戎衣",
+     "en": "yi rong yi - 'put on armour once'",
+     "note": "A single putting on of battle dress: the victory at Muye that overthrew the Shang in one stroke. Some read 「戎」 as a loan for 「殪」, meaning 'to kill'."
+    },
+    {
+     "term": "追王",
+     "en": "zhui wang - 'to raise to king after death'",
+     "note": "To confer the title of king posthumously. The Duke of Zhou gave Tai Wang and King Ji the title."
+    },
+    {
+     "term": "期之喪",
+     "en": "qi zhi sang - 'one-year mourning'",
+     "note": "Mourning for a year, as for collateral kin; the three-year mourning is for parents."
+    }
+   ]
+  },
+  "ch19": {
+   "summary": "King Wu and the Duke of Zhou were men of filial piety understood by all. True filial piety carries on the wishes of one's forebears and relates their deeds; the ancestral rites set out the generations and distinguish rank and worth, and serving the dead as the living is the height of filial piety. One who understands the rites of the suburbs and the earth altar, and of the great sacrifices, governs a state as easily as looking at his palm.",
+   "translation": "The Master said: 'King Wu and the Duke of Zhou were men of filial piety who reached everyone! Filial piety means skilfully carrying on the aims of others and skilfully relating their deeds. In spring and autumn they repaired their ancestral temples, set out the ritual vessels, laid out the robes, and offered the foods of the season. The rites of the ancestral temple are for arranging the generations of zhao and mu; arrangement by rank is for distinguishing the high from the low; arrangement by duty is for distinguishing the worthy; in the round of toasts, the juniors toast the seniors, so as to reach the lowly; at the feast, seating by the colour of the hair is for arranging by age. They took their ancestors' places, performed their rites, played their music, honoured what they honoured, loved those they held dear, served the dead as if they were alive and the departed as if they were present: this is the height of filial piety. The rites of the suburban and earth sacrifices are for serving the Lord on High. The rites of the ancestral temple are for sacrificing to their forebears. One who understands the rites of the suburban and earth sacrifices and the meaning of the di and chang sacrifices will govern the state as easily as pointing to his palm!'",
+   "glossary": [
+    {
+     "term": "達孝",
+     "en": "da xiao - 'filial piety understood by all'",
+     "note": "Filial piety that wins the hearts of everyone under Heaven, and that everyone approves."
+    },
+    {
+     "term": "昭穆",
+     "en": "zhao mu - 'zhao and mu'",
+     "note": "The order of the ancestral temple: the left is zhao and the right is mu, to tell apart the generations of fathers and sons."
+    },
+    {
+     "term": "旅酬",
+     "en": "lu chou - 'the round of toasts'",
+     "note": "The drinking ceremony after the sacrifice, in which everyone in turn offers a toast."
+    },
+    {
+     "term": "郊社、禘嘗",
+     "en": "jiao she, di chang - 'suburban and earth sacrifices, di and chang'",
+     "note": "The jiao sacrifice is to Heaven and the she to Earth; the di is a great sacrifice and the chang an autumn sacrifice."
+    }
+   ]
+  },
+  "ch20": {
+   "summary": "The longest chapter. Duke Ai of Lu asks about government, and Confucius answers that government depends on the right people, on cultivating oneself and loving one's kin, on the five universal paths, the three universal virtues, the nine standards and sincerity. Sincerity is the Way of Heaven, and the pursuit of sincerity is the human way; he urges broad study, close questioning, careful thought, clear discrimination and earnest practice.",
+   "translation": "Duke Ai asked about government. The Master said: \"The government of Kings Wen and Wu is laid out on the bamboo slats and wooden tablets. When the right men are alive, their government flourishes; when the right men are gone, their government ceases. The way of man is quick to bring government; the way of earth is quick to bring plants to grow. Government is like the bulrush: it grows quickly where the soil is good. So government depends on the right men. Get the right men by your own person; cultivate your person by the Way; cultivate the Way through humaneness. Humaneness is what makes a person a person, and its greatest part is to be close to one's kin. Rightness is what is fitting, and its greatest part is to honour the worthy. The grades of closeness to one's kin and the ranks in honouring the worthy are what give rise to ritual.\n\"If those in lower positions do not win the trust of those above, they cannot govern the people. So the noble person cannot fail to cultivate himself. Thinking of cultivating himself, he cannot fail to serve his parents. Thinking of serving his parents, he cannot fail to know people. Thinking of knowing people, he cannot fail to know Heaven.\n\"There are five universal paths in the world, and three ways to walk them. They are the relations of ruler and minister, father and son, husband and wife, elder and younger brother, and friend and friend. These five are the universal paths of the world. Wisdom, humaneness and courage - these three are the universal virtues of the world. The way to practise them is one thing. Some know them from birth, some know them through learning, some know them after meeting difficulty; but when they have come to know them, it is the same. Some practise them with ease, some for the sake of benefit, some by forcing themselves; but when they have achieved results, it is the same.\nThe Master said: \"To love learning is close to wisdom. To practise with vigour is close to humaneness. To know shame is close to courage. One who knows these three knows how to cultivate himself. Knowing how to cultivate himself, he knows how to govern others. Knowing how to govern others, he knows how to govern the world, its states and its families.\n\"In governing the world, its states and its families, there are nine standards: cultivating oneself, honouring the worthy, being close to one's kin, respecting the great ministers, caring for the whole body of officials, treating the common people as one's children, drawing in the craftsmen, being gentle to travellers from afar, and cherishing the feudal lords. If you cultivate yourself, the Way is established. If you honour the worthy, you are not confused. If you are close to your kin, your uncles and brothers do not resent you. If you respect the great ministers, you are not dazzled. If you care for the officials, the scholars repay you generously with ritual service. If you treat the common people as your children, the people are encouraged. If you draw in the craftsmen, there is wealth enough for use. If you are gentle to travellers from afar, people from all quarters come to you. If you cherish the feudal lords, the whole world stands in awe of you.\n\"Fast and purify yourself, dress in your finest clothes, and make no move that is against ritual: this is how one cultivates oneself. Drive out slander and keep away from sensual attraction, hold goods cheap and virtue dear: this is how one encourages the worthy. Give them honoured positions, generous salaries, and share their likes and dislikes: this is how one encourages one's kin. Provide the great ministers with plenty of officials to command: this is how one encourages them. Give the scholars loyalty, trust and generous salaries: this is how one encourages them. Call up the people at the proper times and take little in taxes: this is how one encourages the common people. Inspect them daily and test them monthly, and have their wages match their work: this is how one encourages the craftsmen. See visitors off when they leave and welcome them when they come, commend the good and have sympathy for those who cannot: this is how one is gentle to travellers from afar. Continue broken lines of descent, restore fallen states, bring order to chaos and support the endangered, have them come to court and send envoys at the proper times, give generously and take little in return: this is how one cherishes the feudal lords.\n\"In governing the world, its states and its families, there are nine standards, and the way to practise them is one thing. In every matter, with preparation one stands; without preparation one fails. If what you are to say is settled beforehand, you will not stumble. If your affairs are settled beforehand, you will not be in difficulty. If your actions are settled beforehand, you will have no regret. If your Way is settled beforehand, you will not come to a dead end.\n\"If those in lower positions do not win the trust of those above, they cannot govern the people. There is a way to win the trust of those above: if you are not trusted by your friends, you will not win it. There is a way to be trusted by your friends: if you do not please your parents, you will not be trusted by your friends. There is a way to please your parents: if on looking inward you find you are not sincere, you will not please your parents. There is a way to be sincere in yourself: if you do not understand what is good, you will not be sincere in yourself.\n\"Sincerity is the Way of Heaven; the pursuit of sincerity is the way of man. One who is sincere hits the mark without effort and gets it without thinking, and moves at ease along the Way: he is a sage. One who pursues sincerity chooses the good and holds fast to it.\n\"Study it widely, question it closely, think it over carefully, distinguish it clearly, and practise it earnestly. If there is something you have not studied, or you have studied it and cannot do it, do not stop. If there is something you have not asked, or you have asked and still do not know, do not stop. If there is something you have not thought over, or you have thought and not understood, do not stop. If there is something you have not distinguished, or you have distinguished it and are not clear, do not stop. If there is something you have not practised, or you have practised it and not firmly, do not stop. If another can do it in one try, you do it in a hundred; if another can do it in ten, you do it in a thousand. If you can truly follow this way, then however foolish you are, you will become clear; however weak, you will become strong.\"",
+   "keyLines": [
+    {
+     "line": "為政在人",
+     "en": "Government depends on the right men",
+     "note": "The success of government lies in having worthy men: 'if the men are there, their government flourishes; if the men are gone, their government ceases'. It stresses rule by persons."
+    },
+    {
+     "line": "仁者人也，親親為大；義者宜也，尊賢為大",
+     "en": "Humaneness is what makes a man a man, and its greatest part is to be close to one's kin; rightness is what is fitting, and its greatest part is to honour the worthy.",
+     "note": "Humaneness is loving people, with closeness to kin the weightiest part; rightness is what is fitting, with honouring the worthy the weightiest. It explains humaneness and rightness through word-play on the characters."
+    },
+    {
+     "line": "天下之達道五，所以行之者三",
+     "en": "There are five universal paths in the world and three by which they are walked.",
+     "note": "The five universal paths are the five relations of ruler and minister, father and son, husband and wife, elder and younger brother, and friends. The three universal virtues are wisdom, humaneness and courage, by which they are carried out."
+    },
+    {
+     "line": "好學近乎知，力行近乎仁，知恥近乎勇",
+     "en": "To love learning is close to wisdom; to practise with vigour is close to humaneness; to know shame is close to courage.",
+     "note": "Confucius offers love of learning, vigorous practice and a sense of shame as the ways to come near the three universal virtues, and as the entrance to self-cultivation."
+    },
+    {
+     "line": "凡為天下國家有九經",
+     "en": "In governing the world, its states and families, there are nine standards",
+     "note": "The nine standards are cultivating oneself, honouring the worthy, loving one's kin, respecting the great ministers, caring for the officials, treating the people as children, drawing in the craftsmen, being gentle to travellers from afar, and cherishing the feudal lords: nine constant rules for governing the world."
+    },
+    {
+     "line": "凡事豫則立，不豫則廢",
+     "en": "In all matters, with preparation one stands; without preparation one fails.",
+     "note": "With preparation beforehand one succeeds, and without it one fails. 「豫」 stands for 「預」."
+    },
+    {
+     "line": "誠者，天之道也；誠之者，人之道也",
+     "en": "Sincerity is the Way of Heaven; the pursuit of sincerity is the way of man.",
+     "note": "Sincerity (cheng) is the real and unfalse way of Heaven; for man to reach sincerity requires effort, choosing the good and holding fast to it."
+    },
+    {
+     "line": "博學之，審問之，慎思之，明辨之，篤行之",
+     "en": "Study it widely, question it closely, think it over carefully, discriminate it clearly and practise it earnestly.",
+     "note": "Five steps of learning: study widely, question closely, think carefully, discriminate clearly and practise earnestly."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "哀公",
+     "en": "ai gong - 'Duke Ai'",
+     "note": "Duke Ai of Lu, who reigned from 494 to 468 BCE, was the ruler of Lu in Confucius's old age."
+    },
+    {
+     "term": "達道、達德",
+     "en": "da dao, da de - 'universal paths, universal virtues'",
+     "note": "「達」 means passing through and universal. The universal paths are the roads that all the world shares, and the universal virtues the virtues that all the world shares."
+    },
+    {
+     "term": "九經",
+     "en": "jiu jing - 'the nine standards'",
+     "note": "Nine constant rules. 「經」 means a constant way."
+    },
+    {
+     "term": "誠",
+     "en": "cheng - 'sincerity'",
+     "note": "Reality without falsehood. The second half of the Doctrine of the Mean takes sincerity as its centre."
+    },
+    {
+     "term": "生知、學知、困知",
+     "en": "sheng zhi, xue zhi, kun zhi - 'knowing by birth, by learning, through hardship'",
+     "note": "Some know by birth, some by study, some through hardship. People differ in rank in this, but once they know, it is the same."
+    }
+   ],
+   "background": "The text of this chapter also appears in the Family Sayings of Confucius (Kongzi jiayu), in the part 'Duke Ai asks about government', with some differences from the Doctrine of the Mean. Zhu Xi numbered it chapter twenty. It is the pivot of the whole book, and from here the discussion turns to sincerity (cheng)."
+  },
+  "ch21": {
+   "summary": "This explains how sincerity and clear understanding relate: to go from sincerity to understanding is nature, to go from understanding to sincerity is teaching; where there is sincerity there is understanding, and where there is understanding there is sincerity.",
+   "translation": "To come to understanding from sincerity is called nature. To come to sincerity from understanding is called teaching. Where there is sincerity there is understanding; where there is understanding there is sincerity.",
+   "glossary": [
+    {
+     "term": "自誠明",
+     "en": "zi cheng ming - 'from sincerity to understanding'",
+     "note": "One whose nature is sincere understands everything naturally: the state of the sage."
+    },
+    {
+     "term": "自明誠",
+     "en": "zi ming cheng - 'from understanding to sincerity'",
+     "note": "To come to understand the principles through study and then reach sincerity: the cultivation of the worthy."
+    },
+    {
+     "term": "性、教",
+     "en": "xing, jiao - 'nature, teaching'",
+     "note": "Innate nature and cultivation. Zhu Xi used these two to separate the sage (nature) from the worthy (teaching)."
+    },
+    {
+     "term": "誠明相生",
+     "en": "cheng ming xiang sheng - 'sincerity and understanding support each other'",
+     "note": "Sincerity and clear wisdom complete one another."
+    }
+   ]
+  },
+  "ch22": {
+   "summary": "Only the person of utmost sincerity can fully realise his own nature, then that of other people, then that of things, so that he helps the transforming and nourishing work of Heaven and Earth and stands with them as a third.",
+   "translation": "Only those in the world who are utterly sincere can fully develop their own nature. Being able to fully develop their own nature, they can fully develop the nature of other people. Being able to fully develop the nature of other people, they can fully develop the nature of things. Being able to fully develop the nature of things, they can help the transforming and nourishing work of Heaven and Earth. Being able to help the transforming and nourishing work of Heaven and Earth, they can stand with Heaven and Earth as a third.",
+   "glossary": [
+    {
+     "term": "至誠",
+     "en": "zhi cheng - 'utmost sincerity'",
+     "note": "Sincerity at its highest degree."
+    },
+    {
+     "term": "盡其性",
+     "en": "jin qi xing - 'to fully develop one's nature'",
+     "note": "To bring one's nature to its fullest development and realisation."
+    },
+    {
+     "term": "贊天地之化育",
+     "en": "zan tian di zhi hua yu - 'to help the nourishing work of Heaven and Earth'",
+     "note": "「贊」 means to help and take part, to join Heaven and Earth in nourishing all things."
+    },
+    {
+     "term": "與天地參",
+     "en": "yu tian di can - 'to stand as a third with Heaven and Earth'",
+     "note": "To stand alongside Heaven and Earth as the third of the three: Heaven, Earth and man."
+    }
+   ]
+  },
+  "ch23": {
+   "summary": "The next rank of people put their effort into one partial matter and can still reach sincerity; sincerity moves outward from within and gradually changes others.",
+   "translation": "Next below them are those who work on one side of things. Working on one side can bring sincerity; sincerity takes shape; shape becomes evident; what is evident becomes bright; what is bright moves others; what moves others brings change; and change leads to transformation. Only those in the world who are utterly sincere are able to transform.",
+   "glossary": [
+    {
+     "term": "致曲",
+     "en": "zhi qu - 'to work on one side'",
+     "note": "To put one's heart and effort into a single side or part. Zhu Xi explained it as 'pushing one partial side to its limit'."
+    },
+    {
+     "term": "形、著、明",
+     "en": "xing, zhu, ming - 'taking shape, becoming evident, bright'",
+     "note": "Sincerity, within, shows gradually without: first taking form, then becoming plain, then becoming bright."
+    },
+    {
+     "term": "動、變、化",
+     "en": "dong, bian, hua - 'moving, changing, transforming'",
+     "note": "To move others, make them change, and at last affect them without their noticing."
+    },
+    {
+     "term": "化",
+     "en": "hua - 'transformation'",
+     "note": "Nourishing and changing, influencing people without form or trace."
+    }
+   ]
+  },
+  "ch24": {
+   "summary": "One of utmost sincerity can know beforehand: the rise and fall of a state, good and bad fortune, all have signs, and utmost sincerity is like the spirits.",
+   "translation": "The Way of utmost sincerity can know beforehand. When a state is about to flourish, there are sure to be auspicious signs; when a state is about to perish, there are sure to be evil omens. They show themselves in the yarrow stalks and the tortoise shell, and appear in the movements of the four limbs. When fortune or misfortune is about to come, whether good or bad, he will know it beforehand. So utmost sincerity is like the spirits.",
+   "glossary": [
+    {
+     "term": "前知",
+     "en": "qian zhi - 'to know beforehand'",
+     "note": "To know in advance. This is not a supernatural gift but insight into the signs of things."
+    },
+    {
+     "term": "禎祥、妖孽",
+     "en": "zhen xiang, yao nie - 'auspicious signs, evil omens'",
+     "note": "Good signs and strange, ill-boding portents."
+    },
+    {
+     "term": "蓍龜",
+     "en": "shi gui - 'yarrow stalks and tortoise shell'",
+     "note": "The stalks and shells used in divination."
+    },
+    {
+     "term": "至誠如神",
+     "en": "zhi cheng ru shen - 'utmost sincerity is like the spirits'",
+     "note": "The mind of one utterly sincere is clear and sees the slightest signs, and so seems like a spirit."
+    }
+   ]
+  },
+  "ch25": {
+   "summary": "Sincerity is how one completes oneself. Completing oneself and completing things unites the Way of inner and outer; without sincerity there are no things, and the noble person values sincerity.",
+   "translation": "Sincerity is how one completes oneself, and the Way is how one guides oneself. Sincerity is the end and the beginning of things; without sincerity, there would be no things. So the noble person values sincerity. Sincerity is not only the completing of oneself; it is also how one completes things. Completing oneself is humaneness; completing things is wisdom. These are the virtues of nature, and the Way that joins outer and inner. So whenever it is applied, it is fitting.",
+   "glossary": [
+    {
+     "term": "自成",
+     "en": "zi cheng - 'self-completion'",
+     "note": "One's completing of oneself."
+    },
+    {
+     "term": "物之終始",
+     "en": "wu zhi zhong shi - 'the end and the beginning of things'",
+     "note": "Things depend on sincerity from start to finish; without it there would be no things."
+    },
+    {
+     "term": "成己、成物",
+     "en": "cheng ji, cheng wu - 'completing oneself, completing things'",
+     "note": "Completing oneself is humaneness and completing things is wisdom; together they join the Way of inner and outer."
+    },
+    {
+     "term": "時措之宜",
+     "en": "shi cuo zhi yi - 'fitting whenever applied'",
+     "note": "Applied at any time, it is suitable."
+    }
+   ]
+  },
+  "ch26": {
+   "summary": "Utmost sincerity does not cease; by long accumulation it becomes broad, thick, high and bright, and matches Heaven and Earth. The Way of Heaven and Earth can be summed up in one word and gives birth to things beyond fathoming, and King Wen's virtue was pure and unceasing too.",
+   "translation": "So utmost sincerity does not cease. Not ceasing, it lasts; lasting, it is verified; verified, it reaches far; reaching far, it becomes broad and thick; broad and thick, it becomes high and bright. Broad and thick, it carries things; high and bright, it covers things; far-reaching and lasting, it completes things. Broad and thick, it matches Earth; high and bright, it matches Heaven; far-reaching and lasting, it has no limit. One like this does not show himself and yet is plain; does not move and yet brings change; does not act and yet achieves. The Way of Heaven and Earth can be told in a single phrase: they are one and undivided as things, and so the things they give birth to are beyond fathoming. The Way of Heaven and Earth is broad, thick, high, bright, far-reaching and lasting. Take Heaven: it is made of a multitude of bright specks, but at its limitless extent the sun, moon, stars and planets hang from it and the myriad things are covered by it. Take Earth: it is made of a pile of handfuls of soil, but at its breadth and thickness it carries Mount Hua without feeling its weight, holds the rivers and seas without leaking, and the myriad things are carried by it. Take a mountain: it is made of piles of fistfuls of stone, but at its vastness grass and trees grow on it, birds and beasts live on it, and treasures are stored in it. Take water: it is made of spoonfuls, but at its depth beyond fathoming, turtles, crocodiles, dragons and fish are born in it, and goods and wealth grow in it. The Book of Songs says: 'The mandate of Heaven, how profound and unceasing!' This is to say what makes Heaven to be Heaven. It says also: 'Oh, how bright, the purity of King Wen's virtue!' This is to say what makes King Wen to be 'Wen': his purity too was unceasing.",
+   "glossary": [
+    {
+     "term": "至誠無息",
+     "en": "zhi cheng wu xi - 'utmost sincerity does not cease'",
+     "note": "Utmost sincerity is uninterrupted and never stops."
+    },
+    {
+     "term": "博厚配地，高明配天",
+     "en": "bo hou pei di, gao ming pei tian - 'broad and thick matches Earth, high and bright matches Heaven'",
+     "note": "Broad and thick is like the earth carrying things; high and bright is like the sky covering them."
+    },
+    {
+     "term": "其為物不貳",
+     "en": "qi wei wu bu er - 'as a thing it is not two'",
+     "note": "The nature of Heaven and Earth is one and undivided, and so the things they bring forth are beyond fathoming."
+    },
+    {
+     "term": "於穆不已",
+     "en": "wu mu bu yi - 'profound and unceasing'",
+     "note": "Quoted from the Book of Songs, 'Zhousong', ode 'Wei tian zhi ming', which says that the mandate of Heaven is deep and never stops."
+    },
+    {
+     "term": "華嶽",
+     "en": "hua yue - 'Mount Hua'",
+     "note": "One of the Five Peaks, the western one."
+    }
+   ],
+   "background": "This chapter uses the image of small things piling up into great ones to describe how vast Heaven and Earth are, showing it through 'a handful of soil' and 'a spoonful of water'. It is one of the most beautiful passages in the Doctrine of the Mean."
+  },
+  "ch27": {
+   "summary": "The Way of the sage is vast and must wait for the right person to be practised. The noble person honours his moral nature and follows the path of study, reaches the wide and great yet exhausts the fine and small, scales the high and bright yet keeps to the mean, reviews the old to know the new, and is generous and honours ritual.",
+   "translation": "How great is the Way of the sage! It overflows, nourishing the myriad things, and rises high to Heaven. Abundant and great! There are three hundred rules of ritual and three thousand of bearing, which wait for the right man before they are carried out. So it is said: If one does not have the highest virtue, the highest Way will not come together. So the noble person honours his moral nature and follows the path of inquiry and study; he reaches the wide and great and exhausts the fine and small; he scales the high and bright and keeps to the mean. He reviews the old and so knows the new; he is generous and honours ritual. So in a high place he is not proud, in a low place he is not rebellious. When the state follows the Way, his words are enough to make it flourish; when the state does not follow the Way, his silence is enough to protect him. The Book of Songs says: 'Both wise and clear-sighted, he preserves his person.' Is this not what it means?",
+   "glossary": [
+    {
+     "term": "尊德性而道問學",
+     "en": "zun de xing er dao wen xue - 'to honour the moral nature and follow inquiry and study'",
+     "note": "「尊德性」 stresses inner cultivation and 「道問學」 stresses learning and knowledge. The Goose Lake Meeting between Zhu Xi and Lu Jiuyuan took these two as its theme."
+    },
+    {
+     "term": "致廣大而盡精微",
+     "en": "zhi guang da er jin jing wei - 'to reach the wide and great and exhaust the fine and small'",
+     "note": "To have a broad outlook and yet exhaust the finest details."
+    },
+    {
+     "term": "極高明而道中庸",
+     "en": "ji gao ming er dao zhong yong - 'to scale the high and bright yet keep to the mean'",
+     "note": "To reach the highest level, yet not leave the ordinary way of the mean."
+    },
+    {
+     "term": "溫故知新",
+     "en": "wen gu zhi xin - 'to review the old to know the new'",
+     "note": "The Analects, 'Wei zheng', says 'one who reviews the old and knows the new is fit to be a teacher'."
+    }
+   ]
+  },
+  "ch28": {
+   "summary": "Those who are foolish yet self-willed, lowly yet self-ruling, living now yet reviving the ways of old, bring disaster on themselves. Only the Son of Heaven deliberates on ritual, fixes the standards and examines the script, and Confucius chooses to follow the Zhou.",
+   "translation": "The Master said: 'One who is foolish and yet likes to use his own judgement, who is of low rank and yet likes to decide for himself, who is born in the present age and yet goes back to the ways of old: disaster will come upon such a person. Only the Son of Heaven deliberates on ritual, fixes the standards and examines the script. Now the carriages of the world have the same axle width, the writing has the same characters, and conduct has the same rules. Even if one holds the position, if one lacks the virtue, one dare not make rites and music; even if one has the virtue, if one lacks the position, one likewise dare not make rites and music.' The Master said: 'I can speak of the rites of the Xia, but Qi does not provide enough proof. I have studied the rites of the Yin, and Song still preserves them. I have studied the rites of the Zhou, which are used now, and I follow the Zhou.'",
+   "glossary": [
+    {
+     "term": "自用、自專",
+     "en": "zi yong, zi zhuan - 'self-willed, self-ruling'",
+     "note": "Thinking oneself right and deciding everything on one's own."
+    },
+    {
+     "term": "議禮、制度、考文",
+     "en": "yi li, zhi du, kao wen - 'deliberate on ritual, fix the standards, examine the script'",
+     "note": "To settle the rites, to lay down the laws and to examine the writing: these are the duties of the Son of Heaven."
+    },
+    {
+     "term": "車同軌，書同文，行同倫",
+     "en": "che tong gui, shu tong wen, xing tong lun - 'same axle width, same script, same rules'",
+     "note": "The carriages, writing and ethics of all under Heaven are alike. It is usually seen as the unity of the Zhou, though later readers often think of the Qin unification."
+    },
+    {
+     "term": "吾從周",
+     "en": "wu cong zhou - 'I follow the Zhou'",
+     "note": "Confucius chose to follow the Zhou system. The Analects, 'Bayi', says 'the Zhou looked back on two dynasties; how rich is its culture! I follow the Zhou'."
+    }
+   ]
+  },
+  "ch29": {
+   "summary": "Whoever rules the world has three weighty matters (deliberating on ritual, fixing standards, examining the script) and so makes few errors. The Way of the noble person is rooted in his own person, tested among the people, checked against the three kings, set up between Heaven and Earth, put to the spirits without doubt, and awaiting a sage a hundred generations on without confusion.",
+   "translation": "There are three weighty matters for one who rules the world, and so he makes few mistakes! What is above, however good, has no proof; without proof it is not trusted; not trusted, the people do not follow. What is below, however good, is not honoured; not honoured, it is not trusted; not trusted, the people do not follow. So the Way of the noble person is rooted in his own person, tested among the common people, compared with the Three Kings without error, set up between Heaven and Earth without conflict, put to the spirits without doubt, and, waiting a hundred generations for a sage, without confusion. Putting it to the spirits without doubt is knowing Heaven; waiting a hundred generations for a sage without confusion is knowing man. So the noble person's every move becomes for generations a path for the world; his conduct becomes for generations a law for the world; his words become for generations a standard for the world. Those far away look up to him; those near never tire of him. The Book of Songs says: 'There, none dislike him; here, none tire of him. May he early and late keep this up, to preserve his good name for ever.' No noble person has ever won an early name in the world without doing so.",
+   "glossary": [
+    {
+     "term": "三重",
+     "en": "san zhong - 'three weighty matters'",
+     "note": "The three great matters of deliberating on ritual, fixing standards and examining the script. Another reading takes it as the rites of the three kings, with the upper meaning Xia and Yin and the lower the present dynasty."
+    },
+    {
+     "term": "本諸身，徵諸庶民",
+     "en": "ben zhu shen, zheng zhu shu min - 'rooted in oneself, tested among the people'",
+     "note": "To take oneself as the root and have it confirmed by the people."
+    },
+    {
+     "term": "百世以俟聖人",
+     "en": "bai shi yi si sheng ren - 'wait a hundred generations for a sage'",
+     "note": "To wait for a sage a hundred generations on to confirm it, without doubt."
+    },
+    {
+     "term": "無射",
+     "en": "wu yi - 'none tire'",
+     "note": "No one is weary of him. 「射」 is the same as 「斁」."
+    }
+   ]
+  },
+  "ch30": {
+   "summary": "In praise of Confucius: he took Yao and Shun as his ancestors and Wen and Wu as his model, followed the seasons above and the lands below, and was like Heaven and Earth, which hold and cover everything, so that the myriad things grow without harming each other and the ways go side by side without conflict. His lesser virtue flows like rivers and his greater virtue transforms.",
+   "translation": "Zhongni handed down the Way of Yao and Shun as his ancestors, and took King Wen and King Wu as his model. Above, he conformed to the seasons of Heaven; below, he followed the waters and soil. He was like Heaven and Earth, which carry everything and cover everything; like the four seasons that take turns in their course; like the sun and moon that shine in turn. The myriad things grow together without harming each other; the ways go side by side without conflict. His lesser virtue flows like rivers; his greater virtue brings about deep transformation. This is why Heaven and Earth are great.",
+   "glossary": [
+    {
+     "term": "祖述堯舜，憲章文武",
+     "en": "zu shu yao shun, xian zhang wen wu - 'handed down Yao and Shun, took Wen and Wu as model'",
+     "note": "「祖述」 is to follow from afar; 「憲章」 is to keep the laws near at hand."
+    },
+    {
+     "term": "律天時，襲水土",
+     "en": "lu tian shi, xi shui tu - 'to keep to the seasons and follow the lands'",
+     "note": "Above, to follow the times of Heaven; below, to follow the lie of the land."
+    },
+    {
+     "term": "並育而不相害",
+     "en": "bing yu er bu xiang hai - 'grow together without harming each other'",
+     "note": "The myriad things grow at once and do not injure each other."
+    },
+    {
+     "term": "小德川流，大德敦化",
+     "en": "xiao de chuan liu, da de dun hua - 'lesser virtue like rivers, greater virtue transforming'",
+     "note": "Small virtue flows on like streams; great virtue is like the nourishing change of all things."
+    }
+   ]
+  },
+  "ch31": {
+   "summary": "In praise of the utmost sage, who combines five qualities: sharp and wise, generous and gentle, strong and firm, grave and upright, orderly and discerning. His name overflows the whole world and he matches Heaven.",
+   "translation": "Only the one in the world who is the utmost sage can be quick of hearing and sight and wise and discerning, enough to rule over others; generous, magnanimous and gentle, enough to embrace others; vigorous, strong and firm, enough to hold his ground; grave, upright and correct, enough to command respect; refined, orderly and discerning, enough to tell things apart. Broad and wide, deep as a spring, he brings it out at the right time. Broad and wide as Heaven, deep as an abyss. When he appears, none of the people fail to respect him; when he speaks, none fail to believe him; when he acts, none fail to be glad. So his fame overflows the Middle Kingdom and reaches the Man and the Mo. Wherever boats and carriages go, wherever human strength can reach, what Heaven covers and Earth carries, where sun and moon shine and where frost and dew fall, all who have blood and breath honour and love him. So it is said that he matches Heaven.",
+   "glossary": [
+    {
+     "term": "至聖",
+     "en": "zhi sheng - 'the utmost sage'",
+     "note": "The highest sage. Zhu Xi took it to mean Confucius; some think it is an ideal sage."
+    },
+    {
+     "term": "聰明叡知",
+     "en": "cong ming rui zhi - 'quick and wise'",
+     "note": "Sharp in hearing and sight, wise and far-seeing."
+    },
+    {
+     "term": "溥博淵泉",
+     "en": "pu bo yuan quan - 'broad and wide, deep as a spring'",
+     "note": "「溥博」 is wide and great; 「淵泉」 is deep as a spring."
+    },
+    {
+     "term": "蠻貊",
+     "en": "man mo - 'the Man and the Mo'",
+     "note": "The old names for the southern and northern peoples outside the Chinese heartland."
+    }
+   ]
+  },
+  "ch32": {
+   "summary": "Only the person of utmost sincerity can order the great constants of the world, set up the great root of the world and know the transforming work of Heaven and Earth. His humaneness is earnest, deep and vast, and only one who has reached the virtue of Heaven can know it.",
+   "translation": "Only the one in the world who is utterly sincere can arrange the great constants of the world, set up the great root of the world, and know the transforming and nourishing work of Heaven and Earth. What does he lean on? How earnest is his humaneness! How deep, like an abyss! How vast, like Heaven! Who but one who has truly the wisdom and sageliness to reach the virtue of Heaven could know him?",
+   "glossary": [
+    {
+     "term": "經綸",
+     "en": "jing lun - 'to arrange'",
+     "note": "Sorting silk threads, a figure for ordering the world."
+    },
+    {
+     "term": "大經、大本",
+     "en": "da jing, da ben - 'the great constants, the great root'",
+     "note": "The great laws of the world (the five human relations) and its root (the mean and harmony)."
+    },
+    {
+     "term": "肫肫",
+     "en": "zhun zhun - 'earnest'",
+     "note": "Sincere and heartfelt."
+    },
+    {
+     "term": "達天德",
+     "en": "da tian de - 'to reach the virtue of Heaven'",
+     "note": "To reach the virtue of Heaven, which is the virtue of utmost sincerity."
+    }
+   ]
+  },
+  "ch33": {
+   "summary": "The conclusion of the whole book: the learner should study for himself. The Way of the noble person is hidden yet grows brighter daily; he examines himself without shame, is watchful when alone, and wins respect without moving. It ends with 'the doings of high Heaven have no sound and no smell', and says that earnest reverence brings peace to the world.",
+   "translation": "The Book of Songs says: 'Over her brocade robe, she wears a plain unlined coat,' because she dislikes the pattern showing too much. So the Way of the noble person is hidden yet grows brighter every day; the way of the petty person is showy and fades every day. The Way of the noble person is plain and yet not wearisome, simple and yet refined, gentle and yet orderly. He knows that the far begins with the near, knows where the wind comes from, and knows how the slight becomes plain; he can then enter into virtue. The Book of Songs says: 'Though the fish lies hidden, it is yet quite clear.' So the noble person looks inward and finds no fault, and has nothing in his will to be ashamed of. What the noble person cannot be matched in is, perhaps, just what other people do not see! The Book of Songs says: 'Seen in your room, you do not shame the corner of the house.' So the noble person is respected without moving and trusted without speaking. The Book of Songs says: 'In offering, silent, at that time there is no strife.' So the noble person rewards no one and yet the people are encouraged; he does not show anger and yet the people fear him more than axes. The Book of Songs says: 'Shining is virtue; all the princes take it as a model.' So the noble person, earnest and reverent, brings peace to the world. The Book of Songs says: 'I cherish your bright virtue, which does not raise its voice or put on a stern look.' The Master said: 'To use voice and look to transform the people is a minor matter.' The Book of Songs says: 'Virtue is light as a hair'; yet a hair still has something to compare with. 'The doings of high Heaven have no sound and no smell': this is the utmost!",
+   "glossary": [
+    {
+     "term": "衣錦尚絅",
+     "en": "yi jin shang jiong - 'a plain coat over brocade'",
+     "note": "A plain unlined coat worn over a brocade robe so that the pattern does not show too much: a figure for the quiet reserve of the noble person."
+    },
+    {
+     "term": "闇然而日章",
+     "en": "an ran er ri zhang - 'hidden yet growing brighter daily'",
+     "note": "Reserved and not showy, yet daily more evident."
+    },
+    {
+     "term": "屋漏",
+     "en": "wu lou - 'the northwest corner of the house'",
+     "note": "The northwest corner of a room, the most hidden part of the house in ancient times; it means that even alone one must have nothing to be ashamed of."
+    },
+    {
+     "term": "篤恭",
+     "en": "du gong - 'earnest reverence'",
+     "note": "Solid and respectful."
+    },
+    {
+     "term": "無聲無臭",
+     "en": "wu sheng wu xiu - 'no sound and no smell'",
+     "note": "Without sound or smell: the Way of Heaven, subtle and wonderful beyond words. The Doctrine of the Mean ends here, returning to the 'mandate of Heaven' of its first chapter."
+    }
+   ],
+   "background": "Zhu Xi held that in this chapter Zisi 'pushes the matter to its limit', drawing the whole book's meaning together in being watchful when alone and earnest reverence. The phrase 'no sound and no smell' echoes the opening line, 'What Heaven confers is called nature'."
+  }
+ }
+}

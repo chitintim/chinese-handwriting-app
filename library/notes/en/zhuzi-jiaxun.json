@@ -1,0 +1,289 @@
+{
+ "id": "zhuzi-jiaxun",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "pian01": {
+   "summary": "The first section covers the daily rules of running a household: rise early and sweep, check the doors at night, be thrifty, keep food and utensils plain and clean, do not covet grand houses or fine fields, and be careful about the people who bring trouble into a home.",
+   "translation": "Rise at first light and sweep the courtyard and the ground before the steps, so that the house is tidy inside and out. When dusk falls, rest; bolt the doors and windows, and check them yourself. With every bowl of porridge and every meal, remember how hard it was to come by; with every half thread of silk or cotton, keep in mind how scarce the world's goods are. Prepare before the rain comes; do not dig the well when you are already thirsty. Live frugally yourself, and when you entertain guests, do not let them linger too long. Let your vessels be plain and clean: an earthenware jar beats gold and jade. Let your food be simple and fine: vegetables from your own garden are better than rare delicacies. Do not build a splendid house, and do not scheme for good farmland. The 'three aunts and six grannies' are in truth go-betweens for lust and theft; a lovely maid and a charming concubine are no blessing for the women's quarters. Do not take handsome boys as servants, and wives and concubines should shun showy make-up.",
+   "keyLines": [
+    {
+     "line": "黎明即起，灑掃庭除，要內外整潔",
+     "en": "Rise at first light, and sweep the courtyard and the ground before the steps, so that the house is tidy inside and out.",
+     "note": "The opening of the whole piece: rising early and sweeping is the first step in keeping a household."
+    },
+    {
+     "line": "一粥一飯，當思來處不易；半絲半縷，恆念物力維艱",
+     "en": "With every bowl of porridge and every meal, remember how hard it was to come by; with every half thread, keep in mind how scarce the world's goods are.",
+     "note": "The most widely quoted line of the piece, teaching people to value what they have and use it sparingly."
+    },
+    {
+     "line": "宜未雨而綢繆，毋臨渴而掘井",
+     "en": "Prepare before the rain comes; do not dig the well when you are already thirsty.",
+     "note": "Prepare for everything in advance, rather than scrambling when trouble is upon you."
+    },
+    {
+     "line": "器具質而潔，瓦缶勝金玉",
+     "en": "Let your vessels be plain and clean: an earthenware jar beats gold and jade.",
+     "note": "What matters in household things is that they are plain and clean, not costly."
+    },
+    {
+     "line": "飲食約而精，園蔬愈珍饈",
+     "en": "Let your food be simple and fine: vegetables from your own garden are better than rare delicacies.",
+     "note": "Food should be simple and carefully prepared; the vegetables you grow yourself beat any delicacy."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "庭除",
+     "en": "ting chu - 'courtyard and the ground before the steps'",
+     "note": "The courtyard, and the open ground in front of the steps."
+    },
+    {
+     "term": "物力維艱",
+     "en": "wu li wei jian - 'material things are hard to come by'",
+     "note": "Goods and resources are not easily gained. 「維」 is just a particle here."
+    },
+    {
+     "term": "未雨綢繆",
+     "en": "wei yu chou mou - 'to prepare before the rain'",
+     "note": "「綢繆」 means to bind or tie fast; the phrase originally meant mending the doors and windows before it rains. It comes from the Book of Songs (Shijing), in the poem 'Chixiao' of the 'Bin' songs."
+    },
+    {
+     "term": "臨渴掘井",
+     "en": "lin ke jue jing - 'to dig the well only when thirsty'",
+     "note": "To start digging a well once you are thirsty; a figure for preparing only when the trouble has arrived."
+    },
+    {
+     "term": "瓦缶",
+     "en": "wa fou - 'earthenware jar'",
+     "note": "Coarse vessels of fired clay."
+    },
+    {
+     "term": "珍饈",
+     "en": "zhen xiu - 'rare delicacies'",
+     "note": "Precious and delicious food."
+    },
+    {
+     "term": "三姑六婆",
+     "en": "san gu liu po - 'three aunts and six grannies'",
+     "note": "The 'three aunts' are Buddhist nuns, Daoist nuns and fortune-telling women; the 'six grannies' are brokers, matchmakers, shamanesses, procuresses, herb-sellers and midwives. In the old days the phrase meant the various women who came and went in people's homes."
+    }
+   ],
+   "background": "The Zhu Family Maxims (Zhujia Xun), also called the Zhu Bailu Maxims for Managing a Household, was written by Zhu Yongchun (style name Bailu), a scholar of Kunshan in Jiangsu at the end of the Ming dynasty (1368-1644) and the start of the Qing (1644-1912). He refused to serve the Qing and spent his life teaching and writing. The whole piece runs to a little over five hundred characters, in neat parallel couplets that are easy to memorise."
+  },
+  "pian02": {
+   "summary": "The second section turns to honouring ancestors and teaching children, to conduct towards others, and to family ethics: sacrifice sincerely, study the classics diligently, do not covet unearned wealth, be generous to poor relatives, help your brothers, and do not be greedy over betrothal gifts or dowries.",
+   "translation": "Though your ancestors are far away, you must not be insincere in making offerings to them; though your descendants may be dull, they must not go without reading the classics. In how you live, aim for plainness; in teaching your children, hold to the proper way. Do not covet windfall wealth, and do not drink wine to excess. With those who carry loads and trade on their shoulders, take no advantage; when you see poor relatives and neighbours, give them warm relief. A family founded on meanness cannot enjoy its fortune for long; where the human bonds are broken, ruin follows at once. Among brothers, uncles and nephews, the one with more should share with the one who has less; among old and young, inside and outside the family, bearing should be grave and speech strict. To heed a wife's words and part from your own flesh and blood, is that how a man should act? To prize money and think little of your parents is not to be worthy of being a son. In marrying off a daughter, choose a good son-in-law and do not demand a heavy betrothal gift; in taking a wife, look for a gentle and virtuous woman and do not count the size of her dowry.",
+   "keyLines": [
+    {
+     "line": "祖宗雖遠，祭祀不可不誠；子孫雖愚，經書不可不讀",
+     "en": "Though your ancestors are far away, you must not be insincere in making offerings to them; though your descendants may be dull, they must not go without reading the classics.",
+     "note": "Honouring the dead and remembering one's origins, and a family that farms and studies, are the two pillars of the traditional upbringing."
+    },
+    {
+     "line": "莫貪意外之財，莫飲過量之酒",
+     "en": "Do not covet windfall wealth, and do not drink wine to excess.",
+     "note": "Guarding against greed and against drink is a basic caution for living in the world."
+    },
+    {
+     "line": "刻薄成家，理無久享；倫常乖舛，立見消亡",
+     "en": "A family founded on meanness cannot enjoy its fortune for long; where the human bonds are broken, ruin follows at once.",
+     "note": "A warning that a family built on meanness and on breaking the human bonds will not last."
+    },
+    {
+     "line": "兄弟叔侄，須分多潤寡",
+     "en": "Among brothers, uncles and nephews, the one with more should share with the one who has less.",
+     "note": "Among kin, those who have a surplus should help those who lack."
+    },
+    {
+     "line": "聽婦言，乖骨肉，豈是丈夫；重貲財，薄父母，不成人子",
+     "en": "To heed a wife's words and part from your own flesh and blood, is that how a man should act? To prize money and think little of your parents is not to be worthy of being a son.",
+     "note": "A criticism of those who are talked into distancing their own kin, and of those who value wealth over their parents."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "義方",
+     "en": "yi fang - 'the right way'",
+     "note": "A method in keeping with rightness, meaning the proper way to bring up children. The phrase comes from the Zuo Commentary (Zuozhuan): 「教之以義方」 (teach them the right way)."
+    },
+    {
+     "term": "肩挑貿易",
+     "en": "jian tiao mao yi - 'those who trade with loads on their shoulders'",
+     "note": "People who carry their goods on a shoulder pole and run a petty trade."
+    },
+    {
+     "term": "溫卹",
+     "en": "wen xu - 'warm relief'",
+     "note": "To relieve and support someone with warmth. 「卹」 is the same as 「恤」."
+    },
+    {
+     "term": "倫常乖舛",
+     "en": "lun chang guai chuan - 'broken human bonds'",
+     "note": "「乖舛」 means to go against and to be in disorder; the phrase means that the moral order of human relationships has decayed."
+    },
+    {
+     "term": "分多潤寡",
+     "en": "fen duo run gua - 'share the more with the less'",
+     "note": "To share what you have in plenty with those who have little, so that they benefit."
+    },
+    {
+     "term": "貲財",
+     "en": "zi cai - 'wealth'",
+     "note": "Property, money."
+    },
+    {
+     "term": "聘、奩",
+     "en": "pin, lian - 'betrothal gift, dowry'",
+     "note": "「聘」 is the betrothal gift that the groom's side sends to the bride's; 「奩」 is the dowry that a woman brings when she marries."
+    }
+   ],
+   "background": "This section covers sacrifice, the teaching of children, conduct in society, and marriage. It reflects the Ming and Qing tradition of scholar families that prized farming and study, filial piety and brotherly duty, and thrift. Lines such as 「聽婦言，乖骨肉」 (listening to a wife's words and parting from one's kin) carry the patriarchal family views of the time, so read them with that background in mind."
+  },
+  "pian03": {
+   "summary": "The third section stresses proportion in how one lives among others: do not fawn on the rich or look down on the poor, avoid lawsuits and too much talk, do not bully the weak, keep calm and examine yourself when trouble comes, and be careful in choosing friends.",
+   "translation": "To put on a fawning face before the rich and powerful is the most shameful thing; to put on airs of pride before the poor is the lowest of all. At home, avoid lawsuits, for to fight a case to the end always turns out badly; in the world, avoid talking too much, for the more you say the more you must get wrong. Do not use your power to bully orphans and widows, and do not, out of greed for the mouth and belly, kill living creatures at will. If you are wilful and think yourself always right, you will have many regrets and mistakes; if you are content to be slack and idle, the family fortunes can hardly be made. If you grow too familiar with bad young men, in time you will be dragged down by them; if you humble yourself before the old and steady, in an emergency you will have someone to lean on. When you hear words said, how can you tell they are not someone's slander? Be patient and think three times. When a matter brings you into dispute, how can you tell that the fault is not yours? You must calm your mind and quietly think it over.",
+   "keyLines": [
+    {
+     "line": "見富貴而生諂容者，最可恥，遇貧窮而作驕態者，賤莫甚",
+     "en": "To put on a fawning face before the rich and powerful is the most shameful thing; to put on airs of pride before the poor is the lowest of all.",
+     "note": "How a person treats the rich and how they treat the poor shows most clearly what sort of person they are."
+    },
+    {
+     "line": "居家戒爭訟，訟則終凶；處世戒多言，言多必失",
+     "en": "At home, avoid lawsuits, for to fight a case to the end always turns out badly; in the world, avoid talking too much, for the more you say the more you must get wrong.",
+     "note": "Advice to stay out of lawsuits and idle talk, so as not to invite trouble."
+    },
+    {
+     "line": "狎暱惡少，久必受其累；屈志老成，急則可相依",
+     "en": "If you grow too familiar with bad young men, in time you will be dragged down by them; if you humble yourself before the old and steady, in an emergency you will have someone to lean on.",
+     "note": "On choosing friends: keep away from the reckless young and stay close to those who are older and steady."
+    },
+    {
+     "line": "輕聽發言，安知非人之譖愬？當忍耐三思",
+     "en": "When you hear words said, how can you tell they are not someone's slander? Be patient and think three times.",
+     "note": "Do not believe what others say too readily; wait and think first, so that slander does not mislead you."
+    },
+    {
+     "line": "因事相爭，焉知非我之不是？須平心暗想",
+     "en": "When a matter brings you into dispute, how can you tell that the fault is not yours? You must calm your mind and quietly think it over.",
+     "note": "In a quarrel, look at yourself first. This is a key point of self-cultivation."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "諂容",
+     "en": "chan rong - 'a fawning face'",
+     "note": "The look of someone who flatters and tries to please."
+    },
+    {
+     "term": "訟",
+     "en": "song - 'lawsuit'",
+     "note": "Going to law."
+    },
+    {
+     "term": "陵逼",
+     "en": "ling bi - 'to bully and press'",
+     "note": "To bully and oppress. 「陵」 is the same as 「凌」."
+    },
+    {
+     "term": "恣殺生靈",
+     "en": "zi sha sheng ling - 'to kill living creatures at will'",
+     "note": "「恣」 means to let go without restraint: to kill living things as one pleases."
+    },
+    {
+     "term": "乖僻自是",
+     "en": "guai pi zi shi - 'wilful and self-righteous'",
+     "note": "Of odd and perverse temper, and sure that one is always right."
+    },
+    {
+     "term": "狎暱",
+     "en": "xia ni - 'over-familiar'",
+     "note": "To be close but not showing proper respect. 「暱」 is the same as 「昵」."
+    },
+    {
+     "term": "老成",
+     "en": "lao cheng - 'the old and steady'",
+     "note": "A person of years and virtue, serious and experienced."
+    },
+    {
+     "term": "譖愬",
+     "en": "zen su - 'slander'",
+     "note": "「譖」 is slander; 「愬」 is the same as 「訴」. Together they mean to speak ill of someone to others."
+    }
+   ],
+   "background": "Much of this section is practical advice for living among people, and several of its lines, such as 「處世戒多言，言多必失」 (in the world avoid much talk, for much talk brings error), have become proverbs. Most of the content draws on Confucian ethics and common experience."
+  },
+  "pian04": {
+   "summary": "The fourth section is about cultivating the mind and finding one's place: do not keep count of favours you give, do not forget favours received, leave room in everything, do not envy or gloat, do good without seeking to be seen, aim in study at the sages, and end by keeping to one's lot and accepting fate.",
+   "translation": "When you do someone a kindness, do not keep it in mind; when you receive a kindness, never forget it. In all things leave some room; do not go back again to where you had your success. When others have joy, do not feel envy; when others have misfortune, do not feel pleased. A good deed that you want others to see is not true goodness; a bad deed that you fear others will find out is a great evil. If you see beauty and lust rises in you, the retribution will fall on your wife and daughters; if you hide a grudge and shoot an arrow from the dark, the calamity will reach your children and grandchildren. When the household is harmonious and at peace, even if breakfast and supper cannot always be had, there is joy to spare; when the state's taxes are paid early, even if your purse is empty, you will find the deepest happiness. In study, set your aim on the sages; in office, keep the ruler and the country in your heart. Keep to your lot and accept your fate; follow the times and leave the rest to Heaven. If a person can be like this, he comes close to the ideal.",
+   "keyLines": [
+    {
+     "line": "施惠無念，受恩莫忘",
+     "en": "When you do someone a kindness, do not keep it in mind; when you receive a kindness, never forget it.",
+     "note": "Not reckoning up the favours you have given, and not forgetting the favours you have received, is the mark of a generous person."
+    },
+    {
+     "line": "凡事當留餘地，得意不宜再往",
+     "en": "In all things leave some room; do not go back again to where you had your success.",
+     "note": "Do not push things to the limit, and know when to stop even in success."
+    },
+    {
+     "line": "善欲人見，不是真善；惡恐人知，便是大惡",
+     "en": "A good deed that you want others to see is not true goodness; a bad deed that you fear others will find out is a great evil.",
+     "note": "This points to the inner motive behind doing good and doing wrong."
+    },
+    {
+     "line": "家門和順，雖饔飧不繼，亦有餘歡",
+     "en": "When the household is harmonious and at peace, even if breakfast and supper cannot always be had, there is joy to spare.",
+     "note": "Harmony in the home matters more than material plenty."
+    },
+    {
+     "line": "讀書志在聖賢，為官心存君國",
+     "en": "In study, set your aim on the sages; in office, keep the ruler and the country in your heart.",
+     "note": "The fundamental aims of study and of public office."
+    },
+    {
+     "line": "守分安命，順時聽天",
+     "en": "Keep to your lot and accept your fate; follow the times and leave the rest to Heaven.",
+     "note": "The closing of the whole piece, ending on the note of contentment with one's station."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "饔飧",
+     "en": "yong sun - 'breakfast and supper'",
+     "note": "「饔」 is the morning meal and 「飧」 the evening meal; 「饔飧不繼」 means that meals cannot be kept up, a life of hardship."
+    },
+    {
+     "term": "國課",
+     "en": "guo ke - 'state taxes'",
+     "note": "The taxes owed to the state."
+    },
+    {
+     "term": "囊橐",
+     "en": "nang tuo - 'purse'",
+     "note": "A bag, and so, money."
+    },
+    {
+     "term": "喜幸心",
+     "en": "xi xing xin - 'a gloating heart'",
+     "note": "The heart of one who is glad at another's misfortune."
+    },
+    {
+     "term": "守分",
+     "en": "shou fen - 'to keep to one's lot'",
+     "note": "To stay content with one's proper station."
+    },
+    {
+     "term": "庶乎",
+     "en": "shu hu - 'close to, nearly'",
+     "note": "Almost, coming near to."
+    }
+   ],
+   "background": "The last section ends with study, office and keeping to one's lot, widening the guide from running a household to principles for being a person and doing one's work. 「守分安命，順時聽天」 (keep to your lot and accept your fate; follow the times and leave the rest to Heaven) shows the author's outlook of contentment in poverty."
+  }
+ }
+}

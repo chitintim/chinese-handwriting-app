@@ -2,15 +2,18 @@
  "id": "bihua-lizi",
  "title": {
   "trad": "基本筆畫例字",
-  "simp": "基本笔画例字"
+  "simp": "基本笔画例字",
+  "en": "Basic Strokes: Examples"
  },
  "author": {
   "trad": "編選",
-  "simp": "编选"
+  "simp": "编选",
+  "en": "Compiled"
  },
  "dynasty": {
   "trad": "—",
-  "simp": "—"
+  "simp": "—",
+  "en": "-"
  },
  "source": "https://zh.wikisource.org/wiki/%E6%B0%B8%E5%AD%97%E5%85%AB%E6%B3%95",
  "license": "Public domain (character lists compiled for this library)",
@@ -20,7 +23,8 @@
    "id": "heng",
    "title": {
     "trad": "筆畫 · 橫",
-    "simp": "笔画 · 横"
+    "simp": "笔画 · 横",
+    "en": "Stroke · Heng (horizontal)"
    },
    "body": {
     "trad": "一二三十土，王工干下上。",
@@ -31,7 +35,8 @@
    "id": "shu",
    "title": {
     "trad": "筆畫 · 豎",
-    "simp": "笔画 · 竖"
+    "simp": "笔画 · 竖",
+    "en": "Stroke · Shu (vertical)"
    },
    "body": {
     "trad": "十中上下午，牛平年山川。",
@@ -42,7 +47,8 @@
    "id": "pie",
    "title": {
     "trad": "筆畫 · 撇",
-    "simp": "笔画 · 撇"
+    "simp": "笔画 · 撇",
+    "en": "Stroke · Pie (left-falling)"
    },
    "body": {
     "trad": "人八大千生，月用代氣禾。",
@@ -53,7 +59,8 @@
    "id": "na",
    "title": {
     "trad": "筆畫 · 捺",
-    "simp": "笔画 · 捺"
+    "simp": "笔画 · 捺",
+    "en": "Stroke · Na (right-falling)"
    },
    "body": {
     "trad": "人入八大天，火木走又之。",
@@ -64,7 +71,8 @@
    "id": "dian",
    "title": {
     "trad": "筆畫 · 點",
-    "simp": "笔画 · 点"
+    "simp": "笔画 · 点",
+    "en": "Stroke · Dian (dot)"
    },
    "body": {
     "trad": "主言文心玄，小立六求。",
@@ -75,7 +83,8 @@
    "id": "ti",
    "title": {
     "trad": "筆畫 · 挑",
-    "simp": "笔画 · 挑"
+    "simp": "笔画 · 挑",
+    "en": "Stroke · Tiao (rising)"
    },
    "body": {
     "trad": "地江打冰河，海法技場孩。",
@@ -86,7 +95,8 @@
    "id": "shugou",
    "title": {
     "trad": "筆畫 · 豎鉤",
-    "simp": "笔画 · 竖钩"
+    "simp": "笔画 · 竖钩",
+    "en": "Stroke · Shugou (vertical hook)"
    },
    "body": {
     "trad": "小水事求手，才永了丁予。",
@@ -97,7 +107,8 @@
    "id": "hengzhe",
    "title": {
     "trad": "筆畫 · 橫折",
-    "simp": "笔画 · 横折"
+    "simp": "笔画 · 横折",
+    "en": "Stroke · Hengzhe (horizontal turn)"
    },
    "body": {
     "trad": "日口目田四，回中冒國。",
@@ -108,7 +119,8 @@
    "id": "hengzhegou",
    "title": {
     "trad": "筆畫 · 橫折鉤",
-    "simp": "笔画 · 横折钩"
+    "simp": "笔画 · 横折钩",
+    "en": "Stroke · Hengzhegou (turn and hook)"
    },
    "body": {
     "trad": "月同勿句司，風用別周問。",
@@ -119,7 +131,8 @@
    "id": "wangou",
    "title": {
     "trad": "筆畫 · 彎鉤",
-    "simp": "笔画 · 弯钩"
+    "simp": "笔画 · 弯钩",
+    "en": "Stroke · Wangou (curved hook)"
    },
    "body": {
     "trad": "狗家孫猫逐，我戈成氏代。",
@@ -130,7 +143,8 @@
    "id": "xiegou",
    "title": {
     "trad": "筆畫 · 斜鉤",
-    "simp": "笔画 · 斜钩"
+    "simp": "笔画 · 斜钩",
+    "en": "Stroke · Xiegou (slanting hook)"
    },
    "body": {
     "trad": "我戈成或戰，伐武式找戲。",
@@ -141,7 +155,8 @@
    "id": "piezhe",
    "title": {
     "trad": "筆畫 · 撇折",
-    "simp": "笔画 · 撇折"
+    "simp": "笔画 · 撇折",
+    "en": "Stroke · Piezhe (left-fall and turn)"
    },
    "body": {
     "trad": "么公去台能，私允牟弘參。",

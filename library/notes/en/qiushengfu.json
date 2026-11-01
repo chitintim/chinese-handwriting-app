@@ -1,0 +1,97 @@
+{
+ "id": "qiushengfu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Ouyang Xiu hears the sound of autumn as he reads at night. From the sound he goes to autumn's colour, look, air and mood, then uses yin-yang and the five phases to describe autumn as a killing, withering air, and goes on to sigh that care and toil make people age quickly. It ends with the boy asleep and insects chirping on all four walls.",
+   "translation": "Master Ouyang was reading at night when he heard a sound coming from the south-west. He listened, startled, and said: 'Strange!' At first it was a soft rustling and sighing; then suddenly it galloped and crashed, like waves startled in the night, like wind and rain coming on at once. When it touched things it clanged and rang, and metal and iron all sounded. It was like an army marching on the enemy, with gags in their mouths, rushing forward; no order is heard, only the tread of men and horses.\nI said to the boy: 'What sound is this? Go out and look.' The boy said: 'The stars and moon are bright and clean, the Milky Way is in the sky, there is no human voice in any direction; the sound is among the trees.'\nI said: 'Ah, how sad! This is the sound of autumn. Why has it come? As for the way autumn looks: its colour is bleak and pale, mist drifts and clouds gather; its face is clear and bright, the sky high and the sun brilliant; its air is cold and sharp, pricking skin and bone; its mood is desolate, and the hills and rivers are silent. So its sound is bleak and sharp, crying and indignant. The rich grass is lush and green and vies to flourish; the fine trees are thick and pleasing. But when grass is brushed by autumn its colour changes, and when a tree meets it the leaves fall. What breaks them and scatters them is the fierce remnant of one breath.\nAutumn is the officer of punishment; in the seasons it belongs to yin. It is also the image of war; among the phases it is metal. It is called the righteous air of heaven and earth, which always takes stern killing as its heart. In heaven's way with things, spring gives birth and autumn bears fruit. So in music, the shang note governs the music of the west, and yize is the pitch of the seventh month. Shang means \"wound\": when things are old they grieve and are hurt. Yi means \"slay\": when things have flourished too far they must be struck down.\nAlas! Grass and trees have no feeling, yet in their season they are blown away and fall. Man is a living creature, and the most spirited of all things. A hundred cares stir his heart, ten thousand affairs wear out his body. What moves within him must shake his spirit. And how much more when he thinks of what his strength cannot reach and worries over what his wisdom cannot do. It is natural that his glowing red face withers like dead wood, and that his glossy black hair turns to speckled stars. Why, when he is not made of metal or stone, should he wish to vie with grass and trees in flourishing? Think who has hurt and robbed him - why then resent the sound of autumn?'\nThe boy made no answer; his head drooped and he slept. I heard only the insects chirping on the four walls, as if helping me to sigh.",
+   "keyLines": [
+    {
+     "line": "初淅瀝以蕭颯，忽奔騰而砰湃",
+     "en": "At first a soft rustling and sighing; then suddenly it galloped and crashed.",
+     "note": "The sound grows from small to large, painting the sudden rise of the autumn sound at the opening."
+    },
+    {
+     "line": "如波濤夜驚，風雨驟至",
+     "en": "Like waves startled in the night, like wind and rain coming on at once.",
+     "note": "A comparison for the force of the autumn sound, building a tense and uneasy mood."
+    },
+    {
+     "line": "星月皎潔，明河在天，四無人聲，聲在樹間",
+     "en": "The stars and moon are bright and clean, the Milky Way is in the sky, there is no human voice in any direction; the sound is among the trees.",
+     "note": "The boy's plain scene-painting is set against the writer's alarm, and shows that the sound is the wind in the leaves."
+    },
+    {
+     "line": "其色慘澹，煙霏雲斂；其容清明，天高日晶；其氣慄冽，砭人肌骨；其意蕭條，山川寂寥",
+     "en": "Its colour is bleak and pale; its face is clear and bright; its air is cold and sharp; its mood is desolate.",
+     "note": "It spreads out autumn's features in four aspects, colour, look, air and mood, and is the most famous passage in the piece."
+    },
+    {
+     "line": "夫秋，刑官也，於時為陰：又兵象也，於行為金",
+     "en": "Autumn is the officer of punishment; in the seasons it belongs to yin. It is also the image of war; among the phases it is metal.",
+     "note": "Using yin-yang and the five phases, it makes autumn a stern, killing air and gives the season a philosophical sense."
+    },
+    {
+     "line": "草木無情，有時飄零。人為動物，惟物之靈",
+     "en": "Grass and trees have no feeling, yet in their season they are blown away and fall. Man is a living creature, and the most spirited of all things.",
+     "note": "It turns from fallen plants to human life: people have feelings and thoughts, and so worry and wear out more easily."
+    },
+    {
+     "line": "奈何以非金石之質，欲與草木而爭榮",
+     "en": "Why, when he is not made of metal or stone, should he wish to vie with grass and trees in flourishing?",
+     "note": "He sighs that the human body is not metal or stone and should not compete with plants in flourishing; this is the main point of the piece."
+    },
+    {
+     "line": "但聞四壁蟲聲唧唧，如助余之歎息",
+     "en": "I heard only the insects chirping on the four walls, as if helping me to sigh.",
+     "note": "It closes with the sound of insects, a lasting echo of the sound at the beginning."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "淅瀝",
+     "en": "xi li - rustling",
+     "note": "Describes the light sound of wind, rain or falling leaves."
+    },
+    {
+     "term": "銜枚",
+     "en": "xian mei - gag stick",
+     "note": "In ancient marches, soldiers held a stick in their mouths to prevent any noise."
+    },
+    {
+     "term": "明河",
+     "en": "ming he - the bright river",
+     "note": "The Milky Way."
+    },
+    {
+     "term": "刑官",
+     "en": "xing guan - officer of punishment",
+     "note": "In ancient government, the official in charge of punishment; here autumn is compared to him because it rules over killing and withering."
+    },
+    {
+     "term": "商聲",
+     "en": "shang sheng - the shang note",
+     "note": "One of the five notes, matched with autumn and the west."
+    },
+    {
+     "term": "夷則",
+     "en": "yi ze - yize pitch",
+     "note": "One of the twelve pitch pipes, matched with the seventh month and with autumn."
+    },
+    {
+     "term": "黟然",
+     "en": "yi ran - jet black",
+     "note": "The look of being black."
+    },
+    {
+     "term": "星星",
+     "en": "xing xing - speckled",
+     "note": "Describes hair streaked with grey, like points of stars."
+    }
+   ],
+   "background": "Ouyang Xiu (1007-1072) was the leader of the Northern Song literary world. He wrote this rhapsody around 1059. It is a leading example of the Song 'prose rhapsody', bringing prose syntax into the fu form, and uses the sound of autumn to express feeling about life; its influence has been wide."
+  }
+ }
+}

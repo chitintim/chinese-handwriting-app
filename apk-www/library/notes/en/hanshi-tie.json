@@ -1,0 +1,131 @@
+{
+ "id": "hanshi-tie",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "qi1": {
+   "summary": "In his third year of exile in Huangzhou, at the Cold Food festival and in endless rain, Su Shi mourns the spring that has slipped away, the crabapple blossoms beaten into the mud, and the years passing unseen, until he is like a sick youth who rises from his bed to find his hair gone white.",
+   "translation": "Since I came to Huangzhou, I have seen three Cold Food festivals.\nEvery year I long to cherish the spring, and every year the spring leaves and will not be cherished.\nThis year again I am plagued by rain; for two months it has been as bleak as autumn.\nLying in bed I hear that the crabapple blossoms have fallen, their rouge-and-snow petals soiled in the mud.\nIn secret someone has carried the spring away on his back; in the dead of night there really are such strong men.\nHow is that different from a sick young man, who gets up from his illness to find his hair already white?",
+   "keyLines": [
+    {
+     "line": "自我來黃州，已過三寒食",
+     "en": "Since I came to Huangzhou, I have seen three Cold Food festivals.",
+     "note": "Gives the place and the time: three years of exile in Huangzhou, where the poem begins."
+    },
+    {
+     "line": "年年欲惜春，春去不容惜",
+     "en": "Every year I long to cherish the spring, and every year the spring leaves and will not be cherished.",
+     "note": "Each year he tries to hold on to spring and each year it goes, which brings in the heartless passing of time and his own powerlessness."
+    },
+    {
+     "line": "臥聞海棠花，泥污燕支雪",
+     "en": "Lying in bed I hear that the crabapple blossoms have fallen, their rouge-and-snow petals soiled in the mud.",
+     "note": "The crabapple is beaten down by the rain and soiled in the mud, a picture of beautiful things fading and of his own fate."
+    },
+    {
+     "line": "暗中偷負去，夜半真有力",
+     "en": "In secret someone has carried the spring away on his back; in the dead of night there really are such strong men.",
+     "note": "Draws on the Zhuangzi, where a strong man carries off a boat hidden in a ravine in the middle of the night; time slips away unnoticed in the same way."
+    },
+    {
+     "line": "何殊病少年，病起頭已白",
+     "en": "How is that different from a sick young man, who gets up from his illness to find his hair already white?",
+     "note": "He compares himself to a sick youth whose hair turns white: he grieves both for lost time and for his misfortunes."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "黃州",
+     "en": "Huangzhou - modern Huanggang in Hubei",
+     "note": "Su Shi was demoted to be deputy military trainer at Huangzhou after the Wutai poetry case, in which his poems were attacked as slander of the court."
+    },
+    {
+     "term": "寒食",
+     "en": "Cold Food (Hanshi) - the festival",
+     "note": "A festival a day or two before Qingming, when fires are banned and only cold food is eaten; families also sweep the graves and make offerings to their ancestors."
+    },
+    {
+     "term": "燕支",
+     "en": "yanzhi - rouge",
+     "note": "The same as the common word for rouge; here it describes the red and white of the crabapple petals."
+    },
+    {
+     "term": "暗中偷負去",
+     "en": "an zhong tou fu qu - 'secretly carried away on the back'",
+     "note": "Alludes to the Daoist classic Zhuangzi, chapter 'The Great and Venerable Teacher': a boat is hidden in a ravine, yet a strong man carries it off in the night."
+    },
+    {
+     "term": "蕭瑟",
+     "en": "xiaose - bleak, desolate",
+     "note": "The sound and sight of autumn wind rustling through a bare, cheerless landscape."
+    }
+   ],
+   "background": "The Cold Food Poems (Hanshi tie) are two five-character poems that Su Shi (Su Dongpo) wrote in 1082, his third year of exile in Huangzhou, and then copied out himself in running script as a long handscroll, now in the National Palace Museum, Taipei. The characters grow from small to large as his feelings rise, and the structure and brush movement vary freely. The scroll is called the third-best running script in the world, after the Orchid Pavilion Preface and the Draft Eulogy for a Nephew. Huang Tingjian added a colophon saying that it carries the brush spirit of Yan Zhenqing, Yang Ningshi and Li Jianzhong. It is a classic model for learning running script and for seeing how calligraphy and feeling become one."
+  },
+  "qi2": {
+   "summary": "The second poem shows spring floods and endless rain: the little house is like a fishing boat, the kitchen is empty and the stove burns damp reeds, and he does not even notice the festival until he sees crows carrying off paper money. It ends with the palace gate nine layers deep, the family graves ten thousand li away, and a heart like dead ashes that cannot be blown back to life.",
+   "translation": "The spring river is about to come in at my door, and the rain comes on without end.\nMy small house is like a fishing boat, adrift in the misty water and cloud.\nIn the empty kitchen I boil cold greens; in the broken stove I burn damp reeds.\nHow could I know it was Cold Food? I only see crows carrying off paper money.\nThe sovereign's gate is nine layers deep; the graves lie ten thousand li away.\nI too would like to weep at the end of the road, but dead ashes cannot be blown into flame.",
+   "keyLines": [
+    {
+     "line": "小屋如漁舟，濛濛水雲裏",
+     "en": "The small house is like a fishing boat, in the misty water and cloud.",
+     "note": "The house is compared to a fishing boat, giving a feeling of lonely drifting in the rain."
+    },
+    {
+     "line": "空庖煮寒菜，破竈燒濕葦",
+     "en": "In the empty kitchen I boil cold greens; in the broken stove I burn damp reeds.",
+     "note": "Describes his poverty: an empty kitchen, wet fuel."
+    },
+    {
+     "line": "那知是寒食，但見烏銜紙",
+     "en": "How could I know it was Cold Food? I only see crows carrying off paper money.",
+     "note": "He had not even realised it was Cold Food; he sees only crows taking the paper money burnt at the graves, which hints at homesickness and sorrow."
+    },
+    {
+     "line": "君門深九重，墳墓在萬里",
+     "en": "The sovereign's gate is nine layers deep; the graves lie ten thousand li away.",
+     "note": "The court is beyond reach and the ancestral graves are far away: he cannot serve his country and he is homesick."
+    },
+    {
+     "line": "也擬哭途窮，死灰吹不起",
+     "en": "I too would like to weep at the end of the road, but dead ashes cannot be blown into flame.",
+     "note": "Alludes to Ruan Ji, who wept when his carriage reached the end of the road; Su Shi says his heart is dead ash that cannot burn again."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "空庖",
+     "en": "kongpao - empty kitchen",
+     "note": "An empty, bare kitchen. Pao means kitchen."
+    },
+    {
+     "term": "寒菜",
+     "en": "hancai - cold greens",
+     "note": "Cold vegetables; some read it as the wild greens eaten at Cold Food."
+    },
+    {
+     "term": "烏銜紙",
+     "en": "wu xian zhi - crows carrying paper",
+     "note": "Crows pick up the paper money burnt as offerings to the ancestors, a sight of grave-sweeping at Cold Food."
+    },
+    {
+     "term": "君門",
+     "en": "junmen - the sovereign's gate",
+     "note": "The gate of the ruler's palace, standing for the court."
+    },
+    {
+     "term": "途窮",
+     "en": "tuqiong - the end of the road",
+     "note": "Alludes to Ruan Ji (3rd century), who drove until the road ran out and then wept; it means being at a dead end."
+    },
+    {
+     "term": "死灰",
+     "en": "sihui - dead ashes",
+     "note": "From the Zhuangzi: a heart like dead ashes, with no life left in it."
+    }
+   ],
+   "background": "The two poems of the Cold Food scroll were written and copied out by Su Shi (1037-1101) in Huangzhou, in running script; the scroll is now in the National Palace Museum, Taipei. The brush is freer in the second poem than in the first, and the characters are especially large at the lines about the palace gate nine layers deep and the graves ten thousand li away, matching the surge of feeling. Su Shi's style is full and artless, and the scroll, called the third-best running script in the world, is the leading work of the Song dynasty (960-1279) taste for expressive writing, and an important model for learning running script."
+  }
+ }
+}

@@ -1,0 +1,580 @@
+{
+ "id": "dizigui",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "zongxu": {
+   "summary": "The opening sets out the plan of the whole book: it is the teaching of the sages, and the order is filial piety and respect for elders first, then care and good faith, then a wide love for all people while drawing near to the humane, and only after that, with strength to spare, the study of literature and learning.",
+   "translation": "The Rules for Students: the teaching of the sages.\nFirst filial piety and brotherly respect; next care and good faith.\nLove all people widely, and be close to the humane.\nIf there is strength to spare, then study the arts and letters.",
+   "keyLines": [
+    {
+     "line": "首孝弟，次謹信。汎愛眾，而親仁。有餘力，則學文。",
+     "en": "First filial piety and brotherly respect; next care and good faith. Love all people widely, and be close to the humane. If there is strength to spare, then study the arts and letters.",
+     "note": "The structure of the book: filial piety and respect for elders, care and good faith, love of all, closeness to the humane, and learning, which the following sections take up in that order."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "弟子",
+     "en": "dizi - student",
+     "note": "A pupil, or a young person."
+    },
+    {
+     "term": "孝弟",
+     "en": "xiao di - filial piety and brotherly respect",
+     "note": "Di here stands for ti, respect for elder brothers: being a good child to one's parents and respectful to elder brothers."
+    },
+    {
+     "term": "謹信",
+     "en": "jin xin - care and good faith",
+     "note": "Being careful in word and deed, and keeping one's word."
+    },
+    {
+     "term": "汎愛眾",
+     "en": "fan ai zhong - love all widely",
+     "note": "To love people in general. Fan (汎) is the same as 泛, 'broad'."
+    },
+    {
+     "term": "親仁",
+     "en": "qin ren - being close to the humane",
+     "note": "To keep company with people of humaneness (ren)."
+    },
+    {
+     "term": "學文",
+     "en": "xue wen - study the arts and letters",
+     "note": "To learn the 'writings' of the six arts, that is, cultural knowledge."
+    }
+   ],
+   "background": "The Rules for Students was first called Instruction for Beginners (Xunmeng wen) and was compiled by Li Yuxiu, a licentiate of the Kangxi reign (1661-1722) of the Qing dynasty (1644-1912), and later revised and renamed by Jia Cunren. Its outline comes from a passage in the Analects (Xue er chapter): a young person at home should be filial and out of doors respectful; careful and trustworthy, loving all widely and close to the humane; and if there is strength to spare after this, should study letters."
+  },
+  "xiao": {
+   "summary": "This section teaches filial piety at home: answer your parents' call and teaching, look after their comfort, do not act on your own, advise them gently if they are wrong, nurse them when ill, and honour them with sincerity in mourning and sacrifice.",
+   "translation": "When your parents call, answer without delay. When your parents give an order, do it without laziness.\nWhen your parents teach you, listen with respect. When your parents blame you, accept it with obedience.\nIn winter keep them warm; in summer keep them cool. In the morning look in on them; in the evening see them settled.\nWhen you go out, tell them; when you come back, show your face.\nLive in a regular place and do not change your work.\nEven in a small matter, do not act on your own; if you do, you fail in a child's duty.\nEven a small thing, do not hide away for yourself; if you do, you wound your parents' hearts.\nWhat your parents like, do your best to provide; what they dislike, take care to take away.\nIf your body is hurt, you give your parents worry; if your virtue is hurt, you give them shame.\nWhen your parents love you, what is difficult about filial piety? When they dislike you, to be filial then is truly worthy.\nWhen your parents are in the wrong, advise them to change; make your look pleasant and your voice soft.\nIf your advice is not accepted, wait until they are pleased and advise again; follow them in tears, and if they beat you, bear no grudge.\nWhen your parents are ill, taste the medicine first; wait on them day and night and do not leave their bedside.\nMourn for three years, and often weep with grief; change how you live, and give up wine and meat.\nIn mourning, observe every rite; in sacrifice, give all your sincerity.\nServe the dead as if they were alive.",
+   "keyLines": [
+    {
+     "line": "冬則溫，夏則凊。晨則省，昏則定。出必告，反必面。",
+     "en": "In winter keep them warm; in summer keep them cool. In the morning look in on them; in the evening see them settled. When you go out, tell them; when you come back, show your face.",
+     "note": "Daily care: warmth in winter, coolness in summer, greeting parents morning and night, and telling them when you go out and come in."
+    },
+    {
+     "line": "身有傷，貽親憂。德有傷，貽親羞。",
+     "en": "If your body is hurt, you give your parents worry; if your virtue is hurt, you give them shame.",
+     "note": "Filial piety is more than supporting parents; it includes taking care of your body and conduct so that your parents are not worried or shamed."
+    },
+    {
+     "line": "親愛我，孝何難。親憎我，孝方賢。",
+     "en": "When your parents love you, what is difficult about filial piety? When they dislike you, to be filial then is truly worthy.",
+     "note": "It is easy in good times; to stay filial in hard times is a rare virtue."
+    },
+    {
+     "line": "親有過，諫使更。怡吾色，柔吾聲。諫不入，悅復諫。號泣隨，撻無怨。",
+     "en": "When your parents are in the wrong, advise them to change; make your look pleasant and your voice soft. If your advice is not accepted, wait until they are pleased and advise again; follow them in tears, and if they beat you, bear no grudge.",
+     "note": "How to remonstrate: tell parents when they are wrong, but gently; if they do not listen, pick another moment, and never feel resentment."
+    },
+    {
+     "line": "親有疾，藥先嘗。晝夜侍，不離床。",
+     "en": "When your parents are ill, taste the medicine first; wait on them day and night and do not leave their bedside.",
+     "note": "Nurse sick parents with care, and taste the medicine first to be sure it is safe."
+    },
+    {
+     "line": "喪三年，常悲咽。居處變，酒肉絕。喪盡禮，祭盡誠。事死者，如事生。",
+     "en": "Mourn for three years, and often weep with grief; change how you live, and give up wine and meat. In mourning, observe every rite; in sacrifice, give all your sincerity. Serve the dead as if they were alive.",
+     "note": "Rites of mourning and sacrifice: three years of mourning with a grieving manner, funerals that follow ritual, sacrifices made with sincerity, and the dead parents treated as though they were alive."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "凊",
+     "en": "qing - cool",
+     "note": "Cool and fresh. Pronounced qing."
+    },
+    {
+     "term": "省",
+     "en": "xing - to look in on",
+     "note": "To greet one's parents and ask after them. Pronounced xing."
+    },
+    {
+     "term": "定",
+     "en": "ding - to settle",
+     "note": "In the evening, to arrange the parents' bedding so they can sleep in peace."
+    },
+    {
+     "term": "反",
+     "en": "fan - to return",
+     "note": "The same as the character 返, 'to return'."
+    },
+    {
+     "term": "貽",
+     "en": "yi - to leave behind",
+     "note": "To leave, or bring upon."
+    },
+    {
+     "term": "諫",
+     "en": "jian - to remonstrate",
+     "note": "To speak frankly to an elder to correct them."
+    },
+    {
+     "term": "撻",
+     "en": "ta - to beat",
+     "note": "To strike with a whip or rod."
+    },
+    {
+     "term": "居處變",
+     "en": "ju chu bian - a change of living quarters",
+     "note": "During mourning, a change in where one lives, such as not staying in the main room."
+    }
+   ],
+   "background": "This section matches the Analects line that at home one should be filial. The line 'warm in winter, cool in summer, settle them at night and look in on them in the morning' comes from the Record of Rites (Quli chapter) and was the basic etiquette for serving parents in ancient times."
+  },
+  "di": {
+   "summary": "This section covers how to behave towards elder brothers and elders outside the home: the elder brother is kind, the younger respectful, money is taken lightly, and words are held back. In walking, sitting and answering, elders come first; on meeting an elder one greets him, and one treats one's father's brothers like a father and one's elder cousins like an elder brother.",
+   "translation": "The way of an elder brother is friendship; the way of a younger brother is respect. Brothers in harmony: filial piety lies within.\nIf you take goods lightly, how could resentment arise? If you hold back your words, anger fades by itself.\nWhether at table, sitting or walking, the elder goes first and the younger after.\nWhen an elder calls someone, call that person for him; if the person is not there, go yourself at once.\nWhen you address an elder, do not use his name; in front of an elder, do not show off your ability.\nWhen you meet an elder on the road, hurry forward and bow; if he says nothing, step back and stand respectfully.\nIf you are riding, get off your horse; if you are in a carriage, get down; and wait until he has gone a hundred paces or more.\nWhen the elder stands, the young do not sit; when the elder sits, sit only when told.\nIn front of an elder keep your voice low; but if it is so low that he cannot hear, that is not right either.\nWhen entering, hurry; when leaving, go slowly; when asked a question, stand up to answer, and do not let your eyes wander.\nServe your father's brothers as you would your father; serve your older cousins as you would your own elder brothers.",
+   "keyLines": [
+    {
+     "line": "兄道友，弟道恭。兄弟睦，孝在中。財物輕，怨何生。言語忍，忿自泯。",
+     "en": "The way of an elder brother is friendship; the way of a younger brother is respect. Brothers in harmony: filial piety lies within. If you take goods lightly, how could resentment arise? If you hold back your words, anger fades by itself.",
+     "note": "Between brothers: living in harmony is where filial piety lies; not quarrelling over money and holding back words reduces anger and resentment."
+    },
+    {
+     "line": "長者先，幼者後。長呼人，即代叫。人不在，己即到。",
+     "en": "The elder goes first and the younger after. When an elder calls someone, call that person for him; if the person is not there, go yourself at once.",
+     "note": "Rules of precedence: elders first in eating and walking, and passing on an elder's message."
+    },
+    {
+     "line": "稱尊長，勿呼名。對尊長，勿見能。",
+     "en": "When you address an elder, do not use his name; in front of an elder, do not show off your ability.",
+     "note": "Be courteous to elders: do not call them by name and do not show off your talents in front of them."
+    },
+    {
+     "line": "路遇長，疾趨揖。長無言，退恭立。騎下馬，乘下車。過猶待，百步餘。",
+     "en": "When you meet an elder on the road, hurry forward and bow; if he says nothing, step back and stand respectfully. If you are riding, get off your horse; if you are in a carriage, get down; and wait until he has gone a hundred paces or more.",
+     "note": "Etiquette when meeting an elder on the road: hurry forward to bow, dismount or get down from the carriage, and wait until the elder has gone some distance."
+    },
+    {
+     "line": "長者立，幼勿坐。長者坐，命乃坐。尊長前，聲要低。低不聞，卻非宜。",
+     "en": "When the elder stands, the young do not sit; when the elder sits, sit only when told. In front of an elder keep your voice low; but if it is so low that he cannot hear, that is not right either.",
+     "note": "Standing, sitting and speaking: do not sit while an elder stands, sit only with permission, and speak low but not so low as to be inaudible."
+    },
+    {
+     "line": "事諸父，如事父。事諸兄，如事兄。",
+     "en": "Serve your father's brothers as you would your father; serve your older cousins as you would your own elder brothers.",
+     "note": "In conclusion: treat uncles as you would a father, and older cousins as you would your own brothers."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "睦",
+     "en": "mu - harmony",
+     "note": "Getting on peacefully."
+    },
+    {
+     "term": "忿",
+     "en": "fen - anger",
+     "note": "Rage or resentment."
+    },
+    {
+     "term": "泯",
+     "en": "min - to fade away",
+     "note": "To disappear."
+    },
+    {
+     "term": "勿見能",
+     "en": "wu jian neng - do not show your ability",
+     "note": "Do not display your talents in front of an elder. Jian is the same as the usual xian, 'to show'."
+    },
+    {
+     "term": "疾趨揖",
+     "en": "ji qu yi - hurry forward and bow",
+     "note": "To go quickly forward and make a bow with joined hands. Ji means fast."
+    },
+    {
+     "term": "諸父",
+     "en": "zhu fu - uncles",
+     "note": "Father's elder and younger brothers and others of the father's generation."
+    },
+    {
+     "term": "諸兄",
+     "en": "zhu xiong - elder cousins",
+     "note": "Older cousins and clan brothers of the same generation as oneself."
+    }
+   ],
+   "background": "This section matches the Analects line that when out one should be respectful. Ti means respecting elder brothers and elders, and it extends filial piety in Confucian ethics."
+  },
+  "jin": {
+   "summary": "This section is about care in everyday life: when to get up and sleep, dress, food and drink, posture, movements, dealing with others, and borrowing and returning things. It stresses building steady, tidy and orderly habits from small details.",
+   "translation": "Rise early in the morning and go to sleep late at night; old age comes easily, so treasure this time.\nIn the morning always wash your face and rinse your mouth; after using the toilet, wash your hands at once.\nYour cap must be straight and your buttons fastened; your socks and shoes should both fit snugly.\nPut your cap and clothes in a set place; do not throw them down, which would make them dirty.\nIn clothes value cleanliness, not finery; suit your station above and your family's means below.\nAt meals, do not be choosy; eat enough and no more.\nWhile you are young, do not drink wine; to get drunk is the most shameful thing.\nWalk calmly and stand straight; bow deeply and roundly, and kowtow with respect.\nDo not step on the threshold; do not lean to one side; do not sit with your legs sprawled; do not shake your thighs.\nLift the door curtain slowly, with no sound; turn corners widely, so as not to knock the edges.\nHold an empty vessel as if it were full; enter an empty room as if someone were in it.\nDo not rush in your work, for haste brings many mistakes; do not shrink from difficulty, and do not be careless.\nPlaces of fighting and noise, never go near; wicked and crooked matters, never ask about.\nWhen about to enter a door, ask who is inside; when about to go up into the hall, raise your voice.\nWhen someone asks who is there, answer with your name; 'it is I' or 'me' is not clear.\nIf you use another's things, you must ask plainly; if you do not ask, it is theft.\nIf you borrow another's things, return them on time; if you have a pressing need later, borrowing will not be hard.",
+   "keyLines": [
+    {
+     "line": "朝起早，夜眠遲。老易至，惜此時。",
+     "en": "Rise early in the morning and go to sleep late at night; old age comes easily, so treasure this time.",
+     "note": "A call to value time: rise early and sleep late, because people age quickly."
+    },
+    {
+     "line": "晨必盥，兼漱口。便溺回，輒淨手。",
+     "en": "In the morning always wash your face and rinse your mouth; after using the toilet, wash your hands at once.",
+     "note": "Personal hygiene: wash and rinse in the morning, and wash the hands after using the toilet."
+    },
+    {
+     "line": "冠必正，紐必結。襪與履，俱緊切。",
+     "en": "Your cap must be straight and your buttons fastened; your socks and shoes should both fit snugly.",
+     "note": "Neat appearance: cap straight, buttons fastened, socks and shoes snug."
+    },
+    {
+     "line": "衣貴潔，不貴華。上循分，下稱家。",
+     "en": "In clothes value cleanliness, not finery; suit your station above and your family's means below.",
+     "note": "Clothes should be clean rather than showy, and fit one's position and the family's means."
+    },
+    {
+     "line": "步從容，立端正。揖深圓，拜恭敬。勿踐閾，勿跛倚。勿箕踞，勿搖髀。",
+     "en": "Walk calmly and stand straight; bow deeply and roundly, and kowtow with respect. Do not step on the threshold; do not lean to one side; do not sit with your legs sprawled; do not shake your thighs.",
+     "note": "Bearing and posture: walk calmly, stand straight, and do not stand on thresholds, lean, sprawl or jiggle your legs."
+    },
+    {
+     "line": "執虛器，如執盈。入虛室，如有人。事勿忙，忙多錯。",
+     "en": "Hold an empty vessel as if it were full; enter an empty room as if someone were in it. Do not rush in your work, for haste brings many mistakes.",
+     "note": "Self-discipline when alone: carry an empty vessel as if it were full, enter an empty room as if someone were there, and do not hurry."
+    },
+    {
+     "line": "將入門，問孰存。將上堂，聲必揚。人問誰，對以名。吾與我，不分明。",
+     "en": "When about to enter a door, ask who is inside; when about to go up into the hall, raise your voice. When someone asks who is there, answer with your name; 'it is I' or 'me' is not clear.",
+     "note": "Courtesy at the door: ask who is in, make a sound before entering the hall, and say your name when asked who you are."
+    },
+    {
+     "line": "用人物，須明求。倘不問，即為偷。借人物，及時還。後有急，借不難。",
+     "en": "If you use another's things, you must ask plainly; if you do not ask, it is theft. If you borrow another's things, return them on time; if you have a pressing need later, borrowing will not be hard.",
+     "note": "Principles for objects: tell the owner when you use something, return what you borrow on time, and it will be easy to borrow again."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "盥",
+     "en": "guan - to wash",
+     "note": "To wash hands and face. Pronounced guan."
+    },
+    {
+     "term": "便溺",
+     "en": "bian ni - using the toilet",
+     "note": "Passing urine and stool."
+    },
+    {
+     "term": "閾",
+     "en": "yu - threshold",
+     "note": "The sill of a door. Pronounced yu."
+    },
+    {
+     "term": "跛倚",
+     "en": "bo yi - leaning crookedly",
+     "note": "Standing or sitting tilted to one side and leaning."
+    },
+    {
+     "term": "箕踞",
+     "en": "ji ju - sitting like a dustpan",
+     "note": "Sitting with legs spread, shaped like a winnowing basket; it is regarded as an impolite way to sit."
+    },
+    {
+     "term": "髀",
+     "en": "bi - thigh",
+     "note": "The upper leg. Pronounced bi."
+    },
+    {
+     "term": "棱",
+     "en": "leng - corner",
+     "note": "The edge or corner of an object."
+    },
+    {
+     "term": "孰存",
+     "en": "shu cun - who is in",
+     "note": "'Who is there (inside)?'"
+    }
+   ],
+   "background": "This section matches the 'careful' in the Analects line 'careful and trustworthy'. It stresses care and correctness in the small details of daily life."
+  },
+  "xin": {
+   "summary": "This section is about good faith and self-cultivation: speak truthfully, make no rash promises and do not pass on gossip; learn from the strengths of others and reflect on their faults; correct your errors rather than hide them, and keep company with helpful friends and keep away from harmful ones.",
+   "translation": "In everything you say, put good faith first; how can deceit and wild talk be allowed?\nBetter to say little than to talk much; say only what is right, and do not be glib or clever.\nCrafty, cunning words, filthy language, the manners of the marketplace: all these you must firmly avoid.\nIf you have not seen a matter clearly, do not rashly say anything; if you do not know it for certain, do not rashly pass it on.\nWhat is not fitting, do not rashly promise; if you rashly promise, you will be wrong whether you go forward or back.\nWhen you speak, say your words weightily and unhurriedly; do not rush, and do not mumble.\nOne says this man's good, another that man's bad: if it has nothing to do with you, do not meddle.\nWhen you see goodness in others, think at once of matching it; even if you are far behind, you will gradually catch up.\nWhen you see badness in others, look inward at once; if you have it, correct it; if you do not, be on guard.\nOnly in virtue and learning, only in talent and skill, if you are not as good as others, should you urge yourself on.\nIf it is in clothes or in food that you are not as good as others, do not let that make you sad.\nIf you are angry at hearing your faults and pleased to hear praise, harmful friends will come and helpful friends will draw back.\nIf you are fearful when you hear praise and glad when you hear your faults, upright and honest friends will gradually draw close.\nA fault made without intention is called a mistake; a fault made with intention is called evil.\nIf you can mend a fault, it comes to nothing; if you cover it up, you add one more offence.",
+   "keyLines": [
+    {
+     "line": "凡出言，信為先。詐與妄，奚可焉。話說多，不如少。惟其是，勿佞巧。",
+     "en": "In everything you say, put good faith first; how can deceit and wild talk be allowed? Better to say little than to talk much; say only what is right, and do not be glib or clever.",
+     "note": "The first rule of speech: put honesty first, say little, say what is reasonable and avoid slick talk."
+    },
+    {
+     "line": "見未真，勿輕言。知未的，勿輕傳。事非宜，勿輕諾。苟輕諾，進退錯。",
+     "en": "If you have not seen a matter clearly, do not rashly say anything; if you do not know it for certain, do not rashly pass it on. What is not fitting, do not rashly promise; if you rashly promise, you will be wrong whether you go forward or back.",
+     "note": "Do not speak wildly, pass on gossip or make rash promises: do not repeat or spread what is unconfirmed."
+    },
+    {
+     "line": "見人善，即思齊。縱去遠，以漸躋。見人惡，即內省。有則改，無加警。",
+     "en": "When you see goodness in others, think at once of matching it; even if you are far behind, you will gradually catch up. When you see badness in others, look inward at once; if you have it, correct it; if you do not, be on guard.",
+     "note": "The discipline of wanting to equal the good, and when you see faults, first to look at yourself."
+    },
+    {
+     "line": "唯德學，唯才藝。不如人，當自礪。若衣服，若飲食。不如人，勿生戚。",
+     "en": "Only in virtue and learning, only in talent and skill, if you are not as good as others, should you urge yourself on. If it is in clothes or in food that you are not as good as others, do not let that make you sad.",
+     "note": "Compare in character and learning, not in food and clothes."
+    },
+    {
+     "line": "聞過怒，聞譽樂。損友來，益友卻。聞譽恐，聞過欣。直諒士，漸相親。",
+     "en": "If you are angry at hearing your faults and pleased to hear praise, harmful friends will come and helpful friends will draw back. If you are fearful when you hear praise and glad when you hear your faults, upright and honest friends will gradually draw close.",
+     "note": "How you take criticism and praise decides what friends you attract."
+    },
+    {
+     "line": "無心非，名為錯。有心非，名為惡。過能改，歸於無。倘揜飾，增一辜。",
+     "en": "A fault made without intention is called a mistake; a fault made with intention is called evil. If you can mend a fault, it comes to nothing; if you cover it up, you add one more offence.",
+     "note": "The two kinds of fault: a mistake is unintended, evil is intended; to mend a fault removes the guilt, and covering it up makes it worse."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "奚可焉",
+     "en": "xi ke yan - how can that be allowed",
+     "note": "'How could that be?'"
+    },
+    {
+     "term": "佞巧",
+     "en": "ning qiao - glib and clever",
+     "note": "Smooth, flattering and cunning talk. Pronounced ning."
+    },
+    {
+     "term": "的",
+     "en": "de - for certain",
+     "note": "Certain, sure. 'Not for certain' means not truly known."
+    },
+    {
+     "term": "躋",
+     "en": "ji - to climb up to",
+     "note": "To rise to, to reach. Pronounced ji."
+    },
+    {
+     "term": "戚",
+     "en": "qi - sorrow",
+     "note": "Grief or worry."
+    },
+    {
+     "term": "損友、益友",
+     "en": "sun you, yi you - harmful and helpful friends",
+     "note": "Confucius said the upright, the sincere and the well-informed are helpful friends, and the flatterer, the double-faced and the glib are harmful friends."
+    },
+    {
+     "term": "直諒士",
+     "en": "zhi liang shi - upright and honest people",
+     "note": "People who are straight and reliable."
+    },
+    {
+     "term": "揜飾",
+     "en": "yan shi - to cover up",
+     "note": "To hide and disguise. Yan is the same as the common yan, 'to cover'."
+    }
+   ],
+   "background": "This section matches the 'trustworthy' in the Analects line 'careful and trustworthy'. It stresses honesty in speech, learning from the good and mending faults when they appear."
+  },
+  "aizhong": {
+   "summary": "This section teaches a wide love of all people: beneath the same Heaven and earth all are one family. Respect those of virtue and talent, do not show off or expose others' shortcomings, take little and give much, repay kindness and forget grievances, be generous with servants, and win people by reason and not by power.",
+   "translation": "All who are human must be loved; we are covered by the same sky and carried by the same earth.\nOne whose conduct is high will have a high name; what people honour is not a handsome face.\nOne whose talent is great will have great standing; what people admire is not big words.\nIf you have ability, do not be selfish with it; if others have ability, do not lightly slander it.\nDo not fawn on the rich, do not look down on the poor; do not tire of the old, do not crave the new.\nWhen others are busy, do not disturb them; when others are uneasy, do not trouble them with talk.\nWhen others have faults, never expose them; when others have secrets, never tell them.\nTo praise another's goodness is itself goodness; and when he hears of it, he will think to try harder.\nTo spread another's evil is itself evil; if you hate him too fiercely, disaster will follow.\nWhen people urge each other to goodness, virtue is built in both; if they do not advise each other about faults, both fall short in the Way.\nIn taking and giving, it is best to be clear: give generously and take little.\nWhen you are about to impose something on another, first ask yourself; if you would not want it, stop at once.\nFavours should be repaid, grudges should be forgotten; let the repaying of grudges be short and the repaying of favours long.\nIn dealing with maids and servants, you must be upright yourself; and though upright, be kind and generous too.\nIf you make people obey by power, they are not convinced in their hearts; if you make them obey by reason, then they have nothing to say.",
+   "keyLines": [
+    {
+     "line": "凡是人，皆須愛。天同覆，地同載。",
+     "en": "All who are human must be loved; we are covered by the same sky and carried by the same earth.",
+     "note": "The theme of the section: under Heaven and above earth all people belong together and should love one another."
+    },
+    {
+     "line": "行高者，名自高。人所重，非貌高。才大者，望自大。人所服，非言大。",
+     "en": "One whose conduct is high will have a high name; what people honour is not a handsome face. One whose talent is great will have great standing; what people admire is not big words.",
+     "note": "What earns respect is conduct and ability, not appearance or empty talk."
+    },
+    {
+     "line": "人有短，切莫揭。人有私，切莫說。道人善，即是善。",
+     "en": "When others have faults, never expose them; when others have secrets, never tell them. To praise another's goodness is itself goodness.",
+     "note": "Do not expose others' faults or secrets; praising others' good points is itself doing good."
+    },
+    {
+     "line": "揚人惡，即是惡。疾之甚，禍且作。",
+     "en": "To spread another's evil is itself evil; if you hate him too fiercely, disaster will follow.",
+     "note": "To spread bad things about others is itself to do wrong, and excessive hatred brings trouble."
+    },
+    {
+     "line": "凡取與，貴分曉。與宜多，取宜少。將加人，先問己。己不欲，即速已。",
+     "en": "In taking and giving, it is best to be clear: give generously and take little. When you are about to impose something on another, first ask yourself; if you would not want it, stop at once.",
+     "note": "Taking and giving: give more, take less, and judge by yourself first."
+    },
+    {
+     "line": "恩欲報，怨欲忘。報怨短，報恩長。",
+     "en": "Favours should be repaid, grudges should be forgotten; let the repaying of grudges be short and the repaying of favours long.",
+     "note": "Remember kindness for long and let grudges go quickly."
+    },
+    {
+     "line": "勢服人，心不然。理服人，方無言。",
+     "en": "If you make people obey by power, they are not convinced in their hearts; if you make them obey by reason, then they have nothing to say.",
+     "note": "In conclusion: power does not win hearts, reason does."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "覆",
+     "en": "fu - to cover",
+     "note": "To cover; it refers to Heaven."
+    },
+    {
+     "term": "載",
+     "en": "zai - to carry",
+     "note": "To bear; it refers to earth."
+    },
+    {
+     "term": "訾",
+     "en": "zi - to slander",
+     "note": "To disparage and find fault. Pronounced zi."
+    },
+    {
+     "term": "諂",
+     "en": "chan - to fawn",
+     "note": "To flatter and curry favour."
+    },
+    {
+     "term": "閒",
+     "en": "xian - leisure",
+     "note": "Free time. 'Others are not at leisure' means others are busy."
+    },
+    {
+     "term": "規",
+     "en": "gui - to advise",
+     "note": "To admonish and warn."
+    },
+    {
+     "term": "取與",
+     "en": "qu yu - taking and giving",
+     "note": "Receiving and giving."
+    },
+    {
+     "term": "已",
+     "en": "yi - to stop",
+     "note": "To cease."
+    }
+   ],
+   "background": "This section matches the Analects line 'love all people widely'. The principle of reciprocity (shu) in 'do not do to others what you do not want done to you' also appears in this section in the line 'when you are about to impose on another, first ask yourself'."
+  },
+  "qinren": {
+   "summary": "This section is about drawing close to the humane: people are not all the same, truly humane people are few, but they speak frankly and do not flatter. To be close to them brings progress; to be close to petty people ruins everything.",
+   "translation": "All are people, but not all alike; the common run are many, and the humane are few.\nIf a person is truly humane, most people stand in awe of him, because he does not hide his words and his face does not flatter.\nTo be close to the humane brings endless good: virtue advances daily and faults grow fewer each day.\nNot to be close to the humane brings endless harm: petty people come forward and a hundred things go wrong.",
+   "keyLines": [
+    {
+     "line": "同是人，類不齊。流俗眾，仁者希。",
+     "en": "All are people, but not all alike; the common run are many, and the humane are few.",
+     "note": "People differ in character, and the truly humane are very rare."
+    },
+    {
+     "line": "能親仁，無限好。德日進，過日少。不親仁，無限害。小人進，百事壞。",
+     "en": "To be close to the humane brings endless good: virtue advances daily and faults grow fewer each day. Not to be close to the humane brings endless harm: petty people come forward and a hundred things go wrong.",
+     "note": "The benefit of being close to the humane, and the harm of not being so."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "類不齊",
+     "en": "lei bu qi - not of one kind",
+     "note": "Kinds and characters are uneven."
+    },
+    {
+     "term": "希",
+     "en": "xi - few",
+     "note": "The same as the common word xi, 'rare'."
+    },
+    {
+     "term": "諱",
+     "en": "hui - to hide",
+     "note": "To conceal, or avoid saying."
+    },
+    {
+     "term": "色不媚",
+     "en": "se bu mei - a face that does not flatter",
+     "note": "An expression that does not fawn."
+    },
+    {
+     "term": "親仁",
+     "en": "qin ren - being close to the humane",
+     "note": "To keep company with people of humaneness."
+    }
+   ],
+   "background": "This section matches the Analects idea of being close to the humane. It is the shortest of the five parts of the outline, and stresses how much the choice of good friends affects one's character."
+  },
+  "xuewen": {
+   "summary": "This section is about study: practice and reading should go together, read with method and attention, keep the study and books tidy and be correct in attitude, avoid books that do no good, and do not give up on yourself, because the sages can be reached through learning.",
+   "translation": "If you do not strive to practise but only study writings, you grow showy; what sort of person is that?\nIf you only strive to practise and do not study writings, you follow your own views and are blind to the truth of principle.\nThe method of reading has three arrivals: heart, eyes and mouth are all essential.\nWhen you start on this book, do not yearn for that one; if this one is not finished, do not begin that one.\nLet the time limit be generous but the effort tight; when the work is done, what was blocked will open.\nWhen your mind has a doubt, make a note at once; ask someone, and look for the exact meaning.\nKeep the room clean and the walls free of dirt; keep desk and table tidy and the brush and inkstone upright.\nIf the ink is ground crooked, the mind is not upright; if the characters are written without respect, the mind is already sick.\nPut the books in their set places; when you have finished reading, return them to where they were.\nEven if you are in a hurry, roll up and tie the scrolls neatly; if there is damage, mend it at once.\nBooks that are not the sages' you should put aside and not look at; they cloud the understanding and spoil the will.\nDo not abandon yourself and do not give yourself up; sage and worthy can be reached by gradual steps.",
+   "keyLines": [
+    {
+     "line": "不力行，但學文。長浮華，成何人。但力行，不學文。任己見，昧理真。",
+     "en": "If you do not strive to practise but only study writings, you grow showy; what sort of person is that? If you only strive to practise and do not study writings, you follow your own views and are blind to the truth of principle.",
+     "note": "Knowing and doing together: study without practice is showy and empty, and practice without study is stubborn and blind."
+    },
+    {
+     "line": "讀書法，有三到。心眼口，信皆要。方讀此，勿慕彼。此未終，彼勿起。",
+     "en": "The method of reading has three arrivals: heart, eyes and mouth are all essential. When you start on this book, do not yearn for that one; if this one is not finished, do not begin that one.",
+     "note": "The 'three arrivals' of reading that Zhu Xi spoke of: heart, eyes and mouth. Read one book at a time and do not try to read too many."
+    },
+    {
+     "line": "寬為限，緊用功。工夫到，滯塞通。心有疑，隨札記。就人問，求確義。",
+     "en": "Let the time limit be generous but the effort tight; when the work is done, what was blocked will open. When your mind has a doubt, make a note at once; ask someone, and look for the exact meaning.",
+     "note": "Method of study: plan generously, work closely, and write down doubts and ask about them."
+    },
+    {
+     "line": "墨磨偏，心不端。字不敬，心先病。",
+     "en": "If the ink is ground crooked, the mind is not upright; if the characters are written without respect, the mind is already sick.",
+     "note": "Grinding ink and writing show the state of mind; this is a line that learners of calligraphy should especially note."
+    },
+    {
+     "line": "房室清，牆壁淨。几案潔，筆硯正。",
+     "en": "Keep the room clean and the walls free of dirt; keep desk and table tidy and the brush and inkstone upright.",
+     "note": "Study and desk should be tidy, and brush and inkstone set straight."
+    },
+    {
+     "line": "列典籍，有定處。讀看畢，還原處。",
+     "en": "Put the books in their set places; when you have finished reading, return them to where they were.",
+     "note": "Books have a set place, and are returned there when read."
+    },
+    {
+     "line": "非聖書，屏勿視。蔽聰明，壞心志。勿自暴，勿自棄。聖與賢，可馴致。",
+     "en": "Books that are not the sages' you should put aside and not look at; they cloud the understanding and spoil the will. Do not abandon yourself and do not give yourself up; sage and worthy can be reached by gradual steps.",
+     "note": "In conclusion: avoid books that do no good, do not give up on yourself, because sagehood and worthiness can be reached by learning."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "三到",
+     "en": "san dao - the three arrivals",
+     "note": "The heart, eyes and mouth must all 'arrive' when reading; the method comes from Zhu Xi (Song dynasty, 960-1279)."
+    },
+    {
+     "term": "慕",
+     "en": "mu - to long for",
+     "note": "To envy."
+    },
+    {
+     "term": "札記",
+     "en": "zha ji - reading notes",
+     "note": "Notes jotted down as thoughts or doubts from reading."
+    },
+    {
+     "term": "几案",
+     "en": "ji an - desk",
+     "note": "A writing table."
+    },
+    {
+     "term": "屏",
+     "en": "bing - to put aside",
+     "note": "To remove and reject. Pronounced bing."
+    },
+    {
+     "term": "自暴自棄",
+     "en": "zi bao zi qi - to give oneself up",
+     "note": "To wreck and abandon oneself; the phrase comes from the Mencius (Li Lou, part one)."
+    },
+    {
+     "term": "馴致",
+     "en": "xun zhi - to be reached gradually",
+     "note": "To arrive at step by step."
+    }
+   ],
+   "background": "This section matches the Analects line 'if there is strength to spare after acting, then study letters'. It puts conduct first and reading after, and touches on attitudes to reading, keeping a study tidy and writing, which bear especially on those who practise calligraphy."
+  }
+ }
+}

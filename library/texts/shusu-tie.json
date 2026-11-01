@@ -2,15 +2,18 @@
  "id": "shusu-tie",
  "title": {
   "trad": "蜀素帖（節選）",
-  "simp": "蜀素帖（节选）"
+  "simp": "蜀素帖（节选）",
+  "en": "Shu Silk Scroll (excerpt)"
  },
  "author": {
   "trad": "米芾",
-  "simp": "米芾"
+  "simp": "米芾",
+  "en": "Mi Fu"
  },
  "dynasty": {
   "trad": "宋",
-  "simp": "宋"
+  "simp": "宋",
+  "en": "Song"
  },
  "source": "https://zh.wikisource.org/wiki/蜀素帖",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/蜀素帖",
@@ -20,7 +23,8 @@
    "id": "nigu",
    "title": {
     "trad": "擬古",
-    "simp": "拟古"
+    "simp": "拟古",
+    "en": "Imitating the Ancients"
    },
    "body": {
     "trad": "青松勁挺姿，凌霄恥屈盤。種種出枝葉，牽連上松端。秋花起絳煙，旖旎雲錦殷。不羞不自立，舒光射丸丸。柏見吐子效，鶴疑縮頸還。青松本無華，安得保歲寒。龜鶴年壽齊，羽介所託殊。種種是靈物，相得忘形軀。鶴有沖霄心，龜厭曳尾居。以竹兩附口，相將上雲衢。報汝慎勿語，一語墮泥塗。",
@@ -31,7 +35,8 @@
    "id": "wujiang",
    "title": {
     "trad": "吳江舟中詩",
-    "simp": "吴江舟中诗"
+    "simp": "吴江舟中诗",
+    "en": "Poem on a Boat on the Wu River"
    },
    "body": {
     "trad": "斷雲一片洞庭帆，玉破鱸魚霜破柑。好作新詩繼桑苧，垂虹秋色滿東南。泛泛五湖霜氣清，漫漫不辨水天形。何須織女支機石，且戲常娥稱客星。",

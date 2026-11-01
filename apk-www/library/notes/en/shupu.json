@@ -1,0 +1,610 @@
+{
+ "id": "shupu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "pian01": {
+   "summary": "Sun Guoting opens with a survey of the history of calligraphy. He quotes Wang Xizhi's own verdict on Zhong You and Zhang Zhi, argues against the saying that the old is plain and the new is pretty, and uses the stories of Xie An and Wang Xianzhi to show that Xizhi was far above his son, ending with the difference between specialising and breadth.",
+   "translation": "From ancient times those who have been good at calligraphy include, in the Han and Wei, the peerless Zhong You and Zhang Zhi, and at the end of the Jin the two Wangs, praised for their subtlety. Wang Xizhi said: 'Lately I have looked at all the famous traces of the masters, and Zhong and Zhang truly have no equals; the others are not worth a glance.' This means that after Zhong and Zhang had passed away, Xizhi and Xianzhi carried the art on.\nHe also said: 'Set against Zhong and Zhang, my writing should run level with Zhong You, and some even say it is better; against Zhang Zhi's cursive, I can only walk beside him. But Zhang trained so hard that the pond water turned black. If I had been as devoted as he was, I might not have been behind him.' This is to honour Zhang Zhi as above Zhong You. If we look at where each was strong, Xizhi may not have gone beyond the standards of his predecessors, but he was at home in every script, and so he is not behind them now.\nA critic says: 'Those four worthies were the most outstanding of all ages, but men of today are not equal to the men of old; the old were plain and the new are pretty.' Plainness rises and falls with the age; prettiness shifts with custom. Writing was invented to record speech; as manners turned from simple to thin, plainness and ornament changed many times over, and the turning and following of tastes is only the way of things. What is valuable is to be old without clashing with one's time and modern without taking on its faults. This is what is meant by 'when ornament and plainness are in balance, then one is a noble person'. Why should we trade carved palaces for caves, or take jade-decked carriages back to the primitive solid-wheeled cart?\nSomeone also says: 'Zijing is not as good as Yishao, just as Yishao is not as good as Zhong and Zhang.' I think this remark catches the outline but has not looked into the whole matter. Yuanchang was devoted to clerical script, and Boying especially to cursive; Yishao combined both beauties. Compared with the cursive, his regular script has more than enough; compared with the regular, his cursive is strong. Though he is a little behind each in single-minded devotion, he gains many strengths through breadth; taken as a whole, there is no contradiction.\nXie An had long been good at short letters, but he looked down on Zijing's writing. Zijing once wrote out a fine piece and sent it to him, thinking he would surely keep it; Xie An wrote a note on the back and sent it back, and Zijing was very sorry. Xie An once asked Zijing: 'How does your calligraphy compare with the General of the Right's?' He answered: 'Of course it is better than his.' Xie An said: 'The opinion of others is not so.' Zijing replied again: 'How would people of the day understand?' Zijing may have turned Xie An's judgement aside for the moment, but to claim to be better than his own father is surely going too far. Moreover, to establish oneself and make a name one must value honour; the lane called 'Beats-Mother' was one that Zengzi would not enter. With Zijing's talent for the brush, carrying on Yishao's handwriting, he may have roughly passed on the model, but I fear he could not really carry on his father's work. Beyond that, he took refuge in talk of immortals and did not take pride in honouring the family method; to make learning this way is no different from facing a wall in ignorance.\nLater, when Xizhi was about to go to the capital, he wrote on the wall before leaving; Zijing secretly rubbed it off and wrote in its place, thinking it was good. When Xizhi came back and saw it, he sighed: 'I must have been dead drunk when I left!' Only then was Zijing ashamed in his heart. From this we may see that between Yishao and Zhong and Zhang there is only the difference between specialising and breadth, but that Zijing is not equal to Yishao there can be no doubt.",
+   "keyLines": [
+    {
+     "line": "漢魏有鍾張之絕，晉末稱二王之妙",
+     "en": "In the Han and Wei there were the peerless Zhong and Zhang; at the end of the Jin the two Wangs were praised for their subtlety.",
+     "note": "The opening names two pairs of peaks in the history of calligraphy: Zhong You and Zhang Zhi, and Wang Xizhi and Wang Xianzhi."
+    },
+    {
+     "line": "古質而今妍",
+     "en": "The old were plain and the new are pretty.",
+     "note": "Quotes the critics of the day to show that style had moved from plainness to prettiness; this is the starting point for the discussion of old and new that follows."
+    },
+    {
+     "line": "貴能古不乖時，今不同弊",
+     "en": "What is valuable is to be old without clashing with one's time and modern without taking on its faults.",
+     "note": "The author's attitude to calligraphy: learn from the ancients without going against one's own time, and follow the present without catching its faults."
+    },
+    {
+     "line": "文質彬彬，然後君子",
+     "en": "When ornament and plainness are in balance, then one is a noble person.",
+     "note": "Quoted from the Analects, to show that calligraphy too needs both plainness and ornament."
+    },
+    {
+     "line": "擬草則餘真，比真則長草",
+     "en": "Compared with the cursive, his regular script has more than enough; compared with the regular, his cursive is strong.",
+     "note": "Says that Wang Xizhi was good at both regular and cursive, with the merits of both depth and breadth."
+    },
+    {
+     "line": "子敬之不及逸少，無或疑焉",
+     "en": "That Zijing is not as good as Yishao there can be no doubt.",
+     "note": "The conclusion of the section: the two stories, of Xie An and of the wall, settle that Wang Xianzhi was not equal to Wang Xizhi."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "鍾張",
+     "en": "Zhong-Zhang - Zhong You and Zhang Zhi",
+     "note": "Zhong You (151-230) was strongest in regular and clerical script, and Zhang Zhi is called the 'Sage of Cursive'."
+    },
+    {
+     "term": "二王",
+     "en": "er Wang - the two Wangs",
+     "note": "Wang Xizhi of the Eastern Jin and his son Wang Xianzhi."
+    },
+    {
+     "term": "池水盡墨",
+     "en": "chi shui jin mo - the pond turned all black",
+     "note": "Legend says Zhang Zhi practised calligraphy by a pond until the water turned black; the phrase later meant working hard at calligraphy."
+    },
+    {
+     "term": "元常、伯英",
+     "en": "Yuanchang, Boying - courtesy names",
+     "note": "Zhong You's courtesy name was Yuanchang and Zhang Zhi's was Boying."
+    },
+    {
+     "term": "子敬、逸少",
+     "en": "Zijing, Yishao - courtesy names",
+     "note": "Wang Xianzhi's was Zijing and Wang Xizhi's was Yishao. Xizhi once held the post of General of the Right, so he is also called 'the General of the Right'."
+    },
+    {
+     "term": "謝安",
+     "en": "Xie An",
+     "note": "A famous statesman of the Eastern Jin, good at short letters in calligraphy and a friend of Xizhi."
+    },
+    {
+     "term": "勝母之里",
+     "en": "sheng mu zhi li - the lane called Beats-Mother",
+     "note": "From the story of Zengzi, who would not enter a lane named 'Beats-Mother' because the name went against filial piety; here it hints that Zijing's claim to be better than his father is unfitting."
+    },
+    {
+     "term": "箕裘",
+     "en": "ji qiu - the winnowing basket and the fur coat",
+     "note": "A figure for taking over one's father's or ancestors' work, from the old saying that a good bow-maker's son learns to make baskets and a good smith's son learns to make fur coats."
+    }
+   ],
+   "background": "The Treatise on Calligraphy (Shupu) is a work on the theory of calligraphy that Sun Guoting of the Tang dynasty (618-907) wrote in 687 and copied out himself in cursive script. The original ink survives, in the National Palace Museum, Taipei, and is regarded as the model of Tang cursive; its brushwork follows the line of the two Wangs, fluent and rich in variation. This section is the start of the preface and the part about the history of the art: Sun Guoting weighs Wang Xizhi and Wang Xianzhi against Zhong You and Zhang Zhi, which shows his admiration for Wang Xizhi and his view that both specialising and breadth matter."
+  },
+  "pian02": {
+   "summary": "Sun Guoting says that from the age of fifteen he gave himself to calligraphy for more than twenty years. He sketches the many wonderful images of dots and strokes, and argues for the worth of the art, which he compares to ritual and music and to the arts of the immortals. He then notes that later learners are lost because the line of teaching was cut, and tend to cling to a single style.",
+   "translation": "At fifteen, the age of setting one's will on study, I took an interest in brush and ink. I did not understand the achievements Zhong and Zhang had left, but drew on the old rules of Xizhi and Xianzhi, and I thought with great concentration for more than twenty-four years. Though I have not reached the skill that sinks into wood, I have never given up my purpose of practising at the pond.\nI look at calligraphy and see the hanging needle and the dripping dew, the strangeness of rolling thunder and falling rocks, the bearing of a wild goose in flight and a startled beast, the postures of a dancing simurgh and a frightened snake, the force of a sheer cliff and a collapsing bank, the shape of one who treads on danger and leans on a dead tree. Some strokes are heavy like falling clouds, some light like cicada wings; drawn out, the brush is like a spring pouring down; paused, it is like a mountain that does not move. Fine, it is like a new moon rising at the edge of the sky; sparse, it is like stars lined up along the Milky Way. All this is the same as the wonders of nature, and cannot be done by force. It can truly be said that skill and cleverness meet, and that heart and hand are both at ease. The brush does not move idly; when it is set down there is always a reason. In a single stroke, the changes of rise and fall are in the tip; in a single dot, the turns and breaks differ in the very hair of the brush.\nAnd strokes pile up to make a character. If one does not look at the letters of others or treasure one's time to study, if one takes the words of Ban Chao as an excuse and quotes Xiang Ji to be self-satisfied, writing as the brush wishes to make a form and heaping up ink into a shape, with a mind that does not know how to imitate and a hand confused about the principle of moving the brush, and yet asks for beauty and subtlety, is that not absurd!\nStill, a noble person who makes his way in the world must tend the root. Yang Xiong said: 'Poems and rhapsodies are minor arts that a grown man does not practise.' How much more so to sink into hair's-breadths and wear out one's spirit on brush and ink! Intense play at chess has a name, 'hidden by the board'; those who delight in fishing can show the taste of holding office or retreating. But how can these compare with calligraphy, whose use is as ritual and music, whose wonder resembles the immortals, like pottery that never runs out of shapes, turning together with the work of Heaven? Those who love the strange enjoy its varied forms; those who probe the subtle reach the depths of its changes. Writers borrow its dregs, and judges take its essence; it is truly where principle comes to rest, and something that worthy and able people all do well. To lodge one's spirit there and take pleasure in it: how could that be in vain?\nThe scholars of the Eastern Jin polished each other as stone is cut. As for the families of Wang and Xie, the Chi and the Yu, even if they did not grasp all its wonder, they all gained something of its flavour. The farther we are from that age, the more this learning declines. Today, when people hear a doubt they follow the doubt, and when they get a branch they follow the branch; ancient and modern are cut off, there is nowhere to ask, and even those who have understood something keep it deeply hidden. So learners are left bewildered and do not know the key points; they see only the beauty of the result and do not know why it was achieved. Some have practised layout for years and are still far from the rules; they cannot write regular script well and are confused in cursive. Or if they can write a little cursive and have passed on a little clerical, they become fond of it and stubborn, and block themselves from the common rules.",
+   "keyLines": [
+    {
+     "line": "余志學之年，留心翰墨",
+     "en": "At fifteen, the age of setting one's will on study, I took an interest in brush and ink.",
+     "note": "The author says he began at fifteen, setting out his own record in the art."
+    },
+    {
+     "line": "奔雷墜石之奇",
+     "en": "The strangeness of rolling thunder and falling rocks.",
+     "note": "Natural images such as rolling thunder and falling rocks describe the force of dots and strokes; this is a famous passage on the beauty of calligraphy."
+    },
+    {
+     "line": "同自然之妙，有非力運之能成",
+     "en": "The same as the wonders of nature, and cannot be done by force.",
+     "note": "Shows that the beauty of calligraphy is close to nature and cannot be had by strength of hand alone."
+    },
+    {
+     "line": "心手雙暢",
+     "en": "Heart and hand are both at ease.",
+     "note": "He argues that heart and hand should work together smoothly, which prepares for his later discussion of creation."
+    },
+    {
+     "line": "詩賦小道，壯夫不為",
+     "en": "Poems and rhapsodies are minor arts that a grown man does not practise.",
+     "note": "He quotes Yang Xiong and then goes further in a rhetorical question, saying calligraphy is a minor art, and the following passage defends its worth."
+    },
+    {
+     "line": "遂令學者茫然，莫知領要",
+     "en": "So learners are left bewildered and do not know the key points.",
+     "note": "A criticism of later learners who miss the key points because the line of teaching has been cut."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "志學之年",
+     "en": "zhi xue zhi nian - the age of setting one's will on study",
+     "note": "Means fifteen, from the Analects: 'At fifteen I set my mind on learning.'"
+    },
+    {
+     "term": "二紀",
+     "en": "er ji - two cycles",
+     "note": "One cycle is twelve years, so two cycles are twenty-four years."
+    },
+    {
+     "term": "入木之術",
+     "en": "ru mu zhi shu - the skill that sinks into wood",
+     "note": "Legend says Wang Xizhi wrote on a wooden board and the ink sank three-tenths of an inch into it; it describes brush strength."
+    },
+    {
+     "term": "臨池",
+     "en": "lin chi - practising at the pond",
+     "note": "To study calligraphy, from the story of Zhang Zhi who practised at a pond."
+    },
+    {
+     "term": "懸針、垂露",
+     "en": "xuan zhen, chui lu - hanging needle, dripping dew",
+     "note": "Two ways of ending a vertical stroke in seal and clerical script: a pointed end is a hanging needle, a rounded end is a dripping dew drop."
+    },
+    {
+     "term": "班超、項籍",
+     "en": "Ban Chao, Xiang Ji - two excuses",
+     "note": "Ban Chao threw down his brush to join the army, and Xiang Yu said writing was enough only to record names; here some use these as an excuse for not studying calligraphy."
+    },
+    {
+     "term": "坐隱",
+     "en": "zuo yin - hidden by the board",
+     "note": "Another name for the game of go."
+    },
+    {
+     "term": "王謝、郗庾",
+     "en": "Wang-Xie, Chi-Yu - four great families",
+     "note": "The great families of the Eastern Jin: Wang Dao, Xie An, Chi Jian and Yu Liang."
+    }
+   ],
+   "background": "This section belongs to the preface and general discussion of the Treatise. Sun Guoting gives an account of his own path in calligraphy and spreads out the beautiful images of cursive script, a famous passage in the aesthetics of the art. The Treatise is itself written in cursive script, so these words are both theory and model. Sun Guoting holds that calligraphy is as wonderful as nature, and also points out that learning needs a teacher's line and broad training, and must not cling to a single style."
+  },
+  "pian03": {
+   "summary": "Regular and cursive script are each other's form and character, and a calligrapher should master every script. The section then describes the features of seal, clerical, cursive and zhang cursive, the use of calligraphy for expressing feeling, and finally the 'five agreements and five disagreements' in writing, which show how mood, season, paper and ink affect the result.",
+   "translation": "How could one know that the place where heart and hand meet is like one source that divides into different streams, and that the ways of turning the brush are like one tree that grows different branches? Add to that adapting to change and suiting the use of the time: running script matters most; but for writing signboards, regular script comes first. Cursive script that does not also have regular script is close to being narrow and cramped; regular script that does not also understand cursive is not an ordinary letter-hand.\nRegular script takes dots and strokes as its form and substance, and the turning of the brush as its feeling and nature. Cursive takes dots and strokes as its feeling and nature, and the turning of the brush as its form and substance. If cursive goes against the turning, it cannot form a character; if regular script lacks dots and strokes, it can still record the writing. They guard and cross one another, differing, yet in outline they are linked. So one must also reach out to the greater and lesser seal scripts and down to the eight-division clerical, take in the chapter hand, and bathe in the flying white. If you do not look closely into the finest hair, you will be as far apart as the northern Hu and the southern Yue.\nAs for Zhong You's wonderful clerical and Zhang Zhi the sage of cursive, those are single-minded mastery taken to a peerless degree. Boying did not write regular script, yet his dots and strokes ran in every direction; Yuanchang did not write cursive, yet the turns of his brush ran in every direction. Below them, those who cannot do both are simply not up to it; this is not devotion to one thing.\nStill, in seal, clerical, cursive and zhang cursive, each is skilful and changeable and achieves its own beauty, each with its own fitness: seal values being supple and fluent, clerical wants to be fine and close, cursive prizes flow and ease, and zhang cursive aims at restraint and quickness. Then use spirit and bearing to make it stately, richness and moisture to make it gentle, dryness and vigour to make it stir, and calm elegance to make it harmonious. Thus feeling and nature can be expressed, grief and joy shown, and the measure of dry and wet tested - so it has been through the ages; one can observe the old and the young in their stages, and a hundred years are only an instant. Alas, if one does not enter the gate, how can one glimpse the depths?\nMoreover, even writing at the same time, there are disagreements and agreements. With agreement, it flows and is graceful; with disagreement, it is laboured and sparse. Briefly put, each has five causes. A happy spirit and a leisurely day is the first agreement; gratitude for kindness and meeting someone who understands is the second; mild season and moist weather is the third; paper and ink that complement each other is the fourth; an idle wish to write is the fifth. A hurried mind and an uneasy body is the first disagreement; wishes crossed and circumstances oppressive is the second; a dry wind and burning sun is the third; paper and ink that do not suit is the fourth; a weary mood and tired hands and feet is the fifth. Between disagreement and agreement the good and the bad differ. To have the season is not as good as to have good tools, and to have good tools is not as good as to have the right mind. When the five disagreements gather at once, thought is blocked and hands and feet are dull; when the five agreements arrive together, the spirit is at ease and the brush flows. When it flows, nothing is awkward; when dull, there is nowhere to begin.\nThose who have the matter in hand forget words in satisfaction and rarely set out the main points. Admirers chase the wind and describe the wonder, but even then say little. They merely list its skill and do not set forth its principle. I do not measure my strength, and will for the time imitate what I understand, hoping to spread the manner of the past and guide the capacity of those to come, removing what is cluttered and vulgar, so that people may see the trace and understand the mind.",
+   "keyLines": [
+    {
+     "line": "真以點畫為形質，使轉為情性；草以點畫為情性，使轉為形質",
+     "en": "Regular script takes dots and strokes as its form and substance, and the turning of the brush as its feeling and nature. Cursive takes dots and strokes as its feeling and nature, and the turning of the brush as its form and substance.",
+     "note": "The famous theory of regular and cursive: regular script stresses the dots and strokes, cursive the turning, and each is the other's form and feeling."
+    },
+    {
+     "line": "篆尚婉而通，隸欲精而密，草貴流而暢，章務檢而便",
+     "en": "Seal values being supple and fluent, clerical wants to be fine and close, cursive prizes flow and ease, and zhang cursive aims at restraint and quickness.",
+     "note": "Briefly gives the aesthetic standard of each of four scripts: seal, clerical, cursive and zhang cursive."
+    },
+    {
+     "line": "神怡務閑，一合也",
+     "en": "A happy spirit and a leisurely day is the first agreement.",
+     "note": "One of the 'five agreements': writing is best when the mood is easy and the day is free."
+    },
+    {
+     "line": "心遽體留，一乖也",
+     "en": "A hurried mind and an uneasy body is the first disagreement.",
+     "note": "One of the 'five disagreements': a hurried mind and an uneasy body make it hard to write as one wishes."
+    },
+    {
+     "line": "得時不如得器，得器不如得志",
+     "en": "To have the season is not as good as to have good tools, and to have good tools is not as good as to have the right mind.",
+     "note": "Weighs season, tools and mind together, and holds the mind to be the most important."
+    },
+    {
+     "line": "五合交臻，神融筆暢",
+     "en": "When the five agreements arrive together, the spirit is at ease and the brush flows.",
+     "note": "When all five agreements are present, the spirit is at ease and the brush flows; this is the best state for creating."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "使轉",
+     "en": "shi zhuan - turning the brush",
+     "note": "In cursive, how the strokes advance and turn; that is, the movement of the brush."
+    },
+    {
+     "term": "點畫",
+     "en": "dian hua - dots and strokes",
+     "note": "The basic forms of strokes, that is, the strokes of a character."
+    },
+    {
+     "term": "二篆、八分",
+     "en": "er zhuan, ba fen - the two seals, eight-division",
+     "note": "The two seals are great seal and small seal; eight-division is a kind of clerical script, also Han clerical."
+    },
+    {
+     "term": "飛白",
+     "en": "fei bai - flying white",
+     "note": "A script in which fine white streaks show through the strokes."
+    },
+    {
+     "term": "章草",
+     "en": "zhang cao - zhang cursive",
+     "note": "A kind of cursive, an early cursive that keeps the flicks of clerical script."
+    },
+    {
+     "term": "五合五乖",
+     "en": "wu he wu guai - five agreements and five disagreements",
+     "note": "Five favourable and five unfavourable conditions for writing."
+    },
+    {
+     "term": "器",
+     "en": "qi - tools",
+     "note": "The writing tools: brush, ink, paper and inkstone."
+    },
+    {
+     "term": "胡越",
+     "en": "Hu-Yue - the Hu and the Yue",
+     "note": "The northern Hu people and the southern Yue people, as a figure for a vast difference."
+    }
+   ],
+   "background": "This section is the heart of the Treatise's theory. It discusses how regular and cursive link, the character of each script, and the 'five agreements and five disagreements' of the mood in which one writes. Sun Guoting himself wrote it in cursive and is a practitioner of the 'turning' of the brush. Later calligraphers have taken these arguments as an important basis for learning cursive and running script and for understanding the psychology of creating calligraphy."
+  },
+  "pian04": {
+   "summary": "Sun Guoting criticises the circulating Diagram of the Brush Battle Array and the many essays on brush 'force' as showy, and will not use them, even doubting that they are authentic. He sketches the origins of writing and scripts, says the Ten Chapters on Brush Force attributed to Xizhi and Zijing are not by Xizhi, and finally states his own point: a method of holding, using, turning and applying the brush.",
+   "translation": "At the time there was a seven-line Diagram of the Brush Battle Array in circulation, in which three ways of holding the brush were drawn; but the figures are mistaken, and the dots and strokes are vague and wrong. Lately I have seen it passed around north and south, and I suspect it was by the General of the Right. Though one cannot be sure whether it is genuine, it can still be used to inspire children. Since it is a common thing, it need not be included.\nAs for the essays on 'force' by various hands, most of them concern showiness: those that describe only the outward appearance, and those whose inner meaning is lost and the principle astray, I do not take up in what I now write. A man like Shi Yiguan, of great fame, is shown only in the records; the fine model of Handan Chun is merely written in books. From Cui Yuan and Du Du on, after Xiao Ziyun and Yang Xin, the ages stretch far and the names grow ever more numerous. Some are famous and their fame never fades, and though the man is dead his work shows; some raise their price by attaching themselves to others, and when they die their way declines. Add to that losses by worms and damage, and the hidden collections have almost been searched out; rarely, one meets a collector who brings one out to enjoy, and few have been allowed a glimpse. The good and the poor are mixed together and difficult to explain in detail. For those who were well known in their own time and whose traces survive, there is no need to praise or blame; they have their order by themselves.\nAnd the making of the six kinds of writing began with Xuanyuan, and the rise of the eight styles with Ying Zheng. They are of long standing, and their uses have gradually grown. But old and new are different, and prettiness and plainness are far apart; since it is not what I study, I will leave it aside. There are also writings in the form of dragons and snakes, clouds and dew, tortoises and cranes, flowers and blooms, some drawn in haste as true forms, or copying the lucky signs of the year; their cleverness approaches painting but their skill falls short of calligraphy, and they differ from the standard model, so I will not discuss them in detail.\nThe Ten Chapters on Brush Force handed down under the names of Xizhi and Zijing are coarse in wording, thin in reasoning, crossed in meaning and clumsy in language; looking closely at their purpose, they are certainly not by the General of the Right. Moreover, the General of the Right was of high rank and high talent, with a pure style and elegant phrases; his fame has not faded and his letters survive. Look at his writing a letter or stating a matter: even in haste, the study of ancient events is in it. How could he leave teachings for his descendants, with principle and right method and the rules of composition so suddenly lacking as this? It also says that he studied with Zhang Boying, which is even more false and absurd. If it means the Boying of the late Han, the ages do not meet at all; if there was a man of Jin with the same style name, how silent are the histories!\nIt is neither a canon nor a classic, and it should be thrown away. What the mind reaches is not easily said in full in words; what words can convey is still hard to show on paper and ink. At most we can roughly resemble its form and sketch its words. I hope you will weigh its mysterious region and reach the spot where the mind understands. What is left out or not reached, I ask to wait for later. Now I shall set out the reasons for holding, using, turning and applying the brush, to remove what is not yet clear.\nHolding means depth, shallowness, length and the like. Using means vertical, horizontal, pulling and checking and the like. Turning means hooks, rings, coils and curves and the like. Applying means the facing and turning away of dots and strokes and the like. Then bring these methods together into one path; list the many skills and weave the many wonders; bring out what earlier people did not reach and open the settled rule for those who learn after; trace its source and divide its branches.",
+   "keyLines": [
+    {
+     "line": "今之所撰，亦無取焉",
+     "en": "What I now write also takes nothing from them.",
+     "note": "He declares that he will not take up the showy essays on 'force' of various hands, which shows his stress on substance and principle."
+    },
+    {
+     "line": "且六文之作，肇自軒轅；八體之興，始於嬴政",
+     "en": "And the making of the six kinds of writing began with Xuanyuan, and the rise of the eight styles with Ying Zheng.",
+     "note": "A short note on the origins of writing and script: the six kinds of writing are said to have been created in the time of the Yellow Emperor, and the eight styles arose in Qin."
+    },
+    {
+     "line": "意乖言拙，詳其旨趣，殊非右軍",
+     "en": "Crossed in meaning and clumsy in language; looking closely at their purpose, they are certainly not by the General of the Right.",
+     "note": "He says the Ten Chapters on Brush Force are not by Wang Xizhi, an early case of testing the authenticity of calligraphy texts."
+    },
+    {
+     "line": "夫心之所達，不易盡於名言；言之所通，尚難形於紙墨",
+     "en": "What the mind reaches is not easily said in full in words; what words can convey is still hard to show on paper and ink.",
+     "note": "He admits that the wonder of calligraphy cannot be put into words, which is why this book can only 'roughly resemble its form'."
+    },
+    {
+     "line": "執謂深淺長短之類是也；使謂縱橫牽掣之類是也",
+     "en": "Holding means depth, shallowness, length and the like. Using means vertical, horizontal, pulling and checking and the like.",
+     "note": "Begins to define the four basic concepts of holding, using, turning and applying."
+    },
+    {
+     "line": "轉謂鉤環盤紆之類是也；用謂點畫向背之類是也",
+     "en": "Turning means hooks, rings, coils and curves and the like. Applying means the facing and turning away of dots and strokes and the like.",
+     "note": "Continues with 'turning' and 'applying'; these make up the frame of the Treatise's theory of brushwork."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "筆陣圖",
+     "en": "bi zhen tu - Diagram of the Brush Battle Array",
+     "note": "A work on calligraphy attributed to Lady Wei or Wang Xizhi; Sun Guoting doubts that it is genuine."
+    },
+    {
+     "term": "師宜官、邯鄲淳",
+     "en": "Shi Yiguan, Handan Chun",
+     "note": "Famous calligraphers from the end of the Han and the beginning of Wei: Shi Yiguan was good at the eight-division clerical, Handan Chun at ancient script, seal and clerical."
+    },
+    {
+     "term": "崔、杜、蕭、羊",
+     "en": "Cui-Du-Xiao-Yang - four masters",
+     "note": "Cui Yuan and Du Du of the Han, and Xiao Ziyun and Yang Xin of the Southern Dynasties."
+    },
+    {
+     "term": "六文、八體",
+     "en": "liu wen, ba ti - six kinds of writing, eight styles",
+     "note": "The six kinds of writing are the six principles of Chinese characters; the eight styles are the eight Qin scripts."
+    },
+    {
+     "term": "軒轅",
+     "en": "Xuanyuan",
+     "note": "The Yellow Emperor."
+    },
+    {
+     "term": "嬴政",
+     "en": "Ying Zheng",
+     "note": "The First Emperor of Qin."
+    },
+    {
+     "term": "龍蛇雲露、龜鶴花英",
+     "en": "long she yun lu, gui he hua ying - dragons and snakes, tortoises and cranes",
+     "note": "Decorative scripts shaped like dragons, snakes, clouds, dew, tortoises, cranes and flowers."
+    },
+    {
+     "term": "希夷",
+     "en": "xi yi - the formless and soundless",
+     "note": "A phrase from Laozi for a mysterious region that cannot be seen or heard."
+    }
+   ],
+   "background": "This section moves from the history of calligraphy to the theory of brushwork. Sun Guoting first clears away wrong ideas, showing what is doubtful in the Diagram of the Brush Battle Array and the Brush Force essays, then sums up 'holding, using, turning and applying' as the four essentials of learning calligraphy. He was a master of Tang cursive, and the cursive ink-writing of the Treatise itself shows these methods of the brush, which is why it has been the classic model for learning cursive."
+  },
+  "pian05": {
+   "summary": "Sun Guoting uses six famous works of Wang Xizhi to show the link between calligraphy and feeling, rejects the view that style is divided into rigid kinds, and stresses skilled handling and intention before the brush. He then names three stages in learning calligraphy: plain and upright, then daring and extreme, and then a return to plain and upright, till 'the person and the writing grow old together'.",
+   "translation": "I hope that the words are simple yet the principle is rich, that the traces are clear and the meaning gets through; that one can understand as soon as the book is opened, and be unhindered when setting down the brush. Strange phrases and unusual doctrines I shall not describe. Still, what I now set out must be of use to learners.\nThe calligraphy of the General of the Right has been praised and studied through the ages, and he truly can be taken as master and as the goal. This is not only because he links the past and present, but because his feeling is deep and his manner harmonious. So rubbings and tracings of him grow every day and the study of him grows every year; those who were famous before and after have mostly scattered, yet he alone has been carried on through the ages: is that not proof?\nLet me try to say why, with a few points. The Treatise on Yue Yi, the Yellow Court Classic, the Eulogy on the Portrait of Dongfang Shuo, the Admonition of the Grand Historian, the Preface to the Orchid Pavilion Gathering, and the Oath Declaration: these are all handed down in the world and are the greatest works in regular and running script. In writing the Yue Yi, the feeling is full of gloom; in the Portrait Eulogy, the interest turns to marvels; in the Yellow Court, he is cheerful and empty of care; in the Admonition, the strokes cross and clash; as for the elegant gathering at the Orchid Pavilion, his thought is free and his spirit soars; and in the Oath Declaration, from his own household, the feeling is bound and the mind is sad. This is what is meant by 'entering music, one laughs; speaking of grief, one has already sighed'. Is it only that he fixes his thought on flowing waves and so leaves a slow melody, or sends his spirit to the water's edge and so thinks of fine words? Even though the Way is there before one's eyes, some people's minds are lost and their discussions go astray. They invent names for 'kinds' by force, and together learn by marking off districts. How could they know that feeling stirs and takes shape in words, and gains the sense that fits the Songs and Sao; that the yang spreads and the yin gloomily draws in, rooted in the heart of Heaven and earth? Once the feeling is lost, the principle too runs against the reality; if you trace what it leads to, where is there any 'kind' to speak of?\nThe ways of using the brush, though they come from oneself, and the design of the pattern, though right before one's eyes, if one is out by a hair, one is a thousand miles off; if one knows the art, it fits and brings one through everywhere. The mind does not tire of being exact, and the hand does not forget practice. When handling has become skilful and the rules are held in the breast, then you will move easily and unhurriedly, the intention is before the brush, and the strokes fall freely; the brush flies and the spirit soars. It is like Sang Hongyang's calculation in the head, which reached beyond limit beforehand, or Cook Ding's eye, which no longer saw a whole ox.\nOnce a man who was fond of the art asked me to teach him; I gave him the outline roughly and passed it on, and he understood in his mind, his hand followed, and he forgot words and grasped the meaning. Even without exhausting all the arts, he was bound to reach what he could. If the thought is to reach the standard model, the young are not as good as the old; if learning is to establish the rules, the old are not as good as the young. In thinking, the old grow better and better; in learning, the young can exert themselves.\nIf one does not stop trying, there are three stages, and when the time comes there is a change that reaches the limit of one's lot. At first, in learning layout, one seeks only to be plain and upright. Having known plain and upright, one must seek the daring and extreme. Having managed the daring and extreme, one returns to plain and upright. At first, it means one has not reached it; in the middle, one has gone beyond it; at the end, there is a full understanding, and when there is full understanding, 'the person and the writing grow old together'. Confucius said: 'At fifty I knew the mandate of Heaven' and 'At seventy I followed my heart's desire.' So one who understands the feeling of what is smooth and what is steep, and observes the way of adapting to circumstance, is like one who plans and then acts, and when he acts is not wrong; speaks when the time has come, and when he speaks hits the principle.",
+   "keyLines": [
+    {
+     "line": "寫樂毅則情多佛郁；書畫贊則意涉瑰奇",
+     "en": "In writing the Yue Yi, the feeling is full of gloom; in the Portrait Eulogy, the interest turns to marvels.",
+     "note": "Uses different works of Wang Xizhi to show how different content and different mood give different styles."
+    },
+    {
+     "line": "涉樂方笑，言哀已嘆",
+     "en": "Entering music, one laughs; speaking of grief, one has already sighed.",
+     "note": "While writing, the writer changes with the feeling of the text, so that calligraphy answers to emotion."
+    },
+    {
+     "line": "差之一豪，失之千里",
+     "en": "Out by a hair, one is a thousand miles off.",
+     "note": "Says that tiny differences in the dots and strokes lead to great differences, and stresses accuracy."
+    },
+    {
+     "line": "意先筆後",
+     "en": "Intention comes before the brush.",
+     "note": "Plan before writing, and let the thought precede the brush: an important principle in writing on calligraphy."
+    },
+    {
+     "line": "初學分布，但求平正；既知平正，務追險絕，旣能險絕，復歸平正",
+     "en": "In learning layout, one seeks only to be plain and upright; having known plain and upright, one must seek the daring and extreme; having managed the daring and extreme, one returns to plain and upright.",
+     "note": "The famous three stages of learning calligraphy: plain and upright, daring and extreme, and then plain and upright again."
+    },
+    {
+     "line": "通會之際，人書俱老",
+     "en": "When there is full understanding, the person and the writing grow old together.",
+     "note": "The final stage: technique is mastered, and the person and the art mature together."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "摹搨",
+     "en": "mo ta - rubbing and tracing",
+     "note": "Copying a work by laying thin paper over the original or taking an ink rubbing of it."
+    },
+    {
+     "term": "樂毅論、黃庭經、東方朔畫贊、太史箴、蘭亭集序、告誓文",
+     "en": "Yue Yi lun, Huang Ting jing, Dongfang Shuo hua zan, Taishi zhen, Lanting ji xu, Gao shi wen - six works of Wang Xizhi",
+     "note": "Famous works of Wang Xizhi in regular and running script. The Oath Declaration is the text he swore in his late years before the graves of his parents."
+    },
+    {
+     "term": "佛郁",
+     "en": "fu yu - gloom",
+     "note": "The same as the usual word, for a mood of pent-up feeling."
+    },
+    {
+     "term": "弘羊之心",
+     "en": "Hongyang's mind - Sang Hongyang",
+     "note": "Sang Hongyang of the Han was a master of mental arithmetic; it is a figure for skilled handling and having the whole in mind."
+    },
+    {
+     "term": "庖丁",
+     "en": "Pao Ding - Cook Ding",
+     "note": "The butcher in the Zhuangzi who no longer saw a whole ox; it describes skill so familiar it has become second nature."
+    },
+    {
+     "term": "平正、險絕",
+     "en": "ping zheng, xian jue - plain and upright, daring and extreme",
+     "note": "Two styles in learning: plain and upright means correct and steady, daring and extreme means bold and changeful."
+    },
+    {
+     "term": "通會",
+     "en": "tong hui - full understanding",
+     "note": "To understand and integrate everything."
+    },
+    {
+     "term": "從心",
+     "en": "cong xin - following the heart",
+     "note": "From the Analects: at seventy, to follow the heart's desire without overstepping the line."
+    }
+   ],
+   "background": "This section takes Wang Xizhi as the master, explains the link between calligraphy and feeling, and gives the three stages of learning - plain and upright, daring and extreme, and then plain and upright again - which became a widely quoted theory of calligraphy. Most of the works Sun Guoting lists, such as the Yue Yi lun, the Huang Ting jing and the Lanting preface, survive only as copies or stone rubbings, and the originals have long been lost, so the Treatise is also a precious witness to how the Tang saw Xizhi's traces."
+  },
+  "pian06": {
+   "summary": "Wang Xizhi's late work is the most wonderful because his mind was calm and neither violent nor severe. Sun Guoting says that one must study hard, criticises copies that do not look like the original and observation that is not exact, and discusses the balance of vigour and speed against lingering, of bone and breath against fullness and moisture, and the faults of writing that come from different temperaments.",
+   "translation": "So the writing of the General of the Right is often most wonderful in his late years, probably because his thought was clear and careful, his will was gentle, he was neither fierce nor severe, and so his bearing was naturally lofty. From Zijing downward, none did not tense himself and push with force, setting his mind to form a style; not only did the working of skill differ, but in spirit they were far apart.\nSome people look lightly on their own work, and some boast of their own handling. The boaster will use up the range of his own nature and cut off the path by which he might be led forward; the self-belittler, though he bends himself in the bounds of his feeling, will surely find a principle that gets through. Alas, there are those who studied and did not succeed, but none who succeeded without studying. Look at what is before us and it will be clear.\nStill, change, growth and decline have many sides, and natures are not alike. Some join hard and soft into one body, and suddenly separate toil and ease. Some are calm and unhurried, with sinew and bone within; some are broken and jagged, with the point shown outside. Those who look value precision, and those who copy value likeness. What if the copy is not like and the looking is not precise, the layout is still loose and the form not checked? The leaping-spring posture has not yet shown its beauty, and the words about peering into the well are already heard to be ugly. Even if one wants to challenge Xi and Xian or slander Zhong and Zhang, how can one cover the eyes of people then or stop the mouths of people to come? Those who admire and study should be especially careful.\nThere are also people who do not understand lingering and only seek power and speed; who cannot be quick and instead imitate slowness and weight. Power and speed are the key to a free, flying style; lingering is the height of savouring. If one reverses the speed, one comes near the way to meet beauty; if one dwells only on slowness, in the end one loses the wonder that has no equal. One who can be fast and is not fast is simply held up; one who is slow because of slowness - how can that be called savouring? Unless the mind is at ease and the hand is quick, it is hard to have both.\nEven when all the wonders have gathered in one place, one must keep the bone and breath. Once the bone and breath are kept, add vigour and moisture. This is like branches and trunk spreading, which are the stronger for frost and snow; like flowers and leaves in rich bloom, shining with the clouds and sun. If the bone is too strong and the vigour and beauty too little, it is like a withered tree laid across a dangerous place, a great rock blocking a road: though it lacks charm, the substance remains. If vigour and beauty win, and the bone and breath are weak, it is like petals falling in a fragrant wood, shining in vain with nothing to lean on; or duckweed floating on an orchid pond, green in vain with nothing to rest on. From this we know it is easy to become skilled in one side only, and hard to be perfect in everything.\nEven if one takes one master as the source, one becomes many styles, each following his own nature and wishes, and calls that his bearing. The plain and straight man goes straight and lacks vigour; the stubborn man is hard and lacks moisture; the self-important man is held back by his own tightness; the careless man loses the rules; the gentle man is hurt by softness and slowness; the hot and bold man is too rash and urgent; the suspicious man gets stuck; the slow man ends up dull; the petty man picks up the air of a clerk. These are all men who walk alone, and the faults come from enjoying their own bent.",
+   "keyLines": [
+    {
+     "line": "右軍之書，末年多妙",
+     "en": "The writing of the General of the Right is often most wonderful in his late years.",
+     "note": "Points out that Wang Xizhi's late works are the finest because his mind was calm and his temper mild."
+    },
+    {
+     "line": "蓋有學而不能，未有不學而能者也",
+     "en": "There are those who studied and did not succeed, but none who succeeded without studying.",
+     "note": "Stresses the need to study: one may learn and fail, but no one succeeds without learning."
+    },
+    {
+     "line": "勁速者，超逸之機，遲留者，賞會之致",
+     "en": "Power and speed are the key to a free, flying style; lingering is the height of savouring.",
+     "note": "On the speed of the brush: swift power and lingering each have their strengths, and both are needed, with neither neglected."
+    },
+    {
+     "line": "務存骨氣；骨既存矣，而遒潤加之",
+     "en": "Keep the bone and breath; once the bone and breath are kept, add vigour and moisture.",
+     "note": "A work of calligraphy first needs bone strength, then vigour and moisture, with the image of branches and of flowers and leaves."
+    },
+    {
+     "line": "是知偏工易就，盡善難求",
+     "en": "It is easy to become skilled in one side only, and hard to be perfect in everything.",
+     "note": "One strength is easy to gain; to be perfect all round is hard to find."
+    },
+    {
+     "line": "斯皆獨行之士，偏玩所乖",
+     "en": "These are all men who walk alone, and the faults come from enjoying their own bent.",
+     "note": "The faults of different temperaments all come from clinging to one side."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "右軍",
+     "en": "youjun - the General of the Right",
+     "note": "Wang Xizhi once held the post of General of the Right."
+    },
+    {
+     "term": "子敬",
+     "en": "zijing - Zijing",
+     "note": "Wang Xianzhi."
+    },
+    {
+     "term": "遲留（淹留）",
+     "en": "chi liu (yan liu) - lingering",
+     "note": "Pausing and slowing as the brush moves."
+    },
+    {
+     "term": "勁速",
+     "en": "jin su - power and speed",
+     "note": "A swift and forceful movement of the brush."
+    },
+    {
+     "term": "骨氣",
+     "en": "gu qi - bone and breath",
+     "note": "The strength and sinew of calligraphy."
+    },
+    {
+     "term": "遒潤",
+     "en": "qiu run - vigour and moisture",
+     "note": "Strong and vigorous, yet moist."
+    },
+    {
+     "term": "扶疏",
+     "en": "fu shu - spreading and rich",
+     "note": "Branches and leaves that are lush and spreading."
+    },
+    {
+     "term": "遒",
+     "en": "qiu - vigour",
+     "note": "Firm and strong."
+    }
+   ],
+   "background": "This section discusses the balance of styles in calligraphy and the effect of character, and is a famous passage on the training of the calligrapher in the Treatise. Sun Guoting holds that writing relates to temperament, and that every temperament may bring its own fault, which must be balanced through study and adjustment. The cursive ink-writing of the Treatise itself shows the ideal of vigorous bone and breath with moisture, and it is a central text for studying Tang cursive and writing on calligraphy."
+  },
+  "pian07": {
+   "summary": "Sun Guoting says calligraphy takes its images from the human body, so that when heart and hand are one and the rules are forgotten, one can be free of any single style. He uses his own experience to show that people's judgement is often swayed by rank and name, and that true understanding is rare, and quotes the Zhuangzi and the Laozi to say that it is no wonder that those who do not know do not know.",
+   "translation": "The Changes says: 'Look at the patterns of the sky to know the changes of the seasons; look at the patterns of humankind to transform the world.' How much more is this so for the wonder of calligraphy, which takes its images close, from one's own body! Even if one's handling is not yet complete and there is a lack of work in the secrets, the waves are already stirred from within the heart. One must reach out to the feeling of dots and strokes and search widely into the principle of beginnings and ends, fusing insect seal and tempering cursive and clerical. See the five materials used together, so that forms never run out; see the eight sounds rising in turn, so that feeling and response have no fixed direction.\nWhen several strokes are made together, each has a different shape; when many dots are set in a line, their postures differ from each other. A single dot is the rule for a character, and a single character is the standard for the whole piece. They differ but do not clash; they harmonise but are not the same. Staying is not always slow, and letting go is not always swift. Where it is dry it becomes moist; where it is about to be heavy with ink it becomes withered. Do away with the rules of square and round, and slip away from the compass and plumb-line of crooked and straight. Now clear, now dim; as if moving, as if hidden. At the end of the hair exhaust all changing shapes; on the paper fit the mood. With no gap between heart and hand, and the model forgotten, one can naturally depart from Xi and Xian without loss, and go against Zhong and Zhang and be more skilful.\nIt is like Jiangshu and Qingqin: their postures differ, but both are lovely. It is like the Pearl of Sui and the Jade of He: their substance differs, but both are beautiful. Why carve a crane or draw a dragon, and then be ashamed before the real form? Having got the fish and the hare, why begrudge the trap and the snare? I have heard that only a house with the beauty of Nanwei can discuss good women, and only a blade with the sharpness of Longquan can discuss cutting. To speak beyond one's station is to burden what is essential.\nI once worked on a piece with all my mind and thought it entirely to my liking. I showed it to those called connoisseurs at the time. Where it was most skilful and fine, they paid no attention; where there were sometimes slips, they praised it. They did not understand what they saw, still less what they had heard; some, proud of their age or rank, lightly insulted and mocked it. So I borrowed a pale-blue silk mounting and wrote on it the name of an ancient master. The worthies changed their opinion, the foolish followed, and all competed to enjoy the marvels at the tip of the hair; few discussed the faults at the point. It was like Marquis Hui's love of the fake, like Lord Ye's fear of the real.\nFrom this we know there is a reason that Bozi stopped the flowing waves. Cai Yong did not give praise wrongly, and Sun Yang did not look at a horse at random, because their dark mirrors saw through, and so they were not held by their ears and eyes. If a rare sound lay in the stove, even a commonplace man would be startled at its fine ringing when he heard it; if a swift horse lay in the stall, an ordinary man would recognise it as beyond the herd. Then Boxie would not be worth naming, and Bole would not be worth honouring.\nThere is the old woman and the fan: at first she was angry, and later she begged; there was the pupil and the writing-table: the father had it scraped, and the son was sorry. This is the difference between knowing and not knowing. A gentleman bends when no one knows him, and stands tall when someone knows him; those who do not know, why should we be surprised? So Zhuangzi said: 'The morning mushroom does not know the first and last day of the month, and the cicada does not know spring and autumn.' Laozi said: 'When the lower sort of scholar hears the Way, he laughs at it; if he did not laugh, it would not be the Way.' How can one hold up ice and blame the summer insect!",
+   "keyLines": [
+    {
+     "line": "書之為妙，近取諸身",
+     "en": "The wonder of calligraphy takes its images close, from one's own body.",
+     "note": "Says that the subtleties of calligraphy are drawn from the human body, so that writing is like a person's form and expression."
+    },
+    {
+     "line": "無間心手，忘懷楷則",
+     "en": "With no gap between heart and hand, and the model forgotten.",
+     "note": "Heart and hand as one, with the rules forgotten, is the highest state of calligraphy."
+    },
+    {
+     "line": "違而不犯，和而不同",
+     "en": "They differ but do not clash; they harmonise but are not the same.",
+     "note": "Dots and strokes should contrast with each other and avoid sameness, yet remain in harmony."
+    },
+    {
+     "line": "泯規矩於方圓，遁鉤繩之曲直",
+     "en": "Do away with the rules of square and round, and slip away from the compass and plumb-line of crooked and straight.",
+     "note": "When skill is fully mature, it turns natural and is no longer bound by rules."
+    },
+    {
+     "line": "競賞豪末之奇，罕議鋒端之失",
+     "en": "All competed to enjoy the marvels at the tip of the hair; few discussed the faults at the point.",
+     "note": "A criticism of the way people judge: they follow rank and name instead of looking at the substance."
+    },
+    {
+     "line": "豈可執冰而咎夏蟲哉",
+     "en": "How can one hold up ice and blame the summer insect!",
+     "note": "Ends with words from Zhuangzi and Laozi, to say that one should not blame those who do not understand."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "蟲篆",
+     "en": "chong zhuan - insect seal",
+     "note": "Insect script and seal script, a general name for ancient scripts."
+    },
+    {
+     "term": "五材、八音",
+     "en": "wu cai, ba yin - five materials, eight sounds",
+     "note": "The five materials are metal, wood, water, fire and earth; the eight sounds are the sounds of eight kinds of instruments. Both are used as figures for the variety of calligraphy."
+    },
+    {
+     "term": "筌蹄",
+     "en": "quan ti - the trap and the snare",
+     "note": "The quan is a tool for catching fish and the ti one for catching hares. From the Zhuangzi: once you have reached your aim, you can forget the means."
+    },
+    {
+     "term": "南威、龍泉",
+     "en": "Nanwei, Longquan",
+     "note": "Nanwei was a beauty of ancient times and Longquan a famous sword."
+    },
+    {
+     "term": "湘縹",
+     "en": "xiang piao - pale-blue silk",
+     "note": "A pale-blue silk fabric often used for mounting valued paintings and calligraphy."
+    },
+    {
+     "term": "蔡邕、孫陽",
+     "en": "Cai Yong, Sun Yang",
+     "note": "Cai Yong (courtesy name Bojie) was famed for knowing the zither; Sun Yang is Bole, who was good at judging horses."
+    },
+    {
+     "term": "老姥題扇",
+     "en": "lao mu ti shan - the old woman and the fan",
+     "note": "Legend says Wang Xizhi wrote on the fans of an old woman who sold fans; she was cross at first, and later the fans sold in great numbers."
+    },
+    {
+     "term": "夏蟲",
+     "en": "xia chong - the summer insect",
+     "note": "From the Zhuangzi: one cannot speak of ice to a summer insect; it is a figure for narrow experience."
+    }
+   ],
+   "background": "This is the most philosophical part of the Treatise. It begins with the 'patterns of the sky and humankind' in the Changes and says that heart and hand should be one with the rules forgotten, and then uses the author's own experience to describe the prejudice of those who judge. Sun Guoting honours the two Wangs and values rules, yet argues that skill, when complete, turns natural; this is the state he sought when he wrote the Treatise in cursive."
+  },
+  "pian08": {
+   "summary": "The closing words of the book. Sun Guoting says that writings on calligraphy since the Han and Wei have largely repeated one another. He explains that he has composed six chapters in two scrolls and named them the Treatise on Calligraphy, for later learners to take as a model and for those who understand to read, and that he does not wish to keep it secret.",
+   "translation": "Since the Han and Wei many have written about calligraphy, with the fine and the poor mixed up and the headings in a muddle: some restate the old rules and are no different from what went before; others offer new theories on a whim, which are of no use to those to come. They only make the complicated more complicated, and the gaps stay as they were.\nNow I have composed six chapters in two scrolls, arranged in order of their skill and use, and named them the Treatise on Calligraphy. I hope that the younger members of my own family will take it as a standard, and that the friends who understand it in the world may keep it and look it over. As for locking it away in secret, I do not accept that.",
+   "keyLines": [
+    {
+     "line": "今撰為六篇，分成兩卷，第其工用，名曰書譜",
+     "en": "Now I have composed six chapters in two scrolls, arranged in order of their skill and use, and named them the Treatise on Calligraphy.",
+     "note": "Explains the title and the structure: six chapters and two scrolls, and why the book is called a 'treatise' (pu)."
+    },
+    {
+     "line": "緘秘之旨，余無取焉",
+     "en": "As for locking it away in secret, I do not accept that.",
+     "note": "He declares that calligraphy should not be kept secret but taught openly."
+    },
+    {
+     "line": "徒使繁者彌繁，闕者仍闕",
+     "en": "They only make the complicated more complicated, and the gaps stay as they were.",
+     "note": "A criticism of the faults of earlier writings on calligraphy."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "妍蚩",
+     "en": "yan chi - fine and poor",
+     "note": "Beautiful and ugly; good and bad."
+    },
+    {
+     "term": "六篇、兩卷",
+     "en": "liu pian, liang juan - six chapters, two scrolls",
+     "note": "The plan Sun Guoting gave for the whole book; what survives today is mainly the preface."
+    },
+    {
+     "term": "第其工用",
+     "en": "di qi gong yong - arranged by skill and use",
+     "note": "Putting them in order according to their skill and usefulness."
+    },
+    {
+     "term": "緘秘",
+     "en": "jian mi - to keep secret",
+     "note": "To lock away and not pass on."
+    },
+    {
+     "term": "知音",
+     "en": "zhi yin - one who understands",
+     "note": "Here, someone who can appreciate and understand calligraphy."
+    }
+   ],
+   "background": "This section ends the preface of the Treatise, and Sun Guoting gives the reason for writing and the plan of the chapters. The preface survives in his cursive ink-writing, dated 687, and the main text, planned as six chapters in two scrolls, has not come down; what we read today is mainly this preface. The work covers the history of calligraphy, brushwork, the scripts, the mood of creation and appreciation, and the ink-writing is itself a leading Tang cursive, a model copied by all who study the script."
+  }
+ }
+}

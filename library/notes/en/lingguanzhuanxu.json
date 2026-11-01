@@ -1,0 +1,92 @@
+{
+ "id": "lingguanzhuanxu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Ouyang Xiu uses the story of Zhuangzong of the Later Tang, who returned the three arrows to the ancestral temple, won the empire and lost it again, to draw a lesson on rise and fall: worry and toil can make a state flourish, ease and pleasure can destroy a man, and disaster often grows from small things and from indulgence.",
+   "translation": "Alas! The principle of rise and decline, though it is said to be Heaven's decree, is it not also a matter of human affairs? If we trace how Zhuangzong won the empire, and how he lost it, we can understand this.\nIt is said that when the Prince of Jin was about to die, he gave three arrows to Zhuangzong and told him: 'Liang is my enemy. The Prince of Yan was set up by me; the Khitan made a pact with me to be brothers; and all turned their backs on Jin and went over to Liang. These three are my lasting regrets. I give you three arrows; do not forget your father's purpose.' Zhuangzong received them and stored them in the ancestral temple. Afterwards, whenever he went to war, he sent an official with one sacrifice of a sheep and a pig to report at the temple and ask for the arrows. They were put in a brocade bag and carried before the army, and on victory were returned.\nWhen he bound the Yan father and son with cords, and boxed the heads of the Liang ruler and ministers and entered the great ancestral temple, returned the arrows to his father the former prince and reported success, his spirit was at its height - it can be called a grand moment.\nBut when his enemies had been wiped out and the realm settled, one man shouted in the night, and rebels rose in answer on all sides. In panic he rode out east, and before he had even seen the rebels his soldiers had scattered. Ruler and ministers looked at one another, not knowing where to go. At last he swore to Heaven, cut his hair, and tears wet his collar - how great the decline!\nWas it that winning was hard and losing was easy? Or, tracing the marks of success and failure, did they all arise from men? The Book of Documents says: 'Fullness invites loss; humility gains benefit.' Worry and toil can make a state flourish; ease and pleasure can destroy the person. That is the natural principle. So when he was at his height, all the heroes of the world could not contend with him; when he was in decline, a few tens of actors were able to corner him, until he died and the state was lost, and he became a laughing stock to the world. Disaster and trouble are often built up from tiny things neglected, and wisdom and courage are often trapped by what a man is drowned in - is it only the actors? I wrote the 'Biographies of the Court Actors'.",
+   "keyLines": [
+    {
+     "line": "盛衰之理，雖曰天命，豈非人事哉",
+     "en": "The principle of rise and decline, though it is said to be Heaven's decree, is it not also a matter of human affairs?",
+     "note": "The opening thesis: the rise and fall of a state is not wholly Heaven's decree but also depends on human affairs."
+    },
+    {
+     "line": "爾其無忘乃父之志",
+     "en": "Do not forget your father's purpose.",
+     "note": "The Prince of Jin's dying charge; it explains where the three arrows came from and the duty on Zhuangzong."
+    },
+    {
+     "line": "入於太廟，還矢先王，而告以成功，其意氣之盛，可謂壯哉",
+     "en": "Entered the great ancestral temple, returned the arrows to his father the former prince and reported success - his spirit was at its height.",
+     "note": "It shows Zhuangzong's pride and show when he won the empire, as a contrast with his fall that follows."
+    },
+    {
+     "line": "一夫夜呼，亂者四應，倉皇東出",
+     "en": "One man shouted in the night, and rebels rose in answer on all sides; in panic he rode out east.",
+     "note": "It shows how quickly Zhuangzong lost power, in sharp contrast with the splendour before."
+    },
+    {
+     "line": "滿招損，謙得益",
+     "en": "Fullness invites loss; humility gains benefit.",
+     "note": "A saying quoted from the Book of Documents, used as the ground of the argument about success and failure."
+    },
+    {
+     "line": "憂勞可以興國，逸豫可以亡身，自然之理也",
+     "en": "Worry and toil can make a state flourish; ease and pleasure can destroy the person. That is the natural principle.",
+     "note": "The most important conclusion of the essay: the basic principle of rise and fall."
+    },
+    {
+     "line": "禍患常積於忽微，而智勇多困於所溺",
+     "en": "Disaster and trouble are often built up from tiny things neglected, and wisdom and courage are often trapped by what a man is drowned in.",
+     "note": "It sums up the whole and lifts it into a general lesson: stop trouble while it is small, and do not be consumed by what you love."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "莊宗",
+     "en": "Zhuang Zong - Zhuangzong",
+     "note": "Li Cunxu, Emperor Zhuangzong of the Later Tang, son of the Prince of Jin Li Keyong, who destroyed the Later Liang and founded the Later Tang."
+    },
+    {
+     "term": "晉王",
+     "en": "Jin Wang - Prince of Jin",
+     "note": "Li Keyong, the father of Li Cunxu."
+    },
+    {
+     "term": "三矢",
+     "en": "san shi - three arrows",
+     "note": "The three arrows Li Keyong gave on his deathbed, standing for his three lasting regrets."
+    },
+    {
+     "term": "少牢",
+     "en": "shao lao - a small sacrifice",
+     "note": "In ancient sacrifice, one sheep and one pig, a fairly simple offering."
+    },
+    {
+     "term": "組",
+     "en": "zu - cord",
+     "note": "A rope; here, to bind with rope."
+    },
+    {
+     "term": "函",
+     "en": "han - to box",
+     "note": "To put in a box; here, to put the heads of the Liang ruler and ministers in boxes."
+    },
+    {
+     "term": "伶官",
+     "en": "ling guan - court actors",
+     "note": "Musicians and actors at court, whom Zhuangzong favoured until they ruined his government."
+    },
+    {
+     "term": "誓天斷髮",
+     "en": "shi tian duan fa - swearing to Heaven and cutting the hair",
+     "note": "To swear an oath to Heaven and cut off hair to show resolve; here, Zhuangzong weeping with his men when he had nowhere left to go."
+    }
+   ],
+   "background": "This is the preface to the 'Biographies of the Court Actors' in the New History of the Five Dynasties by Ouyang Xiu. Using the rise and fall of Zhuangzong of the Later Tang, it argues that success and failure come from human affairs. Its argument is sharp and the contrast between good and bad is clear, so it is a model of historical argument in the Song (960-1279)."
+  }
+ }
+}

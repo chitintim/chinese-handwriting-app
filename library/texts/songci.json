@@ -2,15 +2,18 @@
  "id": "songci",
  "title": {
   "trad": "宋詞精選",
-  "simp": "宋词精选"
+  "simp": "宋词精选",
+  "en": "Selected Song Lyrics (Ci)"
  },
  "author": {
   "trad": "宋代諸家",
-  "simp": "宋代诸家"
+  "simp": "宋代诸家",
+  "en": "Song poets"
  },
  "dynasty": {
   "trad": "宋",
-  "simp": "宋"
+  "simp": "宋",
+  "en": "Song"
  },
  "source": "https://zh.wikisource.org/wiki/宋詞三百首",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/宋詞三百首",
@@ -20,11 +23,13 @@
    "id": "shuidiaogetou",
    "title": {
     "trad": "水調歌頭·明月幾時有 · 蘇軾",
-    "simp": "水调歌头·明月几时有 · 苏轼"
+    "simp": "水调歌头·明月几时有 · 苏轼",
+    "en": "Shuidiao Getou: When Will the Moon Be Bright · Su Shi"
    },
    "author": {
     "trad": "蘇軾",
-    "simp": "苏轼"
+    "simp": "苏轼",
+    "en": "Su Shi"
    },
    "body": {
     "trad": "明月幾時有，把酒問青天。不知天上宮闕，今夕是何年。我欲乘風歸去，惟恐瓊樓玉宇，高處不勝寒。起舞弄清影，何似在人間。轉朱閣，低綺戶，照無眠。不應有恨，何事長向別時圓。人有悲歡離合，月有陰晴圓缺，此事古難全。但願人長久，千里共嬋娟。",
@@ -35,11 +40,13 @@
    "id": "niannujiao_chibi",
    "title": {
     "trad": "念奴嬌·赤壁懷古 · 蘇軾",
-    "simp": "念奴娇·赤壁怀古 · 苏轼"
+    "simp": "念奴娇·赤壁怀古 · 苏轼",
+    "en": "Niannujiao: Memories of Red Cliff · Su Shi"
    },
    "author": {
     "trad": "蘇軾",
-    "simp": "苏轼"
+    "simp": "苏轼",
+    "en": "Su Shi"
    },
    "body": {
     "trad": "大江東去，浪淘盡、千古風流人物。故壘西邊，人道是、三國周郎赤壁。亂石穿空，驚濤拍岸，捲起千堆雪。江山如畫，一時多少豪傑。遙想公瑾當年，小喬初嫁了，雄姿英發。羽扇綸巾，談笑處、檣艣灰飛煙滅。故國神遊，多情應笑我，早生華髮。人間如夢，一尊還酹江月。",
@@ -50,11 +57,13 @@
    "id": "jiangchengzi",
    "title": {
     "trad": "江城子·十年生死兩茫茫 · 蘇軾",
-    "simp": "江城子·十年生死两茫茫 · 苏轼"
+    "simp": "江城子·十年生死两茫茫 · 苏轼",
+    "en": "Jiangchengzi: Ten Years, the Living and the Dead · Su Shi"
    },
    "author": {
     "trad": "蘇軾",
-    "simp": "苏轼"
+    "simp": "苏轼",
+    "en": "Su Shi"
    },
    "body": {
     "trad": "十年生死兩茫茫，不思量，自難忘。千里孤墳，無處話淒涼。縱使相逢應不識，塵滿面、鬢如霜。夜來幽夢忽還鄉，小軒窗，正梳妝。相顧無言，惟有淚千行。料得年年腸斷處，明月夜、短松岡。",
@@ -65,11 +74,13 @@
    "id": "dingfengbo",
    "title": {
     "trad": "定風波·莫聽穿林打葉聲 · 蘇軾",
-    "simp": "定风波·莫听穿林打叶声 · 苏轼"
+    "simp": "定风波·莫听穿林打叶声 · 苏轼",
+    "en": "Dingfengbo: Pay No Heed to the Rain in the Woods · Su Shi"
    },
    "author": {
     "trad": "蘇軾",
-    "simp": "苏轼"
+    "simp": "苏轼",
+    "en": "Su Shi"
    },
    "body": {
     "trad": "莫聽穿林打葉聲，何妨吟嘯且徐行。竹杖芒鞋輕勝馬，誰怕？一蓑煙雨任平生。料峭春風吹酒醒，微冷，山頭斜照卻相迎。回首向來蕭瑟處，歸去，也無風雨也無晴。",
@@ -80,11 +91,13 @@
    "id": "busuanzi_su",
    "title": {
     "trad": "卜算子·缺月掛疏桐 · 蘇軾",
-    "simp": "卜算子·缺月挂疏桐 · 苏轼"
+    "simp": "卜算子·缺月挂疏桐 · 苏轼",
+    "en": "Busuanzi: A Waning Moon on Sparse Trees · Su Shi"
    },
    "author": {
     "trad": "蘇軾",
-    "simp": "苏轼"
+    "simp": "苏轼",
+    "en": "Su Shi"
    },
    "body": {
     "trad": "缺月掛疏桐，漏斷人初靜。誰見幽人獨往來，縹緲孤鴻影。驚起卻回頭，有恨無人省。揀盡寒枝不肯棲，寂寞沙洲冷。",
@@ -95,11 +108,13 @@
    "id": "shengshengman",
    "title": {
     "trad": "聲聲慢·尋尋覓覓 · 李清照",
-    "simp": "声声慢·寻寻觅觅 · 李清照"
+    "simp": "声声慢·寻寻觅觅 · 李清照",
+    "en": "Shengshengman: Searching, Searching · Li Qingzhao"
    },
    "author": {
     "trad": "李清照",
-    "simp": "李清照"
+    "simp": "李清照",
+    "en": "Li Qingzhao"
    },
    "body": {
     "trad": "尋尋覓覓，冷冷清清，悽悽慘慘戚戚。乍暖還寒時候，最難將息。三杯兩盞淡酒，怎敵他、晚來風急？雁過也，正傷心，卻是舊時相識。滿地黃花堆積。憔悴損，如今有誰堪摘？守著窗兒，獨自怎生得黑？梧桐更兼細雨，到黃昏、點點滴滴。這次第，怎一個愁字了得！",
@@ -110,11 +125,13 @@
    "id": "zuihuayin",
    "title": {
     "trad": "醉花陰·薄霧濃雲愁永晝 · 李清照",
-    "simp": "醉花阴·薄雾浓云愁永昼 · 李清照"
+    "simp": "醉花阴·薄雾浓云愁永昼 · 李清照",
+    "en": "Zuihuayin: Thin Mist, Thick Cloud · Li Qingzhao"
    },
    "author": {
     "trad": "李清照",
-    "simp": "李清照"
+    "simp": "李清照",
+    "en": "Li Qingzhao"
    },
    "body": {
     "trad": "薄霧濃雲愁永晝，瑞腦消金獸。佳節又重陽，玉枕紗廚，半夜涼初透。東籬把酒黃昏後，有暗香盈袖。莫道不消魂？簾捲西風，人比黃花瘦。",
@@ -125,11 +142,13 @@
    "id": "rumengling",
    "title": {
     "trad": "如夢令·常記溪亭日暮 · 李清照",
-    "simp": "如梦令·常记溪亭日暮 · 李清照"
+    "simp": "如梦令·常记溪亭日暮 · 李清照",
+    "en": "Rumengling: Often I Recall the Stream Pavilion · Li Qingzhao"
    },
    "author": {
     "trad": "李清照",
-    "simp": "李清照"
+    "simp": "李清照",
+    "en": "Li Qingzhao"
    },
    "body": {
     "trad": "常記溪亭日暮，沉醉不知歸路。興盡晚回舟，誤入藕花深處。爭渡，爭渡，驚起一灘鷗鷺。",
@@ -140,11 +159,13 @@
    "id": "yijianmei",
    "title": {
     "trad": "一剪梅·紅藕香殘玉簟秋 · 李清照",
-    "simp": "一剪梅·红藕香残玉簟秋 · 李清照"
+    "simp": "一剪梅·红藕香残玉簟秋 · 李清照",
+    "en": "Yijianmei: Red Lotus Fades, Autumn on the Mat · Li Qingzhao"
    },
    "author": {
     "trad": "李清照",
-    "simp": "李清照"
+    "simp": "李清照",
+    "en": "Li Qingzhao"
    },
    "body": {
     "trad": "紅藕香殘玉簟秋。輕解羅裳，獨上蘭舟。雲中誰寄錦書來？雁字回時，月滿西樓。花自飄零水自流，一種相思，兩處閒愁。此情無計可消除，才下眉頭，卻上心頭。",
@@ -155,11 +176,13 @@
    "id": "yulinling",
    "title": {
     "trad": "雨霖鈴·寒蟬淒切 · 柳永",
-    "simp": "雨霖铃·寒蝉凄切 · 柳永"
+    "simp": "雨霖铃·寒蝉凄切 · 柳永",
+    "en": "Yulinling: The Cicadas Cry Mournfully · Liu Yong"
    },
    "author": {
     "trad": "柳永",
-    "simp": "柳永"
+    "simp": "柳永",
+    "en": "Liu Yong"
    },
    "body": {
     "trad": "寒蟬淒切，對長亭晚，驟雨初歇。都門帳飲無緒，留戀處、蘭舟催發。執手相看淚眼，竟無語凝噎。念去去、千里煙波，暮靄沉沉楚天闊。多情自古傷離別，更那堪、冷落清秋節！今宵酒醒何處？楊柳岸、曉風殘月。此去經年，應是良辰好景虛設。便縱有千種風情，更與何人說。",
@@ -170,11 +193,13 @@
    "id": "bashengganzhou",
    "title": {
     "trad": "八聲甘州·對瀟瀟暮雨灑江天 · 柳永",
-    "simp": "八声甘州·对潇潇暮雨洒江天 · 柳永"
+    "simp": "八声甘州·对潇潇暮雨洒江天 · 柳永",
+    "en": "Basheng Ganzhou: Evening Rain over the River · Liu Yong"
    },
    "author": {
     "trad": "柳永",
-    "simp": "柳永"
+    "simp": "柳永",
+    "en": "Liu Yong"
    },
    "body": {
     "trad": "對瀟瀟暮雨灑江天，一番洗清秋。漸霜風淒緊，關河冷落，殘照當樓。是處紅衰翠減，苒苒物華休。惟有長江水，無語東流。不忍登高臨遠，望故鄉渺邈，歸思難收。嘆年來蹤跡，何事苦淹留？想佳人、妝樓顒望，誤幾回、天際識歸舟？爭知我、倚闌干處，正恁凝愁。",
@@ -185,11 +210,13 @@
    "id": "dielianhua_liu",
    "title": {
     "trad": "蝶戀花·佇倚危樓風細細 · 柳永",
-    "simp": "蝶恋花·伫倚危楼风细细 · 柳永"
+    "simp": "蝶恋花·伫倚危楼风细细 · 柳永",
+    "en": "Dielianhua: Leaning on the High Tower · Liu Yong"
    },
    "author": {
     "trad": "柳永",
-    "simp": "柳永"
+    "simp": "柳永",
+    "en": "Liu Yong"
    },
    "body": {
     "trad": "佇倚危樓風細細，望極春愁，黯黯生天際。草色煙光殘照裏，無言誰會憑闌意？擬把疏狂圖一醉，對酒當歌，強樂還無味。衣帶漸寬終不悔。為伊消得人憔悴。",
@@ -200,11 +227,13 @@
    "id": "manjianghong",
    "title": {
     "trad": "滿江紅·怒髮衝冠 · 岳飛",
-    "simp": "满江红·怒发冲冠 · 岳飞"
+    "simp": "满江红·怒发冲冠 · 岳飞",
+    "en": "Manjianghong: Hair Bristling with Rage · Yue Fei"
    },
    "author": {
     "trad": "岳飛",
-    "simp": "岳飞"
+    "simp": "岳飞",
+    "en": "Yue Fei"
    },
    "body": {
     "trad": "怒髮衝冠，憑闌處、瀟瀟雨歇。抬望眼、仰天長嘯，壯懷激烈。三十功名塵與土，八千里路雲和月。莫等閑、白了少年頭，空悲切。靖康恥，猶未雪，臣子憾，何時滅。駕長車踏破、賀蘭山缺。壯志饑餐胡虜肉，笑談渴飲匈奴血。待從頭、收拾舊山河，朝天闕。",
@@ -215,11 +244,13 @@
    "id": "qingyuan_xi",
    "title": {
     "trad": "青玉案·元夕 · 辛棄疾",
-    "simp": "青玉案·元夕 · 辛弃疾"
+    "simp": "青玉案·元夕 · 辛弃疾",
+    "en": "Qingyuan An: Lantern Night · Xin Qiji"
    },
    "author": {
     "trad": "辛棄疾",
-    "simp": "辛弃疾"
+    "simp": "辛弃疾",
+    "en": "Xin Qiji"
    },
    "body": {
     "trad": "東風夜放花千樹，更吹落、星如雨。寶馬雕車香滿路，鳳簫聲動，玉壺光轉，一夜魚龍舞。蛾兒雪柳黃金縷，笑語盈盈暗香去。眾裡尋他千百度；驀然回首，那人卻在，燈火闌珊處。",
@@ -230,11 +261,13 @@
    "id": "pozhenzi",
    "title": {
     "trad": "破陣子·醉裡挑燈看劍 · 辛棄疾",
-    "simp": "破阵子·醉里挑灯看剑 · 辛弃疾"
+    "simp": "破阵子·醉里挑灯看剑 · 辛弃疾",
+    "en": "Pozhenzi: Drunk, Trimming the Lamp to See My Sword · Xin Qiji"
    },
    "author": {
     "trad": "辛棄疾",
-    "simp": "辛弃疾"
+    "simp": "辛弃疾",
+    "en": "Xin Qiji"
    },
    "body": {
     "trad": "醉裡挑燈看劍，夢回吹角連營。八百里分麾下炙，五十弦翻塞外聲，沙場秋點兵。馬作的盧飛快，弓如霹靂弦驚。了卻君王天下事，贏得生前身後名，可憐白髮生。",
@@ -245,11 +278,13 @@
    "id": "yongyule",
    "title": {
     "trad": "永遇樂·京口北固亭懷古 · 辛棄疾",
-    "simp": "永遇乐·京口北固亭怀古 · 辛弃疾"
+    "simp": "永遇乐·京口北固亭怀古 · 辛弃疾",
+    "en": "Yongyule: Beigu Pavilion at Jingkou · Xin Qiji"
    },
    "author": {
     "trad": "辛棄疾",
-    "simp": "辛弃疾"
+    "simp": "辛弃疾",
+    "en": "Xin Qiji"
    },
    "body": {
     "trad": "千古江山，英雄無覓、孫仲謀處。舞榭歌臺，風流總被、雨打風吹去。斜陽草樹，尋常巷陌，人道寄奴曾住。想當年，金戈鐵馬，氣吞萬里如虎。元嘉草草，封狼居胥，贏得倉皇北顧。四十三年，望中猶記、燈火揚州路。可堪回首，佛狸祠下，一片神鴉社鼓。憑誰問，廉頗老矣，尚能飯否？",
@@ -260,11 +295,13 @@
    "id": "moyuer",
    "title": {
     "trad": "摸魚兒·更能消幾番風雨 · 辛棄疾",
-    "simp": "摸鱼儿·更能消几番风雨 · 辛弃疾"
+    "simp": "摸鱼儿·更能消几番风雨 · 辛弃疾",
+    "en": "Moyuer: How Many More Storms · Xin Qiji"
    },
    "author": {
     "trad": "辛棄疾",
-    "simp": "辛弃疾"
+    "simp": "辛弃疾",
+    "en": "Xin Qiji"
    },
    "body": {
     "trad": "更能消幾番風雨，匆匆春又歸去。惜春長怕花開早。何況落紅無數。春且住！見說道、天涯芳草無歸路。怨春不語，算只有殷勤，畫檐珠網，盡日惹飛絮。長門事，準擬佳期又誤，蛾眉曾有人妒。千金縱買相如賦，脈脈此情誰訴？君莫舞！君不見、玉環飛燕皆塵土。閑愁最苦。休去倚危闌，斜陽正在，煙柳斷腸處。",
@@ -275,11 +312,13 @@
    "id": "pusaman_xin",
    "title": {
     "trad": "菩薩蠻·書江西造口壁 · 辛棄疾",
-    "simp": "菩萨蛮·书江西造口壁 · 辛弃疾"
+    "simp": "菩萨蛮·书江西造口壁 · 辛弃疾",
+    "en": "Pusaman: Written on the Wall at Zaokou · Xin Qiji"
    },
    "author": {
     "trad": "辛棄疾",
-    "simp": "辛弃疾"
+    "simp": "辛弃疾",
+    "en": "Xin Qiji"
    },
    "body": {
     "trad": "鬱孤臺下清江水，中間多少行人淚。西北是長安，可憐無數山。青山遮不住，畢竟江流去。江晚正愁余，山深聞鷓鴣。",
@@ -290,11 +329,13 @@
    "id": "yumeiren",
    "title": {
     "trad": "虞美人·春花秋月何時了 · 李煜",
-    "simp": "虞美人·春花秋月何时了 · 李煜"
+    "simp": "虞美人·春花秋月何时了 · 李煜",
+    "en": "Yumeiren: When Will Spring Flowers and Autumn Moon End · Li Yu"
    },
    "author": {
     "trad": "李煜",
-    "simp": "李煜"
+    "simp": "李煜",
+    "en": "Li Yu"
    },
    "body": {
     "trad": "春花秋月何時了，往事知多少？小樓昨夜又東風，故國不堪回首月明中！雕闌玉砌應猶在，只是朱顏改。問君能有幾多愁？恰似一江春水向東流！",
@@ -305,11 +346,13 @@
    "id": "xianghuan",
    "title": {
     "trad": "相見歡·無言獨上西樓 · 李煜",
-    "simp": "相见欢·无言独上西楼 · 李煜"
+    "simp": "相见欢·无言独上西楼 · 李煜",
+    "en": "Xiangjianhuan: Alone, Wordless, Up the West Tower · Li Yu"
    },
    "author": {
     "trad": "李煜",
-    "simp": "李煜"
+    "simp": "李煜",
+    "en": "Li Yu"
    },
    "body": {
     "trad": "無言獨上西樓，月如鉤。寂寞梧桐深院鎖清秋。剪不斷，理還亂，是離愁。別是一般滋味在心頭。",
@@ -320,11 +363,13 @@
    "id": "sumuzhe",
    "title": {
     "trad": "蘇幕遮·碧雲天 · 范仲淹",
-    "simp": "苏幕遮·碧云天 · 范仲淹"
+    "simp": "苏幕遮·碧云天 · 范仲淹",
+    "en": "Sumuzhe: Blue Sky, Clouds · Fan Zhongyan"
    },
    "author": {
     "trad": "范仲淹",
-    "simp": "范仲淹"
+    "simp": "范仲淹",
+    "en": "Fan Zhongyan"
    },
    "body": {
     "trad": "碧雲天，黃葉地，秋色連波，波上寒煙翠。山映斜陽天接水，芳草無情，更在斜陽外。黯鄉魂，追旅思，夜夜除非，好夢留人睡。明月樓高休獨倚，酒入愁腸，化作相思淚。",
@@ -335,11 +380,13 @@
    "id": "huanxisha",
    "title": {
     "trad": "浣溪沙·一曲新詞酒一杯 · 晏殊",
-    "simp": "浣溪沙·一曲新词酒一杯 · 晏殊"
+    "simp": "浣溪沙·一曲新词酒一杯 · 晏殊",
+    "en": "Huanxisha: A New Song, a Cup of Wine · Yan Shu"
    },
    "author": {
     "trad": "晏殊",
-    "simp": "晏殊"
+    "simp": "晏殊",
+    "en": "Yan Shu"
    },
    "body": {
     "trad": "一曲新詞酒一杯，去年天氣舊池臺，夕陽西下幾時回？無可奈何花落去，似曾相識燕歸來，小園香徑獨徘徊。",
@@ -350,11 +397,13 @@
    "id": "dielianhua_ouyang",
    "title": {
     "trad": "蝶戀花·庭院深深深幾許 · 歐陽修",
-    "simp": "蝶恋花·庭院深深深几许 · 欧阳修"
+    "simp": "蝶恋花·庭院深深深几许 · 欧阳修",
+    "en": "Dielianhua: Deep, Deep the Courtyard · Ouyang Xiu"
    },
    "author": {
     "trad": "歐陽修",
-    "simp": "欧阳修"
+    "simp": "欧阳修",
+    "en": "Ouyang Xiu"
    },
    "body": {
     "trad": "庭院深深深幾許？楊柳堆煙，簾幕無重數。玉勒雕鞍游冶處，樓高不見章臺路。雨橫風狂三月暮，門掩黃昏，無計留春住。淚眼問花花不語，亂紅飛過秋千去。",
@@ -365,11 +414,13 @@
    "id": "queqiaoxian",
    "title": {
     "trad": "鵲橋仙·纖雲弄巧 · 秦觀",
-    "simp": "鹊桥仙·纤云弄巧 · 秦观"
+    "simp": "鹊桥仙·纤云弄巧 · 秦观",
+    "en": "Queqiaoxian: Slender Clouds at Play · Qin Guan"
    },
    "author": {
     "trad": "秦觀",
-    "simp": "秦观"
+    "simp": "秦观",
+    "en": "Qin Guan"
    },
    "body": {
     "trad": "纖雲弄巧，飛星傳恨，銀漢迢迢暗度。金風玉露一相逢，便勝卻人間無數。柔情似水，佳期如夢，忍顧鵲橋歸路。兩情若是久長時，又豈在朝朝暮暮。",
@@ -380,11 +431,13 @@
    "id": "manTingfang",
    "title": {
     "trad": "滿庭芳·山抹微雲 · 秦觀",
-    "simp": "满庭芳·山抹微云 · 秦观"
+    "simp": "满庭芳·山抹微云 · 秦观",
+    "en": "Manting Fang: Mountains Brushed with Cloud · Qin Guan"
    },
    "author": {
     "trad": "秦觀",
-    "simp": "秦观"
+    "simp": "秦观",
+    "en": "Qin Guan"
    },
    "body": {
     "trad": "山抹微雲，天黏衰草，畫角聲斷譙門。暫停征棹，聊共引離樽。多少蓬萊舊事，空回首、煙靄紛紛。斜陽外，寒鴉萬點，流水繞孤村。銷魂，當此際，香囊暗解，羅帶輕分。漫贏得青樓，薄幸名存。此去何時見也？襟袖上、空惹啼痕。傷情處，高城望斷，燈火已黃昏。",
@@ -395,11 +448,13 @@
    "id": "guizhixiang",
    "title": {
     "trad": "桂枝香·金陵懷古 · 王安石",
-    "simp": "桂枝香·金陵怀古 · 王安石"
+    "simp": "桂枝香·金陵怀古 · 王安石",
+    "en": "Guizhixiang: Memories of Jinling · Wang Anshi"
    },
    "author": {
     "trad": "王安石",
-    "simp": "王安石"
+    "simp": "王安石",
+    "en": "Wang Anshi"
    },
    "body": {
     "trad": "登臨送目，正故國晚秋，天氣初肅。千里澄江似練，翠峰如簇。歸帆去棹殘陽裏，背西風，酒旗斜矗。彩舟雲淡，星河鷺起，畫圖難足。念往昔、繁華競逐，嘆門外樓頭，悲恨相續。千古憑高，對此漫嗟榮辱。六朝舊事隨流水，但寒煙、芳草凝綠。至今商女，時時猶唱，《後庭》遺曲。",
@@ -410,11 +465,13 @@
    "id": "qingyuan_he",
    "title": {
     "trad": "青玉案·凌波不過橫塘路 · 賀鑄",
-    "simp": "青玉案·凌波不过横塘路 · 贺铸"
+    "simp": "青玉案·凌波不过横塘路 · 贺铸",
+    "en": "Qingyu An: She Walks Not Past Hengtang · He Zhu"
    },
    "author": {
     "trad": "賀鑄",
-    "simp": "贺铸"
+    "simp": "贺铸",
+    "en": "He Zhu"
    },
    "body": {
     "trad": "凌波不過橫塘路，但目送、芳塵去。錦瑟華年誰與度？月橋花院，瑣窗朱戶，只有春知處。飛雲冉冉蘅皋暮，彩筆新題斷腸句。試問閑愁都幾許？一川煙草，滿城風絮，梅子黃時雨。",
@@ -425,11 +482,13 @@
    "id": "yangzhoumanl",
    "title": {
     "trad": "揚州慢·淮左名都 · 姜夔",
-    "simp": "扬州慢·淮左名都 · 姜夔"
+    "simp": "扬州慢·淮左名都 · 姜夔",
+    "en": "Yangzhou Man: The Famed City East of the Huai · Jiang Kui"
    },
    "author": {
     "trad": "姜夔",
-    "simp": "姜夔"
+    "simp": "姜夔",
+    "en": "Jiang Kui"
    },
    "body": {
     "trad": "淮左名都，竹西佳處，解鞍少駐初程。過春風十里，盡薺麥青青。自胡馬窺江去後，廢池喬木，猶厭言兵。漸黃昏，清角吹寒，都在空城。杜郎俊賞，算而今、重到須驚。縱豆蔻詞工，青樓夢好，難賦深情。二十四橋仍在，波心蕩冷月無聲。念橋邊紅藥，年年知為誰生？",
@@ -440,11 +499,13 @@
    "id": "tangduoling",
    "title": {
     "trad": "唐多令·何處合成愁 · 吳文英",
-    "simp": "唐多令·何处合成愁 · 吴文英"
+    "simp": "唐多令·何处合成愁 · 吴文英",
+    "en": "Tangduoling: Where Does Sorrow Come From · Wu Wenying"
    },
    "author": {
     "trad": "吳文英",
-    "simp": "吴文英"
+    "simp": "吴文英",
+    "en": "Wu Wenying"
    },
    "body": {
     "trad": "何處合成愁？離人心上秋，縱芭蕉、不雨也颼颼。都道晚涼天氣好，有明月、怕登樓。年事夢中休，花空煙水流，燕辭歸、客尚淹留。垂柳不縈裙帶住，漫長是、繫行舟。",
@@ -455,11 +516,13 @@
    "id": "busuanzi_lu",
    "title": {
     "trad": "卜算子·詠梅 · 陸游",
-    "simp": "卜算子·咏梅 · 陆游"
+    "simp": "卜算子·咏梅 · 陆游",
+    "en": "Busuanzi: Ode to the Plum · Lu You"
    },
    "author": {
     "trad": "陸游",
-    "simp": "陆游"
+    "simp": "陆游",
+    "en": "Lu You"
    },
    "body": {
     "trad": "驛外斷橋邊，寂寞開無主。已是黃昏獨自愁，更著風和雨。無意苦爭春，一任群芳妒。零落成泥碾作塵，只有香如故。",
@@ -470,11 +533,13 @@
    "id": "chaitoufeng",
    "title": {
     "trad": "釵頭鳳·紅酥手 · 陸游",
-    "simp": "钗头凤·红酥手 · 陆游"
+    "simp": "钗头凤·红酥手 · 陆游",
+    "en": "Chaitoufeng: Soft Red Hands · Lu You"
    },
    "author": {
     "trad": "陸游",
-    "simp": "陆游"
+    "simp": "陆游",
+    "en": "Lu You"
    },
    "body": {
     "trad": "紅酥手，黃縢酒，滿城春色宮牆柳。東風惡，歡情薄，一懷愁緒，幾年離索，錯！錯！錯！春如舊，人空瘦，淚痕紅浥鮫綃透。桃花落，閑池閣，山盟雖在，錦書難託，莫！莫！莫！",
@@ -485,11 +550,13 @@
    "id": "niannujiao_zhang",
    "title": {
     "trad": "念奴嬌·過洞庭 · 張孝祥",
-    "simp": "念奴娇·过洞庭 · 张孝祥"
+    "simp": "念奴娇·过洞庭 · 张孝祥",
+    "en": "Niannujiao: Crossing Dongting · Zhang Xiaoxiang"
    },
    "author": {
     "trad": "張孝祥",
-    "simp": "张孝祥"
+    "simp": "张孝祥",
+    "en": "Zhang Xiaoxiang"
    },
    "body": {
     "trad": "洞庭青草，近中秋、更無一點風色。玉界瓊田三萬頃，著我扁舟一葉。素月分輝，銀河共影，表裏俱澄澈。怡然心會，妙處難與君說。應念嶺海經年，孤光自照，肝膽皆冰雪。短髮蕭騷襟袖冷，穩泛滄浪空闊。盡挹西江，細斟北斗，萬象為賓客。扣舷獨嘯，不知今夕何夕。",
@@ -500,11 +567,13 @@
    "id": "linjiangxian_yan",
    "title": {
     "trad": "臨江仙·夢後樓臺高鎖 · 晏幾道",
-    "simp": "临江仙·梦后楼台高锁 · 晏几道"
+    "simp": "临江仙·梦后楼台高锁 · 晏几道",
+    "en": "Linjiangxian: The Tower Locked After the Dream · Yan Jidao"
    },
    "author": {
     "trad": "晏幾道",
-    "simp": "晏几道"
+    "simp": "晏几道",
+    "en": "Yan Jidao"
    },
    "body": {
     "trad": "夢後樓臺高鎖，酒醒簾幕低垂。去年春恨卻來時，落花人獨立，微雨燕雙飛。記得小蘋初見，兩重心字羅衣。琵琶弦上說相思，當時明月在，曾照彩雲歸。",
@@ -515,11 +584,13 @@
    "id": "zhegutian_yan",
    "title": {
     "trad": "鷓鴣天·彩袖殷勤捧玉鍾 · 晏幾道",
-    "simp": "鹧鸪天·彩袖殷勤捧玉钟 · 晏几道"
+    "simp": "鹧鸪天·彩袖殷勤捧玉钟 · 晏几道",
+    "en": "Zhegutian: Colourful Sleeves Offer the Jade Cup · Yan Jidao"
    },
    "author": {
     "trad": "晏幾道",
-    "simp": "晏几道"
+    "simp": "晏几道",
+    "en": "Yan Jidao"
    },
    "body": {
     "trad": "彩袖殷勤捧玉鍾，當年拚卻醉顏紅。舞低楊柳樓心月，歌盡桃花扇底風。從別後，憶相逢，幾回魂夢與君同。今宵剩把銀釭照，猶恐相逢是夢中。",
@@ -530,11 +601,13 @@
    "id": "busuanzi_li",
    "title": {
     "trad": "卜算子·我住長江頭 · 李之儀",
-    "simp": "卜算子·我住长江头 · 李之仪"
+    "simp": "卜算子·我住长江头 · 李之仪",
+    "en": "Busuanzi: I Live at the Head of the Yangtze · Li Zhiyi"
    },
    "author": {
     "trad": "李之儀",
-    "simp": "李之仪"
+    "simp": "李之仪",
+    "en": "Li Zhiyi"
    },
    "body": {
     "trad": "我住長江頭，君住長江尾；日日思君不見君，共飲長江水。此水幾時休？此恨何時已？只願君心似我心，定不負相思意。",

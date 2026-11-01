@@ -2,15 +2,18 @@
  "id": "wuliuxiansheng",
  "title": {
   "trad": "五柳先生傳",
-  "simp": "五柳先生传"
+  "simp": "五柳先生传",
+  "en": "Biography of Master Five Willows"
  },
  "author": {
   "trad": "陶淵明",
-  "simp": "陶渊明"
+  "simp": "陶渊明",
+  "en": "Tao Yuanming"
  },
  "dynasty": {
   "trad": "東晉",
-  "simp": "东晋"
+  "simp": "东晋",
+  "en": "Eastern Jin"
  },
  "source": "https://zh.wikisource.org/wiki/五柳先生傳",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/五柳先生傳",
@@ -20,7 +23,8 @@
    "id": "main",
    "title": {
     "trad": "五柳先生傳",
-    "simp": "五柳先生传"
+    "simp": "五柳先生传",
+    "en": "Biography of Master Five Willows"
    },
    "body": {
     "trad": "先生不知何許人也，亦不詳其姓字。宅邊有五柳樹，因以為號焉。閑靜少言，不慕榮利。好讀書，不求甚解，每有會意，便欣然忘食。性嗜酒，家貧不能常得。親舊知其如此，或置酒而招之。造飲輒盡，期在必醉，既醉而退，曾不吝情去留。環堵蕭然，不蔽風日；短褐穿結，簞瓢屢空，晏如也。常著文章自娛，頗示己志。忘懷得失，以此自終。贊曰：黔婁之妻有言：「不戚戚於貧賤，不汲汲於富貴。」極其言，茲若人之儔乎？酣觴賦詩，以樂其志。無懷氏之民歟！葛天氏之民歟！",

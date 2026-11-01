@@ -1,0 +1,1080 @@
+{
+ "id": "xiaojing",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "zhang01": {
+   "summary": "The general outline of the whole classic: Confucius tells Zengzi that filial piety is the root of virtue and the starting point of teaching, and sums up the course of filial piety in three stages - serving one's parents, serving one's ruler and establishing oneself.",
+   "translation": "Zhongni was at home, and Zengzi sat attending him. The Master said, 'The former kings had a supreme virtue and an essential way, by which they brought the world into accord, so that the people lived in harmony and neither high nor low bore any resentment. Do you know it?' Zengzi rose from his mat and said, 'I, Shen, am not quick; how could I know it?' The Master said, 'Filial piety is the root of virtue, and the source from which teaching springs. Sit down again, and I will tell you. Our body, hair and skin are received from our parents, and we do not dare to harm or injure them: this is where filial piety begins. To establish oneself, walk the Way, and make one's name known to later ages so as to honour one's parents: this is where filial piety ends. Filial piety begins with serving one's parents, goes on to serving one's ruler, and ends in establishing oneself. The Greater Odes say: Do not fail to think of your ancestors, but go on cultivating their virtue.'",
+   "keyLines": [
+    {
+     "line": "夫孝，德之本也，教之所由生也",
+     "en": "Filial piety is the root of virtue, and the source from which teaching springs",
+     "note": "The central claim of the opening chapter: filial piety is the source of morality and the starting point of education."
+    },
+    {
+     "line": "身體髮膚，受之父母，不敢毀傷，孝之始也",
+     "en": "Our body, hair and skin are received from our parents, and we do not dare to harm or injure them: this is where filial piety begins",
+     "note": "Filial piety starts with taking care of one's own body; later ages often quote this line to say that looking after oneself is itself filial."
+    },
+    {
+     "line": "立身行道，揚名於後世，以顯父母，孝之終也",
+     "en": "To establish oneself, walk the Way, and make one's name known to later ages so as to honour one's parents: this is where filial piety ends",
+     "note": "Filial piety is not only keeping oneself safe but also achieving something worthwhile, so that one's parents and family are respected."
+    },
+    {
+     "line": "夫孝，始於事親，中於事君，終於立身",
+     "en": "Filial piety begins with serving one's parents, goes on to serving one's ruler, and ends in establishing oneself",
+     "note": "Divides filial piety into three stages, which widen from the family to society and the state and then return to the person's own achievement."
+    },
+    {
+     "line": "無念爾祖，聿修厥德",
+     "en": "Do not fail to think of your ancestors, but go on cultivating their virtue",
+     "note": "A quotation from the Greater Odes (Daya), 'King Wen': it urges people to remember their ancestors and keep up their moral cultivation."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "仲尼",
+     "en": "Zhongni - Confucius's courtesy name",
+     "note": "Zhongni is the courtesy name of Confucius."
+    },
+    {
+     "term": "曾子",
+     "en": "Zengzi - a disciple of Confucius",
+     "note": "His given name was Shen. A disciple of Confucius known for his filial piety, traditionally taken to be the one in conversation in the Classic of Filial Piety (Xiaojing)."
+    },
+    {
+     "term": "避席",
+     "en": "bi xi - to leave one's mat",
+     "note": "To rise from one's seat and stand, a courtesy that shows respect to an elder."
+    },
+    {
+     "term": "至德要道",
+     "en": "zhi de yao dao - supreme virtue and essential way",
+     "note": "The highest virtue and the most important principle; here, filial piety."
+    },
+    {
+     "term": "復坐",
+     "en": "fu zuo - to sit down again",
+     "note": "To return to one's seat and sit."
+    },
+    {
+     "term": "無念爾祖",
+     "en": "wu nian er zu - do not fail to think of your ancestors",
+     "note": "Nian means to remember; 'wu nian' means do not fail to remember, so the sense is that one must never forget one's ancestors."
+    },
+    {
+     "term": "聿",
+     "en": "yu - an opening particle",
+     "note": "A particle meaning something like 'then, and so'."
+    },
+    {
+     "term": "厥",
+     "en": "jue - his, their",
+     "note": "A pronoun with the meaning of qi, 'his'."
+    }
+   ],
+   "background": "This is the first chapter of the Classic of Filial Piety, which commentators in every age have taken as the outline of the whole book; the chapters that follow unfold according to social rank. The Classic is traditionally the record of a talk between Confucius and Zengzi on filial piety, but most scholars think it was written by later Confucians between the Warring States period and the early Han."
+  },
+  "zhang02": {
+   "summary": "The filial piety of the Son of Heaven: he serves his parents with love and reverence, and from there spreads the teaching of virtue to the people, becoming a model for the whole world.",
+   "translation": "The Master said, 'One who loves his parents does not dare to hate others; one who reveres his parents does not dare to slight others. When love and reverence are fully given in serving one's parents, and the teaching of virtue is laid upon the hundred families and becomes a model within the four seas, that is the filial piety of the Son of Heaven. The Punishment of Fu says: When the one man has good fortune, the myriad people rely on it.'",
+   "keyLines": [
+    {
+     "line": "愛親者，不敢惡於人；敬親者，不敢慢於人",
+     "en": "One who loves his parents does not dare to hate others; one who reveres his parents does not dare to slight others",
+     "note": "Love and reverence for one's parents are carried over to how one treats others; filial piety is the root of one's attitude to everyone."
+    },
+    {
+     "line": "愛敬盡於事親，而德教加於百姓",
+     "en": "When love and reverence are fully given in serving one's parents, the teaching of virtue is laid upon the hundred families",
+     "note": "The Son of Heaven's filial piety lies in setting an example, turning family ethics into the way of the whole world."
+    },
+    {
+     "line": "一人有慶，兆民賴之",
+     "en": "When the one man has good fortune, the myriad people rely on it",
+     "note": "A quotation from the Book of Documents (Shangshu), 'Punishment of Lyu' (not the state of Lu): when the ruler is virtuous, all the people benefit."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "惡",
+     "en": "wu - to hate",
+     "note": "Read wu (fourth tone): to dislike or hate."
+    },
+    {
+     "term": "慢",
+     "en": "man - to slight",
+     "note": "To treat with disrespect or neglect."
+    },
+    {
+     "term": "刑於四海",
+     "en": "xing yu si hai - to be a model within the four seas",
+     "note": "Xing here is a loan for a different xing, 'model': to set an example, so that he becomes the pattern for all within the four seas."
+    },
+    {
+     "term": "甫刑",
+     "en": "Fu xing - the Punishment of Fu",
+     "note": "This is the 'Punishment of Lyu' (Lyu xing) in the Book of Documents; the name Lyu is not the state of Lu. It is also called the 'Punishment of Fu' because the Marquis of Lyu was later renamed Marquis of Fu, in the time of King Mu of Zhou."
+    },
+    {
+     "term": "一人",
+     "en": "yi ren - the one man",
+     "note": "The way an ancient Son of Heaven referred to himself; here, the Son of Heaven."
+    },
+    {
+     "term": "兆民",
+     "en": "zhao min - the myriad people",
+     "note": "A great multitude of common people."
+    }
+   ],
+   "background": "From this chapter the Classic of Filial Piety discusses filial piety by rank: the Son of Heaven, the feudal lords, the ministers and high officers, the officer-gentlemen and the common people, the 'filial piety of the five ranks'. The Son of Heaven comes first, and the point made is that his filial piety turns into teaching for the whole world."
+  },
+  "zhang03": {
+   "summary": "The filial piety of the feudal lords: being high without pride and keeping to restraint and the law, so that they can hold their wealth, rank and fiefs for long.",
+   "translation": "To be above without pride is to be high without danger; to keep restraint and careful measure is to be full without overflowing. To be high without danger is how one keeps rank for long; to be full without overflowing is how one keeps wealth for long. When wealth and rank do not leave one's person, one can then preserve one's altars of earth and grain and bring harmony to one's people: this is the filial piety of the feudal lords. The Songs say: 'Trembling and wary, as if at the edge of a deep pool, as if treading on thin ice.'",
+   "keyLines": [
+    {
+     "line": "在上不驕，高而不危；制節謹度，滿而不溢",
+     "en": "To be above without pride is to be high without danger; to keep restraint and careful measure is to be full without overflowing",
+     "note": "The main point of self-cultivation for a feudal lord: be humble when in high place and restrained when wealthy."
+    },
+    {
+     "line": "富貴不離其身，然後能保其社稷",
+     "en": "When wealth and rank do not leave one's person, one can then preserve one's altars of earth and grain",
+     "note": "Keeping wealth, rank and the state is how a feudal lord shows filial piety, because it does not bring shame on the ancestors' inheritance."
+    },
+    {
+     "line": "戰戰兢兢，如臨深淵，如履薄冰",
+     "en": "Trembling and wary, as if at the edge of a deep pool, as if treading on thin ice",
+     "note": "A quotation from the Lesser Odes (Xiaoya), 'Xiaomin': it describes being constantly on guard and careful."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "制節謹度",
+     "en": "zhi jie jin du - restraint and careful measure",
+     "note": "Zhi is to restrain, jie is moderation and du is the standard of the law: to act with measure and keep to the rules."
+    },
+    {
+     "term": "溢",
+     "en": "yi - to overflow",
+     "note": "To spill over the brim, a figure for going too far in extravagance."
+    },
+    {
+     "term": "社稷",
+     "en": "she ji - the altars of earth and grain",
+     "note": "The god of the soil and the god of grain, standing for the state."
+    },
+    {
+     "term": "戰戰兢兢",
+     "en": "zhan zhan jing jing - trembling and wary",
+     "note": "The look of fear and caution."
+    },
+    {
+     "term": "臨深淵",
+     "en": "lin shen yuan - at the edge of a deep pool",
+     "note": "Standing before a deep pool, a figure for a dangerous position."
+    }
+   ],
+   "background": "A feudal lord (zhuhou) was a ruler enfeoffed by the Son of Heaven to govern a state. The lines quoted from the Songs come from the Lesser Odes, 'Xiaomin', and are used to show that those in high places must be constantly on guard."
+  },
+  "zhang04": {
+   "summary": "The filial piety of ministers and high officers: dress, speech and conduct must all follow the rites of the former kings; only when all three are complete can they keep their ancestral temple and family fortune.",
+   "translation": "If it is not the robes prescribed by the former kings, he dares not wear them; if it is not the words prescribed by the former kings, he dares not speak them; if it is not the virtuous conduct of the former kings, he dares not practise it. So he speaks nothing that is not according to the rule and does nothing that is not according to the Way. His mouth has no words to choose among and his person no acts to choose among; his words fill the world and yet have no fault of speech, his conduct fills the world and yet brings no resentment or hatred. When all three are complete, he can then keep his ancestral temple: this is the filial piety of ministers and high officers. The Songs say: 'Morning and night without slackening, he serves the one man.'",
+   "keyLines": [
+    {
+     "line": "非先王之法服不敢服，非先王之法言不敢道，非先王之德行不敢行",
+     "en": "If it is not the robes prescribed by the former kings, he dares not wear them; if it is not the words, he dares not speak them; if it is not the conduct, he dares not practise it",
+     "note": "A minister or high officer must follow the rules of the former kings in three things: dress, speech and conduct."
+    },
+    {
+     "line": "口無擇言，身無擇行",
+     "en": "His mouth has no words to choose among and his person no acts to choose among",
+     "note": "His words and deeds fit the rules naturally, so that he does not need to choose carefully to avoid error."
+    },
+    {
+     "line": "言滿天下無口過，行滿天下無怨惡",
+     "en": "His words fill the world and yet have no fault of speech, his conduct fills the world and yet brings no resentment or hatred",
+     "note": "Words and acts known throughout the world with no fault or grudge show a mature character."
+    },
+    {
+     "line": "夙夜匪懈，以事一人",
+     "en": "Morning and night without slackening, he serves the one man",
+     "note": "A quotation that is generally taken to come from the Greater Odes, 'Zhengmin': it means serving the ruler day and night without letting up."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "卿大夫",
+     "en": "qing da fu - ministers and high officers",
+     "note": "High officials below the feudal lords, who held fiefs by inheritance."
+    },
+    {
+     "term": "法服",
+     "en": "fa fu - prescribed robes",
+     "note": "Dress laid down by the rules of ritual."
+    },
+    {
+     "term": "法言",
+     "en": "fa yan - proper words",
+     "note": "Speech that accords with ritual and law."
+    },
+    {
+     "term": "口無擇言",
+     "en": "kou wu ze yan - a mouth with no words to choose among",
+     "note": "Ze means to pick: his speech is naturally fitting and does not need to be chosen."
+    },
+    {
+     "term": "宗廟",
+     "en": "zong miao - the ancestral temple",
+     "note": "The temple where ancestors are worshipped; it also stands for the family's hereditary rank and income."
+    },
+    {
+     "term": "夙夜匪懈",
+     "en": "su ye fei xie - morning and night without slackening",
+     "note": "Here the character is a loan for fei, 'not': never relaxing, early or late."
+    }
+   ],
+   "background": "Ministers and high officers held fiefs and ancestral temples; their filial piety shows in keeping strictly to ritual and setting an example to the people by their words and acts. The lines of the Songs quoted are generally thought to come from the Greater Odes, 'Zhengmin'."
+  },
+  "zhang05": {
+   "summary": "The filial piety of the officer-gentleman: taking the love and reverence shown to a father and using them for mother and ruler, and serving superiors with loyalty and obedience, so that he can keep his salary and the sacrifices.",
+   "translation": "Taking what is used in serving a father to serve a mother, the love is the same; taking what is used in serving a father to serve a ruler, the reverence is the same. So from the mother we take love, and from the ruler reverence, and the father combines both. Therefore serving the ruler with filial piety is loyalty, and serving elders with reverence is obedience. If loyalty and obedience are not lost in serving those above, he can then keep his stipend and rank and maintain his sacrifices: this is the filial piety of the officer-gentleman. The Songs say: 'Rise early and sleep late, and bring no shame on those who bore you.'",
+   "keyLines": [
+    {
+     "line": "資於事父以事母而愛同，資於事父以事君而敬同",
+     "en": "Taking what is used in serving a father to serve a mother, the love is the same; taking it to serve a ruler, the reverence is the same",
+     "note": "Serving a mother draws on love, and serving a ruler draws on reverence; both are rooted in the heart with which one serves a father."
+    },
+    {
+     "line": "故母取其愛，而君取其敬，兼之者父也",
+     "en": "So from the mother we take love, and from the ruler reverence, and the father combines both",
+     "note": "The father combines love and reverence, and is the model of all human relations."
+    },
+    {
+     "line": "故以孝事君則忠，以敬事長則順",
+     "en": "Therefore serving the ruler with filial piety is loyalty, and serving elders with reverence is obedience",
+     "note": "Filial piety and reverence turn into loyalty and obedience; this is the idea behind 'moving filial piety into loyalty'."
+    },
+    {
+     "line": "夙興夜寐，無忝爾所生",
+     "en": "Rise early and sleep late, and bring no shame on those who bore you",
+     "note": "A quotation from the Lesser Odes, 'Xiaowan': it urges diligence and self-discipline so that one's parents are not shamed."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "士",
+     "en": "shi - an officer-gentleman",
+     "note": "The lowest rank of the nobility, also used broadly for educated men in office."
+    },
+    {
+     "term": "資",
+     "en": "zi - to draw on",
+     "note": "To take from or rely on."
+    },
+    {
+     "term": "長",
+     "en": "zhang - superior, elder",
+     "note": "Here, an official superior or an elder."
+    },
+    {
+     "term": "祿位",
+     "en": "lu wei - stipend and rank",
+     "note": "Salary and office."
+    },
+    {
+     "term": "夙興夜寐",
+     "en": "su xing ye mei - to rise early and sleep late",
+     "note": "Su is early: to get up early and go to bed late, meaning to be diligent."
+    },
+    {
+     "term": "忝",
+     "en": "tian - to disgrace",
+     "note": "To dishonour or fall short of."
+    },
+    {
+     "term": "所生",
+     "en": "suo sheng - those who gave you birth",
+     "note": "The people who bore and raised you, that is, your parents."
+    }
+   ],
+   "background": "The officer-gentleman (shi) was the lowest layer of the bureaucracy and the nobility. His filial piety lies in moving the love and reverence of the home over to the service of the ruler, which laid the ground for the idea of 'moving filial piety into loyalty'. The lines of the Songs come from the Lesser Odes, 'Xiaowan'."
+  },
+  "zhang06": {
+   "summary": "The filial piety of the common people: they follow the seasons and the gains of the land, and are careful and thrifty in order to support their parents. Filial piety makes no distinction of rank; everyone from the Son of Heaven down to the common people should practise it.",
+   "translation": "Use the Way of Heaven, divide the profit of the earth, be careful in person and thrifty in spending, in order to support one's parents: this is the filial piety of the common people. So from the Son of Heaven down to the common people, it has never been that one lacks a beginning and an end in filial piety and yet misfortune does not reach him.",
+   "keyLines": [
+    {
+     "line": "用天之道，分地之利",
+     "en": "Use the Way of Heaven, divide the profit of the earth",
+     "note": "Common people live by farming, so they must follow the seasons and make good use of the land."
+    },
+    {
+     "line": "謹身節用，以養父母",
+     "en": "Be careful in person and thrifty in spending, in order to support one's parents",
+     "note": "The practical way for ordinary people to show filial piety: be careful in oneself, economical in daily needs, and look after one's parents."
+    },
+    {
+     "line": "孝無終始而患不及者，未之有也",
+     "en": "It has never been that one lacks a beginning and an end in filial piety and yet misfortune does not reach him",
+     "note": "This line has been read in different ways. The usual reading is that someone who does not practise filial piety from beginning to end cannot escape disaster."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "庶人",
+     "en": "shu ren - the common people",
+     "note": "Ordinary commoners."
+    },
+    {
+     "term": "天之道",
+     "en": "tian zhi dao - the Way of Heaven",
+     "note": "The regular pattern of the seasons and the weather."
+    },
+    {
+     "term": "分地之利",
+     "en": "fen di zhi li - dividing the profit of the earth",
+     "note": "To tell the kinds of land apart and farm each according to its nature."
+    },
+    {
+     "term": "謹身節用",
+     "en": "jin shen jie yong - careful in person, thrifty in spending",
+     "note": "To behave with care and be sparing in expenses."
+    },
+    {
+     "term": "患不及",
+     "en": "huan bu ji - misfortune not reaching one",
+     "note": "Disaster falling on one's own person."
+    }
+   ],
+   "background": "The chapter on the common people ends the filial piety of the five ranks and sums it up: filial piety does not depend on rank. Commentators of every age differ about the line 'no beginning and end'; here we follow the common reading, as explained in the commentary of Emperor Xuanzong."
+  },
+  "zhang07": {
+   "summary": "Filial piety is the constant way of Heaven and Earth, and the sage kings used it to teach the people: by showing broad love, virtue and rightness, reverence and yielding, ritual and music, and likes and dislikes, they led the people to live in harmony and obey the law.",
+   "translation": "Zengzi said, 'How great filial piety is!' The Master said, 'Filial piety is the constant of Heaven, the right of Earth, and the conduct of the people. It is the constant of Heaven and Earth, and the people take it as their rule. Following the brightness of Heaven and relying on the gains of the earth, one brings the world into accord. Therefore teaching succeeds without being stern, and government keeps order without being severe. The former kings saw that teaching could transform the people. So they led with broad love, and none of the people neglected their parents; they set out virtue and rightness before them, and the people were roused to act; they led with reverence and yielding, and the people did not quarrel; they guided them with ritual and music, and the people lived in harmony; they showed them what to like and what to dislike, and the people knew what was forbidden. The Songs say: Grand and glorious Master Yin, the people all look up to you.'",
+   "keyLines": [
+    {
+     "line": "夫孝：天之經也，地之義也，民之行也",
+     "en": "Filial piety is the constant of Heaven, the right of Earth, and the conduct of the people",
+     "note": "Raises filial piety to a principle shared by the cosmos and human life."
+    },
+    {
+     "line": "是以其教不肅而成，其政不嚴而治",
+     "en": "Therefore teaching succeeds without being stern, and government keeps order without being severe",
+     "note": "Teaching based on filial piety does not need harsh methods, and succeeds of itself."
+    },
+    {
+     "line": "先之以博愛，而民莫遺其親",
+     "en": "They led with broad love, and none of the people neglected their parents",
+     "note": "When the rulers first show broad love, the people will not abandon their parents."
+    },
+    {
+     "line": "導之以禮樂，而民和睦",
+     "en": "They guided them with ritual and music, and the people lived in harmony",
+     "note": "Ritual and music shape the heart and make society harmonious."
+    },
+    {
+     "line": "赫赫師尹，民具爾瞻",
+     "en": "Grand and glorious Master Yin, the people all look up to you",
+     "note": "A quotation from the Lesser Odes, 'Jie Nan Shan': those in high places are looked up to by the people and must set an example."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "三才",
+     "en": "san cai - the three powers",
+     "note": "Heaven, Earth and humankind; this chapter shows how filial piety runs through all three, hence the name."
+    },
+    {
+     "term": "經",
+     "en": "jing - the constant",
+     "note": "The constant way, a rule that never changes."
+    },
+    {
+     "term": "義",
+     "en": "yi - the right",
+     "note": "Here, what is fitting, the proper standard."
+    },
+    {
+     "term": "則",
+     "en": "ze - to take as a model",
+     "note": "To imitate."
+    },
+    {
+     "term": "博愛",
+     "en": "bo ai - broad love",
+     "note": "To love all people widely."
+    },
+    {
+     "term": "赫赫師尹",
+     "en": "he he shi yin - grand and glorious Master Yin",
+     "note": "Shi Yin is Yin, the Grand Master of Zhou; he he means imposing and splendid."
+    },
+    {
+     "term": "具",
+     "en": "ju - all",
+     "note": "A loan for ju, 'together, all'."
+    }
+   ],
+   "background": "The 'three powers' are Heaven, Earth and humankind. The lines from the Songs are from the Lesser Odes, 'Jie Nan Shan'; in the poem they criticise Yin for bad government, and here they are used in the sense that the people look up to those in high place."
+  },
+  "zhang08": {
+   "summary": "The enlightened kings governed by filial piety and did not slight even envoys of small states, widowers or widows, or servants, so they won all hearts and the world was at peace.",
+   "translation": "The Master said, 'Of old, when the enlightened kings governed the world by filial piety, they did not dare to neglect even the envoys of small states, much less dukes, marquises, earls, viscounts and barons. And so they won the glad hearts of the ten thousand states, and used them to serve the former kings. Those who governed a state did not dare to insult widowers and widows, much less scholars and common people. And so they won the glad hearts of the hundred families, and used them to serve the former lords. Those who governed a household did not dare to fail servants and maids, much less wives and children. And so they won the glad hearts of the people, and used them to serve their parents. In this way, parents were at ease in life and the spirits enjoyed the sacrifices after death; the world was therefore at peace, calamities did not arise, and disaster and disorder did not stir. This is how the enlightened kings governed the world by filial piety. The Songs say: With great and upright conduct, the four quarters follow.'",
+   "keyLines": [
+    {
+     "line": "不敢遺小國之臣，而況於公、侯、伯、子、男乎",
+     "en": "They did not dare to neglect even the envoys of small states, much less dukes, marquises, earls, viscounts and barons",
+     "note": "They did not despise even the envoys of the smallest states, much less the higher-ranking lords."
+    },
+    {
+     "line": "治國者不敢侮於鰥寡，而況於士民乎",
+     "en": "Those who governed a state did not dare to insult widowers and widows, much less scholars and common people",
+     "note": "They did not bully even the weakest people, much less ordinary scholars and commoners."
+    },
+    {
+     "line": "生則親安之，祭則鬼享之",
+     "en": "Parents were at ease in life and the spirits enjoyed the sacrifices after death",
+     "note": "Parents are cared for in life and sacrificed to after death: this is filial piety in full."
+    },
+    {
+     "line": "有覺德行，四國順之",
+     "en": "With great and upright conduct, the four quarters follow",
+     "note": "A quotation from the Greater Odes, 'Yi': where there is great virtue, the states on every side follow of themselves."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "明王",
+     "en": "ming wang - enlightened kings",
+     "note": "Wise and clear-sighted rulers."
+    },
+    {
+     "term": "公侯伯子男",
+     "en": "gong hou bo zi nan - duke, marquis, earl, viscount, baron",
+     "note": "The five ranks of nobility in the Zhou dynasty (c. 1046-256 BC)."
+    },
+    {
+     "term": "懽",
+     "en": "huan - glad",
+     "note": "A variant form of huan, 'joy': glad hearts."
+    },
+    {
+     "term": "鰥寡",
+     "en": "guan gua - widowers and widows",
+     "note": "A guan is an old man without a wife and a gua an old woman without a husband; broadly, the lonely and helpless."
+    },
+    {
+     "term": "臣妾",
+     "en": "chen qie - male and female servants",
+     "note": "Men and women servants in a household."
+    },
+    {
+     "term": "鬼享",
+     "en": "gui xiang - the spirits enjoy the offering",
+     "note": "The spirits of the ancestors enjoy the sacrificial food."
+    },
+    {
+     "term": "有覺德行",
+     "en": "you jue de xing - great and upright conduct",
+     "note": "Jue here means tall and upright: conduct that is great and straight."
+    }
+   ],
+   "background": "This chapter discusses the effect of governing by filial piety, narrowing in three levels from the world to the state to the household. The lines from the Songs are from the Greater Odes, 'Yi'."
+  },
+  "zhang09": {
+   "summary": "This chapter treats the highest reach of filial piety: of all human acts it is the greatest, and the greatest honour to a father is to pair him with Heaven, as the Duke of Zhou did. The sage uses natural affection to spread teaching, and the noble person's words and acts can serve as a model for others.",
+   "translation": "Zengzi said, 'May I ask whether the virtue of the sage has nothing to add to filial piety?' The Master said, 'Of the nature of Heaven and Earth, humans are the most precious. Of human conduct, nothing is greater than filial piety; of filial piety, nothing is greater than honouring one's father; of honouring one's father, nothing is greater than pairing him with Heaven. The Duke of Zhou was such a man. Of old the Duke of Zhou made the suburban sacrifice to Hou Ji to pair him with Heaven, and offered the ancestral sacrifice to King Wen in the Bright Hall to pair him with the Lord on High. So all within the four seas came, each with his own duty, to help at the sacrifice. How could the virtue of the sage add anything to filial piety?\n'Affection is born at the parents' knees, and as one nourishes one's parents it grows day by day into awe. The sage used the awe to teach reverence, and used the affection to teach love. The teaching of the sage succeeds without sternness, and his government keeps order without severity, because what he relies on is the root. The Way of father and son is by nature, and holds the rightness of ruler and subject. Parents give us birth: no continuity is greater. The ruler and parent look on us: no kindness is heavier. So one who does not love his parents but loves others is called contrary to virtue; one who does not revere his parents but reveres others is called contrary to ritual. To treat what runs against the order as the order is to give the people no model; nothing in it lies in goodness, and all lies in wicked virtue. Though such a person gets what he wants, the noble person does not prize him.\n'The noble person is not so. His words are such that he can think of them being spoken, his actions such that he can think of them giving pleasure; his virtue and rightness can be honoured, his undertakings can be taken as rules, his bearing is worth watching, and his advancing and withdrawing can be measured. With these he faces his people, and so the people fear and love him, take him as a model and imitate him. Thus he can complete his teaching by virtue and carry out his orders. The Songs say: The good person, the noble person, does not err in his conduct.'",
+   "keyLines": [
+    {
+     "line": "天地之性，人為貴",
+     "en": "Of the nature of Heaven and Earth, humans are the most precious",
+     "note": "Of everything Heaven and Earth produce, humans are the most precious; this is the starting point for talking about filial piety."
+    },
+    {
+     "line": "人之行，莫大於孝，孝莫大於嚴父，嚴父莫大於配天",
+     "en": "Of human conduct, nothing is greater than filial piety; of filial piety, nothing is greater than honouring one's father; of honouring one's father, nothing is greater than pairing him with Heaven",
+     "note": "The argument is built up step by step: filial piety is first among human acts, and its highest form is to pair a father with Heaven."
+    },
+    {
+     "line": "聖人因嚴以教敬，因親以教愛",
+     "en": "The sage used the awe to teach reverence, and used the affection to teach love",
+     "note": "Teaching follows human nature and grows out of the reverence and love felt for parents."
+    },
+    {
+     "line": "父子之道，天性也，君臣之義也",
+     "en": "The Way of father and son is by nature, and holds the rightness of ruler and subject",
+     "note": "The love between father and son is natural, and also holds the sense of rank and duty."
+    },
+    {
+     "line": "不愛其親，而愛他人者，謂之悖德；不敬其親，而敬他人者，謂之悖禮",
+     "en": "One who does not love his parents but loves others is called contrary to virtue; one who does not revere his parents but reveres others is called contrary to ritual",
+     "note": "Love and reverence must start with one's kin; to look far while neglecting what is near goes against virtue and ritual."
+    },
+    {
+     "line": "言思可道，行思可樂，德義可尊，作事可法，容止可觀，進退可度",
+     "en": "His words can be spoken, his actions give pleasure, his virtue can be honoured, his undertakings are a rule, his bearing is worth watching, his advancing and withdrawing can be measured",
+     "note": "Six standards by which the noble person's words and acts can serve as a pattern for others."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "嚴父",
+     "en": "yan fu - to honour the father",
+     "note": "To respect one's father and make him honoured."
+    },
+    {
+     "term": "配天",
+     "en": "pei tian - to pair with Heaven",
+     "note": "To honour an ancestor along with Heaven at the sacrifice to Heaven."
+    },
+    {
+     "term": "周公",
+     "en": "Zhou gong - the Duke of Zhou",
+     "note": "A son of King Wen of Zhou who helped King Cheng; tradition says he made the rites and music."
+    },
+    {
+     "term": "后稷",
+     "en": "Hou Ji - Lord Millet",
+     "note": "The first ancestor of the Zhou people, who was in charge of farming."
+    },
+    {
+     "term": "郊祀",
+     "en": "jiao si - the suburban sacrifice",
+     "note": "The sacrifice to Heaven made in the countryside outside the capital."
+    },
+    {
+     "term": "明堂",
+     "en": "Ming tang - the Bright Hall",
+     "note": "The hall where the Son of Heaven made known his teaching and government and held great ceremonies and sacrifices."
+    },
+    {
+     "term": "悖德",
+     "en": "bei de - contrary to virtue",
+     "note": "To act against morality."
+    },
+    {
+     "term": "淑人君子",
+     "en": "shu ren jun zi - the good person, the noble person",
+     "note": "A kind and virtuous gentleman; quoted from the Airs of Cao, 'Shijiu'."
+    }
+   ],
+   "background": "This is the longest chapter of the Classic of Filial Piety. It uses the Duke of Zhou's rite of pairing King Wen with Heaven to explain how filial piety is linked to government and teaching. The Zhou ceremony it mentions is known from the traditions of Zhou ritual; the lines of the Songs come from the Airs of Cao, 'Shijiu'."
+  },
+  "zhang10": {
+   "summary": "Records what a filial son must do for his parents in five areas - daily life, care, illness, mourning and sacrifice - and stresses that in a high place, a low place and among equals one must avoid pride, disorder and quarrelling.",
+   "translation": "The Master said, 'In serving his parents, a filial son shows reverence when he is at home with them, joy when he is caring for them, anxiety when they are ill, grief when they are mourned, and solemnity when sacrifice is made. When these five are complete, he can then serve his parents. One who serves his parents is not proud in a high place, not disorderly in a low place, and does not quarrel among his peers. If he is proud in a high place, he will be ruined; if he is disorderly in a low place, he will be punished; if he quarrels among his peers, he will end up in weapons. If these three are not removed, even if each day he supplies the three meats, he is still unfilial.'",
+   "keyLines": [
+    {
+     "line": "居則致其敬，養則致其樂，病則致其憂，喪則致其哀，祭則致其嚴",
+     "en": "He shows reverence at home, joy in caring, anxiety in illness, grief in mourning, solemnity at sacrifice",
+     "note": "Five specific requirements for a filial son serving his parents, covering both their lifetime and after their death."
+    },
+    {
+     "line": "居上不驕，為下不亂，在醜不爭",
+     "en": "Not proud in a high place, not disorderly in a low place, and does not quarrel among his peers",
+     "note": "One must restrain oneself in every position, so as not to bring harm on one's parents."
+    },
+    {
+     "line": "居上而驕則亡，為下而亂則刑，在醜而爭則兵",
+     "en": "If proud in a high place, he will be ruined; if disorderly in a low place, he will be punished; if he quarrels among his peers, he will end up in weapons",
+     "note": "Names the consequences of pride, disorder and quarrelling."
+    },
+    {
+     "line": "雖日用三牲之養，猶為不孝也",
+     "en": "Even if each day he supplies the three meats, he is still unfilial",
+     "note": "Material support cannot replace filial piety; if one's conduct endangers oneself and one's family, one is still unfilial."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "致",
+     "en": "zhi - to give fully",
+     "note": "To exhaust, to express in full."
+    },
+    {
+     "term": "醜",
+     "en": "chou - peers",
+     "note": "Those of the same kind or rank; here, among a crowd."
+    },
+    {
+     "term": "兵",
+     "en": "bing - weapons",
+     "note": "Arms; here, the harm of the sword that comes from fighting."
+    },
+    {
+     "term": "三牲",
+     "en": "san sheng - the three meats",
+     "note": "Beef, mutton and pork, standing for rich food."
+    },
+    {
+     "term": "紀孝行",
+     "en": "ji xiao xing - recording filial conduct",
+     "note": "An account of the rules of conduct for a filial son."
+    }
+   ],
+   "background": "The title means 'recording filial conduct'. This is one of the few chapters of the Classic of Filial Piety that lists concrete items in serving parents, in contrast to the earlier chapters on government by filial piety."
+  },
+  "zhang11": {
+   "summary": "There are three thousand kinds of punishment, and no offence is greater than being unfilial. Unfilial conduct is ranked with coercing the ruler and condemning the sages as a road to great disorder.",
+   "translation": "The Master said, 'The five punishments come to three thousand kinds, and none of the offences is greater than being unfilial. One who coerces his ruler has no superior; one who condemns the sages has no law; one who denies filial piety has no parents. This is the road to great disorder.'",
+   "keyLines": [
+    {
+     "line": "五刑之屬三千，而罪莫大於不孝",
+     "en": "The five punishments come to three thousand kinds, and none of the offences is greater than being unfilial",
+     "note": "Ancient law is said to have had three thousand articles of offence, of which unfilial conduct was the most serious."
+    },
+    {
+     "line": "要君者，無上；非聖人者，無法；非孝者，無親",
+     "en": "One who coerces his ruler has no superior; one who condemns the sages has no law; one who denies filial piety has no parents",
+     "note": "Three rebellious acts matched with three denials: no ruler, no law and no parents."
+    },
+    {
+     "line": "此大亂之道也",
+     "en": "This is the road to great disorder",
+     "note": "All three shake the order of society and lead to great disorder."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "五刑",
+     "en": "wu xing - the five punishments",
+     "note": "Tattooing, cutting off the nose, cutting off the feet, castration and death."
+    },
+    {
+     "term": "屬",
+     "en": "shu - a class",
+     "note": "A category or item."
+    },
+    {
+     "term": "要君",
+     "en": "yao jun - to coerce the ruler",
+     "note": "To threaten a ruler."
+    },
+    {
+     "term": "非",
+     "en": "fei - to condemn",
+     "note": "To criticise or deny."
+    },
+    {
+     "term": "無上",
+     "en": "wu shang - having no superior",
+     "note": "To have no regard for the ruler above."
+    }
+   ],
+   "background": "This chapter reflects the Confucian view that filial piety is the base of ethics and that being unfilial is a serious crime that breaks order. The saying about 'five punishments and three thousand' is also found in the Book of Documents, 'Punishment of Lu'; the actual number comes from old tradition."
+  },
+  "zhang12": {
+   "summary": "Explains the 'essential way' of teaching: filial piety and brotherly respect make people loving and courteous; ritual and music change customs and give order to rulers and people; and the core of ritual is reverence, which pleases the many by honouring the few.",
+   "translation": "The Master said, 'To teach the people affection and love, nothing is better than filial piety; to teach them courtesy and obedience, nothing is better than brotherly respect; to change customs and manners, nothing is better than music; to give peace to rulers and order to the people, nothing is better than ritual. Ritual is simply reverence. So when one honours another's father, the son is glad; when one honours another's elder brother, the younger brother is glad; when one honours another's ruler, the subject is glad. Honour one person and tens of thousands are glad. Those honoured are few and those pleased are many: this is what is meant by the essential way.'",
+   "keyLines": [
+    {
+     "line": "教民親愛，莫善於孝；教民禮順，莫善於悌",
+     "en": "To teach the people affection and love, nothing is better than filial piety; to teach them courtesy and obedience, nothing is better than brotherly respect",
+     "note": "Filial piety makes people loving, and brotherly respect makes them courteous and obedient: the foundations of teaching."
+    },
+    {
+     "line": "移風易俗，莫善於樂；安上治民，莫善於禮",
+     "en": "To change customs and manners, nothing is better than music; to give peace to rulers and order to the people, nothing is better than ritual",
+     "note": "Music and ritual are the two main tools of social order."
+    },
+    {
+     "line": "禮者，敬而已矣",
+     "en": "Ritual is simply reverence",
+     "note": "Sums up the spirit of ritual as reverence."
+    },
+    {
+     "line": "敬一人而千萬人悅",
+     "en": "Honour one person and tens of thousands are glad",
+     "note": "When one person is honoured, his family and those connected to him are pleased, showing how far honouring others spreads."
+    },
+    {
+     "line": "所敬者寡，而悅者眾，此之謂要道也",
+     "en": "Those honoured are few and those pleased are many: this is what is meant by the essential way",
+     "note": "The conclusion of the chapter, which says what the 'essential way' means."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "要道",
+     "en": "yao dao - the essential way",
+     "note": "The most important principle."
+    },
+    {
+     "term": "悌",
+     "en": "ti - brotherly respect",
+     "note": "Respect and love for one's elder brother."
+    },
+    {
+     "term": "樂",
+     "en": "yue - music",
+     "note": "Music, named with ritual as a means of shaping character."
+    },
+    {
+     "term": "移風易俗",
+     "en": "yi feng yi su - to change customs and manners",
+     "note": "To replace bad habits and customs."
+    },
+    {
+     "term": "安上治民",
+     "en": "an shang zhi min - to give peace to rulers and order to the people",
+     "note": "To make those above secure and the people well governed."
+    }
+   ],
+   "background": "This chapter explains the 'essential way' mentioned in the first chapter, and is a short summary of the teaching by ritual and music in the Classic of Filial Piety. Later writers often quote 'to change customs and manners, nothing is better than music'."
+  },
+  "zhang13": {
+   "summary": "Explains supreme virtue: the noble person teaches filial piety and brotherly respect, and need not visit every home, yet people come to honour everyone's father, elder brother and ruler. That is why it is the greatest virtue.",
+   "translation": "The Master said, 'The noble person teaches by filial piety, not by visiting each home and seeing everyone every day. Teaching filial piety is how he makes people honour all fathers in the world; teaching brotherly respect is how he makes people honour all elder brothers in the world; teaching ministerial duty is how he makes people honour all rulers in the world. The Songs say: The gentle, easy-going noble person is the father and mother of the people. Without supreme virtue, who could bring the people into accord on so great a scale?'",
+   "keyLines": [
+    {
+     "line": "君子之教以孝也，非家至而日見之也",
+     "en": "The noble person teaches by filial piety, not by visiting each home and seeing everyone every day",
+     "note": "Teaching works by setting a model, not by lecturing every household."
+    },
+    {
+     "line": "教以孝，所以敬天下之為人父者也",
+     "en": "Teaching filial piety is how he makes people honour all fathers in the world",
+     "note": "The aim of teaching filial piety is to make people honour every father in the world."
+    },
+    {
+     "line": "愷悌君子，民之父母",
+     "en": "The gentle, easy-going noble person is the father and mother of the people",
+     "note": "A quotation from the Greater Odes, 'Jiong zhuo', praising a kind and approachable noble person as a parent to the people."
+    },
+    {
+     "line": "非至德，其孰能順民，如此其大者乎",
+     "en": "Without supreme virtue, who could bring the people into accord on so great a scale?",
+     "note": "Only someone of the highest virtue could win the people's hearts to such a degree."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "至德",
+     "en": "zhi de - supreme virtue",
+     "note": "The highest virtue."
+    },
+    {
+     "term": "家至",
+     "en": "jia zhi - to go to every home",
+     "note": "To go in person to each household."
+    },
+    {
+     "term": "愷悌",
+     "en": "kai ti - gentle and easy-going",
+     "note": "Kind, cheerful and approachable."
+    },
+    {
+     "term": "順民",
+     "en": "shun min - to bring the people into accord",
+     "note": "To make the people willing to follow."
+    }
+   ],
+   "background": "This chapter expands on the 'supreme virtue' of the first chapter. The lines of the Songs come from the Greater Odes, 'Jiong zhuo'."
+  },
+  "zhang14": {
+   "summary": "The noble person who serves his parents with filial piety, his elder brother with brotherly respect and keeps his home in order can carry these virtues over to serving the ruler and elders and to holding office, and so he makes his name.",
+   "translation": "The Master said, 'The noble person serves his parents with filial piety, and so his loyalty can be moved over to his ruler; he serves his elder brother with brotherly respect, and so his obedience can be moved over to his elders; he keeps his home in order, and so his skill in governing can be moved over to office. Thus his conduct is perfected within, and his name is established for later ages.'",
+   "keyLines": [
+    {
+     "line": "事親孝，故忠可移於君；事兄悌，故順可移於長；居家理，故治可移於官",
+     "en": "He serves his parents with filial piety, and so his loyalty can be moved over to his ruler; ... he keeps his home in order, and so his skill in governing can be moved over to office",
+     "note": "Filial piety, brotherly respect and good housekeeping turn into loyalty, obedience and good government."
+    },
+    {
+     "line": "行成於內，而名立於後世矣",
+     "en": "His conduct is perfected within, and his name is established for later ages",
+     "note": "Virtue is first formed in the family, and a public name follows."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "移",
+     "en": "yi - to move over",
+     "note": "To transfer or extend."
+    },
+    {
+     "term": "理",
+     "en": "li - to order",
+     "note": "To manage in an orderly way."
+    },
+    {
+     "term": "揚名",
+     "en": "yang ming - to make one's name known",
+     "note": "To make one's name famous for later ages."
+    },
+    {
+     "term": "居家理",
+     "en": "ju jia li - keeping the home in order",
+     "note": "Managing the household with good order."
+    }
+   ],
+   "background": "This chapter sets out most plainly the idea of 'moving filial piety into loyalty'. It echoes the first chapter's 'establish oneself, walk the Way, and make one's name known to later ages'."
+  },
+  "zhang15": {
+   "summary": "Zengzi asks whether a child must obey every command of the father to be filial. Confucius rejects the idea and says that when something is wrong a son should remonstrate with his father and a minister with his ruler.",
+   "translation": "Zengzi said, 'As for kindness and love, reverence, giving ease to one's parents, and making a name, I have heard your teaching. May I ask: if a son simply follows his father's commands, can that be called filial?' The Master said, 'What are you saying! What are you saying! Of old, the Son of Heaven had seven remonstrating ministers, and though he lacked the Way, he did not lose his realm; a feudal lord had five, and though he lacked the Way, he did not lose his state; a high officer had three, and though he lacked the Way, he did not lose his house; an officer-gentleman with a remonstrating friend did not lose his good name; a father with a remonstrating son did not fall into wrongdoing. So when something is wrong, a son cannot fail to remonstrate with his father, nor a minister fail to remonstrate with his ruler. When something is wrong, one remonstrates. To follow a father's commands - how can that be filial?'",
+   "keyLines": [
+    {
+     "line": "子從父之令，可謂孝乎",
+     "en": "If a son simply follows his father's commands, can that be called filial?",
+     "note": "Zengzi's question, which leads the chapter to separate filial piety from blind obedience."
+    },
+    {
+     "line": "是何言與！是何言與！",
+     "en": "What are you saying! What are you saying!",
+     "note": "Confucius answers with two sharp questions, firmly rejecting the idea that obedience alone is filial piety."
+    },
+    {
+     "line": "父有爭子，則身不陷於不義",
+     "en": "A father with a remonstrating son did not fall into wrongdoing",
+     "note": "If a son dares to speak out, the father does not fall into wrong; this is real respect for him."
+    },
+    {
+     "line": "故當不義，則子不可以不爭於父，臣不可以不爭於君",
+     "en": "When something is wrong, a son cannot fail to remonstrate with his father, nor a minister fail to remonstrate with his ruler",
+     "note": "A clear statement: when there is wrong, sons must speak up to fathers and ministers to rulers."
+    },
+    {
+     "line": "從父之令，又焉得為孝乎",
+     "en": "To follow a father's commands - how can that be filial?",
+     "note": "The conclusion: filial piety is not obedience but helping one's parents to act rightly."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "爭",
+     "en": "zheng - to remonstrate",
+     "note": "A loan for another zheng, meaning to speak frankly in advice."
+    },
+    {
+     "term": "爭臣",
+     "en": "zheng chen - a remonstrating minister",
+     "note": "A minister who dares to advise frankly."
+    },
+    {
+     "term": "令名",
+     "en": "ling ming - a good name",
+     "note": "A fine reputation."
+    },
+    {
+     "term": "無道",
+     "en": "wu dao - without the Way",
+     "note": "Against the right path; confused conduct."
+    },
+    {
+     "term": "與",
+     "en": "yu - a particle",
+     "note": "Used in place of another character, also read yu, a sentence-final particle that marks a question."
+    }
+   ],
+   "background": "This chapter is often quoted as proof that Confucian filial piety is not blind obedience. As for the numbers 'seven, five and three', traditional commentaries explain them as officers who assist the ruler, and the commentators differ somewhat on exactly who is meant."
+  },
+  "zhang16": {
+   "summary": "A ruler who serves his father and mother with filial piety understands how to serve Heaven and Earth, and the spirits appear; filial piety and brotherly respect that reach the utmost link with the spirits and spread through the whole world.",
+   "translation": "The Master said, 'Of old the enlightened kings served their fathers with filial piety, and so served Heaven with clear understanding; they served their mothers with filial piety, and so served Earth with careful discernment. Old and young were in order, and so high and low were governed. When Heaven and Earth are clearly understood and carefully discerned, the spirits show themselves. So even the Son of Heaven must have someone he honours, meaning his father; he must have someone who comes before him, meaning his elder brother. At the ancestral temple he shows the utmost reverence, not forgetting his parents; he cultivates himself and is careful in conduct, fearing to shame his forebears. When reverence is shown at the ancestral temple, the spirits appear. When filial piety and brotherly respect reach the utmost, they link with the spirits, shine over the four seas, and there is nowhere they do not reach. The Songs say: From west and from east, from south and from north, none thought of not submitting.'",
+   "keyLines": [
+    {
+     "line": "事父孝，故事天明；事母孝，故事地察",
+     "en": "He served his father with filial piety, and so served Heaven with clear understanding; he served his mother with filial piety, and so served Earth with careful discernment",
+     "note": "The heart of reverence for parents can be extended to serving Heaven and Earth, so that their ways are understood."
+    },
+    {
+     "line": "必有尊也，言有父也；必有先也，言有兄也",
+     "en": "He must have someone he honours, meaning his father; he must have someone who comes before him, meaning his elder brother",
+     "note": "Even the Son of Heaven has people he honours and people who come before him, so filial piety and brotherly respect apply to all ranks."
+    },
+    {
+     "line": "修身慎行，恐辱先也",
+     "en": "He cultivates himself and is careful in conduct, fearing to shame his forebears",
+     "note": "Self-cultivation and care are done for fear of shaming the ancestors, which puts filial piety into daily conduct."
+    },
+    {
+     "line": "孝悌之至，通於神明，光于四海，無所不通",
+     "en": "When filial piety and brotherly respect reach the utmost, they link with the spirits, shine over the four seas, and there is nowhere they do not reach",
+     "note": "The highest filial piety and brotherly respect can touch the spirits and spread through the world."
+    },
+    {
+     "line": "自西自東，自南自北，無思不服",
+     "en": "From west and from east, from south and from north, none thought of not submitting",
+     "note": "A quotation from the Greater Odes, 'Wen Wang you sheng', describing all four quarters coming to submit."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "感應",
+     "en": "gan ying - response and resonance",
+     "note": "The idea that the virtues of filial piety and brotherly respect move and answer to Heaven, Earth and the spirits."
+    },
+    {
+     "term": "事天明、事地察",
+     "en": "shi tian ming, shi di cha - to serve Heaven with understanding, Earth with discernment",
+     "note": "Ming and cha mean being able to understand the principles of Heaven and Earth."
+    },
+    {
+     "term": "神明",
+     "en": "shen ming - the spirits",
+     "note": "The divine powers of Heaven and Earth."
+    },
+    {
+     "term": "宗廟",
+     "en": "zong miao - the ancestral temple",
+     "note": "The hall where ancestors are worshipped."
+    },
+    {
+     "term": "先",
+     "en": "xian - one who comes before",
+     "note": "A person ahead of one; here, an elder brother."
+    },
+    {
+     "term": "無思不服",
+     "en": "wu si bu fu - none who did not submit",
+     "note": "Si is a particle; it means there was none who did not submit."
+    }
+   ],
+   "background": "The lines of the Songs here come from the Greater Odes, 'Wen Wang you sheng', which praises the merits of Kings Wen and Wu of Zhou. The chapter has a flavour of the response between Heaven and humans; traditional commentaries explain that reverence for Heaven, Earth and spirits all springs from the filial heart."
+  },
+  "zhang17": {
+   "summary": "How the noble person serves his lord: when advancing, he thinks of doing his duty with loyalty; when retiring, he thinks of making up for his faults; he helps along what is fine and sets right what is wrong, so that those above and below grow close.",
+   "translation": "The Master said, 'In serving those above, the noble person, when he advances, thinks of giving his utmost loyalty; when he retires, he thinks of making up for his faults. He helps along what is fine in his lord, and sets right and rescues what is bad, and so high and low can be close to each other. The Songs say: In my heart I love him; why do I not say so? Deep in my heart I keep it; what day will I forget it?'",
+   "keyLines": [
+    {
+     "line": "進思盡忠，退思補過",
+     "en": "When he advances he thinks of giving his utmost loyalty; when he retires he thinks of making up for his faults",
+     "note": "The basic outlook of an official: loyal when at court, reflective and mending when withdrawn."
+    },
+    {
+     "line": "將順其美，匡救其惡",
+     "en": "He helps along what is fine in his lord, and sets right and rescues what is bad",
+     "note": "He helps his ruler to complete good deeds, and corrects and rescues him from mistakes."
+    },
+    {
+     "line": "故上下能相親也",
+     "en": "And so high and low can be close to each other",
+     "note": "The tie between ruler and minister is not one-way obedience but mutual closeness."
+    },
+    {
+     "line": "中心藏之，何日忘之",
+     "en": "Deep in my heart I keep it; what day will I forget it?",
+     "note": "A quotation from the Lesser Odes, 'Xi sang': it describes love held in the heart and never forgotten."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "進思盡忠",
+     "en": "jin si jin zhong - advancing, he thinks of loyalty",
+     "note": "Advancing means going before the ruler and attending to affairs."
+    },
+    {
+     "term": "退思補過",
+     "en": "tui si bu guo - retiring, he thinks of making up faults",
+     "note": "Retiring means leaving court and being alone at home."
+    },
+    {
+     "term": "將順",
+     "en": "jiang shun - to follow and bring to completion",
+     "note": "To go along with and help to complete."
+    },
+    {
+     "term": "匡救",
+     "en": "kuang jiu - to set right and rescue",
+     "note": "To correct and to help out of trouble."
+    },
+    {
+     "term": "遐不謂矣",
+     "en": "xia bu wei yi - why not say so",
+     "note": "Xia is 'why': why not tell him? One reading takes xia as a loan for xia, 'flaw', and understands it a little differently."
+    },
+    {
+     "term": "中心",
+     "en": "zhong xin - in the heart",
+     "note": "Within the heart."
+    }
+   ],
+   "background": "This chapter takes the way of serving a ruler as its subject. The lines of the Songs come from the Lesser Odes, 'Xi sang', a poem about longing and admiration, which here stands for a minister's loyal love for his lord."
+  },
+  "zhang18": {
+   "summary": "The last chapter of the classic, on mourning and sacrifice after a parent's death: grief should be shown naturally but without harming one's health, mourning lasts three years at most, and life and death are completed with grief and reverence.",
+   "translation": "The Master said, 'When a filial son loses a parent, he wails without trailing his voice, his ritual conduct has no show, his words have no ornament; he is uneasy in fine clothes, finds no joy in music, and finds no sweetness in good food: such is the feeling of grief and sorrow. After three days he eats: this teaches the people not to harm the living for the sake of the dead, and that mourning must not destroy one's nature; this is the government of the sages. Mourning does not go beyond three years: this shows the people that there is an end. For the parent they make the inner and outer coffins, the shroud and the bedding, and lift the body; they set out the ritual vessels of grain and mourn; they beat the breast and stamp, weep and cry, and send the parent off in grief; they divine the site of the grave and lay the body to rest; they build the ancestral temple for the spirit to enjoy offerings; in spring and autumn they sacrifice, and remember at the proper times. In life they served with love and reverence, in death they serve with grief and sorrow: the root of the life of the people is fulfilled, the meaning of life and death is complete, and the service a filial son gives to his parents is ended.'",
+   "keyLines": [
+    {
+     "line": "哭不偯、禮無容、言不文",
+     "en": "He wails without trailing his voice, his ritual conduct has no show, his words have no ornament",
+     "note": "When a parent has died, the wailing, bearing and speech come from true feeling, with nothing put on."
+    },
+    {
+     "line": "服美不安、聞樂不樂、食旨不甘",
+     "en": "He is uneasy in fine clothes, finds no joy in music, and finds no sweetness in good food",
+     "note": "In grief, fine clothes, music and good food bring no pleasure."
+    },
+    {
+     "line": "三日而食，教民無以死傷生，毀不滅性",
+     "en": "After three days he eats: this teaches the people not to harm the living for the sake of the dead, and that mourning must not destroy one's nature",
+     "note": "After three days one must eat, and grief must not go so far as to damage the body; the dead must not be allowed to harm the living."
+    },
+    {
+     "line": "喪不過三年，示民有終也",
+     "en": "Mourning does not go beyond three years: this shows the people that there is an end",
+     "note": "Three years is the limit of mourning, so that grief has an end and life can return to normal."
+    },
+    {
+     "line": "春秋祭祀，以時思之",
+     "en": "In spring and autumn they sacrifice, and remember at the proper times",
+     "note": "After the funeral, sacrifices at fixed seasons carry on the long remembrance."
+    },
+    {
+     "line": "生事愛敬，死事哀戚",
+     "en": "In life they served with love and reverence, in death they serve with grief and sorrow",
+     "note": "The closing of the whole classic: serve parents with love and reverence in life, and with grief and sorrow after death."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "偯",
+     "en": "yi - a trailing sob",
+     "note": "The drawn-out end of a wail; 'wailing without trailing' means a plain, unbending cry."
+    },
+    {
+     "term": "容",
+     "en": "rong - bearing",
+     "note": "Appearance and courteous manner."
+    },
+    {
+     "term": "毀不滅性",
+     "en": "hui bu mie xing - harming oneself but not one's life",
+     "note": "To ruin one's health by grief, but never to the point of losing one's life."
+    },
+    {
+     "term": "棺槨",
+     "en": "guan guo - inner and outer coffins",
+     "note": "The inner coffin is the guan and the outer coffin the guo."
+    },
+    {
+     "term": "簠簋",
+     "en": "fu gui - ritual vessels for grain",
+     "note": "Sacrificial vessels for millet and other grain."
+    },
+    {
+     "term": "擗踴",
+     "en": "pi yong - beating the breast and stamping",
+     "note": "To beat the chest and stamp the feet, in the extreme of grief."
+    },
+    {
+     "term": "宅兆",
+     "en": "zhai zhao - the grave site",
+     "note": "A burial place."
+    },
+    {
+     "term": "措",
+     "en": "cuo - to lay to rest",
+     "note": "To place or bury."
+    }
+   ],
+   "background": "This chapter echoes the first, carrying filial piety from life into the rites of mourning and sacrifice after death. The three-year mourning was an important rule of Confucian funeral ritual, and the Analects also discusses it."
+  }
+ }
+}

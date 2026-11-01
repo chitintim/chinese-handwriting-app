@@ -2,15 +2,18 @@
  "id": "yuzhuyuansishu",
  "title": {
   "trad": "與朱元思書",
-  "simp": "与朱元思书"
+  "simp": "与朱元思书",
+  "en": "Letter to Zhu Yuansi"
  },
  "author": {
   "trad": "吳均",
-  "simp": "吴均"
+  "simp": "吴均",
+  "en": "Wu Jun"
  },
  "dynasty": {
   "trad": "南朝梁",
-  "simp": "南朝梁"
+  "simp": "南朝梁",
+  "en": "Liang (Southern Dynasties)"
  },
  "source": "https://zh.wikisource.org/wiki/與朱元思書",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/與朱元思書",
@@ -20,7 +23,8 @@
    "id": "main",
    "title": {
     "trad": "與朱元思書",
-    "simp": "与朱元思书"
+    "simp": "与朱元思书",
+    "en": "Letter to Zhu Yuansi"
    },
    "body": {
     "trad": "風煙俱淨，天山共色，從流飄蕩，任意東西。自富陽至桐廬，一百許里，奇山異水，天下獨絕。水皆縹碧，千丈見底，游魚細石，直視無礙。急湍甚箭，猛浪若奔。夾岸高山，皆生寒樹，負勢競上，互相軒邈；爭高直指，千百成峰。泉水激石，泠泠作響。好鳥相鳴，嚶嚶成韻。蟬則千轉不窮，猿則百叫無絕。鳶飛戾天者，望峰息心；經綸世務者，窺谷忘返。橫柯上蔽，在晝猶昏；疏條交映，有時見日。",

@@ -1,0 +1,82 @@
+{
+ "id": "taohuayuan-ji",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "A fisherman strays by chance into a peach grove and finds the Peach Blossom Spring, cut off from the world, peaceful and well-off; when he leaves and tries to find it again, he loses the way. Tao Yuanming uses it to express his longing for a society without war or exploitation, and there is also a hint of disappointment with reality.",
+   "translation": "In the Taiyuan period of Jin, there was a man of Wuling who made his living by fishing. One day he followed a stream and forgot how far he had gone. Suddenly he came upon a grove of peach trees. It ran for a few hundred paces along both banks, with no other trees among them; the fragrant grass was fresh and lovely, and falling petals drifted down in profusion. The fisherman found it very strange. He went on, wanting to reach the end of the grove.\nThe grove ended at the source of the stream, and there was a hill with a small opening in it, from which there seemed to be a faint light. He left his boat and went in through the opening. At first it was very narrow, only just wide enough for a person. After a few dozen more steps, it suddenly opened out and became bright. The land was flat and wide, and the houses were neat in rows. There were fine fields, beautiful ponds, and mulberry and bamboo. Paths crossed the fields in all directions, and the sounds of chickens and dogs could be heard from one house to another. The people who came and went and worked the land, men and women, were dressed just like people outside. White-haired old people and children with loose hair were all happy and content.\nSeeing the fisherman, they were greatly startled and asked where he had come from, and he answered them fully. One of them invited him back to his house, set out wine, and killed a chicken to make a meal. When the village heard that such a man had come, they all came to ask him questions. They said of themselves that their forefathers had fled the chaos of Qin and had come with their wives, children and fellow townspeople to this remote place, and had never gone out again, and so were cut off from the people outside. They asked what age it was now; they did not even know there had been a Han, let alone Wei and Jin. The man told them one by one what he knew, and they all sighed with sympathy and regret. The others each invited him to their homes in turn, and all brought out wine and food.\nHe stayed for several days and then took his leave. The people there said to him: 'It is not worth telling to those outside.' After he came out he found his boat, and followed the way he had come, marking it at every point. When he reached the prefecture, he went to the governor and told him what had happened. The governor at once sent men to follow him and look for the marks he had made, but they lost their way and could not find the road again. Liu Ziji of Nanyang was a man of high principle. When he heard of it he was glad and planned to go, but before he could, he fell ill and died. After that, no one asked for the ford again.",
+   "keyLines": [
+    {
+     "line": "忽逢桃花林，夾岸數百步，中無雜樹",
+     "en": "Suddenly he came upon a grove of peach trees. It ran for a few hundred paces along both banks, with no other trees among them.",
+     "note": "The first strange scene the fisherman finds: a pure grove of nothing but peach blossoms, giving a dream-like mood."
+    },
+    {
+     "line": "豁然開朗",
+     "en": "It suddenly opened out and became bright.",
+     "note": "A narrow, dark cave gives way to a wide, bright world; the contrast is strong, and the phrase became a common idiom."
+    },
+    {
+     "line": "黃髮垂髫，並怡然自樂",
+     "en": "White-haired old people and children with loose hair were all happy and content.",
+     "note": "Old and young are all at ease and happy, reflecting a peaceful and harmonious society."
+    },
+    {
+     "line": "不足為外人道也",
+     "en": "It is not worth telling to those outside.",
+     "note": "The villagers' request, both from fear of disturbance and a hint that such a pure place could not be tolerated by the dusty world."
+    },
+    {
+     "line": "尋向所志，遂迷，不復得路",
+     "en": "They looked for the marks he had made, but lost their way and could not find the road again.",
+     "note": "Because it cannot be found again, the Peach Blossom Spring becomes an ideal that can be seen but not reached, and the ending leaves the real and unreal unclear."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "緣溪行",
+     "en": "yuan xi xing - following the stream",
+     "note": "To walk along the stream; yuan means 'along'."
+    },
+    {
+     "term": "落英繽紛",
+     "en": "luo ying bin fen - falling petals in profusion",
+     "note": "Fallen flowers drifting down in numbers; ying means flower."
+    },
+    {
+     "term": "髣髴",
+     "en": "fang fu - faintly",
+     "note": "Dimly, vaguely; it means 'as if'."
+    },
+    {
+     "term": "阡陌",
+     "en": "qian mo - field paths",
+     "note": "Criss-crossing paths between fields; the north-south ones are qian, the east-west ones mo."
+    },
+    {
+     "term": "黃髮垂髫",
+     "en": "huang fa chui tiao - white-haired and loose-haired",
+     "note": "Huang fa means the old; chui tiao means children, whose hair hangs down and is not tied up."
+    },
+    {
+     "term": "要",
+     "en": "yao - to invite",
+     "note": "Here used for the character 邀, 'to invite'."
+    },
+    {
+     "term": "無論",
+     "en": "wu lun - let alone",
+     "note": "An old sense differing from the modern one: in old usage it meant 'not to mention, still less', not the modern 'no matter what'."
+    },
+    {
+     "term": "問津",
+     "en": "wen jin - to ask the ford",
+     "note": "To ask for the ferry crossing; by extension, to inquire or try. Jin is a ford."
+    }
+   ],
+   "background": "Tao Yuanming was a poet of the late Eastern Jin. This piece was originally the 'record' attached to his Peach Blossom Spring poem. It was written in the troubled years between the Jin and the Song dynasties, and uses an imagined Peach Blossom Spring to set out his ideal; the later phrase for a land outside the world, 'taoyuan', comes from it."
+  }
+ }
+}

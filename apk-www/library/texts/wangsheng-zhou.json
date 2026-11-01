@@ -2,15 +2,18 @@
  "id": "wangsheng-zhou",
  "title": {
   "trad": "拔一切業障根本得生淨土神咒",
-  "simp": "拔一切业障根本得生净土神咒"
+  "simp": "拔一切业障根本得生净土神咒",
+  "en": "Rebirth in the Pure Land Mantra"
  },
  "author": {
   "trad": "求那跋陀羅",
-  "simp": "求那跋陀罗"
+  "simp": "求那跋陀罗",
+  "en": "Gunabhadra"
  },
  "dynasty": {
   "trad": "劉宋",
-  "simp": "刘宋"
+  "simp": "刘宋",
+  "en": "Liu Song"
  },
  "source": "https://zh.wikisource.org/wiki/十小咒/往生淨土神咒",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/十小咒/往生淨土神咒",
@@ -20,7 +23,8 @@
    "id": "main",
    "title": {
     "trad": "往生咒",
-    "simp": "往生咒"
+    "simp": "往生咒",
+    "en": "Rebirth Mantra"
    },
    "body": {
     "trad": "南無阿彌多婆夜。哆他伽多夜。哆地夜他。阿彌唎都婆毘。阿彌唎哆。悉耽婆毘。阿彌唎哆。毘迦蘭帝。阿彌唎哆。毘迦蘭多。伽彌膩。伽伽那。枳多迦利。娑婆訶。",

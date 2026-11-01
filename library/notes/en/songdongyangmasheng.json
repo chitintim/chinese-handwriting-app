@@ -1,0 +1,92 @@
+{
+ "id": "songdongyangmasheng",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Song Lian encourages Ma Junze, a young man from his home district. He recalls the hardship of his own childhood, when he studied hard in poverty and travelled to find teachers, contrasts it with the good conditions of students at the Imperial Academy, and says that failure in study usually comes from lack of concentration, not from talent or circumstances.",
+   "translation": "I loved learning even as a child. My family was poor and had no means to buy books to read, so I often borrowed from families that kept books, copied them out with my own hand, and counted the days to return them. In the great cold, when the ink-stone was frozen hard and my fingers could not bend or stretch, I did not slacken. When the copying was done, I ran to send the book back, never daring to overstay the agreed time. For this reason many people lent me books, and I was able to read widely.\nWhen I came of age, I admired the way of the sages even more, and worried that I had no great teachers or famous men to study with. Once I hurried more than a hundred li to follow an elder of my district, taking my classic in hand to ask him questions. This elder was of high virtue and great reputation, and his pupils and disciples filled his rooms, yet he never softened his words or looks for a moment. I stood beside him, drew on my doubts and asked about principles, bowing low and bending my ear to ask. Sometimes I met with his scolding; then my face grew more respectful and my manners more careful, and I did not dare say a word in reply; I waited till he was pleased, and asked again. So although I was dull, in the end I learned something.\nWhen I went to study with teachers, I carried a book-box on my back and dragged my shoes, travelling through deep mountains and great valleys. In the depth of winter, with fierce wind and snow several feet deep, the skin of my feet cracked and I did not notice. When I reached my lodging, my four limbs were stiff and could not move; an attendant poured hot water over me and covered me with quilts, and it was a long time before I was warm. I stayed at inns where the host gave two meals a day, with no fresh or rich delicacies to enjoy. My fellow lodgers all wore silks and embroidery, caps decorated with pearl tassels and jewels, white jade rings at their waists, a sword on the left and a scent bag on the right, glittering like gods. I wore a padded gown and worn clothes among them, and felt no envy at all. For within me there was something quite enough to be glad about, and I did not know that my food and clothes were not as good as other people's. Such was my diligence and my hardship.\nNow, though I am old and have achieved nothing, I am fortunate to take a place among gentlemen and to receive the favour of the emperor, to rank behind the ministers, and attend daily to answer his questions; the four seas also wrongly speak my name. How much more so for those whose talent exceeds mine!\nNow you students study in the Imperial Academy. The government gives you grain and allowances every day, and your parents send you fur and linen clothing every year, so you have no worry of cold or hunger. You sit under great halls and recite the Songs and Documents, with no labour of running about. You have the Vice-Director and the Doctors as teachers, and there is no question that goes unanswered, nothing sought that is not given. All the books that you ought to have are gathered here; you need not, like me, copy them by hand or borrow from others before you see them. If your studies are not fine, or your virtue not complete, it is not because your natural gifts are low, but because your hearts are not as single-minded as mine was. How could it be anyone else's fault!\nMa Junze of Dongyang has been at the Academy for two years, and his fellows praise his worth. When I came to the capital for an audience, he came to see me as a son of my district and offered a long letter as his gift; the words were fluent and clear. When I discussed things with him, his speech was mild and his looks calm. He said that in his youth he had worked very hard at study, which shows him to be a good student. As he is about to go home to see his parents, I have told him of the hardship of study. If anyone says I encourage my fellow countrymen to study, that is my wish; if anyone slanders me as boasting of my good fortune and being proud before my countrymen, how could he know me!",
+   "keyLines": [
+    {
+     "line": "天大寒，硯冰堅，手指不可屈伸，弗之怠",
+     "en": "In the great cold, when the ink-stone was frozen hard and my fingers could not bend or stretch, I did not slacken.",
+     "note": "The hardship and persistence of copying books, the first proof of the author's diligence."
+    },
+    {
+     "line": "余立侍左右，援疑質理，俯身傾耳以請",
+     "en": "I stood beside him, drew on my doubts and asked about principles, bowing low and bending my ear to ask.",
+     "note": "His humility in seeking a teacher: only by asking with a modest heart can one learn something."
+    },
+    {
+     "line": "足膚皸裂而不知",
+     "en": "The skin of my feet cracked and I did not notice.",
+     "note": "A telling detail about studying in the snow, which shows how firm his resolve was."
+    },
+    {
+     "line": "余則縕袍敝衣處其間，畧無慕豔意",
+     "en": "I wore a padded gown and worn clothes among them, and felt no envy at all.",
+     "note": "Set against the fine clothes of fellow lodgers, it shows the author's content in poverty."
+    },
+    {
+     "line": "以中有足樂者，不知口體之奉不若人也",
+     "en": "For within me there was something quite enough to be glad about, and I did not know that my food and clothes were not as good as other people's.",
+     "note": "The spirit of the piece: when there is the joy of learning inside, one gives no thought to material comfort."
+    },
+    {
+     "line": "其業有不精、德有不成者，非天質之卑，則心不若余之專耳，豈他人之過哉",
+     "en": "If your studies are not fine, or your virtue not complete, it is not because your natural gifts are low, but because your hearts are not as single-minded as mine was.",
+     "note": "The concluding encouragement: failure in study comes down to whether one concentrates, not to circumstances or ability."
+    },
+    {
+     "line": "謂余勉鄉人以學者，余之志也",
+     "en": "If anyone says I encourage my fellow countrymen to study, that is my wish.",
+     "note": "It states the purpose of writing, closing the piece in a sincere tone."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "假借",
+     "en": "jia jie - to borrow",
+     "note": "To borrow; here, to borrow books from others."
+    },
+    {
+     "term": "加冠",
+     "en": "jia guan - coming of age",
+     "note": "In ancient times a man was capped at twenty to show he was an adult."
+    },
+    {
+     "term": "先達",
+     "en": "xian da - elder of attainment",
+     "note": "A senior ahead of one in learning or virtue."
+    },
+    {
+     "term": "負篋曳屣",
+     "en": "fu qie ye xi - carrying a box and dragging shoes",
+     "note": "Carrying a book-box on the back and dragging worn shoes: the hardship of travel."
+    },
+    {
+     "term": "媵人",
+     "en": "ying ren - attendant",
+     "note": "A follower or servant."
+    },
+    {
+     "term": "容臭",
+     "en": "rong xiu - scent bag",
+     "note": "A perfume bag worn by people of old."
+    },
+    {
+     "term": "司業、博士",
+     "en": "si ye, bo shi - Vice-Director and Doctors",
+     "note": "Teaching officers of the Imperial Academy: the Vice-Director was deputy head, the Doctors taught the classics."
+    },
+    {
+     "term": "廩稍",
+     "en": "lin shao - grain allowance",
+     "note": "Monthly grain provided by the government."
+    }
+   ],
+   "background": "Song Lian (1310-1381) was a well-known scholar-official of the early Ming dynasty (1368-1644), called the 'first of the founding literati'. He wrote this piece late in life, as a parting preface for Ma Junze, a young man from his home district. It uses his own hard-working youth to encourage the young, and is a widely read essay on the value of study."
+  }
+ }
+}

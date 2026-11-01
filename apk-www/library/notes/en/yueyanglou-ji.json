@@ -1,0 +1,82 @@
+{
+ "id": "yueyanglou-ji",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "At the request of Teng Zijing, Fan Zhongyan writes a record of the rebuilt Yueyang Tower. From the scenery of Lake Dongting he moves to the joy or sorrow of those who climb the tower in different weather, and ends by setting out the ideal of 'not rejoicing at things, not grieving for oneself' and 'worry before the world worries, rejoice after the world rejoices'.",
+   "translation": "In spring of the fourth year of Qingli, Teng Zijing was demoted to govern Baling commandery. The next year, government ran smoothly and the people were at peace, and all neglected things were taken up. He then rebuilt Yueyang Tower, enlarging its old scale, and carved poems and rhapsodies by worthies of the Tang dynasty (618-907) and men of today upon it; and he asked me to write an essay to record it.\nI looked at the splendid sight of Baling, and it lies in the one lake, Dongting. It holds the distant hills in its mouth and swallows the Yangtze, vast and surging, stretching without shore or limit. In morning light and evening shade, its aspect changes in ten thousand ways. This is the grand view of Yueyang Tower, and earlier writers have described it fully.\nHowever, to the north it reaches the Wu Gorge, to the south as far as the Xiao and Xiang rivers, and exiled officials and poets have often gathered here. Would not their feelings on viewing the scenery be different?\nWhen the rain falls in endless streams and does not clear for months, when the cold wind howls in fury and muddy waves rise to the sky, when sun and stars hide their light and mountains conceal their shapes, when merchants and travellers cannot move on, masts fall and oars break, when at dusk it is dark and dim and tigers roar and apes cry - then someone who climbs this tower may feel that he has left his country and longs for home, that he fears slander and mockery, that all before his eyes is desolate, and he is moved to the utmost sadness.\nBut when the spring is mild and the view is bright, when the waves are calm, the sky above and below shines, and the whole vast expanse is one green; when sand gulls glide and gather, and bright-scaled fish swim, when the angelica on the bank and the orchids on the isle are lush and green; or when long mist has cleared away and a bright moon shines a thousand li, floating light leaps like gold and still shadows sink like jade, and fishermen's songs answer one another - what joy can be greater! When someone climbs this tower, he may feel his heart open and his spirit glad, forgetting favour and disgrace together; raising his cup in the wind, he is filled with joy.\nAlas! I have tried to seek the heart of the humane men of old, and it may differ from the conduct of those two kinds of men. Why? They did not rejoice because of things outside, nor grieve because of themselves. When they were high at court, they worried for their people; when they were far away in the rivers and lakes, they worried for their ruler. So they worried when advancing and worried when retiring. Then when can they ever be happy? Surely they would say: 'Be the first in the world to worry, and the last in the world to rejoice.' Ah! If not for such men, whom should I follow? Written on the fifteenth day of the ninth month of the sixth year.",
+   "keyLines": [
+    {
+     "line": "銜遠山，吞長江，浩浩湯湯，橫無際涯",
+     "en": "It holds the distant hills in its mouth and swallows the Yangtze, vast and surging, stretching without shore or limit.",
+     "note": "This describes the sweep of Lake Dongting as a whole, with a great field of view."
+    },
+    {
+     "line": "霪雨霏霏，連月不開",
+     "en": "When the rain falls in endless streams and does not clear for months.",
+     "note": "The start of one picture: the sorrow of those who climb the tower in dismal rain."
+    },
+    {
+     "line": "春和景明，波瀾不驚，上下天光，一碧萬頃",
+     "en": "When the spring is mild and the view is bright, when the waves are calm, the sky above and below shines, and the whole vast expanse is one green.",
+     "note": "A contrast with the former passage: bright spring light and a calm lake lead into the happy scene."
+    },
+    {
+     "line": "不以物喜，不以己悲",
+     "en": "They did not rejoice because of things outside, nor grieve because of themselves.",
+     "note": "The turning point of the essay: the heart of the humane men of old, above personal gain and loss."
+    },
+    {
+     "line": "先天下之憂而憂，後天下之樂而樂",
+     "en": "Be the first in the world to worry, and the last in the world to rejoice.",
+     "note": "The theme of the essay, which later became a famous line expressing the scholar-official's concern for the country and people."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "謫守",
+     "en": "zhe shou - demoted to be governor",
+     "note": "To be demoted to govern a commandery elsewhere."
+    },
+    {
+     "term": "屬",
+     "en": "zhu - to entrust",
+     "note": "Read zhu; it means to charge or ask."
+    },
+    {
+     "term": "勝狀",
+     "en": "sheng zhuang - splendid view",
+     "note": "Beautiful scenery."
+    },
+    {
+     "term": "遷客騷人",
+     "en": "qian ke sao ren - exiled officials and poets",
+     "note": "Qian ke are demoted officials; sao ren are poets, literary men after the author of the Lisao, Qu Yuan."
+    },
+    {
+     "term": "霪雨",
+     "en": "yin yu - endless rain",
+     "note": "Continuous rain that does not stop."
+    },
+    {
+     "term": "廟堂",
+     "en": "miao tang - the court",
+     "note": "The imperial court."
+    },
+    {
+     "term": "江湖",
+     "en": "jiang hu - rivers and lakes",
+     "note": "The common world away from the court, or remote places."
+    },
+    {
+     "term": "微斯人",
+     "en": "wei si ren - but for such men",
+     "note": "If there were no such men; wei means 'without'."
+    }
+   ],
+   "background": "Fan Zhongyan was a famous minister of the Northern Song (960-1127) who was demoted after the failure of the Qingli reforms. His friend Teng Zijing was likewise demoted, as prefect of Yuezhou, and in 1046 rebuilt Yueyang Tower and asked Fan Zhongyan to write a record. It is said that Fan Zhongyan never went to the tower himself, and wrote this from a painting of Dongting in late autumn sent by Teng Zijing."
+  }
+ }
+}

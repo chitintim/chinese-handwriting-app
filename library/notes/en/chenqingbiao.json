@@ -1,0 +1,87 @@
+{
+ "id": "chenqingbiao",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Li Mi submits a memorial to Emperor Wu of Jin. He describes how he was orphaned young and raised by his grandmother Liu, who is now very old and ill, and begs to be excused from taking office so that he can first care for her. The whole piece moves the reader by feeling, gentle and sincere.",
+   "translation": "Your servant Mi says: Because of my ill-starred fate, I met misfortune early. When I was six months old, my loving father left me. When I was four, my uncle forced my mother to give up her widowhood. My grandmother Liu pitied me, so weak and alone, and brought me up with her own hands. I was often sick as a child, and could not walk until nine; alone and forlorn, I came to manhood. I had no uncles on my father's side and in the end few brothers; my house was in decline and its fortune thin, and I had a child late in life. Outside I had no near relatives of the mourning grades, inside no five-foot boy to answer the gate; I stood alone, bereft, my body and my shadow comforting each other.\nYet Liu was early struck by illness, and has always lain on her bed. I attended her with soup and medicine, and never left her side.\nWhen I came under Your Majesty's holy dynasty, I was bathed in its pure influence. The former governor, your servant Kui, recommended me as filial and incorrupt; later the inspector, your servant Rong, nominated me as a talented scholar. But since there was no one else to provide for my grandmother, I declined and did not go to take the post. An edict came down specially, appointing me a gentleman of the palace; soon I received the state's favour again and was made a Crown Prince's attendant. For one so humble and lowly to serve in the Eastern Palace is something I could not repay even by giving my head. I laid all this out in a memorial and declined the post. The edict was severe and stern, rebuking me for evasion and disrespect. The commandery and county pressed me and urged me on the road; the provincial officers came to my door, as urgent as sparks of fire.\nIf I wanted to obey the edict and hurry away, then Liu's illness is growing worse every day; if I wanted merely to follow my private feelings, then my petition is not allowed. Whether I advance or retreat, I am truly in a sorry plight.\nI humbly consider that your holy dynasty governs the world by filial piety. Even those old people who remain from the former state still receive pity and care; how much more I, who am so lonely and wretched, whose case is especially hard. Moreover, in my youth I served the false dynasty and held posts in the palace gentlemen's offices, for I originally sought advancement and did not value name and integrity. Now I am a captive of a fallen state, of the lowest rank and meanest lot, and I have been raised too high and given generous honours. How would I dare to dither and have hopes of something else? It is only that Liu is like the sun on the western hills, her breath faint and failing, her life in danger and slight, in the morning not able to think of the evening. If I had no grandmother, I would not have reached today; if my grandmother had no me, she would not have her last years. We two, grandmother and grandson, depend on each other for life. That is why, in my small sincerity, I cannot leave her and go far away.\nYour servant Mi is forty-four this year, and my grandmother Liu is ninety-six. So the days in which I can show loyalty to Your Majesty are long, and the days in which I can repay Liu for her care are short. With the private feeling of the crow for its mother, I beg to be allowed to care for her to the end. My hardship is known clearly not only to the people of Shu and to the governors of the two provinces; Heaven above and Earth below have truly seen it together. I hope Your Majesty will take pity on my foolish sincerity and hear my humble wish, so that Liu may by good fortune keep the remainder of her years. In life I shall give my head; in death I shall tie the grass. I cannot bear the fear and dread of a dog or a horse, and respectfully present this memorial for your hearing.",
+   "keyLines": [
+    {
+     "line": "生孩六月，慈父見背",
+     "en": "When I was six months old, my loving father left me.",
+     "note": "It tells his family story: his father died when Li Mi was only six months old, setting the note of loneliness for the whole piece."
+    },
+    {
+     "line": "外無期功強近之親，內無應門五尺之僮；煢煢孑立，形影相弔",
+     "en": "Outside I had no near relatives of the mourning grades, inside no five-foot boy to answer the gate; I stood alone, bereft, my body and my shadow comforting each other.",
+     "note": "Matching lines show how alone he was, with no help in or out of the house, and only his own shadow for company."
+    },
+    {
+     "line": "臣欲奉詔奔馳，則劉病日篤；欲苟順私情，則告訴不許。臣之進退，實為狼狽",
+     "en": "If I wanted to obey the edict and hurry away, then Liu's illness grows worse every day; if I wanted merely to follow my private feelings, then my petition is not allowed.",
+     "note": "It sets out the dilemma between obeying the edict and caring for his grandmother, the contradiction at the heart of the piece."
+    },
+    {
+     "line": "臣無祖母，無以至今日；祖母無臣，無以終餘年",
+     "en": "If I had no grandmother, I would not have reached today; if my grandmother had no me, she would not have her last years.",
+     "note": "The most moving line: in a balanced pair of sentences it expresses the deep bond of mutual dependence between grandmother and grandson."
+    },
+    {
+     "line": "是臣盡節於陛下之日長，報養劉之日短也",
+     "en": "So the days in which I can show loyalty to Your Majesty are long, and the days in which I can repay Liu for her care are short.",
+     "note": "By comparing the length of days, he argues that serving his grandmother first and the emperor after does not conflict. It is the key reason for his request."
+    },
+    {
+     "line": "烏鳥私情，願乞終養",
+     "en": "With the private feeling of the crow for its mother, I beg to be allowed to care for her to the end.",
+     "note": "Using the crow that feeds its mother in return, as a picture of filial love, he states his request: to care for his grandmother until she dies."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "險釁",
+     "en": "xian xin - ill-starred",
+     "note": "Dangerous and unlucky; it means a hard fate."
+    },
+    {
+     "term": "閔凶",
+     "en": "min xiong - mourning and misfortune",
+     "note": "Grief and bad luck, such as the death of a father."
+    },
+    {
+     "term": "舅奪母志",
+     "en": "jiu duo mu zhi - the uncle seized his mother's will",
+     "note": "His uncle forced his mother to remarry."
+    },
+    {
+     "term": "期功強近之親",
+     "en": "ji gong qiang jin zhi qin - relatives of the mourning grades",
+     "note": "Ji and gong are grades of mourning dress; the phrase means fairly close relatives."
+    },
+    {
+     "term": "洗馬",
+     "en": "xian ma - Crown Prince's attendant",
+     "note": "An official title, an attendant of the Crown Prince. The first character is read xian here."
+    },
+    {
+     "term": "孝廉、秀才",
+     "en": "xiao lian, xiu cai - filial and incorrupt, talented scholar",
+     "note": "Subjects under which local officials recommended men for office in the Han and Jin. 'Xiu cai' is what was later called 'mao cai'."
+    },
+    {
+     "term": "烏鳥私情",
+     "en": "wu niao si qing - the private feeling of the crow",
+     "note": "A legend says that young crows feed their mothers in return; it stands for the filial devotion of children to their elders."
+    },
+    {
+     "term": "結草",
+     "en": "jie cao - tying the grass",
+     "note": "From a story of Wei Ke in the Spring and Autumn period: it means repaying a kindness even after death."
+    }
+   ],
+   "background": "Li Mi had been an official of Shu Han. After Shu fell, Emperor Wu of Jin, Sima Yan, summoned him to be the Crown Prince's attendant, and Li Mi wrote this memorial to decline, citing his aged grandmother. It is a leading example of the lyrical prose of the Wei and Jin periods, and it is often said that anyone who reads the 'Memorial Pleading My Case' without tears is not filial."
+  }
+ }
+}

@@ -473,7 +473,7 @@
       B.preview(rep, done);
     },
     describeScope: function (rep) {
-      var sc = rep.scope, e = sc && sc.text ? Lib.entry(sc.text) : null, ttl = e ? e.title.trad : (sc && sc.title) || (sc && sc.text) || '';
+      var sc = rep.scope, e = sc && sc.text ? Lib.entry(sc.text) : null, ttl = e ? Lib.ts(e.title, 'trad') : (sc && sc.title) || (sc && sc.text) || '';
       if (rep.kind !== 'partial') return STR.kindFull;
       return MX.fmt(STR.kindPartial, { what: MX.fmt(sc && sc.copy ? STR.kindCopy : STR.kindText, { title: ttl }) });
     },

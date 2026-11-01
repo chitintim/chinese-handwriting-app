@@ -1,0 +1,87 @@
+{
+ "id": "shesheshe",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Liu Zongyuan tells of Mr Jiang, a snake-catcher of Yongzhou. His family has caught snakes for three generations to pay their tax, and his grandfather and father both died of it, yet he would rather risk death by snakes than have the tax restored. From this the author shows that the poison of taxation is worse than that of snakes.",
+   "translation": "In the wilds of Yongzhou there is a strange snake, black in body with white markings. When it touches grass or trees, they all die; if it bites a man, there is no defence against it. Yet if it is caught and dried, it can be made into medicine that cures leprosy, cramped limbs, neck growths and malignant sores, removes dead flesh and kills the three worms. At first, the imperial physicians, by royal order, collected them, and each year levied two snakes. They called for anyone able to catch them, and the snakes counted as that person's tax, so the people of Yong rushed to do it.\nThere was a man named Jiang whose family had held the profit of this for three generations. I asked him about it, and he said: 'My grandfather died of this, my father died of this, and now I have taken it over for twelve years and have nearly died several times.' As he spoke his face looked deeply grieved.\nI felt sad for him, and said: 'Do you hate it? I could tell the official in charge, change your duty and restore your tax. How would that be?' Mr Jiang was deeply grieved, and tears filled his eyes. He said: 'Sir, are you going to take pity on me and let me live? But the misfortune of this duty of mine is not as bad as the misfortune of having my tax restored. If I had not taken up this duty, I would long ago have been in distress. My family has lived in this village for three generations, sixty years up to now, and the lives of my neighbours get tighter by the day. They have used up everything the land yields and drained all that their huts bring in; they cry out and move away, hungry and thirsty, collapsing and falling, exposed to wind and rain, braving cold and heat, breathing in the poisonous vapours, and often dying, piled upon one another.\nIn the past, of the households that lived beside my grandfather, not one in ten remains now; of those that lived beside my father, only two or three in ten remain; of those that have lived near me these twelve years, only four or five in ten are left. They have died or moved away, nothing else. Only I have survived by catching snakes. When the fierce clerks come to my village, they shout east and west, and charge about south and north, and make such a clamour and fright that even chickens and dogs cannot be at peace. I get up cautiously and look at my jar; if my snakes are still alive, then I lie down at ease. I feed them with care and present them at the proper time. Then I return and eat contentedly what my own land produces, and live out my years. In a year I risk death twice; the rest of the time I am happy and content. How could it compare with my neighbours, who face this every day! Even if I die at this work now, it will be later than my neighbours' deaths. How would I dare to hate it?'\nWhen I heard this I was even sadder. Confucius said: 'Harsh government is fiercer than a tiger.' I used to doubt this; now, looking at Mr Jiang, I believe it. Alas! Who would have known that there is something more poisonous than this snake - the poison of taxation! So I have written this discourse, to wait for those who inspect the customs of the people to find it.",
+   "keyLines": [
+    {
+     "line": "永州之野產異蛇，黑質而白章，觸草木盡死",
+     "en": "In the wilds of Yongzhou there is a strange snake, black in body with white markings. When it touches grass or trees, they all die.",
+     "note": "The opening describes the snake's deadly venom, as a foil to the greater poison of taxes to come."
+    },
+    {
+     "line": "吾祖死於是，吾父死於是，今吾嗣為之十二年，幾死者數矣",
+     "en": "My grandfather died of this, my father died of this, and now I have taken it over for twelve years and have nearly died several times.",
+     "note": "Mr Jiang tells what has happened over three generations of snake-catching; grandfather and father both faced death."
+    },
+    {
+     "line": "君將哀而生之乎？則吾斯役之不幸，未若復吾賦不幸之甚也",
+     "en": "Sir, are you going to take pity on me and let me live? But the misfortune of this duty of mine is not as bad as the misfortune of having my tax restored.",
+     "note": "The turn of the essay: Jiang would rather catch snakes than have the tax restored, which shows that the tax is crueller."
+    },
+    {
+     "line": "悍吏之來吾鄉，叫囂乎東西，隳突乎南北",
+     "en": "When the fierce clerks come to my village, they shout east and west, and charge about south and north.",
+     "note": "The tax clerks harass the village like wolves and tigers, so that even chickens and dogs have no peace: an exposure of harsh government."
+    },
+    {
+     "line": "苛政猛於虎也",
+     "en": "Harsh government is fiercer than a tiger.",
+     "note": "He quotes Confucius to answer Jiang's story: harsh rule is more fearful than a wild beast."
+    },
+    {
+     "line": "孰知賦斂之毒，有甚是蛇者乎",
+     "en": "Who would have known that there is something more poisonous than this snake - the poison of taxation!",
+     "note": "The key sentence of the essay: through a rhetorical question it says that the poison of taxation is worse than that of snakes."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "腊",
+     "en": "xi - dried meat",
+     "note": "Dried meat; here, to dry the snake in the air. Read xi."
+    },
+    {
+     "term": "大風、攣踠、瘺、癘",
+     "en": "da feng, luan wan, lou, li - leprosy and other illnesses",
+     "note": "Several ancient diseases: leprosy, limbs bent so they cannot stretch, neck swellings, and malignant sores."
+    },
+    {
+     "term": "三蟲",
+     "en": "san chong - the three worms",
+     "note": "In old belief, the parasites in the human body."
+    },
+    {
+     "term": "租入",
+     "en": "zu ru - income from tax",
+     "note": "Tax revenue; here, to count against the tax owed."
+    },
+    {
+     "term": "蒞是者",
+     "en": "li shi zhe - the one in charge",
+     "note": "The official in charge of the matter; li means to take up an office."
+    },
+    {
+     "term": "恂恂",
+     "en": "xun xun - cautious",
+     "note": "Careful and respectful."
+    },
+    {
+     "term": "缶",
+     "en": "fou - jar",
+     "note": "A pottery jar for holding snakes."
+    },
+    {
+     "term": "觀人風者",
+     "en": "guan ren feng zhe - those who inspect the people's customs",
+     "note": "Officials who collected songs and sayings of the people in order to learn their conditions."
+    }
+   ],
+   "background": "Liu Zongyuan wrote the Discourse on the Snake-Catcher while he was in exile in Yongzhou, using the account of a snake-catcher to record the people's suffering under heavy and varied taxes. A 'shuo' (discourse) is a form that can both narrate and argue; here narrative leads to argument, as a criticism of government at the time."
+  }
+ }
+}

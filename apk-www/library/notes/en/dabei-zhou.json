@@ -1,0 +1,50 @@
+{
+ "id": "dabei-zhou",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "The Great Compassion Mantra is a dharani found in the sutra of the Thousand-Handed, Thousand-Eyed Guanyin. By tradition, reciting it brings one into harmony with the great compassionate vow of Guanyin (Avalokiteshvara), and it is one of the most widely recited mantras in Chinese Buddhism.",
+   "translation": "This dharani is the Sanskrit sounds written in Chinese characters. By tradition it is recited, not translated word by word, and so no line-by-line translation is given here. What can be said is its general shape.\nThe opening, 「南無喝囉怛那哆囉夜耶」, is taking refuge in the Three Jewels (the Buddha, the Dharma and the Sangha). Then 「南無阿唎耶，婆盧羯帝爍缽囉耶」 pays homage to the noble Avalokiteshvara, Guanyin. After that the bodhisattva is praised as bodhisattva, great being (mahasattva), and the one of great compassion (mahakarunika).\nThe middle part opens with 「唵」 (om) and is a long chain of names, invocations and praises, calling on the blessing of the bodhisattva. Many phrases are closed with 「娑婆訶」 (svaha), each one marking fulfilment. At the end the refuge in the Three Jewels and in Guanyin is made once more, and the mantra closes with 「唵悉殿都，漫哆囉，跋陀耶，娑婆訶」, a wish that the mantra be auspicious and bear fruit.\nScholars and teachers differ about the exact meaning of many phrases, so no translation of each line is attempted here.",
+   "glossary": [
+    {
+     "term": "咒與音譯",
+     "en": "zhou yu yinyi - mantras and transliteration",
+     "note": "The word 'zhou' (mantra) stands for the Sanskrit dharani. Tradition keeps the original sounds, on the ground that a mantra is secret and so is not translated. In recitation the weight falls on the sound and on steady attention, not on understanding each word."
+    },
+    {
+     "term": "南無喝囉怛那哆囉夜耶",
+     "en": "na mo he la dan na duo la ye ye - Namo ratna-trayaya",
+     "note": "The Sanskrit namo ratna-trayaya: taking refuge in the Three Jewels (Buddha, Dharma, Sangha). 'Ratna' is jewel, and 'trayaya' means 'to the three'."
+    },
+    {
+     "term": "南無阿唎耶，婆盧羯帝爍缽囉耶",
+     "en": "na mo a li ye, po lu jie di shuo bo la ye - Namo aryavalokiteshvaraya",
+     "note": "A transcription of the Sanskrit namo aryavalokiteshvaraya, 'homage to the noble Avalokiteshvara'. 'Arya' means noble or holy, and the long sounds that follow are Avalokiteshvara, that is, Guanyin."
+    },
+    {
+     "term": "摩訶薩埵",
+     "en": "mo he sa duo - mahasattva",
+     "note": "Sanskrit mahasattva, 'great being'. It is an honorific for a bodhisattva, one who has made great vows and carries out great practice."
+    },
+    {
+     "term": "唵",
+     "en": "an - om, the sacred syllable",
+     "note": "The Sanskrit om, a sacred sound at the start of mantras, often used to call on a deity and gather the mind. It is not given an ordinary translation."
+    },
+    {
+     "term": "娑婆訶",
+     "en": "suopohe - svaha",
+     "note": "The Sanskrit svaha, a word of fulfilment at the end of a mantra, meaning completion and good fortune. It comes up many times in the Great Compassion Mantra, closing one passage after another."
+    },
+    {
+     "term": "那囉謹墀",
+     "en": "na luo jin chi - Nilakantha",
+     "note": "Often taken to correspond to Sanskrit nilakantha, 'blue neck', a name for the 'blue-necked' form of Guanyin on which the tradition of this mantra rests. This reading is widely repeated, but it comes from later scholarship and there are other interpretations."
+    }
+   ],
+   "background": "The usual text follows the version translated in the Tang dynasty (618-907) by Bhagavaddharma, a monk from western India. It has 84 phrases, spread very widely after the Tang and Song dynasties, and came to be tied to rituals such as the Great Compassion Repentance. The text used for the copybook is the line-divided version on Wikisource; printed recitation texts differ slightly in a few characters (for example the choice of characters in two or three spots)."
+  }
+ }
+}

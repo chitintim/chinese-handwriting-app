@@ -1,0 +1,97 @@
+{
+ "id": "xiangjixuanzhi",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Gui Youguang takes the old family study, Xiangji Studio, as his thread. He first describes its quiet charm after repair, then recalls the old nurse, his mother and his grandmother, and in a later addition writes about his dead wife and the loquat tree in the courtyard, laying his grief on things remaining while people are gone.",
+   "translation": "Xiangji Studio was once a small pavilion on the south side. The room was barely ten feet square, big enough for one person to live in. The old house of a hundred years: dust and mud seeped in, rain poured down, and whenever I moved my desk I looked around and found nowhere to put it. It also faced north and could get no sun, and after noon it was already dim. I repaired it a little, so that it no longer leaked from above. In front I opened four windows and built a wall round the courtyard to catch the southern sun; the light reflected back, and the room at last was bright. I also planted orchids, osmanthus, bamboo and trees in the courtyard, and the old railings became lovelier for it. I borrowed books until the shelves were full, lay up and down, chanted and sang, or sat in dim stillness, and the ten thousand sounds of the world could be heard. The courtyard steps were quiet; little birds came from time to time to peck at food, and did not fly off when people came. On the nights of the full moon, the bright moon covers half the wall, the osmanthus shadows are dappled, and when the wind moves them they sway, tinkling and lovely. Yet in living here I found much to be glad about, and also much to grieve over.\n\nBefore this, the courtyard ran through from north to south as one. When my uncles divided the household and set up separate stoves, many small doors and walls were put up inside and out, everywhere. Dogs bark in the east, and in the west they bark back; guests cross the kitchen to dine; chickens roost in the hall. The courtyard first became a fence, and then a wall: it changed twice in all.\n\nThere was an old woman in our family who had once lived in this room. She had been the maid of my late grandmother, and had nursed two generations; my late mother treated her very kindly. The west side of the room joins the inner women's quarters, and my mother had once come here. The old woman often said to me: \"Your mother stood just here.\" She added: \"Your elder sister was in my arms, crying; your mother tapped the door with a finger and said, 'Are you cold, my child? Do you want to eat?' and I answered her from outside the board.\" Before she had finished speaking I wept, and the old woman wept too.\n\nFrom the time I bound up my hair and began to read in the studio, one day my grandmother came by and said: \"My child, I have not seen your shadow for so long. Why are you silent here all day? You are very like a girl!\" When she left, she closed the door with her hand and said to herself: \"Our family has not seen its reading bear fruit for a long time; can we look forward to this child's success?\" After a while she came back holding an ivory tablet and said: \"This is what my grandfather, Lord Taichang, held when he attended court in the Xuande reign. One day you will use it.\" Looking at the traces she left, it seems like yesterday, and I cry out long, unable to stop myself.\n\nEast of the studio was once a kitchen, and people going there passed in front of the studio. I kept my window shut and lived there, and after a long time I could tell who was passing by their footsteps. The studio has been struck by fire four times and was not burned; surely some god protected it.\n\nThe Student of Xiangji says: Widow Qing of Shu guarded a cinnabar mine, and its profit was the greatest under Heaven; later the First Emperor of Qin built a terrace in honour of the woman. Liu Xuande and Cao Cao contended for the empire, and Zhuge Kongming rose from Longzhong; while those two were still obscure in their corners, how could the world have known them? Here I am, a small man in a broken house, raising my brows and blinking, saying there is a rare view; if anyone knew, would they not call me no different from the frog in the well?\n\nAfter I wrote this record, five years later my wife came as a bride. From time to time she came to the studio, asked me about ancient matters, or leaned on the table to learn to write. When my wife went home to visit her parents, she repeated what her younger sisters said: \"We hear that your family has a ge-zi; and what is a ge-zi?\" Six years after that my wife died, and the room fell into ruin and was not repaired. Two years after that, I lay ill for a long time with nothing to do, and had the south pavilion rebuilt; its plan was a little different from before. But after that I was mostly away, and did not often live there. In the courtyard there is a loquat tree, planted by my wife's own hand the year she died. Now it stands tall as a canopy.",
+   "keyLines": [
+    {
+     "line": "百年老屋，塵泥滲漉，雨澤下注，每移案，顧視無可置者",
+     "en": "The old house of a hundred years: dust and mud seeped in, rain poured down, and whenever I moved my desk I looked around and found nowhere to put it.",
+     "note": "It describes how run-down and leaky the study was, preparing for the repair that follows."
+    },
+    {
+     "line": "然余居於此，多可喜，亦多可悲",
+     "en": "Yet in living here I found much to be glad about, and also much to grieve over.",
+     "note": "The hinge of the piece from joy to sorrow, moving from description of the scene to family history."
+    },
+    {
+     "line": "東犬西吠，客逾庖而宴，雞棲於廳",
+     "en": "Dogs bark in the east, and in the west they bark back; guests cross the kitchen to dine; chickens roost in the hall.",
+     "note": "After the uncles divided the family property, the courtyard was cut into small gates and walls, a hint of a declining family and distant kin."
+    },
+    {
+     "line": "嫗又曰：「汝姊在吾懷，呱呱而泣；娘以指叩門扉曰：『兒寒乎？欲食乎？』吾從板外相為應答。」",
+     "en": "The old woman added: 'Your elder sister was in my arms, crying; your mother tapped the door with a finger and said, \"Are you cold, my child? Do you want to eat?\" and I answered her from outside the board.'",
+     "note": "Through the old nurse's account of his late mother, a moving detail evokes his memory of her."
+    },
+    {
+     "line": "吾家讀書久不效，兒之成，則可待乎",
+     "en": "Our family has not seen its reading bear fruit for a long time; can we look forward to this child's success?",
+     "note": "His grandmother's remark to herself, both hope and worry, which leads to the gift of the ivory tablet."
+    },
+    {
+     "line": "瞻顧遺跡，如在昨日，令人長號不自禁",
+     "en": "Looking at the traces she left, it seems like yesterday, and I cry out long, unable to stop myself.",
+     "note": "A direct outpouring of deep grief for his grandmother and the past."
+    },
+    {
+     "line": "余區區處敗屋中，方揚眉瞬目，謂有奇景；人知之者，其謂與埳井之蛙何異",
+     "en": "Here I am, a small man in a broken house, raising my brows and blinking, saying there is a rare view; if anyone knew, would they not call me no different from the frog in the well?",
+     "note": "Mocking himself for boasting of a fine view in a humble room, in words that are modest and tinged with a sense of failure."
+    },
+    {
+     "line": "庭有枇杷樹，吾妻死之年所手植也。今已亭亭如蓋矣",
+     "en": "In the courtyard there is a loquat tree, planted by my wife's own hand the year she died. Now it stands tall as a canopy.",
+     "note": "The piece closes by letting a scene hold the feeling: the grown tree shows that his wife has been gone for many years."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "閤子",
+     "en": "ge zi - small pavilion",
+     "note": "A small room or pavilion; here, what Xiangji Studio used to be."
+    },
+    {
+     "term": "項脊",
+     "en": "xiang ji - back of the neck and spine",
+     "note": "Gui Youguang's ancestors once lived at Xiangji Jing in Taicang, Jiangsu; he named his study after it so as not to forget them."
+    },
+    {
+     "term": "諸父異爨",
+     "en": "zhu fu yi cuan - uncles set up separate stoves",
+     "note": "The uncles divided the household, each cooking for himself."
+    },
+    {
+     "term": "先妣、先大母",
+     "en": "xian bi, xian da mu - my late mother, my late grandmother",
+     "note": "His dead mother and his dead grandmother."
+    },
+    {
+     "term": "象笏",
+     "en": "xiang hu - ivory tablet",
+     "note": "An ivory tablet held by officials at court in ancient times."
+    },
+    {
+     "term": "太常公",
+     "en": "Tai chang gong - Lord Taichang",
+     "note": "The grandfather of his grandmother, generally taken to be Xia Chang, who was Minister of the Court of Imperial Sacrifices in the Xuande period."
+    },
+    {
+     "term": "埳井之蛙",
+     "en": "kan jing zhi wa - the frog in a shallow well",
+     "note": "A frog in a shallow well, a figure for narrow views."
+    },
+    {
+     "term": "蜀清、丹穴",
+     "en": "Shu Qing, dan xue - Widow Qing of Shu, the cinnabar cave",
+     "note": "A widow named Qing in Shu held a cinnabar mine, and the First Emperor of Qin built a terrace in her honour; the author uses her to say that talent can lie hidden and unknown to the world."
+    }
+   ],
+   "background": "Gui Youguang (1507-1571) was a prose writer of the Ming dynasty (1368-1644), called the 'first of Ming prose'. 'A Record of Xiangji Studio' is an early work, to which he later added the passage about his dead wife. It writes of deep feeling through plain household small matters, and is a leading example of Gui Youguang's lyrical prose."
+  }
+ }
+}

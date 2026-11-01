@@ -1,0 +1,92 @@
+{
+ "id": "zoujifengqiwang",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Zou Ji hears his wife, his concubine and a guest all say he is handsomer than Lord Xu, and from this he sees how easily a person is deceived. He uses it as a parable to advise King Wei of Qi to open the way for criticism. The king issues an order inviting remonstrance, and in the end Qi makes the whole world submit without a battle.",
+   "translation": "Zou Ji was over eight chi tall, and handsome in looks and bearing. One morning, putting on his robe and cap and looking in the mirror, he asked his wife: 'Which is better looking, I or Lord Xu of the north of the city?' His wife said: 'You are far more handsome - how could Lord Xu match you!' Lord Xu of the north of the city was the most handsome man in the state of Qi. Zou Ji was not sure of himself, and asked his concubine again: 'Which is more handsome, I or Lord Xu?' The concubine said: 'How could Lord Xu match you!' The next day, a guest came from outside, and sat and talked with him. He asked: 'Who is more handsome, Lord Xu or I?' The guest said: 'Lord Xu is not as handsome as you!'\nThe next day Lord Xu came, and Zou Ji looked at him closely and felt he was not his equal. He looked in the mirror at himself, and found he was far, far short. In the evening, lying in bed, he thought it over and said: 'My wife praises my looks because she favours me; my concubine praises me because she fears me; the guest praises me because he wants something from me.'\nSo he went to court and saw King Wei, and said: 'Your servant truly knows that I am not as handsome as Lord Xu. My wife favours me, my concubine fears me, and my guest wants something from me, and so all said I was handsomer than Lord Xu. Now Qi has a thousand li of land and a hundred and twenty cities. The women of the palace and those around you all favour Your Majesty; the ministers at court all fear Your Majesty; and everyone within the four borders wants something from Your Majesty. Seen from this, Your Majesty is badly deceived.' The king said: 'Good.'\nHe then issued an order: 'Of all the ministers, officials and people, whoever can criticise my faults to my face will receive the highest reward; whoever submits a written remonstrance will receive the middle reward; whoever can criticise and discuss in the market or at court so that it reaches my ears will receive the lowest reward.' When the order was first issued, the ministers came forward with remonstrance, and the gate and courtyard were as crowded as a market. After some months, they came forward only now and then. After a year, even if people wished to speak, there was nothing to bring forward. When Yan, Zhao, Han and Wei heard of it, they all came to pay court to Qi. This is what is meant by winning a victory at court.",
+   "keyLines": [
+    {
+     "line": "我孰與城北徐公美",
+     "en": "Which is better looking, I or Lord Xu of the north of the city?",
+     "note": "The whole piece unfolds from this question, using a small family matter as the lead-in for a remonstrance."
+    },
+    {
+     "line": "吾妻之美我者，私我也；妾之美我者，畏我也；客之美我者，欲有求於我也",
+     "en": "My wife praises my looks because she favours me; my concubine praises me because she fears me; the guest praises me because he wants something from me.",
+     "note": "From his own experience Zou Ji draws three reasons for being flattered: this is the key step of the reasoning."
+    },
+    {
+     "line": "宮婦左右，莫不私王；朝廷之臣，莫不畏王；四境之內，莫不有求于王",
+     "en": "The women of the palace and those around you all favour Your Majesty; the ministers at court all fear Your Majesty; and everyone within the four borders wants something from Your Majesty.",
+     "note": "He extends his personal experience to the king, matching the three earlier sentences one by one, and shows how deeply King Wei was deceived."
+    },
+    {
+     "line": "王之敝甚矣",
+     "en": "Your Majesty is badly deceived.",
+     "note": "The conclusion is stated: the king was seriously blinded."
+    },
+    {
+     "line": "能面刺寡人之過者，受上賞",
+     "en": "Whoever can criticise my faults to my face will receive the highest reward.",
+     "note": "King Wei orders that criticism be welcomed and sets graded rewards to encourage different ways of remonstrating."
+    },
+    {
+     "line": "令初下，群臣進諫，門庭若市",
+     "en": "When the order was first issued, the ministers came forward with remonstrance, and the gate and courtyard were as crowded as a market.",
+     "note": "It describes the busy scene after the order for remonstrance was issued."
+    },
+    {
+     "line": "此所謂戰勝於朝廷",
+     "en": "This is what is meant by winning a victory at court.",
+     "note": "The summing up: by ordering government well and accepting advice, one can make the world submit without needing to use troops."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "脩",
+     "en": "xiu - height",
+     "note": "A variant of the character for 'to cultivate'; here it means a man's height."
+    },
+    {
+     "term": "昳麗",
+     "en": "yi li - handsome",
+     "note": "Glowing and fine-looking."
+    },
+    {
+     "term": "私",
+     "en": "si - to favour",
+     "note": "To be partial to."
+    },
+    {
+     "term": "威王",
+     "en": "Wei Wang - King Wei",
+     "note": "King Wei of Qi, a ruler of the state of Qi in the Warring States period."
+    },
+    {
+     "term": "面刺",
+     "en": "mian ci - to criticise to the face",
+     "note": "To blame openly, in person."
+    },
+    {
+     "term": "謗議",
+     "en": "bang yi - to discuss faults",
+     "note": "To discuss people's faults openly; it does not mean slander."
+    },
+    {
+     "term": "期年",
+     "en": "ji nian - a full year",
+     "note": "A whole year."
+    },
+    {
+     "term": "朝",
+     "en": "chao - to pay court",
+     "note": "To come before the king; here, to come and pay homage."
+    }
+   ],
+   "background": "This piece comes from the Strategies of the Warring States, the 'Qi' section. It records how Zou Ji persuaded King Wei of Qi to accept criticism by means of a comparison. The argument moves from the small to the great, step by step, and is a typical case of a Warring States persuader using reason to bring a ruler round."
+  }
+ }
+}

@@ -2,15 +2,18 @@
  "id": "hanshi-tie",
  "title": {
   "trad": "黃州寒食詩帖",
-  "simp": "黄州寒食诗帖"
+  "simp": "黄州寒食诗帖",
+  "en": "Cold Food Observance Poems"
  },
  "author": {
   "trad": "蘇軾",
-  "simp": "苏轼"
+  "simp": "苏轼",
+  "en": "Su Shi"
  },
  "dynasty": {
   "trad": "宋",
-  "simp": "宋"
+  "simp": "宋",
+  "en": "Song"
  },
  "source": "https://zh.wikisource.org/wiki/寒食雨二首",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/寒食雨二首",
@@ -20,7 +23,8 @@
    "id": "qi1",
    "title": {
     "trad": "其一",
-    "simp": "其一"
+    "simp": "其一",
+    "en": "Poem 1"
    },
    "body": {
     "trad": "自我來黃州，已過三寒食。年年欲惜春，春去不容惜。今年又苦雨，兩月秋蕭瑟。臥聞海棠花，泥污燕支雪。暗中偷負去，夜半真有力。何殊病少年，病起頭已白。",
@@ -31,7 +35,8 @@
    "id": "qi2",
    "title": {
     "trad": "其二",
-    "simp": "其二"
+    "simp": "其二",
+    "en": "Poem 2"
    },
    "body": {
     "trad": "春江欲入戶，雨勢來不已。小屋如漁舟，濛濛水雲裏。空庖煮寒菜，破竈燒濕葦。那知是寒食，但見烏銜紙。君門深九重，墳墓在萬里。也擬哭途窮，死灰吹不起。",

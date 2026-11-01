@@ -1,0 +1,788 @@
+{
+ "id": "caigentan",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "q01": {
+   "summary": "The opening section weighs the cost of keeping to the Way against the cost of clinging to power, then speaks of adversity as a whetstone, of plainness as the true flavour, of balancing stillness and movement, and of looking inward. Its message: better a moment of loneliness than an eternity of desolation.",
+   "translation": "Those who dwell in the Way and virtue are lonely for a moment; those who cling to power and influence are desolate for ten thousand ages. So the person of insight looks at what lies beyond things and thinks of the self that will remain after death, preferring a moment of loneliness to ten thousand ages of desolation. The less one has been in the world, the less one is stained by it; the more one has been through, the deeper one's scheming grows. So the noble person had better be simple and a little slow than worldly-wise, and better be careless and wild than meticulously correct. The noble person's inner purpose is like a clear sky and a bright sun, and should not be hidden from anyone; the noble person's talent is like jade and pearls laid away, and should not be easily seen. Of the glitter of power, profit and splendour, he who stays away is clean, but he who comes close and is not stained is cleaner still; of cunning tricks and devices, he who does not know them is lofty, but he who knows them and does not use them is loftier still. To hear unwelcome words in your ears all the time, and to have things going against your heart all the time, is the whetstone for advancing in virtue and in practice. If every word pleased the ear and every matter pleased the heart, you would be burying your life in poisoned wine. In a fierce wind and furious rain, the birds are anxious; in clear skies and a gentle breeze, grass and trees are glad. So Heaven and Earth cannot do without harmony for a single day, and the human heart cannot do without joy for a single day. Rich, fatty, sharp and sweet foods are not the true flavour; the true flavour is plain. A marvellous or extraordinary person is not the perfected person; the perfected person is simply ordinary. Heaven and Earth are silent and still, yet the working of qi does not pause for a breath; the sun and moon race through day and night, yet their steady brightness has not changed for ten thousand ages. So the noble person should keep a taut mind in leisure, and an easy enjoyment in busy times. In the deep night, when all is quiet, sit alone and look into the heart; only then do you feel false thoughts run dry and the true self stand revealed, and from this you gain great delight; and having felt the true appear, you find that falsehood cannot escape, and from this you feel great shame. Harm has always grown out of favour, so when things are going to your liking, turn back early; failure may turn into success, so when things go against you, do not let go too soon.",
+   "keyLines": [
+    {
+     "line": "棲守道德者，寂寞一時；依附權勢者，淒涼萬古",
+     "en": "Those who dwell in the Way and virtue are lonely for a moment; those who cling to power and influence are desolate for ten thousand ages.",
+     "note": "The famous opening line of the whole book. It sets the fate of those who keep to the Way against that of those who attach themselves to power by the length of time each lasts."
+    },
+    {
+     "line": "君子之心事，天青日白，不可使人不知",
+     "en": "The noble person's inner purpose is like a clear sky and a bright sun, and should not be hidden from anyone.",
+     "note": "The noble person (junzi) has a bright and open heart, and has nothing to conceal in what he does."
+    },
+    {
+     "line": "耳中常聞逆耳之言，心中常有拂心之事，纔是進德修行的砥石",
+     "en": "To hear unwelcome words in your ears all the time, and to have things going against your heart all the time, is the whetstone for advancing in virtue and in practice.",
+     "note": "Words that grate and things that go wrong are the whetstone on which character is sharpened."
+    },
+    {
+     "line": "醲肥辛甘非真味，真味只是淡；神奇卓異非至人，至人只是常",
+     "en": "Rich, fatty, sharp and sweet foods are not the true flavour; the true flavour is plain. A marvellous or extraordinary person is not the perfected person; the perfected person is simply ordinary.",
+     "note": "The true flavour lies in plainness and the true person in the ordinary: a theme the book returns to again and again."
+    },
+    {
+     "line": "君子閒時要有喫緊的心思，忙處要有悠閒的趣味",
+     "en": "So the noble person should keep a taut mind in leisure, and an easy enjoyment in busy times.",
+     "note": "Do not slacken in idle times and do not panic in busy ones; keep the mind in balance."
+    },
+    {
+     "line": "恩裏由來生害，故快意時，須早回頭；敗後或反成功，故拂心處，莫便放手",
+     "en": "Harm has always grown out of favour, so when things are going to your liking, turn back early; failure may turn into success, so when things go against you, do not let go too soon.",
+     "note": "Be on guard when things go well, and do not give up easily when they go badly."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "達人",
+     "en": "da ren - 'a person of insight'",
+     "note": "Someone who understands how things are and can see them in a larger light."
+    },
+    {
+     "term": "玉韞珠藏",
+     "en": "yu yun zhu cang - 'jade and pearls laid away'",
+     "note": "Fine jade and pearls kept hidden, a figure for talent that is not put on show."
+    },
+    {
+     "term": "砥石",
+     "en": "di shi - 'whetstone'",
+     "note": "A stone for sharpening blades, and by extension anything that hones a person."
+    },
+    {
+     "term": "鴆毒",
+     "en": "zhen du - 'poisoned wine'",
+     "note": "Wine laced with the feathers of the zhen bird, a poison; the word is used for any deadly poison."
+    },
+    {
+     "term": "至人",
+     "en": "zhi ren - 'the perfected person'",
+     "note": "A person whose moral cultivation has reached the highest level."
+    },
+    {
+     "term": "喜神",
+     "en": "xi shen - 'the spirit of joy'",
+     "note": "A heart that is glad and at ease."
+    },
+    {
+     "term": "慚忸",
+     "en": "can niu - 'shame and unease'",
+     "note": "Ashamed and ill at ease."
+    }
+   ],
+   "background": "The Caigentan (Vegetable Roots Talk) was written by Hong Yingming, style name Zicheng, who called himself the Daoist Huanchu. He is thought to have lived in the Wanli reign (1573-1620) of the Ming dynasty (1368-1644), and little is known of his life. The book blends the thought of Confucianism, Buddhism and Daoism. Many of its maxims borrow from earlier writers, so the source of an individual line is often hard to pin down."
+  },
+  "q02": {
+   "summary": "This section is about contentment with plain living and holding to one's integrity, giving way to others in the world, and leaving room in everything: those who eat coarse food are mostly pure, give others a step on a narrow path, do not boast of merit, and do not seek to have everything complete.",
+   "translation": "Those who eat goosefoot and amaranth are mostly as pure as ice and jade; those who wear robes of state and eat fine food are willing to bend the knee and wear a servant's face. For the will shines clear in plain living, and integrity is lost in rich fare. Make the fields in front of you wide, so that no one sighs at unfairness; let the benefits you leave behind flow long, so that people remember you with unfailing thoughts. Where the path is narrow, leave a step for others to pass; where a flavour is rich, take off three parts of ten so that others can enjoy it. This is the most peaceful and happy way to live in the world. If you have no great or lofty undertaking, but can shake off worldly sentiment, you will join the ranks of the renowned; if you have no great gain in learning, but can strip away the burden of things, you will rise to the realm of the sages. In friendship, bring three parts of chivalry; in being a person, keep a little of the plain heart. Do not put yourself ahead of others in favour and profit, and do not fall behind others in virtue and achievement. Do not take pleasure beyond your share, and do not cultivate yourself less than your share. In the world, to yield a step is to stand high, and a step back is the groundwork for a step forward; to be a little more generous to others is a blessing, and to benefit others is truly the root of benefiting yourself. Merit that covers the world cannot outweigh the single word 'boast'; a sin that fills the sky cannot outweigh the single word 'repent'. A whole and fine reputation should not be held by yourself alone; share some with others, and you can keep harm away and preserve yourself. A shameful deed or a stained name should not be pushed wholly onto others; take some of it upon yourself, and you can hide your light and nourish your virtue. In everything leave a feeling of something over and unfinished, and then the Maker of things cannot envy you and the spirits cannot harm you. If you always insist on completing your work and filling up your achievements, then if no trouble arises within, worry will surely come from outside.",
+   "keyLines": [
+    {
+     "line": "藜口莧腸者，多冰清玉潔；袞衣玉食者，甘婢膝奴顏",
+     "en": "Those who eat goosefoot and amaranth are mostly as pure as ice and jade; those who wear robes of state and eat fine food are willing to bend the knee and wear a servant's face.",
+     "note": "The poor can often keep their integrity, while the rich easily lose theirs."
+    },
+    {
+     "line": "徑路窄處，留一步與人行；滋味濃的，減三分讓人嗜",
+     "en": "Where the path is narrow, leave a step for others to pass; where a flavour is rich, take off three parts of ten so that others can enjoy it.",
+     "note": "The most quoted piece of advice in this section on getting along in the world: give way and share."
+    },
+    {
+     "line": "交友須帶三分俠氣，做人要存一點素心",
+     "en": "In friendship, bring three parts of chivalry; in being a person, keep a little of the plain heart.",
+     "note": "A friend should be loyal and generous; a person should hold on to a simple, unspoiled heart."
+    },
+    {
+     "line": "處世讓一步為高，退步即進步的張本；待人寬一分是福，利人實利己的根基",
+     "en": "In the world, to yield a step is to stand high, and a step back is the groundwork for a step forward; to be a little more generous to others is a blessing, and to benefit others is truly the root of benefiting yourself.",
+     "note": "Yielding makes progress later possible, and generosity and helping others also pave one's own way."
+    },
+    {
+     "line": "蓋世功勞，當不得一個矜字；彌天罪過，當不得一個悔字",
+     "en": "Merit that covers the world cannot outweigh the single word 'boast'; a sin that fills the sky cannot outweigh the single word 'repent'.",
+     "note": "Boasting wipes out achievement, and repentance can balance out wrongdoing."
+    },
+    {
+     "line": "事事留個有餘不盡的意思，便造物不能忌我，鬼神不能損我",
+     "en": "In everything leave a feeling of something over and unfinished, and then the Maker of things cannot envy you and the spirits cannot harm you.",
+     "note": "Do not seek perfection in everything, and you avoid the fate of the vessel that is filled to the brim and then spills."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "藜口莧腸",
+     "en": "li kou xian chang - 'a mouth of goosefoot, a belly of amaranth'",
+     "note": "Living on wild greens such as goosefoot and amaranth: coarse food, a poor life."
+    },
+    {
+     "term": "袞衣玉食",
+     "en": "gun yi yu shi - 'robes of state and fine food'",
+     "note": "「袞衣」 was the ceremonial dress of the Son of Heaven and the highest dukes. The phrase means the rich life of splendid dress and fine food."
+    },
+    {
+     "term": "婢膝奴顏",
+     "en": "bi xi nu yan - 'a maid's knees, a slave's face'",
+     "note": "To bow and fawn like a servant."
+    },
+    {
+     "term": "澹泊",
+     "en": "dan bo - 'plainness'",
+     "note": "Quiet and with few desires. It is the same as 「淡泊」."
+    },
+    {
+     "term": "素心",
+     "en": "su xin - 'the plain heart'",
+     "note": "An unaffected, original heart."
+    },
+    {
+     "term": "張本",
+     "en": "zhang ben - 'groundwork'",
+     "note": "Preparation made in advance for what is to come, a base."
+    },
+    {
+     "term": "矜",
+     "en": "jin - 'boasting'",
+     "note": "To praise oneself and be conceited."
+    },
+    {
+     "term": "韜光養德",
+     "en": "tao guang yang de - 'to hide one's light and nourish one's virtue'",
+     "note": "To conceal one's brightness and cultivate one's virtue."
+    }
+   ],
+   "background": "The idea in this section of keeping to a plain and quiet life to make the will clear is shared by the Laozi and Zhuangzi and by the saying of Zhuge Liang, the Three Kingdoms (220-280) statesman, that 'only plainness makes the will clear'. The Caigentan often uses paired lines and images to make its maxims easy to remember."
+  },
+  "q03": {
+   "summary": "This section finds the true Way in family life, balances stillness and movement, advises measure in urging others, and holds that one may live in the world without losing the air of the hills, since to do no wrong is already merit.",
+   "translation": "In the household there is a true Buddha, and in daily life there is a true Way. If a person can be sincere and kindly, with a cheerful face and gentle words, so that between parents and brothers the barriers of person and form fall away and feeling and spirit flow freely, that is ten thousand times better than regulating the breath and contemplating the heart. The restless are like clouds, lightning, wind and lamplight; those who love quiet are like dead ashes and withered wood. Within the stillness of settled clouds and calm water there must be the bearing of fish leaping and hawks soaring; only then is the heart in accord with the Way. In attacking another's faults, do not be too severe, but consider what he can bear; in urging another towards good, do not set it too high, but make it something he can follow. The dung beetle is utterly filthy, yet it becomes a cicada that drinks dew in the autumn wind; rotting grass has no light, yet it turns into a firefly that gleams on summer nights. So we know that purity often comes out of filth, and brightness often arises from darkness. Pride and arrogance are nothing but a borrowed temper; when this borrowed temper is subdued, the upright spirit can then stretch out. Feelings, desires and discriminating thoughts all belong to the false mind; when the false mind is entirely put out, the true mind appears. After a full meal, think of flavours, and the whole difference between rich and plain vanishes; after lust, think of lewdness, and all notions of man and woman are cut off. So if a person often uses the remorse that follows an act to break through the daze that comes upon him before it, his nature will be settled and his movements will all be right. If you live among carriages and ceremonial caps, you should not lack the scent of the mountain forest; if you live beneath forests and springs, you must hold the statecraft of the court in your heart. In the world there is no need to seek credit; to commit no fault is itself credit. In dealing with others do not seek gratitude; to cause no resentment is itself virtue. Diligence and care are fine virtues, but if too bitter they leave no room to suit the nature and cheer the feelings; plainness is a lofty manner, but if too dry it has nothing to help others and benefit things. When a person has reached the end of his affairs and his strength is cramped, you should forgive him for the sake of his first intention; when a scholar's conduct is complete and his work done, you should look at how he ends.",
+   "keyLines": [
+    {
+     "line": "家庭有個真佛，日用有種真道",
+     "en": "In the household there is a true Buddha, and in daily life there is a true Way.",
+     "note": "There is no need to look far for spiritual practice: a family life of filial duty, brotherly feeling and good temper is itself the true Way."
+    },
+    {
+     "line": "攻人之惡，毋太嚴，要思其堪受；教人之善，毋過高，當使其可從",
+     "en": "In attacking another's faults, do not be too severe, but consider what he can bear; in urging another towards good, do not set it too high, but make it something he can follow.",
+     "note": "Be measured in urging others, so that they can bear it and can do it."
+    },
+    {
+     "line": "固知潔常自污出，明每從晦生也",
+     "en": "So we know that purity often comes out of filth, and brightness often arises from darkness.",
+     "note": "Purity and light often come out of dirt and darkness."
+    },
+    {
+     "line": "居軒冕之中，不可無山林的氣味；處林泉之下，須要懷廊廟的經綸",
+     "en": "If you live among carriages and ceremonial caps, you should not lack the scent of the mountain forest; if you live beneath forests and springs, you must hold the statecraft of the court in your heart.",
+     "note": "In office, have the mind of a hermit; in retirement, keep the ambition to serve the world."
+    },
+    {
+     "line": "處世不必邀功，無過便是功；與人不求感德，無怨便是德",
+     "en": "In the world there is no need to seek credit; to commit no fault is itself credit. In dealing with others do not seek gratitude; to cause no resentment is itself virtue.",
+     "note": "To make no mistakes is merit, and to give rise to no resentment is virtue."
+    },
+    {
+     "line": "人至事窮勢蹙，宜原其初心；士當行滿功成，要觀其末路",
+     "en": "When a person has reached the end of his affairs and his strength is cramped, you should forgive him for the sake of his first intention; when a scholar's conduct is complete and his work done, you should look at how he ends.",
+     "note": "Be understanding of those who have fallen on hard times, thinking of their first intention; with those who have succeeded, look at how they end their days."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "形骸兩釋",
+     "en": "xing hai liang shi - 'form and barriers both dissolved'",
+     "note": "Outward formality and the barriers between people are both removed."
+    },
+    {
+     "term": "魚躍鳶飛",
+     "en": "yu yue yuan fei - 'fish leaping, hawks flying'",
+     "note": "From the Book of Songs (Shijing), in the ode 'Hanlu' of the 'Daya' section. It describes the lively movement of nature, and the Doctrine of the Mean (Zhongyong) quotes it as well."
+    },
+    {
+     "term": "客氣",
+     "en": "ke qi - 'a borrowed temper'",
+     "note": "An outside, passing humour: a restless spirit stirred up for the moment."
+    },
+    {
+     "term": "軒冕",
+     "en": "xuan mian - 'carriages and ceremonial caps'",
+     "note": "The carriage and cap of an official of the rank of grandee or above in ancient times; it means high office."
+    },
+    {
+     "term": "廊廟",
+     "en": "lang miao - 'the court'",
+     "note": "The imperial court."
+    },
+    {
+     "term": "經綸",
+     "en": "jing lun - 'statecraft'",
+     "note": "Planning for the government of the country."
+    },
+    {
+     "term": "勢蹙",
+     "en": "shi cu - 'cramped circumstances'",
+     "note": "In a tight and distressed position."
+    },
+    {
+     "term": "調息觀心",
+     "en": "tiao xi guan xin - 'regulating the breath and contemplating the heart'",
+     "note": "A method of Buddhist and Daoist practice: to regulate the breathing and to watch the mind."
+    }
+   ],
+   "background": "By saying 'In the household there is a true Buddha', this section stresses that the Way lies in daily life. It carries something of the Confucian family ethic and of the Chan (Zen) saying that 'the ordinary mind is the Way'. One feature of the Caigentan is that it draws on all three teachings, without favouring any one."
+  },
+  "q04": {
+   "summary": "This section covers staying modest when rich, hiding one's cleverness, letting go of fame and of fixed opinions, the measure with which to treat petty and noble persons, taming the heart to tame demons, and teaching the young while guarding against the path of desire.",
+   "translation": "Rich and noble families ought to be generous, yet they are on the contrary mean; this is to be rich while one's conduct is poor and low, and how can such a family enjoy its fortune? Clever people ought to keep their light hidden, yet they show off instead; this is to be clever and suffer from stupidity, and how can they avoid ruin? Only when you live low do you know the danger of climbing high; only when you dwell in obscurity do you see how much too bare it is to face the light. Only after keeping still do you know how tiring it is to love movement; only after nurturing silence do you know how restless it is to talk much. If you can put down the wish for fame and wealth, you can leave the common world; if you can put down even the wish for virtue and righteousness, you can then enter the realm of the sages. The desire for gain does not wholly harm the heart; fixed opinions are the grubs that eat it. Sound and sight do not necessarily block the Way; cleverness is the fence that blocks it. Human feeling is fickle and the roads of the world are rough. Where you cannot go on, know the art of stepping back; where you can go on, be sure to give way three parts in ten. In treating the petty person, the difficulty is not in being strict but in not hating him; in treating the noble person, the difficulty is not in being respectful but in observing propriety. Better to hold to simple honesty and dismiss cleverness, leaving some upright spirit to Heaven and Earth; better to decline splendour and be content with plainness, leaving a clean name between sky and earth. To subdue demons, first subdue your own heart; when the heart is subdued, all demons retreat and listen. To tame violence, first tame your own qi; when the qi is calm, violence from outside cannot enter. In teaching the young, it is like raising a daughter: the most important thing is to be strict about their comings and goings and careful about their company. If they once come close to a bad person, it is like planting an unclean seed in a pure field, and from then on a good crop is hard to grow. In matters of the path of desire, do not enjoy the ease of it and touch it just this once, for once touched you sink ten thousand fathoms; in matters of the path of principle, do not shrink from its difficulty and give way a little, for once you give way you are separated by a thousand mountains.",
+   "keyLines": [
+    {
+     "line": "居卑而後知登高之為危，處晦而後知向明之太露；守靜而後知好動之過勞，養默而後知多言之為躁",
+     "en": "Only when you live low do you know the danger of climbing high; only when you dwell in obscurity do you see how much too bare it is to face the light. Only after keeping still do you know how tiring it is to love movement; only after nurturing silence do you know how restless it is to talk much.",
+     "note": "Setting each against its opposite, this shows the value of a low profile, quiet and silence."
+    },
+    {
+     "line": "利慾未盡害心，意見乃害心之蟊賊；聲色未必障道，聰明乃障道之藩屏",
+     "en": "The desire for gain does not wholly harm the heart; fixed opinions are the grubs that eat it. Sound and sight do not necessarily block the Way; cleverness is the fence that blocks it.",
+     "note": "Stubborn views and a conceit of one's own cleverness stand in the way of self-cultivation more than desire does."
+    },
+    {
+     "line": "行不去處，須知退一步之法；行得去處，務加讓三分之功",
+     "en": "Where you cannot go on, know the art of stepping back; where you can go on, be sure to give way three parts in ten.",
+     "note": "When things are stuck, know how to withdraw; when they go smoothly, know how to give way."
+    },
+    {
+     "line": "待小人，不難於嚴，而難於不惡；待君子，不難於恭，而難於有禮",
+     "en": "In treating the petty person, the difficulty is not in being strict but in not hating him; in treating the noble person, the difficulty is not in being respectful but in observing propriety.",
+     "note": "Not hating the petty person, and not fawning on the noble person: these are the true tests."
+    },
+    {
+     "line": "降魔者，先降自心，心伏，則群魔退聽",
+     "en": "To subdue demons, first subdue your own heart; when the heart is subdued, all demons retreat and listen.",
+     "note": "The demons outside come from one's own heart, so working on the heart is the root."
+    },
+    {
+     "line": "慾路上事，毋樂其便而姑為染指，一染指便深入萬仞；理路上事，無憚其難而稍為退步，一退步便遠隔千山",
+     "en": "In matters of the path of desire, do not enjoy the ease of it and touch it just this once, for once touched you sink ten thousand fathoms; in matters of the path of principle, do not shrink from its difficulty and give way a little, for once you give way you are separated by a thousand mountains.",
+     "note": "It is easy to sink into desire, and hard to hold back from doing good."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "蟊賊",
+     "en": "mao zei - 'grubs'",
+     "note": "Insects that eat the young grain, a figure for something that does harm."
+    },
+    {
+     "term": "藩屏",
+     "en": "fan ping - 'fence'",
+     "note": "A screen, a hedge."
+    },
+    {
+     "term": "渾噩",
+     "en": "hun e - 'unpolished honesty'",
+     "note": "Simple, thick and unadorned."
+    },
+    {
+     "term": "降魔",
+     "en": "xiang mo - 'to subdue demons'",
+     "note": "A Buddhist expression: to overcome obstacles of the mind."
+    },
+    {
+     "term": "橫",
+     "en": "heng - 'violence'",
+     "note": "Unreasonable attack or insult."
+    },
+    {
+     "term": "匪人",
+     "en": "fei ren - 'a bad person'",
+     "note": "A person of improper conduct."
+    },
+    {
+     "term": "嘉禾",
+     "en": "jia he - 'a good crop'",
+     "note": "Well-grown grain, a figure for something fine."
+    },
+    {
+     "term": "染指",
+     "en": "ran zhi - 'to dip a finger'",
+     "note": "To dip a finger into the cauldron for a taste; a figure for meddling with what is not one's own."
+    }
+   ],
+   "background": "This section uses the Daoist vocabulary of hiding one's clumsiness and holding to stillness, and the Buddhist language of subduing demons. It also says that teaching the young demands care over their company. This is typical of the way the Caigentan blends the three teachings in its maxims."
+  },
+  "q05": {
+   "summary": "This section speaks of strong and weak desires, of rising a step above and yielding a step in the world, of true delight, and of how illness takes hold. It closes with the line that no blessing is greater than having few affairs and no misfortune greater than a busy mind, urging people to want less and keep calm.",
+   "translation": "One whose thoughts are rich treats himself richly and treats others richly, and is rich in every place; one whose thoughts are thin treats himself thinly and treats others thinly, and is thin in every place. So the noble person's everyday tastes should not be too rich and showy, nor too dry and bare. Let them be rich in wealth and I in humaneness; let them be high in rank and I in rightness: the noble person is certainly not to be caged by rulers and ministers. Human effort can overcome Heaven; a unified will can move the qi; the noble person is not moulded by the Maker of things either. In wind that is still and waves that are calm, you see the true state of life; where the flavour is plain and the sound is faint, you know the original nature of the heart. If you do not stand a step higher than others in how you set yourself up, it is like shaking out clothes in the dust or washing your feet in the mud, and how can you be free? If you do not give way a step in how you deal with the world, it is like a moth flying into a candle or a ram butting a fence, and how can you be at peace? Students must gather their spirit and turn it all in one direction. If you cultivate virtue while keeping your eye on achievements and reputation, you will not truly reach anything; if you read while taking your pleasure in reciting verses and elegance, your heart is certainly not deep in it. Everyone has a great compassion in them, and Vimalakirti and a butcher have no different heart; everywhere there is a true delight, and a golden hall and a thatched eave are not two places. It is only that desire shuts it off and feeling seals it in, so that you pass it by even when it faces you, and an inch away is a thousand miles. In advancing in virtue and the Way, you need the thoughts of wood and stone; if you feel even a little envy or longing, you head for the ground of desire. In helping the world and ruling the state, you need the taste of clouds and water; if you cling even a little to greed, you fall into danger. A good person is calm and unhurried in whatever he does, and even the spirit in his dreams is all harmony; a vicious person, however he behaves, is harsh and fierce, and even his voice and smile are full of killing intent. When the liver is sick, the eyes cannot see; when the kidneys are sick, the ears cannot hear. Sickness takes hold where people cannot see, and breaks out where everyone can see it. So if the noble person wants to give no offence in the light, he should first give none in the dark. No blessing is greater than having few affairs; no misfortune is greater than having a busy mind. Only those who have been troubled by affairs know that having few is a blessing; only those whose hearts are at peace know that a busy mind is a misfortune.",
+   "keyLines": [
+    {
+     "line": "念頭濃者，自待厚，待人亦厚，處處皆濃；念頭淡者，自待薄，待人亦薄，處處皆淡",
+     "en": "One whose thoughts are rich treats himself richly and treats others richly, and is rich in every place; one whose thoughts are thin treats himself thinly and treats others thinly, and is thin in every place.",
+     "note": "How strong or faint one's thoughts are decides the way one treats oneself and others."
+    },
+    {
+     "line": "風恬浪靜中，見人生之真境；味淡聲希處，識心體之本然",
+     "en": "In wind that is still and waves that are calm, you see the true state of life; where the flavour is plain and the sound is faint, you know the original nature of the heart.",
+     "note": "Only in calm and plainness do the true face of life and of the heart show."
+    },
+    {
+     "line": "立身不高一步立，如塵裏振衣，泥中濯足，如何超達；處世不退一步處，如飛蛾投燭，羝羊觸藩，如何安樂",
+     "en": "If you do not stand a step higher than others in how you set yourself up, it is like shaking out clothes in the dust or washing your feet in the mud, and how can you be free? If you do not give way a step in how you deal with the world, it is like a moth flying into a candle or a ram butting a fence, and how can you be at peace?",
+     "note": "Set your standard a step higher; yield a step in dealing with others."
+    },
+    {
+     "line": "人人有個大慈悲，維摩屠劊無二心也",
+     "en": "Everyone has a great compassion in them, and Vimalakirti and a butcher have no different heart.",
+     "note": "Everyone has compassion by nature, and between the sage and the ordinary person there is no difference in this."
+    },
+    {
+     "line": "故君子欲無得罪於昭昭，先無得罪於冥冥",
+     "en": "So if the noble person wants to give no offence in the light, he should first give none in the dark.",
+     "note": "Only if you have nothing to be ashamed of in secret will you avoid mistakes in public."
+    },
+    {
+     "line": "福莫福於少事，禍莫禍於多心",
+     "en": "No blessing is greater than having few affairs; no misfortune is greater than having a busy mind.",
+     "note": "The close of the section: fewer affairs is a blessing, a busy mind is a misfortune."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "牢籠",
+     "en": "lao long - 'to cage'",
+     "note": "To bind or win over by tying down."
+    },
+    {
+     "term": "陶鑄",
+     "en": "tao zhu - 'to mould'",
+     "note": "Literally, to fire pottery and cast metal; a figure for forming and shaping a person."
+    },
+    {
+     "term": "羝羊觸藩",
+     "en": "di yang chu fan - 'the ram butts the fence'",
+     "note": "A ram butts a hedge with its horns, gets them stuck and can neither advance nor retreat. It is from the Book of Changes (Yijing), in the hexagram Dazhuang."
+    },
+    {
+     "term": "維摩",
+     "en": "wei mo - 'Vimalakirti'",
+     "note": "Vimalakirti was a famous lay disciple, a householder, in the Buddhist sutras."
+    },
+    {
+     "term": "屠劊",
+     "en": "tu kuai - 'butcher and executioner'",
+     "note": "A slaughterer and a headsman."
+    },
+    {
+     "term": "咫尺千里",
+     "en": "zhi chi qian li - 'an inch away, a thousand miles'",
+     "note": "Close at hand yet as if a thousand miles away."
+    },
+    {
+     "term": "昭昭、冥冥",
+     "en": "zhao zhao, ming ming - 'light and dark'",
+     "note": "The open place and the hidden place."
+    },
+    {
+     "term": "濟世經邦",
+     "en": "ji shi jing bang - 'to help the world and govern the state'",
+     "note": "To relieve people and to rule the country."
+    }
+   ],
+   "background": "The line 'no blessing is greater than having few affairs, no misfortune greater than a busy mind' is widely known. It sounds like the Daoist call to reduce selfishness and desire, and it also agrees with the Buddhist practice of putting down false thoughts and calming the mind. The phrase 「志壹動氣」 (a unified will moves the qi) comes from Mencius, in the chapter 'Gongsun Chou, Part One'."
+  },
+  "q06": {
+   "summary": "This section covers being square or round and strict or gentle as the age requires, not dwelling on one's own merit while remembering others' kindness, giving without expecting a return, and telling real study from empty talk. It ends by comparing wealth and honour to flowers growing in the hills, in a pot, and in a vase.",
+   "translation": "In an orderly age be upright; in a disordered age be adaptable; in a declining age use both together. Be generous with good people and strict with bad ones; with ordinary people, mix generosity and strictness. When I have done someone a service, I should not dwell on it, but my faults I must not fail to remember; when someone has done me a kindness, I must not forget it, but grudges I must not fail to forget. For the one who gives a kindness, who sees neither himself within nor the other without, a peck of grain can match a great stipend; for the one who benefits others while counting what he has given and demanding repayment, even a hundred yi of gold will hardly make a single coin's worth of merit. People's fortunes are sometimes even and sometimes uneven, so can you make yourself the only one whose fortune is even? Your own feelings and reasoning are sometimes smooth and sometimes not, so can you make everyone else smooth? To look at the two together in this way is itself an expedient gate of the Dharma. Only when the heart is pure may one read and study the ancients. Otherwise, if you see a good deed you steal it to serve your private ends, and if you hear a good word you borrow it to cover your faults: that is lending weapons to the enemy and sending grain to the thieves. The extravagant are rich and still not satisfied, so better the frugal who are poor and have more than enough; the able are busy and gather resentment, so better the clumsy who are at ease and keep their true selves. To read without seeing the sages is to be a hired copyist; to hold office without loving the people is to be a thief in cap and gown; to lecture on learning without honouring practice is to be a talker of 'mouth Chan'; to build a career without thinking of sowing virtue is to be a flower before the eyes. In the human heart there is a true piece of writing, and it has been sealed up by torn and scattered books; there is a true music, and it has been drowned out by bewitching singers and showy dances. A student must sweep away outside things and look directly for the original face; only then is there true benefit. In a bitter heart you often find the taste of joy; when you are pleased with your success, guard against the sorrow of failure. Wealth and fame that come from morality are like flowers in the mountain forest, which spread and multiply freely; those that come from achievement are like flowers in a pot, which are moved and may thrive or fail; those won by force of power are like flowers in a vase, whose roots are not planted, and their withering can be awaited at once.",
+   "keyLines": [
+    {
+     "line": "處治世宜方，處亂世宜圓，處叔季之世，當方圓並用",
+     "en": "In an orderly age be upright; in a disordered age be adaptable; in a declining age use both together.",
+     "note": "Adjust your manner to the times: keep to what is right in good times, and be flexible in bad ones."
+    },
+    {
+     "line": "我有功於人不可念，而過則不可不念；人有恩於我不可忘，而怨則不可不忘",
+     "en": "When I have done someone a service, I should not dwell on it, but my faults I must not fail to remember; when someone has done me a kindness, I must not forget it, but grudges I must not fail to forget.",
+     "note": "The principle of being strict with oneself and generous with others."
+    },
+    {
+     "line": "施恩者，內不見己，外不見人，則斗粟可當萬鍾之惠",
+     "en": "For the one who gives a kindness, who sees neither himself within nor the other without, a peck of grain can match a great stipend.",
+     "note": "A gift that does not count itself or the receiver is weighty, however small."
+    },
+    {
+     "line": "讀書不見聖賢，為鉛槧傭；居官不愛子民，為衣冠盜；講學不尚躬行，為口頭禪；立業不思種德，為眼前花",
+     "en": "To read without seeing the sages is to be a hired copyist; to hold office without loving the people is to be a thief in cap and gown; to lecture on learning without honouring practice is to be a talker of 'mouth Chan'; to build a career without thinking of sowing virtue is to be a flower before the eyes.",
+     "note": "Four things that are empty in all but name: reading, office, teaching and career-building each need real substance."
+    },
+    {
+     "line": "苦心中，常得悅心之趣；得意時，須防失意之悲",
+     "en": "In a bitter heart you often find the taste of joy; when you are pleased with your success, guard against the sorrow of failure.",
+     "note": "There is joy within hardship, and one should be on guard against failure in success: a view that sees both sides."
+    },
+    {
+     "line": "富貴名譽，自道德來者，如山林中花，自是舒餘繁衍",
+     "en": "Wealth and fame that come from morality are like flowers in the mountain forest, which spread and multiply freely.",
+     "note": "Using flowers as the image, this says that wealth and honour rooted in virtue last the longest."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "叔季之世",
+     "en": "shu ji zhi shi - 'a declining age'",
+     "note": "A late, troubled age. 「叔」 and 「季」 are the younger positions among brothers."
+    },
+    {
+     "term": "鎰",
+     "en": "yi - 'yi (a weight)'",
+     "note": "An ancient unit of weight, about twenty or twenty-four liang (sources differ)."
+    },
+    {
+     "term": "借寇兵而齎盜糧",
+     "en": "jie kou bing er ji dao liang - 'lend arms to the enemy and send grain to thieves'",
+     "note": "To hand weapons to the enemy and give grain to bandits. It comes from Li Si's 'Memorial against the Expulsion of Guests' (see his biography in the Records of the Grand Historian, Shiji), and it means to strengthen one's own enemy."
+    },
+    {
+     "term": "鉛槧",
+     "en": "qian qian - 'lead and board'",
+     "note": "The writing tools of old (a lead pencil and a wooden writing tablet), meaning to copy out writing."
+    },
+    {
+     "term": "衣冠盜",
+     "en": "yi guan dao - 'thief in cap and gown'",
+     "note": "Someone neatly dressed in official robes who acts like a bandit."
+    },
+    {
+     "term": "口頭禪",
+     "en": "kou tou chan - 'mouth Chan'",
+     "note": "Empty talk that is not put into practice."
+    },
+    {
+     "term": "法門",
+     "en": "fa men - 'Dharma gate'",
+     "note": "A Buddhist term for a way into the Path, and by extension, a method."
+    }
+   ],
+   "background": "This section draws heavily on paired lines to speak of self-cultivation, and it plainly criticises empty talk and mere formality. The phrase 「借寇兵而齎盜糧」 (lend arms to the enemy and send grain to thieves) comes from Li Si's 'Memorial against the Expulsion of Guests', and 「口頭禪」 ('mouth Chan') is a Buddhist term, which shows how the book connects with the classics and histories."
+  },
+  "q07": {
+   "summary": "This section urges doing good while the time allows, balancing earnest effort with ease, and notes that real integrity has no name for integrity and great skill has no tricks. It speaks of an enlightened heart and of taking misfortune as it comes, and holds that a temper too hot, too cold or too rigid cannot achieve much or keep its blessings.",
+   "translation": "When spring arrives and the weather is mild, even the flowers spread out a patch of lovely colour and even the birds sing a few sweet notes. A scholar and gentleman who is lucky enough to live in a time of peace and to have enough to eat and wear, yet does not think of speaking good words and doing good deeds, has lived a hundred years in the world and yet is like one who has not lived a single day. A student should have a mind that is earnest and careful, and also a taste for ease and freedom. If he is only restrained and austere, he has the killing frost of autumn without the birth of spring, and how can he help things grow? True integrity has no name for integrity, and the one who seeks a name is in fact greedy; the greatest skill has no tricks of skill, and the one who uses tricks is in fact clumsy. The tilting vessel overturns when it is full; the coin-bank is saved by being empty. So the noble person would sooner dwell in nothing than in having, and sooner in lack than in fullness. If the root of the wish for fame has not been pulled out, then even someone who looks lightly on a state of a thousand chariots and is happy with a single gourd of water will still have fallen into worldly feeling; if the borrowed temper has not melted, then even someone whose kindness reaches the four seas and benefits ten thousand ages will in the end be showing a spare talent. When the heart is bright, there is a blue sky even in a dark room; when thoughts are murky, ghosts are born under the white sun. People know that rank and name bring joy, but do not know that the joy of having no rank and no name is the truest; people know that hunger and cold are sorrows, but do not know that the sorrow of being neither hungry nor cold is worse. One who does wrong but fears being known still has a path to goodness within the wrong; one who does good but is eager to be known has the root of wrong at the very place of the good. The workings of Heaven cannot be fathomed. It presses down and then lifts up, lifts up and then presses down, and this is how it plays with heroes and turns champions upside down. The noble person simply takes what comes against him with acceptance and thinks of danger while at peace, and then Heaven has no trick left to play on him. A hot-tempered person is a blazing fire that burns whatever it meets; a cold and unkind person is clear ice that kills whatever it meets; a stiff and stubborn person is like still water and rotten wood, in whom the spring of life is already cut off. All of these find it hard to establish achievements and to prolong good fortune.",
+   "keyLines": [
+    {
+     "line": "學者有段競業的心思，又要有段瀟洒的趣味",
+     "en": "A student should have a mind that is earnest and careful, and also a taste for ease and freedom.",
+     "note": "One should be diligent and careful, and also free and at ease."
+    },
+    {
+     "line": "真廉無廉名，圖名者正所以為貪；大巧無巧術，用術者乃所以為拙",
+     "en": "True integrity has no name for integrity, and the one who seeks a name is in fact greedy; the greatest skill has no tricks of skill, and the one who uses tricks is in fact clumsy.",
+     "note": "True integrity does not seek a name and great skill does not show off. This is close to the Laozi's 'great skill seems clumsy'."
+    },
+    {
+     "line": "欹器以滿覆，撲滿以空全",
+     "en": "The tilting vessel overturns when it is full; the coin-bank is saved by being empty.",
+     "note": "Fullness overturns and emptiness is kept whole: humility preserves a person."
+    },
+    {
+     "line": "心體光明，暗室中有青天；念頭暗昧，白日下生厲鬼",
+     "en": "When the heart is bright, there is a blue sky even in a dark room; when thoughts are murky, ghosts are born under the white sun.",
+     "note": "One whose heart is bright fears no dark room; one whose heart is dark is frightened even in daylight."
+    },
+    {
+     "line": "為惡而畏人知，惡中猶有善路；為善而急人知，善處即是惡根",
+     "en": "One who does wrong but fears being known still has a path to goodness within the wrong; one who does good but is eager to be known has the root of wrong at the very place of the good.",
+     "note": "This points out how much motive matters: shame at doing wrong can still be put right, but eagerness for fame turns even good into wrong."
+    },
+    {
+     "line": "君子只是逆來順受，居安思危，天亦無所施其技倆矣",
+     "en": "The noble person simply takes what comes against him with acceptance and thinks of danger while at peace, and then Heaven has no trick left to play on him.",
+     "note": "The attitude to fate: accept adversity and think of danger in times of peace."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "欹器",
+     "en": "qi qi - 'tilting vessel'",
+     "note": "A sloping vessel which leans when empty, stands upright when half full and overturns when full. The Xunzi, in the chapter 'Youzuo', tells how Confucius looked at such a vessel."
+    },
+    {
+     "term": "撲滿",
+     "en": "pu man - 'coin-bank'",
+     "note": "A pottery money jar, broken open when it is full; only when empty is it kept whole."
+    },
+    {
+     "term": "千乘",
+     "en": "qian sheng - 'a thousand chariots'",
+     "note": "A large state which owns a thousand war chariots."
+    },
+    {
+     "term": "一瓢",
+     "en": "yi piao - 'a single gourd'",
+     "note": "From the Analects, in the chapter 'Yongye', where Confucius praises Yan Hui for living with 'a bamboo dish of rice and a gourd of water', a figure for finding joy in a poor home."
+    },
+    {
+     "term": "客氣",
+     "en": "ke qi - 'a borrowed temper'",
+     "note": "An outside, restless temper."
+    },
+    {
+     "term": "機緘",
+     "en": "ji jian - 'the workings'",
+     "note": "The key in which the turning of Heaven's mechanism lies."
+    },
+    {
+     "term": "競業",
+     "en": "jing ye - 'earnest and careful'",
+     "note": "The same as 「兢業」: careful and diligent."
+    },
+    {
+     "term": "福祇",
+     "en": "fu zhi - 'good fortune'",
+     "note": "Blessings."
+    }
+   ],
+   "background": "This section draws on the story in the Xunzi of the tilting vessel, and on the Analects, where Yan Hui is praised for living on a single gourd of water. It also takes in the Laozi's thought that 'great skill seems clumsy'. Many maxims in the book borrow from earlier writers, so the source of each is hard to fix."
+  },
+  "q08": {
+   "summary": "This section speaks of nurturing a cheerful spirit and clearing away killing intent, of choosing silence and clumsiness, of the long fortune of the warm and kindly, of the wide road of principle against the narrow road of desire, of the breadth that takes in dirt, and of guarding against thieves outside and within.",
+   "translation": "Blessings cannot be invited; nurture a spirit of joy, and that is the root of calling in good fortune. Misfortune cannot be dodged; remove the intent to kill, and that is the way to keep misfortune away. If nine of ten things you say are right, it is not necessarily thought remarkable, but when one is wrong, faults and blame crowd in together; if nine of ten plans succeed, you are not necessarily given the credit, but when one fails, criticism springs up everywhere. This is why the noble person prefers to be silent rather than hasty, and clumsy rather than clever. The qi of Heaven and Earth gives life when it is warm and kills when it is cold. So a person of a clear and cold nature also receives a thin and cool measure of enjoyment. Only the kindly and warm-hearted have a deep fortune and a long-lasting benefit. The road of Heavenly principle is very wide: let the heart travel on it a little and the chest feels lofty and broad. The road of human desire is very narrow: set foot on it and all before you is thorns and mud. If pain and pleasure rub against and temper each other, and the tempering is taken to its limit and turns into blessing, that blessing will last; if doubt and trust are set against and test each other, and the testing is taken to its limit and turns into knowledge, that knowledge will be true. The heart cannot but be empty, for when it is empty, principle comes to live in it; the heart cannot but be solid, for when it is solid, the desire for things cannot enter. Dirty ground often brings forth many things; clear water often has no fish. So the noble person should keep the capacity to hold dirt and take in filth, and should not hold to the discipline of loving cleanliness and walking alone. A horse that has slipped its harness can still be put to the cart; a piece of metal leaping in the furnace will in the end be cast in its mould. But once a person is idle and listless, he makes no progress for the rest of his life. Bai Sha said that being often ill is nothing to be ashamed of, and that a whole lifetime free of illness is what he would worry about, and this is quite right. In a single moment of greed and selfishness, a person turns hardness into softness, clogs wisdom into dullness, changes kindness into cruelty, stains the clean into the dirty, and ruins the character of a lifetime. This is why the ancients treasured not being greedy and so surpassed their age. What the ears and eyes hear and see are the thieves outside; feelings, desires and discriminating thoughts are the thieves within. If only the master of the house stays awake and clear, sitting alone in the central hall, the thieves become members of the family.",
+   "keyLines": [
+    {
+     "line": "福不可邀，養喜神，以為召福之本而已；禍不可避，去殺機，以為遠禍之方而已",
+     "en": "Blessings cannot be invited; nurture a spirit of joy, and that is the root of calling in good fortune. Misfortune cannot be dodged; remove the intent to kill, and that is the way to keep misfortune away.",
+     "note": "One cannot force fortune or flee misfortune; one can only nurture joy and remove harshness."
+    },
+    {
+     "line": "君子所以寧默毋躁，寧拙毋巧",
+     "en": "This is why the noble person prefers to be silent rather than hasty, and clumsy rather than clever.",
+     "note": "Much speech easily slips and cleverness easily fails, so choose silence and clumsiness."
+    },
+    {
+     "line": "天理路上甚寬，稍游心，胸中便覺高明廣大；人欲路上甚窄，纔寄跡，眼前俱是荊棘泥塗",
+     "en": "The road of Heavenly principle is very wide: let the heart travel on it a little and the chest feels lofty and broad. The road of human desire is very narrow: set foot on it and all before you is thorns and mud.",
+     "note": "The road of principle is broad; the road of desire is narrow and miry."
+    },
+    {
+     "line": "地之穢者多生物，水之清者常無魚",
+     "en": "Dirty ground often brings forth many things; clear water often has no fish.",
+     "note": "The sense is close to 'water too clear has no fish' in the Record of Rites of Dai the Elder (Da Dai Liji), urging a tolerant mind."
+    },
+    {
+     "line": "故君子當存含垢納污之量，不可持好潔獨行之操",
+     "en": "So the noble person should keep the capacity to hold dirt and take in filth, and should not hold to the discipline of loving cleanliness and walking alone.",
+     "note": "A noble person needs a spirit that can take in what is unclean, and should not be a fussy purist who walks alone."
+    },
+    {
+     "line": "耳目聞見為外賊，情欲意識為內賊",
+     "en": "What the ears and eyes hear and see are the thieves outside; feelings, desires and discriminating thoughts are the thieves within.",
+     "note": "Temptations from outside and desires from within are both thieves, to be guarded against with a clear mind."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "喜神",
+     "en": "xi shen - 'the spirit of joy'",
+     "note": "A heart that is glad and at ease."
+    },
+    {
+     "term": "愆尤駢集",
+     "en": "qian you pian ji - 'faults and blame crowd together'",
+     "note": "「愆尤」 means errors and blame; 「駢集」 means arriving together."
+    },
+    {
+     "term": "訾議",
+     "en": "zi yi - 'criticism'",
+     "note": "Blame and abuse."
+    },
+    {
+     "term": "含垢納污",
+     "en": "han gou na wu - 'to hold dirt and take in filth'",
+     "note": "To tolerate the dirty, meaning to put up with unclean people and things."
+    },
+    {
+     "term": "泛駕之馬",
+     "en": "fan jia zhi ma - 'a horse that has slipped the shafts'",
+     "note": "A horse that has broken free of the harness and is uncontrolled, a figure for a person hard to tame."
+    },
+    {
+     "term": "躍冶之金",
+     "en": "yue ye zhi jin - 'metal leaping in the furnace'",
+     "note": "Metal that leaps about in the smelter. It comes from the Zhuangzi, in the chapter 'Dazongshi', and stands for someone who will not keep to his place."
+    },
+    {
+     "term": "白沙",
+     "en": "bai sha - 'Bai Sha'",
+     "note": "Chen Xianzhang, a scholar of the Ming dynasty (1368-1644), known as Master Bai Sha."
+    },
+    {
+     "term": "主人翁惺惺",
+     "en": "zhu ren weng xing xing - 'the master of the house awake'",
+     "note": "「主人翁」 is the original heart; 「惺惺」 means clear and on the alert."
+    }
+   ],
+   "background": "This section quotes the words of Chen Xianzhang (Bai Sha), a scholar of the Ming dynasty, which shows the intellectual setting of the author's time. The line 'dirty ground often brings forth many things; clear water often has no fish' agrees with the old saying 'water too clear has no fish'."
+  },
+  "q09": {
+   "summary": "This section speaks of protecting what is already achieved and guarding against future wrongs, of the heart that leaves no trace as wind leaves none in bamboo, and of true stillness and joy which come out of movement and hardship. It urges people to catch a thought at the moment it rises and turn it.",
+   "translation": "To scheme for merit not yet achieved is not so good as to keep what has already been built; to regret past mistakes is not so good as to guard against wrongs to come. Let your bearing be lofty and wide, but not wild; let your thought be close and careful, but not petty; let your taste be calm and plain, but not withered on one side; let your principles be strict and clear, but not fierce. When wind comes through sparse bamboo, the bamboo keeps no sound once the wind has passed; when wild geese cross a cold pool, the pool keeps no reflection once the geese have gone. So the noble person's heart appears only when something comes, and when it is gone, the heart empties with it. Be pure and able to contain; be humane and able to decide; be clear-sighted without being over-inspecting; be straight without over-correcting. This is what is meant by candied fruit that is not too sweet and sea food that is not too salty, and this is what makes a true virtue. A poor household sweeps the floor clean and a poor girl combs her hair neatly; though the scene is not splendid, the bearing is naturally elegant. Why should a scholar and gentleman, once he meets poverty, sorrow and neglect, let himself fall into neglect? Do not let leisure slip past you, and you will profit when busy; do not let stillness be hollow, and you will profit in action; do not cheat or hide in the dark, and you will profit in the light. At the moment a thought arises, as soon as you notice it heading down the road of desire, pull it back to the road of principle. Notice it as it arises, turn as soon as you notice: this is the pass where misfortune becomes good fortune and the dead are brought back to life, so never let it go lightly. In stillness, when thoughts are clear, you see the true body of the heart; in leisure, when your bearing is easy, you know the true working of the heart; in plainness, when your taste is calm and level, you gain the true flavour of the heart. For watching the heart and testing the Way, nothing is better than these three. A stillness found only in stillness is not true stillness; only the stillness gained in the midst of movement is the true realm of the nature and Heaven. A pleasure found only in pleasure is not true pleasure; only the pleasure drawn out of hardship shows the true working of the heart. When you give up something of yourself, do not stay in doubt, for if you do, the purpose you are giving up for becomes full of shame; when you give to others, do not demand repayment, for if you do, the very heart in which you gave is wrong.",
+   "keyLines": [
+    {
+     "line": "圖未就之功，不如保已成之業；悔既往之失，不如防將來之非",
+     "en": "To scheme for merit not yet achieved is not so good as to keep what has already been built; to regret past mistakes is not so good as to guard against wrongs to come.",
+     "note": "Rather than scheme for what is unfinished or regret the past, protect what you have and guard against the future."
+    },
+    {
+     "line": "風來疏竹，風過而竹不留聲；雁度寒潭，雁去而潭不留影",
+     "en": "When wind comes through sparse bamboo, the bamboo keeps no sound once the wind has passed; when wild geese cross a cold pool, the pool keeps no reflection once the geese have gone.",
+     "note": "With the images of wind in bamboo and geese over a pool, this urges responding as things come and leaving no trace when they have passed."
+    },
+    {
+     "line": "故君子事來而心始現，事去而心隨空",
+     "en": "So the noble person's heart appears only when something comes, and when it is gone, the heart empties with it.",
+     "note": "The heart shows itself when something happens and empties when it is over, with no clinging."
+    },
+    {
+     "line": "清能有容，仁能善斷；明不傷察，直不過矯",
+     "en": "Be pure and able to contain; be humane and able to decide; be clear-sighted without being over-inspecting; be straight without over-correcting.",
+     "note": "Four virtues, each kept in due measure."
+    },
+    {
+     "line": "貧家淨掃地，貧女淨梳頭，景花雖不豔麗，氣度自是風雅",
+     "en": "A poor household sweeps the floor clean and a poor girl combs her hair neatly; though the scene is not splendid, the bearing is naturally elegant.",
+     "note": "Poverty does not prevent tidiness and dignity, and no one should give up on themselves."
+    },
+    {
+     "line": "靜中靜非真靜，動處靜得來，纔是性天之真境",
+     "en": "A stillness found only in stillness is not true stillness; only the stillness gained in the midst of movement is the true realm of the nature and Heaven.",
+     "note": "True stillness is the quiet kept in the midst of action."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "縝密",
+     "en": "zhen mi - 'close and careful'",
+     "note": "Fine and thorough."
+    },
+    {
+     "term": "沖澹",
+     "en": "chong dan - 'calm and plain'",
+     "note": "Peaceful and indifferent. 「澹」 is the same as 「淡」."
+    },
+    {
+     "term": "偏枯",
+     "en": "pian ku - 'withered on one side'",
+     "note": "Leaning to one side and losing the spring of life."
+    },
+    {
+     "term": "懿德",
+     "en": "yi de - 'fine virtue'",
+     "note": "Excellent virtue."
+    },
+    {
+     "term": "蜜餞不甜、海味不鹹",
+     "en": "mi jian bu tian, hai wei bu xian - 'candied fruit not too sweet, sea food not too salty'",
+     "note": "A figure for a virtue that is kept in measure and goes to no extreme."
+    },
+    {
+     "term": "觀心證道",
+     "en": "guan xin zheng dao - 'to watch the heart and test the Way'",
+     "note": "A Buddhist term of practice: to look into one's own mind and check it against the truth."
+    },
+    {
+     "term": "性天",
+     "en": "xing tian - 'the nature given by Heaven'",
+     "note": "The nature a person is endowed with."
+    },
+    {
+     "term": "寥落",
+     "en": "liao luo - 'neglected'",
+     "note": "Left out in the cold, not successful."
+    }
+   ],
+   "background": "The line about wind through sparse bamboo is often quoted as an expression of a Chan (Zen) state of mind, with a Buddhist colour of non-attachment. Others such as 'be pure and able to contain, be humane and able to decide' draw on older accounts of the noble person's virtues."
+  },
+  "q10": {
+   "summary": "The last section of the first part covers how to meet fate, the virtuous and the sly, why one should look at how a person ends, sowing virtue, a household correction as gentle as spring wind, and cultivation in adversity and in comfort. Adversity tempers; comfort hides dangers.",
+   "translation": "If Heaven gives me a thin measure of blessing, I thicken my virtue to meet it; if Heaven wears out my body with toil, I ease my heart to make up for it; if Heaven blocks my chances, I open up my Way to get through. What can Heaven do to me then? An upright man has no mind to seek blessings, and Heaven opens his heart exactly where there is no such mind; a sly man deliberately avoids misfortune, and Heaven takes away his spirit exactly in that deliberation. So you see how marvellous the working of Heaven is, and what good are human cleverness and tricks? A singing-girl who takes a husband in her later years is not hindered by a whole life in the flowery world; a chaste woman who loses her faithfulness in white-haired old age finds that the bitter half of her life counts for nothing. The saying goes, 'In judging a person look only at the last half'; truly a famous saying. A commoner who is willing to sow virtue and give kindness is a duke or minister without office; a gentleman who only covets power and sells favour has become a beggar with rank. Ask what has come from the virtue of your ancestors, and it is what you now enjoy, so remember how hard it was to pile up; ask what blessing your descendants will have, and it is what you now leave them, so consider how easily it may be overturned. A noble person who is falsely good is no different from the petty person who does wrong freely; a noble person who gives up his principles is not as good as the petty person who renews himself. When someone in your household makes a mistake, do not fly into a rage and do not give him up lightly. If it is hard to speak of directly, use some other matter to hint at it; if he does not see it today, wait and warn him again another day. Like spring wind thawing the frost, like a mild air melting ice: that is the true model of a household. If this heart always sees things as whole, the world naturally has no flaws; if this heart is always set wide and level, human feeling in the world is naturally free of danger. The plain and detached are sure to be doubted by the rich and showy; the careful and self-controlled are often resented by the unrestrained. The noble person in such a place certainly must not change his principles in the least, but also must not show his sharp edge. In adversity, your whole body is needles, probes and medicines, tempering your principles and conduct without your noticing; in comfort, everything before you is blades and spears, melting fat and wearing down bone without your knowing it.",
+   "keyLines": [
+    {
+     "line": "天薄我以福，吾厚吾德以迓之；天勞我以形，吾逸吾心以補之；天阨我以遇，吾亨吾道以通之",
+     "en": "If Heaven gives me a thin measure of blessing, I thicken my virtue to meet it; if Heaven wears out my body with toil, I ease my heart to make up for it; if Heaven blocks my chances, I open up my Way to get through.",
+     "note": "Where fate falls short, make up for it with virtue, heart and the Way: an attitude of standing on one's own feet."
+    },
+    {
+     "line": "平民肯種德施惠，便是無位的公相；士夫徒貪權市寵，竟成有爵的乞人",
+     "en": "A commoner who is willing to sow virtue and give kindness is a duke or minister without office; a gentleman who only covets power and sells favour has become a beggar with rank.",
+     "note": "Virtue is true nobility; rank is not."
+    },
+    {
+     "line": "君子而詐善，無異小人之肆惡；君子而改節，不及小人之自新",
+     "en": "A noble person who is falsely good is no different from the petty person who does wrong freely; a noble person who gives up his principles is not as good as the petty person who renews himself.",
+     "note": "False goodness and loss of principle are more disappointing than a petty person's open wrongdoing."
+    },
+    {
+     "line": "如春風解凍，如和氣消冰，纔是家庭的型範",
+     "en": "Like spring wind thawing the frost, like a mild air melting ice: that is the true model of a household.",
+     "note": "Meet a family member's fault as gently as spring wind melts ice."
+    },
+    {
+     "line": "此心常看得圓滿，天下自無缺憾之世界；此心常放得寬平，天下自無險側之人情",
+     "en": "If this heart always sees things as whole, the world naturally has no flaws; if this heart is always set wide and level, human feeling in the world is naturally free of danger.",
+     "note": "The world's lacks and dangers often come from the heart; a wide heart makes a wide world."
+    },
+    {
+     "line": "居逆境中，周身皆鍼砭藥石，砥節勵行而不覺；處順境內，滿前盡兵刃戈矛，銷膏糜骨而不知",
+     "en": "In adversity, your whole body is needles, probes and medicines, tempering your principles and conduct without your noticing; in comfort, everything before you is blades and spears, melting fat and wearing down bone without your knowing it.",
+     "note": "Adversity tempers a person; comfort hides danger."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "迓",
+     "en": "ya - 'to meet'",
+     "note": "To welcome."
+    },
+    {
+     "term": "阨",
+     "en": "e - 'to block'",
+     "note": "Hardship, obstruction."
+    },
+    {
+     "term": "牖其衷",
+     "en": "you qi zhong - 'to open the heart'",
+     "note": "「牖」 means to enlighten; 「衷」 means the inner heart. The Book of Songs, in the ode 'Ban', says that 'Heaven opens the people'."
+    },
+    {
+     "term": "憸人",
+     "en": "xian ren - 'a sly flatterer'",
+     "note": "A crafty, fawning person."
+    },
+    {
+     "term": "公相",
+     "en": "gong xiang - 'duke or minister'",
+     "note": "The Three Dukes and the chancellor, standing for high officials."
+    },
+    {
+     "term": "鍼砭",
+     "en": "zhen bian - 'needle and stone probe'",
+     "note": "Acupuncture needles and stone lancets, ancient means of curing disease."
+    },
+    {
+     "term": "型範",
+     "en": "xing fan - 'model'",
+     "note": "A pattern, an example."
+    },
+    {
+     "term": "看人只看後半截",
+     "en": "kan ren zhi kan hou ban jie - 'look only at the last half'",
+     "note": "A popular saying: judge a person by how he ends his days."
+    }
+   ],
+   "background": "This is the last section of the first hundred maxims of the first part. Phrases such as 'Look only at the last half' were common sayings of the time, and the content combines the Confucian respect for how a life ends with the Buddhist and Daoist habit of taking fortune and misfortune lightly. Some of its views, such as the comment on women's chastity, reflect the limits of Ming society."
+  }
+ }
+}

@@ -1,0 +1,694 @@
+{
+ "id": "gushi-shijiu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "shi01": {
+   "summary": "A five-character old-style poem in the voice of a wife thinking of her husband, who has gone far away. It begins with a parting as final as death, uses the northern horse and the southern bird to say that every creature longs for home, then turns to her own wasting away, and ends by comforting herself: 'eat well'. The words are plain and the feeling runs deep. It opens the Nineteen Old Poems.",
+   "translation": "On and on, and on and on you go,\nparted from me, a living separation.\nTen thousand li and more lie between us,\neach of us at a different edge of the sky.\nThe road is steep and long,\nhow can we know when we will meet again?\nThe horse of the north leans into the north wind,\nthe bird of Yue nests on the southern branch.\nEvery day we are further apart,\nevery day my belt hangs looser.\nFloating clouds hide the white sun,\nthe traveller does not think of turning back.\nThinking of you makes me grow old,\nthe months and years are suddenly late.\nLet it be, I will not speak of it again,\nI will try my best to eat my meals.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "生別離",
+     "en": "sheng bie li - 'a living parting'",
+     "note": "Parting while both people are still alive, which can feel as hard as a parting by death. The Chuci (Songs of Chu) has the line: 'No sorrow is greater than a living parting'."
+    },
+    {
+     "term": "胡馬依北風",
+     "en": "hu ma yi bei feng - 'the northern horse leans into the north wind'",
+     "note": "A horse from the north, even when taken south, still leans towards the north wind. It stands for people who never forget their homeland."
+    },
+    {
+     "term": "越鳥巢南枝",
+     "en": "Yue niao chao nan zhi - 'the bird of Yue nests on the southern branch'",
+     "note": "Yue is the far south. A southern bird still builds its nest on the branch facing south. Like the horse, it stands for longing for home."
+    },
+    {
+     "term": "浮雲蔽白日",
+     "en": "fu yun bi bai ri - 'floating clouds hide the white sun'",
+     "note": "Clouds hiding the sun was a common image for slanderers blocking a worthy person from the ruler. Here most readers take it to mean that the traveller has been led astray by distractions and does not come home."
+    },
+    {
+     "term": "不顧反",
+     "en": "bu gu fan - 'does not think of returning'",
+     "note": "The traveller does not think of coming back. The character for 'return' here is an old form of the usual one."
+    },
+    {
+     "term": "棄捐",
+     "en": "qi juan - 'to cast aside'",
+     "note": "To throw aside, to leave behind: she tells herself to stop dwelling on it and not speak of it again."
+    }
+   ],
+   "background": "The Nineteen Old Poems are anonymous. They are usually thought to be by scholars of the middle and later Eastern Han dynasty (25-220), and were later collected in the Wen Xuan, an anthology compiled by Xiao Tong (501-531). Later poets treated them as the model of the five-character poem."
+  },
+  "shi02": {
+   "summary": "A five-character old-style poem about a woman who was once a singing girl and is now the wife of a man who roams far from home. She stands alone in an upstairs window in spring. Six lines of doubled words paint her beauty, and the last two say plainly that an empty bed is hard to bear. Loneliness and resentment show through the contrast.",
+   "translation": "Green, green, the grass along the riverbank,\nlush, lush, the willows in the garden.\nGraceful is the woman in the upper room,\nbright and pale she stands at the window.\nLovely, lovely, in her rouge and powder,\nslender, slender, she stretches out a white hand.\nOnce she was a singing girl,\nnow she is the wife of a wanderer.\nThe wanderer goes and does not come home,\nthe empty bed is hard to keep alone.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "盈盈",
+     "en": "ying ying - 'graceful, full of charm'",
+     "note": "Describes a lovely bearing and a graceful way of carrying oneself."
+    },
+    {
+     "term": "皎皎",
+     "en": "jiao jiao - 'bright, pale and clear'",
+     "note": "Describes something white and shining; here it is her face in the window light."
+    },
+    {
+     "term": "娥娥",
+     "en": "e e - 'beautiful'",
+     "note": "Describes a lovely face and appearance."
+    },
+    {
+     "term": "纖纖",
+     "en": "xian xian - 'slender'",
+     "note": "Describes fingers that are long, fine and soft."
+    },
+    {
+     "term": "倡家女",
+     "en": "chang jia nu - 'a singing girl'",
+     "note": "A woman from a family of singers and dancers. The word 'chang' is an old variant of another character and in early times meant an entertainer who sang and danced."
+    },
+    {
+     "term": "蕩子",
+     "en": "dang zi - 'a wanderer'",
+     "note": "A man who leaves home and roams without returning. This is the old meaning of the word, not the modern 'dissolute person'."
+    }
+   ]
+  },
+  "shi03": {
+   "summary": "A five-character old-style poem. It starts from cypress and stone, which seem to last for ever, and sets against them a human life as brief as a traveller's stop. From that it argues for enjoying oneself while one can, and describes the splendour of Luoyang, with its princes' mansions and towering palace gates. The last line, 'what presses on you so?', shows that the pleasure still carries a note of unease.",
+   "translation": "Green, green, the cypress on the mound,\nheaped up, the stones in the mountain stream.\nHuman life between Heaven and earth\nis suddenly like a traveller going far.\nA dou of wine for each other's pleasure,\nlet us take it as generous rather than meagre.\nDriving a cart behind a poor horse,\nwe wander for fun to Wan and to Luo.\nHow lush and bustling is Luoyang,\nofficials in cap and sash seek each other out.\nLong avenues run beside lanes,\nprinces and lords have many great houses.\nThe two palaces gaze at each other from afar,\nthe twin gate towers are a hundred feet and more.\nFeast to the full and please the heart,\nwhy be so anxious, what presses on you?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "忽如遠行客",
+     "en": "hu ru yuan xing ke - 'suddenly like a far traveller'",
+     "note": "A picture of how short life is: we pass through the world quickly, like a guest on the road."
+    },
+    {
+     "term": "斗酒",
+     "en": "dou jiu - 'a dou of wine'",
+     "note": "A dou is a measure for wine; here it means only a small amount, a modest drink."
+    },
+    {
+     "term": "宛與洛",
+     "en": "Wan yu Luo - 'Wan and Luo'",
+     "note": "Wan is Nanyang and Luo is Luoyang, both famous cities of the Eastern Han dynasty (25-220). Luoyang was the capital."
+    },
+    {
+     "term": "冠帶",
+     "en": "guan dai - 'cap and sash'",
+     "note": "The dress of officials, so it means high officials and the well-born."
+    },
+    {
+     "term": "兩宮",
+     "en": "liang gong - 'the two palaces'",
+     "note": "The Southern Palace and the Northern Palace of Luoyang."
+    },
+    {
+     "term": "戚戚",
+     "en": "qi qi - 'anxious, uneasy'",
+     "note": "Describes a restless, worried state of mind."
+    }
+   ]
+  },
+  "shi04": {
+   "summary": "A five-character old-style poem about a happy banquet. It first praises the zither music and the way host and guests understand each other, then sighs that life is short and urges people not to stay poor and low, but to take a place of power while they can. It shows how scholars of the late Han dynasty (206 BC-220 AD) felt, pulled between the wish for fame and the brevity of life.",
+   "translation": "At today's fine banquet\nthe joy is hard to tell in full.\nThe zither is played, its sound rises free,\nthe new tune is so fine it enters the spirit.\nA man of virtue sings lofty words,\nthose who know music hear the truth in them.\nAll of one mind, with the same wish,\nyet what is in the heart is not fully said.\nA human life is lodged in one age,\nsuddenly gone like dust in a whirlwind.\nWhy not whip up the swift horse\nand first seize the main road and the ford?\nDo not stay poor and lowly,\nlong in hardship and bitter toil.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "令德",
+     "en": "ling de - 'a person of fine virtue'",
+     "note": "Fine moral character; here it means a person who has it."
+    },
+    {
+     "term": "識曲聽其真",
+     "en": "shi qu ting qi zhen - 'one who knows the tune hears its truth'",
+     "note": "Only a listener who understands music can hear what the tune really means."
+    },
+    {
+     "term": "奄忽",
+     "en": "yan hu - 'suddenly'",
+     "note": "In an instant, swiftly."
+    },
+    {
+     "term": "飆塵",
+     "en": "biao chen - 'dust in a whirlwind'",
+     "note": "Dust thrown up by a violent wind, a picture of a life that is short and uncertain."
+    },
+    {
+     "term": "要路津",
+     "en": "yao lu jin - 'the main road and the ford'",
+     "note": "The important roads and river crossings, standing for a position of power and influence."
+    },
+    {
+     "term": "轗軻",
+     "en": "kan ke - 'bumpy, unlucky'",
+     "note": "The same as the common word for 'rough going'. It stands for a person whose hopes are not met."
+    }
+   ]
+  },
+  "shi05": {
+   "summary": "A five-character old-style poem about sad music heard from a high tower. The poet sighs that a true listener, one who understands, is so rare, and in the end imagines turning into a pair of calling cranes that fly up together with a kindred spirit. Through the music it speaks of talent unrecognised and of loneliness, and the mood is lofty.",
+   "translation": "In the north-west there is a high tower,\nits top level with the floating clouds.\nCrossed lattices carved like patterned silk on the windows,\nthe hall has eaves on all four sides, and three flights of steps.\nAbove, the sound of strings and singing,\nhow sad the notes are.\nWho could play such a tune?\nCould it be the wife of Qi Liang?\nThe clear shang melody drifts out on the wind,\nthe middle of the song lingers and turns.\nOne pluck, and she sighs three times,\nstirring and fierce, with grief left over.\nI do not pity the singer her pain,\nI only grieve that those who understand are so few.\nI wish we could be a pair of calling cranes,\nbeat our wings and rise to fly high.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "交疏結綺窗",
+     "en": "jiao shu jie qi chuang - 'lattice windows patterned like silk'",
+     "note": "The windows are carved into crossing lattices that look like the pattern of fine silk."
+    },
+    {
+     "term": "阿閣",
+     "en": "e ge - 'a hall with eaves on four sides'",
+     "note": "A tower or pavilion with roofs sloping on all four sides."
+    },
+    {
+     "term": "杞梁妻",
+     "en": "Qi Liang qi - 'the wife of Qi Liang'",
+     "note": "In the Spring and Autumn period (770-476 BC), Qi Liang of the state of Qi died in battle. His wife wept so hard for him that, according to legend, the city wall fell down."
+    },
+    {
+     "term": "清商",
+     "en": "qing shang - 'the clear shang mode'",
+     "note": "A kind of ancient music with a clear, sad tone."
+    },
+    {
+     "term": "知音",
+     "en": "zhi yin - 'one who knows the tune'",
+     "note": "Someone who understands music; later, a close friend who truly understands you."
+    },
+    {
+     "term": "雙鳴鶴",
+     "en": "shuang ming he - 'a pair of calling cranes'",
+     "note": "Two cranes calling to each other, a picture of kindred friends who share the same ideals."
+    }
+   ]
+  },
+  "shi06": {
+   "summary": "A five-character old-style poem about crossing the river to pick lotus flowers to give to someone far away, with no way to deliver them. Looking back towards home, the road is endless. The two are of one heart but live apart, and can only grow old in sorrow. The tone is sad and restrained.",
+   "translation": "I cross the river to pick lotus flowers,\nin the orchid marsh there are many fragrant plants.\nWho do I pick them to give to?\nThe one I miss is on a distant road.\nI turn and look back towards my old home,\nthe long road stretches vast and without end.\nOne in heart, yet living apart,\nI will grow old in sorrow.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "涉江",
+     "en": "she jiang - 'to wade across the river'",
+     "note": "To cross the river."
+    },
+    {
+     "term": "芙蓉",
+     "en": "fu rong - 'lotus flower'",
+     "note": "The lotus. Here the word means the flower of the lotus, not the hibiscus it can mean today."
+    },
+    {
+     "term": "蘭澤",
+     "en": "lan ze - 'orchid marsh'",
+     "note": "A marsh or water meadow where orchids grow."
+    },
+    {
+     "term": "遺",
+     "en": "wei - 'to give'",
+     "note": "To present something as a gift."
+    },
+    {
+     "term": "同心而離居",
+     "en": "tong xin er li ju - 'one in heart but living apart'",
+     "note": "Their hearts are the same, but they cannot live together."
+    }
+   ]
+  },
+  "shi07": {
+   "summary": "A five-character old-style poem that begins with an autumn night scene and sighs at how the seasons change. It then complains that a former schoolmate, now successful, has forgotten old ties, and uses the names of stars, the Winnowing Basket, the Dipper and the Ox-Driver, to say that a name can be empty. The scene sets the mood for the poet's disappointment at how coldly the world treats the poor.",
+   "translation": "The bright moon shines white, the night is full of light,\nthe crickets chirp by the east wall.\nThe Jade Beam of the Dipper points to early winter,\nhow clearly the many stars stand out.\nWhite dew wets the wild grass,\nthe season has suddenly changed again.\nAutumn cicadas cry among the trees,\nthe swallows have left, and where have they gone?\nOnce my friend from the same teacher's door\nrose high and beat his six strong feathers.\nHe does not think of how we once walked hand in hand,\nhe throws me away like a footprint left behind.\nIn the south there is the Winnowing Basket, in the north the Dipper,\nand the Ox-Driver star does not pull a yoke.\nIt is true there is no friendship firm as a great rock,\nso what good is an empty name?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "促織",
+     "en": "cu zhi - 'cricket'",
+     "note": "A cricket. The name means 'urging the weaving', because its song was heard as a call to hurry with the autumn cloth."
+    },
+    {
+     "term": "玉衡",
+     "en": "yu heng - 'the Jade Beam'",
+     "note": "The fifth star of the Big Dipper. Scholars have long disagreed about which month the poem means by the direction it points."
+    },
+    {
+     "term": "玄鳥",
+     "en": "xuan niao - 'dark bird'",
+     "note": "The swallow, which flies south for the winter."
+    },
+    {
+     "term": "六翮",
+     "en": "liu he - 'the six large wing feathers'",
+     "note": "The six large feathers of a bird's wing, standing for a strong pair of wings."
+    },
+    {
+     "term": "南箕北有斗",
+     "en": "nan Ji bei you Dou - 'the Winnowing Basket in the south, the Dipper in the north'",
+     "note": "The stars called the Winnowing Basket and the Dipper do not live up to their names: the basket cannot winnow and the dipper cannot scoop. They stand for something with a name but no substance."
+    },
+    {
+     "term": "牽牛不負軛",
+     "en": "Qian Niu bu fu e - 'the Ox-Driver does not carry the yoke'",
+     "note": "The star named after an ox-driver pulls no cart. It is another image of a name without the reality behind it."
+    }
+   ]
+  },
+  "shi08": {
+   "summary": "A five-character old-style poem about a newly married woman who is far from her husband and anxious, but still hopeful. She likens herself to a lone bamboo and the dodder clinging to its host, and fears that her youth will pass and the flower bloom with no one to pick it. At the end she says that if he holds firmly to his principles, she can only wait patiently.",
+   "translation": "Slender and drooping, a bamboo growing alone,\nit has set its roots in a bend of Mount Tai.\nI am newly married to you,\nlike the dodder clinging to the pine moss.\nThe dodder has its season to grow,\nhusband and wife should meet at the proper time.\nWe married across a thousand li,\nfar apart, with mountain slopes between.\nThinking of you makes me grow old,\nwhy is your carriage so late in coming?\nI grieve for those orchid blossoms,\nholding their petals, spreading their light.\nIf the season passes and they are not picked,\nthey will wither with the autumn grass.\nYou truly hold to your high principles,\nand what can a humble wife like me do?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "冉冉",
+     "en": "ran ran - 'soft and drooping'",
+     "note": "Describes something slender, weak and hanging down."
+    },
+    {
+     "term": "阿",
+     "en": "e - 'a bend in the hills'",
+     "note": "A curve or fold in a mountain, where a plant can take root."
+    },
+    {
+     "term": "兔絲",
+     "en": "tu si - 'dodder'",
+     "note": "A parasitic plant, often a thread-like vine, that twines around other plants. Here it stands for a bride who depends on her husband."
+    },
+    {
+     "term": "女蘿",
+     "en": "nu luo - 'pine moss'",
+     "note": "Another plant that grows on others, such as on pine trees."
+    },
+    {
+     "term": "山陂",
+     "en": "shan bei - 'mountain slope'",
+     "note": "A hillside; the second character can also mean a pond."
+    },
+    {
+     "term": "軒車",
+     "en": "xuan che - 'a curtained carriage'",
+     "note": "A carriage with a screen or curtains. Here it is the carriage that would come to fetch the bride."
+    }
+   ]
+  },
+  "shi09": {
+   "summary": "A five-character old-style poem in which a woman breaks off a blossom from a rare tree in her courtyard, meaning to send it to someone far away, but the road is too long for her to do so. The close says the flower is nothing special, only that she grieves at how long they have been apart. A small flower carries a great deal of longing.",
+   "translation": "In the courtyard there is a rare tree,\nits green leaves are full of rich blossom.\nI pull down a branch and break off the flowers\nto give to the one I think of.\nThe fragrance fills my bosom and sleeves,\nbut the road is far and I cannot send it.\nWhat is there to prize in such a thing?\nIt only moves me that we have been parted for so long.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "奇樹",
+     "en": "qi shu - 'a rare tree'",
+     "note": "A tree that is unusual and seldom seen."
+    },
+    {
+     "term": "華滋",
+     "en": "hua zi - 'rich blossom'",
+     "note": "Flowers in full, lush bloom. The first character is the old way of writing the word for 'flower'."
+    },
+    {
+     "term": "榮",
+     "en": "rong - 'blossom'",
+     "note": "Flowers. An old distinction: herbs 'hua', trees 'rong'."
+    },
+    {
+     "term": "遺所思",
+     "en": "yi suo si - 'to give to the one I think of'",
+     "note": "To send a gift to the person she misses."
+    },
+    {
+     "term": "經時",
+     "en": "jing shi - 'a long time has passed'",
+     "note": "Much time has gone by."
+    }
+   ]
+  },
+  "shi10": {
+   "summary": "A five-character old-style poem that uses the legend of the Cowherd and the Weaver Girl to speak of the pain of longing. The two stars face each other across a clear, shallow Milky Way, looking with love but unable to speak. The doubled words are used with great skill, and the poem gently speaks for husbands and wives parted in the human world as well.",
+   "translation": "Far away is the Ox-Driver star,\nbright is the Weaver Girl of the River of Stars.\nShe lifts her slender, pale hands,\nthe loom clacks and clacks as she works the shuttle.\nAll day long she weaves no pattern,\ntears fall like rain.\nThe River of Stars is clear and shallow,\nhow far apart are they, then?\nJust one brimming stretch of water lies between,\nthey look at each other with feeling and cannot speak.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "迢迢",
+     "en": "tiao tiao - 'far away'",
+     "note": "Describes a great distance."
+    },
+    {
+     "term": "河漢女",
+     "en": "He Han nu - 'the girl of the River of Stars'",
+     "note": "The Weaver Girl, a star in the constellation Lyra. 'He Han' is the Milky Way."
+    },
+    {
+     "term": "擢",
+     "en": "zhuo - 'to stretch out'",
+     "note": "To draw out or reach out a hand."
+    },
+    {
+     "term": "札札",
+     "en": "zha zha - 'clack, clack'",
+     "note": "The sound of the loom at work."
+    },
+    {
+     "term": "機杼",
+     "en": "ji zhu - 'loom and shuttle'",
+     "note": "The weaving loom and the shuttle that carries the thread."
+    },
+    {
+     "term": "脈脈",
+     "en": "mo mo - 'gazing with feeling'",
+     "note": "Looking at someone silently, full of love."
+    }
+   ],
+   "background": "One of the Nineteen Old Poems. It uses the legend of the Cowherd and the Weaver Girl, who are allowed to meet only once a year, to express the longing of married couples who are parted."
+  },
+  "shi11": {
+   "summary": "A five-character old-style poem. On a long journey by carriage the poet looks around at a wide, empty view, and nothing he meets is as it once was. He feels how quickly life passes and that rise and decline each have their time, and he ends by encouraging himself to treasure a good name. Behind it lies a deep sadness about the shortness of life.",
+   "translation": "I turn my carriage round and set out,\nfar and long I travel the road.\nI look all around, how vast and empty it is,\nthe east wind stirs the many grasses.\nEverything I meet is not what it was,\nhow can I not grow old fast?\nRise and decline each have their time,\nmy only fear is making my name too late.\nHuman life is not metal or stone,\nhow could it be long?\nSuddenly we change away with all things,\nso an honoured name is the real treasure.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "迴車",
+     "en": "hui che - 'to turn the cart around'",
+     "note": "To turn the carriage head round and set off on a new road."
+    },
+    {
+     "term": "駕言邁",
+     "en": "jia yan mai - 'to drive on far'",
+     "note": "To drive off on a long journey. The middle character is just a filler word, and the last means 'to go far'."
+    },
+    {
+     "term": "故物",
+     "en": "gu wu - 'things of old'",
+     "note": "Things as they used to be."
+    },
+    {
+     "term": "壽考",
+     "en": "shou kao - 'long life'",
+     "note": "To live to a great age."
+    },
+    {
+     "term": "物化",
+     "en": "wu hua - 'to change away with things'",
+     "note": "A way of saying someone dies: they pass away as all things change."
+    },
+    {
+     "term": "榮名",
+     "en": "rong ming - 'an honoured name'",
+     "note": "A good reputation, a name that is remembered with respect."
+    }
+   ]
+  },
+  "shi12": {
+   "summary": "A five-character old-style poem. The changing seasons make the poet sigh at the passing of time and urge himself not to shut his feelings up. The second half turns to a beauty of Yan and Zhao playing a tense string tune, which stirs him so that he wishes he were a pair of swallows carrying mud to build a nest, a picture of longing for a happy bond.",
+   "translation": "The eastern city wall is high and long,\nwinding along, joined end to end.\nA whirlwind stirs and rises from the ground,\nthe autumn grass is thick and still green.\nThe four seasons change in turn,\nhow swiftly the year is drawing to its end.\nThe morning-wind bird holds a bitter heart,\nthe cricket grieves at its cramped life.\nBetter to wash it all away and let the feelings go,\nwhy bind yourself up?\nIn Yan and Zhao there are many beauties,\nthe loveliest have faces like jade.\nDressed in robes of fine silk,\nthey sit at the door and play a clear tune.\nHow sad the sound is,\nthe strings are tight, so I know the bridges are pressed close.\nMy heart is racing, I straighten my belt,\nhumming low, I pace to and fro.\nI wish I were a pair of flying swallows,\ncarrying mud in my beak to nest in your house.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "逶迤",
+     "en": "wei yi - 'winding, twisting'",
+     "note": "Describes something that curves and runs on in one long line."
+    },
+    {
+     "term": "晨風",
+     "en": "chen feng - 'morning-wind bird'",
+     "note": "The name of a bird, often thought to be a kind of hawk."
+    },
+    {
+     "term": "局促",
+     "en": "ju cu - 'cramped'",
+     "note": "Narrow, confined, with no room to stretch."
+    },
+    {
+     "term": "蕩滌",
+     "en": "dang di - 'to wash away'",
+     "note": "To wash clean; here it means to rinse away one's sorrow."
+    },
+    {
+     "term": "燕趙",
+     "en": "Yan Zhao - 'Yan and Zhao'",
+     "note": "Two states of the Warring States period (475-221 BC) in the north-east of China. Ancient writers said many beautiful women came from there."
+    },
+    {
+     "term": "柱",
+     "en": "zhu - 'bridge (of a stringed instrument)'",
+     "note": "The movable bridge that holds up the strings of a zither. When the bridges are close together the strings are tight."
+    }
+   ]
+  },
+  "shi13": {
+   "summary": "A five-character old-style poem. The poet drives to the east gate of Luoyang and looks far off at the graves of Beimang to the north. He sighs that life is short, that even sages cannot escape death, that seeking immortality with elixirs mostly goes wrong, and that one may as well drink good wine. The tone is bleak and passive, and shows how scholars at the end of the Han thought about life and death.",
+   "translation": "I drive my carriage up to the East Gate\nand look far off at the graves north of the city.\nHow the white poplars rustle,\npines and cypresses line the broad road.\nBelow lie the long dead,\ndim and dark in an endless night.\nThey sleep deep beneath the Yellow Springs,\nfor a thousand years they will not wake.\nVast, the yin and yang pass on and change,\nlife is brief as the morning dew.\nHuman life is suddenly like a lodging,\nand no age is firm as metal or stone.\nGeneration after generation sees the last one off,\nsages and wise men cannot cross over.\nSome take elixirs to seek the immortals,\nand most are ruined by the drugs.\nIt is better to drink fine wine\nand dress in silk, plain or patterned.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "上東門",
+     "en": "Shang Dong Men - 'the Upper East Gate'",
+     "note": "One of the three gates on the east side of the Luoyang city wall, the northernmost."
+    },
+    {
+     "term": "郭北墓",
+     "en": "guo bei mu - 'the graves north of the city'",
+     "note": "The burial grounds on the north side of the city, the Beimang hills."
+    },
+    {
+     "term": "黃泉",
+     "en": "Huang quan - 'the Yellow Springs'",
+     "note": "The underworld, where people go after death."
+    },
+    {
+     "term": "年命如朝露",
+     "en": "nian ming ru zhao lu - 'life is like morning dew'",
+     "note": "Life is as brief as dew that dries in the morning sun."
+    },
+    {
+     "term": "服食",
+     "en": "fu shi - 'to take elixirs'",
+     "note": "To swallow alchemical drugs in search of long life."
+    },
+    {
+     "term": "紈與素",
+     "en": "wan yu su - 'fine silks, plain and patterned'",
+     "note": "Fine silk fabrics, standing for rich and beautiful clothing."
+    }
+   ],
+   "background": "The Beimang hills north of Luoyang have been a burial ground since ancient times."
+  },
+  "shi14": {
+   "summary": "A five-character old-style poem. Outside the city the poet sees nothing but mounds and graves, old tombs ploughed into fields and pines and cypresses cut for firewood, with a sad wind in the poplars. This leads him to reflect on how people vanish, and to the sorrow of having no way home. The landscape is bleak.",
+   "translation": "Those who have gone grow more distant day by day,\nthose who live grow dearer day by day.\nI go out of the outer gate and look straight ahead,\nand see only mounds and graves.\nThe old tombs are ploughed into fields,\nthe pines and cypresses are broken up for firewood.\nIn the white poplars there is much sad wind,\nit rustles and rustles and grieves a man to death.\nI long to go back to the lanes of my village,\nbut there is no way for me to return.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "去者",
+     "en": "qu zhe - 'those who have gone'",
+     "note": "People who have passed away, the dead."
+    },
+    {
+     "term": "郭門",
+     "en": "guo men - 'the gate of the outer wall'",
+     "note": "A gate in the outer wall of a city."
+    },
+    {
+     "term": "薪",
+     "en": "xin - 'firewood'",
+     "note": "Wood used as fuel."
+    },
+    {
+     "term": "愁殺",
+     "en": "chou sha - 'to grieve greatly'",
+     "note": "To make someone terribly sad. The second character here only strengthens the first, as an intensifier."
+    },
+    {
+     "term": "里閭",
+     "en": "li lu - 'the village lanes'",
+     "note": "A village or neighbourhood; here the poet's old home."
+    }
+   ]
+  },
+  "shi15": {
+   "summary": "A five-character old-style poem whose point is that life is short, so there is no need to carry worries meant for a thousand years. The day is short and the night is long, so why not light a candle and wander? It argues against miserliness, and adds that the immortal Prince Qiao cannot be waited for. The tone is blunt and carefree.",
+   "translation": "Our years of life do not reach a hundred,\nyet we often carry the worries of a thousand years.\nThe day is short and we suffer from the long night,\nwhy not take a candle and go out to enjoy ourselves?\nTo be happy one should seize the time,\nhow can we wait until next year?\nThe foolish man holds dear his money and goods,\nand is only laughed at by later ages.\nThe immortal Prince Qiao\nis hard to arrange to wait for.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "秉燭遊",
+     "en": "bing zhu you - 'to wander holding a candle'",
+     "note": "To go out at night carrying a candle, a way of saying that one does not want to waste any time."
+    },
+    {
+     "term": "來茲",
+     "en": "lai zi - 'next year'",
+     "note": "The coming year."
+    },
+    {
+     "term": "嗤",
+     "en": "chi - 'to mock'",
+     "note": "To laugh at someone, to ridicule."
+    },
+    {
+     "term": "王子喬",
+     "en": "Wang Zi Qiao - 'Prince Qiao'",
+     "note": "A legendary immortal. He is said to have been Prince Jin, the crown prince of King Ling of the Zhou dynasty (c. 1046-256 BC), who became an immortal and left the world."
+    },
+    {
+     "term": "等期",
+     "en": "deng qi - 'to arrange to wait'",
+     "note": "To agree to wait for someone. The poet means that one cannot wait to become immortal like Prince Qiao."
+    }
+   ]
+  },
+  "shi16": {
+   "summary": "A five-character old-style poem. In the cold at the end of the year a woman sleeps alone through the long nights and dreams that her husband comes in his carriage to take her home. On waking she finds no one there, and can only weep at the door. It tells of longing through a dream, with feeling that turns and turns again.",
+   "translation": "Bitter cold, the year is said to be ending,\nthe mole cricket cries sadly at dusk.\nThe cool wind has already turned fierce,\nthe traveller is cold and has no clothes.\nThe brocade quilt was left by the banks of the Luo,\nthe one who shared my robe has gone against my wish.\nI lie alone night after night,\nin dreams I long to see your shining face.\nMy husband remembers our old joy,\nhe stoops to drive here and hands me the rope for the carriage.\nI wish to see your clever smile always,\nto go home with you in one carriage, hand in hand.\nYou came, but stayed only a moment,\nand you did not stay in the inner room.\nIt is true I have no wings like the morning-wind bird,\nhow could I fly up against the wind?\nI glance around to console myself,\nand stretch out my neck to gaze far off.\nI pace to and fro, my heart sorrowful,\ntears fall and wet both doors.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "螻蛄",
+     "en": "lou gu - 'mole cricket'",
+     "note": "An insect that calls in the evening."
+    },
+    {
+     "term": "率",
+     "en": "lu - 'mostly'",
+     "note": "Largely, almost all. Here it says that the cool wind has become fierce everywhere."
+    },
+    {
+     "term": "錦衾遺洛浦",
+     "en": "jin qin yi Luo pu - 'the brocade quilt left by the Luo bank'",
+     "note": "Left by the bank of the Luo River. Commentators explain this in different ways: roughly, either the husband has gone far and not returned, or an old keepsake has been left somewhere else."
+    },
+    {
+     "term": "同袍",
+     "en": "tong pao - 'one who shares a robe'",
+     "note": "Originally soldiers who shared one battle cloak. Here it means the husband."
+    },
+    {
+     "term": "綏",
+     "en": "sui - 'the carriage rope'",
+     "note": "The rope handed to someone to pull themselves up into a carriage."
+    },
+    {
+     "term": "重闈",
+     "en": "chong wei - 'the inner chamber'",
+     "note": "The deep women's quarters of a house, a bedroom."
+    }
+   ]
+  },
+  "shi17": {
+   "summary": "A five-character old-style poem about a cold winter night of sorrow. She watches the moon wax and wane, and a letter comes from far away. She keeps it so close that its words stay clear after three years. She ends by saying that her heart is wholly true and she fears only that the other will not understand.",
+   "translation": "At the start of winter the cold has come,\nhow bitter the north wind is.\nGrief is heavy and I know how long the night is,\nI look up at the stars in their rows.\nOn the fifteenth the bright moon is full,\non the twentieth the toad and hare are missing.\nA traveller came from far away\nand left me a letter.\nThe top lines speak of long longing,\nthe lines below of long parting.\nI put the letter in my breast and sleeve,\nafter three years the writing has not faded.\nWith one heart I hold this small devotion,\nand fear that you will not see and understand it.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "孟冬",
+     "en": "meng dong - 'the first month of winter'",
+     "note": "The tenth month of the lunar calendar, the beginning of winter."
+    },
+    {
+     "term": "慘慄",
+     "en": "can li - 'bitterly cold'",
+     "note": "Cold and biting."
+    },
+    {
+     "term": "三五",
+     "en": "san wu - 'three fives'",
+     "note": "Fifteen: the fifteenth day of the lunar month, when the moon is full."
+    },
+    {
+     "term": "四五",
+     "en": "si wu - 'four fives'",
+     "note": "Twenty: the twentieth day of the lunar month, when the moon has begun to wane."
+    },
+    {
+     "term": "蟾兔",
+     "en": "chan tu - 'toad and hare'",
+     "note": "A poetic name for the moon. In Chinese legend a toad and a jade hare live in the moon."
+    },
+    {
+     "term": "區區",
+     "en": "qu qu - 'small and sincere'",
+     "note": "A small but heartfelt offering of feeling."
+    }
+   ]
+  },
+  "shi18": {
+   "summary": "A five-character old-style poem in which a traveller from far away brings a length of patterned silk. The woman makes it into a quilt with a pair of mandarin ducks, fills it with long silk floss and edges it with a knot that cannot be undone, and finishes by comparing her bond to glue dropped in lacquer, which nothing can part.",
+   "translation": "A traveller came from far away\nand left me a length of patterned silk.\nTen thousand li and more lie between us,\nstill my old friend's heart is just so.\nThe pattern is a pair of mandarin ducks,\nI cut it into a quilt of joy and union.\nI fill it with long, long floss for longing,\nand edge it with a knot that cannot be untied.\nWith glue thrown into lacquer,\nwho could part them?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "一端綺",
+     "en": "yi duan qi - 'a length of figured silk'",
+     "note": "A piece of patterned silk. 'Duan' is a measure for lengths of cloth."
+    },
+    {
+     "term": "合歡被",
+     "en": "he huan bei - 'a quilt of joy and union'",
+     "note": "A quilt embroidered with matching patterns, a symbol of a husband and wife in harmony."
+    },
+    {
+     "term": "著",
+     "en": "zhu - 'to fill'",
+     "note": "To stuff the quilt with silk floss."
+    },
+    {
+     "term": "長相思",
+     "en": "chang xiang si - 'long longing'",
+     "note": "The word for silk thread sounds like the word for longing, so the long silk threads stand for long-lasting longing."
+    },
+    {
+     "term": "緣",
+     "en": "yuan - 'to edge'",
+     "note": "To sew along the border of the quilt."
+    },
+    {
+     "term": "以膠投漆中",
+     "en": "yi jiao tou qi zhong - 'glue thrown into lacquer'",
+     "note": "Once glue and lacquer are mixed they cannot be separated. It stands for a bond that is firm and cannot be broken."
+    }
+   ]
+  },
+  "shi19": {
+   "summary": "A five-character old-style poem about a sleepless night under the moon. The poet gets up and paces, and thinks that however pleasant life away may be, it is better to go home soon. In the end he goes out the door, has no one to tell, and returns to his room with tears on his clothes. The words are plain and the feeling deep. It is the last of the Nineteen Old Poems.",
+   "translation": "How bright and white the moon is,\nit shines on my bed's silk curtains.\nSorrow keeps me from sleeping,\nI put on my clothes, get up and pace.\nThe life of a traveller is said to be happy,\nbut it is better to turn back home early.\nI go out the door and wander alone,\nto whom can I tell my grief?\nI stretch my neck to look, then go back inside,\ntears fall and wet my robes.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "羅牀幃",
+     "en": "luo chuang wei - 'the silk bed curtains'",
+     "note": "The gauze curtains of a bed."
+    },
+    {
+     "term": "覽衣",
+     "en": "lan yi - 'to put on one's clothes'",
+     "note": "To throw on or straighten one's clothing."
+    },
+    {
+     "term": "客行",
+     "en": "ke xing - 'travelling away'",
+     "note": "Being on a journey, living away from home."
+    },
+    {
+     "term": "旋歸",
+     "en": "xuan gui - 'to return home soon'",
+     "note": "To go home without delay."
+    },
+    {
+     "term": "彷徨",
+     "en": "pang huang - 'to pace, unable to decide'",
+     "note": "To walk back and forth, not knowing where to go."
+    },
+    {
+     "term": "引領",
+     "en": "yin ling - 'to stretch the neck'",
+     "note": "To crane one's neck and look far off."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "id": "yuanhui",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Han Yu analyses why slander is so common. The noble person of old was strict with himself and generous to others; the noble person of today is strict with others and generous to himself. The cause is laziness and jealousy. He sighs that anyone of virtue is bound to be slandered, and hopes that those in power will take his words to heart.",
+   "translation": "The noble people of old were heavy and thorough in what they asked of themselves, and light and sparing in what they asked of others. Being heavy and thorough, they did not slacken; being light and sparing, others were glad to do good. They heard that in ancient times there was a man called Shun, a man of humaneness and rightness. Seeking what made him Shun, they pressed themselves: 'He was a man, and I am a man. He could do this, and I cannot?' Morning and night they thought about it, got rid of what in them was unlike Shun, and moved towards what was like him. They heard that in ancient times there was the Duke of Zhou, a man of many talents and skills. Seeking what made him the Duke of Zhou, they pressed themselves: 'He was a man, and I am a man. He could do this, and I cannot?' Morning and night they thought about it, got rid of what in them was unlike the Duke of Zhou, and moved towards what was like him. Shun was a great sage whom no later age has equalled; the Duke of Zhou was a great sage whom no later age has equalled. Yet these people said: 'Not to be like Shun, not to be like the Duke of Zhou, is my own failing.' Is this not being heavy and thorough on oneself?\nWith others they said: 'That man is able to do this, which is enough to make him a good man; he is good at that, which is enough to make him a man of skill.' They took one point and did not demand a second; they looked at what was new and did not dig into what was old; they were anxious only that the person should fail to get the benefit of doing good. One good is easy to cultivate and one skill is easy to master, and so of others they said: 'He can do this, and that is enough.' 'He is good at that, and that is enough.' Is this not being light and sparing with others?\nThe noble people of today are not so. They are detailed in blaming others and sparing in treating themselves. Being detailed, they make it hard for others to do good; being sparing, they gain little for themselves. They have no good in them yet say: 'I am good at this, and that is enough.' They have no ability yet say: 'I can do this, and that is enough.' Outwardly they deceive others, inwardly they deceive their own hearts, and they stop before having gained the slightest thing. Is this not being already sparing in how they treat themselves? Of others they say: 'Though he can do this, he is not worth praising; though he is good at that, his use is not worth praising.' They pick out one point and ignore ten; they dig into the old and give no thought to the new; they are anxious only that the person may win a name. Is this not being already detailed in what they demand of others?\nThis is what is called not treating oneself as an ordinary person, yet looking to others to be sages; I have never seen how that honours oneself. Yet those who do this have a root and a source, and it is called laziness and jealousy. The lazy cannot improve themselves, and the jealous fear that others will improve. I have tried it. I tried saying to a crowd: 'So-and-so is a good man, so-and-so is a good man.' Those who agreed were sure to be his friends and partisans; if not, then people far from him who shared none of his interests; if not, then people who were afraid. Otherwise the strong would be sure to show anger in their words, and the weak to show it in their faces. Another time I said to a crowd: 'So-and-so is not a good man, so-and-so is not a good man.' Those who did not object were sure to be that man's friends; if not, then people far from him who shared none of his interests; if not, then people who were afraid. Otherwise the strong would be sure to be pleased in their words, and the weak to be pleased in their faces. So when a task is well done, slander arises; when virtue is high, abuse comes.\nAlas! For a scholar living in this age to hope for a shining reputation and for his Way and virtue to be put into practice is hard indeed! If someone about to take action at the top should get my argument and keep it in mind, then perhaps the state could be brought close to good order.",
+   "keyLines": [
+    {
+     "line": "古之君子，其責己也重以周，其待人也輕以約",
+     "en": "The noble person of old was heavy and thorough in blaming himself, and light and sparing in treating others.",
+     "note": "The thesis at the start: the ancients asked a great deal of themselves, fully, and little of others."
+    },
+    {
+     "line": "彼人也，予人也。彼能是，而我乃不能是",
+     "en": "That was a man, and I am a man. He could do this, and I cannot do it?",
+     "note": "Taking Shun and the Duke of Zhou as examples, the ancients measured themselves against the sages and would not be left behind."
+    },
+    {
+     "line": "取其一，不責其二；即其新，不究其舊",
+     "en": "Take one good point and do not demand the second; look at what is new and do not dig into what is old.",
+     "note": "In judging others, the ancients took only their strengths and looked at their recent progress, not at the past, which encouraged people to do good."
+    },
+    {
+     "line": "今之君子則不然。其責人也詳，其待己也廉",
+     "en": "The noble person of today is not so. He is detailed in blaming others, and sparing with himself.",
+     "note": "The turn: people now are harsh to others and lax with themselves, a sharp contrast to what came before."
+    },
+    {
+     "line": "夫是之謂不以眾人待其身，而以聖人望於人",
+     "en": "This is what is called not treating himself as an ordinary man while expecting a sage from others.",
+     "note": "The people of today ask sage standards of others and use common standards for themselves."
+    },
+    {
+     "line": "怠者不能修，而忌者畏人修",
+     "en": "The lazy cannot improve themselves, and the jealous fear that others will improve.",
+     "note": "The root: lazy people cannot cultivate themselves, and jealous people fear others' progress."
+    },
+    {
+     "line": "是故事修而謗興，德高而毀來",
+     "en": "So when a task is well done, slander arises; when virtue is high, abuse comes.",
+     "note": "The most famous conclusion: as soon as a person achieves something, slander follows."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "原毀",
+     "en": "yuan hui - tracing slander to its source",
+     "note": "To trace the cause of slander; yuan means to look into the origin."
+    },
+    {
+     "term": "責己重以周",
+     "en": "ze ji zhong yi zhou - heavy and thorough on oneself",
+     "note": "To ask a lot of oneself, strictly and in every respect."
+    },
+    {
+     "term": "待人輕以約",
+     "en": "dai ren qing yi yue - light and sparing on others",
+     "note": "To treat others leniently and with few demands."
+    },
+    {
+     "term": "良人、藝人",
+     "en": "liang ren, yi ren - good man, man of talents",
+     "note": "A liang ren is a man of good conduct; a yi ren is one of many skills."
+    },
+    {
+     "term": "恐恐然",
+     "en": "kong kong ran - fearful",
+     "note": "Anxious and afraid."
+    },
+    {
+     "term": "詳、廉",
+     "en": "xiang, lian - detailed, sparing",
+     "note": "Xiang is minute and demanding, lian is little and lenient."
+    },
+    {
+     "term": "說",
+     "en": "yue - to be glad",
+     "note": "A variant of the character for 'glad'."
+    },
+    {
+     "term": "與",
+     "en": "yu - friends",
+     "note": "One's companions or those on good terms."
+    }
+   ],
+   "background": "Yuan hui is an essay of argument by Han Yu. By contrasting the noble person of old with the one of today, it shows that the habit of slander comes from laziness and jealousy, and it also criticises the manners of the scholars of his day. Its structure is orderly and its contrast sharp."
+  }
+ }
+}

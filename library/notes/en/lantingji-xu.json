@@ -1,0 +1,77 @@
+{
+ "id": "lantingji-xu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "Wang Xizhi records the splendour and pleasure of the gathering at the Orchid Pavilion, then turns from joy to grief, lamenting how short life is and how uncertain life and death are, and hopes that later readers will feel the same. It moves from happiness to sorrow and from events to reflection, and shows a deep meditation on life by the great men of the Wei and Jin period.",
+   "translation": "In the ninth year of Yonghe, the year guichou, at the start of late spring, we gathered at the Orchid Pavilion in Shanyin of Kuaiji, to hold the spring purification rite. All the worthy men came, young and old together. Here there are lofty mountains and steep ridges, thick woods and tall bamboo; there is also a clear stream with rushing shallows that gleam around on left and right. We drew the water into a winding channel for floating cups, and sat in rows beside it. Though we had no great music of strings and pipes, a cup of wine and a poem each was enough to let us talk out our quiet feelings.\nThat day the sky was bright and the air clear; a soft breeze blew gently. Looking up we saw the greatness of the universe, looking down we examined the richness of its creatures. So we let our eyes roam and our thoughts range, enough to reach the utmost of sight and sound; it was truly a joy.\nWhen people spend time together, they look up and down and a lifetime is gone. Some take what is in their hearts and talk it over in a single room; others lean on what they love and let themselves go beyond the limits of the body. Though what they pursue and what they put aside are endlessly different, and their calm or restlessness not alike, still, when they are glad of what they meet and for a moment find themselves satisfied, they are happy and content, not knowing that old age is coming. Then, when they grow tired of where they have gone, and their feelings change with events, a sigh follows. What once gladdened them, in the time of a glance up and down, has become an old trace, and still one cannot help being moved by it; how much more so that long or short, life follows change and in the end comes to its close. The ancients said: 'Death and life are great matters indeed.' Is that not painful!\nWhenever I read of the causes of the feelings of men of old, they match mine like the two halves of a tally, and I never fail to sigh and grieve over the writing, and cannot make it clear in my heart. I know well that to treat death and life as one is empty talk, and to equate the long-lived Pengzu with a child who dies young is wild invention. Those who look back on us will be as we now look back on those before. How sad!\nSo I have listed the people of the time and recorded what they wrote. Though ages differ and events differ, the reasons for being moved are the same. Those who read this in later times will also feel something at these writings.",
+   "keyLines": [
+    {
+     "line": "死生亦大矣",
+     "en": "Death and life are great matters indeed.",
+     "note": "It quotes the Zhuangzi, and gives the core of the piece as it turns from joy to grief: life and death are the greatest of human affairs."
+    },
+    {
+     "line": "向之所欣，俯仰之間已為陳跡",
+     "en": "What once gladdened them, in the time of a glance up and down, has become an old trace.",
+     "note": "What was once loved is soon a thing of the past, which shows how brief human joy is."
+    },
+    {
+     "line": "固知一死生為虛誕，齊彭殤為妄作",
+     "en": "I know well that to treat death and life as one is empty talk, and to equate the long-lived Pengzu with a child who dies young is wild invention.",
+     "note": "He rejects outright the Zhuangzi's view that life and death, long life and early death, are equal, and shows how he treasures life and clings to it."
+    },
+    {
+     "line": "後之視今，亦猶今之視昔，悲夫",
+     "en": "Those who look back on us will be as we now look back on those before. How sad!",
+     "note": "Time circles; ancient and modern people grieve alike. Later readers will have the same feeling, which gives the piece a resonance across time."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "修禊",
+     "en": "xiu xi - spring purification rite",
+     "note": "In ancient times a rite to wash away ill luck, held at the water on the first si day of the third month; after the Wei and Jin it became a pleasure gathering."
+    },
+    {
+     "term": "流觴曲水",
+     "en": "liu shang qu shui - floating cups on a winding stream",
+     "note": "A cup of wine is set on a curving channel of water and drifts down; whoever it stops in front of picks it up, drinks and makes a poem."
+    },
+    {
+     "term": "惠風",
+     "en": "hui feng - gentle breeze",
+     "note": "A warm, mild wind."
+    },
+    {
+     "term": "品類",
+     "en": "pin lei - all kinds of things",
+     "note": "All the creatures between heaven and earth."
+    },
+    {
+     "term": "放浪形骸",
+     "en": "fang lang xing hai - letting the body go free",
+     "note": "Not bound by rules of ritual, acting freely and without restraint. Xing hai means the body, one's outward conduct."
+    },
+    {
+     "term": "一契",
+     "en": "yi qi - one tally",
+     "note": "A qi was an ancient token split into two halves that fit exactly; 'as if matching one tally' means his feeling fits the old writers' exactly."
+    },
+    {
+     "term": "彭殤",
+     "en": "Peng shang - Pengzu and the child who died young",
+     "note": "Peng is the legendary long-lived Pengzu, shang is one who dies young; to 'equate Peng and shang' is the view of the Zhuangzi's chapter on the equality of things."
+    },
+    {
+     "term": "快然",
+     "en": "kuai ran - content",
+     "note": "The common text reads 'kuai ran', meaning satisfied; some hold it should be another character meaning 'discontent'."
+    }
+   ],
+   "background": "On the third day of the third month of 353 (the ninth year of Yonghe in the Eastern Jin), Wang Xizhi held the spring purification rite at the Orchid Pavilion in Kuaiji with Xie An, Sun Chuo and other famous men. The guests wrote poems that were collected, and Wang Xizhi wrote the preface to the collection, this piece. His calligraphy of it is called the 'finest running script under heaven', and the essay itself is known for its true feeling and deep thought."
+  }
+ }
+}

@@ -1,0 +1,285 @@
+{
+ "id": "quanxue",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "pian01": {
+   "summary": "It opens with 'learning must never stop'. Comparisons such as blue from indigo, wood straightened by the cord and metal sharpened on the whetstone show that learning can change a person's nature. It goes on to stress making good use of outside things and choosing one's surroundings carefully, and shows through the principle of like calling to like that one must be careful in word and deed.",
+   "translation": "The noble person says: Learning must never stop. Blue is taken from the indigo plant and is bluer than indigo; ice is made from water and is colder than water. Wood may be straight enough to fit the marking cord, but if it is heated and bent into a wheel, its curve fits the compass; even if it is then dried in the sun, it does not straighten again, because the bending made it so. So wood that is marked with the cord becomes straight, metal put to the whetstone becomes sharp, and the noble person who learns widely and examines himself every day grows clear in knowledge and faultless in conduct.\nSo if you do not climb a high mountain, you do not know how high the sky is; if you do not look down into a deep gorge, you do not know how thick the earth is; if you have not heard the words handed down by the former kings, you do not know how great learning is. The children of the Yu, the Yue, the Yi and the Mo peoples cry with the same voice at birth, but grow up with different customs; teaching makes them so.\nThe Songs say: 'Ah, you noble ones, do not rest forever in ease. Quietly and reverently attend to your post, and love what is upright. The spirits will hear it and grant you great blessings.' No spirit is greater than being changed by the Way; no blessing is longer than having no misfortune.\nI once thought all day long, but it was not as good as learning for a moment. I once stood on tiptoe to look far, but it was not as good as climbing high and seeing widely. If you wave from a high place, your arm is not longer, but those who see it are farther away; if you shout with the wind, your voice is not swifter, but those who hear it hear it clearly. One who borrows a carriage and horses does not have swift feet, but can travel a thousand li; one who borrows a boat and oars may not be able to swim, but crosses rivers. The noble person is not born different; he is good at making use of things.\nIn the south there is a bird called the mengjiu. It makes its nest of feathers and weaves it with hair, and ties it to the tips of reeds. When the wind comes the reed snaps, the eggs break and the young die. It is not that the nest was not well made; what it was tied to made it so. In the west there is a plant called shegan. Its stem is only four inches long, but it grows on a high mountain and overlooks an abyss of a hundred ren. It is not that the stem can grow long; where it stands makes it so. Mugwort that grows among hemp is straight without being propped up. The root of the orchid and the sophora is zhi, the fragrant angelica; but if it is soaked in foul liquid, the noble person will not go near it and the common man will not wear it. It is not that its quality was not fine; what it was soaked in made it so.\nSo the noble person, in choosing a home, must choose the neighbourhood, and in travelling must go to scholars; this is how he guards against the crooked and the wicked and stays close to what is upright. Things begin from some start. Honour and disgrace come in answer to a person's virtue. Meat rots and breeds worms; fish dries up and breeds weevils. Laziness and neglect of oneself bring on misfortune. The hard becomes a pillar by itself, the soft becomes a bundle by itself. Evil and filth on one's body are what resentment is built on. If you lay firewood evenly, fire goes to the dry; if the ground is level, water goes to the damp. Grass and trees grow in kinds, birds and beasts flock in kinds; each thing follows its own kind.\nSo when the target is set up, arrows come to it; when the woods are thick, axes come to them; when a tree makes shade, many birds rest in it; when vinegar turns sour, gnats gather. So words can bring calamity, and deeds can bring disgrace. The noble person should be careful of where he stands!",
+   "keyLines": [
+    {
+     "line": "學不可以已",
+     "en": "Learning must never stop.",
+     "note": "The general principle of the whole piece: one must not stop learning."
+    },
+    {
+     "line": "靑，取之於藍而靑於藍；冰，水為之而寒於水",
+     "en": "Blue is taken from the indigo plant and is bluer than indigo; ice is made from water and is colder than water.",
+     "note": "With blue and indigo, ice and water as images, it shows that learning after birth can make a person surpass his original nature; this is the source of the later saying 'the pupil surpasses the master'."
+    },
+    {
+     "line": "木直中繩，輮以為輪，其曲中規",
+     "en": "Wood may be straight enough to fit the marking cord, but if it is heated and bent into a wheel, its curve fits the compass.",
+     "note": "Straight wood heated and bent can become a wheel, and its curve fits the compass exactly; this shows that people can change through education."
+    },
+    {
+     "line": "君子博學而日參省乎己，則知明而行無過矣",
+     "en": "The noble person who learns widely and examines himself every day grows clear in knowledge and faultless in conduct.",
+     "note": "Learning must be broad, and each day one must test and reflect on oneself, to become wise and free of fault."
+    },
+    {
+     "line": "君子生非異也，善假於物也",
+     "en": "The noble person is not born different; he is good at making use of things.",
+     "note": "The noble person is no different in natural gifts from other people; the difference is skill in using outside things such as heights, carriages and boats. Learning is to make good use of outside resources."
+    },
+    {
+     "line": "蓬生麻中，不扶而直",
+     "en": "Mugwort that grows among hemp is straight without being propped up.",
+     "note": "Mugwort among hemp grows straight without support, showing how great the effect of environment is."
+    },
+    {
+     "line": "君子居必擇鄉，遊必就士",
+     "en": "In choosing a home, the noble person must choose the neighbourhood, and in travelling must go to scholars.",
+     "note": "He should pick his neighbourhood and keep company with worthy men, to guard against the crooked and stay near what is upright."
+    },
+    {
+     "line": "君子慎其所立乎",
+     "en": "The noble person should be careful of where he stands!",
+     "note": "The conclusion: be careful in word and deed, because disaster and disgrace each come from their own kind."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "輮",
+     "en": "rou - to heat and bend",
+     "note": "Variant of rou, 'to bend wood by heat'."
+    },
+    {
+     "term": "槁暴",
+     "en": "gao pu - dried in the sun",
+     "note": "Gao is dry, pu is sun-dried; it means that wood, once dried, does not return to its old shape."
+    },
+    {
+     "term": "參省",
+     "en": "can xing - to examine oneself",
+     "note": "Can means to test and xing to reflect; to check and reflect on oneself every day."
+    },
+    {
+     "term": "于、越、夷、貉",
+     "en": "Yu, Yue, Yi, Mo - peoples of different regions",
+     "note": "Yu-yue means the Wu-Yue region; Yi and Mo are tribes of the east and north; the names stand in general for people of different places."
+    },
+    {
+     "term": "蒙鳩",
+     "en": "meng jiu - the mengjiu bird",
+     "note": "A small bird, thought to be a kind of wren, that makes a nest of hair and ties it to reed heads."
+    },
+    {
+     "term": "射干",
+     "en": "she gan - shegan",
+     "note": "A plant; the text says its stem is short, but because it grows on a high mountain it seems tall; some take it to be a woody plant."
+    },
+    {
+     "term": "滫",
+     "en": "xiu - foul water",
+     "note": "Stinking water, such as the soured water used to rinse rice; 'jian zhi xiu' means to be soaked in foul water."
+    },
+    {
+     "term": "漸",
+     "en": "jian - to soak",
+     "note": "To steep, to dye; by extension, to be influenced by the surroundings."
+    },
+    {
+     "term": "疇生",
+     "en": "chou sheng - to grow in kinds",
+     "note": "Born together by kind; chou means a kind."
+    }
+   ],
+   "background": "The Xunzi is the work of Xun Kuang (about 313-238 BC), a thinker of the late Warring States. 'Encouraging Learning' stands at the head of the book and is one of the best-known ancient Chinese essays on learning. Xunzi held that human nature is bad but can be reshaped by effort, so he stressed learning after birth and the teaching of ritual and rightness. This section builds its argument on many comparisons, in even sentences and with the argument going forward step by step."
+  },
+  "pian02": {
+   "summary": "This section says that learning depends on accumulation and single-mindedness. Piling earth into a mountain, carving without giving up, and the contrast between the earthworm and the crab show perseverance. It then covers what is learned, from reciting the classics to studying ritual, and the aim, from being a scholar to being a sage, and distinguishes the learning of the noble person from that of the petty person.",
+   "translation": "Pile up earth to make a mountain, and wind and rain rise from it; pile up water to make a deep pool, and dragons breed in it; pile up good deeds to make virtue, and spiritual clarity comes of itself, and the heart of a sage is complete. So if you do not pile up half-steps, you cannot reach a thousand li; if you do not pile up small streams, you cannot make rivers and seas. A fine steed leaps and cannot go ten paces; a worn-out horse, in ten days of harness, gets there, because its success lies in not giving up. If you carve and then stop, you cannot break rotten wood; if you carve and do not stop, you can engrave metal and stone.\nThe earthworm has no sharp claws or teeth, no strong sinews or bones, yet above it eats dust and earth, and below it drinks from the yellow springs, because it uses its mind on one thing. The crab has six legs and two pincers, but unless it finds the hole of a snake or eel it has nowhere to lodge, because it uses its mind with haste and restlessness. So one who has no dark and quiet purpose will have no bright understanding; one who has no dull and patient work will have no glorious achievement. One who walks at a crossroads does not arrive; one who serves two lords is not accepted. The eye cannot look two ways and see clearly; the ear cannot listen two ways and hear acutely. The flying snake has no feet and yet flies; the wu rat has five skills and yet is in want.\nThe Songs say: 'The cuckoo is in the mulberry tree, its young ones are seven. The good man, the noble person, his bearing is one. His bearing is one, and his heart is as if tied in a knot.' So the noble person is tied to one thing.\nLong ago Hu Ba played the zither and the fish rose to listen; Bo Ya played the lute and the six horses raised their heads from their fodder. So no sound is so small that it is not heard, and no conduct is so hidden that it does not show. When there is jade on a mountain, the grass and trees are moist; when a deep pool bears pearls, its bank does not go dry. If you do good and keep piling it up, how could it fail to be heard of?\nWhere does learning begin? Where does it end? I say: in its course, it begins with reciting the classics and ends with reading the rites; in its meaning, it begins with being a scholar and ends with being a sage. If one piles up truly and keeps at it long, one enters; learning goes on until death and then stops. So the course of learning has an end, but its meaning cannot be put down even for a moment. To do it is to be human; to give it up is to be a beast. The Documents record the affairs of government; the Songs are where the tones of balance come to rest; the Rites are the great division of the law and the guiding rule for kinds of things. So learning reaches the Rites and stops. This is called the summit of the Way and virtue. The reverence and refinement of the Rites, the harmony of the Music, the breadth of the Songs and Documents, the subtlety of the Spring and Autumn Annals: all that lies between heaven and earth is there.\nThe learning of the noble person enters the ear, attaches to the heart, spreads through the four limbs and shows in action and stillness; he speaks with composure and acts with gentleness, and each of these can be a rule. The learning of the petty person enters the ear and comes out of the mouth. Between mouth and ear there are only four inches - how could that be enough to beautify a body of seven feet! The learners of old learned for themselves; the learners of today learn for others. The learning of the noble person beautifies his own person; the learning of the petty person is for use as a gift, like a calf given as a present. So to speak when not asked is called arrogance; to give two answers when asked one is called chattering. Arrogance is wrong, and chattering is wrong; the noble person is like an echo.\nIn learning, nothing is more convenient than keeping close to the right person. The Rites and Music give rules but do not explain; the Songs and Documents record old matters but are not close to hand; the Spring and Autumn Annals are terse and not quick to grasp.",
+   "keyLines": [
+    {
+     "line": "積土成山，風雨興焉；積水成淵，蛟龍生焉",
+     "en": "Pile up earth to make a mountain, and wind and rain rise from it; pile up water to make a deep pool, and dragons breed in it.",
+     "note": "Mountains from earth and pools from water show that great things are made by building up day by day."
+    },
+    {
+     "line": "故不積跬步，無以至千里；不積小流，無以成江海",
+     "en": "If you do not pile up half-steps, you cannot reach a thousand li; if you do not pile up small streams, you cannot make rivers and seas.",
+     "note": "A well-known line: unless one starts from one step and one drop, one cannot reach a great goal."
+    },
+    {
+     "line": "騏驥一躍，不能十步；駑馬十駕，功在不舍",
+     "en": "A fine steed leaps and cannot go ten paces; a worn-out horse, in ten days of harness, gets there, because its success lies in not giving up.",
+     "note": "The thousand-li steed cannot cover ten paces in one leap, while the poor horse arrives after ten days of travel; the key is not to stop."
+    },
+    {
+     "line": "鍥而舍之，朽木不折；鍥而不舍，金石可鏤",
+     "en": "If you carve and then stop, you cannot break rotten wood; if you carve and do not stop, you can engrave metal and stone.",
+     "note": "If you give up after one cut you cannot sever even rotten wood; if you keep at it you can carve metal and stone. It stresses perseverance."
+    },
+    {
+     "line": "目不能兩視而明，耳不能兩聽而聰",
+     "en": "The eye cannot look two ways and see clearly; the ear cannot listen two ways and hear acutely.",
+     "note": "One must use the mind with a single focus and not split it between two things."
+    },
+    {
+     "line": "學惡乎始？惡乎終？",
+     "en": "Where does learning begin? Where does it end?",
+     "note": "He asks where learning starts and where it stops, and answers below: from reciting the classics to reading the rites, and from scholar to sage."
+    },
+    {
+     "line": "君子之學也，入乎耳，箸乎心，布乎四體，形乎動靜",
+     "en": "The learning of the noble person enters the ear, attaches to the heart, spreads through the four limbs and shows in action and stillness.",
+     "note": "What the noble person learns enters the ear, is fixed in the mind, fills the body and is shown in speech and conduct."
+    },
+    {
+     "line": "小人之學也，入乎耳，出乎口",
+     "en": "The learning of the petty person enters the ear and comes out of the mouth.",
+     "note": "The petty person only hears and repeats; he takes nothing in."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "跬步",
+     "en": "kui bu - half-step",
+     "note": "Kui is one foot lifted, half a step; it stands for any small step."
+    },
+    {
+     "term": "騏驥、駑馬",
+     "en": "qi ji, nu ma - fine steed, worn-out horse",
+     "note": "Qi ji is a thousand-li horse; nu ma is a poor horse."
+    },
+    {
+     "term": "鍥",
+     "en": "qi - to carve",
+     "note": "To carve with a knife."
+    },
+    {
+     "term": "螣蛇",
+     "en": "teng she - flying snake",
+     "note": "A legendary snake that could ride the clouds and mist; some say it is a kind of dragon."
+    },
+    {
+     "term": "梧鼠",
+     "en": "wu shu - the wu rat",
+     "note": "A rodent, also called shi shu, said to have five skills, none of them good, and so is in want."
+    },
+    {
+     "term": "瓠巴、伯牙",
+     "en": "Hu Ba, Bo Ya - Hu Ba and Bo Ya",
+     "note": "Famous players of the zither and lute in ancient times."
+    },
+    {
+     "term": "蝡",
+     "en": "ru - gently",
+     "note": "A variant of ru, 'to wriggle'; 'ru er dong' means to act in a slight, gentle way."
+    },
+    {
+     "term": "囋",
+     "en": "zan - chattering",
+     "note": "Talkative, wordy."
+    },
+    {
+     "term": "為己、為人",
+     "en": "wei ji, wei ren - for oneself, for others",
+     "note": "To learn for oneself means to learn to enrich oneself; to learn for others means to learn to please others or to show off."
+    }
+   ],
+   "background": "This section continues the theme of 'Encouraging Learning'. Its second half deals with the order and purpose of learning, from reciting the Songs and Documents to studying the rites and becoming a sage. Xunzi regards the Rites as the goal of learning and values learning from a worthy teacher ('nothing is more convenient than keeping close to the right person'), which fits his emphasis on rites and teachers' models. The distinction between learning 'for oneself' and 'for others' echoes the Analects: 'the learners of old learned for themselves'."
+  },
+  "pian03": {
+   "summary": "This section stresses keeping close to good teachers, honouring ritual, and observing proportion when asking and discussing. It ends by saying that learning must be single-minded and complete, so that ear, eye, mouth and heart lean only towards the right path, forming a moral steadiness that cannot be shaken, and only then is one a complete person.",
+   "translation": "When a person has practised the teachings of the noble person, he is respected and widely known and is at home in the world. So I say: in learning, nothing is more convenient than keeping close to the right person. The shortest path in learning is to love the right person; honouring ritual comes next. If one cannot love the right person, and cannot honour ritual, then one merely learns miscellaneous notes and follows the Songs and Documents, and to the end of one's years one will not escape being a shallow scholar. If one wishes to trace back to the former kings and base oneself on humaneness and rightness, then ritual is the very warp and woof and the path to it. It is like taking hold of the collar of a fur coat, bending five fingers and giving it a shake: the hairs that lie smooth cannot be counted.\nIf one does not follow the codes of ritual and tries to do it with the Songs and Documents, it is like measuring a river with a finger, pounding millet with a spear, or eating from a jar with an awl: one cannot succeed. So he who honours ritual, even if he is not yet clear-sighted, is a man who keeps the law; he who does not honour ritual, even if he is sharp and eloquent, is a scattered scholar.\nDo not answer one who asks improperly; do not ask one who answers improperly; do not listen to one who argues improperly; do not debate with one who has a spirit of contention. So only if he comes by the right path should you engage with him; if not, avoid him. Therefore, when he is respectful in manner, you can speak with him about the direction of the Way; when his speech is gentle, you can speak with him about the principle of the Way; when his looks are compliant, you can speak with him about the utmost of the Way. To speak when one should not yet speak is called arrogance; not to speak when one should is called concealing; to speak without watching the face and manner is called blindness. So the noble person is neither arrogant, nor concealing, nor blind, and is careful and compliant in himself. The Songs say: 'Not hasty, not slow, the Son of Heaven grants it.' This is what that means.\nOne who misses once in a hundred shots cannot be called a good archer; one who falls short by a half-step in a thousand li cannot be called a good driver; one who cannot link the classes of things and has no unity in humaneness and rightness cannot be called a good learner. Learning means to learn to be one. If one is sometimes in and sometimes out, one is a man of the lanes and alleys. Those who are good are few and the bad many, like Jie, Zhou and the robber Zhi. To make learning whole and complete is to be a learner.\nThe noble person knows that what is not whole and pure is not enough to be fine. So he recites to string it together, thinks to make it clear, acts as the man he studies to live in it, and removes what harms in order to hold and nurture it, so that his eyes do not want to see what is not this, his ears do not want to hear what is not this, his mouth does not want to say what is not this, and his heart does not want to think of what is not this. When he comes to love it to the utmost, his eye loves it more than the five colours, his ear more than the five sounds, his mouth more than the five flavours, and his heart finds it of more benefit than possessing the world. So power and gain cannot topple him, crowds cannot move him, and the world cannot shake him. In life he follows this, in death he follows this; this is called steadiness of virtue. Having steadiness of virtue one can be settled; being settled one can respond; able to be settled and to respond, this is called a complete person. Heaven shows its brightness, earth shows its light; the noble person values his wholeness.",
+   "keyLines": [
+    {
+     "line": "學之經莫速乎好其人，隆禮次之",
+     "en": "The shortest path in learning is to love the right person; honouring ritual comes next.",
+     "note": "The route in learning: the quickest is to love a good teacher, and next is to honour ritual."
+    },
+    {
+     "line": "不道禮憲，以《詩》、《書》為之，譬之猶以指測河也",
+     "en": "If one does not follow the codes of ritual and tries to do it with the Songs and Documents, it is like measuring a river with a finger.",
+     "note": "To depend only on the Songs and Documents without ritual is like measuring the depth of a river with a finger: it cannot reach the goal."
+    },
+    {
+     "line": "故隆禮，雖未明，法士也；不隆禮，雖察辯，散儒也",
+     "en": "He who honours ritual, even if he is not yet clear-sighted, is a man who keeps the law; he who does not, even if he is sharp and eloquent, is a scattered scholar.",
+     "note": "One who honours ritual, even if not yet wise, is a law-keeping man; one who does not, even if keen in argument, is only a scattered scholar."
+    },
+    {
+     "line": "未可與言而言謂之傲，可與言而不言謂之隱，不觀氣色而言謂之瞽",
+     "en": "To speak when one should not yet speak is called arrogance; not to speak when one should is called concealing; to speak without watching the face and manner is called blindness.",
+     "note": "It sets out the proper measure in talk: speaking out of turn is rash, keeping silent is hiding, and speaking without reading the other is blind."
+    },
+    {
+     "line": "百發失一，不足謂善射",
+     "en": "One who misses once in a hundred shots cannot be called a good archer.",
+     "note": "Missing one in a hundred shots does not count as a good archer, showing that learning must be complete and without gaps."
+    },
+    {
+     "line": "學也者，固學一之也",
+     "en": "Learning means to learn to be one.",
+     "note": "Learning means to learn to bring what one has learned together into one thing."
+    },
+    {
+     "line": "生乎由是，死乎由是，夫是之謂德操",
+     "en": "In life he follows this, in death he follows this; this is called steadiness of virtue.",
+     "note": "To follow the right way in life and death: this firmness is called steadiness of virtue."
+    },
+    {
+     "line": "天見其明，地見其光，君子貴其全也",
+     "en": "Heaven shows its brightness, earth shows its light; the noble person values his wholeness.",
+     "note": "The close: heaven shows its light and earth its brilliance, and what is precious in the noble person is a full and pure character."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "隆禮",
+     "en": "long li - to honour ritual",
+     "note": "To honour ritual and rightness; long means to esteem."
+    },
+    {
+     "term": "禮憲",
+     "en": "li xian - codes of ritual",
+     "note": "Rules of ritual and standards of conduct."
+    },
+    {
+     "term": "陋儒、散儒",
+     "en": "lou ru, san ru - shallow scholar, scattered scholar",
+     "note": "Scholars of narrow outlook or with no order in their thought."
+    },
+    {
+     "term": "楛",
+     "en": "ku - improper",
+     "note": "Crude, not in keeping with ritual; 'wen ku' means to ask in an improper way."
+    },
+    {
+     "term": "傲、隱、瞽",
+     "en": "ao, yin, gu - arrogant, concealing, blind",
+     "note": "Ao is rashness, yin is hiding and keeping silent, gu is blindness, not reading the other's face."
+    },
+    {
+     "term": "桀、紂、盜跖",
+     "en": "Jie, Zhou, Dao Zhi - Jie, Zhou and Robber Zhi",
+     "note": "Jie and Zhou were the tyrant last kings of the Xia and Shang; Zhi was a famous robber; all stand for evil men."
+    },
+    {
+     "term": "德操",
+     "en": "de cao - steadiness of virtue",
+     "note": "A firm and unshaken moral discipline."
+    },
+    {
+     "term": "成人",
+     "en": "cheng ren - a complete person",
+     "note": "A person of full virtue."
+    }
+   ],
+   "background": "This section closes 'Encouraging Learning'. Its stress is on the model of a teacher and the place of ritual, and on the completeness of learning. Xunzi holds that reading alone is not enough to form virtue; one must be guided by a good teacher and measured by ritual. The line 'power and gain cannot topple him, crowds cannot move him, and the world cannot shake him' describes steadfast virtue, the ideal character in Xunzi's mind."
+  }
+ }
+}

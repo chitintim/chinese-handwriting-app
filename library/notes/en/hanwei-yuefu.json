@@ -1,0 +1,534 @@
+{
+ "id": "hanwei-yuefu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "dafengge": {
+   "summary": "A three-line song in the Chu-song style, improvised by Liu Bang after he put down a rebellion and went home to feast with his townsfolk. The great wind and flying clouds suggest his might, and 'my power spreads within the seas' is his triumph, but the last line turns to worry: where will he find brave men to guard the realm? Pride and anxiety sit side by side.",
+   "translation": "A great wind rises, oh, and the clouds fly high.\nMy might spreads over all within the seas, oh, and I come home to my village.\nWhere shall I find brave warriors, oh, to guard the four quarters?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "兮",
+     "en": "xi - exclamatory particle",
+     "note": "A particle that carries the sound of the line, rather like a long 'oh' or 'ah'. It is typical of the Chu ci (Songs of Chu) style, which this song imitates."
+    },
+    {
+     "term": "海內",
+     "en": "hai nei - 'within the seas'",
+     "note": "Everything within the four seas, that is, the whole world as the ancient Chinese pictured it. It means 'all under Heaven'."
+    },
+    {
+     "term": "加",
+     "en": "jia - 'to spread over, to reach'",
+     "note": "To bring to bear on, or to extend over. Here his authority reaches everywhere."
+    },
+    {
+     "term": "猛士",
+     "en": "meng shi - 'brave warriors'",
+     "note": "Courageous and powerful fighting men, the generals and soldiers a ruler needs to hold his territory."
+    }
+   ],
+   "background": "By Liu Bang (Emperor Gaozu of the Han), founder of the Han dynasty (206 BC-220 AD). Tradition says that after crushing the rebellion of Ying Bu, King of Huainan, he returned to his home county of Pei, drank with the village elders, and sang this song while beating a zhu, a stringed instrument struck with a bamboo stick."
+  },
+  "gaixiage": {
+   "summary": "The last poem of Xiang Yu, the Hegemon-King of Western Chu, written when the Han army had him surrounded at Gaixia. The first two lines boast of a strength that could shake mountains; the last two admit that fortune has turned, even his horse will not go forward, and all he can do is sigh to his beloved Lady Yu. It is both grand and desolate.",
+   "translation": "My strength can pull up mountains, oh, my spirit towers over the age.\nBut the times are against me, oh, and my dappled horse will not run.\nMy dappled horse will not run, oh, what can be done?\nYu, oh Yu, oh Yu, what shall I do about you?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "拔山",
+     "en": "ba shan - 'to pull up a mountain'",
+     "note": "Strong enough to uproot a mountain, a way of describing enormous strength."
+    },
+    {
+     "term": "氣蓋世",
+     "en": "qi gai shi - 'spirit that covers the age'",
+     "note": "A spirit and bearing that surpass everyone of his time."
+    },
+    {
+     "term": "騅",
+     "en": "zhui - 'a dappled grey horse'",
+     "note": "A horse with a grey-and-white mottled coat. Here it means Xiang Yu's famous mount, Wuzhui, the Black Dappled Horse."
+    },
+    {
+     "term": "逝",
+     "en": "shi - 'to go forward, to gallop'",
+     "note": "To advance or run ahead. The horse will not move on."
+    },
+    {
+     "term": "虞",
+     "en": "Yu - Lady Yu",
+     "note": "Yu Ji, Xiang Yu's beloved consort, who stayed at his side through the campaigns. Tradition says she died by her own hand that night."
+    },
+    {
+     "term": "若",
+     "en": "ruo - 'you'",
+     "note": "An old second-person pronoun. The last line addresses Lady Yu directly."
+    }
+   ],
+   "background": "By Xiang Yu, as recorded in the Records of the Grand Historian (Shiji), 'Basic Annals of Xiang Yu'. Surrounded at Gaixia by the Han army, he heard Chu songs sung on every side in the night, which told him that Chu land had fallen, and he took leave of Lady Yu with this song."
+  },
+  "shangye": {
+   "summary": "A folk song from the Han yuefu (Music Bureau) collection in which a woman swears to Heaven that she and her beloved will be bound together, and that she will break with him only when mountains flatten, rivers run dry, thunder rolls in winter, snow falls in summer, and sky and earth join. Five impossible things in a row give the vow its fierce heat.",
+   "translation": "Oh Heaven! I want to know you and be known by you,\nand may this love last long, never fading or breaking.\nOnly if the mountains lose their ridges,\nif the river runs dry,\nif thunder rumbles in winter,\nif rain turns to snow in summer,\nif Heaven and earth come together,\nonly then would I dare to part from you.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "上邪",
+     "en": "shang xie - 'Oh Heaven!'",
+     "note": "A cry in which the speaker calls on Heaven as witness to her oath. The second character is an old variant of a particle, so the phrase simply means 'O Heaven!'."
+    },
+    {
+     "term": "相知",
+     "en": "xiang zhi - 'to be at one in feeling'",
+     "note": "To love each other and understand each other's hearts, a deeper bond than merely knowing someone."
+    },
+    {
+     "term": "命",
+     "en": "ming - 'to make, to cause'",
+     "note": "Here it works like 'to make something so'. 'Long may it last' means 'may our love be made to endure'."
+    },
+    {
+     "term": "陵",
+     "en": "ling - 'hill, ridge'",
+     "note": "A mountain peak or a big mound of earth. The oath imagines every one of them levelled."
+    },
+    {
+     "term": "竭",
+     "en": "jie - 'to run dry'",
+     "note": "To be exhausted or dried up, said of a river or spring."
+    },
+    {
+     "term": "雨雪",
+     "en": "yu xue - 'to snow'",
+     "note": "Here the word for rain is used as a verb meaning 'to fall as snow', and it is read yu (fourth tone), not the usual noun reading."
+    }
+   ],
+   "background": "A Han yuefu folk song, included among the 'Nao ge' (drum-and-cymbal) songs, a group of eighteen military and ceremonial pieces. The title is simply its opening words."
+  },
+  "jiangnan": {
+   "summary": "A light Han yuefu folk song about lotus picking in the south. The lotus leaves are thick and bright, and fish play among them, and the poem repeats 'east, west, south, north' as if following the fish around the pond. The pace is quick, and the mood is carefree and full of everyday life.",
+   "translation": "In the south of the river one can gather lotus,\nhow thick and round the lotus leaves are!\nFish play among the lotus leaves.\nFish play to the east of the lotus leaves,\nfish play to the west of the lotus leaves,\nfish play to the south of the lotus leaves,\nfish play to the north of the lotus leaves.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "可",
+     "en": "ke - 'can, it is the time for'",
+     "note": "Suitable, or just right. The phrase says it is a good time to go and gather lotus."
+    },
+    {
+     "term": "何田田",
+     "en": "he tian tian - 'how thick and round'",
+     "note": "The reduplicated word describes lotus leaves spreading across the water like a layer of round pads, close together and lush."
+    },
+    {
+     "term": "戲",
+     "en": "xi - 'to play, to frolic'",
+     "note": "To play about happily. The fish are in no hurry."
+    },
+    {
+     "term": "採蓮",
+     "en": "cai lian - 'picking lotus'",
+     "note": "In the watery country south of the Yangtze, lotus gathering was both a job and an outing, usually done by girls in small boats, and it became a favourite subject of later poets."
+    }
+   ],
+   "background": "A Han yuefu folk song, filed under the 'Xianghe ge ci' (songs sung to accompaniment) group of the Music Bureau collection."
+  },
+  "changgexing": {
+   "summary": "A Han yuefu 'Long Song' that starts with sunflowers in a garden, bathed in dew and sunlight, to make a point about time. Everything flourishes and then fades, and rivers that run east do not return, so the poem closes with a plain warning: if you do not work hard while young and strong, you will only grieve when old.",
+   "translation": "Green, green are the mallows in the garden;\nthe morning dew waits for the sun to dry it.\nSpring spreads its kindness,\nand all things shine with light.\nI always fear the autumn season will come\nand the flowers and leaves will turn yellow and fall.\nA hundred rivers run east to the sea;\nwhen will they ever flow back west?\nIf you do not strive while young and strong,\nin old age you will grieve in vain.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "葵",
+     "en": "kui - 'mallow'",
+     "note": "The winter mallow, a leafy vegetable that was common on ancient Chinese tables and grew in many gardens."
+    },
+    {
+     "term": "晞",
+     "en": "xi - 'to dry'",
+     "note": "To dry out, here by the morning sun. The dew waits for the sun that will dry it, which already hints at how short things last."
+    },
+    {
+     "term": "布德澤",
+     "en": "bu de ze - 'to spread kindness'",
+     "note": "Spring is pictured as a giver of kindness, spreading warmth and rain over all living things."
+    },
+    {
+     "term": "焜黃",
+     "en": "kun huang - 'withered yellow'",
+     "note": "The yellowing colour of leaves that are starting to wither in autumn."
+    },
+    {
+     "term": "華葉",
+     "en": "hua ye - 'flowers and leaves'",
+     "note": "Flowers and foliage together. The line fears the moment they all wither."
+    },
+    {
+     "term": "老大徒傷悲",
+     "en": "lao da tu shang bei - 'old, and grieving in vain'",
+     "note": "When one has grown old, regret is useless. This is the moral of the whole poem, and the line has become a well-known proverb about using one's youth."
+    }
+   ],
+   "background": "A Han yuefu folk song, and one of the best-known poems urging people to treasure time."
+  },
+  "shiwucongjun": {
+   "summary": "A narrative yuefu poem about an old soldier who went to the army at fifteen and came home only at eighty. He finds his house in ruins and his family's graves in rows. He gathers wild grain and greens and cooks a meal, but there is no one to share it with, and at last he goes out the door, looks east, and weeps. The poem protests against war and conscription.",
+   "translation": "At fifteen I went off to the army,\nat eighty I was finally allowed home.\nOn the road I met a man from my village:\n'Who is left in my house?'\n'Over there, that is your house,\nwith pines and cypresses and grave mounds, row on row.'\nHares run in through the dog hole,\npheasants fly up from the rafters.\nIn the courtyard grows wild grain,\nover the well grow wild mallows.\nI pound the grain to make rice,\npick the mallows to make soup.\nSoup and rice are ready at once,\nbut I do not know whom to give them to!\nI go out the door and look east,\ntears fall and wet my clothes.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "阿誰",
+     "en": "a shei - 'who'",
+     "note": "A colloquial word for 'who'. The first syllable is only a prefix, as in 'A-mei' for a name."
+    },
+    {
+     "term": "冢",
+     "en": "zhong - 'grave'",
+     "note": "A burial mound or tomb. The old man sees that his whole family has become graves."
+    },
+    {
+     "term": "纍纍",
+     "en": "lei lei - 'row after row'",
+     "note": "A reduplicated word for things piled up or lined up one after another, here the grave mounds."
+    },
+    {
+     "term": "狗竇",
+     "en": "gou dou - 'dog hole'",
+     "note": "The small opening in a wall or gate through which a dog could go in and out. Wild hares now use it, a sign that the house is abandoned."
+    },
+    {
+     "term": "旅穀",
+     "en": "lu gu - 'wild grain'",
+     "note": "Grain that grows by itself, not planted by anyone. 'Lu' here means 'wild' or 'self-sown'."
+    },
+    {
+     "term": "羹",
+     "en": "geng - 'thick soup'",
+     "note": "A soup or stew with liquid in it, made here from the wild greens."
+    }
+   ],
+   "background": "A Han yuefu folk song. It reflects the hardship that long military service brought to ordinary people in the Han period."
+  },
+  "chilege": {
+   "summary": "A folk song from the Northern Dynasties (386-581) that paints the great grassland of the Chile plain: the Yin Mountains behind it, a sky like a huge tent over the fields, and a wind that bends the grass to show herds of cattle and sheep. The words are plain, the scene is vast, and the feeling is of open steppe.",
+   "translation": "The Chile plain,\nbeneath the Yin Mountains.\nThe sky is like a felt tent,\ncovering the fields on every side.\nThe sky is deep blue, the plain stretches without end;\nthe wind blows, the grass bends low, and cattle and sheep appear.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "敕勒川",
+     "en": "Chile chuan - 'the Chile plain'",
+     "note": "The flat land where the Chile people lived. The Chile were a nomadic people of the northern steppes, and 'chuan' means a broad river plain."
+    },
+    {
+     "term": "陰山",
+     "en": "Yin shan - 'the Yin Mountains'",
+     "note": "The Yin Mountain range, in what is now Inner Mongolia, running along the northern edge of the Yellow River bend."
+    },
+    {
+     "term": "穹廬",
+     "en": "qiong lu - 'domed felt tent'",
+     "note": "A round-topped tent of felt, the kind of dwelling known today as a yurt or Mongolian ger. The sky is likened to one."
+    },
+    {
+     "term": "見",
+     "en": "xian - 'to appear'",
+     "note": "Here the character is used for the one meaning 'to show itself' or 'to come into view'. The cattle and sheep are revealed when the grass bends."
+    },
+    {
+     "term": "蒼蒼",
+     "en": "cang cang - 'deep blue-grey'",
+     "note": "A reduplicated word for a deep, far-reaching blue-green, here the colour of the open sky."
+    }
+   ],
+   "background": "A folk song of the Northern Dynasties. Tradition says it was first sung in the Xianbei language and later turned into Chinese."
+  },
+  "mulanci": {
+   "summary": "A long narrative poem of the Northern Dynasties (386-581) about Mulan, who takes her father's place in the army disguised as a man. After twelve years she returns in triumph, refuses office, goes home, puts on women's clothes again, and astonishes her comrades. The pace is brisk and the repetitions are lively, and the ending, with its image of the male and female hare, is witty and strong.",
+   "translation": "Click, click, and click again,\nMulan sits weaving at the door.\nYou cannot hear the sound of the loom,\nonly the girl's sighs.\nWe ask the girl what is on her mind,\nwe ask the girl what she is thinking of.\n'The girl has nothing on her mind,\nthe girl is thinking of nothing.\nLast night I saw the army notice:\nthe Khan is calling up troops on a grand scale.\nThe army lists run to twelve scrolls,\nand in every scroll is my father's name.\nFather has no grown son,\nMulan has no elder brother.\nI will buy a saddle and a horse,\nand from now on go to war in Father's place.'\nIn the east market she buys a fine horse,\nin the west market a saddle and blanket,\nin the south market a bridle,\nin the north market a long whip.\nAt dawn she says goodbye to Father and Mother,\nat dusk she sleeps by the Yellow River.\nShe does not hear Father and Mother calling their daughter,\nshe hears only the Yellow River's water splashing and rushing.\nAt daybreak she leaves the Yellow River,\nat dusk she reaches the top of Black Mountain.\nShe does not hear Father and Mother calling their daughter,\nshe hears only the neighing of barbarian cavalry on Mount Yan.\nTen thousand li she rushes to the war,\ncrossing passes and mountains as if on wings.\nThe northern cold carries the sound of the watchman's clapper,\nand the chill light shines on iron armour.\nGenerals die in a hundred battles,\nand brave men come home after ten years.\nShe comes back to see the Son of Heaven,\nthe Son of Heaven sits in the Hall of Light.\nHer merit is recorded at twelve grades,\nthe rewards run to more than a hundred thousand.\nThe Khan asks what she wants.\n'Mulan has no use for a post as Secretary of the Board.\nI would only ask for a camel that can go a thousand li,\nto take your servant home.'\nWhen Father and Mother hear their daughter is coming,\nthey go out past the town wall to meet her, helping each other along.\nWhen her elder sister hears her younger sister is coming,\nshe fixes her rouge and powder at the door.\nWhen her little brother hears his sister is coming,\nhe sharpens his knife, whoosh, whoosh, for the pigs and sheep.\n'Open the door of my east chamber,\nlet me sit on the bed in my west chamber.\nI take off the robe I wore in war,\nI put on the clothes I used to wear.'\nAt the window she arranges her cloud-like hair,\nbefore the mirror she sticks on her yellow forehead mark.\nShe goes out to see her comrades,\nand her comrades are all amazed and flustered:\n'We marched together for twelve years\nand never knew Mulan was a girl!'\nThe male hare kicks and scrabbles,\nthe female hare's eyes are blurred and dim.\nBut when two hares run side by side along the ground,\nhow can anyone tell which of us is male or female?",
+   "keyLines": [
+    {
+     "line": "唧唧復唧唧",
+     "en": "Click, click, and click again",
+     "note": "The opening sound. Commentators disagree whether it is the sound of sighing or of the loom, but either way it leads straight into the picture of Mulan weaving at the door."
+    },
+    {
+     "line": "願為市鞍馬，從此替爺征",
+     "en": "I will buy a saddle and a horse, and from now on go to war in Father's place",
+     "note": "This is Mulan's decision to take her father's place in the army, and the turning point of the whole poem."
+    },
+    {
+     "line": "不聞爺孃喚女聲，但聞黃河流水鳴濺濺",
+     "en": "She does not hear Father and Mother calling their daughter, she hears only the Yellow River's water splashing and rushing",
+     "note": "The sound of the river stands in for the sound of her parents' voices. Her homesickness is felt through what she cannot hear, without being stated."
+    },
+    {
+     "line": "將軍百戰死，壯士十年歸",
+     "en": "Generals die in a hundred battles, and brave men come home after ten years",
+     "note": "In a few words, the line sums up ten years of hard fighting and how few survive it, which is more telling than a long account of battles."
+    },
+    {
+     "line": "木蘭不用尚書郎",
+     "en": "Mulan has no use for a post as Secretary of the Board",
+     "note": "Mulan does not want rank or office. She wants only to go home to her family."
+    },
+    {
+     "line": "雄兔腳撲朔，雌兔眼迷離",
+     "en": "The male hare kicks and scrabbles, the female hare's eyes are blurred and dim",
+     "note": "The closing comparison suggests that once the two hares are running, no one can tell them apart, and so a woman can win honour in war as well as any man."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "可汗",
+     "en": "ke han - 'Khan'",
+     "note": "The title northern peoples used for their ruler, here the sovereign of the Northern Dynasties."
+    },
+    {
+     "term": "爺",
+     "en": "ye - 'father'",
+     "note": "An old colloquial word for father. 'Ye niang' means 'father and mother', that is, parents."
+    },
+    {
+     "term": "柝",
+     "en": "tuo - 'night watchman's clapper'",
+     "note": "A wooden clapper struck to mark the night watches in a camp."
+    },
+    {
+     "term": "策勳十二轉",
+     "en": "ce xun shi er zhuan - 'merit recorded at twelve grades'",
+     "note": "The court recorded her deeds and promoted her. 'Zhuan' is a step up in the system of military honours, and twelve is the highest number of grades."
+    },
+    {
+     "term": "花黃",
+     "en": "hua huang - 'yellow forehead mark'",
+     "note": "A yellow ornament that women of the time stuck on the forehead as make-up."
+    },
+    {
+     "term": "火伴",
+     "en": "huo ban - 'messmates'",
+     "note": "Soldiers who served in the same squad. In the army of the time ten men made a 'huo', a cooking group, so these are comrades who ate together."
+    }
+   ],
+   "background": "A folk song of the Northern Dynasties. The version we have was polished by later hands, and scholars differ on its date and on how it reached its final form."
+  },
+  "duangexing": {
+   "summary": "A four-character yuefu poem by Cao Cao. It begins by lamenting how short life is, with wine and song to ease the worry, but its real theme is a thirst for talented men. It borrows lines from the Book of Songs (Shijing), and it ends with the Duke of Zhou, who gave up his meal to receive worthy visitors, to show Cao Cao's wish to treat gifted people with respect so that the whole world will turn to him.",
+   "translation": "Facing wine, one should sing: how long is a human life?\nIt is like the morning dew, and the days gone by are very many.\nThe song is stirring and passionate, yet the sorrow is hard to forget.\nWhat can dissolve this sorrow? Only Du Kang, wine.\nThe green collar of the scholar, how long my heart yearns for you.\nOnly because of you I have been murmuring this song until now.\nThe deer call 'you, you' to each other, eating the wild artemisia in the fields.\nI have honoured guests, and for them we play the zither and blow the reed pipes.\nBright as the moon, when can it be plucked?\nSorrow wells up from within and cannot be cut off.\nYou crossed the paths between the fields, honouring me with a visit.\nAfter long parting we talk and feast, and my heart remembers old kindness.\nThe moon is bright, the stars are few, and magpies fly south.\nThey circle the tree three times: on which branch can they rest?\nThe mountain does not tire of height, the sea does not tire of depth.\nThe Duke of Zhou spat out his food, and the world turned its heart to him.",
+   "keyLines": [
+    {
+     "line": "對酒當歌，人生幾何",
+     "en": "Facing wine, one should sing: how long is a human life?",
+     "note": "The opening line sighs over how short human life is."
+    },
+    {
+     "line": "何以解憂？唯有杜康",
+     "en": "What can dissolve this sorrow? Only Du Kang, wine.",
+     "note": "Du Kang is said to be the first maker of wine, and his name is used here as another word for wine."
+    },
+    {
+     "line": "青青子衿，悠悠我心",
+     "en": "The green collar of the scholar, how long my heart yearns for you.",
+     "note": "Taken from 'Zi jin' in the Book of Songs, in the section called Zheng Airs. It expresses longing for able men."
+    },
+    {
+     "line": "呦呦鹿鳴，食野之苹",
+     "en": "The deer call 'you, you' to each other, eating the wild artemisia in the fields.",
+     "note": "Taken from 'Lu ming' (The Deer Cry) in the Lesser Odes of the Book of Songs. A feast for guests stands for the courtesy shown to the worthy."
+    },
+    {
+     "line": "月明星稀，烏鵲南飛",
+     "en": "The moon is bright, the stars are few, and magpies fly south.",
+     "note": "The magpies wander with no place to perch, a picture of talented men who must choose a ruler worth settling with."
+    },
+    {
+     "line": "周公吐哺，天下歸心",
+     "en": "The Duke of Zhou spat out his food, and the world turned its heart to him.",
+     "note": "By recalling the story of the Duke of Zhou, who rushed to receive worthy men, Cao Cao shows how he means to treat them."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "當",
+     "en": "dang - 'ought to; facing'",
+     "note": "It means 'should', and some also take it as 'facing' (wine)."
+    },
+    {
+     "term": "杜康",
+     "en": "Du Kang - the legendary wine-maker",
+     "note": "He is said to have been the first to brew wine. Later his name became a word for wine itself."
+    },
+    {
+     "term": "子衿",
+     "en": "zi jin - 'scholar's collar'",
+     "note": "Originally the blue-green collar of a robe. Here it stands for a scholar, or a man of talent."
+    },
+    {
+     "term": "苹",
+     "en": "ping - 'artemisia'",
+     "note": "A plant of the mugwort family, the wild herb the deer feed on in the song."
+    },
+    {
+     "term": "契闊談讌",
+     "en": "qi kuo tan yan - 'long parted, then talking and feasting'",
+     "note": "Meeting again after a long separation and chatting over a banquet. The last character is an old form of the word for 'feast'."
+    },
+    {
+     "term": "吐哺",
+     "en": "tu bu - 'to spit out food'",
+     "note": "The Duke of Zhou is said to have spat out a mouthful of food, more than once in a single meal, to receive visiting scholars at once."
+    }
+   ],
+   "background": "By Cao Cao (155-220), a statesman and poet at the end of the Han dynasty, and one of the best-known poems of the Jian'an era (196-220). Scholars differ on exactly when it was written."
+  },
+  "guancanghai": {
+   "summary": "The first stanza of Cao Cao's 'Bu chu Xiamen xing' (Walking out of the Xia Gate). He climbs Jieshi Mountain and looks out over the sea: the water ripples, islands stand up out of it, the autumn wind is bleak, and great waves rise. He imagines the sun, moon and stars all coming out of the sea. The mood is expansive and the scene is mighty.",
+   "translation": "Going east I come to Jieshi,\nand from it I look at the grey-blue sea.\nHow the water ripples and sways,\nthe mountain islands stand tall and sharp.\nTrees and bushes grow in clumps,\nand a hundred grasses are rich and lush.\nThe autumn wind blows bleak and chill,\nand great waves surge up.\nThe course of the sun and the moon\nseems to start from within it;\nthe glittering Milky Way\nseems to come out from inside it.\nHow fortunate, how very fortunate,\nwe sing in order to voice our aims.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "碣石",
+     "en": "Jieshi - 'Jieshi Mountain'",
+     "note": "A hill by the sea in what is now the Changli area of Hebei province, a landmark for travellers on the coast."
+    },
+    {
+     "term": "滄海",
+     "en": "cang hai - 'the grey-blue sea'",
+     "note": "The sea, whose waters look a deep blue-green. It is the usual poetic word for the ocean."
+    },
+    {
+     "term": "澹澹",
+     "en": "dan dan - 'rippling'",
+     "note": "A reduplicated word for water moving in a gentle swaying way."
+    },
+    {
+     "term": "竦峙",
+     "en": "song zhi - 'standing tall'",
+     "note": "To rise up high and stand firm, said of the islands."
+    },
+    {
+     "term": "星漢",
+     "en": "xing han - 'the Milky Way'",
+     "note": "The river of stars, that is, the Milky Way."
+    },
+    {
+     "term": "幸甚至哉",
+     "en": "xing shen zhi zai, ge yi yong zhi - 'how fortunate; we sing to voice our aims'",
+     "note": "A set formula in yuefu poems, used to close a movement of a song. It does not describe the sea, and it has been used as a closing line in many such pieces."
+    }
+   ],
+   "background": "By Cao Cao. It is thought to have been written about 207, when he was returning from a victorious northern campaign against the Wuhuan and passed Jieshi Mountain."
+  },
+  "qibushi": {
+   "summary": "A short five-character poem built on one image: beans are boiled over a fire of their own stalks, and the beans weep in the pot. Beans and stalks grew from one root, so why should one press so hard on the other? It is a picture of brothers who destroy each other, put in simple words that move the reader.",
+   "translation": "Boil the beans and burn the bean stalks,\nthe beans in the pot are weeping.\nWe were born from the same root,\nwhy be so quick to scorch me?",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "豆萁",
+     "en": "dou qi - 'bean stalks'",
+     "note": "The stems of bean plants, which when dried were used as firewood."
+    },
+    {
+     "term": "釜",
+     "en": "fu - 'cauldron'",
+     "note": "An old kind of cooking pot, a round-bellied vessel used to boil food."
+    },
+    {
+     "term": "泣",
+     "en": "qi - 'to weep'",
+     "note": "To cry quietly or in a low voice, rather than wailing."
+    },
+    {
+     "term": "同根生",
+     "en": "tong gen sheng - 'born of one root'",
+     "note": "Grown from the same root. It stands for brothers of the same parents."
+    },
+    {
+     "term": "煎",
+     "en": "jian - 'to fry; to torment'",
+     "note": "Literally to boil or fry something down; here it means to scorch, torment or press hard."
+    }
+   ],
+   "background": "By Cao Zhi (192-232), a son of Cao Cao and one of the finest poets of his age. According to the Shishuo xinyu (A New Account of Tales of the World), his brother Cao Pi, the Emperor Wen of Wei, told him to make a poem within seven steps or be put to death, and he made this one at once. The wording and even the authenticity of the poem have been disputed since early times."
+  },
+  "yinjiu5": {
+   "summary": "The fifth of twenty poems called 'Drinking Wine'. It describes the mind of a recluse: he lives among people yet is not troubled by the noise of carriages, because his heart is far away. He picks chrysanthemums, looks up and sees the southern hills, and in the evening mist and the birds going home he senses the true meaning of nature, which words cannot fully say.",
+   "translation": "I built my hut in the world of men,\nyet I hear no noise of carriages and horses.\nYou ask me how this can be?\nWhen the heart is far away, the place becomes remote of itself.\nI pick chrysanthemums under the eastern fence,\nand at leisure my eyes fall on the southern hills.\nThe mountain air is lovely at dusk,\nand the birds fly home together.\nIn this there is a true meaning;\nI want to explain it, but I have already forgotten the words.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "結廬",
+     "en": "jie lu - 'to build a hut'",
+     "note": "To put up a simple dwelling. Tao uses it for his plain home."
+    },
+    {
+     "term": "人境",
+     "en": "ren jing - 'the human world'",
+     "note": "The world of people, where others live, as against the wilderness."
+    },
+    {
+     "term": "悠然見南山",
+     "en": "you ran jian nan shan - 'at leisure, I see the southern hills'",
+     "note": "One text reads 'look towards' the hills instead of 'see' them. Critics through the centuries have preferred 'see', which suggests that the hills simply came into view without being sought."
+    },
+    {
+     "term": "南山",
+     "en": "nan shan - 'the southern hills'",
+     "note": "Usually taken to mean Mount Lu, near Tao's home. Some think it means any hills to the south."
+    },
+    {
+     "term": "日夕",
+     "en": "ri xi - 'dusk'",
+     "note": "The evening, when the day is turning to night."
+    },
+    {
+     "term": "真意",
+     "en": "zhen yi - 'true meaning'",
+     "note": "The real sense or taste of life and nature, felt directly rather than argued."
+    }
+   ],
+   "background": "By Tao Yuanming (365-427), who left official life and went to live in the country. It is one of his best-known poems from that period."
+  },
+  "yuantian1": {
+   "summary": "The first of five poems called 'Returning to My Fields and Gardens'. Tao Yuanming describes his decision to leave office and the joy that followed. From youth he disliked worldly ways, and he strayed into the 'dusty net' of officialdom for thirty years, like a caged bird or a fish in a pond that longs for its old forest and deep pool. Now, in a thatched house with elms, willows, chickens and dogs and smoke over the village, he has at last returned to nature.",
+   "translation": "From youth I had no taste for the ways of the world,\nby nature I loved the hills and mountains.\nBy mistake I fell into the dusty net,\nand once gone, thirty years went by.\nThe caged bird longs for its old woods,\nthe fish in the pond thinks of its former deep pool.\nI open up wasteland at the edge of the southern fields,\nand holding to my simple nature, I return to field and garden.\nMy plot is ten mu or so,\nmy thatched house has eight or nine rooms.\nElms and willows shade the back eaves,\npeach and plum trees are set out before the hall.\nDim and far off lies a village,\nsoftly the smoke from the hamlets drifts up.\nA dog barks in a deep lane,\na cock crows from the top of a mulberry tree.\nMy house and yard are free of dust and noise,\nin the bare rooms there is leisure to spare.\nFor so long I was inside the cage;\nnow I can go back to what is natural.",
+   "keyLines": [],
+   "glossary": [
+    {
+     "term": "適俗韻",
+     "en": "shi su yun - 'a nature suited to the world'",
+     "note": "A temperament that fits in with worldly ways and conventions. Tao says he never had one."
+    },
+    {
+     "term": "塵網",
+     "en": "chen wang - 'the dusty net'",
+     "note": "A figure for the bonds of officialdom and worldly life, a net made of dust and cares in which one is caught."
+    },
+    {
+     "term": "三十年",
+     "en": "san shi nian - 'thirty years'",
+     "note": "This is the reading of the common text, though some editions read 'thirteen years'. Tao in fact served only on and off over some thirteen years, so the point is debated."
+    },
+    {
+     "term": "守拙",
+     "en": "shou zhuo - 'to hold to simplicity'",
+     "note": "To keep to one's plain, unpolished nature and not follow the crowd. 'Zhuo' means clumsy, which Tao takes as a quality."
+    },
+    {
+     "term": "曖曖",
+     "en": "ai ai - 'dim and hazy'",
+     "note": "A reduplicated word for something dim or faint, as a village looks in the distance in evening haze."
+    },
+    {
+     "term": "樊籠",
+     "en": "fan long - 'the cage'",
+     "note": "A cage for keeping birds and animals, again a figure for the confinement of an official career."
+    }
+   ],
+   "background": "By Tao Yuanming. It is thought to have been written about 405, after he resigned as magistrate of Pengze and went back to farm."
+  }
+ }
+}

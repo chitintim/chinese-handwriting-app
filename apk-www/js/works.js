@@ -88,7 +88,7 @@
         if (!cache[key]) { remember(key, cv); stats.drawn++; }
         box.appendChild(cv); box.setAttribute('data-thumb', 'done');
       }
-      if (e && v.multi) title.textContent = U.T(e.title) + ' · ' + U.T(v.sectionTitle);
+      if (e && v.multi) { title.textContent = ''; title.appendChild(Lib.bi(Lib.join([e.title, v.sectionTitle], ' · '), true)); }
       if (Model.fpChanged(c, v)) { r.setAttribute('data-fp', 'changed'); meta.textContent += ' · ' + STR.fpTag; }
     }).catch(function () { if (!cv) box.setAttribute('data-thumb', 'none'); });
   }
@@ -101,7 +101,7 @@
   }
   function row(c, again) {
     var st = Model.workStatus(c), e = Lib.entry(c.textId), thumb = h('div', { class: 'wthumb', 'data-role': 'thumb' });
-    var title = h('div', { class: 't', 'data-role': 'title', text: e ? U.T(e.title) : c.textId + STR.gone });
+    var title = h('div', { class: 't', 'data-role': 'title' }, [e ? Lib.bi(e.title, true) : c.textId + STR.gone]);       // the English interface adds the English title below the Chinese one
     var meta = h('div', { class: 'm', 'data-role': 'meta', text: metaOf(c) });
     var btns = h('div', { class: 'lbtns' });
     function btn(label, act, fn, primary) { btns.appendChild(h('button', { class: primary ? 'on' : '', 'data-act': act, text: label, onclick: fn })); }
@@ -162,7 +162,7 @@
       sel = h('select', { 'data-role': 'text-filter', 'aria-label': STR.text, onchange: function () { st.t = sel.value; st.p = 1; drawSeg(); pl.render(); pl.sync(); drawBk(); } },
         [h('option', { value: '', text: STR.allTexts })].concat(texts.map(function (id) {
           var e = Lib.entry(id);
-          return h('option', { value: id, text: e ? U.T(e.title) : id, selected: id === st.t ? true : null });
+          return h('option', { value: id, text: e ? Lib.ts(e.title) : id, selected: id === st.t ? true : null });
         })));
     }
     var bkHost = h('div', { class: 'bkhost' });
@@ -175,7 +175,7 @@
     ctl.appendChild(bkHost);
     el.appendChild(ctl);
     el.appendChild(total);
-    var rowH = MX.Device.isPhone() ? 176 : 154;
+    var rowH = MX.I18n.isEn() ? (MX.Device.isPhone() ? 240 : 170) : (MX.Device.isPhone() ? 176 : 154);       // the English interface: taller rows (names in two languages, buttons on two lines)
     pl = U.pagedHost(el, {
       state: st, link: link, rowH: rowH, single: true, minPer: 1,
       rows: function () {

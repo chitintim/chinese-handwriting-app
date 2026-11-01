@@ -2,15 +2,18 @@
  "id": "pianpang-bushou",
  "title": {
   "trad": "偏旁部首例字",
-  "simp": "偏旁部首例字"
+  "simp": "偏旁部首例字",
+  "en": "Radicals: Examples"
  },
  "author": {
   "trad": "編選",
-  "simp": "编选"
+  "simp": "编选",
+  "en": "Compiled"
  },
  "dynasty": {
   "trad": "—",
-  "simp": "—"
+  "simp": "—",
+  "en": "-"
  },
  "source": "https://zh.wikisource.org/wiki/%E9%83%A8%E9%A6%96",
  "license": "Public domain (character lists compiled for this library)",
@@ -20,7 +23,8 @@
    "id": "shui",
    "title": {
     "trad": "部首 · 氵（三點水）",
-    "simp": "部首 · 氵（三点水）"
+    "simp": "部首 · 氵（三点水）",
+    "en": "Radical · Water (three dots)"
    },
    "body": {
     "trad": "江河湖海洋流，清深淺波浪潮，汗。",
@@ -31,7 +35,8 @@
    "id": "ren",
    "title": {
     "trad": "部首 · 亻（單人旁）",
-    "simp": "部首 · 亻（单人旁）"
+    "simp": "部首 · 亻（单人旁）",
+    "en": "Radical · Person (standing)"
    },
    "body": {
     "trad": "你他仁作住信，休何佳佛件使。",
@@ -42,7 +47,8 @@
    "id": "mu",
    "title": {
     "trad": "部首 · 木",
-    "simp": "部首 · 木"
+    "simp": "部首 · 木",
+    "en": "Radical · Wood"
    },
    "body": {
     "trad": "林森桃李松柏，桂楊柳樹桑梅。",
@@ -53,7 +59,8 @@
    "id": "kou",
    "title": {
     "trad": "部首 · 口",
-    "simp": "部首 · 口"
+    "simp": "部首 · 口",
+    "en": "Radical · Mouth"
    },
    "body": {
     "trad": "吃喝呼吸吟問，唱哭啼嘆啞。",
@@ -64,7 +71,8 @@
    "id": "shou",
    "title": {
     "trad": "部首 · 扌（提手旁）",
-    "simp": "部首 · 扌（提手旁）"
+    "simp": "部首 · 扌（提手旁）",
+    "en": "Radical · Hand (raised)"
    },
    "body": {
     "trad": "打扶拉持拿指，推接抱提擇揮。",
@@ -75,7 +83,8 @@
    "id": "cao",
    "title": {
     "trad": "部首 · 艹（草字頭）",
-    "simp": "部首 · 艹（草字头）"
+    "simp": "部首 · 艹（草字头）",
+    "en": "Radical · Grass (top)"
    },
    "body": {
     "trad": "花草茶菜荷葉，蘭菊蓮藍藏著。",
@@ -86,7 +95,8 @@
    "id": "chuo",
    "title": {
     "trad": "部首 · 辶（走之）",
-    "simp": "部首 · 辶（走之）"
+    "simp": "部首 · 辶（走之）",
+    "en": "Radical · Walk"
    },
    "body": {
     "trad": "道過遠近送迎，迷追通運達遊。",
@@ -97,7 +107,8 @@
    "id": "yan",
    "title": {
     "trad": "部首 · 言（言字旁）",
-    "simp": "部首 · 言（言字旁）"
+    "simp": "部首 · 言（言字旁）",
+    "en": "Radical · Speech"
    },
    "body": {
     "trad": "說話語詩請謝，論談讀誰課謙。",
@@ -108,7 +119,8 @@
    "id": "xin",
    "title": {
     "trad": "部首 · 忄（豎心旁）",
-    "simp": "部首 · 忄（竖心旁）"
+    "simp": "部首 · 忄（竖心旁）",
+    "en": "Radical · Heart (standing)"
    },
    "body": {
     "trad": "情怕快慢憶懷，忙恨悟惜愉憂。",
@@ -119,7 +131,8 @@
    "id": "ri",
    "title": {
     "trad": "部首 · 日",
-    "simp": "部首 · 日"
+    "simp": "部首 · 日",
+    "en": "Radical · Sun"
    },
    "body": {
     "trad": "明暗晴時早春，星晚晨暖晝曉。",
@@ -130,7 +143,8 @@
    "id": "yue",
    "title": {
     "trad": "部首 · 月",
-    "simp": "部首 · 月"
+    "simp": "部首 · 月",
+    "en": "Radical · Moon"
    },
    "body": {
     "trad": "朋服有期望朗，胸肝胃脈腹臂。",
@@ -141,7 +155,8 @@
    "id": "huo",
    "title": {
     "trad": "部首 · 火（灬）",
-    "simp": "部首 · 火（灬）"
+    "simp": "部首 · 火（灬）",
+    "en": "Radical · Fire (four dots)"
    },
    "body": {
     "trad": "炎燈燒煙熱照，燕然煮點熊煉。",
@@ -152,7 +167,8 @@
    "id": "jin",
    "title": {
     "trad": "部首 · 金（釒）",
-    "simp": "部首 · 金（钅）"
+    "simp": "部首 · 金（钅）",
+    "en": "Radical · Metal"
    },
    "body": {
     "trad": "針鈴銀銅鐘鏡，鐵鋼錢錦鑰鑄。",
@@ -163,7 +179,8 @@
    "id": "tu",
    "title": {
     "trad": "部首 · 土（土字旁）",
-    "simp": "部首 · 土（土字旁）"
+    "simp": "部首 · 土（土字旁）",
+    "en": "Radical · Earth"
    },
    "body": {
     "trad": "地坡場城墓塔，塊坐埋堅堂堤。",
@@ -174,7 +191,8 @@
    "id": "he",
    "title": {
     "trad": "部首 · 禾",
-    "simp": "部首 · 禾"
+    "simp": "部首 · 禾",
+    "en": "Radical · Grain"
    },
    "body": {
     "trad": "秋秀科秦租程，稱移種積穀稻。",
@@ -185,7 +203,8 @@
    "id": "zhu",
    "title": {
     "trad": "部首 · 竹",
-    "simp": "部首 · 竹"
+    "simp": "部首 · 竹",
+    "en": "Radical · Bamboo"
    },
    "body": {
     "trad": "笑筆等第筋筒，策答節範簡籍。",
@@ -196,7 +215,8 @@
    "id": "si",
    "title": {
     "trad": "部首 · 糸（絞絲旁）",
-    "simp": "部首 · 糸（绞丝旁）"
+    "simp": "部首 · 糸（绞丝旁）",
+    "en": "Radical · Silk"
    },
    "body": {
     "trad": "紅綠紙線約級，終練細組經絲，繡。",
@@ -207,7 +227,8 @@
    "id": "bei",
    "title": {
     "trad": "部首 · 貝",
-    "simp": "部首 · 贝"
+    "simp": "部首 · 贝",
+    "en": "Radical · Shell"
    },
    "body": {
     "trad": "財貨貴買賣資，賓賢賜賀賞賦。",
@@ -218,7 +239,8 @@
    "id": "men",
    "title": {
     "trad": "部首 · 門",
-    "simp": "部首 · 门"
+    "simp": "部首 · 门",
+    "en": "Radical · Gate"
    },
    "body": {
     "trad": "開關閉間閒問，聞閱闊門閃閣。",
@@ -229,7 +251,8 @@
    "id": "shan",
    "title": {
     "trad": "部首 · 山",
-    "simp": "部首 · 山"
+    "simp": "部首 · 山",
+    "en": "Radical · Mountain"
    },
    "body": {
     "trad": "岸岩峰峽島嵐，崇嶺岳崖巍嶽。",
@@ -240,7 +263,8 @@
    "id": "shi",
    "title": {
     "trad": "部首 · 石",
-    "simp": "部首 · 石"
+    "simp": "部首 · 石",
+    "en": "Radical · Stone"
    },
    "body": {
     "trad": "石砂破碑碧碗，硯碟確礦磨磁。",
@@ -251,7 +275,8 @@
    "id": "yu",
    "title": {
     "trad": "部首 · 雨",
-    "simp": "部首 · 雨"
+    "simp": "部首 · 雨",
+    "en": "Radical · Rain"
    },
    "body": {
     "trad": "雪雲雷電霜露，霧霞雹零霖霽。",
@@ -262,7 +287,8 @@
    "id": "ma",
    "title": {
     "trad": "部首 · 馬",
-    "simp": "部首 · 马"
+    "simp": "部首 · 马",
+    "en": "Radical · Horse"
    },
    "body": {
     "trad": "馬騎驚驕駕騰，驗驅駝驛騾。",
@@ -273,7 +299,8 @@
    "id": "yu2",
    "title": {
     "trad": "部首 · 魚",
-    "simp": "部首 · 鱼"
+    "simp": "部首 · 鱼",
+    "en": "Radical · Fish"
    },
    "body": {
     "trad": "魚鮮鯉鯨鱗鮑，鱸鮭鯊鰻。",
@@ -284,7 +311,8 @@
    "id": "niao",
    "title": {
     "trad": "部首 · 鳥",
-    "simp": "部首 · 鸟"
+    "simp": "部首 · 鸟",
+    "en": "Radical · Bird"
    },
    "body": {
     "trad": "鳥鳴鴨鵝鷗鴻，鶴鷹鸚鶯鳳。",
@@ -295,7 +323,8 @@
    "id": "nv",
    "title": {
     "trad": "部首 · 女",
-    "simp": "部首 · 女"
+    "simp": "部首 · 女",
+    "en": "Radical · Woman"
    },
    "body": {
     "trad": "好姓妹姊姑娘，婚媽嫁嬌婦姿。",
@@ -306,7 +335,8 @@
    "id": "zi",
    "title": {
     "trad": "部首 · 子",
-    "simp": "部首 · 子"
+    "simp": "部首 · 子",
+    "en": "Radical · Child"
    },
    "body": {
     "trad": "孔孕字存孝孩，孫學孟季。",
@@ -317,7 +347,8 @@
    "id": "mian",
    "title": {
     "trad": "部首 · 宀（寶蓋頭）",
-    "simp": "部首 · 宀（宝盖头）"
+    "simp": "部首 · 宀（宝盖头）",
+    "en": "Radical · Roof (cover)"
    },
    "body": {
     "trad": "家安室宮寶定，宇客宿寒富寫。",
@@ -328,7 +359,8 @@
    "id": "guang",
    "title": {
     "trad": "部首 · 广（廣字頭）",
-    "simp": "部首 · 广（广字头）"
+    "simp": "部首 · 广（广字头）",
+    "en": "Radical · Shelter"
    },
    "body": {
     "trad": "廣庭店序庫座，廟廚應度康庸。",
@@ -339,7 +371,8 @@
    "id": "chi",
    "title": {
     "trad": "部首 · 彳（雙人旁）",
-    "simp": "部首 · 彳（双人旁）"
+    "simp": "部首 · 彳（双人旁）",
+    "en": "Radical · Step (double person)"
    },
    "body": {
     "trad": "行往彼後徒得，從復微徑律德。",
@@ -350,7 +383,8 @@
    "id": "quan",
    "title": {
     "trad": "部首 · 犭（反犬旁）",
-    "simp": "部首 · 犭（反犬旁）"
+    "simp": "部首 · 犭（反犬旁）",
+    "en": "Radical · Dog (beast)"
    },
    "body": {
     "trad": "狗猫猛獅狼猴，獨獲獵猿狂狐。",
@@ -361,7 +395,8 @@
    "id": "fu",
    "title": {
     "trad": "部首 · 阝（左耳旁）",
-    "simp": "部首 · 阝（左耳旁）"
+    "simp": "部首 · 阝（左耳旁）",
+    "en": "Radical · Mound (left ear)"
    },
    "body": {
     "trad": "阿院陽陰除陸，陳階隨隔陵險。",
@@ -372,7 +407,8 @@
    "id": "dao",
    "title": {
     "trad": "部首 · 刂（立刀旁）",
-    "simp": "部首 · 刂（立刀旁）"
+    "simp": "部首 · 刂（立刀旁）",
+    "en": "Radical · Knife (standing)"
    },
    "body": {
     "trad": "別刻到刺前則，創割劍劃剛列。",
@@ -383,7 +419,8 @@
    "id": "pu",
    "title": {
     "trad": "部首 · 攵（反文旁）",
-    "simp": "部首 · 攵（反文旁）"
+    "simp": "部首 · 攵（反文旁）",
+    "en": "Radical · Tap (rap)"
    },
    "body": {
     "trad": "收改放政故教，敢散數整敵敬。",
@@ -394,7 +431,8 @@
    "id": "mu2",
    "title": {
     "trad": "部首 · 目",
-    "simp": "部首 · 目"
+    "simp": "部首 · 目",
+    "en": "Radical · Eye"
    },
    "body": {
     "trad": "目看眉眼眠睡，眾睛瞪睹瞻瞬。",
@@ -405,7 +443,8 @@
    "id": "shi2",
    "title": {
     "trad": "部首 · 示（礻）",
-    "simp": "部首 · 示（礻）"
+    "simp": "部首 · 示（礻）",
+    "en": "Radical · Altar"
    },
    "body": {
     "trad": "示社祖神祝福，禮祥祈祕禪禍。",
@@ -416,7 +455,8 @@
    "id": "yi",
    "title": {
     "trad": "部首 · 衣（衤）",
-    "simp": "部首 · 衣（衤）"
+    "simp": "部首 · 衣（衤）",
+    "en": "Radical · Clothing"
    },
    "body": {
     "trad": "衣被袖裙裝裁，補裕褲襪襯。",
@@ -427,7 +467,8 @@
    "id": "che",
    "title": {
     "trad": "部首 · 車",
-    "simp": "部首 · 车"
+    "simp": "部首 · 车",
+    "en": "Radical · Cart"
    },
    "body": {
     "trad": "車軍輕轉輪輛，載輸較軌轄輝。",
@@ -438,7 +479,8 @@
    "id": "shou2",
    "title": {
     "trad": "部首 · 手",
-    "simp": "部首 · 手"
+    "simp": "部首 · 手",
+    "en": "Radical · Hand"
    },
    "body": {
     "trad": "手拜拿掌拳摩，擊攀拇揉。",
@@ -449,7 +491,8 @@
    "id": "ge",
    "title": {
     "trad": "部首 · 戈",
-    "simp": "部首 · 戈"
+    "simp": "部首 · 戈",
+    "en": "Radical · Spear"
    },
    "body": {
     "trad": "戈戰戒我成戲，戚戮戴戍截。",

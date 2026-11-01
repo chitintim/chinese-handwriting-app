@@ -1,0 +1,87 @@
+{
+ "id": "wuliuxiansheng",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "In the form of a biography of 'Master Five Willows', Tao Yuanming draws the picture of a recluse who does not seek honour or gain, loves books and wine, and is content with poverty and with his own aims. In the closing comment he likens him to the simple people of the ancient past.",
+   "translation": "No one knows where the Master came from, and his surname and courtesy name are not known. Beside his house were five willow trees, so he took that as his name. He was quiet and spoke little, and did not long for glory or profit. He loved reading but did not seek to understand too closely, and whenever he grasped a meaning he was so glad that he forgot to eat. He was fond of wine by nature, but his family was poor and he could not always get it. His relatives and old friends knew this, and sometimes set out wine and invited him. When he went to drink, he drank it all up, intending to be sure to get drunk; and once drunk he left, never troubling over whether to stay or go.\nHis walls round the room were bare, and did not keep out wind or sun; his short coarse coat was patched and tied, and his bamboo basket and gourd were often empty, yet he was serene. He often wrote essays to amuse himself, and they showed something of his aims. He forgot gain and loss, and so lived out his days.\nThe comment says: The wife of Qian Lou had a saying: 'Do not be anxious over poverty and low rank, and do not be eager for riches and honour.' Taken to its limit, might this man be of the same kind? He drinks deep and makes poems, to enjoy his purpose. Is he one of the people of Wuhuai? Is he one of the people of Getian?",
+   "keyLines": [
+    {
+     "line": "宅邊有五柳樹，因以為號焉",
+     "en": "Beside his house were five willow trees, so he took that as his name.",
+     "note": "It explains the name: he took the five willows by his house as his name, which shows a casual, natural attitude."
+    },
+    {
+     "line": "閑靜少言，不慕榮利",
+     "en": "He was quiet and spoke little, and did not long for glory or profit.",
+     "note": "It sums up the man's character and is the outline of the whole piece."
+    },
+    {
+     "line": "好讀書，不求甚解，每有會意，便欣然忘食",
+     "en": "He loved reading but did not seek to understand too closely, and whenever he grasped a meaning he was so glad that he forgot to eat.",
+     "note": "His attitude to reading: he aims at the general sense without sticking to the letter, and takes pleasure in it."
+    },
+    {
+     "line": "環堵蕭然，不蔽風日；短褐穿結，簞瓢屢空，晏如也",
+     "en": "His walls round the room were bare, and did not keep out wind or sun; his short coarse coat was patched and tied, and his bamboo basket and gourd were often empty, yet he was serene.",
+     "note": "It describes a poor life, but the word 'serene' shows a mind content with poverty and the Way."
+    },
+    {
+     "line": "忘懷得失，以此自終",
+     "en": "He forgot gain and loss, and so lived out his days.",
+     "note": "A summary of his attitude to life: above gain and loss, he lives out his years at ease."
+    },
+    {
+     "line": "不戚戚於貧賤，不汲汲於富貴",
+     "en": "Do not be anxious over poverty and low rank, and do not be eager for riches and honour.",
+     "note": "Quoting the wife of Qian Lou, it states the point of the piece and judges the spirit of Master Five Willows."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "字",
+     "en": "zi - courtesy name",
+     "note": "A name other than one's given name, taken by an adult in old times."
+    },
+    {
+     "term": "不求甚解",
+     "en": "bu qiu shen jie - not seeking to understand too closely",
+     "note": "To read for the general sense and not dig too deep into words; this differs from the disparaging modern use."
+    },
+    {
+     "term": "造飲輒盡",
+     "en": "zao yin zhe jin - to drink it all at a feast",
+     "note": "To finish the wine when one goes to a feast. Zao means to go to."
+    },
+    {
+     "term": "環堵",
+     "en": "huan du - bare walls",
+     "note": "Earth walls one zhang square on each side, describing a tiny, plain room."
+    },
+    {
+     "term": "短褐",
+     "en": "duan he - short coarse coat",
+     "note": "A short coat of coarse cloth, worn by the poor."
+    },
+    {
+     "term": "簞瓢",
+     "en": "dan piao - basket and gourd",
+     "note": "The dan is a bamboo vessel for rice and the piao a gourd for scooping water: simple eating utensils."
+    },
+    {
+     "term": "黔婁",
+     "en": "Qian Lou - Qian Lou",
+     "note": "A recluse of the state of Qi in the Spring and Autumn period, who lived in poverty and never took office."
+    },
+    {
+     "term": "無懷氏、葛天氏",
+     "en": "Wuhuai shi, Getian shi - Wuhuai and Getian",
+     "note": "Legendary chiefs of a simple age of high antiquity, whose people were calm and self-sufficient."
+    }
+   ],
+   "background": "Biography of Master Five Willows is a self-portrait in prose by Tao Yuanming, who writes about the man in the third person while in fact describing himself; views differ as to exactly when it was written. The prose is concise and expresses his contentment with poverty and his plain, natural outlook on life."
+  }
+ }
+}

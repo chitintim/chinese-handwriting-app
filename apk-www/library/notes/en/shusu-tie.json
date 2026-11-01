@@ -1,0 +1,136 @@
+{
+ "id": "shusu-tie",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "nigu": {
+   "summary": "In a poem in the style of the ancients, Mi Fu shows a trumpet creeper climbing a pine and mocks those who cannot stand on their own; the second half uses the fable of a tortoise carried up by a crane to warn that a single word can bring a fall.",
+   "translation": "The green pine stands strong and straight; the trumpet creeper is ashamed to coil and bend.\nIt puts out all kinds of branches and leaves, and clings upward to the pine's top.\nIn autumn its flowers rise like crimson smoke, soft and trailing, rich as a cloud-brocade.\nIt feels no shame at not standing alone, but spreads its glow and shines up high.\nThe cypress sees and learns to put out seeds; the crane seems puzzled and draws in its neck to turn back.\nThe green pine never had flowers; how could it keep a name for staying fresh through the cold of the year?\nTortoise and crane live equally long, but feathered and shelled creatures put their trust in different things.\nBoth are spirit creatures; they suit each other and forget their bodies.\nThe crane has a heart that would pierce the clouds; the tortoise is tired of living and dragging its tail in the mud.\nWith a bamboo stick, each holding an end in its mouth, they go up together on the road of the clouds.\nI warn you: be careful not to speak. One word and you fall into the mire.",
+   "keyLines": [
+    {
+     "line": "青松勁挺姿，凌霄恥屈盤",
+     "en": "The green pine stands strong and straight; the trumpet creeper is ashamed to coil and bend.",
+     "note": "Sets the green pine against the creeper: the creeper claims never to bend, yet has to climb the pine."
+    },
+    {
+     "line": "青松本無華，安得保歲寒",
+     "en": "The green pine never had flowers; how could it keep a name for staying fresh through the cold of the year?",
+     "note": "The pine has no flowers and the creeper borrows its height to bloom; it mocks those who depend on others and take the credit."
+    },
+    {
+     "line": "鶴有沖霄心，龜厭曳尾居",
+     "en": "The crane has a heart that would pierce the clouds; the tortoise is tired of living and dragging its tail in the mud.",
+     "note": "Turns to the fable of the tortoise and the crane: the tortoise envies the crane and wants to leave the mud."
+    },
+    {
+     "line": "報汝慎勿語，一語墮泥塗",
+     "en": "I warn you: be careful not to speak. One word and you fall into the mire.",
+     "note": "The closing line of the fable, a call to take care with words: open your mouth and you fall."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "凌霄",
+     "en": "lingxiao - trumpet creeper",
+     "note": "A climbing plant (Campsis) that often grows up a pine."
+    },
+    {
+     "term": "旖旎",
+     "en": "yini - soft and trailing",
+     "note": "Gentle, lovely and luxuriant."
+    },
+    {
+     "term": "雲錦",
+     "en": "yunjin - cloud-brocade",
+     "note": "Silk brocade as bright as sunset clouds."
+    },
+    {
+     "term": "羽介",
+     "en": "yujie - feathered and shelled",
+     "note": "Yu is feathered creatures such as the crane, jie is shelled ones such as the tortoise."
+    },
+    {
+     "term": "曳尾",
+     "en": "yiwei - dragging the tail",
+     "note": "The tortoise drags its tail through the mud. Source: the Zhuangzi, 「曳尾於塗中」 (dragging its tail in the mud)."
+    },
+    {
+     "term": "雲衢",
+     "en": "yunqu - road of the clouds",
+     "note": "The way among the clouds, that is, the sky."
+    }
+   ],
+   "background": "The Shu Silk Scroll is a long handscroll in running script on which Mi Fu (1051-1107) copied eight of his own poems in 1088, in the Northern Song dynasty (960-1127), on a fine silk woven in Shu; it is now in the Palace Museum, Beijing. This passage gives the poem in the style of the ancients. Mi Fu is known for a brush that leaps and turns, with the tip showing on every side, and he called his own writing 'brushing characters'. This is a leading work of his early running script, and with Su Shi's Cold Food Poems it ranks among the famous Song running-script scrolls, and is an important model for studying Mi's hand."
+  },
+  "wujiang": {
+   "summary": "Mi Fu sails on the Wujiang river. A scrap of cloud and a sail, perch like jade and frosted tangerines paint the autumn scene, and he hopes his new poems will follow the refined taste of Lu Yu. In the second poem he sees frost over Lake Tai, water and sky blurred into one, and playfully imagines himself a guest star in the heavens.",
+   "translation": "Torn cloud, a single sail on Dongting: the perch is cut as white as jade, the tangerine opened by frost.\nA good time to write new verse after the Mulberry-and-Hemp Old Man; at Chuihong the autumn colour fills the south-east.\nAdrift on the Five Lakes, the frosty air is clear; all is vast, and water and sky cannot be told apart.\nWhy should I need the Weaver Girl's loom stone? Let me jest with Chang'e and call myself a guest star.",
+   "keyLines": [
+    {
+     "line": "斷雲一片洞庭帆，玉破鱸魚霜破柑",
+     "en": "Torn cloud, a single sail on Dongting: the perch is cut as white as jade, the tangerine opened by frost.",
+     "note": "Opens with the sights and tastes of an autumn voyage: a sail, perch and frosted tangerines."
+    },
+    {
+     "line": "好作新詩繼桑苧，垂虹秋色滿東南",
+     "en": "A good time to write new verse after the Mulberry-and-Hemp Old Man; at Chuihong the autumn colour fills the south-east.",
+     "note": "He hopes to write poetry as Lu Yu did, and sums up the south-east in the autumn colour of Chuihong bridge."
+    },
+    {
+     "line": "漫漫不辨水天形",
+     "en": "All is vast, and water and sky cannot be told apart.",
+     "note": "Describes the great expanse of Lake Tai, where water and sky are one."
+    },
+    {
+     "line": "何須織女支機石，且戲常娥稱客星",
+     "en": "Why should I need the Weaver Girl's loom stone? Let me jest with Chang'e and call myself a guest star.",
+     "note": "With the loom stone and the guest star he expresses a free, detached fancy."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "吳江",
+     "en": "Wujiang - the Wujiang river area",
+     "note": "Today's Wujiang, in Suzhou, Jiangsu, famous for its perch."
+    },
+    {
+     "term": "洞庭",
+     "en": "Dongting - the Dongting hills",
+     "note": "Here the Dongting hills in Lake Tai, not the great lake of the same name in Hunan."
+    },
+    {
+     "term": "桑苧",
+     "en": "sangzhu - Mulberry-and-Hemp Old Man",
+     "note": "The name Lu Yu took for himself; he wrote the Classic of Tea."
+    },
+    {
+     "term": "垂虹",
+     "en": "chuihong - Chuihong bridge",
+     "note": "The Chuihong bridge at Wujiang, famous for its length."
+    },
+    {
+     "term": "五湖",
+     "en": "wuhu - the Five Lakes",
+     "note": "Lake Tai and the lakes near it; the exact set has been given in different ways since antiquity."
+    },
+    {
+     "term": "支機石",
+     "en": "zhijishi - the loom stone",
+     "note": "In legend, the stone that held up the Weaver Girl's loom, brought back by Zhang Qian when he rode a raft up to heaven; it is linked with the guest star story."
+    },
+    {
+     "term": "客星",
+     "en": "kexing - guest star",
+     "note": "In old astronomy, a star that appears for a time in the sky; here he calls himself a guest star in heaven."
+    },
+    {
+     "term": "常娥",
+     "en": "Chang'e",
+     "note": "The moon goddess; the text writes her name in an older form to avoid the personal name of Emperor Wen of Han."
+    }
+   ],
+   "background": "This poem is also in Mi Fu's Shu Silk Scroll and was written as he sailed through Wujiang. The scroll is in running script with a flying brush, and the size and lean of the characters vary freely. The brush is brisk, and calligraphers through the ages have taken it as a model for learning running script and for the rise and fall of the brush and shifting character shapes. The woven silk takes ink poorly, which makes writing on it harder, and so shows his skill all the more."
+  }
+ }
+}

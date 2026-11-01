@@ -1,0 +1,989 @@
+{
+ "id": "diamond-sutra",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "fen01": {
+   "summary": "This section sets the scene: when, where and in front of whom the sutra was spoken. It opens with the Buddha's ordinary day - putting on his robe, taking his bowl, begging, eating, washing his feet, spreading his seat - which shows that the Way is found in everyday life.",
+   "translation": "Thus have I heard. At one time the Buddha was in Shravasti, in the Jeta Grove in the Garden of Anathapindika, together with a great assembly of 1,250 monks. At that time, when it was mealtime, the World-Honoured One put on his robe, took his bowl, and went into the great city of Shravasti to beg for food. When he had begged from house to house in the city, he returned to his place. After he had eaten, he put away his robe and bowl, washed his feet, spread his seat and sat down.",
+   "glossary": [
+    {
+     "term": "如是我聞",
+     "en": "ru shi wo wen - 'Thus have I heard'",
+     "note": "The fixed opening of a Buddhist sutra. 'I' is Ananda, and the words mean 'this is what I heard from the Buddha with my own ears', which shows that the text has a reliable line of transmission."
+    },
+    {
+     "term": "舍衛國、祇樹給孤獨園",
+     "en": "Shewei guo, Qishu Jigudu yuan - Shravasti, the Jeta Grove and Anathapindika's Garden",
+     "note": "Shravasti was the capital of the ancient Indian kingdom of Kosala. The Jeta Grove was bought from Prince Jeta by the elder Anathapindika (Sudatta) and offered to the Buddha as a residence, and it was where the Buddha taught for many years."
+    },
+    {
+     "term": "大比丘",
+     "en": "da biqiu - great monks",
+     "note": "Fully ordained monks (bhikshus). The number 1,250 is the standard size of the Buddha's regular following."
+    },
+    {
+     "term": "世尊",
+     "en": "Shizun - World-Honoured One",
+     "note": "One of the ten titles of a Buddha, meaning the one honoured by the world."
+    },
+    {
+     "term": "乞食",
+     "en": "qishi - begging for food",
+     "note": "In the Buddha's day monks lived by begging with a bowl, going from house to house in order, rich and poor alike, to show equality and freedom from greed."
+    }
+   ],
+   "background": "Commentators through the ages have noted that the first section opens with the plain actions of 'after eating, putting away robe and bowl, washing the feet and sitting down', as if to say that prajna wisdom is not apart from daily life. Some also find the idea of 'non-abiding' already hidden here."
+  },
+  "fen02": {
+   "summary": "Subhuti praises the Tathagata for caring for the bodhisattvas, and asks the question the whole sutra answers: how should someone who has set out for supreme awakening abide in the mind, and how subdue the wandering mind? The Buddha agrees to answer.",
+   "translation": "At that time the elder Subhuti, in the great assembly, rose from his seat, bared his right shoulder, knelt on his right knee, pressed his palms together in respect, and said to the Buddha: \"How rare, World-Honoured One! The Tathagata so well protects and keeps in mind the bodhisattvas, and so well entrusts the bodhisattvas with the Dharma. World-Honoured One, when good men and good women set out on the mind of supreme, complete awakening, how should they abide? How should they subdue their minds?\"\nThe Buddha said: \"Well said, well said, Subhuti. It is as you say: the Tathagata well protects and keeps in mind the bodhisattvas, and well entrusts the bodhisattvas with the Dharma. Now listen carefully, and I will explain it to you. When good men and good women set out on the mind of supreme, complete awakening, they should abide like this, and subdue their minds like this.\"\n\"Yes, World-Honoured One. We are glad and eager to hear.\"",
+   "glossary": [
+    {
+     "term": "須菩提",
+     "en": "Xupuoti - Subhuti",
+     "note": "One of the Buddha's ten great disciples, foremost in understanding emptiness. He is the main speaker with the Buddha in this sutra."
+    },
+    {
+     "term": "偏袒右肩、右膝著地、合掌",
+     "en": "pian tan youjian, you xi zhuodi, hezhang - baring the right shoulder, kneeling on the right knee, palms together",
+     "note": "The way of showing respect and asking for the teaching in ancient India."
+    },
+    {
+     "term": "善護念、善付囑",
+     "en": "shan huonian, shan fuzhu - protects and keeps in mind, entrusts",
+     "note": "'Keeping in mind' is guarding and caring for; 'entrusting' is handing the teaching on. Subhuti praises the Buddha for both protecting the bodhisattvas and passing the Dharma to them."
+    },
+    {
+     "term": "阿耨多羅三藐三菩提",
+     "en": "anouduoluo sanmiao sanputi - supreme, complete awakening",
+     "note": "From the Sanskrit anuttara-samyak-sambodhi, the final awakening of a Buddha. To 'set out on this mind' is to give rise to the mind of bodhi, the aspiration to awaken."
+    },
+    {
+     "term": "降伏其心",
+     "en": "xiangfu qi xin - subdue the mind",
+     "note": "What is subdued is the wandering, clinging mind; it is not pressed down by force. The sutra's answer is 'not abiding'."
+    }
+   ],
+   "background": "'How should one abide? How subdue the mind?' is the question that frames the whole sutra, and nearly every later section answers it from a different side. It has long been seen as the hinge of the Diamond Sutra."
+  },
+  "fen03": {
+   "summary": "The Buddha's answer to 'how to subdue the mind': vow to lead all living beings to liberation, yet without holding that any being has been liberated. A bodhisattva who has the notion of a self, a person, a being or a lifespan is not a bodhisattva.",
+   "translation": "The Buddha said to Subhuti: \"The bodhisattvas, the great beings, should subdue their minds like this: all kinds of living beings, whether born from eggs, from wombs, from moisture or by transformation; whether with form or without form; whether with thought, without thought, or neither with nor without thought - I cause all of them to enter nirvana without remainder and to be brought to liberation. Yet although I have brought countless, numberless, boundless beings to liberation, in truth no being has been brought to liberation. Why is this? Subhuti, if a bodhisattva has the notion of a self, the notion of a person, the notion of a being, or the notion of a lifespan, he is not a bodhisattva.\"",
+   "glossary": [
+    {
+     "term": "卵生、胎生、濕生、化生",
+     "en": "luan sheng, tai sheng, shi sheng, hua sheng - egg-born, womb-born, moisture-born, transformation-born",
+     "note": "The four ways Buddhism says sentient beings are born: from an egg, from a womb, from damp, or by sudden appearance with nothing to rest on (like devas or beings in hell)."
+    },
+    {
+     "term": "無餘涅槃",
+     "en": "wuyu niepan - nirvana without remainder",
+     "note": "The final stillness after all afflictions are ended and body and mind are laid down, as opposed to nirvana with remainder."
+    },
+    {
+     "term": "我相、人相、眾生相、壽者相",
+     "en": "wo xiang, ren xiang, zhongsheng xiang, shouzhe xiang - the four notions",
+     "note": "Clinging to the idea that there is a 'self', an 'other person', 'living beings' and a 'lifespan' as real things. These four notions run through the rest of the sutra."
+    },
+    {
+     "term": "滅度",
+     "en": "miedu - liberation",
+     "note": "Another rendering of nirvana: ending afflictions and crossing over birth and death. Here it means bringing beings to freedom."
+    },
+    {
+     "term": "菩薩摩訶薩",
+     "en": "pusa mohesa - bodhisattva-mahasattva",
+     "note": "A bodhisattva is one who vows to become a Buddha and save beings; mahasattva means 'great being'."
+    }
+   ],
+   "background": "Interpreters of the sutra have long regarded this section as its central teaching (the 'right school of the Great Vehicle'). The attitude of 'saving without saving anyone' is the first statement of the idea of 'no notions'."
+  },
+  "fen04": {
+   "summary": "A bodhisattva should give without abiding in forms, sounds, smells, tastes, touches or mental objects. The merit of such giving is as immeasurable as space in all directions.",
+   "translation": "\"Furthermore, Subhuti, a bodhisattva, in regard to all dharmas, should give without abiding anywhere. That is to say, he should give without abiding in form, and give without abiding in sound, smell, taste, touch or mental objects. Subhuti, a bodhisattva should give like this, not abiding in notions. Why? If a bodhisattva gives without abiding in notions, his merit cannot be measured.\nSubhuti, what do you think? Can the space in the east be measured?\"\n\"No, World-Honoured One.\"\n\"Subhuti, can the space in the south, west and north, in the four intermediate directions, above and below, be measured?\"\n\"No, World-Honoured One.\"\n\"Subhuti, when a bodhisattva gives without abiding in notions, his merit is likewise immeasurable. Subhuti, a bodhisattva should simply abide as taught.\"",
+   "glossary": [
+    {
+     "term": "布施",
+     "en": "bushi - giving (dana)",
+     "note": "Sanskrit dana: giving wealth, freedom from fear, or the Dharma to others, the first of the six perfections. This section stresses that giver, receiver and gift are all empty, and none is to be clung to."
+    },
+    {
+     "term": "色聲香味觸法",
+     "en": "se sheng xiang wei chu fa - form, sound, smell, taste, touch, mental objects",
+     "note": "The six sense objects, the outer things that the six senses meet. 'Not abiding' means the mind does not stick to any of them."
+    },
+    {
+     "term": "無所住",
+     "en": "wu suo zhu - not abiding",
+     "note": "Not grasping and not staying put. The famous line of section 10, 'giving rise to the mind without abiding anywhere', grows from this."
+    },
+    {
+     "term": "四維",
+     "en": "siwei - the four intermediate directions",
+     "note": "Southeast, southwest, northeast and northwest. Together with the four cardinal points, above and below, they make the ten directions."
+    }
+   ],
+   "background": "The Diamond Sutra uses giving to illustrate 'non-abiding' because giving most easily brings with it the clinging thought 'I give, you receive'. Read it together with the line in section 10, 'give rise to the mind without abiding anywhere'."
+  },
+  "fen05": {
+   "summary": "The Tathagata cannot be seen through his bodily marks. All marks are false and empty; if you see that marks are not marks, you see the Tathagata.",
+   "translation": "\"Subhuti, what do you think? Can the Tathagata be seen by means of his bodily marks?\"\n\"No, World-Honoured One. The Tathagata cannot be seen by means of bodily marks. Why? What the Tathagata calls bodily marks are not bodily marks.\"\nThe Buddha said to Subhuti: \"Whatever has marks is false and empty. If you see that all marks are not marks, then you see the Tathagata.\"",
+   "keyLines": [
+    {
+     "line": "凡所有相，皆是虛妄。若見諸相非相，即見如來",
+     "en": "Whatever has marks is false and empty. If you see that all marks are not marks, then you see the Tathagata.",
+     "note": "One of the most important verses in the sutra. A mark is a passing appearance made by conditions, and so it is false. One who sees through the lack of self-nature in marks sees the true face of the Tathagata, the Dharma body."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "身相",
+     "en": "shenxiang - bodily marks",
+     "note": "The physical form of the Tathagata, such as the thirty-two marks and eighty minor signs. The sutra points out that the Buddha's reality is not found in outward form."
+    },
+    {
+     "term": "如來",
+     "en": "Rulai - the Tathagata",
+     "note": "One of the ten titles of a Buddha, 'the one who has thus come'. Here it means the Buddha's Dharma body and true nature."
+    },
+    {
+     "term": "相",
+     "en": "xiang - mark",
+     "note": "The outward appearance or shape of a thing. In the Diamond Sutra a 'mark' often means a conceptual image that the mind has seized on."
+    },
+    {
+     "term": "虛妄",
+     "en": "xuwang - false and empty",
+     "note": "Not truly existing, like an illusion or a dream; it is close in meaning to 'without self-nature'."
+    },
+    {
+     "term": "非相",
+     "en": "feixiang - not a mark",
+     "note": "A mark is not something fixed and real, so it is said to be 'not a mark'. The sutra often uses the pattern 'A is not A, therefore it is called A', and here it appears for the first time."
+    }
+   ],
+   "background": "The verse here is echoed in section 26, 'if you look for me in form, if you seek me in sound', which makes the same claim that the Buddha cannot be sought through outward marks."
+  },
+  "fen06": {
+   "summary": "Subhuti asks whether beings in later ages will truly believe such profound teaching. The Buddha says that in the last five hundred years there will be people who keep the precepts and cultivate merit and can give rise to pure faith in a single thought, because they are free of the four notions. He ends with the parable of the raft: even the Dharma is to be let go, how much more what is not the Dharma.",
+   "translation": "Subhuti said to the Buddha: \"World-Honoured One, will there be living beings who, on hearing words and phrases like these, will give rise to true faith?\"\nThe Buddha said to Subhuti: \"Do not speak like that. After the Tathagata has passed into nirvana, in the last five hundred years, there will be those who keep the precepts and cultivate merit, and who can give rise to faith in these words and phrases and take them as true. You should know that such a person has planted roots of goodness not with one buddha, or two, or three, four or five buddhas, but has planted roots of goodness with countless tens of millions of buddhas. When they hear these words and phrases and give rise to pure faith even for a single thought, Subhuti, the Tathagata fully knows and fully sees that these living beings gain such limitless merit. Why? Because these living beings no longer have the notion of a self, a person, a being or a lifespan.\nThey have no notion of Dharma, and also no notion of non-Dharma. Why? If the minds of these living beings grasp at notions, they are attached to a self, a person, a being, a lifespan. If they grasp the notion of Dharma, they are attached to a self, a person, a being, a lifespan. Why? If they grasp the notion of non-Dharma, they are attached to a self, a person, a being, a lifespan. Therefore one should not grasp the Dharma, and should not grasp the non-Dharma. For this reason the Tathagata always says: 'You monks, know that my teaching of the Dharma is like a raft.' Even the Dharma should be let go, how much more what is not the Dharma.\"",
+   "glossary": [
+    {
+     "term": "後五百歲",
+     "en": "hou wubai sui - the last five hundred years",
+     "note": "The fifth period of five hundred years after the Buddha's passing, the time Buddhism calls the age of the declining Dharma, when people's roots of goodness grow thin. The sutra says that even then there will be people who can believe."
+    },
+    {
+     "term": "實信、淨信",
+     "en": "shixin, jingxin - true faith, pure faith",
+     "note": "Faith with no doubt about emptiness and the absence of marks; clear and real, not blind belief."
+    },
+    {
+     "term": "法相、非法相",
+     "en": "faxiang, feifaxiang - notion of Dharma, notion of non-Dharma",
+     "note": "Clinging to the Dharma as something real is the 'notion of Dharma'. Clinging to 'emptiness' or 'nothing' is the 'notion of non-Dharma', and it too is a form of clinging. The sutra breaks both."
+    },
+    {
+     "term": "筏喻",
+     "en": "fayu - the parable of the raft",
+     "note": "The Buddha taught, for example in the Alagaddupama discourse of the Madhyama Agama, that the Dharma is like a raft for crossing a river: when you reach the other shore you should leave it. The teaching is a tool and is not to be clung to."
+    },
+    {
+     "term": "持戒修福",
+     "en": "chijie xiufu - keeping the precepts and cultivating merit",
+     "note": "Following the moral rules and building up merit. It says that those who come to faith need precepts and merit as a base."
+    }
+   ],
+   "background": "This section is much discussed by later commentators on the subject of faith and the Middle Way. 'Even the Dharma should be let go, how much more what is not the Dharma' became an important scriptural source for the Chan sayings such as 'if you meet the Buddha, kill the Buddha'."
+  },
+  "fen07": {
+   "summary": "The Buddha asks whether the Tathagata has attained supreme awakening and whether he has taught any Dharma. Subhuti answers that there is no fixed Dharma to attain and none to teach, because all sages and saints differ only through the unconditioned Dharma.",
+   "translation": "\"Subhuti, what do you think? Has the Tathagata attained supreme, complete awakening? Does the Tathagata have any Dharma to teach?\"\nSubhuti said: \"As I understand the meaning of what the Buddha has said, there is no fixed Dharma called 'supreme, complete awakening', and there is also no fixed Dharma that the Tathagata can teach. Why? The Dharma that the Tathagata teaches cannot be grasped and cannot be spoken; it is neither Dharma nor non-Dharma. Why is this? All the sages and saints are distinguished by the unconditioned Dharma.\"",
+   "glossary": [
+    {
+     "term": "無有定法",
+     "en": "wu you ding fa - no fixed Dharma",
+     "note": "There is no single unchanging doctrine that can be seized. The Buddha taught according to the listener and the occasion, and the teaching is not a rigid rule."
+    },
+    {
+     "term": "非法，非非法",
+     "en": "fei fa, fei feifa - neither Dharma nor non-Dharma",
+     "note": "Not a fixed 'Dharma', and not a mere 'non-Dharma' of nothing at all. It is an expression of the Middle Way, which avoids both extremes."
+    },
+    {
+     "term": "無為法",
+     "en": "wuwei fa - the unconditioned Dharma",
+     "note": "The Dharma that does not arise and cease by conditions: nirvana, suchness, the nature of things. Sages differ in depth according to how far they have realised this unconditioned Dharma."
+    },
+    {
+     "term": "賢聖",
+     "en": "xian sheng - sages and saints",
+     "note": "The 'sages' are bodhisattvas still on the stages of the path; the 'saints' are those who have seen the Way and realised it."
+    }
+   ]
+  },
+  "fen08": {
+   "summary": "Giving the seven treasures to fill a world system brings much merit, but less than receiving and holding even a four-line verse of this sutra and explaining it to others, because all buddhas and the Dharma of supreme awakening come out of this sutra.",
+   "translation": "\"Subhuti, what do you think? If someone filled the three thousand great thousand worlds with the seven treasures and gave them away, would the merit gained by that person be great?\"\nSubhuti said: \"Very great, World-Honoured One. Why? That merit is not the nature of merit, and therefore the Tathagata says the merit is great.\"\n\"If, however, someone receives and holds even a four-line verse from this sutra and explains it to others, the merit is greater than the other's. Why? Subhuti, all buddhas, and the Dharma of supreme, complete awakening of all buddhas, come forth from this sutra. Subhuti, what is called the Buddha-Dharma is not the Buddha-Dharma; it is called the Buddha-Dharma.\"",
+   "glossary": [
+    {
+     "term": "三千大千世界",
+     "en": "sanqian daqian shijie - the three thousand great thousand worlds",
+     "note": "The Buddhist unit of a universe: a thousand small worlds make a small chiliocosm, a thousand of those a medium one, and a thousand of those a great one. Together they are the realm of one Buddha."
+    },
+    {
+     "term": "七寶",
+     "en": "qibao - the seven treasures",
+     "note": "Gold, silver, lapis lazuli, giant clam shell, agate, pearl and red pearl; the lists differ a little from sutra to sutra."
+    },
+    {
+     "term": "四句偈",
+     "en": "si ju ji - a four-line verse",
+     "note": "Any verse of four lines in a sutra. The sutra does not say which four; it means even the smallest portion of the text."
+    },
+    {
+     "term": "福德即非福德性",
+     "en": "fude ji fei fude xing - merit is not the nature of merit",
+     "note": "Merit with marks arises and ceases by conditions, and has no lasting nature of its own. If one does not cling to merit, the merit is boundless."
+    },
+    {
+     "term": "佛法者，即非佛法，是名佛法",
+     "en": "fofa zhe, ji fei fofa, shi ming fofa - what is called the Buddha-Dharma is not the Buddha-Dharma, it is called the Buddha-Dharma",
+     "note": "The pattern 'A is not A, therefore it is called A': first the name is affirmed, then its fixed self-nature is denied, and finally it returns to a provisional name. It is the most typical logic of the Diamond Sutra."
+    }
+   ],
+   "background": "Here for the first time 'receiving and holding a four-line verse' is compared with 'giving the seven treasures'. The sutra repeats the comparison in sections 11, 13, 15, 24 and 32 to show that giving the Dharma is better than giving wealth."
+  },
+  "fen09": {
+   "summary": "None of the four fruits of the shravaka path - stream-enterer, once-returner, non-returner, arhat - has the thought 'I have obtained this fruit'. If such a thought arose it would be clinging to a self. Subhuti gives his own life of 'not practising anything' as an example.",
+   "translation": "\"Subhuti, what do you think? Can a stream-enterer think, 'I have obtained the fruit of stream-entry'?\"\nSubhuti said: \"No, World-Honoured One. Why? The stream-enterer is called 'one who has entered the stream', yet he has entered nothing. He has not entered form, sound, smell, taste, touch or mental objects; that is why he is called a stream-enterer.\"\n\"Subhuti, what do you think? Can a once-returner think, 'I have obtained the fruit of a once-returner'?\"\nSubhuti said: \"No, World-Honoured One. Why? The once-returner is called 'one who goes and returns once', yet in truth there is no going and returning; that is why he is called a once-returner.\"\n\"Subhuti, what do you think? Can a non-returner think, 'I have obtained the fruit of a non-returner'?\"\nSubhuti said: \"No, World-Honoured One. Why? The non-returner is called 'one who does not return', yet in truth there is no not-returning; that is why he is called a non-returner.\"\n\"Subhuti, what do you think? Can an arhat think, 'I have obtained the way of an arhat'?\"\nSubhuti said: \"No, World-Honoured One. Why? In truth there is no Dharma called arhat. World-Honoured One, if an arhat thought, 'I have obtained the way of an arhat', he would be attached to a self, a person, a being, a lifespan. World-Honoured One, the Buddha says that I have attained the samadhi of non-contention, and that among people I am the foremost, the foremost arhat free from desire. World-Honoured One, I do not think, 'I am an arhat free from desire.' World-Honoured One, if I thought, 'I have obtained the way of an arhat', the World-Honoured One would not have said that Subhuti delights in the life of quiet seclusion. It is because Subhuti in truth practises nothing that he is called Subhuti, one who delights in quiet seclusion.\"",
+   "glossary": [
+    {
+     "term": "須陀洹",
+     "en": "xutuohuan - stream-enterer (srota-apanna)",
+     "note": "Sanskrit srota-apanna, 'entered the stream': the first fruit, entry into the stream of the noble ones."
+    },
+    {
+     "term": "斯陀含",
+     "en": "situohan - once-returner (sakridagamin)",
+     "note": "Sanskrit sakridagamin, 'one who goes and returns once': the second fruit, who returns once more among humans and devas and then attains nirvana."
+    },
+    {
+     "term": "阿那含",
+     "en": "anahan - non-returner (anagamin)",
+     "note": "Sanskrit anagamin, 'not returning': the third fruit, who is not reborn again in the realm of desire."
+    },
+    {
+     "term": "阿羅漢",
+     "en": "aluohan - arhat",
+     "note": "Sanskrit arhat: the fourth fruit, a noble disciple who has ended all afflictions and will not be reborn in the cycle."
+    },
+    {
+     "term": "無諍三昧",
+     "en": "wuzheng sanmei - samadhi of non-contention",
+     "note": "A meditative state without any thought of disputing with others. Subhuti, called 'foremost in understanding emptiness', is known for practising non-contention."
+    },
+    {
+     "term": "阿蘭那行",
+     "en": "alanna xing - the life of quiet seclusion (aranya)",
+     "note": "From the Sanskrit aranya, a quiet place. It means living apart from noise and crowds, in pure practice."
+    }
+   ],
+   "background": "By showing that the four fruits of the shravaka path do not have the thought 'I have attained', this section teaches that 'no notions' applies not only to bodhisattvas but also to practitioners of the Lesser Vehicle. Subhuti's remark that he 'practises nothing' closes the section."
+  },
+  "fen10": {
+   "summary": "In the time of Dipamkara Buddha the Buddha in truth gained nothing; adorning buddha-lands is not truly adornment. Therefore a bodhisattva should give rise to a pure mind, and 'give rise to the mind without abiding anywhere'.",
+   "translation": "The Buddha said to Subhuti: \"What do you think? When the Tathagata was in the past with Dipamkara Buddha, did he gain any Dharma?\"\n\"No, World-Honoured One. When the Tathagata was with Dipamkara Buddha, in truth he gained no Dharma.\"\n\"Subhuti, what do you think? Do bodhisattvas adorn buddha-lands?\"\n\"No, World-Honoured One. Why? What is called adorning a buddha-land is not adornment; it is called adornment.\"\n\"Therefore, Subhuti, the bodhisattvas, the great beings, should give rise to a pure mind like this: they should not give rise to the mind abiding in form, and should not give rise to the mind abiding in sound, smell, taste, touch or mental objects. They should give rise to the mind without abiding anywhere.\"\n\"Subhuti, suppose someone has a body as large as Sumeru, king of mountains. What do you think? Is that body large?\"\nSubhuti said: \"Very large, World-Honoured One. Why? The Buddha says it is not a body; it is called a large body.\"",
+   "keyLines": [
+    {
+     "line": "應無所住而生其心",
+     "en": "Give rise to the mind without abiding anywhere.",
+     "note": "The most famous line of the sutra. The mind does not stick to any object of form, sound, smell, taste, touch or thought, and yet compassion, wisdom and action arise from it. It is said that the Sixth Patriarch, Huineng, awoke on hearing this line."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "燃燈佛",
+     "en": "Randeng Fo - Dipamkara Buddha",
+     "note": "Sanskrit Dipamkara, the ancient Buddha who, in an earlier life of Shakyamuni, predicted that he would become a buddha."
+    },
+    {
+     "term": "莊嚴佛土",
+     "en": "zhuangyan fotu - adorning buddha-lands",
+     "note": "A bodhisattva purifies and adorns a buddha's land with merit and wisdom; the sutra stresses that one should not cling to the mark of 'adornment' that one has made."
+    },
+    {
+     "term": "清淨心",
+     "en": "qingjing xin - a pure mind",
+     "note": "A mind free of clinging to and stained by form, sound, smell, taste, touch and mental objects."
+    },
+    {
+     "term": "應無所住而生其心",
+     "en": "ying wu suo zhu er sheng qi xin - give rise to the mind without abiding anywhere",
+     "note": "'Not abiding' is not clinging; 'giving rise to the mind' is putting it into action. The meaning is that practice is not passive stillness but great activity free of clinging."
+    },
+    {
+     "term": "須彌山王",
+     "en": "Xumi shan wang - Sumeru, king of mountains",
+     "note": "The central mountain of the Buddhist cosmos, of immense height. The sutra uses it as a picture of a vast body."
+    }
+   ],
+   "background": "This section is a hinge of the whole sutra. According to the Platform Sutra of the Sixth Patriarch, Huineng heard someone chant this line in the market and resolved to become a monk; later Chan tradition takes it as the point of entry to awakening."
+  },
+  "fen11": {
+   "summary": "Giving away the seven treasures that would fill as many world systems as there are grains of sand in as many Ganges rivers brings great merit, yet less than receiving and holding even a four-line verse of this sutra and explaining it to others.",
+   "translation": "\"Subhuti, take all the grains of sand in the River Ganges, and suppose there were as many Ganges rivers as there are those grains of sand. What do you think? Would the grains of sand in all those Ganges rivers be many?\"\nSubhuti said: \"Very many, World-Honoured One. Even the Ganges rivers would be countless, how much more their sand.\"\n\"Subhuti, I now tell you truly: if a good man or good woman filled as many three thousand great thousand worlds as that with the seven treasures and gave them away, would the merit be great?\"\nSubhuti said: \"Very great, World-Honoured One.\"\nThe Buddha said to Subhuti: \"If a good man or good woman receives and holds even a four-line verse from this sutra and explains it to others, this merit is greater than the former merit.\"",
+   "glossary": [
+    {
+     "term": "恆河沙",
+     "en": "Henghe sha - the sands of the Ganges",
+     "note": "The sand of the Ganges is as fine as powder and beyond counting. Buddhist texts often say 'as many as the sands of the Ganges' to mean a very great number."
+    },
+    {
+     "term": "七寶布施",
+     "en": "qibao bushi - giving the seven treasures",
+     "note": "Giving the seven kinds of precious things. This is giving of material goods, which is giving that has marks."
+    },
+    {
+     "term": "四句偈等",
+     "en": "si ju ji deng - a four-line verse and so on",
+     "note": "The word 'deng' (and so on) means at least four lines, and may include more."
+    },
+    {
+     "term": "法施與財施",
+     "en": "fashi yu caishi - giving the Dharma and giving wealth",
+     "note": "Giving the Dharma awakens people and is far greater than giving worldly goods. This is a theme the Diamond Sutra returns to again and again."
+    }
+   ]
+  },
+  "fen12": {
+   "summary": "Wherever this sutra is taught, all the devas, humans and asuras of the world should make offerings, as to a Buddha's stupa or temple. One who fully receives, holds, reads and recites it achieves the supreme and rarest Dharma; where the sutra is, there is the Buddha, or one of his honoured disciples.",
+   "translation": "\"Furthermore, Subhuti, wherever this sutra is taught, even only a four-line verse, you should know that all the devas, humans and asuras of the whole world should make offerings there, as to a stupa or temple of the Buddha. How much more so if someone can fully receive, hold, read and recite it. Subhuti, you should know that such a person achieves the highest, foremost and rarest Dharma. Wherever this scripture is found, there is the Buddha, or a disciple worthy of honour.\"",
+   "glossary": [
+    {
+     "term": "塔廟",
+     "en": "tamiao - stupa and temple",
+     "note": "Buildings that house relics or images of the Buddha, places that Buddhists honour."
+    },
+    {
+     "term": "阿修羅",
+     "en": "axiuluo - asura",
+     "note": "Sanskrit asura, one of the eight kinds of beings (devas, nagas and so on), a warlike race of gods."
+    },
+    {
+     "term": "受持讀誦",
+     "en": "shouchi dusong - receiving, holding, reading, reciting",
+     "note": "Four ways of practising a sutra: to receive it, to keep it in mind, to read the text and to recite it from memory."
+    },
+    {
+     "term": "即為有佛",
+     "en": "ji wei you fo - there is the Buddha",
+     "note": "The scripture carries the wisdom of the Buddha's Dharma body, so where the scripture is, the Buddha is."
+    }
+   ]
+  },
+  "fen13": {
+   "summary": "Subhuti asks what the sutra should be called and how to uphold it. The Buddha says its name is the Diamond Perfection of Wisdom. Using the pattern 'A is not A, so it is called A', he shows that prajna, dust particles, worlds and the thirty-two marks are all provisional names, and says that upholding this sutra brings more merit than giving up lives as many as the sands of the Ganges.",
+   "translation": "At that time Subhuti said to the Buddha: \"World-Honoured One, what should this sutra be called? How should we receive and hold it?\"\nThe Buddha said to Subhuti: \"This sutra is called the Diamond Perfection of Wisdom. By this name you should receive and hold it. Why? Subhuti, what the Buddha calls the perfection of wisdom is not the perfection of wisdom; it is called the perfection of wisdom. Subhuti, what do you think? Does the Tathagata have any Dharma to teach?\"\nSubhuti said to the Buddha: \"World-Honoured One, the Tathagata has nothing to teach.\"\n\"Subhuti, what do you think? Are the grains of dust in the three thousand great thousand worlds many?\"\nSubhuti said: \"Very many, World-Honoured One.\"\n\"Subhuti, the Tathagata says that these grains of dust are not grains of dust; they are called grains of dust. The Tathagata says that a world is not a world; it is called a world. Subhuti, what do you think? Can the Tathagata be seen by means of the thirty-two marks?\"\n\"No, World-Honoured One. The Tathagata cannot be seen by means of the thirty-two marks. Why? The Tathagata says that the thirty-two marks are not marks; they are called the thirty-two marks.\"\n\"Subhuti, if a good man or good woman gave up bodies and lives as many as the sands of the Ganges in giving, and another person receives and holds even a four-line verse of this sutra and explains it to others, this merit is far greater.\"",
+   "keyLines": [
+    {
+     "line": "佛說般若波羅蜜，即非般若波羅蜜。是名般若波羅蜜",
+     "en": "What the Buddha calls the perfection of wisdom is not the perfection of wisdom; it is called the perfection of wisdom.",
+     "note": "The typical 'is not ... it is called ...' structure. The name 'prajnaparamita' is only a provisional name used as a skilful means; true prajna lies beyond words and concepts."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "金剛般若波羅蜜",
+     "en": "Jingang bore boluomi - Diamond Perfection of Wisdom (Vajra Prajnaparamita)",
+     "note": "The diamond is a picture of prajna wisdom: hard and sharp enough to cut through all afflictions. The sutra takes its name from this."
+    },
+    {
+     "term": "微塵",
+     "en": "weichen - dust particles",
+     "note": "The tiniest particles of matter. The sutra uses them to show that a world is a gathering of conditions with no real self-nature."
+    },
+    {
+     "term": "三十二相",
+     "en": "sanshi'er xiang - the thirty-two marks",
+     "note": "The thirty-two excellent bodily marks of a Buddha, such as the crown protuberance, the white curl between the eyebrows and the level soles of the feet."
+    },
+    {
+     "term": "以恆河沙等身命布施",
+     "en": "yi Henghe sha deng shenming bushi - giving up lives as many as the sands of the Ganges",
+     "note": "To give up as many bodies and lives as there are sands in the Ganges is an enormous sacrifice. The comparison here is between giving without marks and giving with marks."
+    },
+    {
+     "term": "是名",
+     "en": "shi ming - 'it is called'",
+     "note": "'It is called' means that the thing exists as a provisional name for convenience, and is not a real thing."
+    }
+   ],
+   "background": "By the traditional account, the title of Kumarajiva's version, the Diamond Perfection of Wisdom Sutra, is given by the Buddha himself in this section."
+  },
+  "fen14": {
+   "summary": "Hearing the sutra, Subhuti understands its depths and weeps. The Buddha tells him that to be free of all marks is to be called buddhas. Using the perfection of patience and the story of King Kali cutting up his body, he shows that a bodhisattva should set out the mind free of marks and give without abiding, and he encourages those who will hold the sutra in later ages.",
+   "translation": "At that time Subhuti, hearing this sutra explained, understood its meaning deeply, wept tears of emotion, and said to the Buddha: \"How rare, World-Honoured One! The Buddha has spoken such a profound scripture. In all the time since I gained the eye of wisdom, I have never heard a sutra like this. World-Honoured One, if someone hears this sutra and his faith is pure, he will give rise to the true mark. You should know that such a person achieves the foremost and rarest merit. World-Honoured One, this true mark is no mark, and therefore the Tathagata calls it the true mark.\n\"World-Honoured One, now that I have heard such a scripture, to believe, understand, receive and hold it is not hard for me. But if in the ages to come, in the last five hundred years, there are living beings who hear this sutra and believe, understand, receive and hold it, those people will be the foremost and rarest. Why? These people have no notion of a self, no notion of a person, no notion of a being, no notion of a lifespan. Why is this? The notion of a self is no notion; the notions of a person, a being and a lifespan are no notions. Why? Those who are free from all notions are called buddhas.\"\nThe Buddha said to Subhuti: \"So it is, so it is. If someone hears this sutra and is not startled, not frightened and not afraid, you should know that this person is very rare. Why? Subhuti, the Tathagata says that the foremost perfection is not the foremost perfection; it is called the foremost perfection. Subhuti, the perfection of patience under insult - the Tathagata says it is not the perfection of patience; it is called the perfection of patience. Why? Subhuti, when long ago King Kali cut my body to pieces, at that time I had no notion of a self, no notion of a person, no notion of a being and no notion of a lifespan. Why? In the past, when my limbs were cut apart joint by joint, if I had had the notion of a self, a person, a being or a lifespan, I would have felt anger and hatred. Subhuti, I also recall that in the past, for five hundred lives, I was an ascetic who practised patience, and in all those lives I had no notion of a self, a person, a being or a lifespan.\n\"Therefore, Subhuti, a bodhisattva should leave all notions and set out on the mind of supreme, complete awakening. He should not give rise to the mind abiding in form, and should not give rise to the mind abiding in sound, smell, taste, touch or mental objects; he should give rise to the mind that abides nowhere. If a mind has a place to abide, it is not abiding.\n\"For this reason the Buddha says: a bodhisattva should not give with a mind abiding in form. Subhuti, for the benefit of all living beings a bodhisattva should give like this. The Tathagata says that all marks are no marks, and also that all living beings are not living beings. Subhuti, the Tathagata is one who speaks what is true, what is real, what is as it is, what is not false, what does not differ.\n\"Subhuti, the Dharma that the Tathagata has attained is neither real nor false. Subhuti, if a bodhisattva's mind abides in the Dharma when he gives, he is like a person who walks into darkness and sees nothing. If a bodhisattva's mind does not abide in the Dharma when he gives, he is like a person with eyes in the bright light of the sun, who sees every kind of colour and shape.\n\"Subhuti, in ages to come, if good men and good women can receive, hold, read and recite this sutra, the Tathagata, with the wisdom of a buddha, fully knows these people and fully sees these people, and they all achieve limitless, boundless merit.\"",
+   "keyLines": [
+    {
+     "line": "爾時，須菩提聞說是經，深解義趣，涕淚悲泣",
+     "en": "At that time Subhuti, having heard this sutra, deeply understood its meaning, wept tears of emotion.",
+     "note": "Subhuti is so moved by his deep understanding that he weeps. It is a mixture of sorrow and joy at an insight into something profound, and it shows how deep the sutra is."
+    },
+    {
+     "line": "世尊！是實相者，則是非相，是故如來說名實相",
+     "en": "World-Honoured One, this true reality is not a mark; therefore the Tathagata calls it true reality.",
+     "note": "Subhuti's insight: true reality is not some particular 'mark'. It is what is seen when all discriminating marks are left behind, so 'true reality' too is only a provisional name."
+    },
+    {
+     "line": "離一切諸相，則名諸佛",
+     "en": "Those who are free of all notions are called buddhas.",
+     "note": "The key line of this section: to leave behind all the marks one clings to is the state of the buddhas. A buddha is not an outward form but an awakening free of marks."
+    },
+    {
+     "line": "如我昔為歌利王割截身體，我於爾時，無我相、無人相、無眾生相、無壽者相",
+     "en": "In the past when King Kali cut up my body, at that time I had no notion of a self, no notion of a person, no notion of a being, no notion of a lifespan.",
+     "note": "The story of the sage of patience whose body was cut up by King Kali shows that the real nature of the perfection of patience is selflessness, so no anger arises even as the body is cut to pieces."
+    },
+    {
+     "line": "應生無所住心",
+     "en": "He should give rise to a mind that abides nowhere.",
+     "note": "A restatement of 'give rise to the mind without abiding anywhere' in section 10, the basic method the sutra teaches a bodhisattva at the start of his aspiration."
+    },
+    {
+     "line": "若菩薩心住於法而行布施，如人入闇，則無所見；若菩薩心不住法而行布施，如人有目，日光明照，見種種色",
+     "en": "If a bodhisattva's mind abides in the Dharma when he gives, he is like a person entering the dark, who sees nothing; if his mind does not abide in the Dharma, he is like a person with eyes, in the bright light of the sun, seeing all kinds of forms.",
+     "note": "A comparison of darkness and light: giving that clings to marks is like walking into the dark and seeing nothing; giving that does not cling is like having bright eyes in full sunlight."
+    },
+    {
+     "line": "如來是真語者、實語者、如語者、不誑語者、不異語者",
+     "en": "the Tathagata is one who speaks what is true, what is real, what is so, what does not deceive, what does not differ",
+     "note": "The five kinds of speech of the Buddha: true, real, as it is, not deceiving, not false. This stresses that the teaching can be trusted."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "實相",
+     "en": "shixiang - true reality",
+     "note": "The true aspect of all things, the truth that appears when all false discrimination is left behind."
+    },
+    {
+     "term": "慧眼",
+     "en": "huiyan - the eye of wisdom",
+     "note": "The eye of wisdom that sees emptiness in all things, which is possessed by the Two Vehicles. Subhuti says that although he has this eye, he has never heard a sutra so profound."
+    },
+    {
+     "term": "忍辱波羅蜜",
+     "en": "renru boluomi - the perfection of patience",
+     "note": "One of the six perfections: the practice of enduring insult and harm without anger."
+    },
+    {
+     "term": "歌利王",
+     "en": "Geli wang - King Kali",
+     "note": "King Kali (also Kalinga) of the story: in a former life the Buddha was a sage of patience, and the king cut up his body, and the sage felt no anger."
+    },
+    {
+     "term": "四相",
+     "en": "sixiang - the four notions",
+     "note": "The notions of a self, a person, a being and a lifespan. This section repeats that all four are 'not notions'."
+    },
+    {
+     "term": "不誑語者",
+     "en": "buguang zhe - one who does not deceive",
+     "note": "One who does not deceive: whose words match the facts."
+    }
+   ],
+   "background": "This is the longest section, and the one in which the teaching of the sutra is most concentrated. Traditionally it is regarded as the summary of 'freedom from marks and stillness'."
+  },
+  "fen15": {
+   "summary": "Giving up bodies as many as the sands of the Ganges through countless kalpas is less than hearing this sutra with an unresisting faith. The sutra has inconceivable merit; it is taught for those who set out on the Great Vehicle, and those who hold it shoulder the Tathagata's task. Wherever the sutra is, it is like a stupa and should be honoured.",
+   "translation": "\"Subhuti, suppose a good man or good woman gave up bodies as many as the sands of the Ganges in the early part of the day, gave up as many again in the middle of the day, and as many again in the late part of the day, and went on giving up their bodies in this way for countless hundreds of thousands of millions of kalpas. And suppose another person hears this sutra and his faith does not turn against it. His merit is greater than the other's, how much more so if he copies it, receives it, holds it, reads it, recites it and explains it to others.\nSubhuti, to put it briefly, this sutra has inconceivable, immeasurable, boundless merit. The Tathagata teaches it for those who set out on the Great Vehicle, for those who set out on the Supreme Vehicle. If there are those who can receive, hold, read and recite it, and explain it widely to others, the Tathagata fully knows and fully sees these people, and they achieve immeasurable, unspeakable, boundless, inconceivable merit.\nSuch people carry the Tathagata's supreme, complete awakening on their shoulders. Why? Subhuti, those who delight in the lesser Dharma are attached to the view of a self, a person, a being and a lifespan, and so they cannot hear, receive, read, recite or explain this sutra to others.\nSubhuti, in whatever place this sutra is found, all the devas, humans and asuras of the world should make offerings there. Know that such a place is a stupa, and all should show respect, bow, walk around it and scatter flowers and incense there.\"",
+   "glossary": [
+    {
+     "term": "初日分、中日分、後日分",
+     "en": "chu ri fen, zhong ri fen, hou ri fen - early, middle and late parts of the day",
+     "note": "Ancient India divided the day into three parts: morning, midday and evening."
+    },
+    {
+     "term": "大乘、最上乘",
+     "en": "Dasheng, zuishang sheng - the Great Vehicle, the Supreme Vehicle",
+     "note": "The Great Vehicle is the bodhisattva path; the Supreme Vehicle is the highest, the Buddha vehicle. The sutra stresses that it is taught for those who set out with a great mind."
+    },
+    {
+     "term": "荷擔",
+     "en": "hedan - to shoulder",
+     "note": "To carry and take on. Those who hold this sutra are taking on the Tathagata's great work."
+    },
+    {
+     "term": "小法",
+     "en": "xiao fa - the lesser Dharma",
+     "note": "The teaching of the shravakas and pratyekabuddhas, which looks mainly to one's own liberation. Those who enjoy it still cling to the four views and cannot take in prajna."
+    },
+    {
+     "term": "四見",
+     "en": "sijian - the four views",
+     "note": "The views of a self, a person, a being and a lifespan; much like the 'four notions', they are clinging views about a 'self' and the rest."
+    }
+   ]
+  },
+  "fen16": {
+   "summary": "Someone who holds and recites this sutra but is despised for it has wrongdoing from an earlier life, which is wiped out by being despised in this life. The merit of the sutra is far greater than making offerings to countless buddhas, and its meaning is beyond thought.",
+   "translation": "\"Furthermore, Subhuti, if good men and good women receive, hold, read and recite this sutra and are despised by others, then the wrongdoing they did in former lives, which should have sent them to the evil paths, is wiped out because they are despised in this life, and they will attain supreme, complete awakening.\nSubhuti, I remember that in the past, countless asamkhya kalpas ago, before Dipamkara Buddha, I met eighty-four thousand million nayuta buddhas, and made offerings to every one and served them, without letting any pass in vain. But if someone in the last age to come can receive, hold, read and recite this sutra, the merit of my offerings to those buddhas does not come to one hundredth of the merit he gains, nor to one part in ten million hundred million, nor can any count or comparison reach it.\nSubhuti, if good men and good women in the last age to come receive, hold, read and recite this sutra, and I were to describe in full the merit they gain, some who heard it might go mad and be thrown into doubt and not believe. Subhuti, know that the meaning of this sutra is inconceivable, and its reward is inconceivable too.\"",
+   "glossary": [
+    {
+     "term": "先世罪業",
+     "en": "xianshi zuiye - wrongdoing from former lives",
+     "note": "The Buddhist idea of cause and effect: harmful acts in earlier lives bring consequences later. The merit of holding this sutra can turn a heavy result into a light one."
+    },
+    {
+     "term": "轉重輕受",
+     "en": "zhuan zhong qing shou - turning a heavy result into a light one",
+     "note": "To meet with contempt and thereby be freed of the heavy result of falling into the evil paths is called 'turning a heavy result into a light one'."
+    },
+    {
+     "term": "阿僧祇劫、那由他",
+     "en": "asengqi jie, nayouta - asamkhya kalpas, nayuta",
+     "note": "Asamkhya means countless, and nayuta is a very large number; both describe immense spans of time and quantity."
+    },
+    {
+     "term": "末世",
+     "en": "moshi - the last age",
+     "note": "The age when the Dharma has declined, also called the age of the ending Dharma."
+    },
+    {
+     "term": "狐疑",
+     "en": "huyi - fox-like doubt",
+     "note": "The fox is suspicious and hesitates; the word describes doubt and disbelief towards the Dharma."
+    }
+   ]
+  },
+  "fen17": {
+   "summary": "Subhuti asks again how to abide and how to subdue the mind. The Buddha answers: vow to liberate all beings, yet in truth no being is liberated; there is no Dharma by which one gains awakening, as Dipamkara's prediction shows; one who fully understands the absence of self in persons and things is a true bodhisattva.",
+   "translation": "At that time Subhuti said to the Buddha: \"World-Honoured One, when good men and good women set out on the mind of supreme, complete awakening, how should they abide? How should they subdue their minds?\"\nThe Buddha said to Subhuti: \"Good men and good women who set out on the mind of supreme, complete awakening should give rise to this thought: 'I must bring all living beings to liberation.' But when all living beings have been brought to liberation, in truth not one living being has been liberated. Why? Subhuti, if a bodhisattva has the notion of a self, a person, a being or a lifespan, he is not a bodhisattva. Why is this? Subhuti, in truth there is no Dharma by which one sets out on the mind of supreme, complete awakening.\"\n\"Subhuti, what do you think? When the Tathagata was with Dipamkara Buddha, was there any Dharma by which he attained supreme, complete awakening?\"\n\"No, World-Honoured One. As I understand the meaning of what the Buddha has said, when the Buddha was with Dipamkara Buddha there was no Dharma by which he attained supreme, complete awakening.\"\nThe Buddha said: \"So it is, so it is. Subhuti, in truth there is no Dharma by which the Tathagata attained supreme, complete awakening. Subhuti, if there had been a Dharma by which the Tathagata attained supreme, complete awakening, Dipamkara Buddha would not have predicted of me: 'In a future age you will become a buddha called Shakyamuni.' It is because in truth there is no Dharma by which one attains supreme, complete awakening that Dipamkara Buddha made that prediction, saying: 'In a future age you will become a buddha called Shakyamuni.' Why? 'Tathagata' means the suchness of all dharmas.\"\n\"If someone says that the Tathagata has attained supreme, complete awakening - Subhuti, in truth there is no Dharma by which the Buddha attained it. Subhuti, in the supreme, complete awakening that the Tathagata has attained, there is nothing real and nothing false. Therefore the Tathagata says that all dharmas are the Buddha-Dharma. Subhuti, what are called 'all dharmas' are not all dharmas, and therefore they are called all dharmas.\"\n\"Subhuti, it is like a person with a large and tall body.\"\nSubhuti said: \"World-Honoured One, the Tathagata says that a large and tall body is not a large body; it is called a large body.\"\n\"Subhuti, a bodhisattva is like this too. If he says, 'I will bring countless beings to liberation', he is not called a bodhisattva. Why? Subhuti, in truth there is no Dharma called bodhisattva. Therefore the Buddha says that all dharmas have no self, no person, no being, no lifespan.\"\n\"Subhuti, if a bodhisattva says, 'I will adorn buddha-lands', he is not called a bodhisattva. Why? The Tathagata says that adorning buddha-lands is not adornment; it is called adornment.\"\n\"Subhuti, if a bodhisattva fully understands the absence of self in things and in persons, the Tathagata calls him a true bodhisattva.\"",
+   "glossary": [
+    {
+     "term": "滅度一切眾生",
+     "en": "miedu yiqie zhongsheng - to bring all beings to liberation",
+     "note": "To vow that all beings be freed from suffering. The Diamond Sutra stresses that one should not cling to the idea that there are 'beings to be saved' while saving them."
+    },
+    {
+     "term": "授記",
+     "en": "shouji - prediction",
+     "note": "The Buddha's prophecy to a disciple of the name and land of his future buddhahood. Dipamkara's prediction to the former life of Shakyamuni (the bodhisattva Youth Prabha) is a famous story."
+    },
+    {
+     "term": "諸法如義",
+     "en": "zhufa ru yi - the suchness of all dharmas",
+     "note": "'Suchness' (tathata) is the true state of things. The title 'Tathagata' means 'one who has thus come', and so shares its meaning with the suchness of all dharmas."
+    },
+    {
+     "term": "無實無虛",
+     "en": "wu shi wu xu - nothing real and nothing false",
+     "note": "What the Buddha realised is not a solid thing one can seize (not real), nor is it nothing at all (not false). It is the Middle Way that avoids both being and non-being."
+    },
+    {
+     "term": "通達無我法",
+     "en": "tongda wo fa - fully understanding the absence of self in things and persons",
+     "note": "A thorough understanding of both kinds of selflessness: the person has no self, and things have no self."
+    },
+    {
+     "term": "一切法皆是佛法",
+     "en": "yiqie fa jie shi fofa - all dharmas are the Buddha-Dharma",
+     "note": "The true nature of every phenomenon is what the Buddha-Dharma reveals, and so all are equal, with no difference."
+    }
+   ],
+   "background": "This section looks back to sections 2 and 3 and raises again the question 'how to abide, how to subdue the mind'. Among the thirty-two sections made by Prince Zhaoming (Xiao Tong), it is often seen as one that restates the main outline."
+  },
+  "fen18": {
+   "summary": "The Tathagata has the five eyes and knows all the many kinds of minds of beings. Yet all minds are not minds, and the past mind, the present mind and the future mind cannot be found.",
+   "translation": "\"Subhuti, what do you think? Does the Tathagata have the flesh eye?\"\n\"So it is, World-Honoured One. The Tathagata has the flesh eye.\"\n\"Subhuti, what do you think? Does the Tathagata have the heavenly eye?\"\n\"So it is, World-Honoured One. The Tathagata has the heavenly eye.\"\n\"Subhuti, what do you think? Does the Tathagata have the eye of wisdom?\"\n\"So it is, World-Honoured One. The Tathagata has the eye of wisdom.\"\n\"Subhuti, what do you think? Does the Tathagata have the Dharma eye?\"\n\"So it is, World-Honoured One. The Tathagata has the Dharma eye.\"\n\"Subhuti, what do you think? Does the Tathagata have the Buddha eye?\"\n\"So it is, World-Honoured One. The Tathagata has the Buddha eye.\"\n\"Subhuti, what do you think? Of the sand in the River Ganges, does the Buddha say it is sand?\"\n\"So it is, World-Honoured One. The Tathagata says it is sand.\"\n\"Subhuti, what do you think? Suppose there were as many Ganges rivers as there are grains of sand in one Ganges, and as many buddha-worlds as the grains of sand in all those rivers. Would that be many?\"\n\"Very many, World-Honoured One.\"\nThe Buddha said to Subhuti: \"In all those lands, the living beings have so many kinds of minds, and the Tathagata knows them all. Why? The Tathagata says that all those minds are not minds; they are called minds. Why is this? Subhuti, the past mind cannot be found, the present mind cannot be found, and the future mind cannot be found.\"",
+   "glossary": [
+    {
+     "term": "五眼",
+     "en": "wuyan - the five eyes",
+     "note": "The flesh eye (sees form), the heavenly eye (sees far and near, hidden and visible), the eye of wisdom (sees emptiness), the Dharma eye (sees all the gateways of the Dharma) and the Buddha eye (the complete vision of all-knowing)."
+    },
+    {
+     "term": "諸心皆為非心",
+     "en": "zhuxin jie wei xin - all minds are not minds",
+     "note": "Thoughts follow one another, arising and ceasing, with no fixed entity. So they are not a real, unchanging 'mind'; they are only called a mind."
+    },
+    {
+     "term": "三際心不可得",
+     "en": "sanji xin bukede - the mind of the three times cannot be found",
+     "note": "The past has gone, the future has not come, and the present never stops changing, so there is no one mind that can be held. The line is often quoted in Chan, as in the story of Deshan Xuanjian and the snack seller."
+    },
+    {
+     "term": "若干種心",
+     "en": "ruogan zhong xin - many kinds of minds",
+     "note": "All sorts of thoughts, in states good and bad, defiled and pure."
+    }
+   ],
+   "background": "The section shows the Buddha's wisdom knowing the minds of all beings and yet saying that mind cannot be found, which unites 'knowing all' with 'emptiness'. Deshan Xuanjian was nicknamed 'Diamond Zhou' (Zhou Jingang) because of his learning in this sutra, and his 'snack' story comes from this line."
+  },
+  "fen19": {
+   "summary": "If merit were something real, the Tathagata would not say it is great; it is exactly because merit has no self-nature that he says it is great.",
+   "translation": "\"Subhuti, what do you think? If someone filled the three thousand great thousand worlds with the seven treasures and gave them away, would that person gain much merit through this?\"\n\"So it is, World-Honoured One. This person would gain very much merit through this.\"\n\"Subhuti, if merit were real, the Tathagata would not say that the merit gained is great. It is because merit does not exist that the Tathagata says the merit gained is great.\"",
+   "glossary": [
+    {
+     "term": "法界",
+     "en": "fajie - the Dharma realm",
+     "note": "The totality of all dharmas, or the whole universe. The section title means that merit spreads through the whole Dharma realm."
+    },
+    {
+     "term": "福德有實",
+     "en": "fude you shi - merit being real",
+     "note": "If merit is taken to be a real thing, it has gain and loss and can run out. Without that, it can grow without limit."
+    },
+    {
+     "term": "七寶",
+     "en": "qibao - the seven treasures",
+     "note": "Gold, silver, lapis lazuli, giant clam shell, agate, pearl and red pearl: the standing example of giving of material goods."
+    }
+   ]
+  },
+  "fen20": {
+   "summary": "The Buddha cannot be seen through a complete physical body or a full set of marks, because these are not real marks but only names.",
+   "translation": "\"Subhuti, what do you think? Can the Buddha be seen through a perfectly complete physical body?\"\n\"No, World-Honoured One. The Tathagata should not be seen through a perfectly complete physical body. Why? The Tathagata says that a perfectly complete physical body is not a perfectly complete physical body; it is called a perfectly complete physical body.\"\n\"Subhuti, what do you think? Can the Tathagata be seen through the complete set of marks?\"\n\"No, World-Honoured One. The Tathagata should not be seen through the complete set of marks. Why? The Tathagata says that the complete set of marks is not complete; it is called the complete set of marks.\"",
+   "glossary": [
+    {
+     "term": "具足色身",
+     "en": "juzu sese - a perfectly complete physical body",
+     "note": "A body perfect in every way, meaning the perfect marks of a Buddha's reward body and response body."
+    },
+    {
+     "term": "諸相具足",
+     "en": "zhu xiang juzu - the complete set of marks",
+     "note": "The thirty-two marks and the eighty minor signs, all fully present."
+    },
+    {
+     "term": "離色離相",
+     "en": "li se li xiang - leaving form, leaving marks",
+     "note": "The title of the section: only by leaving behind clinging to the physical body and its signs can one see the Tathagata's true nature."
+    }
+   ],
+   "background": "Like sections 5, 13 and 26, this section deals with the theme that the Tathagata cannot be seen through marks."
+  },
+  "fen21": {
+   "summary": "The Tathagata has no thought of 'I have something to teach'; one who teaches has no Dharma to teach, and it is only called teaching. Living beings too are neither beings nor not beings, only provisional names.",
+   "translation": "\"Subhuti, do not say that the Tathagata has the thought, 'I shall teach some Dharma.' Do not think that. Why? If anyone says that the Tathagata has some Dharma to teach, he slanders the Buddha, because he cannot understand what I teach. Subhuti, one who teaches the Dharma has no Dharma to teach; it is called teaching the Dharma.\"\nAt that time the venerable Subhuti said to the Buddha: \"World-Honoured One, in future ages, will there be living beings who hear this Dharma and give rise to faith?\"\nThe Buddha said: \"Subhuti, they are neither living beings nor not living beings. Why? Subhuti, 'living beings, living beings' - the Tathagata says they are not living beings; they are called living beings.\"",
+   "glossary": [
+    {
+     "term": "慧命",
+     "en": "huiming - venerable (one whose life is wisdom)",
+     "note": "A respectful title for a monk of wisdom, meaning one whose life is wisdom."
+    },
+    {
+     "term": "說法者無法可說",
+     "en": "shuofa zhe wu fa ke shuo - one who teaches has no Dharma to teach",
+     "note": "The Dharma the Buddha taught was a skilful means set out for the occasion; the Dharma itself lies beyond words and marks."
+    },
+    {
+     "term": "非眾生，非不眾生",
+     "en": "fei zhongsheng, fei bu zhongsheng - neither living beings nor not living beings",
+     "note": "Beings are a gathering of the five aggregates and have no fixed self-nature, so they are 'not beings'; yet beings joined by conditions still exist, so they are 'not non-beings'."
+    },
+    {
+     "term": "謗佛",
+     "en": "bang fo - to slander the Buddha",
+     "note": "To take the Buddha's teaching as something real goes against the meaning of emptiness he taught, and so it is the same as slandering him."
+    }
+   ]
+  },
+  "fen22": {
+   "summary": "Regarding supreme awakening, the Buddha in truth gained not even the smallest Dharma; it is only called supreme, complete awakening.",
+   "translation": "Subhuti said to the Buddha: \"World-Honoured One, in attaining supreme, complete awakening, did the Buddha gain nothing?\"\nThe Buddha said: \"So it is, so it is. Subhuti, in supreme, complete awakening I did not gain even the smallest Dharma; it is called supreme, complete awakening.\"",
+   "glossary": [
+    {
+     "term": "無法可得",
+     "en": "wu fa ke de - no Dharma to be gained",
+     "note": "What is realised is not an outer object that can be obtained. Awakening is the letting go of all grasping."
+    },
+    {
+     "term": "少法",
+     "en": "shao fa - the smallest Dharma",
+     "note": "Even the least bit of Dharma. 'Not even the smallest Dharma to be gained' means that in ultimate awakening there is nothing at all that can be seized."
+    },
+    {
+     "term": "無上正等正覺",
+     "en": "wushang zhengdeng zhengjue - supreme, complete awakening",
+     "note": "Sanskrit anuttara-samyak-sambodhi, the highest awakening that a Buddha attains."
+    }
+   ],
+   "background": "This section is the shortest statement in the sutra of 'nothing to gain'. The line 'because there is nothing to attain' in the Heart Sutra is in harmony with it."
+  },
+  "fen23": {
+   "summary": "The true Dharma is equal, with no high or low. By cultivating all good dharmas with a mind free of the four notions, one attains supreme awakening; and 'good dharmas' too are only a name.",
+   "translation": "\"Furthermore, Subhuti, this Dharma is equal, with no high and no low; it is called 'supreme, complete awakening'. With no self, no person, no being and no lifespan, one cultivates all good dharmas and so attains supreme, complete awakening. Subhuti, what are called good dharmas, the Tathagata says are not good dharmas; they are called good dharmas.\"",
+   "glossary": [
+    {
+     "term": "是法平等，無有高下",
+     "en": "shi fa pingdeng, wu you gaoxia - this Dharma is equal, with no high or low",
+     "note": "The nature of all dharmas is the equal suchness. Within suchness there is no difference of high and low between saints and ordinary people."
+    },
+    {
+     "term": "淨心行善",
+     "en": "jingxin xingshan - doing good with a pure mind",
+     "note": "The title of the section: do good with a mind that is pure and unstained, without clinging to the very name of good."
+    },
+    {
+     "term": "修一切善法",
+     "en": "xiu yiqie shanfa - cultivating all good dharmas",
+     "note": "Actively doing good on the ground of equality and no marks. It shows that 'non-abiding' does not mean passively doing nothing."
+    },
+    {
+     "term": "善法",
+     "en": "shanfa - good dharmas",
+     "note": "Dharmas that bring good results, such as the six perfections and the ten good deeds."
+    }
+   ]
+  },
+  "fen24": {
+   "summary": "Piles of the seven treasures as large as Mount Sumeru, given away, bring merit that is not worth even one part in a hundred of the merit of receiving, holding and reciting this Perfection of Wisdom Sutra, even a four-line verse, and explaining it to others.",
+   "translation": "\"Subhuti, suppose that in the three thousand great thousand worlds there were as many Mount Sumerus, kings of mountains, as there are, and someone took heaps of the seven treasures as large as these and gave them away. And suppose another person receives, holds, reads and recites this Perfection of Wisdom Sutra, even only a four-line verse, and explains it to others. Compared with the merit of this second person, the former merit does not reach one part in a hundred, nor one in a hundred thousand million, nor can any count or comparison reach it.\"",
+   "glossary": [
+    {
+     "term": "須彌山王",
+     "en": "Xumi shan wang - Sumeru, king of mountains",
+     "note": "The central mountain of the Buddhist cosmos. Heaps of the seven treasures as large as it stand for giving of wealth on an immense scale."
+    },
+    {
+     "term": "福智無比",
+     "en": "fu zhi wubi - merit and wisdom beyond comparison",
+     "note": "The title of the section: it says that the merit and wisdom of giving the Dharma cannot be compared with anything."
+    },
+    {
+     "term": "般若波羅蜜經",
+     "en": "Bore boluomi jing - the Perfection of Wisdom Sutra",
+     "note": "The sutras that take prajna wisdom to the other shore; here it means the Diamond Sutra."
+    }
+   ]
+  },
+  "fen25": {
+   "summary": "The Tathagata does not think, 'I will save living beings.' If any being were saved by the Tathagata, the Tathagata would have the notions of self and the rest. Those called ordinary people the Tathagata says are not ordinary people; it is only a name.",
+   "translation": "\"Subhuti, what do you think? Do not say that the Tathagata has the thought, 'I shall save living beings.' Subhuti, do not think that. Why? In truth there are no living beings saved by the Tathagata. If there were living beings saved by the Tathagata, the Tathagata would have a self, a person, a being, a lifespan. Subhuti, the Tathagata says, 'Having a self is not having a self, yet ordinary people think there is a self.' Subhuti, 'ordinary people' - the Tathagata says they are not ordinary people; they are called ordinary people.\"",
+   "glossary": [
+    {
+     "term": "化無所化",
+     "en": "hua wu suo hua - teaching without anyone taught",
+     "note": "The title of the section: teach beings without clinging to the idea that there are beings to teach."
+    },
+    {
+     "term": "有我者，則非有我",
+     "en": "you wo zhe, ze fei you wo - having a self is not having a self",
+     "note": "The 'self' is only a temporary joining of the five aggregates and has no substance, so there is no true self; yet ordinary people think there is."
+    },
+    {
+     "term": "凡夫",
+     "en": "fanfu - ordinary person",
+     "note": "One who has not yet awakened and clings to a self. The sutra says even 'ordinary person' is a provisional name, and in essence such a person is no different from a Buddha."
+    },
+    {
+     "term": "四相",
+     "en": "sixiang - the four notions",
+     "note": "The four distinctions of self, person, being and lifespan."
+    }
+   ]
+  },
+  "fen26": {
+   "summary": "The Tathagata cannot be seen through the thirty-two marks, or a wheel-turning king would be a Tathagata. The Buddha speaks a verse: those who look for me in form or seek me in sound walk a mistaken path and cannot see the Tathagata.",
+   "translation": "\"Subhuti, what do you think? Can the Tathagata be viewed through the thirty-two marks?\"\nSubhuti said: \"So it is, so it is. The Tathagata can be viewed through the thirty-two marks.\"\nThe Buddha said: \"Subhuti, if the Tathagata could be viewed through the thirty-two marks, then a wheel-turning king would be a Tathagata.\"\nSubhuti said to the Buddha: \"World-Honoured One, as I understand the meaning of what the Buddha has said, the Tathagata should not be viewed through the thirty-two marks.\"\nAt that time the World-Honoured One spoke this verse:\n\"If you see me in form,\nif you seek me in sound,\nthat person walks a mistaken path\nand cannot see the Tathagata.\"",
+   "keyLines": [
+    {
+     "line": "若以色見我，以音聲求我，是人行邪道，不能見如來",
+     "en": "If you see me in form, if you seek me in sound, that person walks a mistaken path and cannot see the Tathagata.",
+     "note": "One of the famous four-line verses. It says plainly that looking for the Buddha in outward form and sound is taking the wrong road; the Tathagata is found in the Dharma body and in awakening free of marks."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "轉輪聖王",
+     "en": "zhuanlun shengwang - wheel-turning king",
+     "note": "The ideal universal ruler of Buddhist texts, who also has the thirty-two marks. That is why the argument is used to refute seeing the Buddha through marks."
+    },
+    {
+     "term": "邪道",
+     "en": "xie dao - a mistaken path",
+     "note": "A path that strays from the right Way; here, the practice of seeking outward for forms and sounds."
+    },
+    {
+     "term": "法身",
+     "en": "fashen - the Dharma body",
+     "note": "The Buddha's true body: suchness, wisdom and merit, not the physical body or any outward form."
+    },
+    {
+     "term": "法身非相",
+     "en": "fashen fei xiang - the Dharma body is not a mark",
+     "note": "The title of the section: the Buddha's Dharma body is free of all form, and cannot be grasped through form."
+    }
+   ]
+  },
+  "fen27": {
+   "summary": "Do not think that the Buddha attained awakening without the complete marks; and do not think that those who set out on the mind of awakening teach that all dharmas are cut off and annihilated. The Buddha-Dharma does not teach annihilation.",
+   "translation": "\"Subhuti, if you have the thought, 'The Tathagata did not attain supreme, complete awakening because of having the complete marks' - Subhuti, do not think, 'The Tathagata did not attain supreme, complete awakening because of having the complete marks.'\nSubhuti, if you have the thought, 'Those who set out on the mind of supreme, complete awakening teach that all dharmas are cut off and annihilated' - do not think so! Why? Those who set out on the mind of supreme, complete awakening do not teach the mark of annihilation in regard to the Dharma.\"",
+   "glossary": [
+    {
+     "term": "斷滅",
+     "en": "duanmie - annihilation",
+     "note": "The view that everything ends in nothingness and that there is no cause and effect. The 'emptiness' of Buddhism is not annihilation; cause and effect are not lost."
+    },
+    {
+     "term": "無斷無滅",
+     "en": "wu duan wu mie - no cutting off, no annihilation",
+     "note": "The title of the section: do not cling to 'being', and do not fall into 'non-being'."
+    },
+    {
+     "term": "具足相",
+     "en": "juzu xiang - the complete marks",
+     "note": "The perfect marks and signs of a Buddha. They are the fruit of cultivating merit, and so are not without basis."
+    }
+   ],
+   "background": "This section is often read together with section 26: first it breaks the clinging to seeing the Buddha through marks, then it guards against overcorrecting into a 'dead emptiness' of annihilation, which shows the Middle Way."
+  },
+  "fen28": {
+   "summary": "A bodhisattva who knows that all dharmas are without self and has attained patience gains more merit than one who gives the seven treasures filling worlds as many as the sands of the Ganges, because bodhisattvas do not receive merit and are not greedy for it.",
+   "translation": "\"Subhuti, suppose a bodhisattva fills worlds as many as the sands of the Ganges with the seven treasures and gives them away. And suppose another person knows that all dharmas are without self and attains patience. This bodhisattva gains more merit than the former bodhisattva. Why? Subhuti, because bodhisattvas do not receive merit.\"\nSubhuti said to the Buddha: \"World-Honoured One, how can bodhisattvas not receive merit?\"\n\"Subhuti, a bodhisattva should not be greedy for or attached to the merit he has made. Therefore it is said that he does not receive merit.\"",
+   "glossary": [
+    {
+     "term": "無我",
+     "en": "wu wo - no self",
+     "note": "No independent, unchanging self in any dharma. It includes no self in persons and no self in things."
+    },
+    {
+     "term": "得成於忍",
+     "en": "de cheng yu ren - attaining patience",
+     "note": "Attaining the 'patience of the non-arising of dharmas': the ability to accept calmly the truth that all dharmas were never born."
+    },
+    {
+     "term": "不受福德",
+     "en": "bu shou fude - not receiving merit",
+     "note": "It does not mean not wanting merit; it means not being greedy for merit and not holding it as one's own."
+    },
+    {
+     "term": "貪著",
+     "en": "tanzhuo - greed and attachment",
+     "note": "Giving rise to craving for something and clinging to it without letting go."
+    }
+   ]
+  },
+  "fen29": {
+   "summary": "The Tathagata comes from nowhere and goes nowhere, and that is why he is called the Tathagata. To say that the Tathagata comes or goes, sits or lies down, is not to understand the meaning of what the Buddha has said.",
+   "translation": "\"Subhuti, if someone says that the Tathagata comes or goes, sits or lies down, that person does not understand the meaning of what I teach. Why? The Tathagata comes from nowhere and goes nowhere; therefore he is called the Tathagata.\"",
+   "glossary": [
+    {
+     "term": "如來",
+     "en": "Rulai - the Tathagata",
+     "note": "Sanskrit tathagata, read either as 'thus come' or 'thus gone'. The sutra takes the sense 'comes from nowhere, goes nowhere', meaning that his Dharma body abides unmoving."
+    },
+    {
+     "term": "若來若去，若坐若臥",
+     "en": "ruo lai ruo qu, ruo zuo ruo wo - coming or going, sitting or lying",
+     "note": "Four postures of dignified conduct. The sutra means that the Buddha's Dharma body is not limited by walking, standing, sitting or lying."
+    },
+    {
+     "term": "威儀寂靜",
+     "en": "weiyi jijing - dignity and stillness",
+     "note": "The title of the section: the Buddha's bearing is by nature still, with no coming and no going."
+    }
+   ]
+  },
+  "fen30": {
+   "summary": "Using dust and the world, the Buddha shows that a 'composite mark' is not real: a mass of dust and a world are both put together by conditions, so they are only names. The composite cannot be described, and only ordinary people cling to it.",
+   "translation": "\"Subhuti, if a good man or good woman crushed the three thousand great thousand worlds into dust, what do you think? Would that mass of dust be many?\"\nSubhuti said: \"Very many, World-Honoured One. Why? If the mass of dust were truly existent, the Buddha would not call it a mass of dust. Why is this? What the Buddha calls a mass of dust is not a mass of dust; it is called a mass of dust.\"\n\"World-Honoured One, what the Tathagata calls the three thousand great thousand worlds are not worlds; they are called worlds. Why? If a world were truly existent, it would be a composite mark. What the Tathagata calls a composite mark is not a composite mark; it is called a composite mark.\"\n\"Subhuti, a composite mark is something that cannot be described; but ordinary people are greedy for and attached to such matters.\"",
+   "glossary": [
+    {
+     "term": "微塵眾",
+     "en": "weichen zhong - a mass of dust",
+     "note": "Particles gathered together. A world is made of dust particles joined together, and the dust itself is joined by conditions, so neither has a real substance."
+    },
+    {
+     "term": "一合相",
+     "en": "yi he xiang - a composite mark",
+     "note": "The look of a whole made by joining many parts together, such as a world. The sutra says it is a provisional name and is not to be clung to as real."
+    },
+    {
+     "term": "貪著其事",
+     "en": "tanzhuo qi shi - greedy for and attached to the matter",
+     "note": "Ordinary people take a joined-together appearance for something real, and so crave and cling to it."
+    },
+    {
+     "term": "即非…是名…",
+     "en": "ji fei ... shi ming ... - 'is not ..., it is called ...'",
+     "note": "The basic pattern of the Diamond Sutra: first the name, then the denial of its substance, and at last the conclusion that it is a provisional name."
+    }
+   ]
+  },
+  "fen31": {
+   "summary": "What the Buddha calls the views of a self, a person, a being and a lifespan are not in truth those four views; they are only called by those names. Those who have set out on the mind of awakening should know, see, believe and understand all dharmas in this way, and not give rise to the notion of Dharma.",
+   "translation": "\"Subhuti, if someone says that the Buddha speaks of the view of a self, the view of a person, the view of a being and the view of a lifespan - Subhuti, what do you think? Does that person understand the meaning of what I teach?\"\n\"No, World-Honoured One. That person does not understand the meaning of what the Tathagata teaches. Why? The World-Honoured One says that the view of a self, the view of a person, the view of a being and the view of a lifespan are not the view of a self, the view of a person, the view of a being and the view of a lifespan; they are called the view of a self, the view of a person, the view of a being and the view of a lifespan.\"\n\"Subhuti, those who set out on the mind of supreme, complete awakening should know, see, believe and understand all dharmas in this way, and should not give rise to the notion of Dharma. Subhuti, what is called the notion of Dharma, the Tathagata says is not the notion of Dharma; it is called the notion of Dharma.\"",
+   "glossary": [
+    {
+     "term": "四見",
+     "en": "sijian - the four views",
+     "note": "The views of a self, a person, a being and a lifespan: mistaken views that arise from inner clinging."
+    },
+    {
+     "term": "知見信解",
+     "en": "zhi jian xinjie - to know, see, believe and understand",
+     "note": "To know, to see directly, and to believe and also understand: three levels of practice."
+    },
+    {
+     "term": "法相",
+     "en": "faxiang - the notion of Dharma",
+     "note": "Clinging to a dharma as something real. The Buddha says the notion of Dharma is not real, and so it should not be grasped."
+    },
+    {
+     "term": "知見不生",
+     "en": "zhijian busheng - knowing and seeing without clinging arising",
+     "note": "The title of the section: knowing and seeing in such a way that no clinging arises."
+    }
+   ]
+  },
+  "fen32": {
+   "summary": "The sutra urges people to receive and hold it and explain it to others, without grasping marks and unmoved in suchness. It ends with the verse of six similes: 'All conditioned things are like a dream, an illusion, a bubble, a shadow, like dew and like lightning; see them in this way.' The disciples are delighted to hear it.",
+   "translation": "\"Subhuti, suppose someone filled countless asamkhya worlds with the seven treasures and gave them away. And suppose a good man or good woman who has set out on the mind of awakening takes up this sutra, even only a four-line verse, and receives, holds, reads and recites it and explains it to others. This person's merit is greater than the other's. How should one explain it to others? Not grasping marks, and unmoved in suchness. Why?\nAll conditioned things\nare like a dream, an illusion, a bubble, a shadow,\nlike dew and like lightning.\nYou should see them in this way.\"\nWhen the Buddha had spoken this sutra, the elder Subhuti, together with the monks, nuns, laymen and laywomen, and all the devas, humans and asuras of the world, having heard what the Buddha said, were filled with great joy, and believed, received and put it into practice.",
+   "keyLines": [
+    {
+     "line": "一切有為法，如夢幻泡影，如露亦如電，應作如是觀",
+     "en": "All conditioned things are like a dream, an illusion, a bubble, a shadow, like dew and like lightning; see them in this way.",
+     "note": "The most famous verse of the sutra. Conditioned dharmas, the phenomena that arise and cease through conditions, are like a dream, an illusion, a bubble, a shadow, dew and lightning: fleeting and unreal. This is how the world should be seen."
+    },
+    {
+     "line": "不取於相，如如不動",
+     "en": "Not grasping marks, and unmoved in suchness.",
+     "note": "In explaining the teaching, one does not cling to the speaker, the listener or the teaching as marks, and the mind stays unmoved like suchness."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "有為法",
+     "en": "youwei fa - conditioned dharmas",
+     "note": "All phenomena that arise, change and cease through the making of conditions; the opposite of unconditioned dharmas."
+    },
+    {
+     "term": "夢幻泡影",
+     "en": "meng huan pao ying - dream, illusion, bubble, shadow",
+     "note": "The first four of the six similes: dream, illusion, foam and shadow, all empty and unreal. With dew and lightning they make the 'six likenesses'."
+    },
+    {
+     "term": "如如不動",
+     "en": "ru ru bu dong - unmoved in suchness",
+     "note": "The first 'ru' means as things are, and the second is suchness. It means the mind accords with suchness and is not shaken by outer things."
+    },
+    {
+     "term": "四眾",
+     "en": "sizhong - the fourfold assembly",
+     "note": "Monks and nuns (two orders of the renunciants) and laymen and laywomen (two orders of the lay community)."
+    },
+    {
+     "term": "信受奉行",
+     "en": "xinshou fengxing - believed, received and put into practice",
+     "note": "A fixed closing phrase in sutras: to believe, to accept and to practise."
+    }
+   ],
+   "background": "In Kumarajiva's version the verse is of 'six similes'; Xuanzang's version has 'nine similes' (a star, a cataract of the eye, a lamp, an illusion, dew, a bubble, a dream, lightning, a cloud). This verse became the summary of the Diamond Sutra and is very widely known."
+  }
+ }
+}

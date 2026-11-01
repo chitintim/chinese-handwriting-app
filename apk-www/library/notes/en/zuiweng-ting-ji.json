@@ -1,0 +1,77 @@
+{
+ "id": "zuiweng-ting-ji",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "main": {
+   "summary": "While demoted to Chuzhou, Ouyang Xiu writes of the pleasure of the hills and waters at the Drunken Old Man Pavilion and the pleasure of the people of Chuzhou in their outings and feasts, to say that the old man's mind is not on the wine but in the hills and waters, and to lodge in it a spirit of sharing joy with the people and of easy contentment.",
+   "translation": "All around Chu are hills. The peaks to the south-west have especially fine forests and gullies. The one that looks luxuriant, deep and handsome from afar is Langya. Going six or seven li into the hills, you gradually hear the sound of water, trickling, and the one that pours out between two peaks is Rang Spring. Where the peaks turn and the path bends, there is a pavilion with its eaves spread like wings above the spring: that is the Drunken Old Man Pavilion.\nWho built the pavilion? A monk of the hills called Zhixian. Who named it? The governor named it after himself. The governor comes here with guests to drink; he gets drunk after a little, and as he is the oldest of them, he gave himself the name 'the Drunken Old Man'. The Drunken Old Man's heart is not in the wine; it is in the hills and waters. The joy of hills and waters is gained in the heart and lodged in the wine.\nWhen the sun comes up and the forest mist opens, and the clouds return and the caves in the cliffs grow dark, the dim and bright changing is the morning and evening of the hills. When wild flowers open and give a hidden fragrance, fine trees grow lush and make thick shade, when the wind and frost are high and pure and the water falls so that rocks show - that is the four seasons of the hills. Going in the morning and returning at dusk, the scene is different in each of the four seasons, and the joy is without end.\nAs for those who carry loads and sing on the road, travellers who rest under the trees, those in front calling and those behind answering, the old bent over and the children led by the hand, coming and going without stop: these are the people of Chu on an outing. Fishing at the stream, which is deep and the fish are fat; brewing wine from the spring, the spring fragrant and the wine clear; hill delicacies and wild vegetables set out in a mixed array: that is the governor's feast. The joy of the feast is not music of strings or pipes; the archers hit the target, the chess players win, cups and counting sticks cross, people rise and sit and make a din: these are the guests enjoying themselves. The one with the ashen face and white hair, sprawled in the middle of it all, is the governor drunk.\nThen the evening sun lies on the hills, and people's shadows scatter in confusion: the governor is going home, and the guests follow. The woods are shady and the birds sing above and below: the visitors have gone and the birds are happy. But the birds know the joy of hills and woods and do not know the joy of people; people know the joy of following the governor on an outing, but do not know that the governor's joy is in their joy. One who can share their joy when drunk and write it down when sober is the governor. Who is the governor? It is Ouyang Xiu of Luling.",
+   "keyLines": [
+    {
+     "line": "環滁皆山也",
+     "en": "All around Chu are hills.",
+     "note": "The first five characters go from the large to the small, leading to Langya, Rang Spring and the pavilion."
+    },
+    {
+     "line": "醉翁之意不在酒，在乎山水之間也",
+     "en": "The Drunken Old Man's heart is not in the wine; it is in the hills and waters.",
+     "note": "The theme of the piece, which became a common idiom: the real purpose lies elsewhere."
+    },
+    {
+     "line": "朝而往，暮而歸，四時之景不同，而樂亦無窮也",
+     "en": "Going in the morning and returning at dusk, the scene is different in each of the four seasons, and the joy is without end.",
+     "note": "It sums up the pleasures of the hills through morning, evening and the four seasons."
+    },
+    {
+     "line": "人知從太守遊而樂，而不知太守之樂其樂也",
+     "en": "People know the joy of following the governor on an outing, but do not know that the governor's joy is in their joy.",
+     "note": "It brings out a deeper joy: the governor takes the people's pleasure as his own."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "蔚然",
+     "en": "wei ran - luxuriant",
+     "note": "Describes the thick growth of grass and trees."
+    },
+    {
+     "term": "翼然",
+     "en": "yi ran - spread like wings",
+     "note": "Like a bird spreading its wings."
+    },
+    {
+     "term": "林霏",
+     "en": "lin fei - forest mist",
+     "note": "The mist in a wood."
+    },
+    {
+     "term": "傴僂提攜",
+     "en": "yu lu ti xie - the bent and the led",
+     "note": "Yu lu are bent old people; ti xie are children led by the hand."
+    },
+    {
+     "term": "山肴野蔌",
+     "en": "shan yao ye su - hill delicacies and wild greens",
+     "note": "Wild game and wild vegetables of the hills. The last character, su, means vegetables."
+    },
+    {
+     "term": "觥籌",
+     "en": "gong chou - cups and counting sticks",
+     "note": "Gong is a wine cup; chou is a bamboo counter used to keep score in drinking games."
+    },
+    {
+     "term": "頹然",
+     "en": "tui ran - sprawled",
+     "note": "The look of being drunk and slumped down."
+    },
+    {
+     "term": "也",
+     "en": "ye - sentence-final particle ye",
+     "note": "The piece uses the particle ye at the end of many sentences, giving it a distinctive tone and rhythm."
+    }
+   ],
+   "background": "In 1045 (the fifth year of Qingli in the Northern Song), Ouyang Xiu was demoted to be prefect of Chuzhou for supporting the Qingli reforms of Fan Zhongyan, and he wrote this record the following year. The 'Drunken Old Man' was a name he gave himself when he was about forty. On the surface it is about pleasure outings, but it really voices his open-minded spirit in sharing joy with the people even after his demotion."
+  }
+ }
+}

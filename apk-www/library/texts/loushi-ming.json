@@ -2,15 +2,18 @@
  "id": "loushi-ming",
  "title": {
   "trad": "陋室銘",
-  "simp": "陋室铭"
+  "simp": "陋室铭",
+  "en": "Inscription for a Humble Room"
  },
  "author": {
   "trad": "劉禹錫",
-  "simp": "刘禹锡"
+  "simp": "刘禹锡",
+  "en": "Liu Yuxi"
  },
  "dynasty": {
   "trad": "唐",
-  "simp": "唐"
+  "simp": "唐",
+  "en": "Tang"
  },
  "source": "https://zh.wikisource.org/wiki/陋室銘",
  "license": "Public domain (text); transcription from https://zh.wikisource.org/wiki/陋室銘",
@@ -20,7 +23,8 @@
    "id": "main",
    "title": {
     "trad": "陋室銘",
-    "simp": "陋室铭"
+    "simp": "陋室铭",
+    "en": "Inscription for a Humble Room"
    },
    "body": {
     "trad": "山不在高，有仙則名。水不在深，有龍則靈。斯是陋室，惟吾德馨。苔痕上階綠，草色入簾青。談笑有鴻儒，往來無白丁。可以調素琴，閱金經。無絲竹之亂耳，無案牘之勞形。南陽諸葛廬，西蜀子雲亭。孔子云：何陋之有？",

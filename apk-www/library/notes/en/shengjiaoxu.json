@@ -1,0 +1,259 @@
+{
+ "id": "shengjiaoxu",
+ "version": 1,
+ "lang": "en",
+ "disclaimer": "These notes were written with AI assistance, drawing on standard commentaries. For study only.",
+ "sections": {
+  "pian01": {
+   "summary": "The preface opens by saying that Heaven and Earth have images and are easy to know, while yin and yang have no form and are hard to fathom. From this it moves to the Buddha's Way, which is empty, deep and boundless, so that ordinary people cannot help being puzzled. This prepares for the coming of the Dharma to the east and Xuanzang's journey for the scriptures.",
+   "translation": "I have heard that Heaven and Earth have images, which show their covering and bearing and so hold life; the four seasons have no shape, and hide cold and heat in order to transform things. So when it comes to peering at the sky and surveying the earth, even the dull and foolish all see where they begin; but to understand yin and see through yang, the wise and learned seldom exhaust their reckonings. Yet Heaven and Earth, which enfold yin and yang, are easy to know because they have images; yin and yang, which dwell in Heaven and Earth, are hard to exhaust because they have no form. So we know that what shows an image can be tested, and even a fool is not confused; what hides its form cannot be seen, and even the wise are bewildered. How much more is this so of the Buddha's Way, which honours emptiness, rides on the hidden and commands stillness, which broadly saves the myriad kinds and governs the ten directions. Raising its majesty, it has nothing above it; holding down its divine power, it has nothing below. Great, it fills the universe; small, it is gathered into a hair's breadth. Without ending or birth, it passes a thousand kalpas and does not grow old; now hidden, now plain, it brings a hundred blessings and is present for ever. The wondrous Way is condensed in depth, and if you follow it you cannot find its edge; the stream of the Dharma is still and quiet, and if you scoop from it you cannot fathom its source. So we know that of the blundering fools and the petty and low who come to its purport, there are none who can be free of doubt.",
+   "keyLines": [
+    {
+     "line": "蓋聞二儀有象，顯覆載以含生",
+     "en": "I have heard that Heaven and Earth have images, which show their covering and bearing and so hold life",
+     "note": "The opening starts from the images of Heaven and Earth, which cover and carry all things."
+    },
+    {
+     "line": "象顯可徵，雖愚不惑；形潛莫覩，在智猶迷",
+     "en": "What shows an image can be tested, and even a fool is not confused; what hides its form cannot be seen, and even the wise are bewildered",
+     "note": "What has a form is easy to check, while what has none confuses even the wise; this leads on to the deep and hidden Buddha's Way."
+    },
+    {
+     "line": "大之則彌於宇宙，細之則攝於豪釐",
+     "en": "Great, it fills the universe; small, it is gathered into a hair's breadth",
+     "note": "Describes how vast and how fine the Dharma is."
+    },
+    {
+     "line": "無滅無生，歷千劫而不古",
+     "en": "Without ending or birth, it passes a thousand kalpas and does not grow old",
+     "note": "The Dharma neither begins nor ends, and after a thousand kalpas it still does not seem old."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "二儀",
+     "en": "er yi - the two models",
+     "note": "Heaven and Earth."
+    },
+    {
+     "term": "覆載",
+     "en": "fu zai - covering and bearing",
+     "note": "Heaven covers and Earth bears; it describes how Heaven and Earth hold all things."
+    },
+    {
+     "term": "十方",
+     "en": "shi fang - the ten directions",
+     "note": "The four directions, the four corners, up and down; all directions."
+    },
+    {
+     "term": "千劫",
+     "en": "qian jie - a thousand kalpas",
+     "note": "A kalpa is a very long span of time in Buddhism; a thousand kalpas means an immense stretch."
+    },
+    {
+     "term": "豪釐",
+     "en": "hao li - a hair's breadth",
+     "note": "An extremely tiny measure. The first character here is the same as hao, 'fine hair'."
+    },
+    {
+     "term": "蠢蠢",
+     "en": "chun chun - blundering",
+     "note": "The look of the ignorant and dull."
+    }
+   ],
+   "background": "The 'Preface to the Sacred Teaching of the Tripitaka Master of the Great Tang' was written by Emperor Taizong of the Tang dynasty (618-907), Li Shimin, for the Buddhist scriptures translated by Xuanzang (in the twenty-second year of Zhenguan, 648). Later the monk Huairen gathered characters from Wang Xizhi's running script and cut them as the 'Preface to the Sacred Teaching in Collected Characters', which was set up in the third year of Xianheng (672) at the Hongfu Temple in Chang'an and now stands in the Forest of Steles in Xi'an. It is the best-known stele of collected characters; its running script is fluent and rounded and is an important model for learning the running script of Wang Xizhi. This section is the opening of the preface, using Heaven, Earth, yin and yang to hint at the depth of the Dharma."
+  },
+  "pian02": {
+   "summary": "A short account of how Buddhism came from the western lands to China: the Buddha's teaching was easy to follow while he lived, but after his passing the teaching split. Disputes over emptiness and being, and between the greater and lesser vehicles, tangled the false with the true, which shows why Xuanzang's journey for the scriptures was needed.",
+   "translation": "Thus the rise of the great teaching has its foundation in the western lands. It leapt into the Han court as a bright dream, and shone on the eastern region, spreading compassion. In the time when the Buddha divided his form and his traces, his words had not yet travelled when people were transformed; in the age when the constant was constantly shown, people looked up to his virtue and knew how to follow. But when his shadow dimmed and returned to the true, and his figure moved beyond the world, the golden face hid its colour and no longer mirrored the light of the three thousand worlds; the lovely image opened its chart, and the thirty-two marks stood empty. Then the subtle words spread widely, saving living beings from the three evil paths; the bequeathed teaching was proclaimed far, guiding the multitudes through the ten grounds. Yet the true teaching is hard to look up to, and none could unite its meaning; bent learning is easy to follow, and the false and the true became tangled in it. So the doctrines of emptiness and being were at times judged right or wrong by habit and custom; the greater and lesser vehicles, following the times, would rise and fall in turn.",
+   "keyLines": [
+    {
+     "line": "騰漢庭而皎夢，照東域而流慈",
+     "en": "It leapt into the Han court as a bright dream, and shone on the eastern region, spreading compassion",
+     "note": "Refers to the dream of Emperor Ming of Han, through which Buddhism was said to have come east."
+    },
+    {
+     "line": "及乎晦影歸真，遷儀越世",
+     "en": "When his shadow dimmed and returned to the true, and his figure moved beyond the world",
+     "note": "Describes what happened after the Buddha's nirvana, when the true teaching little by little lost its support."
+    },
+    {
+     "line": "真教難仰，莫能一其旨歸；曲學易遵，邪正於焉紛糾",
+     "en": "The true teaching is hard to look up to, and none could unite its meaning; bent learning is easy to follow, and the false and the true became tangled in it",
+     "note": "Names the problem: the true teaching is hard to reach, its aims differ, and false and true get mixed."
+    },
+    {
+     "line": "空有之論，或習俗而是非；大小之乘，乍沿時而隆替",
+     "en": "The doctrines of emptiness and being were at times judged right or wrong by habit and custom; the greater and lesser vehicles would rise and fall following the times",
+     "note": "The quarrel over emptiness and being, and the rise and fall of the greater and lesser vehicles, show the split in Buddhist learning and set the scene for Xuanzang's journey."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "漢庭皎夢",
+     "en": "Han ting jiao meng - the bright dream in the Han court",
+     "note": "The legend that Emperor Ming of Han dreamed of a golden man and sent envoys to seek the Dharma, by which Buddhism came to China."
+    },
+    {
+     "term": "晦影歸真",
+     "en": "hui ying gui zhen - his shadow dimmed and returned to the true",
+     "note": "Refers to the Buddha's nirvana, his return to suchness."
+    },
+    {
+     "term": "四八之相",
+     "en": "si ba zhi xiang - the thirty-two marks",
+     "note": "The thirty-two excellent marks of a Buddha's body."
+    },
+    {
+     "term": "三途",
+     "en": "san tu - the three evil paths",
+     "note": "The three bad rebirths: hell, hungry ghosts and animals."
+    },
+    {
+     "term": "十地",
+     "en": "shi di - the ten grounds",
+     "note": "The ten stages on the bodhisattva path."
+    },
+    {
+     "term": "空有",
+     "en": "kong you - emptiness and being",
+     "note": "The Madhyamaka (emptiness) school and the school of being, as in the dispute between Madhyamaka and Consciousness-only."
+    },
+    {
+     "term": "大小之乘",
+     "en": "da xiao zhi cheng - the greater and lesser vehicles",
+     "note": "Mahayana and Hinayana."
+    }
+   ],
+   "background": "This section is a brief account of the splits in teaching after Buddhism came from India to China, and it prepares the ground for Emperor Taizong's praise of Xuanzang. The text of the preface was later collected from Wang Xizhi's characters and cut as a stele, the best-known stele of collected characters. It is recorded that Huairen took the characters from Wang Xizhi's ink traces in the imperial collection; the running script is evenly built with a fluent brush, and it has always been an important model for learning Wang's running script."
+  },
+  "pian03": {
+   "summary": "The main body of the preface. It praises Xuanzang, who was gifted from childhood and went alone to the Western Regions for seventeen years to set the teaching right at its source, visiting the Buddhist lands and bringing back 657 texts of the Tripitaka, which were translated and spread in China so that the holy teaching was made whole again and living beings were freed from suffering.",
+   "translation": "There was the Dharma master Xuanzang, a leader in the gate of the Dharma. In childhood he held steadfastness and quickness; early he awoke to the mind of the three emptinesses; grown, he fitted the spirit and was first to embrace the practice of the four forbearances. Wind in the pines and moon on water were not enough to match his clear splendour; immortal dew and bright pearls could hardly compare with his bright smoothness. So his wisdom passed through without attachment, and his spirit fathomed what had no form yet; he rose far beyond the six dusts, alone through the ages and without peer. Fixing his mind on the inner realm, he grieved that the true Dharma was in decline; resting his thoughts on the mysterious gate, he lamented the errors in the deep texts. He wished to divide the branches and analyse the principles, to widen what had been heard before; to cut off the false and continue the true, opening the way for those who learn after him.\nAnd so, with his heart set on the Pure Land, he went journeying to the Western Regions; he went far through danger, travelling alone with a staff. Snow flew in the morning and on the road the ground was lost; startling sand rose at evening and, beyond the void, the sky was lost. Through ten thousand li of mountains and rivers he pushed through mist and cloud to advance his shadow; through a hundred changes of cold and heat he trod on frost and rain to follow his path. His sincerity weighed heavy and toil weighed light; he sought deeply and wished to arrive. Travelling through the western lands took seventeen years. He passed through all the countries of the Way, asking for the true teaching. At the twin sala groves and the eight rivers, he tasted the Way and ate the wind. At the Deer Park and Vulture Peak he looked up in wonder at rare things, receiving the highest words from the former sages and the true teaching from the greatest worthies.\nHe probed the wondrous gate and studied the hidden work to the end; the way of the One Vehicle and the five disciplines raced through the field of his mind; the writings of the eight stores and three chests surged in the sea of his mouth. From all the countries he had passed through, he took the essential texts of the Three Baskets, six hundred and fifty-seven in all, and translated and spread them in China, proclaiming the excellent work. He drew compassion's cloud from the farthest west, and poured the Dharma rain on the eastern edge. The holy teaching, lacking, was made whole again; living beings, in sin, returned to blessing. The dry flames of the burning house were moistened, and all were lifted from the road of delusion together; the dark waves of the water of desire were made bright, and all reached the other shore together.",
+   "keyLines": [
+    {
+     "line": "有玄奘法師者，法門之領袖也",
+     "en": "There was the Dharma master Xuanzang, a leader in the gate of the Dharma",
+     "note": "Introduces Xuanzang and begins the praise of him."
+    },
+    {
+     "line": "松風水月，未足比其清華；仙露明珠，詎能方其朗潤",
+     "en": "Wind in the pines and moon on water were not enough to match his clear splendour; immortal dew and bright pearls could hardly compare with his bright smoothness",
+     "note": "Uses wind in pines, moon on water, immortal dew and bright pearls as pictures of Xuanzang's purity and brightness."
+    },
+    {
+     "line": "積雪晨飛，塗間失地；驚砂夕起，空外迷天",
+     "en": "Snow flew in the morning and on the road the ground was lost; startling sand rose at evening and, beyond the void, the sky was lost",
+     "note": "Describes the dangers of the journey west, in flying snow and storms of sand."
+    },
+    {
+     "line": "誠重勞輕，求深願達，周遊西宇，十有七年",
+     "en": "His sincerity weighed heavy and toil weighed light; he sought deeply and wished to arrive. Travelling through the western lands took seventeen years",
+     "note": "Sums up Xuanzang's sincerity in seeking the Dharma and the seventeen years of the journey."
+    },
+    {
+     "line": "凡六百五十七部，譯布中夏，宣揚勝業",
+     "en": "Six hundred and fifty-seven in all, translated and spread in China, proclaiming the excellent work",
+     "note": "States the number of scriptures Xuanzang brought back and translated, and what that achieved."
+    },
+    {
+     "line": "聖教缺而復全，蒼生罪而還福",
+     "en": "The holy teaching, lacking, was made whole again; living beings, in sin, returned to blessing",
+     "note": "Sums up the result of the journey: the teaching was made whole and living beings were freed from sin and gained blessing."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "三空",
+     "en": "san kong - the three emptinesses",
+     "note": "The three views of emptiness in Buddhism: the emptiness of self, of dharmas and of emptiness itself."
+    },
+    {
+     "term": "四忍",
+     "en": "si ren - the four forbearances",
+     "note": "Four kinds of patient endurance practised by bodhisattvas; another reading takes it as four practices of forbearance."
+    },
+    {
+     "term": "六塵",
+     "en": "liu chen - the six dusts",
+     "note": "The six outer objects: form, sound, smell, taste, touch and dharmas."
+    },
+    {
+     "term": "雙林、八水",
+     "en": "shuang lin, ba shui - the twin groves and eight rivers",
+     "note": "The twin groves are the sala groves where the Buddha entered nirvana; the eight rivers are rivers of India."
+    },
+    {
+     "term": "鹿苑、鷲峯",
+     "en": "lu yuan, jiu feng - the Deer Park and Vulture Peak",
+     "note": "The Deer Park and Vulture Peak, both holy places where the Buddha taught."
+    },
+    {
+     "term": "一乘五律",
+     "en": "yi cheng wu lu - the One Vehicle and the five disciplines",
+     "note": "The One Vehicle is the Buddha vehicle; the five disciplines stand broadly for the monastic rules."
+    },
+    {
+     "term": "八藏三篋",
+     "en": "ba zang san qie - the eight stores and three chests",
+     "note": "Broadly, the Three Baskets of the Buddhist canon and all kinds of scriptures."
+    },
+    {
+     "term": "火宅",
+     "en": "huo zhai - the burning house",
+     "note": "From the Lotus Sutra: a figure for the world, full of suffering."
+    }
+   ],
+   "background": "This is the main body of the preface, praising Xuanzang's journey to the west for the Dharma. In the Preface to the Sacred Teaching in Collected Characters, which Huairen made from Wang Xizhi's characters, the running script is recorded as drawn from Wang Xizhi's ink traces; its brush is fluent and rounded, and it has long been an important model for learning Wang's running script. This section has fine language and the largest number of characters, and is the part of the stele that shows best the overall character of collected running script."
+  },
+  "pian04": {
+   "summary": "The close of the preface. It uses the cassia growing on a high ridge and the lotus growing out of clear water to show that rising or falling depends on the good conditions one relies on, and it hopes that the scriptures Xuanzang translated will be handed down for a long time, and the blessing be as great as Heaven and Earth.",
+   "translation": "From this we know that through evil one falls by karma, and through good one rises by conditions; the beginning of rising and falling lies in what one relies on. Take the cassia that grows on a high ridge: only the clouds and dew may wet its flowers; or the lotus that grows out of clear waves: flying dust cannot soil its leaves. It is not that the lotus is clean by nature, nor that the cassia is steadfast in its substance. It is that what they rest on is high, so tiny things cannot burden them; and what they lean on is pure, so muddy things cannot touch them. If plants and trees, which have no knowledge, still rely on good and become good, how much more must humans, who have awareness, rely on blessed conditions if they would seek blessing? I hope that the giving and circulation of these sutras will, with the sun and moon, never end; and that this blessing, spreading far, will be as great as Heaven and Earth for ever.",
+   "keyLines": [
+    {
+     "line": "惡因業墜，善以緣昇",
+     "en": "Through evil one falls by karma, and through good one rises by conditions",
+     "note": "The conclusion of the whole preface: causes and conditions, good and bad, decide whether a person rises or falls."
+    },
+    {
+     "line": "桂生高嶺，雲露方得泫其花；蓮出渌波，飛塵不能污其葉",
+     "en": "The cassia that grows on a high ridge: only the clouds and dew may wet its flowers; the lotus that grows out of clear waves: flying dust cannot soil its leaves",
+     "note": "The cassia and the lotus show that when what one relies on is high and pure, one is not weighed down by dirt."
+    },
+    {
+     "line": "方冀茲經流施，將日月而無窮",
+     "en": "I hope that the circulation of these sutras will, with the sun and moon, never end",
+     "note": "A hope that the scriptures will be handed down as long as the sun and moon."
+    }
+   ],
+   "glossary": [
+    {
+     "term": "業",
+     "en": "ye - karma",
+     "note": "In Buddhism, deeds of body, speech and mind, with their results."
+    },
+    {
+     "term": "緣",
+     "en": "yuan - conditions",
+     "note": "A Buddhist term for the conditions that help a thing come to be."
+    },
+    {
+     "term": "桂",
+     "en": "gui - cassia",
+     "note": "The cassia tree, standing here for relying on something lofty and pure."
+    },
+    {
+     "term": "渌波",
+     "en": "lu bo - clear waves",
+     "note": "Water waves that are clear."
+    },
+    {
+     "term": "乾坤",
+     "en": "qian kun - Heaven and Earth",
+     "note": "The two trigrams of the Book of Changes standing for Heaven and Earth."
+    }
+   ],
+   "background": "This section is the end of the 'Preface to the Sacred Teaching', which hopes that the translated scriptures will be handed down for a long time. Emperor Taizong's preface was written out by Chu Suiliang and set up as the 'Preface to the Sacred Teaching at the Wild Goose Pagoda' (Yanta Shengjiao Xu); there is also the 'Preface to the Sacred Teaching in Collected Characters' made by Huairen from Wang Xizhi's running script, whose running script is even and fluent and is a model of the collected-character stele. This last passage closes the stele with tidy lines, and is suited to feeling the structure and spirit of Wang's running script."
+  }
+ }
+}
