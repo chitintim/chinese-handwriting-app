@@ -83,7 +83,7 @@ textarea[data-role=tune-json]{min-height:110px;margin-top:8px}
 /* install-app area (hosted web app only) and update notice */
 a.btnlink{display:flex;align-items:center;justify-content:center;min-height:64px;padding:0 24px;border:3px solid #000;background:#000;color:#fff;font-size:22px;font-weight:bold;text-decoration:none;text-align:center}
 a.btnlink.plain{background:#fff;color:#000;min-height:56px;font-size:18px;font-weight:normal;display:inline-flex;margin:8px 0 0}
-.card.install{max-width:760px}
+.card.install{max-width:760px;margin-top:var(--sp-4)}
 .apkfb{flex:1 1 100%;width:100%;font-size:var(--t-xs);margin:2px 0 0}
 .flink{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;color:#000;text-decoration:underline}
 .savepanel:empty{display:none}
@@ -397,6 +397,7 @@ html.wide .lrow.compact .lbtns button{min-height:48px;margin-left:8px}
 html.wide .tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin:0}
 html.wide .tile{flex:none;height:88px;margin:0;min-width:0;max-width:none;padding:8px 16px}
 html.wide .vernote{margin-top:24px}
+html.wide .card.install{margin-top:32px}
 /* lists: two columns */
 html.wide [data-role=list]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;align-items:start}
 html.wide .lrow{max-width:none}
