@@ -275,6 +275,20 @@ Fonts are subsets with only the needed characters, renamed MoUKai / MoTWKai / Mo
 
 From the [Releases](https://github.com/chitintim/chinese-handwriting-app/releases) tags.
 
+- **v0.9.0** **My works 我的作品**: every writing in one place with previews and filters. 再抄一遍 keeps the finished writing and starts a fresh one. Storage you can see (設定 → 資料) and a 建議備份 reminder. Smaller `.moxie` backups (about 4–5× smaller), backups of one text or one writing, and imports that merge instead of overwriting (nothing on the device is deleted). A notice when a text was corrected after you wrote it. Backup import now works in the Android app.
+- **v0.8.0** Simpler settings with live samples (書寫方式 / 字帖外觀 / 筆觸 / 書寫工具 …), 繁體 / 简体 on the start page. Full-resolution exports of any length (螢幕 / 列印 / 高清; long scrolls stay sharp, numbered strips when huge). Print-ready PDF (A4 / A3 / Letter, 150–600 dpi) and blank 描紅 practice sheets. Export names with 第N遍 and the finishing date. Anonymous visit count (GoatCounter, no cookies).
+- **v0.7.3** 書寫工具 (自動 / 觸控筆 / 手指) on every new writing and in its own settings group. Trackpad mode removed. One app name, 墨字帖, everywhere.
+- **v0.7.2** Writings saved before a text had chapters no longer show under 繼續書寫; they open the chapter list instead of an error.
+- **v0.7.1** Texts with chapters open with a quick-start panel (next chapter, one big 開始 / 繼續). Writing choices remembered per text, plus 新字帖預設 for new texts. Pages never load blank (loading state with 重試).
+- **v0.7.0** ⌘Z / Ctrl+Z undo. (A trackpad writing mode, withdrawn in v0.7.3.)
+- **v0.6.9** Clear space between the 書庫 tiles and the 安裝 App card.
+- **v0.6.8** The home intro card on wide screens is one single-column box.
+- **v0.6.7** The home intro card stays near the top on narrow screens too.
+- **v0.6.6** Simpler start page (big 開始抄寫 / 繼續上次, essentials only, 進階選項 collapsed). 匯出 from the writing page, shelf cards, section list and completion screen. 關於 merged into the intro pop-up.
+- **v0.6.5** Intro wording; 西方寺 is now an invitation to visit.
+- **v0.6.4** Welcome pop-up (shows once; 關於 → 重看介紹). Sturdier downloads (render, then tap 儲存; share sheet on mobile; APK link fallback). 低延遲筆跡（實驗） toggle.
+- **v0.6.3** Fix: the writing area no longer turns solid black on some Android tablets and phones.
+- **v0.6.2** Phone screen redesign (自動 with delay chooser, thumb-friendly bars, tappable context strip, landscape). Laptop / wide layout with mouse ink. Home intro card and 關於 page. 筆順 pop-up starts at the next unwritten character, with 上一字 / 下一字.
 - **v0.6.1** Phone layout (one character at a time, finger width by speed, context strip, auto-advance). iPad + Apple Pencil support (hover ignored, palm rejection, Safari gestures blocked, Add to Home Screen prompt, 一般螢幕 display mode). PWA icons.
 - **v0.6.0** Bookshelf home (continue / favourites / library, search, sort). Library grows to 85 texts in 14 categories (new: 法帖書論, 小楷, 碑帖, 詩經楚辭, 元曲, 家訓格言, 基礎練習). Per-section notes and side-by-side mode. Animated stroke order via finger double-tap or button. Grouped, auto-saving settings. Brush back to the 0.5.1 feel (毛筆 fine as default, 經典 preset), unified width / pressure range, 3-step calibration. UI font fix.
 - **v0.5.3** Fix release: reverts to the v0.5.1 brush (removes the thin tail added in 0.5.2).
