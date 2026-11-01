@@ -55,11 +55,25 @@
       if (v === 'off') return false;
       return /iReader|Smart 6c|SmartOS/i.test(navigator.userAgent || '');
     },
-    // 觸控板書寫 (settings padMode, docs/SPEC.md "Trackpad writing") is offered on a laptop / desktop only: no touch screen and a fine pointer, the same test as "the mouse writes" (never the e-ink tablet, phone or iPad).
-    // The layout does not matter: a laptop can write in the phone layout (one big character, 版面 手機) too.
-    trackpad: function () { return !!D.env().desktop; },
-    // Pointer Lock (the 精細模式 of the trackpad writing); the options dictionary / promise form is feature-detected where it is used
-    pointerLock: function () { return typeof Element !== 'undefined' && typeof Element.prototype.requestPointerLock === 'function' && 'onpointerlockchange' in document; },
+    // ---- 書寫工具 (settings.inputMode; docs/SPEC.md "Input type"): what writes on this touch device, so the app knows which hand touch to turn off.
+    //   'auto' | 'pen' (觸控筆: only a pen inks, finger / palm never) | 'touch' (手指: the finger inks too, a pen still inks).
+    //   auto = today's behaviour: the phone layout lets the finger write, the tablet layout (e-ink tablet, iPad) is pen-only.
+    // Device-level: it describes the hardware, so a backup neither carries it nor overwrites it (Export.json / importText).
+    // A laptop / desktop (no touch screen, fine pointer: env().desktop) has no choice to make: the mouse writes by click-and-drag, whatever is stored.
+    hasInputChoice: function () { return !D.env().desktop; },
+    // the effective choice for a settings object: {mode: 'pen' | 'touch', auto: the stored choice is 自動, stored: 'auto' | 'pen' | 'touch'}
+    input: function (st) {
+      var v = st && st.inputMode;
+      if (v === 'pen' || v === 'touch') return { mode: v, auto: false, stored: v };
+      return { mode: D.isPhone() ? 'touch' : 'pen', auto: true, stored: 'auto' };
+    },
+    INPUT_NAMES: { pen: '觸控筆', touch: '手指' },
+    // [[value, label], ...]: 自動 shows what it resolves to right now (自動（觸控筆） on the tablet layout, 自動（手指） on the phone layout)
+    inputOpts: function () {
+      return [['auto', '自動（' + D.INPUT_NAMES[D.input({ inputMode: 'auto' }).mode] + '）'], ['pen', D.INPUT_NAMES.pen], ['touch', D.INPUT_NAMES.touch]];
+    },
+    inputValue: function (st) { return D.input(st).stored; },
+    setInput: function (st, v) { st.inputMode = v === 'pen' || v === 'touch' ? v : 'auto'; return st; },
     // the wide (laptop / desktop) layout: a landscape window of at least 1100 px at 3:2 or wider, never the phone layout. Class `wide` on <html>; docs/SPEC.md "Wide layout".
     isWide: function () { return !D.isPhone() && window.innerWidth >= 1100 && window.innerWidth >= 1.5 * window.innerHeight; },
     // class + CSS variables; true when the mode changed since the last call

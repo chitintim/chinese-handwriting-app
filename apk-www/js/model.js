@@ -4,15 +4,14 @@
   var Store = MX.Store;
 
   var DEF_SETTINGS = {
-    acceptTouch: false, inkWidth: 'thin', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'md', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
+    inkWidth: 'thin', tplStyle: 'fill', tplTone: 'mid', gridLook: 'dots', gridDensity: 'mid', tplSize: 'md', tplFont: 'ukai', autoFlip: true, flipDelay: '2',
     name: '', perf: false, pressure: 'auto', autoNext: true, touchPrompted: false,
     brush: 'mao', custom: null, picked: {}, stab: 'light', pressFloor: 0, pressN: 0, pressLo: 0, pressHi: 0, pressCal: false, pressMx: [], pressMd: [], pressNm: 0, pressKnots: null, pressRange: 'mid',
     edgeBottom: '3.5', edgeSide: (MX.Device && MX.Device.env().ios) ? '2' : '1',     // iOS: keep the cells clear of Safari's edge-swipe-back
     screenType: '', exp: null, libScript: 'trad',
     sigDate: 'gz', sigWord: '', sigDizi: true, sigHui: false,
     autoNotes: true, sideNotes: false, strokeTap: true, strokeSpeed: 'mid',
-    layoutMode: 'auto', phoneTouch: true, phoneAuto: true, lowLat: 'auto',
-    padMode: 'off', padFine: false, padGain: '0.5',      // 觸控板書寫 (laptop only): off | drag | space; 精細模式; its gain
+    layoutMode: 'auto', inputMode: 'auto', phoneAuto: true, lowLat: 'auto',
     cfgDefault: null          // 新字帖預設: the copy choices (CFG_KEYS) a text that was never started begins with; null = the built-in DEF_CFG
   };
   var DEF_CFG = {
@@ -29,6 +28,11 @@
     else if (c.grid === 'none') { c.grid = 'mi'; if (c.box === undefined) c.box = false; if (c.guide === undefined) c.guide = false; }
     return c;
   }
+
+  // the withdrawn 觸控板書寫 (laptop trackpad writing, SPEC revision 15): its settings and its one-time banner flag are removed
+  var PAD_KEYS = ['padMode', 'padFine', 'padGain'];
+  // 書寫工具 from the two switches it replaced: 手指書寫 on -> 手指; else 手機手指書寫 off -> 觸控筆; else 自動 (the old defaults)
+  function legacyInput(s) { return s.acceptTouch === true ? 'touch' : (s.phoneTouch === false ? 'pen' : 'auto'); }
 
   function pickCfg(c) {
     var o = {};
@@ -52,7 +56,7 @@
 
     // Library sections: a copy / completion record without sectionId (everything stored before the multi-text library) belongs to section 'main'.
     sid: function (c) { return (c && c.sectionId) || 'main'; },
-    SCHEMA: 6,
+    SCHEMA: 7,
 
     init: function () {
       // Stored-data schema marker. Records only ever gain optional fields (defaults are merged below).
@@ -67,9 +71,16 @@
       //           whether chosen or not; settings.picked marks what the user chose explicitly in the UI. Anything not picked is dropped, so it follows the current default.
       //   5 -> 6: copy choices have one rule (docs/SPEC.md "Choices and memory"): the text's own remembered choices (textcfg:<id>), else 新字帖預設 (settings.cfgDefault, new, starts empty),
       //           else the built-in DEF_CFG. Stored text templates are normalised once (legacy grid values 方格 / 無) so a text's sections compare exactly; nothing else is rewritten.
+      //   6 -> 7: one 書寫工具 setting (settings.inputMode: auto | pen | touch on a touch device; docs/SPEC.md "Input type") replaces the two overlapping switches 手指書寫 (acceptTouch,
+      //           default off, tablet layout) and 手機手指書寫 (phoneTouch, default on, phone layout): acceptTouch true -> 'touch'; else phoneTouch false -> 'pen'; else 'auto' (= what both defaults did).
+      //           Both old keys are removed, and so are the settings of the withdrawn 觸控板書寫 (padMode / padFine / padGain) and its banner flag sys:padTip. Nothing else is touched; the choice is device-level (a backup neither carries nor overwrites it).
       var sv = Store.get('schema');
       if (!(sv >= M.SCHEMA)) M.migrate(sv || 0);
       M.settings = assign({}, DEF_SETTINGS, Store.get('settings'));
+      var raw = Store.get('settings');
+      if (raw && typeof raw === 'object' && raw.inputMode === undefined) M.settings.inputMode = legacyInput(raw);       // settings written before 書寫工具 (also a backup of an older build)
+      if (['auto', 'pen', 'touch'].indexOf(M.settings.inputMode) < 0) M.settings.inputMode = 'auto';       // 書寫工具
+      PAD_KEYS.concat(['acceptTouch', 'phoneTouch']).forEach(function (k) { delete M.settings[k]; });
       M.settings.picked = assign({}, M.settings.picked);      // own copy (never the DEF_SETTINGS object)
       if (M.settings.tplStyle === 'dotted') M.settings.tplStyle = 'dots';   // older builds: dotted outline -> halftone dots
       if (MX.Device) MX.Device.apply(); else M.applyEdge();
@@ -133,6 +144,15 @@
         var s6 = Store.get('settings');
         if (s6 && typeof s6 === 'object' && s6.cfgDefault === undefined) { s6.cfgDefault = null; Store.set('settings', s6); }
       }
+      if (from < 7) {
+        var s7 = Store.get('settings');
+        if (s7 && typeof s7 === 'object') {
+          if (s7.inputMode !== 'auto' && s7.inputMode !== 'pen' && s7.inputMode !== 'touch') s7.inputMode = legacyInput(s7);
+          PAD_KEYS.concat(['acceptTouch', 'phoneTouch']).forEach(function (k) { delete s7[k]; });
+          Store.set('settings', s7);
+        }
+      }
+      if (from < 7) Store.del('sys:padTip');
       Store.set('schema', M.SCHEMA);
     },
     saveSettings: function () { Store.set('settings', M.settings); if (MX.Device) MX.Device.refresh(); else M.applyEdge(); },

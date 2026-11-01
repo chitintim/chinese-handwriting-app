@@ -563,21 +563,15 @@
   Ink.Sampler = Sampler;
   Sampler.prototype.reset = function () {
     this.pts = []; this.seen = []; this.lastTr = 0; this.lastP = 500; this.minP = 1001; this.raw = 0;
-    this.synth = null; this.vl = null; this.sv = 0; this.vn = 0.6; this.force = null; this.fn = -1;
+    this.synth = null; this.vl = null; this.sv = 0; this.vn = 0.6;
   };
   // A finger (or mouse) reports no real pressure: a constant 0 / 0.5. When `synth` is set (a function n 0..1 -> raw pressure 0..1000, set by the practice view for touch strokes),
   // the pressure is derived from the writing speed instead: slow -> thick, fast -> thin (a brush that is pulled quickly leaves a thinner line), smoothed so the width changes
   // gradually. The result is stored like any other pressure, so a copy written with the finger renders the same on every layout.
   var TOUCH_V0 = 0.25, TOUCH_V1 = 4.0, TOUCH_NSLOW = 0.9, TOUCH_NFAST = 0.15;     // speed (cell units / ms) where the width starts to fall / is thinnest; the normalised pressure at both ends
-  // `force` (optional, set by the practice view for a Force Touch trackpad): a function returning the normalised pressure 0..1 the trackpad reports right now, or -1 when it has no reading;
-  // while it has one it replaces the speed model (low-passed, tau 40 ms).
   Sampler.prototype.velocityP = function (xy, ts) {
-    var l = this.vl, dt, v, a, f = this.force ? this.force() : -1;
-    if (!l) {
-      this.vl = { x: xy[0], y: xy[1], t: ts }; this.vn = 0.6;
-      if (f >= 0) this.fn = f;
-      return this.synth(f >= 0 ? f : this.vn);
-    }
+    var l = this.vl, dt, v, a;
+    if (!l) { this.vl = { x: xy[0], y: xy[1], t: ts }; this.vn = 0.6; return this.synth(this.vn); }
     dt = ts - l.t;
     dt = dt > 0 ? (dt > 100 ? 100 : dt) : 4;
     v = Math.sqrt((xy[0] - l.x) * (xy[0] - l.x) + (xy[1] - l.y) * (xy[1] - l.y)) / dt;
@@ -585,10 +579,6 @@
     a = (this.sv - TOUCH_V0) / (TOUCH_V1 - TOUCH_V0); a = a <= 0 ? 0 : (a >= 1 ? 1 : a * a * (3 - 2 * a));
     this.vn += (TOUCH_NSLOW - (TOUCH_NSLOW - TOUCH_NFAST) * a - this.vn) * (1 - Math.exp(-dt / 90));
     l.x = xy[0]; l.y = xy[1]; l.t = ts;
-    if (f >= 0) {
-      this.fn = this.fn < 0 ? f : this.fn + (f - this.fn) * (1 - Math.exp(-dt / 40));
-      return this.synth(this.fn);
-    }
     return this.synth(this.vn);
   };
   Sampler.events = function (e) {

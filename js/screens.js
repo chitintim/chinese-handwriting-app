@@ -233,7 +233,7 @@
 
   // ------------------------------------------------------------------ home
   S.home = function (root, query) {
-    var el = screen(root, '墨 · 抄經', null, [
+    var el = screen(root, '墨字帖', null, [
       h('button', { text: '搜尋', 'data-act': 'search', onclick: function () { location.hash = '#/search'; } }),
       h('button', { text: '筆測', 'data-act': 'pentest', onclick: function () { location.hash = '#/pentest'; } }),
       h('button', { text: '設定', 'data-act': 'settings', onclick: function () { location.hash = '#/settings'; } })
@@ -486,7 +486,7 @@
         h('div', { class: 'qt', 'data-role': 'qs-title', text: T(sec.title), style: 'font-family:' + uiFont(doing && copy ? copy.cfg.script : d.script) }),
         h('div', { class: 'qm', 'data-role': 'qs-meta', text: meta }),
         h('div', { class: 'qline', 'data-role': 'qs-choices', text: cfgLine(d) })
-      ]),
+      ].concat(MX.Form.inputRow() || [])),
       h('div', { class: 'qbtns btnrow' }, [go, h('button', { class: 'qadjust', 'data-act': 'qadjust', text: '調整選項', onclick: function () { location.hash = H('setup', textId, sec.id); } })])
     ]);
   }
@@ -621,6 +621,8 @@
     var ESS = ['script', 'mode'], cfgFields = MX.Form.CFG;
     el.appendChild(MX.Form.build(cfgFields.filter(function (f) { return ESS.indexOf(f.k) >= 0; }), d, locked, refreshInfo));
     if (locked) el.appendChild(h('div', { class: 'note', text: '已開始書寫：字體需「重新開始」才能更改。' }));
+    var inRow = MX.Form.inputRow();          // 書寫工具: asked on every new writing (a global, device-level setting; none on a laptop)
+    if (inRow) el.appendChild(inRow);
     var row2 = h('div', { class: 'btnrow secondary' });
     row2.appendChild(MX.favButton(textId, entry.sections > 1 ? sectionId : null, null, true));
     if (Lib.hasNotes(textId, sectionId)) row2.appendChild(h('button', { text: '解說', 'data-act': 'notes', onclick: function () { location.hash = H('notes', textId, sectionId); } }));
@@ -744,13 +746,10 @@
         if (onChange) onChange(k);
       });
     }
+    // 書寫工具: everything about how the page is written on (the tool, the finger double-tap, the pen's latency); 書寫: page flipping
+    section('input').appendChild(groupForm('input'));
+    sections.input.appendChild(h('div', { class: 'note', 'data-role': 'input-note', text: MX.Form.GROUP_NOTES.input }));
     section('write').appendChild(groupForm('write'));
-    sections.write.appendChild(h('div', { class: 'note', 'data-role': 'stroke-tap-note', text: MX.Form.GROUP_NOTES.write }));
-    if (MX.Form.fields(G.pad.keys).length) {         // 觸控板書寫: laptops / desktops only
-      var pd = section('pad');
-      pd.appendChild(groupForm('pad'));
-      pd.appendChild(h('div', { class: 'note', 'data-role': 'pad-note', text: MX.Form.GROUP_NOTES.pad }));
-    }
     var b = section('brush');
     ws = MX.Form.widthSample(st);
     b.appendChild(groupForm('brush'));

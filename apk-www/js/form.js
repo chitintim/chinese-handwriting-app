@@ -32,13 +32,8 @@
       { k: 'pressure', label: '壓感', opts: [['auto', '自動'], ['off', '固定']] },
       { k: 'lowLat', label: '低延遲筆跡（實驗）', opts: [['auto', '自動'], ['on', '開'], ['off', '關']] },
       { k: 'layoutMode', label: '版面', opts: [['auto', '自動'], ['tablet', '平板'], ['phone', '手機']] },
-      { k: 'acceptTouch', label: '手指書寫', opts: ONOFF },
-      { k: 'phoneTouch', label: '手機手指書寫', opts: ONOFF },
+      { k: 'inputMode', label: '書寫工具', input: true, when: function () { return MX.Device.hasInputChoice(); } },       // 自動 / 觸控筆 / 手指: MX.Device.inputOpts; a laptop has no choice to make
       { k: 'strokeTap', label: '雙擊看筆順', opts: ONOFF },
-      // 觸控板書寫: only on a laptop / desktop (`when`); 精細模式 also needs Pointer Lock
-      { k: 'padMode', label: '觸控板書寫', when: function () { return MX.Device.trackpad(); }, opts: [['off', '關'], ['drag', '按住拖曳'], ['space', '按住空白鍵']] },
-      { k: 'padFine', label: '精細模式', when: function () { return MX.Device.trackpad() && MX.Device.pointerLock(); }, opts: ONOFF },
-      { k: 'padGain', label: '靈敏度', when: function () { return MX.Device.trackpad() && MX.Device.pointerLock(); }, opts: [['0.3', '低'], ['0.5', '中'], ['0.75', '高']] },
       { k: 'perf', label: '效能模式', opts: ONOFF },
       { k: 'autoFlip', label: '自動翻頁', opts: ONOFF },
       { k: 'phoneAuto', label: '自動下一字（手機）', opts: ONOFF },
@@ -52,22 +47,22 @@
     ],
     // The app settings screen / the practice sheet group the SETTINGS fields (the 署名落款 block, 資料 and 關於 are built by the screen itself)
     GROUPS: [
-      { id: 'write', title: '書寫', keys: ['acceptTouch', 'phoneTouch', 'strokeTap', 'autoFlip', 'phoneAuto', 'flipDelay', 'autoNext'] },
-      { id: 'pad', title: '觸控板書寫', keys: ['padMode', 'padFine', 'padGain'] },
+      // everything about HOW the page is written on: the tool, the finger gesture, the pen's latency (書寫 below = page flipping)
+      { id: 'input', title: '書寫工具', keys: ['inputMode', 'strokeTap', 'lowLat'] },
+      { id: 'write', title: '書寫', keys: ['autoFlip', 'phoneAuto', 'flipDelay', 'autoNext'] },
       { id: 'brush', title: '筆觸', keys: ['brush', 'tune', 'inkWidth', 'pressRange', 'stab', 'pressure'] },
       { id: 'grid', title: '格線', keys: ['gridLook', 'gridDensity'] },
       { id: 'cfg', title: '字帖預設', keys: [] },
       { id: 'sign', title: '署名落款', keys: [] },
       { id: 'notes', title: '解說', keys: ['autoNotes', 'sideNotes'] },
-      { id: 'display', title: '顯示', keys: ['layoutMode', 'lowLat', 'screenType', 'libScript', 'tplStyle', 'tplFont', 'tplSize', 'tplTone', 'edgeBottom', 'edgeSide', 'perf'] },
+      { id: 'display', title: '顯示', keys: ['layoutMode', 'screenType', 'libScript', 'tplStyle', 'tplFont', 'tplSize', 'tplTone', 'edgeBottom', 'edgeSide', 'perf'] },
       { id: 'data', title: '資料', keys: [] },
       { id: 'about', title: '關於', keys: [] }
     ],
     // the explanation under a settings group (shown by the settings screen and the practice sheet)
     GROUP_NOTES: {
-      write: '雙擊看筆順：筆不在旁邊時，用手指在格子上快速點兩下，顯示該字的筆順動畫。「手指書寫」開啟時此手勢停用，請改用工具列的「筆順」鈕。手機版面預設可用手指書寫（「手機手指書寫」），雙擊手勢停用，請按「筆順」鈕。',
-      pad: '按住空白鍵：手指在觸控板上滑動，同時按住空白鍵（或 Option 鍵）才落筆，放開就提筆；不必按下觸控板。字跡粗細依書寫速度：慢則粗、快則細（Safari 搭配 Force Touch 觸控板時改用實際壓力）。精細模式：點一下書寫區進入，游標被鎖定在書寫區內，手指移動量依靈敏度縮小，筆畫更細緻；按 Esc 離開。書寫區內雙指縮放、捲動會被擋下；雙指點按＝撤銷（Command 或 Ctrl 加 Z 也行）。想一次寫一個大字：到「顯示」把版面設為「手機」。',
-      display: '螢幕類型：電子紙＝黑色點線格（電子紙快速刷新也看得清楚）；一般螢幕＝淺灰實線格。選擇時會一併換上對應的格線樣式。版面：自動＝螢幕短邊小於 520 像素時用手機版面（一次寫一個字），否則用平板版面。兩種版面的字跡通用，可以在任一種繼續同一份字帖。低延遲筆跡（實驗）：自動＝只在 iReader 電子紙平板上使用低延遲畫布；其他 Android 平板的某些顯示晶片會把書寫層畫成全黑，所以預設關閉。若書寫區變黑請設為「關」。下次進入書寫頁面才生效。'
+      input: '觸控筆：只有觸控筆（Apple Pencil、電磁筆、iReader 的筆）會寫出筆跡，手指和手掌不會（防誤觸）。手指：手指也能寫，筆照樣可用。自動：維持原本的行為，手機版面用手指，平板版面（電子紙平板、iPad）只用觸控筆。雙擊看筆順：手指不寫字時，在格子上快速點兩下看筆順；選「手指」或用手機版面時，請按工具列的「筆順」。低延遲筆跡：自動＝只在 iReader 上使用；書寫區變黑請設為「關」，下次進入書寫頁面才生效。',
+      display: '螢幕類型：電子紙＝黑色點線格（電子紙快速刷新也看得清楚）；一般螢幕＝淺灰實線格。選擇時會一併換上對應的格線樣式。版面：自動＝螢幕短邊小於 520 像素時用手機版面（一次寫一個字），否則用平板版面。兩種版面的字跡通用，可以在任一種繼續同一份字帖。'
     },
     // the definitions of `keys` that apply on this device (a field with `when` only where it returns true)
     fields: function (keys) {
@@ -134,6 +129,20 @@
       });
       return wrap;
     },
+    // 書寫工具 segmented control for a settings object (MX.Device.inputOpts / setInput). onChange(v) after the choice was stored in st; saving is the caller's job.
+    inputSeg: function (st, onChange) {
+      var D = MX.Device;
+      return F.seg(D.inputOpts(), D.inputValue(st), function (v) { D.setInput(st, v); if (onChange) onChange(v); });
+    },
+    // a compact one-line 書寫工具 row (label + control) for the setup screen / the text page; a change is saved at once. afterChange() runs after it.
+    // null on a laptop / desktop (no touch screen: nothing to choose).
+    inputRow: function (afterChange) {
+      if (!MX.Device.hasInputChoice()) return null;
+      var st = MX.Model.settings, row = F.row('書寫工具', F.inputSeg(st, function () { MX.Model.saveSettings(); if (afterChange) afterChange(); }), 'inputMode');
+      row.className += ' inrow';
+      row.setAttribute('data-role', 'input-row');
+      return row;
+    },
     row: function (label, ctrl, key) {
       return h('div', { class: 'frow', 'data-k': key || null }, [h('label', { text: label }), ctrl]);
     },
@@ -150,6 +159,10 @@
           box.appendChild(F.row(f.label, h('button', { type: 'button', text: f.button, 'data-act': f.k, onclick: function () {
             if (F.openTuner) F.openTuner(function () { F.syncSeg(box, 'brush', obj.brush); if (onChange) onChange('brush', obj.brush); });
           } }), f.k));
+          return;
+        }
+        if (f.input) {      // 書寫工具: the options and the stored value depend on the device (MX.Device.inputOpts)
+          box.appendChild(F.row(f.label, F.inputSeg(obj, function (v) { if (onChange) onChange(f.k, v); }), f.k));
           return;
         }
         var dis = !!(f.content && locked);

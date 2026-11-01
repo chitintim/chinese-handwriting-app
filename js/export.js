@@ -749,7 +749,10 @@
     // ---- whole-app data backup ----
     json: function () {
       MX.Model.flushAll();
-      return JSON.stringify({ app: 'moxie', version: 1, exportedAt: new Date().toISOString(), entries: MX.Store.exportAll() });
+      var entries = MX.Store.exportAll();
+      // 書寫工具 describes this device (touch or pen): a backup does not carry it (see importText)
+      if (entries.settings && typeof entries.settings === 'object') { entries.settings = Object.assign({}, entries.settings); delete entries.settings.inputMode; }
+      return JSON.stringify({ app: 'moxie', version: 1, exportedAt: new Date().toISOString(), entries: entries });
     },
     // one tap, no long work before the save (the JSON is built synchronously), so the user activation is still fresh for the share sheet / the download
     saveJson: async function () {
@@ -759,9 +762,11 @@
     importText: function (text) {
       var o;
       try { o = JSON.parse(text); } catch (e) { throw new Error('不是有效的 JSON'); }
-      if (!o || o.app !== 'moxie' || !o.entries || typeof o.entries !== 'object') throw new Error('不是墨的備份檔');
+      if (!o || o.app !== 'moxie' || !o.entries || typeof o.entries !== 'object') throw new Error('不是墨字帖的備份檔');
+      var keep = MX.Model.settings && MX.Model.settings.inputMode;          // 書寫工具 stays what this device has (a backup from another device must not change it)
       MX.Store.importAll(o.entries);
       MX.Model.init();
+      if (keep) { MX.Model.settings.inputMode = keep; MX.Model.saveSettings(); }
       return Object.keys(o.entries).length;
     }
   };
