@@ -20,6 +20,16 @@
     layer.innerHTML = '';
     root().innerHTML = '';
   }
+  // the practice view is built asynchronously: an error there must not leave a blank page (the same error screen as a synchronous one)
+  function guard(el, p) {
+    if (!p || !p.catch) return;
+    p.catch(function (e) {
+      MX.err(e);
+      if (el.querySelector('.screen')) return;
+      el.appendChild(MX.h('div', { class: 'screen' }, [MX.h('h1', { text: '發生錯誤' }), MX.h('p', { class: 'mono', text: String(e && e.stack || e) }),
+        MX.h('button', { text: '返回', onclick: function () { location.hash = '#/'; } })]));
+    });
+  }
   function route() {
     teardown();
     var r = parse(), el = root(), oldAbout = false;
@@ -31,8 +41,8 @@
     current = r.name;
     try {
       switch (r.name) {
-        case 'practice': MX.Practice.show(el, r.arg, { readOnly: false }); break;
-        case 'view': MX.Practice.show(el, r.arg, { readOnly: true }); break;
+        case 'practice': guard(el, MX.Practice.show(el, r.arg, { readOnly: false })); break;
+        case 'view': guard(el, MX.Practice.show(el, r.arg, { readOnly: true })); break;
         case 'setup': MX.Screens.setup(el, r.arg, r.arg2 || 'main', r.query); break;
         case 'lib': MX.Screens.category(el, r.arg, r.query); break;
         case 'text': MX.Screens.text(el, r.arg, r.query); break;

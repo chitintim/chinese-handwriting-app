@@ -56,6 +56,7 @@
       { id: 'pad', title: '觸控板書寫', keys: ['padMode', 'padFine', 'padGain'] },
       { id: 'brush', title: '筆觸', keys: ['brush', 'tune', 'inkWidth', 'pressRange', 'stab', 'pressure'] },
       { id: 'grid', title: '格線', keys: ['gridLook', 'gridDensity'] },
+      { id: 'cfg', title: '字帖預設', keys: [] },
       { id: 'sign', title: '署名落款', keys: [] },
       { id: 'notes', title: '解說', keys: ['autoNotes', 'sideNotes'] },
       { id: 'display', title: '顯示', keys: ['layoutMode', 'lowLat', 'screenType', 'libScript', 'tplStyle', 'tplFont', 'tplSize', 'tplTone', 'edgeBottom', 'edgeSide', 'perf'] },

@@ -12,12 +12,14 @@
     sigDate: 'gz', sigWord: '', sigDizi: true, sigHui: false,
     autoNotes: true, sideNotes: false, strokeTap: true, strokeSpeed: 'mid',
     layoutMode: 'auto', phoneTouch: true, phoneAuto: true, lowLat: 'auto',
-    padMode: 'off', padFine: false, padGain: '0.5'       // 觸控板書寫 (laptop only): off | drag | space; 精細模式; its gain
+    padMode: 'off', padFine: false, padGain: '0.5',      // 觸控板書寫 (laptop only): off | drag | space; 精細模式; its gain
+    cfgDefault: null          // 新字帖預設: the copy choices (CFG_KEYS) a text that was never started begins with; null = the built-in DEF_CFG
   };
   var DEF_CFG = {
     script: 'trad', mode: 'trace', grid: 'mi', box: true, guide: true, size: 'M', dir: 'v', punct: 'hide',
     title: true, closing: false, sign: true
   };
+  var CFG_KEYS = ['script', 'mode', 'grid', 'box', 'guide', 'size', 'dir', 'punct', 'title', 'sign'];       // the choices of the setup screen (what 新字帖預設 and a text's remembered choices hold)
   var CONTENT_KEYS = ['script'];       // title / 落款 can be switched any time: their ink has its own keys (t<i> / s<i>), the body's never shift
 
   // Older records used grid: mi | tian | fang | none. Now: grid = guide style (mi | tian), box = outer cell border, guide = inner lines.
@@ -26,6 +28,12 @@
     if (c.grid === 'fang') { c.grid = 'mi'; if (c.guide === undefined) c.guide = false; }
     else if (c.grid === 'none') { c.grid = 'mi'; if (c.box === undefined) c.box = false; if (c.guide === undefined) c.guide = false; }
     return c;
+  }
+
+  function pickCfg(c) {
+    var o = {};
+    CFG_KEYS.forEach(function (k) { if (c && c[k] !== undefined) o[k] = c[k]; });
+    return o;
   }
 
   function assign(t) {
@@ -39,12 +47,12 @@
     'filled', 'total', 'completedAt', 'archivedAt', 'bodyN', 'nTitle', 'nSign', 'keyv'];
 
   var M = MX.Model = {
-    CONTENT_KEYS: CONTENT_KEYS, normCfg: normCfg, DEF_CFG: DEF_CFG, DEF_SETTINGS: DEF_SETTINGS,
+    CONTENT_KEYS: CONTENT_KEYS, CFG_KEYS: CFG_KEYS, normCfg: normCfg, DEF_CFG: DEF_CFG, DEF_SETTINGS: DEF_SETTINGS,
     copies: {},
 
     // Library sections: a copy / completion record without sectionId (everything stored before the multi-text library) belongs to section 'main'.
     sid: function (c) { return (c && c.sectionId) || 'main'; },
-    SCHEMA: 5,
+    SCHEMA: 6,
 
     init: function () {
       // Stored-data schema marker. Records only ever gain optional fields (defaults are merged below).
@@ -57,6 +65,8 @@
       //           title / sign of false becomes true there (copies keep their own config). Ink keys: copies get keyv 2 when first opened (Model.upgradeKeys).
       //   4 -> 5: new pen defaults 毛筆 / 筆粗 細 (user feedback on 0.5.2). Every stored settings object holds the defaults of the build that wrote it (brush 'xiu' / 'mao', inkWidth 'mthin' / 'mid' ...)
       //           whether chosen or not; settings.picked marks what the user chose explicitly in the UI. Anything not picked is dropped, so it follows the current default.
+      //   5 -> 6: copy choices have one rule (docs/SPEC.md "Choices and memory"): the text's own remembered choices (textcfg:<id>), else 新字帖預設 (settings.cfgDefault, new, starts empty),
+      //           else the built-in DEF_CFG. Stored text templates are normalised once (legacy grid values 方格 / 無) so a text's sections compare exactly; nothing else is rewritten.
       var sv = Store.get('schema');
       if (!(sv >= M.SCHEMA)) M.migrate(sv || 0);
       M.settings = assign({}, DEF_SETTINGS, Store.get('settings'));
@@ -115,6 +125,14 @@
           Store.set('settings', s5);
         }
       }
+      if (from < 6) {
+        Store.keys('textcfg:').forEach(function (k) {
+          var t = Store.get(k);
+          if (t && typeof t === 'object') Store.set(k, normCfg(assign({}, t)));
+        });
+        var s6 = Store.get('settings');
+        if (s6 && typeof s6 === 'object' && s6.cfgDefault === undefined) { s6.cfgDefault = null; Store.set('settings', s6); }
+      }
       Store.set('schema', M.SCHEMA);
     },
     saveSettings: function () { Store.set('settings', M.settings); if (MX.Device) MX.Device.refresh(); else M.applyEdge(); },
@@ -138,8 +156,38 @@
       st.gridLook = st.screenType === 'normal' ? 'light' : 'dots';
       return st;
     },
-    textCfg: function (textId) { var s = Store.get('textcfg:' + textId); return assign({}, DEF_CFG, s ? normCfg(assign({}, s)) : s); },
+    // ---- copy choices (字體 模式 格線 方向 格大小 標點 標題 落款), one rule for every screen:
+    //   1. a copy that has ink keeps its own choices (cfg);
+    //   2. otherwise the text's remembered choices (textcfg:<textId>: saved when a section is started and when they are changed while writing; every section of the text shares them);
+    //   3. a text that was never started begins with 新字帖預設 (settings.cfgDefault, set in 設定 or by 設為預設 in the setup screen);
+    //   4. without that, the built-in DEF_CFG.
+    // The app settings (筆觸, 螢幕類型, 署名 ...) are global and never part of a copy's choices.
+    defaultCfg: function () {
+      var d = M.settings && M.settings.cfgDefault;
+      return assign({}, DEF_CFG, d && typeof d === 'object' ? normCfg(pickCfg(d)) : null);
+    },
+    setDefaultCfg: function (cfg) { M.settings.cfgDefault = cfg ? pickCfg(cfg) : null; M.saveSettings(); },
+    hasTextCfg: function (textId) { return !!Store.get('textcfg:' + textId); },
+    textCfg: function (textId) { var s = Store.get('textcfg:' + textId); return assign(M.defaultCfg(), s ? normCfg(assign({}, s)) : null); },
     saveTextCfg: function (textId, cfg) { Store.set('textcfg:' + textId, assign({}, cfg)); },
+    // where the choices a text starts with come from: 'text' | 'default' | 'builtin'
+    cfgSource: function (textId) { return M.hasTextCfg(textId) ? 'text' : (M.settings.cfgDefault ? 'default' : 'builtin'); },
+
+    // ---- sections of one text: 'doing' = an active copy with ink that is not complete, 'done' = written to the end at least once, 'todo' = nothing written yet
+    sectionState: function (textId, sectionId) {
+      var c = M.activeCopy(textId, sectionId);
+      if (c && c.completedAt) return 'done';
+      if (c && c.filled > 0) return 'doing';
+      return M.doneCount(textId, sectionId) > 0 ? 'done' : 'todo';
+    },
+    // the section to offer next: the one written most recently and not finished (繼續), else the first one with nothing written (開始), else the first one again (all 'done'); ids = the text's section ids in order
+    nextSection: function (textId, ids) {
+      var doing = null, i;
+      M.recent().forEach(function (c) { if (!doing && c.textId === textId && ids.indexOf(M.sid(c)) >= 0) doing = M.sid(c); });
+      if (doing) return { id: doing, state: 'doing' };
+      for (i = 0; i < ids.length; i++) if (M.sectionState(textId, ids[i]) === 'todo') return { id: ids[i], state: 'todo' };
+      return { id: ids[0], state: 'done' };
+    },
 
     // Copies are keyed by text + section (+ script, which lives in cfg.script): at most one active copy per section is shown in the UI.
     // sectionId defaults to 'main'; script is optional (any script).

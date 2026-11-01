@@ -479,3 +479,21 @@ html.wide .startrow .startbtn{flex:0 1 480px}
 .advbody[hidden],.advsum[hidden]{display:none}
 .advbody{margin-top:8px}
 html.phone .screen[data-screen=setup] .crumbs{display:none}
+
+/* text page (a text with sections): the quick-start panel on top (the section to write next, one big start button, the choices in one line; static, black on white), the section after it is marked */
+.qstart{border:3px solid #000;padding:14px 16px 6px;margin:6px 0 12px;max-width:820px;background:#fff}
+.qstart .qk{font-size:var(--t-s)}
+.qstart .qt{font-size:var(--t-xl);line-height:1.25;margin:2px 0 2px}
+.qstart .qm{font-size:var(--t-xs);color:#222}
+.qstart .qline{font-size:var(--t-s);margin:8px 0 0}
+.qstart .qbtns{margin:12px 0 0}
+.qstart .startbtn{flex:1 1 280px;min-height:72px;font-size:26px}
+.qstart .qadjust{min-height:56px;font-size:var(--t-s)}
+.lrow.next{border-left-width:10px}
+html.phone .qstart{padding:10px 12px 2px;margin:4px 0 10px}
+html.phone .qstart .qt{font-size:22px}
+html.phone .qstart .qbtns{margin:8px 0 0}
+html.phone .qstart .startbtn{flex:1 1 100%;min-height:64px;font-size:23px}
+html.wide .qstart{max-width:none;display:flex;align-items:center;justify-content:space-between;padding:16px 24px 6px;margin:8px 0 16px}
+html.wide .qstart .qbtns{flex:none;margin:0 0 0 24px;flex-wrap:nowrap}
+html.wide .qstart .startbtn{flex:none;min-width:300px}

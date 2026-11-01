@@ -62,10 +62,10 @@
   function dateOf(ts) { return ts ? MX.fmtDate(ts) : '—'; }
 
   // ---- paged lists (no scrolling on e-ink): as many rows as fit below what is already on the screen. A list is re-rendered in place (search, sort, pager) and keeps its state
-  // in the URL (history.replaceState: Back never steps through pages). o = {state:{p,...}, rows(state)->nodes, link(state)->hash, rowH, reserve, empty(state)->node}
+  // in the URL (history.replaceState: Back never steps through pages). o = {state:{p,...}, rows(state)->nodes, link(state)->hash, rowH, reserve, empty(state)->node, into (the node the list goes in; default el)}
   function pagedHost(el, o) {
     var host = h('div', { 'data-role': 'listhost' }), st = o.state, rowH = o.rowH || (MX.Device.isPhone() ? ROW_H_PHONE : ROW_H), reserve = o.reserve === undefined ? 80 : o.reserve;
-    el.appendChild(host);
+    (o.into || el).appendChild(host);
     function sync() { try { history.replaceState(null, '', o.link(st)); } catch (e) { /* ignore */ } }
     function render() {
       host.innerHTML = '';
@@ -104,7 +104,7 @@
     (o.buttons || []).forEach(function (b) {
       btns.appendChild(b.node || h('button', { class: b.primary ? 'on' : '', 'data-act': b.act, text: b.label, onclick: b.onclick }));
     });
-    var attrs = { class: 'lrow' + (o.compact ? ' compact' : '') };
+    var attrs = { class: 'lrow' + (o.compact ? ' compact' : '') + (o.cls ? ' ' + o.cls : '') };
     Object.keys(o.attrs || {}).forEach(function (k) { attrs[k] = o.attrs[k]; });
     return h('div', attrs, [main, btns]);
   }
@@ -144,6 +144,43 @@
     var c = Model.activeCopy(textId, sectionId);
     return c ? H('practice', c.id) : H('setup', textId, sectionId);
   }
+  // The choices of a copy in words (米字格 · 直書 · 中格 ...; 無外框 / 顯示標點 / 無標題 only when they differ from the usual): the setup screen's 進階選項 summary and the text page's quick-start line.
+  function cfgWords(d) {
+    var D = Model.DEF_CFG, get = function (k) { return d[k] === undefined ? D[k] : d[k]; };
+    var size = MX.Form.CFG.filter(function (f) { return f.k === 'size'; })[0].opts.filter(function (o) { return o[0] === get('size'); })[0];
+    var parts = [get('guide') === false ? '無格線' : (get('grid') === 'tian' ? '田字格' : '米字格')];
+    if (get('box') === false) parts.push('無外框');
+    parts.push(get('dir') === 'h' ? '橫書' : '直書', (size ? size[1].split(' ')[0] : '中') + '格');
+    if (get('punct') === 'show') parts.push('顯示標點');
+    if (get('title') === false) parts.push('無標題');
+    parts.push(get('sign') === false ? '無落款' : '含落款');
+    return parts;
+  }
+  function cfgLine(d) {
+    var D = Model.DEF_CFG, mode = d.mode === undefined ? D.mode : d.mode;
+    return [(d.script === undefined ? D.script : d.script) === 'simp' ? '简体' : '繁體', { trace: '描', copy: '臨', recall: '默' }[mode] || '描'].concat(cfgWords(d)).join(' · ');
+  }
+  var CFG_SOURCE = { text: '本篇上次的選項', 'default': '新字帖預設', builtin: '內建預設' };
+  // Start (or continue) a section with the choices d: makes the copy when there is none, otherwise gives it the choices (a section with ink keeps its 字體), and remembers d for the text.
+  // Shared by the setup screen and the text page's quick-start panel. Resolves to the copy.
+  async function beginCopy(textId, sectionId, d, copy) {
+    var txt = await Lib.getView(textId, sectionId), c = copy;
+    Model.saveTextCfg(textId, d);
+    if (!c) {
+      c = Model.create(textId, d, '', 0, sectionId);
+      c.total = MX.Layout.cellsFor(txt, c).length;
+      Model.saveMeta(c);
+    } else {
+      Model.loadInk(c);
+      var locked = Model.recount(c) > 0, contentChanged = MX.Model.CONTENT_KEYS.some(function (k) { return c.cfg[k] !== d[k]; });
+      c.cfg = assign({}, d);
+      if (contentChanged && !locked) c.pos = 0;
+      c.total = MX.Layout.cellsFor(txt, c).length;
+      Model.saveMeta(c);
+    }
+    return c;
+  }
+
   // title of "text · section" for a multi-section text, filled in once the text is loaded
   function refineTitle(row, textId, sectionId) {
     Lib.getText(textId).then(function (t) {
@@ -426,6 +463,32 @@
   };
 
   // ------------------------------------------------------------------ text: its sections
+  // The quick-start panel at the top of the page: the section to write next (the one in progress, else the first one with nothing written), one big start button, the choices it will
+  // use in one line, and 調整選項 = the setup screen of that section (which holds the rest). nx = Model.nextSection.
+  function quickStart(textId, text, nx) {
+    var n = text.sections.length, idx = 0, sec = text.sections[0];
+    text.sections.forEach(function (s, i) { if (s.id === nx.id) { sec = s; idx = i; } });
+    var copy = Model.activeCopy(textId, sec.id), doing = nx.state === 'doing', all = nx.state === 'done';
+    var d = assign({}, doing && copy ? copy.cfg : Model.textCfg(textId));
+    var kind = all ? '全部 ' + n + ' 章都抄過了' : (doing ? '繼續' : (Model.sectionsDone(textId) || Model.lastWritten(textId) ? '下一章' : '開始'));
+    var meta = (idx + 1) + ' / ' + n + ' 章 · ' + Lib.sectionChars(sec) + '字' + (doing && copy ? ' · 進度 ' + pctOf(copy) + '%' : '');
+    var go = h('button', { class: 'on big startbtn', 'data-act': 'qstart', text: all ? '再抄一遍' : (doing && copy ? '繼續上次（' + (copy.filled || 0) + ' / ' + (copy.total || 0) + '）' : '開始抄寫'),
+      onclick: async function () {
+        if (all) { location.hash = H('setup', textId, sec.id); return; }
+        go.disabled = true;
+        try { location.hash = H('practice', (await beginCopy(textId, sec.id, d, copy)).id); } catch (e) { go.disabled = false; MX.err(e); MX.toast('無法開始：' + String(e && e.message || e)); }
+      } });
+    return h('div', { class: 'qstart', 'data-role': 'quickstart', 'data-state': nx.state, 'data-next': sec.id }, [
+      h('div', { class: 'qinfo' }, [
+        h('div', { class: 'qk', 'data-role': 'qs-kind', text: kind }),
+        h('div', { class: 'qt', 'data-role': 'qs-title', text: T(sec.title), style: 'font-family:' + uiFont(doing && copy ? copy.cfg.script : d.script) }),
+        h('div', { class: 'qm', 'data-role': 'qs-meta', text: meta }),
+        h('div', { class: 'qline', 'data-role': 'qs-choices', text: cfgLine(d) })
+      ]),
+      h('div', { class: 'qbtns btnrow' }, [go, h('button', { class: 'qadjust', 'data-act': 'qadjust', text: '調整選項', onclick: function () { location.hash = H('setup', textId, sec.id); } })])
+    ]);
+  }
+
   S.text = function (root, textId, query) {
     var entry = Lib.entry(textId);
     if (!entry) { location.hash = '#/'; return; }
@@ -438,33 +501,49 @@
     var byline = [T(entry.author), T(entry.dynasty)].filter(Boolean).join(' ');
     if (byline) el.appendChild(h('div', { class: 'note', text: byline }));
     if (T(entry.description)) el.appendChild(h('div', { class: 'note', text: T(entry.description) }));
-    var sum = h('div', { class: 'note', 'data-role': 'summary' });
-    el.appendChild(sum);
-    Lib.getText(textId).then(function (text) {
-      if (!el.parentNode) return;
-      var doneSecs = 0, total = text.sections.length;
+    // the page is never an empty list: the panel's place is taken by 載入中… while the text loads, and by the error with 重試 when it does not
+    var qsBox = h('div', { 'data-role': 'qs-host' }), sum = h('div', { class: 'note', 'data-role': 'summary' }), barBox = h('div'), listBox = h('div', { 'data-role': 'list-host' });
+    [qsBox, sum, barBox, listBox].forEach(function (n) { el.appendChild(n); });
+    var q = qs(query), pst = { p: parseInt(q.p, 10) || 1 };
+    function build(text) {
+      var total = text.sections.length, doneSecs = 0, nx = Model.nextSection(textId, text.sections.map(function (s) { return s.id; }));
       text.sections.forEach(function (s) { if (Model.doneCount(textId, s.id) > 0) doneSecs++; });
+      qsBox.innerHTML = ''; barBox.innerHTML = ''; listBox.innerHTML = '';
+      qsBox.appendChild(quickStart(textId, text, nx));
       sum.textContent = '共 ' + total + ' 章 · ' + entry.chars + ' 字 · 已完成 ' + doneSecs + ' / ' + total + ' 章 · 已抄 ' + Model.doneCount(textId) + ' 遍';
-      el.appendChild(h('div', { class: 'bar', style: 'margin-top:0' }, [h('i', { style: 'width:' + Math.floor(100 * doneSecs / total) + '%' })]));
-      var q = qs(query);
+      barBox.appendChild(h('div', { class: 'bar', style: 'margin-top:0' }, [h('i', { style: 'width:' + Math.floor(100 * doneSecs / total) + '%' })]));
       var pl = pagedHost(el, {
-        state: { p: parseInt(q.p, 10) || 1 }, link: function (st) { return H('text', textId, null, st.p > 1 ? 'p=' + st.p : ''); },
+        state: pst, into: listBox, link: function (st) { return H('text', textId, null, st.p > 1 ? 'p=' + st.p : ''); },
         rows: function () {
-          return text.sections.map(function (s) {
-            var sec = s, by = sec.author ? T(sec.author) : '';
-            return lrow({
-              title: T(sec.title), meta: sectionMeta(textId, sec.id, Lib.sectionChars(sec), by), font: uiFont(scriptOf(textId, sec.id)),
-              attrs: { 'data-section': sec.id, 'data-notes': Lib.hasNotes(textId, sec.id) ? '1' : null }, buttons: sectionButtons(textId, sec.id, sec.id),
-              open: function () { location.hash = startHash(textId, sec.id); }
-            });
+          var out = [];
+          text.sections.forEach(function (sec) {
+            try {
+              out.push(lrow({
+                title: T(sec.title), meta: sectionMeta(textId, sec.id, Lib.sectionChars(sec), sec.author ? T(sec.author) : ''), font: uiFont(scriptOf(textId, sec.id)), cls: sec.id === nx.id ? 'next' : '',
+                attrs: { 'data-section': sec.id, 'data-state': Model.sectionState(textId, sec.id), 'data-notes': Lib.hasNotes(textId, sec.id) ? '1' : null }, buttons: sectionButtons(textId, sec.id, sec.id),
+                open: function () { location.hash = startHash(textId, sec.id); }
+              }));
+            } catch (e) { MX.err(e); }       // one broken record never takes the list away
           });
+          return out;
         }
       });
       pl.render();
-    }).catch(function (e) {
-      MX.err(e);
-      el.appendChild(h('p', { text: '無法載入文本：' + String(e && e.message || e) }));
-    });
+    }
+    function load() {
+      qsBox.innerHTML = '';
+      qsBox.appendChild(h('div', { class: 'note', 'data-role': 'loading', text: '載入中…' }));
+      Lib.getText(textId).then(function (text) { if (el.parentNode) build(text); }).catch(function (e) {
+        MX.err(e);
+        if (!el.parentNode) return;
+        qsBox.innerHTML = '';
+        qsBox.appendChild(h('div', { class: 'qstart err', 'data-role': 'text-error' }, [
+          h('div', { class: 'qinfo' }, [h('div', { class: 'qm', text: '無法載入文本：' + String(e && e.message || e) })]),
+          h('div', { class: 'qbtns btnrow' }, [h('button', { class: 'on big startbtn', 'data-act': 'retry', text: '重試', onclick: load })])
+        ]));
+      });
+    }
+    load();
   };
 
   // ------------------------------------------------------------------ setup
@@ -475,7 +554,7 @@
     var copy = Model.activeCopy(textId, sectionId);
     if (copy) Model.loadInk(copy);
     var locked = !!(copy && Model.recount(copy) > 0);
-    var d = assign({}, copy ? copy.cfg : Model.textCfg(textId));
+    var d = assign({}, locked ? copy.cfg : Model.textCfg(textId));         // choices: this copy's when it has ink, else the text's remembered ones (Model.textCfg)
     var crumbs = catCrumbs(entry);
     if (entry.sections > 1) crumbs.push([T(entry.title), H('text', textId)]);
     crumbs.push(['設定', H('setup', textId, sectionId)]);
@@ -502,15 +581,7 @@
     function advSummary() {
       var D = Model.DEF_CFG, get = function (k) { return d[k] === undefined ? D[k] : d[k]; };
       var differs = ['box', 'guide', 'grid', 'size', 'dir', 'punct', 'title', 'sign'].some(function (k) { return get(k) !== D[k]; });
-      if (!differs) return '';
-      var size = MX.Form.CFG.filter(function (f) { return f.k === 'size'; })[0].opts.filter(function (o) { return o[0] === get('size'); })[0];
-      var parts = [get('guide') === false ? '無格線' : (get('grid') === 'tian' ? '田字格' : '米字格')];
-      if (get('box') === false) parts.push('無外框');
-      parts.push(get('dir') === 'h' ? '橫書' : '直書', (size ? size[1].split(' ')[0] : '中') + '格');
-      if (get('punct') === 'show') parts.push('顯示標點');
-      if (get('title') === false) parts.push('無標題');
-      parts.push(get('sign') === false ? '無落款' : '含落款');
-      return parts.join(' · ');
+      return differs ? cfgWords(d).join(' · ') : '';
     }
     function refreshAdv() { advSum.textContent = advSummary(); advSum.hidden = !advSum.textContent || advOpen(); }
     function refreshInfo() {
@@ -528,19 +599,7 @@
     row.appendChild(h('button', {
       class: 'on big startbtn', 'data-act': 'go', text: inprog ? '繼續上次（' + Model.recount(copy) + ' / ' + (copy.total || 0) + '）' : '開始抄寫',
       onclick: async function () {
-        var txt = await Lib.getView(textId, sectionId), c = copy;
-        Model.saveTextCfg(textId, d);
-        if (!c) {
-          c = Model.create(textId, d, '', 0, sectionId);
-          c.total = MX.Layout.cellsFor(txt, c).length;
-          Model.saveMeta(c);
-        } else {
-          var contentChanged = MX.Model.CONTENT_KEYS.some(function (k) { return c.cfg[k] !== d[k]; });
-          c.cfg = assign({}, d);
-          if (contentChanged && !locked) c.pos = 0;
-          c.total = MX.Layout.cellsFor(txt, c).length;
-          Model.saveMeta(c);
-        }
+        var c = await beginCopy(textId, sectionId, d, copy);
         location.hash = H('practice', c.id);
       }
     }));
@@ -563,6 +622,7 @@
     var row2 = h('div', { class: 'btnrow secondary' });
     row2.appendChild(MX.favButton(textId, entry.sections > 1 ? sectionId : null, null, true));
     if (Lib.hasNotes(textId, sectionId)) row2.appendChild(h('button', { text: '解說', 'data-act': 'notes', onclick: function () { location.hash = H('notes', textId, sectionId); } }));
+    row2.appendChild(h('button', { text: '設為預設', 'data-act': 'set-default', title: '把目前的選項設為新字帖的預設', onclick: function () { Model.setDefaultCfg(d); MX.toast('已設為新字帖的預設選項（設定 → 字帖預設）'); } }));
     var arch = Model.archived(textId, sectionId).length;
     if (arch) row2.appendChild(h('button', { text: '存檔 (' + arch + ')', 'data-act': 'archives', onclick: function () { location.hash = H('archives', textId, sectionId); } }));
 
@@ -585,6 +645,8 @@
     }
     el.appendChild(advBtn);
     el.appendChild(advSum);
+    // where these choices come from (the Model.textCfg rule), and that the other sections of the text start with them too (inside 進階選項: nothing but the essentials above the fold)
+    adv.appendChild(h('div', { class: 'note cfgorigin', 'data-role': 'cfg-origin', text: '選項沿用：' + (locked ? '這份字帖的選項' : CFG_SOURCE[Model.cfgSource(textId)]) + (entry.sections > 1 ? ' · 其他章節同用' : '') }));
     adv.appendChild(MX.Form.build(cfgFields.filter(function (f) { return ESS.indexOf(f.k) < 0; }), d, locked, refreshInfo));
     var signHold = h('div');
     adv.appendChild(signHold);
@@ -693,6 +755,16 @@
     b.appendChild(h('div', { class: 'note', text: '粗細＝平常力道的線寬；筆壓幅度＝力道輕重讓線變細變粗的程度。校準只對應筆壓，不改線寬（筆測頁）。' }));
     b.appendChild(ws.el);
     section('grid').appendChild(groupForm('grid'));
+    // 字帖預設: the choices a text that was never started begins with (Model.defaultCfg). A started text remembers its own; 設為預設 in the setup screen writes here too.
+    var cg = section('cfg'), dc = Model.defaultCfg();
+    cg.appendChild(MX.Form.build(MX.Form.CFG, dc, false, function () { Model.setDefaultCfg(dc); }));
+    cg.appendChild(MX.Form.row('落款', MX.Form.seg([[true, '開'], [false, '關']], dc.sign !== false, function (v) { dc.sign = v; Model.setDefaultCfg(dc); }), 'sign'));
+    cg.appendChild(h('div', { class: 'btnrow' }, [h('button', { text: '還原內建預設', 'data-act': 'cfg-reset', onclick: function () {
+      Model.setDefaultCfg(null);
+      var base = Model.defaultCfg();
+      Object.keys(base).forEach(function (k) { dc[k] = base[k]; MX.Form.syncSeg(cg, k, base[k]); });
+    } })]));
+    cg.appendChild(h('div', { class: 'note', 'data-role': 'cfg-note', text: '每篇文本會記住自己上次用的選項（按「開始抄寫」或書寫中更改時），同一篇的各章共用。這裡的選項只用在還沒開始過的文本；字帖設定頁的「設為預設」也會存到這裡。筆觸、署名等其他設定是全部字帖共用的。' }));
     section('sign').appendChild(MX.Form.signBlock(st, null, null, function () { save(); }));
     var n = section('notes');
     n.appendChild(groupForm('notes'));
