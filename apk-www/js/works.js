@@ -14,6 +14,7 @@
     delTitle: '刪除這份作品？', delDone: '這份作品會從這台裝置刪除，無法復原。要保留的話，請先按「備份」或「匯出」。', delDoing: '這份作品還沒寫完，刪除後無法復原。要保留的話，請先按「備份」。',
     delOk: '刪除', deleted: '已刪除', backupText: '備份這篇文本的全部作品', total: '共 {n} 份'
   };
+  MX.I18n.live(STR);       // read through MX.t each time
   var FILTERS = ['all', 'doing', 'done', 'archived'];
   var cache = {}, order = [];       // thumbnails: key -> canvas
   var queue = [], busy = false;
@@ -106,7 +107,7 @@
     function btn(label, act, fn, primary) { btns.appendChild(h('button', { class: primary ? 'on' : '', 'data-act': act, text: label, onclick: fn })); }
     if (st !== 'archived') btn(STR.cont, 'continue', function () { location.hash = S.hash('practice', c.id); }, true);
     btn(STR.view, 'view', function () { location.hash = S.hash('view', c.id); }, st === 'archived');
-    btn(STR.exp, 'export', function () { S.exportCopy(c).catch(function (er) { MX.err(er); MX.toast('匯出失敗'); }); });
+    btn(STR.exp, 'export', function () { S.exportCopy(c).catch(function (er) { MX.err(er); MX.toast(MX.t('匯出失敗')); }); });
     btn(STR.backup, 'backup', function () { B.save({ copy: c.id }).catch(function (er) { MX.err(er); MX.toast(B.STR.saveFail); }); });
     btn(STR.del, 'delete', async function () {
       var ok = await MX.confirm(st === 'doing' ? STR.delDoing : STR.delDone, STR.delOk, STR.delTitle);
@@ -128,7 +129,7 @@
   // ---- the screen: #/works?f=<all|doing|done|archived>&t=<textId>&p=<page>
   S.works = function (root, query) {
     var q = U.qs(query), st = { p: parseInt(q.p, 10) || 1, f: FILTERS.indexOf(q.f) >= 0 ? q.f : 'all', t: q.t || '' }, pl;
-    var el = U.screen(root, STR.title, '#/', null, [['首頁', '#/'], [STR.title, S.hash('works')]]);
+    var el = U.screen(root, STR.title, '#/', null, [[MX.t('首頁'), '#/'], [STR.title, S.hash('works')]]);
     el.setAttribute('data-screen', 'works');
     function link(s) {
       var a = [];

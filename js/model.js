@@ -12,6 +12,7 @@
     sigDate: 'gz', sigWord: '', sigDizi: true, sigHui: false,
     autoNotes: true, sideNotes: false, strokeTap: true, strokeSpeed: 'mid',
     layoutMode: 'auto', inputMode: 'auto', phoneAuto: true, lowLat: 'auto',
+    uiLang: '',               // interface language (docs/SPEC.md revision 22): 'trad' | 'simp' | 'en'; device-level (kept out of a backup like inputMode); '' = not chosen yet (first start detects it)
     cfgDefault: null          // 新字帖預設: the copy choices (CFG_KEYS) a text that was never started begins with; null = the built-in DEF_CFG
   };
   var DEF_CFG = {
@@ -86,6 +87,8 @@
       if (raw && typeof raw === 'object' && raw.inputMode === undefined) M.settings.inputMode = legacyInput(raw);       // settings written before 書寫工具 (also a backup of an older build)
       if (['auto', 'pen', 'touch'].indexOf(M.settings.inputMode) < 0) M.settings.inputMode = 'auto';       // 書寫工具
       PAD_KEYS.concat(['acceptTouch', 'phoneTouch']).forEach(function (k) { delete M.settings[k]; });
+      // 介面語言 (繁 / 简 / EN): a device with data keeps 繁 as before, a new device follows the browser language
+      M.settings.uiLang = MX.I18n.start(raw && typeof raw === 'object' ? raw.uiLang : undefined, !!raw || Store.keys('copy:').length > 0);
       M.settings.picked = assign({}, M.settings.picked);      // own copy (never the DEF_SETTINGS object)
       if (M.settings.tplStyle === 'dotted') M.settings.tplStyle = 'dots';   // older builds: dotted outline -> halftone dots
       if (MX.Device) MX.Device.apply(); else M.applyEdge();
@@ -428,4 +431,5 @@
       Object.keys(M.copies).forEach(function (id) { if (M.copies[id]._dirty) M.flush(M.copies[id]); });
     }
   };
+  MX.I18n.live(M.FP_STR);       // module-level sentences are read through MX.t each time
 })();

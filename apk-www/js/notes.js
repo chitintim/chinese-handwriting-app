@@ -29,17 +29,17 @@
       var k = p[0], kids = [];
       if (k === 'summary' || k === 'translation' || k === 'background') {
         var t = pick(nt[k], script);
-        if (t) kids.push(h('p', { class: 'ntext', text: t }));
+        if (t) kids.push(h('p', { class: 'ntext', 'data-zh': '', text: t }));
       } else if (k === 'keyLines') {
         (nt.keyLines || []).forEach(function (kl) {
-          kids.push(h('div', { class: 'nitem' }, [h('div', { class: 'nline', text: pick(kl.line, script) }), pick(kl.note, script) ? h('div', { class: 'nnote', text: pick(kl.note, script) }) : null]));
+          kids.push(h('div', { class: 'nitem' }, [h('div', { class: 'nline', 'data-zh': '', text: pick(kl.line, script) }), pick(kl.note, script) ? h('div', { class: 'nnote', 'data-zh': '', text: pick(kl.note, script) }) : null]));
         });
       } else if (k === 'glossary') {
         (nt.glossary || []).forEach(function (g) {
-          kids.push(h('div', { class: 'nitem gl' }, [h('span', { class: 'nterm', text: pick(g.term, script) }), h('span', { class: 'nnote', text: '　' + pick(g.note, script) })]));
+          kids.push(h('div', { class: 'nitem gl', 'data-zh': '' }, [h('span', { class: 'nterm', text: pick(g.term, script) }), h('span', { class: 'nnote', text: '　' + pick(g.note, script) })]));
         });
       }
-      if (kids.length) out.push(h('div', { class: 'npart', 'data-part': k }, [h('h2', { text: p[1] })].concat(kids)));
+      if (kids.length) out.push(h('div', { class: 'npart', 'data-part': k }, [h('h2', { text: MX.t(p[1]) })].concat(kids)));
     });
     return out;
   }
@@ -50,8 +50,8 @@
     var cols = h('div', { class: 'ncols', 'data-role': role + '-cols' });
     view.appendChild(cols);
     el.appendChild(view);
-    var prev = h('button', { 'data-act': 'npage-prev', onclick: function () { go(C.page - 1); } }, [MX.icon('tri-u', 18), '上一頁']);
-    var next = h('button', { 'data-act': 'npage-next', onclick: function () { go(C.page + 1); } }, ['下一頁', MX.icon('tri-d', 18)]);
+    var prev = h('button', { 'data-act': 'npage-prev', onclick: function () { go(C.page - 1); } }, [MX.icon('tri-u', 18), MX.t('上一頁')]);
+    var next = h('button', { 'data-act': 'npage-next', onclick: function () { go(C.page + 1); } }, [MX.t('下一頁'), MX.icon('tri-d', 18)]);
     var ctr = h('div', { class: 'ctr', 'data-role': 'npage-ctr', text: '1 / 1' });
     var pager = h('div', { class: 'pager npager', 'data-role': role + '-pager' }, [prev, ctr, next]);
     el.appendChild(pager);
@@ -105,10 +105,10 @@
     var C = { el: el, listeners: [], page: 0, pages: 1, timer: null };
     cur = C;
     function back() { if (history.length > 1) history.back(); else location.hash = MX.Screens.backFor(textId); }
-    var title = h('h1', { class: 'grow', text: '解說', 'data-role': 'notes-title' });
-    el.appendChild(h('div', { class: 'topbar' }, [h('button', { text: done ? '返回書寫' : '返回', class: 'backbtn', 'data-act': 'back', onclick: function () {
+    var title = h('h1', { class: 'grow', text: MX.t('解說'), 'data-role': 'notes-title' });
+    el.appendChild(h('div', { class: 'topbar' }, [h('button', { text: done ? MX.t('返回書寫') : MX.t('返回'), class: 'backbtn', 'data-act': 'back', onclick: function () {
       if (done && copy) location.hash = MX.Screens.hash('practice', copy.id); else back();
-    } }), title]));
+    } }), title, MX.langToggle()]));
     var pg = paged(el, C, 'notes'), cols = pg.cols, go = pg.go, repage = pg.repage;
 
     var nt = null, text = null, failure = '';
@@ -116,38 +116,38 @@
     if (cur !== C) return;
     var sec = text ? text.sections.filter(function (s) { return s.id === sectionId; })[0] : null;
     var ttl = text ? pick(text.title, script) + (sec && text.sections.length > 1 ? ' · ' + pick(sec.title, script) : '') : pick(entry.title, script);
-    title.textContent = '解說 · ' + ttl;
-    cols.appendChild(h('h1', { class: 'ntitle', text: ttl }));
+    title.textContent = MX.t('解說 · {title}', { title: ttl });
+    cols.appendChild(h('h1', { class: 'ntitle', 'data-zh': '', text: ttl }));
     if (done) {
       var n = Model.doneCount(textId, Model.sid(copy));
-      cols.appendChild(h('div', { class: 'ndone', 'data-role': 'notes-done', text: '圓滿完成！這是第 ' + n + ' 遍，用時約 ' + MX.fmtDuration(copy.activeMs) + '。' }));
+      cols.appendChild(h('div', { class: 'ndone', 'data-role': 'notes-done', text: MX.t('圓滿完成！這是第 {n} 遍，用時約 {time}。', { n: n, time: MX.fmtDuration(copy.activeMs) }) }));
     }
     if (!nt) {
-      cols.appendChild(h('p', { class: 'ntext', 'data-role': 'notes-empty', text: failure ? '無法載入解說：' + failure : '這一章還沒有解說。' }));
+      cols.appendChild(h('p', { class: 'ntext', 'data-role': 'notes-empty', text: failure ? MX.t('無法載入解說：{msg}', { msg: failure }) : MX.t('這一章還沒有解說。') }));
     } else {
       buildBlocks(nt, script).forEach(function (b) { cols.appendChild(b); });
     }
     if (done) {
       var secs = text ? text.sections.map(function (s) { return s.id; }) : [], at = secs.indexOf(Model.sid(copy)), nextSec = at >= 0 && at < secs.length - 1 ? secs[at + 1] : null;
       var acts = h('div', { class: 'btnrow nacts', 'data-role': 'notes-actions' });
-      if (nextSec) acts.appendChild(h('button', { class: 'on', text: '下一章', 'data-act': 'nextsec', onclick: function () {
+      if (nextSec) acts.appendChild(h('button', { class: 'on', text: MX.t('下一章'), 'data-act': 'nextsec', onclick: function () {
         var nc = Model.resumable(textId, nextSec);
         location.hash = nc ? MX.Screens.hash('practice', nc.id) : MX.Screens.hash('setup', textId, nextSec);
       } }));
-      acts.appendChild(h('button', { text: '匯出作品', 'data-act': 'export', onclick: async function () {
+      acts.appendChild(h('button', { text: MX.t('匯出作品'), 'data-act': 'export', onclick: async function () {
         var v = await Lib.getView(textId, Model.sid(copy));
         Model.loadInk(copy); Model.upgradeKeys(copy, v);
         MX.Export.openSheet(MX.Export.ctx(copy, v, MX.Layout.cellsFor(v, copy)));
       } }));
-      acts.appendChild(h('button', { text: '新抄一遍', 'data-act': 'newcopy', onclick: async function () {
-        var ok = await MX.confirm('將目前這一遍存檔，重新開始新的一遍？', '新抄一遍', '新抄一遍');
+      acts.appendChild(h('button', { text: MX.t('新抄一遍'), 'data-act': 'newcopy', onclick: async function () {
+        var ok = await MX.confirm(MX.t('將目前這一遍存檔，重新開始新的一遍？'), MX.t('新抄一遍'), MX.t('新抄一遍'));
         if (!ok) return;
         Model.archive(copy);
         location.replace(MX.Screens.hash('setup', textId, Model.sid(copy), 'new=1'));
       } }));
       cols.appendChild(acts);
     }
-    if (nt && nt.disclaimer) cols.appendChild(h('p', { class: 'ndisc', 'data-role': 'notes-disclaimer', text: pick(nt.disclaimer, script) }));
+    if (nt && nt.disclaimer) cols.appendChild(h('p', { class: 'ndisc', 'data-zh': '', 'data-role': 'notes-disclaimer', text: pick(nt.disclaimer, script) }));
     C.script = script;
     repage();
     go(Math.max(0, parseInt(q.p, 10) - 1 || 0));
@@ -162,29 +162,31 @@
   var WM = 'https://www.wm.org.hk/';
   N.LINKS = { github: GITHUB, dana: DANA, wm: WM };
   function ext(act, href, text, cls) { return h('a', { class: cls || 'btnlink', 'data-act': act, href: href, target: '_blank', rel: 'noopener', text: text }); }
+  // a Chinese paragraph of the letter: the English text says the same, so the English interface leaves it out ('' in the table)
+  function zhP(key) { var t = MX.t(key); return t ? h('p', { class: 'ntext', lang: 'zh', text: t }) : null; }
   function aboutBlocks() {
     return [
       h('div', { class: 'npart', 'data-part': 'hey' }, [
         h('h2', { text: 'Hey, it\'s Tim 👋' }),
-        h('p', { class: 'ntext', text: 'I vibe-coded this while spending a lot of time sitting with my mom in hospital. She\'s been a devoted Buddhist for a very long time (皈依 many years ago), and 抄心經 is close to her heart. I wouldn\'t call myself a Buddhist, more someone slowly learning about it, and this gave me something calm to do while I\'m here.' }),
-        h('p', { class: 'ntext', text: 'A few months ago I\'d got her an e-ink tablet for reading, and sitting beside her it became my 抄經 tablet. It started as "I just want a nice way to 抄心經 on this" and, well, it grew a bit. 😅' }),
-        h('p', { class: 'ntext', text: '嗨，我是 Tim。這個小工具，是我在醫院陪媽媽的日子裡慢慢做出來的。媽媽是虔誠的佛教徒，很多年前已經皈依；我自己不算是佛教徒，只是在慢慢學習。幾個月前買給媽媽看書的電子墨水平板，後來成了我在她身邊抄經的字帖。' })
+        h('p', { class: 'ntext', text: MX.t('I vibe-coded this while spending a lot of time sitting with my mom in hospital. She\'s been a devoted Buddhist for a very long time (皈依 many years ago), and 抄心經 is close to her heart. I wouldn\'t call myself a Buddhist, more someone slowly learning about it, and this gave me something calm to do while I\'m here.') }),
+        h('p', { class: 'ntext', text: MX.t('A few months ago I\'d got her an e-ink tablet for reading, and sitting beside her it became my 抄經 tablet. It started as "I just want a nice way to 抄心經 on this" and, well, it grew a bit. 😅') }),
+        zhP('嗨，我是 Tim。這個小工具，是我在醫院陪媽媽的日子裡慢慢做出來的。媽媽是虔誠的佛教徒，很多年前已經皈依；我自己不算是佛教徒，只是在慢慢學習。幾個月前買給媽媽看書的電子墨水平板，後來成了我在她身邊抄經的字帖。')
       ]),
       h('div', { class: 'npart', 'data-part': 'donate' }, [
-        h('h2', { text: '隨喜 · If you like this app' }),
+        h('h2', { text: MX.t('隨喜 · If you like this app') }),
         h('p', { class: 'ntext', text: 'It\'s free and always will be. If it brings you something, please consider a kind donation to one of these:' }),
         h('div', { class: 'nitem aitem', 'data-role': 'donate-dana' }, [
           h('p', { class: 'ntext', text: 'Dana-Farber Cancer Institute (Boston) — Mom has been fighting ovarian cancer, and we spent a couple of months at Dana-Farber. You can direct your gift to the Gynecologic Oncology Program.' }),
           ext('donate-dana', DANA, 'Dana-Farber · Donate')
         ]),
         h('div', { class: 'nitem aitem', 'data-role': 'donate-wm' }, [
-          h('p', { class: 'ntext', text: '西方寺 Western Monastery (荃灣, Hong Kong) — where Mom spent so much of her time 禮佛. If you\'re ever in Hong Kong, it\'s a beautiful, peaceful place to visit; 隨喜 there in person if you like.' }),
-          ext('donate-wm', WM, '西方寺 · 網站'),
+          h('p', { class: 'ntext', 'data-zh': '', text: MX.t('西方寺 Western Monastery (荃灣, Hong Kong) — where Mom spent so much of her time 禮佛. If you\'re ever in Hong Kong, it\'s a beautiful, peaceful place to visit; 隨喜 there in person if you like.') }),
+          ext('donate-wm', WM, MX.t('西方寺 · 網站')),
           h('p', { class: 'ntext', text: '(852) 2411 5111' })
         ]),
-        h('p', { class: 'ntext', text: '如果這個小工具對你有幫助，歡迎隨喜捐助以上機構。🙏' })
+        zhP('如果這個小工具對你有幫助，歡迎隨喜捐助以上機構。🙏')
       ]),
-      h('div', { class: 'nitem aitem', 'data-role': 'about-github' }, [ext('about-github', GITHUB, '完整介紹 · GitHub')])
+      h('div', { class: 'nitem aitem', 'data-role': 'about-github' }, [ext('about-github', GITHUB, MX.t('完整介紹 · GitHub'))])
     ];
   }
   N.aboutBlocks = aboutBlocks;
@@ -194,20 +196,21 @@
     privacy: '私隱：你寫的字只存在這部裝置。開啟時會匿名計一次到訪（GoatCounter，不用 cookie），只是想知道值不值得繼續花心思維護。瀏覽器設定「不追蹤」時不計。',
     stroke: '筆順資料：hanzi-writer-data／Make Me a Hanzi（取自文鼎 Arphic 字型，Arphic Public License，授權全文在 library/strokes/LICENSE）。筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。'
   };
+  MX.I18n.live(N.CREDITS);
 
   // ------------------------------------------------------------------ 對照模式 strip (practice view): 要旨 + glossary of the current section, as much as fits
   // box = the strip element (flex column, fixed size by CSS). more() opens the full page.
   N.fillStrip = function (box, nsec, script, more) {
     box.innerHTML = '';
-    var head = h('div', { class: 'shead2' }, [h('span', { class: 'sh', text: '對照 · 解說' }), h('button', { text: '全文', 'data-act': 'notes-open', onclick: more })]);
+    var head = h('div', { class: 'shead2' }, [h('span', { class: 'sh', text: MX.t('對照 · 解說') }), h('button', { text: MX.t('全文'), 'data-act': 'notes-open', onclick: more })]);
     var body = h('div', { class: 'sbody', 'data-role': 'strip-body', style: 'font-family:' + MX.Draw.uiFam(script) });
     box.appendChild(head); box.appendChild(body);
-    if (!nsec) { body.appendChild(h('p', { class: 'ntext', text: '沒有解說。' })); return; }
+    if (!nsec) { body.appendChild(h('p', { class: 'ntext', text: MX.t('沒有解說。') })); return; }
     var sum = pick(nsec.summary, script);
-    if (sum) body.appendChild(h('div', { class: 'ssum', text: sum }));
+    if (sum) body.appendChild(h('div', { class: 'ssum', 'data-zh': '', text: sum }));
     var items = [];
     (nsec.glossary || []).forEach(function (g) {
-      var it = h('div', { class: 'sgl' }, [h('span', { class: 'nterm', text: pick(g.term, script) }), h('span', { text: '　' + pick(g.note, script) })]);
+      var it = h('div', { class: 'sgl', 'data-zh': '' }, [h('span', { class: 'nterm', text: pick(g.term, script) }), h('span', { text: '　' + pick(g.note, script) })]);
       body.appendChild(it); items.push(it);
     });
     // no scrolling: drop glossary entries from the end until everything fits, then the summary is shortened

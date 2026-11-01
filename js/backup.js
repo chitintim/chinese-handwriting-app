@@ -49,6 +49,7 @@
     noReplaceEmpty: '這份備份裡沒有任何作品，不能用來取代這台裝置的資料（會把你的作品清空）。',
     badTitle: '略過的資料', done: '完成', viewWorks: '查看我的作品', importFail: '匯入失敗：{why}'
   };
+  MX.I18n.live(STR, ['file', 'fileFull', 'fileText', 'fileCopy']);       // read through MX.t each time; the file names stay Chinese in every language
 
   // ---- entry validation: what a backup may hold, by key pattern and type
   var ID = '[\\w.-]{1,100}';
@@ -63,28 +64,28 @@
   // null = fine, else why the entry is skipped
   function check(key, v) {
     var m;
-    if (/(^|:)__proto__(:|$)/.test(key)) return '不認識的資料';
-    if (KEY.schema.test(key)) return isNum(v) ? null : '版本號不是數字';
-    if (KEY.settings.test(key)) return isObj(v) ? null : '設定格式不對';
+    if (/(^|:)__proto__(:|$)/.test(key)) return MX.t('不認識的資料');
+    if (KEY.schema.test(key)) return isNum(v) ? null : MX.t('版本號不是數字');
+    if (KEY.settings.test(key)) return isObj(v) ? null : MX.t('設定格式不對');
     if ((m = KEY.copy.exec(key))) {
-      if (!isObj(v)) return '作品資料格式不對';
-      if (v.id !== m[1]) return '作品編號與資料不符';
-      if (typeof v.textId !== 'string' || !v.textId) return '作品缺少文本';
-      if (v.status !== 'active' && v.status !== 'archived') return '作品狀態不明';
-      if (!optNum(v.createdAt) || !optNum(v.updatedAt) || !optNum(v.completedAt) || !optNum(v.archivedAt) || !optNum(v.filled) || !optNum(v.total)) return '作品的數字欄位不對';
-      if (v.cfg !== undefined && v.cfg !== null && !isObj(v.cfg)) return '作品選項格式不對';
+      if (!isObj(v)) return MX.t('作品資料格式不對');
+      if (v.id !== m[1]) return MX.t('作品編號與資料不符');
+      if (typeof v.textId !== 'string' || !v.textId) return MX.t('作品缺少文本');
+      if (v.status !== 'active' && v.status !== 'archived') return MX.t('作品狀態不明');
+      if (!optNum(v.createdAt) || !optNum(v.updatedAt) || !optNum(v.completedAt) || !optNum(v.archivedAt) || !optNum(v.filled) || !optNum(v.total)) return MX.t('作品的數字欄位不對');
+      if (v.cfg !== undefined && v.cfg !== null && !isObj(v.cfg)) return MX.t('作品選項格式不對');
       return null;
     }
     if (KEY.ink.test(key)) {
-      if (!Array.isArray(v)) return '字跡格式不對';
-      for (var i = 0; i < v.length; i++) if (!Array.isArray(v[i]) && !isObj(v[i])) return '字跡格式不對';
+      if (!Array.isArray(v)) return MX.t('字跡格式不對');
+      for (var i = 0; i < v.length; i++) if (!Array.isArray(v[i]) && !isObj(v[i])) return MX.t('字跡格式不對');
       return null;
     }
-    if (KEY.done.test(key)) return isObj(v) && typeof v.textId === 'string' && v.textId ? null : '完成紀錄格式不對';
-    if (KEY.fav.test(key)) return isObj(v) && typeof v.textId === 'string' && v.textId ? null : '收藏格式不對';
-    if ((m = KEY.custom.exec(key))) return isObj(v) && v.id === m[1] && typeof v.title === 'string' && typeof v.body === 'string' ? null : '自訂文本格式不對';
-    if (KEY.textcfg.test(key)) return isObj(v) ? null : '文本選項格式不對';
-    return '不認識的資料';
+    if (KEY.done.test(key)) return isObj(v) && typeof v.textId === 'string' && v.textId ? null : MX.t('完成紀錄格式不對');
+    if (KEY.fav.test(key)) return isObj(v) && typeof v.textId === 'string' && v.textId ? null : MX.t('收藏格式不對');
+    if ((m = KEY.custom.exec(key))) return isObj(v) && v.id === m[1] && typeof v.title === 'string' && typeof v.body === 'string' ? null : MX.t('自訂文本格式不對');
+    if (KEY.textcfg.test(key)) return isObj(v) ? null : MX.t('文本選項格式不對');
+    return MX.t('不認識的資料');
   }
 
   var B = MX.Backup = {
@@ -98,8 +99,8 @@
       var all = Store.exportAll(), entries = {}, tid = null, info = null;
       if (!scope) {
         Object.keys(all).forEach(function (k) { entries[k] = all[k]; });
-        // 書寫工具 describes this device (touch or pen): a backup does not carry it (see replace / merge)
-        if (isObj(entries.settings)) { entries.settings = Object.assign({}, entries.settings); delete entries.settings.inputMode; }
+        // 書寫工具 describes this device (touch or pen) and 介面語言 is this device's own choice: a backup does not carry them (see replace / merge)
+        if (isObj(entries.settings)) { entries.settings = Object.assign({}, entries.settings); delete entries.settings.inputMode; delete entries.settings.uiLang; }
       } else {
         var ids = {};
         if (scope.copy) { var c0 = Model.copies[scope.copy]; if (c0) { ids[c0.id] = 1; tid = c0.textId; info = { copy: c0.id, text: tid, no: MX.Export.writingNo(c0) }; } }
@@ -150,7 +151,7 @@
         r = await rd.read();
         if (r.done) break;
         n += r.value.length;
-        if (n > LIMIT.text) { try { await rd.cancel(); } catch (e) { /* ignore */ } throw new Error(MX.fmt(STR.tooBigInflated, { mb: Math.round(LIMIT.text / 1048576) })); }
+        if (n > LIMIT.text) { try { await rd.cancel(); } catch (e) { /* ignore */ } var er = new Error(MX.fmt(STR.tooBigInflated, { mb: Math.round(LIMIT.text / 1048576) })); er.tooBig = true; throw er; }
         parts.push(r.value);
       }
       var all = new Uint8Array(n), at = 0;
@@ -179,7 +180,10 @@
       }
       return { blob: plain, name: B.fileName(w, false), mime: 'application/json', compressed: false, plainBytes: plain.size, bytes: plain.size };
     },
-    savedOk: function (st) { return /^(已儲存|已下載|已分享)/.test(String(st || '')); },
+    savedOk: function (st) {      // the status is in the interface language (the APK bridge too): compare with the start of each message in all three
+      var s = String(st || '');
+      return ['已儲存', '已下載', '已分享'].some(function (k) { return MX.I18n.all(k).some(function (p) { return s.indexOf(p) === 0; }); });
+    },
     noteSaved: function (w) {
       var rec = { ts: B.now(), n: w.counts ? w.counts.copies : 0, kind: w.kind };
       if (w.kind === 'full') Store.set('sys:lastBackup', rec); else Store.set('sys:lastPartial', rec);
@@ -219,7 +223,7 @@
       var bytes = src instanceof Uint8Array ? src : await B.readBytes(src), text;
       if (bytes.length > 2 && bytes[0] === 0x1f && bytes[1] === 0x8b) {
         if (!B.canDecompress()) throw new Error(STR.noGzip);
-        try { text = await B.gunzip(bytes); } catch (e) { if (/太大/.test(e.message)) throw e; throw new Error(STR.notJson); }
+        try { text = await B.gunzip(bytes); } catch (e) { if (e.tooBig) throw e; throw new Error(STR.notJson); }
       } else {
         if (bytes.length > LIMIT.text) throw new Error(MX.fmt(STR.tooBig, { mb: Math.round(LIMIT.text / 1048576) }));
         text = new TextDecoder('utf-8').decode(bytes);
@@ -241,7 +245,7 @@
       });
       pend.forEach(function (k) {      // an ink entry needs the copy it belongs to in the same file
         var m = KEY.ink.exec(k);
-        if (copies[m[1]]) valid[k] = w.entries[k]; else bad.push({ key: k, why: '找不到這筆字跡的作品' });
+        if (copies[m[1]]) valid[k] = w.entries[k]; else bad.push({ key: k, why: MX.t('找不到這筆字跡的作品') });
       });
       var counts = B.count(valid);
       return { wrapper: w, kind: w.kind === 'partial' ? 'partial' : 'full', version: w.version || 1, date: w.exportedAt || '', libVersion: w.libVersion, scope: w.scope || null,
@@ -353,6 +357,7 @@
         if (opts.settings && isObj(V.settings)) {
           var st = Object.assign({}, Store.get('settings') || {}, V.settings);
           if (Model.settings && Model.settings.inputMode) st.inputMode = Model.settings.inputMode;       // this device's own choice
+          if (Model.settings && Model.settings.uiLang) st.uiLang = Model.settings.uiLang;
           put('settings', st);
           rpt.settings = true;
         }
@@ -378,12 +383,15 @@
       if (rep.kind === 'partial') throw new Error(STR.replaceOnlyFull);
       var here = B.workCount();
       if (!Object.keys(rep.valid).length || (rep.counts.copies === 0 && here > 0)) throw new Error(STR.noReplaceEmpty);
-      var keep = Model.settings && Model.settings.inputMode, old = Store.exportAll(), valid = Object.assign({}, rep.valid);
+      var keep = Model.settings && Model.settings.inputMode, keepLang = Model.settings && Model.settings.uiLang, old = Store.exportAll(), valid = Object.assign({}, rep.valid);
+      if (isObj(valid.settings)) { valid.settings = Object.assign({}, valid.settings); delete valid.settings.uiLang; }
       Object.keys(valid).forEach(function (k) { if (KEY.copy.test(k)) valid[k] = B.markFp(Object.assign({}, valid[k]), rep); });
       try {
         Store.importAll(valid);
         B.reload();
-        if (keep) { Model.settings.inputMode = keep; Model.saveSettings(); }
+        if (keep) Model.settings.inputMode = keep;
+        if (keepLang) { Model.settings.uiLang = keepLang; MX.I18n.apply(keepLang); }
+        if (keep || keepLang) Model.saveSettings();
       } catch (e) {
         try { Store.importAll(old); B.reload(); } catch (e2) { MX.err(e2); }
         e.restored = true;

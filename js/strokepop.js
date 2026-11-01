@@ -16,10 +16,10 @@
     close();
     var P = { nav: o.nav ? { cells: o.nav.cells, idx: o.nav.idx } : null, tok: 0, ch: o.ch, script: o.script === 'simp' ? 'simp' : 'trad', rec: null, n: 0, part: null, mode: 'idle', i: 0, k: 0, steps: 0, redraws: 0, ovPage: 0, timer: null, size: 200, dpr: 1, cv: null, status: null, state: 'loading' };
     var body = h('div', { class: 'spbody', 'data-role': 'stroke-body' });
-    var titleEl = h('h2', { class: 'grow', text: '筆順 · ' + P.ch, 'data-role': 'stroke-title' });
+    var titleEl = h('h2', { class: 'grow', text: MX.t('筆順 · {ch}', { ch: P.ch }), 'data-role': 'stroke-title', 'data-zh': '' });
     var api = MX.modal({
       body: [h('div', { class: 'sheethead' }, [titleEl,
-        h('button', { class: 'on', text: '關閉', 'data-act': 'close', onclick: function () { close(); } })]), body],
+        h('button', { class: 'on', text: MX.t('關閉'), 'data-act': 'close', onclick: function () { close(); } })]), body],
       onClose: function () { stopTimer(); document.removeEventListener('keydown', onKey, true); window.removeEventListener('mo-key', onMoKey); if (cur === P) cur = null; if (o.onClose) o.onClose(); }
     });
     api.el.className += ' sheet stroke-pop';
@@ -35,8 +35,8 @@
     }
     function statusText() {
       var N = P.rec.n;
-      if (P.mode === 'anim') return '第 ' + Math.min(P.i + 1, N) + ' / ' + N + ' 畫';
-      return '共 ' + N + ' 畫' + (P.n > 0 && P.n < N ? ' · 已看 ' + P.n : '');
+      if (P.mode === 'anim') return MX.t('第 {i} / {n} 畫', { i: Math.min(P.i + 1, N), n: N });
+      return P.n > 0 && P.n < N ? MX.t('共 {n} 畫 · 已看 {seen}', { n: N, seen: P.n }) : MX.t('共 {n} 畫', { n: N });
     }
     function syncUi() {
       if (P.status) P.status.textContent = statusText();
@@ -94,16 +94,16 @@
           var c = h('canvas', { style: 'width:' + fs + 'px;height:' + fs + 'px' });
           c.width = Math.round(fs * P.dpr); c.height = Math.round(fs * P.dpr);
           St.draw(c.getContext('2d'), P.rec, fs, { dpr: P.dpr, done: kk, marks: false, script: P.script });
-          row.appendChild(h('button', { type: 'button', class: 'spf', 'data-act': 'frame', 'data-k': String(kk), title: '第 ' + kk + ' 畫', onclick: function () { remember('step'); toStatic(kk); } },
+          row.appendChild(h('button', { type: 'button', class: 'spf', 'data-act': 'frame', 'data-k': String(kk), title: MX.t('第 {n} 畫', { n: kk }), onclick: function () { remember('step'); toStatic(kk); } },
             [c, h('div', { class: 'cap', text: caption(kk) })]));
         })(k);
       }
       var box = h('div', { 'data-role': 'stroke-overview', 'data-page': String(P.ovPage), 'data-pages': String(pages) }, [row]);
       if (pages > 1) {
         box.appendChild(h('div', { class: 'btnrow spov' }, [
-          MX.btn({ label: '上頁', icon: 'tri-l', act: 'ov-prev', disabled: P.ovPage <= 0, onclick: function () { P.ovPage--; build(); } }),
+          MX.btn({ label: MX.t('上頁'), icon: 'tri-l', act: 'ov-prev', disabled: P.ovPage <= 0, onclick: function () { P.ovPage--; build(); } }),
           h('div', { class: 'ctr', 'data-role': 'ov-ctr', text: (P.ovPage + 1) + ' / ' + pages }),
-          MX.btn({ label: '下頁', icon: 'tri-r', iconRight: true, act: 'ov-next', disabled: P.ovPage >= pages - 1, onclick: function () { P.ovPage++; build(); } })
+          MX.btn({ label: MX.t('下頁'), icon: 'tri-r', iconRight: true, act: 'ov-next', disabled: P.ovPage >= pages - 1, onclick: function () { P.ovPage++; build(); } })
         ]));
       }
       return box;
@@ -113,10 +113,10 @@
       P.cv = null; P.status = null;
       var nb = navBox();
       if (nb) body.appendChild(nb);
-      if (P.state === 'loading') { body.appendChild(h('p', { text: '載入中…', 'data-role': 'stroke-loading' })); return; }
+      if (P.state === 'loading') { body.appendChild(h('p', { text: MX.t('載入中…'), 'data-role': 'stroke-loading' })); return; }
       if (P.state !== 'ok') {
         body.appendChild(h('p', { class: 'spnodata', 'data-role': P.state === 'nodata' ? 'stroke-nodata' : 'stroke-error', text: P.state === 'nodata'
-          ? '找不到「' + P.ch + '」的筆順資料。' : '筆順資料無法載入（離線且尚未下載過？）。連上網路後再試一次。' }));
+          ? MX.t('找不到「{ch}」的筆順資料。', { ch: P.ch }) : MX.t('筆順資料無法載入（離線且尚未下載過？）。連上網路後再試一次。') }));
         return;
       }
       P.dpr = dprNow();
@@ -126,20 +126,20 @@
       P.cv.width = Math.round(P.size * P.dpr); P.cv.height = Math.round(P.size * P.dpr);
       body.appendChild(P.status);
       body.appendChild(P.cv);
-      var sp = MX.Form.seg([['slow', '慢'], ['mid', '中'], ['fast', '快']], SPEEDS[settings().strokeSpeed] ? settings().strokeSpeed : 'mid', function (v) {
+      var sp = MX.Form.seg([['slow', MX.t('慢')], ['mid', MX.t('中')], ['fast', MX.t('快')]], SPEEDS[settings().strokeSpeed] ? settings().strokeSpeed : 'mid', function (v) {
         settings().strokeSpeed = v; MX.Model.saveSettings();
         if (P.mode === 'anim') { stopTimer(); schedule(); }
       });
       sp.setAttribute('data-role', 'speed');
       body.appendChild(h('div', { class: 'spctl' }, [
-        h('button', { type: 'button', text: '重播', 'data-act': 'replay', onclick: function () { remember('anim'); play(); } }),
-        h('div', { class: 'sprow' }, [h('span', { class: 'lbl', text: '逐筆' }),
-          MX.btn({ label: '上一筆', icon: 'tri-l', act: 'step-prev', onclick: function () { remember('step'); toStatic(prevTarget()); } }),
-          MX.btn({ label: '下一筆', icon: 'tri-r', iconRight: true, act: 'step-next', onclick: function () { remember('step'); toStatic(P.n + 1); } })]),
-        h('div', { class: 'sprow' }, [h('span', { class: 'lbl', text: '速度' }), sp])
+        h('button', { type: 'button', text: MX.t('重播'), 'data-act': 'replay', onclick: function () { remember('anim'); play(); } }),
+        h('div', { class: 'sprow' }, [h('span', { class: 'lbl', text: MX.t('逐筆') }),
+          MX.btn({ label: MX.t('上一筆'), icon: 'tri-l', act: 'step-prev', onclick: function () { remember('step'); toStatic(prevTarget()); } }),
+          MX.btn({ label: MX.t('下一筆'), icon: 'tri-r', iconRight: true, act: 'step-next', onclick: function () { remember('step'); toStatic(P.n + 1); } })]),
+        h('div', { class: 'sprow' }, [h('span', { class: 'lbl', text: MX.t('速度') }), sp])
       ]));
       body.appendChild(frames());
-      body.appendChild(h('div', { class: 'note', 'data-role': 'stroke-note', text: '筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。資料：Make Me a Hanzi／文鼎字型（Arphic Public License）。' }));
+      body.appendChild(h('div', { class: 'note', 'data-role': 'stroke-note', text: MX.t('筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。資料：Make Me a Hanzi／文鼎字型（Arphic Public License）。') }));
       paint(); syncUi();
     }
 
@@ -148,15 +148,15 @@
     function navBox() {
       var nv = P.nav;
       if (!nv) return null;
-      var N = nv.cells.length, i = nv.idx, j, ctx = h('div', { class: 'spctx', 'data-role': 'stroke-ctx', style: 'font-family:' + MX.Draw.uiFam(P.script) });
-      var prev = MX.btn({ label: '上一字', icon: 'tri-l', act: 'char-prev', iconSize: 18, onclick: function () { stepChar(-1); } });
-      var next = MX.btn({ label: '下一字', icon: 'tri-r', iconRight: true, act: 'char-next', iconSize: 18, onclick: function () { stepChar(1); } });
+      var N = nv.cells.length, i = nv.idx, j, ctx = h('div', { class: 'spctx', 'data-role': 'stroke-ctx', 'data-zh': '', style: 'font-family:' + MX.Draw.uiFam(P.script) });
+      var prev = MX.btn({ label: MX.t('上一字'), icon: 'tri-l', act: 'char-prev', iconSize: 18, onclick: function () { stepChar(-1); } });
+      var next = MX.btn({ label: MX.t('下一字'), icon: 'tri-r', iconRight: true, act: 'char-next', iconSize: 18, onclick: function () { stepChar(1); } });
       prev.disabled = i <= 0; next.disabled = i >= N - 1;
-      prev.setAttribute('aria-label', '上一字'); next.setAttribute('aria-label', '下一字');
+      prev.setAttribute('aria-label', MX.t('上一字')); next.setAttribute('aria-label', MX.t('下一字'));
       for (j = Math.max(0, i - 2); j <= Math.min(N - 1, i + 2); j++) ctx.appendChild(h('span', { class: j === i ? 'cur' : '', text: nv.cells[j].ch }));
       return h('div', { class: 'spnav', 'data-role': 'stroke-nav' }, [
         h('div', { class: 'sprow big' }, [prev, next]),
-        h('div', { class: 'sprow pos' }, [h('div', { class: 'sppos', 'data-role': 'stroke-pos', text: '第 ' + (i + 1) + ' / ' + N + ' 字' }), ctx])
+        h('div', { class: 'sprow pos' }, [h('div', { class: 'sppos', 'data-role': 'stroke-pos', text: MX.t('第 {i} / {n} 字', { i: i + 1, n: N }) }), ctx])
       ]);
     }
     function start() { if (settings().strokeMode === 'step') toStatic(P.rec.n); else play(); }
@@ -164,7 +164,7 @@
       stopTimer();
       var tok = ++P.tok;
       P.ch = ch; P.rec = null; P.state = 'loading'; P.n = 0; P.part = null; P.mode = 'idle'; P.i = 0; P.ovPage = 0;
-      titleEl.textContent = '筆順 · ' + ch;
+      titleEl.textContent = MX.t('筆順 · {ch}', { ch: ch });
       build();
       St.get(ch).then(function (rec) {
         if (cur !== P || tok !== P.tok) return;

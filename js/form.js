@@ -42,6 +42,7 @@
       { k: 'autoNext', label: '翻頁鈕', opts: ONOFF },
       { k: 'edgeBottom', label: '邊緣留白 下', opts: [['0', '0%'], ['2', '2%'], ['3.5', '3.5%'], ['5', '5%'], ['8', '8%']] },
       { k: 'edgeSide', label: '邊緣留白 左右上', opts: [['0', '0%'], ['1', '1%'], ['2', '2%'], ['3', '3%']] },
+      { k: 'uiLang', label: '介面語言', lang: true, opts: [['trad', '繁體中文'], ['simp', '简体中文'], ['en', 'English']] },
       { k: 'libScript', label: '文庫顯示', opts: [['trad', '繁體'], ['simp', '简体']] },
       { k: 'autoNotes', label: '完成後顯示解說', opts: ONOFF },
       { k: 'sideNotes', label: '對照模式', opts: ONOFF }
@@ -59,7 +60,7 @@
       { id: 'flip', title: '翻頁', keys: ['autoFlip', 'phoneAuto', 'flipDelay', 'autoNext'] },
       { id: 'sign', title: '署名落款', keys: [], custom: 'sign' },
       { id: 'notes', title: '解說', keys: ['autoNotes', 'sideNotes'] },
-      { id: 'display', title: '顯示', keys: ['screenType', 'layoutMode', 'libScript'], adv: { keys: ['edgeBottom', 'edgeSide', 'perf'] } },
+      { id: 'display', title: '顯示', keys: ['uiLang', 'screenType', 'layoutMode', 'libScript'], adv: { keys: ['edgeBottom', 'edgeSide', 'perf'] } },
       { id: 'data', title: '資料', keys: [] },
       { id: 'about', title: '關於', keys: [] }
     ],
@@ -81,26 +82,26 @@
     // onChange(k) after every change. Date = the copy's start date, fixed when the copy was made.
     signBlock: function (st, cfg, buddhist, onChange) {
       var box = h('div', { 'data-role': 'sign-block' }), ch = function (k) { if (onChange) onChange(k); };
-      var inp = h('input', { type: 'text', value: st.name || '', placeholder: '輸入姓名（落款與印章用）', maxlength: '20', 'data-role': 'name',
+      var inp = h('input', { type: 'text', value: st.name || '', placeholder: MX.t('輸入姓名（落款與印章用）'), maxlength: '20', 'data-role': 'name',
         oninput: function () { st.name = inp.value; ch('name'); } });
-      box.appendChild(F.row('署名', inp, 'name'));
-      if (cfg) box.appendChild(F.row('落款', F.seg(ONOFF, cfg.sign !== false, function (v) { cfg.sign = v; ch('sign'); }), 'sign'));
-      box.appendChild(F.row('日期', F.seg([['gz', '干支年'], ['ce', '公元年'], ['none', '不寫']], st.sigDate || 'gz', function (v) { st.sigDate = v; ch('sigDate'); }), 'sigDate'));
-      var words = buddhist === true ? [['jing', '敬書'], ['lu', '恭錄'], ['mu', '沐手敬書']] : (buddhist === false ? [['shu', '書'], ['lin', '臨']] :
-        [['jing', '敬書'], ['lu', '恭錄'], ['mu', '沐手敬書'], ['shu', '書'], ['lin', '臨']]);
+      box.appendChild(F.row(MX.t('署名'), inp, 'name'));
+      if (cfg) box.appendChild(F.row(MX.t('落款'), F.seg(ONOFF, cfg.sign !== false, function (v) { cfg.sign = v; ch('sign'); }), 'sign'));
+      box.appendChild(F.row(MX.t('日期'), F.seg([['gz', MX.t('干支年')], ['ce', MX.t('公元年')], ['none', MX.t('不寫')]], st.sigDate || 'gz', function (v) { st.sigDate = v; ch('sigDate'); }), 'sigDate'));
+      var words = buddhist === true ? [['jing', MX.t('敬書')], ['lu', MX.t('恭錄')], ['mu', MX.t('沐手敬書')]] : (buddhist === false ? [['shu', MX.t('書')], ['lin', MX.t('臨')]] :
+        [['jing', MX.t('敬書')], ['lu', MX.t('恭錄')], ['mu', MX.t('沐手敬書')], ['shu', MX.t('書')], ['lin', MX.t('臨')]]);
       var cur = words.some(function (w) { return w[0] === st.sigWord; }) ? st.sigWord : words[0][0];
-      box.appendChild(F.row(buddhist === false ? '署款' : '敬語', F.seg(words, cur, function (v) { st.sigWord = v; ch('sigWord'); }), 'sigWord'));
+      box.appendChild(F.row(buddhist === false ? MX.t('署款') : MX.t('敬語'), F.seg(words, cur, function (v) { st.sigWord = v; ch('sigWord'); }), 'sigWord'));
       if (buddhist !== false) {
-        box.appendChild(F.row('弟子', F.seg(ONOFF, st.sigDizi !== false, function (v) { st.sigDizi = v; ch('sigDizi'); }), 'sigDizi'));
-        box.appendChild(F.row('迴向偈', F.seg(ONOFF, !!st.sigHui, function (v) { st.sigHui = v; ch('sigHui'); }), 'sigHui'));
+        box.appendChild(F.row(MX.t('弟子'), F.seg(ONOFF, st.sigDizi !== false, function (v) { st.sigDizi = v; ch('sigDizi'); }), 'sigDizi'));
+        box.appendChild(F.row(MX.t('迴向偈'), F.seg(ONOFF, !!st.sigHui, function (v) { st.sigHui = v; ch('sigHui'); }), 'sigHui'));
       }
-      box.appendChild(h('div', { class: 'note', text: '落款寫在正文之後新的一行，是可描的格子；日期為這一遍開始的日期。改姓名或日期只影響還沒寫的落款格。' }));
+      box.appendChild(h('div', { class: 'note', text: MX.t('落款寫在正文之後新的一行，是可描的格子；日期為這一遍開始的日期。改姓名或日期只影響還沒寫的落款格。') }));
       return box;
     },
     // A small static sample of the stroke at the current 筆觸 / 粗細 / 筆壓幅度: three synthetic strokes at light / normal / hard pressure (n 0.1 / 0.5 / 0.95), drawn by the real
     // ink engine. Re-rendered only when update() is called (after a change of those settings). st = the settings object.
     widthSample: function (st) {
-      var box = h('div', { class: 'wsample', 'data-role': 'width-sample' }), cvs = [], LABELS = [['輕', 0.1], ['平常', 0.5], ['重', 0.95]], W = 150, HH = 60, SC = 0.17;
+      var box = h('div', { class: 'wsample', 'data-role': 'width-sample' }), cvs = [], LABELS = [[MX.t('輕'), 0.1], [MX.t('平常'), 0.5], [MX.t('重'), 0.95]], W = 150, HH = 60, SC = 0.17;
       LABELS.forEach(function (x) {
         var c = h('canvas', { 'data-n': String(x[1]), style: 'width:' + W + 'px;height:' + HH + 'px' });
         cvs.push(c);
@@ -125,7 +126,7 @@
       return keys.map(function (k) { return F.CFG.filter(function (f) { return f.k === k; })[0]; }).filter(function (f) { return f && !(noContent && f.content); });
     },
     // the small heading of a block of options: whose option it is (新字帖預設 / 這一遍 / 所有字帖)
-    scope: function (label) { return h('div', { class: 'scope', 'data-role': 'scope', text: label }); },
+    scope: function (label) { return h('div', { class: 'scope', 'data-role': 'scope', text: MX.t(label) }); },
     // 進階選項: a collapsed block (static, no animation); open / closed is remembered per group and device (Store `setupAdv:g-<id>`, device-local: not in a backup)
     adv: function (id, kids) {
       var key = 'setupAdv:g-' + id, uid = 'adv-' + id + '-' + (++advN);
@@ -140,7 +141,7 @@
         body.hidden = !o;
         btn.setAttribute('aria-expanded', o ? 'true' : 'false');
         btn.innerHTML = '';
-        btn.appendChild(h('span', { text: '進階選項' }));
+        btn.appendChild(h('span', { text: MX.t('進階選項') }));
         btn.appendChild(MX.icon(o ? 'tri-u' : 'tri-d', 18));
       }
       sync();
@@ -191,7 +192,7 @@
       if (sm) { smp.push(sm); out.push(sm.el); }
       if (g.custom && ctx.custom && ctx.custom[g.custom]) out.push(ctx.custom[g.custom]());
       block(g.sample === 'modes' ? [] : g.cfg, g.keys).forEach(function (n) { out.push(n); });
-      if (F.GROUP_NOTES[g.id]) out.push(h('div', { class: 'note', 'data-role': g.id + '-note', text: F.GROUP_NOTES[g.id] }));
+      if (F.GROUP_NOTES[g.id]) out.push(h('div', { class: 'note', 'data-role': g.id + '-note', text: MX.t(F.GROUP_NOTES[g.id]) }));
       if (g.adv) {
         var rows = block(g.adv.cfg, g.adv.keys);
         if (rows.length) out.push(F.adv(g.id, rows));
@@ -203,7 +204,7 @@
       var wrap = h('div', { class: 'seg' });
       opts.forEach(function (o) {
         var b = h('button', {
-          type: 'button', text: o[1], class: o[0] === value ? 'on' : '', disabled: disabled ? true : null,
+          type: 'button', text: MX.t(o[1]), class: o[0] === value ? 'on' : '', disabled: disabled ? true : null,
           'data-v': String(o[0]),
           onclick: function () {
             Array.prototype.forEach.call(wrap.children, function (c) { c.className = ''; });
@@ -224,13 +225,13 @@
     // null on a laptop / desktop (no touch screen: nothing to choose).
     inputRow: function (afterChange) {
       if (!MX.Device.hasInputChoice()) return null;
-      var st = MX.Model.settings, row = F.row('書寫工具', F.inputSeg(st, function () { MX.Model.saveSettings(); if (afterChange) afterChange(); }), 'inputMode');
+      var st = MX.Model.settings, row = F.row(MX.t('書寫工具'), F.inputSeg(st, function () { MX.Model.saveSettings(); if (afterChange) afterChange(); }), 'inputMode');
       row.className += ' inrow';
       row.setAttribute('data-role', 'input-row');
       return row;
     },
     row: function (label, ctrl, key) {
-      return h('div', { class: 'frow', 'data-k': key || null }, [h('label', { text: label }), ctrl]);
+      return h('div', { class: 'frow', 'data-k': key || null }, [h('label', { text: MX.t(label) }), ctrl]);
     },
     // highlight `value` in the segmented control of row `key` inside `root` (after the value was changed from elsewhere)
     syncSeg: function (root, key, value) {
@@ -242,7 +243,7 @@
       var box = h('div');
       fields.forEach(function (f) {
         if (f.button) {      // an action row (筆觸調校): opens the tuning panel; saving a 自訂 brush selects it
-          box.appendChild(F.row(f.label, h('button', { type: 'button', text: f.button, 'data-act': f.k, onclick: function () {
+          box.appendChild(F.row(f.label, h('button', { type: 'button', text: MX.t(f.button), 'data-act': f.k, onclick: function () {
             if (F.openTuner) F.openTuner(function () { F.syncSeg(box, 'brush', obj.brush); if (onChange) onChange('brush', obj.brush); });
           } }), f.k));
           return;
@@ -253,6 +254,7 @@
         }
         var dis = !!(f.content && locked);
         box.appendChild(F.row(f.label, F.seg(f.opts, obj[f.k], function (v) {
+          if (f.lang) { MX.I18n.set(v); return; }       // 介面語言: saved device-level by MX.I18n, which also redraws the screen
           obj[f.k] = v;
           if (f.k === 'screenType' && MX.Model && MX.Model.applyScreenType) MX.Model.applyScreenType(obj, v);
           if (f.pick) { if (!obj.picked || typeof obj.picked !== 'object') obj.picked = {}; obj.picked[f.k] = true; }   // explicit choice: never replaced by a changed default

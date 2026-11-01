@@ -26,13 +26,13 @@
         // the section is gone (a copy saved before the text was split into sections): the text's section list instead of an error page; the copy is kept
         if (/^unknown section/.test(e.message || '') && (MX.Library.entry(copy.textId) || {}).sections > 1) {
           if (seq === showSeq) {
-            window.addEventListener('hashchange', function () { setTimeout(function () { MX.toast('這份字帖的章節已更新，請從章節列表選擇。', 4000); }, 0); }, { once: true });     // after the route has cleared #layer
+            window.addEventListener('hashchange', function () { setTimeout(function () { MX.toast(MX.t('這份字帖的章節已更新，請從章節列表選擇。'), 4000); }, 0); }, { once: true });     // after the route has cleared #layer
             location.replace(MX.Screens.hash('text', copy.textId));
           }
           return;
         }
-        root.appendChild(h('div', { class: 'screen' }, [h('h1', { text: '無法載入文本' }), h('p', { text: String(e.message || e) }),
-          h('button', { text: '返回', onclick: function () { location.hash = '#/'; } })]));
+        root.appendChild(h('div', { class: 'screen' }, [h('h1', { text: MX.t('無法載入文本') }), h('p', { text: String(e.message || e) }),
+          h('button', { text: MX.t('返回'), onclick: function () { location.hash = '#/'; } })]));
         return;
       }
       if (seq !== showSeq) return;
@@ -189,7 +189,7 @@
     if (!S || !S.pill) return;
     var on = autoOn();
     S.pill.setAttribute('aria-pressed', on ? 'true' : 'false');
-    S.pill.firstChild.textContent = '自動 ' + (on ? '開' : '關');
+    S.pill.firstChild.textContent = MX.t('自動 {state}', { state: on ? MX.t('開') : MX.t('關') });
   }
   function toggleAuto() {
     if (!S) return;
@@ -197,14 +197,14 @@
     Model.saveSettings();
     hideNext();
     syncPill();
-    if (S.status) S.status.textContent = '自動下一字：' + (autoOn() ? '開' : '關');
+    if (S.status) S.status.textContent = MX.t('自動下一字：{state}', { state: autoOn() ? MX.t('開') : MX.t('關') });
   }
   function openChooser() {
     if (!S || S.chooser || !S.top) return;
     hideNext();
     var cur = parseFloat(settings().flipDelay) || 2;
-    var row = h('div', { class: 'achoose', 'data-role': 'auto-chooser', role: 'group', 'aria-label': '自動下一字的等待時間' }, [h('span', { class: 'al', text: '等待' })]);
-    [['1', '1 秒'], ['1.5', '1.5 秒'], ['2', '2 秒'], ['3', '3 秒']].forEach(function (o) {
+    var row = h('div', { class: 'achoose', 'data-role': 'auto-chooser', role: 'group', 'aria-label': MX.t('自動下一字的等待時間') }, [h('span', { class: 'al', text: MX.t('等待') })]);
+    [['1', MX.t('1 秒')], ['1.5', MX.t('1.5 秒')], ['2', MX.t('2 秒')], ['3', MX.t('3 秒')]].forEach(function (o) {
       var sel = parseFloat(o[0]) === cur;
       row.appendChild(h('button', { type: 'button', 'data-v': o[0], class: sel ? 'on' : null, 'aria-pressed': sel ? 'true' : 'false', text: o[1], onclick: function () {
         settings().flipDelay = o[0]; Model.saveSettings(); closeChooser();
@@ -220,7 +220,7 @@
   }
   // The pill sits in the top bar, outside the cell: a press on it never reaches the ink canvas, so a long press can not be a stroke.
   function buildPill() {
-    var b = h('button', { type: 'button', class: 'autopill', 'data-act': 'auto', 'aria-label': '自動下一字', 'aria-haspopup': 'true', title: '點一下開關；長按設定等待時間' }, [h('span', { class: 't' })]);
+    var b = h('button', { type: 'button', class: 'autopill', 'data-act': 'auto', 'aria-label': MX.t('自動下一字'), 'aria-haspopup': 'true', title: MX.t('點一下開關；長按設定等待時間') }, [h('span', { class: 't' })]);
     var sx = 0, sy = 0;
     function stop() { clearTimeout(S.timers.pill); }
     b.addEventListener('pointerdown', function (e) {
@@ -250,32 +250,32 @@
     var title = S.text.multi ? tt[sc] + ' · ' + st[sc] : S.text.title[sc];
     S.counter = h('div', { class: 'ctr', 'data-role': 'counter' });
     S.progress = h('i', { style: 'width:0%' });
-    S.progBar = h('div', { class: 'bar', 'data-role': 'phone-progress', role: 'progressbar', 'aria-label': '進度', 'aria-valuemin': '1' }, [S.progress]);
-    S.ctx = h('div', { class: 'pctx', 'data-role': 'ctx-strip', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) });
+    S.progBar = h('div', { class: 'bar', 'data-role': 'phone-progress', role: 'progressbar', 'aria-label': MX.t('進度'), 'aria-valuemin': '1' }, [S.progress]);
+    S.ctx = h('div', { class: 'pctx', 'data-role': 'ctx-strip', 'data-zh': '', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) });
     var head = h('div', { class: 'prow head' }, [
-      h('button', { type: 'button', text: '返回', 'data-act': 'back', onclick: function () { flush(); if (S.readOnly) history.back(); else location.hash = MX.Screens.backFor(S.copy.textId); } }),
+      h('button', { type: 'button', text: MX.t('返回'), 'data-act': 'back', onclick: function () { flush(); if (S.readOnly) history.back(); else location.hash = MX.Screens.backFor(S.copy.textId); } }),
       h('div', { class: 'sp' })
     ]);
     S.pill = null;
     if (!S.readOnly) head.appendChild(buildPill());
-    head.appendChild(h('button', { type: 'button', text: '筆順', 'data-act': 'stroke', onclick: strokeButton }));
-    if (notes) head.appendChild(h('button', { type: 'button', text: '解說', 'data-act': 'notes', onclick: openNotes }));
-    head.appendChild(h('button', { type: 'button', text: '匯出', 'data-act': 'export', onclick: function () { openExport(); } }));
-    if (!S.readOnly) head.appendChild(h('button', { type: 'button', text: '設定', 'data-act': 'settings', onclick: openSettings }));
+    head.appendChild(h('button', { type: 'button', text: MX.t('筆順'), 'data-act': 'stroke', onclick: strokeButton }));
+    if (notes) head.appendChild(h('button', { type: 'button', text: MX.t('解說'), 'data-act': 'notes', onclick: openNotes }));
+    head.appendChild(h('button', { type: 'button', text: MX.t('匯出'), 'data-act': 'export', onclick: function () { openExport(); } }));
+    if (!S.readOnly) head.appendChild(h('button', { type: 'button', text: MX.t('設定'), 'data-act': 'settings', onclick: openSettings }));
     top.appendChild(head);
-    top.appendChild(h('div', { class: 'ptrow' }, [h('div', { class: 'ptitle', 'data-role': 'phone-title', text: title || '', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) }), S.counter]));
+    top.appendChild(h('div', { class: 'ptrow' }, [h('div', { class: 'ptitle', 'data-role': 'phone-title', text: title || '', style: 'font-family:' + MX.Draw.uiFam(S.cfg.script) }), S.counter, MX.langToggle(true)]));
     top.appendChild(S.ctx);
     top.appendChild(h('div', { class: 'pprog' }, [S.progBar]));
-    S.btnPrev = h('button', { type: 'button', text: '上一字', 'data-act': 'prev', onclick: function () { goRel(-1); } });
-    S.nextWord = '下一字';
+    S.btnPrev = h('button', { type: 'button', text: MX.t('上一字'), 'data-act': 'prev', onclick: function () { goRel(-1); } });
+    S.nextWord = MX.t('下一字');
     S.nextLabel = h('span', { class: 'lbl', text: S.nextWord });
     S.btnNext = h('button', { type: 'button', class: 'withico', 'data-act': 'next', onclick: phoneNext }, [S.nextLabel, MX.icon('tri-r', 18)]);
     S.status = h('span', { class: 'sr', role: 'status', 'aria-live': 'polite', 'data-role': 'auto-status' });
     var row = h('div', { class: 'prow main' });
     if (!S.readOnly) {
-      row.appendChild(h('button', { type: 'button', text: '撤銷', 'data-act': 'undo', onclick: undo }));
-      row.appendChild(h('button', { type: 'button', text: '清除', 'data-act': 'clear', onclick: clearPage }));
-      if (S.cfg.mode === 'recall') row.appendChild(h('button', { type: 'button', text: '提示', 'data-act': 'hint', onclick: hint }));
+      row.appendChild(h('button', { type: 'button', text: MX.t('撤銷'), 'data-act': 'undo', onclick: undo }));
+      row.appendChild(h('button', { type: 'button', text: MX.t('清除'), 'data-act': 'clear', onclick: clearPage }));
+      if (S.cfg.mode === 'recall') row.appendChild(h('button', { type: 'button', text: MX.t('提示'), 'data-act': 'hint', onclick: hint }));
     }
     row.appendChild(S.btnPrev);
     row.appendChild(S.btnNext);
@@ -289,7 +289,7 @@
     for (i = Math.max(0, cur - 3); i <= Math.min(n - 1, cur + 3); i++) {
       c = S.cells[i]; masked = S.cfg.mode === 'recall' && i >= cur;
       b = h('button', { type: 'button', class: 'cx' + (i === cur ? ' cur' : '') + (c.sec !== S.cells[cur].sec ? ' other' : ''), 'data-idx': i, 'data-cur': i === cur ? '1' : null,
-        'aria-current': i === cur ? 'true' : null, 'aria-label': masked ? '第 ' + (i + 1) + ' 字（尚未顯示）' : '跳到第 ' + (i + 1) + ' 字 ' + c.ch, onclick: (function (k) { return function () { go(pageOf(k)); }; })(i) }, [h('span', { class: 'ch', text: masked ? '○' : c.ch })]);
+        'aria-current': i === cur ? 'true' : null, 'aria-label': masked ? MX.t('第 {n} 字（尚未顯示）', { n: i + 1 }) : MX.t('跳到第 {n} 字 {ch}', { n: i + 1, ch: c.ch }), onclick: (function (k) { return function () { go(pageOf(k)); }; })(i) }, [h('span', { class: 'ch', text: masked ? '○' : c.ch })]);
       S.ctx.appendChild(b);
     }
   }
@@ -303,13 +303,13 @@
   // The button keeps its size either way (flex-basis 0, fixed height), so nothing moves.
   function showPending(ms, kind) {
     if (!S || !S.phone || !S.btnNext) return;
-    var word = kind === 'finish' ? '完成' : '下一字', sec = secText(ms);
+    var word = kind === 'finish' ? MX.t('完成') : MX.t('下一字'), sec = secText(ms);
     S.pend = { ms: ms, kind: kind };
-    S.status.textContent = sec + ' 秒後' + word;
+    S.status.textContent = MX.t('{sec} 秒後{word}', { sec: sec, word: word });
     if (staticPending()) {
       S.btnNext.setAttribute('data-pending', 'static');
       S.nextLabel.textContent = '';
-      S.nextLabel.appendChild(h('span', { class: 'l1', text: sec + ' 秒後' }));
+      S.nextLabel.appendChild(h('span', { class: 'l1', text: MX.t('{sec} 秒後', { sec: sec }) }));
       S.nextLabel.appendChild(h('span', { class: 'l2', text: word }));
     } else {
       S.btnNext.setAttribute('data-pending', 'fill');
@@ -340,28 +340,30 @@
     }
     function nav(label, act, fn, icon, right) { return MX.btn({ label: label, icon: icon, iconRight: right, act: act, onclick: fn, iconSize: 18 }); }
     // 返回 first (top left of the bar; never at the bottom edge), then the page buttons. Arrows are inline SVG (the UI font has no ◀ ▶).
-    bar.appendChild(btn('返回', 'back', function () { flush(); if (S.readOnly) history.back(); else location.hash = MX.Screens.backFor(S.copy.textId); }));
-    S.btnPrev = land ? nav('上一頁', 'prev', function () { goRel(-1); }, 'tri-u') : (vert ? nav('上一頁', 'prev', function () { goRel(-1); }, 'tri-r', true) : nav('上一頁', 'prev', function () { goRel(-1); }, 'tri-l'));
-    S.btnNext = land ? nav('下一頁', 'next', function () { goRel(1); }, 'tri-d') : (vert ? nav('下一頁', 'next', function () { goRel(1); }, 'tri-l') : nav('下一頁', 'next', function () { goRel(1); }, 'tri-r', true));
+    bar.appendChild(btn(MX.t('返回'), 'back', function () { flush(); if (S.readOnly) history.back(); else location.hash = MX.Screens.backFor(S.copy.textId); }));
+    S.btnPrev = land ? nav(MX.t('上一頁'), 'prev', function () { goRel(-1); }, 'tri-u') : (vert ? nav(MX.t('上一頁'), 'prev', function () { goRel(-1); }, 'tri-r', true) : nav(MX.t('上一頁'), 'prev', function () { goRel(-1); }, 'tri-l'));
+    S.btnNext = land ? nav(MX.t('下一頁'), 'next', function () { goRel(1); }, 'tri-d') : (vert ? nav(MX.t('下一頁'), 'next', function () { goRel(1); }, 'tri-l') : nav(MX.t('下一頁'), 'next', function () { goRel(1); }, 'tri-r', true));
     S.counter = h('div', { class: 'ctr', 'data-role': 'counter' });
     var first, second;
     if (!land && vert) { first = S.btnNext; second = S.btnPrev; } else { first = S.btnPrev; second = S.btnNext; }
     bar.appendChild(first); bar.appendChild(S.counter); bar.appendChild(second);
     var notes = MX.Library.hasNotes(S.copy.textId, Model.sid(S.copy));
     if (S.readOnly) {
-      bar.appendChild(nav('匯出', 'export', function () { openExport(); }, 'dl'));
-      bar.appendChild(btn('筆順', 'stroke', strokeButton));
-      if (notes) bar.appendChild(btn('解說', 'notes', openNotes));
+      bar.appendChild(nav(MX.t('匯出'), 'export', function () { openExport(); }, 'dl'));
+      bar.appendChild(btn(MX.t('筆順'), 'stroke', strokeButton));
+      if (notes) bar.appendChild(btn(MX.t('解說'), 'notes', openNotes));
+      bar.appendChild(MX.langToggle(true));
       return;
     }
-    bar.appendChild(btn('撤銷', 'undo', undo));
-    bar.appendChild(btn('清頁', 'clear', clearPage));
-    if (S.cfg.mode === 'recall') bar.appendChild(btn('提示', 'hint', hint));
-    bar.appendChild(btn('筆順', 'stroke', strokeButton));
-    bar.appendChild(btn('刷新', 'refresh', function () { refresh(); }));
-    bar.appendChild(nav('匯出', 'export', function () { openExport(); }, 'dl'));
-    if (notes) bar.appendChild(btn('解說', 'notes', openNotes));
-    bar.appendChild(btn('設定', 'settings', openSettings));
+    bar.appendChild(btn(MX.t('撤銷'), 'undo', undo));
+    bar.appendChild(btn(MX.t('清頁'), 'clear', clearPage));
+    if (S.cfg.mode === 'recall') bar.appendChild(btn(MX.t('提示'), 'hint', hint));
+    bar.appendChild(btn(MX.t('筆順'), 'stroke', strokeButton));
+    bar.appendChild(btn(MX.t('刷新'), 'refresh', function () { refresh(); }));
+    bar.appendChild(nav(MX.t('匯出'), 'export', function () { openExport(); }, 'dl'));
+    if (notes) bar.appendChild(btn(MX.t('解說'), 'notes', openNotes));
+    bar.appendChild(btn(MX.t('設定'), 'settings', openSettings));
+    bar.appendChild(MX.langToggle(true));
   }
   function openNotes() {
     if (!S) return;
@@ -490,7 +492,7 @@
       var last = S.pageIdx >= S.pages.length - 1, fin = last && !S.readOnly && !S.copy.completedAt && S.copy.total > 0 && S.copy.filled >= S.copy.total;
       S.btnNext.disabled = last && !fin;
       S.btnNext.setAttribute('data-act', fin ? 'finish' : 'next');
-      S.nextWord = fin ? '完成' : '下一字';
+      S.nextWord = fin ? MX.t('完成') : MX.t('下一字');
       if (!S.pend) S.nextLabel.textContent = S.nextWord;
       S.progBar.setAttribute('aria-valuemax', String(S.pages.length)); S.progBar.setAttribute('aria-valuenow', String(S.pageIdx + 1)); S.progBar.setAttribute('aria-valuetext', S.counter.textContent);
       S.progress.style.width = (100 * (S.pageIdx + 1) / Math.max(1, S.pages.length)) + '%';
@@ -597,7 +599,7 @@
   function allowed(e) {
     if (e.pointerType === 'pen') return true;
     if (e.pointerType === 'mouse' && !S.phone && MX.Device.env().desktop) {       // desktop without touch or pen: the mouse writes (else the app is unusable); a one-time hint says a tablet or pen is best
-      if (!settings().mouseTip) { settings().mouseTip = true; Model.saveSettings(); MX.toast('用滑鼠也能書寫；用平板或手寫筆效果最好。', 4000); }
+      if (!settings().mouseTip) { settings().mouseTip = true; Model.saveSettings(); MX.toast(MX.t('用滑鼠也能書寫；用平板或手寫筆效果最好。'), 4000); }
       return true;
     }
     if (!fingerOk()) return false;
@@ -793,7 +795,7 @@
     var page = S.pages[S.pageIdx], target = -1;
     if (S.focus >= 0 && pageHas(S.focus) && (S.copy.ink[KY(S.focus)] || []).length) target = S.focus;
     else for (k = page.length - 1; k >= 0; k--) if (page[k] >= 0 && (S.copy.ink[KY(page[k])] || []).length) { target = page[k]; break; }
-    if (target < 0) { MX.toast('沒有可撤銷的筆畫'); return; }
+    if (target < 0) { MX.toast(MX.t('沒有可撤銷的筆畫')); return; }
     S.copy.ink[KY(target)].pop();
     dirty(target);
     undone();
@@ -810,8 +812,8 @@
       if (idx < 0) return;
       (S.copy.ink[KY(idx)] || []).forEach(function (st, i) { items.push({ cell: idx, index: i, stroke: st }); });
     });
-    if (!items.length) { MX.toast(S.phone ? '這個字還沒有字跡' : '此頁沒有字跡'); return; }
-    var ok = S.phone ? true : await MX.confirm('清除此頁所有字跡？（可用「撤銷」還原）', '清除', '清頁');      // phone: one character, 撤銷 brings it back
+    if (!items.length) { MX.toast(S.phone ? MX.t('這個字還沒有字跡') : MX.t('此頁沒有字跡')); return; }
+    var ok = S.phone ? true : await MX.confirm(MX.t('清除此頁所有字跡？（可用「撤銷」還原）'), MX.t('清除'), MX.t('清頁'));      // phone: one character, 撤銷 brings it back
     if (!ok || !S) return;
     page.forEach(function (idx) {
       if (idx >= 0 && S.copy.ink[KY(idx)] && S.copy.ink[KY(idx)].length) { S.copy.ink[KY(idx)] = []; dirty(idx); }
@@ -890,7 +892,7 @@
     var seq = S.token;
     S.timers.next = setTimeout(function () {
       if (!S || S.token !== seq || S.active !== null) return;
-      S.nextBtn = MX.btn({ cls: 'nextbtn', act: 'autonext', label: '下一頁', icon: S.cfg.dir === 'v' && !S.root.className.match(/land/) ? 'tri-l' : 'tri-r', iconRight: !(S.cfg.dir === 'v' && !S.root.className.match(/land/)), onclick: function () { goRel(1); } });
+      S.nextBtn = MX.btn({ cls: 'nextbtn', act: 'autonext', label: MX.t('下一頁'), icon: S.cfg.dir === 'v' && !S.root.className.match(/land/) ? 'tri-l' : 'tri-r', iconRight: !(S.cfg.dir === 'v' && !S.root.className.match(/land/)), onclick: function () { goRel(1); } });
       S.nextBtn.style.bottom = (12 + ((S.inset && S.inset.b) || 0)) + 'px';
       S.stage.appendChild(S.nextBtn);
     }, 3000);
@@ -907,12 +909,12 @@
     if (S.banner) return;
     var penOnly = !MX.Device.input(settings()).auto;
     S.banner = h('div', { class: 'banner', 'data-role': penOnly ? 'pen-hint' : 'touch-prompt' }, [
-      h('div', { text: penOnly ? '目前只用觸控筆書寫，手指不會留下筆跡。可在設定改為手指。' : '筆似乎以「觸控」回報。是否允許手指或觸控書寫？' }),
+      h('div', { text: penOnly ? MX.t('目前只用觸控筆書寫，手指不會留下筆跡。可在設定改為手指。') : MX.t('筆似乎以「觸控」回報。是否允許手指或觸控書寫？') }),
       h('div', { class: 'btnrow' }, [
-        h('button', { text: penOnly ? '改用手指' : '允許', 'data-act': 'allow-touch', onclick: function () {
-          MX.Device.setInput(settings(), 'touch'); settings().touchPrompted = true; Model.saveSettings(); closeBanner(); MX.toast(penOnly ? '已改為手指書寫' : '已允許觸控書寫');
+        h('button', { text: penOnly ? MX.t('改用手指') : MX.t('允許'), 'data-act': 'allow-touch', onclick: function () {
+          MX.Device.setInput(settings(), 'touch'); settings().touchPrompted = true; Model.saveSettings(); closeBanner(); MX.toast(penOnly ? MX.t('已改為手指書寫') : MX.t('已允許觸控書寫'));
         } }),
-        h('button', { text: penOnly ? '知道了' : '不用', 'data-act': 'deny-touch', onclick: function () {
+        h('button', { text: penOnly ? MX.t('知道了') : MX.t('不用'), 'data-act': 'deny-touch', onclick: function () {
           settings().touchPrompted = true; Model.saveSettings(); closeBanner();
         } })
       ])
@@ -945,7 +947,7 @@
     var api;
     // The same groups, in the same order, as the settings screen (Form.GROUPS): the sample and the options of each. 這一遍 = the choices of this 字帖; 所有字帖 = app settings.
     var ctx = {
-      st: settings(), cfg: S.cfg, scope: '這一遍', noContent: true, samples: [], boxes: [],
+      st: settings(), cfg: S.cfg, scope: MX.t('這一遍'), noContent: true, samples: [], boxes: [],
       onCfg: function (k) {
         Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg);
         if (k === 'title') { rebuildCells(); return; }
@@ -964,19 +966,19 @@
       } }
     };
     // 完成 sticks to the top right of the sheet (no button at the bottom edge); everything applies and is saved at once
-    var head = h('div', { class: 'sheethead' }, [h('h2', { text: '設定', class: 'grow' }), h('button', { class: 'on', text: '完成', 'data-act': 'done', onclick: function () { api.close(); } })]);
+    var head = h('div', { class: 'sheethead' }, [h('h2', { text: MX.t('設定'), class: 'grow' }), h('button', { class: 'on', text: MX.t('完成'), 'data-act': 'done', onclick: function () { api.close(); } })]);
     var body = [
       head,
       h('div', { class: 'btnrow' }, [
-        h('button', { text: '新抄一遍', 'data-act': 'newcopy', onclick: function () { api.close(); newCopy(); } })
+        h('button', { text: MX.t('新抄一遍'), 'data-act': 'newcopy', onclick: function () { api.close(); newCopy(); } })
       ]),
-      h('div', { class: 'note', 'data-role': 'scope-note', text: '標「這一遍」的選項只改目前這份字帖；標「所有字帖」的選項套用到全部字帖。' })
+      h('div', { class: 'note', 'data-role': 'scope-note', text: MX.t('標「這一遍」的選項只改目前這份字帖；標「所有字帖」的選項套用到全部字帖。') })
     ];
     MX.Form.GROUPS.forEach(function (g) {
       if (g.id === 'data' || g.id === 'about') return;
       var nodes = MX.Form.groupBody(g, ctx);
       if (!nodes.length) return;
-      body.push(h('h2', { text: g.title, 'data-group': g.id }));
+      body.push(h('h2', { text: MX.t(g.title), 'data-group': g.id }));
       nodes.forEach(function (n) { body.push(n); });
     });
     api = MX.modal({ body: body });
@@ -984,8 +986,8 @@
   }
   async function newCopy() {
     if (!S) return;
-    var c = S.copy, msg = c.completedAt ? '將目前這一遍存檔，重新開始新的一遍？' : '這一遍尚未完成。仍要存檔並重新開始？';
-    var ok = await MX.confirm(msg, '新抄一遍', '新抄一遍');
+    var c = S.copy, msg = c.completedAt ? MX.t('將目前這一遍存檔，重新開始新的一遍？') : MX.t('這一遍尚未完成。仍要存檔並重新開始？');
+    var ok = await MX.confirm(msg, MX.t('新抄一遍'), MX.t('新抄一遍'));
     if (!ok || !S) return;
     Model.archive(c);
     location.replace(MX.Screens.hash('setup', c.textId, Model.sid(c), 'new=1'));   // replace: Back must not return to the archived copy
@@ -1004,21 +1006,21 @@
     }
     var secs = S.text.sections || [], at = secs.indexOf(sid), nextSec = at >= 0 && at < secs.length - 1 ? secs[at + 1] : null;
     var buttons = [
-      { label: '匯出作品', act: 'export', onClick: function () { if (S) openExport(); } },
-      { label: '新抄一遍', act: 'newcopy', onClick: function () { newCopy(); } }
+      { label: MX.t('匯出作品'), act: 'export', onClick: function () { if (S) openExport(); } },
+      { label: MX.t('新抄一遍'), act: 'newcopy', onClick: function () { newCopy(); } }
     ];
-    if (hasNotes) buttons.push({ label: '解說', act: 'notes', onClick: function () { openNotes(); } });
+    if (hasNotes) buttons.push({ label: MX.t('解說'), act: 'notes', onClick: function () { openNotes(); } });
     if (nextSec) {
-      buttons.push({ label: '下一章', act: 'nextsec', onClick: function () {
+      buttons.push({ label: MX.t('下一章'), act: 'nextsec', onClick: function () {
         var nc = Model.resumable(c.textId, nextSec);
         flush();
         location.hash = nc ? MX.Screens.hash('practice', nc.id) : MX.Screens.hash('setup', c.textId, nextSec);
       } });
     }
-    buttons.push({ label: '繼續', act: 'continue', primary: true });
+    buttons.push({ label: MX.t('繼續'), act: 'continue', primary: true });
     MX.modal({
-      title: '圓滿完成',
-      body: [h('p', { text: '這是第 ' + n + ' 遍。用時約 ' + MX.fmtDuration(c.activeMs) + '。' })],
+      title: MX.t('圓滿完成'),
+      body: [h('p', { text: MX.t('這是第 {n} 遍。用時約 {time}。', { n: n, time: MX.fmtDuration(c.activeMs) }) })],
       buttons: buttons
     });
   }

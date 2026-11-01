@@ -65,7 +65,7 @@
     errCount++;
     if (warned) return;
     warned = true;
-    if (MX.toast) MX.toast('儲存失敗（空間不足？）請盡快匯出備份', 6000);
+    if (MX.toast) MX.toast(MX.t('儲存失敗（空間不足？）請盡快匯出備份'), 6000);
   }
   function idbFailed(k, v, del) {
     idbBad = true;

@@ -46,9 +46,9 @@
   };
   MX.fmtDuration = function (ms) {
     var m = Math.round(ms / 60000);
-    if (m < 1) return '不足1分鐘';
+    if (m < 1) return MX.t('不足1分鐘');
     var hh = Math.floor(m / 60), mm = m % 60;
-    return (hh ? hh + '小時' : '') + (mm ? mm + '分鐘' : '');
+    return [hh ? MX.t('{n}小時', { n: hh }) : '', mm ? MX.t('{n}分鐘', { n: mm }) : ''].filter(Boolean).join(MX.I18n.sep());
   };
   MX.layer = function () { return document.getElementById('layer'); };
   // UI sentences with {name} slots (no string pieces glued together: a sentence is translated as a whole later): MX.fmt('已完成 {n} 份', {n: 3})
@@ -102,6 +102,22 @@
     svg.appendChild(el);
     return svg;
   };
+  // The interface-language toggle (繁 / 简 / EN) of the top bar: three buttons, or (compact) one button that shows the current language and goes to the next one on each tap.
+  // The names of the languages are never translated: each is written in its own language (the aria-label / title carry it).
+  MX.langToggle = function (compact) {
+    var I = MX.I18n, cur = I.lang;
+    if (compact) {
+      var next = I.LANGS[(I.LANGS.indexOf(cur) + 1) % I.LANGS.length];
+      return h('button', { type: 'button', class: 'lang langcycle', 'data-act': 'lang', 'data-role': 'lang-cycle', 'data-lang': cur, 'aria-label': I.name(cur) + ' → ' + I.name(next), title: I.name(cur) + ' → ' + I.name(next),
+        text: I.SHORT[cur], onclick: function () { I.set(next); } });
+    }
+    var box = h('div', { class: 'lang', role: 'group', 'data-role': 'lang-toggle', 'aria-label': MX.t('介面語言') });
+    I.LANGS.forEach(function (v) {
+      box.appendChild(h('button', { type: 'button', 'data-lang': v, class: v === cur ? 'on' : '', 'aria-pressed': v === cur ? 'true' : 'false', 'aria-label': I.name(v), title: I.name(v), text: I.SHORT[v],
+        onclick: function () { I.set(v); } }));
+    });
+    return box;
+  };
   // A button with an icon and/or label: MX.btn({label, icon, iconRight, act, cls, onclick})
   MX.btn = function (o) {
     var kids = [], attrs = { type: 'button', class: o.cls || '', 'data-act': o.act || null, onclick: o.onclick || null, disabled: o.disabled ? true : null, title: o.title || null, 'aria-label': o.aria || null };
@@ -116,10 +132,10 @@
     var on = MX.Model.isFav(textId, sectionId), b;
     function paint() {
       on = MX.Model.isFav(textId, sectionId);
-      b.setAttribute('data-on', on ? '1' : '0'); b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.title = on ? '取消收藏' : '加入收藏';
+      b.setAttribute('data-on', on ? '1' : '0'); b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.title = on ? MX.t('取消收藏') : MX.t('加入收藏');
       b.innerHTML = '';
       b.appendChild(MX.icon(on ? 'star' : 'star-o', 28));
-      if (withLabel) b.appendChild(document.createTextNode(on ? '已收藏' : '收藏'));
+      if (withLabel) b.appendChild(document.createTextNode(on ? MX.t('已收藏') : MX.t('收藏')));
     }
     b = MX.h('button', { type: 'button', class: 'fav' + (withLabel ? ' withico' : ''), 'data-act': 'fav', onclick: function () {
       var v = MX.Model.toggleFav(textId, sectionId); paint(); if (onToggle) onToggle(v);
@@ -211,10 +227,10 @@
       var done = false;
       function fin(v) { if (!done) { done = true; resolve(v); } }
       MX.modal({
-        title: title || '確認', body: msg, onClose: function () { fin(false); },
+        title: title || MX.t('確認'), body: msg, onClose: function () { fin(false); },
         buttons: [
-          { label: '取消', act: 'cancel', onClick: function () { fin(false); } },
-          { label: okLabel || '確定', act: 'ok', primary: true, onClick: function () { fin(true); } }
+          { label: MX.t('取消'), act: 'cancel', onClick: function () { fin(false); } },
+          { label: okLabel || MX.t('確定'), act: 'ok', primary: true, onClick: function () { fin(true); } }
         ]
       });
     });
@@ -269,7 +285,7 @@
       }
       var b64 = await blobToBase64(blob);
       var st = B.saveFile(filename, b64, mime);
-      return String(st === undefined || st === null ? '已儲存' : st);
+      return String(st === undefined || st === null ? MX.t('已儲存') : st);
     }
     if (MX.isMobileBrowser() && typeof navigator.share === 'function' && typeof navigator.canShare === 'function') {
       var file = null;
@@ -277,8 +293,8 @@
       var ok = false;
       try { ok = !!file && navigator.canShare({ files: [file] }); } catch (e) { ok = false; }
       if (ok) {
-        try { await navigator.share({ files: [file], title: filename }); return '已分享 ' + filename; }
-        catch (e) { if (e && e.name === 'AbortError') return '已取消'; MX.err(e); /* anything else: fall back to the anchor */ }
+        try { await navigator.share({ files: [file], title: filename }); return MX.t('已分享 {name}', { name: filename }); }
+        catch (e) { if (e && e.name === 'AbortError') return MX.t('已取消'); MX.err(e); /* anything else: fall back to the anchor */ }
       }
     }
     var url = URL.createObjectURL(blob);
@@ -286,7 +302,7 @@
     document.body.appendChild(a);
     a.click();
     setTimeout(function () { URL.revokeObjectURL(url); if (a.parentNode) a.parentNode.removeChild(a); }, blob.size > 20000000 ? 600000 : 60000);       // a big file is read late
-    return '已下載 ' + filename;
+    return MX.t('已下載 {name}', { name: filename });
   };
 
   MX.log = [];

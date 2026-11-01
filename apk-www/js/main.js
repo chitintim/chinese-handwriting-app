@@ -26,8 +26,8 @@
     p.catch(function (e) {
       MX.err(e);
       if (el.querySelector('.screen')) return;
-      el.appendChild(MX.h('div', { class: 'screen' }, [MX.h('h1', { text: '發生錯誤' }), MX.h('p', { class: 'mono', text: String(e && e.stack || e) }),
-        MX.h('button', { text: '返回', onclick: function () { location.hash = '#/'; } })]));
+      el.appendChild(MX.h('div', { class: 'screen' }, [MX.h('h1', { text: MX.t('發生錯誤') }), MX.h('p', { class: 'mono', text: String(e && e.stack || e) }),
+        MX.h('button', { text: MX.t('返回'), onclick: function () { location.hash = '#/'; } })]));
     });
   }
   function route() {
@@ -58,8 +58,8 @@
       }
     } catch (e) {
       MX.err(e);
-      el.appendChild(MX.h('div', { class: 'screen' }, [MX.h('h1', { text: '發生錯誤' }), MX.h('p', { class: 'mono', text: String(e && e.stack || e) }),
-        MX.h('button', { text: '返回', onclick: function () { location.hash = '#/'; } })]));
+      el.appendChild(MX.h('div', { class: 'screen' }, [MX.h('h1', { text: MX.t('發生錯誤') }), MX.h('p', { class: 'mono', text: String(e && e.stack || e) }),
+        MX.h('button', { text: MX.t('返回'), onclick: function () { location.hash = '#/'; } })]));
     }
     // the first-visit intro: opens over the home screen only (never over practice / pen test / an export), stays open across a re-render, closes when the route leaves for practice
     try { if (oldAbout && MX.Intro) MX.Intro.open(); if (MX.Intro) MX.Intro.onRoute(r.name); } catch (e) { MX.err(e); }
@@ -78,10 +78,10 @@
     } catch (e) {
       MX.err(e);
       el.appendChild(MX.h('div', { class: 'screen' }, [
-        MX.h('h1', { text: '無法載入文庫' }),
-        MX.h('p', { text: '請檢查網路連線後重試，或安裝 App (APK)。' }),
+        MX.h('h1', { text: MX.t('無法載入文庫') }),
+        MX.h('p', { text: MX.t('請檢查網路連線後重試，或安裝 App (APK)。') }),
         MX.h('p', { class: 'mono', text: String(e && e.message || e) }),
-        MX.h('button', { text: '重試', onclick: function () { location.reload(); } })
+        MX.h('button', { text: MX.t('重試'), onclick: function () { location.reload(); } })
       ]));
       return;
     }
@@ -96,6 +96,8 @@
       if (sc && top) sc.scrollTop = top;
     };
     MX.Device.onChange(function () { if (MX.ready) reflow(); });
+    // the interface language changed (繁 / 简 / EN): the same redraw; the open practice page, the ink and the settings stay (the page is rebuilt from the stored copy)
+    MX.I18n.onChange(function () { if (MX.ready) reflow(); });
     window.addEventListener('pagehide', function () { MX.Model.flushAll(); });
     document.addEventListener('visibilitychange', function () { if (document.hidden) MX.Model.flushAll(); });
     // native wrapper: Activity.onPause (the WebView may never see pagehide/visibilitychange before the process is killed)

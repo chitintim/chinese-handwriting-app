@@ -803,7 +803,7 @@
         return;
       } catch (e) {
         MX.err(e);
-        job.notes.push('合成大圖時出錯（可能是記憶體不足），改存為分段圖片，解析度不變。');
+        job.notes.push(MX.t('合成大圖時出錯（可能是記憶體不足），改存為分段圖片，解析度不變。'));
         job.done = done0; useLim = smallLim(lim); mode = 'strips';
       }
     }
@@ -814,7 +814,7 @@
         made.push(file(name + (regs.length > 1 ? '-' + (regs.length >= 10 ? MX.pad2(i + 1) : String(i + 1)) : '') + '.png', blob, regs[i].w, regs[i].h));
         made[i].strip = { i: i + 1, n: regs.length, x0: regs[i].x0, y0: regs[i].y0 };
       }
-      if (regs.length > 1 && !job.notes.some(function (n) { return n.indexOf('分成') >= 0; })) job.notes.push('圖片很大，已依解析度分成 ' + regs.length + ' 張（' + (L.d.dir === 'v' && sz.w >= sz.h ? '第 1 張在最右邊，由右到左接起來' : '第 1 張在最前面，依序接起來') + '）。');
+      if (regs.length > 1 && !job.splitNoted) { job.splitNoted = true; job.notes.push(MX.t(L.d.dir === 'v' && sz.w >= sz.h ? '圖片很大，已依解析度分成 {n} 張（第 1 張在最右邊，由右到左接起來）。' : '圖片很大，已依解析度分成 {n} 張（第 1 張在最前面，依序接起來）。', { n: regs.length })); }
       for (i = 0; i < made.length; i++) await job.emit(made[i]);
       return;
     } catch (e) {
@@ -823,7 +823,7 @@
     }
     // last resort: ONE canvas at the biggest scale the device accepts
     var u2 = scaleFor(L, job.cell), sz2 = pxSize(box, u2);
-    job.notes.push('裝置記憶體不足：這張圖只能降低解析度輸出（每字約 ' + Math.round(u2) + ' 像素）。可改選「螢幕」，或改存分頁。');
+    job.notes.push(MX.t('裝置記憶體不足：這張圖只能降低解析度輸出（每字約 {px} 像素）。可改選「螢幕」，或改存分頁。', { px: Math.round(u2) }));
     cv = spec.merge ? renderMerged(cp, L, u2) : renderPage(cp, L, spec.page, u2);
     blob = await toBlob(cv, 'image/png');
     release(cv);
@@ -867,7 +867,7 @@
         var st = await MX.saveFile(f.name, f.blob, f.mime);       // first await inside: the tap's activation is still fresh (the files are already rendered)
         MX.toast(st);
         status.textContent = st;
-      } catch (e) { MX.err(e); MX.toast('儲存失敗，請長按圖片儲存'); status.textContent = '儲存失敗'; }
+      } catch (e) { MX.err(e); MX.toast(MX.t('儲存失敗，請長按圖片儲存')); status.textContent = MX.t('儲存失敗'); }
       btn.disabled = false;
     }
     // the PDF in a new tab: the browser's PDF viewer has the print dialog (the tap is fresh, so the pop-up is allowed)
@@ -875,28 +875,28 @@
       var url = URL.createObjectURL(f.blob), w = null;
       panel._urls.push(url);
       try { w = window.open(url, '_blank'); } catch (e) { w = null; }
-      if (!w) { MX.toast('瀏覽器擋住了新視窗：請按「儲存」，再用 PDF 閱讀器列印'); status.textContent = '新視窗被擋住了'; } else status.textContent = '已在新分頁開啟，請用瀏覽器的列印功能';
+      if (!w) { MX.toast(MX.t('瀏覽器擋住了新視窗：請按「儲存」，再用 PDF 閱讀器列印')); status.textContent = MX.t('新視窗被擋住了'); } else status.textContent = MX.t('已在新分頁開啟，請用瀏覽器的列印功能');
     }
     function show(files) {
       clear();
       var many = files.length > 1;
       (files.notes || []).forEach(function (n) { panel.appendChild(h('div', { class: 'note', 'data-role': 'save-note', text: n })); });
-      panel.appendChild(h('div', { class: 'note', 'data-role': 'save-ready', text: '檔案已備妥（' + files.length + ' 個）。請按「儲存」' + (many ? '，每頁一個。' : '。') + (files[0].mime === 'application/pdf' ? '' : '儲存不了時，長按圖片選「儲存圖片」。') }));
+      panel.appendChild(h('div', { class: 'note', 'data-role': 'save-ready', text: MX.t(many ? '檔案已備妥（{n} 個）。請按「儲存」，每頁一個。' : '檔案已備妥（{n} 個）。請按「儲存」。', { n: files.length }) + (files[0].mime === 'application/pdf' ? '' : MX.I18n.sep() + MX.t('儲存不了時，長按圖片選「儲存圖片」。')) }));
       files.forEach(function (f, i) {
         var item = h('div', { class: 'savefile', 'data-idx': i }, [
-          h('div', { class: 'note', text: f.name + ' · ' + kb(f.blob.size) }),
-          h('button', { class: 'on big', 'data-act': 'save-file', 'data-idx': i, text: many ? '儲存 第 ' + (i + 1) + ' 個（共 ' + files.length + '）' : '儲存', onclick: function (ev) { saveOne(f, ev.currentTarget); } })
+          h('div', { class: 'note', 'data-zh': '', text: f.name + ' · ' + kb(f.blob.size) }),
+          h('button', { class: 'on big', 'data-act': 'save-file', 'data-idx': i, text: many ? MX.t('儲存 第 {i} 個（共 {n}）', { i: i + 1, n: files.length }) : MX.t('儲存'), onclick: function (ev) { saveOne(f, ev.currentTarget); } })
         ]);
         if (f.mime === 'application/pdf') {
-          item.appendChild(h('button', { class: 'big', 'data-act': 'print-open', text: '開啟 PDF 列印', onclick: function () { openPdf(f); } }));
-          item.appendChild(h('div', { class: 'note', 'data-role': 'print-note', text: '網頁：開啟後用瀏覽器的列印（列印比例選「實際大小」）。手機 App：儲存後用 PDF 檢視器的列印功能。' }));
+          item.appendChild(h('button', { class: 'big', 'data-act': 'print-open', text: MX.t('開啟 PDF 列印'), onclick: function () { openPdf(f); } }));
+          item.appendChild(h('div', { class: 'note', 'data-role': 'print-note', text: MX.t('網頁：開啟後用瀏覽器的列印（列印比例選「實際大小」）。手機 App：儲存後用 PDF 檢視器的列印功能。') }));
         }
         if (/^image\//.test(f.mime) && f.w * f.h <= LIM.IMG_PX) {
           var url = URL.createObjectURL(f.blob);
           panel._urls.push(url);
           item.appendChild(h('img', { class: 'saveimg', 'data-role': 'save-img', alt: f.name, src: url, loading: 'lazy', decoding: 'async', draggable: 'false' }));
-          item.appendChild(h('div', { class: 'note', text: '長按圖片儲存' }));
-        } else if (/^image\//.test(f.mime)) item.appendChild(h('div', { class: 'note', 'data-role': 'big-note', text: '圖片很大（' + f.w + '×' + f.h + ' 像素），不顯示預覽，請按「儲存」。' }));
+          item.appendChild(h('div', { class: 'note', text: MX.t('長按圖片儲存') }));
+        } else if (/^image\//.test(f.mime)) item.appendChild(h('div', { class: 'note', 'data-role': 'big-note', text: MX.t('圖片很大（{w}×{h} 像素），不顯示預覽，請按「儲存」。', { w: f.w, h: f.h }) }));
         panel.appendChild(item);
       });
     }
@@ -938,7 +938,7 @@
       await prepare(cp, L);
       if (d.format === 'pages' && d.out === 'pdf') {
         var pgs = [], pw = d.r >= 1 ? 841.8898 : 595.2756, u = info.u;
-        if (info.capped) notes.push('PDF 每頁最多約 1600 萬像素，這份每字約 ' + Math.round(u) + ' 像素。');
+        if (info.capped) notes.push(MX.t('PDF 每頁最多約 1600 萬像素，這份每字約 {px} 像素。', { px: Math.round(u) }));
         for (i = 0; i < L.pages.length; i++) {
           cv = renderPage(cp, L, i, u); sz = pxSize(L.pages[i], u);
           var jb = await toBlob(cv, 'image/jpeg', 0.92), buf = new Uint8Array(await new Promise(function (res, rej) {
@@ -979,10 +979,10 @@
       // APK: 儲存 renders and saves through the native bridge. Browser: the button only RENDERS the files; the 儲存 buttons of the panel (one per file / page) do the saving from their own tap
       // (a browser download started after long async work has lost its user activation, and Android Chrome silently drops it). Each PNG is also shown as an <img> (long-press to save).
       var native = !!(window.MoBridge && typeof window.MoBridge.saveFile === 'function');
-      var btnSave = h('button', { class: 'on big', 'data-act': 'save', text: native ? '儲存' : '產生檔案', onclick: save });
+      var btnSave = h('button', { class: 'on big', 'data-act': 'save', text: native ? MX.t('儲存') : MX.t('產生檔案'), onclick: save });
       var panel = h('div', { class: 'savepanel', 'data-role': 'save-panel' });
-      root.appendChild(h('div', { class: 'topbar' }, [h('h1', { class: 'grow', text: '匯出作品' }), btnSave,
-        h('button', { class: 'big', 'data-act': 'back', text: '返回', onclick: function () { api.close(); } })]));
+      root.appendChild(h('div', { class: 'topbar' }, [h('h1', { class: 'grow', text: MX.t('匯出作品') }), btnSave,
+        h('button', { class: 'big', 'data-act': 'back', text: MX.t('返回'), onclick: function () { api.close(); } })]));
       var fpBox = h('div', { class: 'note fpnote', 'data-role': 'fp-note' });
       function updateFp() {
         var ch = false;
@@ -995,9 +995,9 @@
 
       function scopes() {
         var list = [], act = MX.Model.activeCopy(textId, secId);
-        if (act) list.push([act.id, '目前這一遍']);
-        MX.Model.archived(textId, secId).forEach(function (c) { list.push([c.id, '存檔 ' + MX.fmtDate(c.archivedAt || c.updatedAt)]); });
-        if (!list.some(function (x) { return x[0] === ui.cp.copy.id; })) list.unshift([ui.cp.copy.id, ui.cp.copy.status === 'archived' ? '存檔' : '目前這一遍']);
+        if (act) list.push([act.id, MX.t('目前這一遍')]);
+        MX.Model.archived(textId, secId).forEach(function (c) { list.push([c.id, MX.t('存檔 {date}', { date: MX.fmtDate(c.archivedAt || c.updatedAt) })]); });
+        if (!list.some(function (x) { return x[0] === ui.cp.copy.id; })) list.unshift([ui.cp.copy.id, ui.cp.copy.status === 'archived' ? MX.t('存檔') : MX.t('目前這一遍')]);
         return list;
       }
       async function switchCopy(id) {
@@ -1024,49 +1024,49 @@
         drawControls(); refresh();
       }
       function drawControls() {
-        var d = resolve(ui.cp, ui.o), cfg = ui.cp.copy.cfg, rows = [], onoff = [[true, '有'], [false, '無']];
+        var d = resolve(ui.cp, ui.o), cfg = ui.cp.copy.cfg, rows = [], onoff = [[true, MX.t('有')], [false, MX.t('無')]];
         function row(k, label, opts, val, fn) {
           rows.push(MX.Form.row(label, MX.Form.seg(opts, val, fn || function (v) { set(k, v); }), k));
         }
         var sc = scopes();
-        if (sc.length > 1) rows.push(MX.Form.row('範圍', MX.Form.seg(sc, ui.cp.copy.id, function (v) { switchCopy(v); }), 'range'));
-        var fmts = [['sheet', '單張']]; if (d.dir === 'v') fmts.push(['scroll', '手卷']); fmts.push(['pages', '分頁']);
-        row('format', '格式', fmts, d.format);
+        if (sc.length > 1) rows.push(MX.Form.row(MX.t('範圍'), MX.Form.seg(sc, ui.cp.copy.id, function (v) { switchCopy(v); }), 'range'));
+        var fmts = [['sheet', MX.t('單張')]]; if (d.dir === 'v') fmts.push(['scroll', MX.t('手卷')]); fmts.push(['pages', MX.t('分頁')]);
+        row('format', MX.t('格式'), fmts, d.format);
         var print = d.out === 'print';
-        row('out', '輸出', d.format === 'pages' ? [['png', 'PNG 逐頁'], ['pdf', 'PDF 一份'], ['print', '列印用 PDF']] : [['png', 'PNG 圖片'], ['print', '列印用 PDF']], d.format !== 'pages' && d.out === 'pdf' ? 'png' : d.out);
+        row('out', MX.t('輸出'), d.format === 'pages' ? [['png', MX.t('PNG 逐頁')], ['pdf', MX.t('PDF 一份')], ['print', MX.t('列印用 PDF')]] : [['png', MX.t('PNG 圖片')], ['print', MX.t('列印用 PDF')]], d.format !== 'pages' && d.out === 'pdf' ? 'png' : d.out);
         if (print) {
-          row('paperSize', '紙張', [['A4', 'A4'], ['A3', 'A3'], ['Letter', 'Letter']], d.paperSize);
-          row('orient', '紙張方向', [['p', '直向'], ['l', '橫向']], d.orient);
-          row('margin', '邊界', [[8, '窄 8 mm'], [12, '標準 12 mm'], [20, '寬 20 mm']], d.margin);
-        } else if (d.format !== 'scroll') row('ratio', d.format === 'pages' ? '頁面比例' : '比例', RATIO_LIST, d.ratio);
-        row('perLine', d.dir === 'v' ? '每行字數（每欄）' : '每行字數', [[0, '自動'], [8, '8'], [10, '10'], [12, '12'], [15, '15'], [20, '20'], [25, '25']], d.perLine);
+          row('paperSize', MX.t('紙張'), [['A4', 'A4'], ['A3', 'A3'], ['Letter', 'Letter']], d.paperSize);
+          row('orient', MX.t('紙張方向'), [['p', MX.t('直向')], ['l', MX.t('橫向')]], d.orient);
+          row('margin', MX.t('邊界'), [[8, MX.t('窄 8 mm')], [12, MX.t('標準 12 mm')], [20, MX.t('寬 20 mm')]], d.margin);
+        } else if (d.format !== 'scroll') row('ratio', d.format === 'pages' ? MX.t('頁面比例') : MX.t('比例'), RATIO_LIST, d.ratio);
+        row('perLine', d.dir === 'v' ? MX.t('每行字數（每欄）') : MX.t('每行字數'), [[0, MX.t('自動')], [8, '8'], [10, '10'], [12, '12'], [15, '15'], [20, '20'], [25, '25']], d.perLine);
         if (print) {
-          row('dpi', '解析度', [[150, '150 dpi 草稿'], [300, '300 dpi 列印'], [600, '600 dpi 精細']], d.dpi);
-          rows.push(h('div', { class: 'note', 'data-role': 'print-note', text: '依紙張大小與 dpi 輸出實際像素，和字數無關。列印時請選「實際大小」（不要縮放）。' + (d.format === 'scroll' ? '手卷會在欄與欄之間切成數頁，由右到左接起來。' : '') + '一律白紙（省墨）。' }));
+          row('dpi', MX.t('解析度'), [[150, MX.t('150 dpi 草稿')], [300, MX.t('300 dpi 列印')], [600, MX.t('600 dpi 精細')]], d.dpi);
+          rows.push(h('div', { class: 'note', 'data-role': 'print-note', text: MX.t('依紙張大小與 dpi 輸出實際像素，和字數無關。列印時請選「實際大小」（不要縮放）。') + MX.I18n.sep() + (d.format === 'scroll' ? MX.t('手卷會在欄與欄之間切成數頁，由右到左接起來。') + MX.I18n.sep() : '') + MX.t('一律白紙（省墨）。') }));
         } else {
-          row('res', '解析度', RES_LIST, d.res);
-          rows.push(h('div', { class: 'note', 'data-role': 'res-note', text: '解析度是每個字有多清楚，和字數多少無關：螢幕約 100 像素（檔案小）、列印約 220 像素、高清約 300 像素（檔案大）。' }));
-          if (d.format === 'pages' && d.out === 'png') row('merge', '合併長圖', [[false, '分開存'], [true, '合成一張']], d.merge);
-          row('paper', '紙色', [['xuan', '宣紙'], ['white', '純白']], d.paper);
+          row('res', MX.t('解析度'), RES_LIST, d.res);
+          rows.push(h('div', { class: 'note', 'data-role': 'res-note', text: MX.t('解析度是每個字有多清楚，和字數多少無關：螢幕約 100 像素（檔案小）、列印約 220 像素、高清約 300 像素（檔案大）。') }));
+          if (d.format === 'pages' && d.out === 'png') row('merge', MX.t('合併長圖'), [[false, MX.t('分開存')], [true, MX.t('合成一張')]], d.merge);
+          row('paper', MX.t('紙色'), [['xuan', MX.t('宣紙')], ['white', MX.t('純白')]], d.paper);
         }
-        row('rules', '欄線', [['zhu', '朱絲欄'], ['wu', '烏絲欄'], ['mi', '米字格'], ['none', '無']], d.rules);
-        row('border', '邊框', onoff, d.border);
-        row('title', '題目', onoff, d.title);
-        row('sign', '落款', onoff, d.sign);
+        row('rules', MX.t('欄線'), [['zhu', MX.t('朱絲欄')], ['wu', MX.t('烏絲欄')], ['mi', MX.t('米字格')], ['none', MX.t('無')]], d.rules);
+        row('border', MX.t('邊框'), onoff, d.border);
+        row('title', MX.t('題目'), onoff, d.title);
+        row('sign', MX.t('落款'), onoff, d.sign);
         if (d.sign) {
-          row('dateStyle', '日期', [['gz', '干支年'], ['ce', '公元年'], ['none', '不寫']], d.dateStyle);
-          row('suffix', d.buddhist ? '敬語' : '署款', d.buddhist ? Closing.SUFFIX_KEYS.map(function (k) { return [k, Closing.suffix('trad', k)]; }) : [['shu', '書'], ['lin', '臨']], d.suffix);
-          if (!cfg.closing && d.buddhist) row('hui', '迴向', onoff, d.hui);
+          row('dateStyle', MX.t('日期'), [['gz', MX.t('干支年')], ['ce', MX.t('公元年')], ['none', MX.t('不寫')]], d.dateStyle);
+          row('suffix', d.buddhist ? MX.t('敬語') : MX.t('署款'), d.buddhist ? Closing.SUFFIX_KEYS.map(function (k) { return [k, Closing.suffix('trad', k)]; }) : [['shu', MX.t('書')], ['lin', MX.t('臨')]], d.suffix);
+          if (!cfg.closing && d.buddhist) row('hui', MX.t('迴向'), onoff, d.hui);
         }
         if (d.name) {
-          row('seal', '印章', onoff, d.seal);
-          if (d.seal) row('sealStyle', '印文', [['white', '白文'], ['red', '朱文']], d.sealStyle);
+          row('seal', MX.t('印章'), onoff, d.seal);
+          if (d.seal) row('sealStyle', MX.t('印文'), [['white', MX.t('白文')], ['red', MX.t('朱文')]], d.sealStyle);
         }
-        if (cfg.punct === 'show') row('punct', '標點', onoff, d.punct);
-        row('tpl', '範本字', onoff, d.tpl);
+        if (cfg.punct === 'show') row('punct', MX.t('標點'), onoff, d.punct);
+        row('tpl', MX.t('範本字'), onoff, d.tpl);
         ctrl.innerHTML = '';
         rows.forEach(function (r) { ctrl.appendChild(r); });
-        ctrl.appendChild(h('div', { class: 'note', text: d.name ? '姓名：' + d.name + '（可在「設定」更改）' : '尚未設定姓名：到「設定」輸入姓名，才會有落款姓名與印章。' }));
+        ctrl.appendChild(h('div', { class: 'note', text: d.name ? MX.t('姓名：{name}（可在「設定」更改）', { name: d.name }) : MX.t('尚未設定姓名：到「設定」輸入姓名，才會有落款姓名與印章。') }));
       }
       var pan = makePanel(panel, status);
       var clearPanel = pan.clear, showPanel = pan.show;
@@ -1074,25 +1074,25 @@
       // the size line under the status: file count and estimated size, strips, very large images, the PDF cap
       function showInfo(inf, L) {
         var lines = [], mp = Math.round(inf.maxPx / 1e6);
-        lines.push((inf.pdf ? 'PDF 1 個' : '檔案 ' + inf.files + ' 個') + '，預估約 ' + kb(inf.bytes) + '（實際大小依寫了多少字而定）');
+        lines.push((inf.pdf ? MX.t('PDF 1 個，預估約 {size}（實際大小依寫了多少字而定）', { size: kb(inf.bytes) }) : MX.t('檔案 {n} 個，預估約 {size}（實際大小依寫了多少字而定）', { n: inf.files, size: kb(inf.bytes) })));
         if (inf.strips) {
           var im = inf.images.filter(function (x) { return x.strips > 1; })[0];
           var wide = im.w >= im.h;
-          lines.push('這張圖太大，無法存成單一檔案：會依解析度分成 ' + im.strips + ' 張（每張約 ' + px(Math.round(wide ? im.w / im.strips : im.w)) + '×' + px(Math.round(wide ? im.h : im.h / im.strips)) + ' 像素），' +
-            (L.d.dir === 'v' && wide ? '第 1 張在最右邊，由右到左接起來' : '第 1 張在最前面，依序接起來') + '，每個字的解析度不變。');
+          lines.push(MX.t(L.d.dir === 'v' && wide ? '這張圖太大，無法存成單一檔案：會依解析度分成 {n} 張（每張約 {w}×{h} 像素），第 1 張在最右邊，由右到左接起來，每個字的解析度不變。' : '這張圖太大，無法存成單一檔案：會依解析度分成 {n} 張（每張約 {w}×{h} 像素），第 1 張在最前面，依序接起來，每個字的解析度不變。',
+            { n: im.strips, w: px(Math.round(wide ? im.w / im.strips : im.w)), h: px(Math.round(wide ? im.h : im.h / im.strips)) }));
         }
-        if (inf.big) lines.push('圖片很大（約 ' + mp + ' 百萬像素）：產生要等一下，部分手機相簿可能縮小顯示。要看清楚請用電腦，或改選「螢幕」解析度。');
+        if (inf.big) lines.push(MX.t('圖片很大（約 {mp} 百萬像素）：產生要等一下，部分手機相簿可能縮小顯示。要看清楚請用電腦，或改選「螢幕」解析度。', { mp: mp }));
         (inf.notes || []).forEach(function (t) { lines.push(t); });
-        if (inf.capped) lines.push('PDF 的每一頁最多約 1600 萬像素，所以這份 PDF 每字約 ' + Math.round(inf.u) + ' 像素；要更高解析度請存 PNG。');
+        if (inf.capped) lines.push(MX.t('PDF 的每一頁最多約 1600 萬像素，所以這份 PDF 每字約 {px} 像素；要更高解析度請存 PNG。', { px: Math.round(inf.u) }));
         infoBox.innerHTML = '';
         lines.forEach(function (t, i) { infoBox.appendChild(h('div', { 'data-role': i === 0 ? 'exp-size' : 'exp-warn', text: t })); });
       }
       async function refresh() {
         clearPanel();
         var seq = ++ui.seq;
-        status.textContent = '處理中…';
+        status.textContent = MX.t('處理中…');
         var L;
-        try { L = compose(ui.cp, ui.o); await prepare(ui.cp, L); } catch (e) { MX.err(e); status.textContent = '預覽失敗'; return; }
+        try { L = compose(ui.cp, ui.o); await prepare(ui.cp, L); } catch (e) { MX.err(e); status.textContent = MX.t('預覽失敗'); return; }
         if (seq !== ui.seq) return;
         ui.L = L;
         var cv, npages = L.pages.length, sz, inf;
@@ -1116,36 +1116,36 @@
         cv.setAttribute('data-page', String(ui.page));
         box.innerHTML = ''; box.appendChild(cv);
         showInfo(inf, L);
-        status.textContent = L.d.out === 'print' ? '共 ' + npages + ' 頁 · ' + L.d.paperSize + (L.d.orient === 'l' ? ' 橫向' : ' 直向') + ' · 輸出 ' + sz.w + '×' + sz.h + ' px（' + L.d.dpi + ' dpi）· 每行 ' + L.P + ' 字'
-          : L.merge ? '共 ' + L.pages.length + ' 頁，合成 1 張（' + (L.merge.dir === 'v' ? '由右到左並排' : '由上到下') + '）· 輸出 ' + sz.w + '×' + sz.h + ' px · 每行 ' + L.P + ' 字'
-          : '共 ' + L.pages.length + ' ' + (L.d.format === 'pages' ? '頁' : '張') + ' · 輸出 ' + sz.w + '×' + sz.h + ' px · 每行 ' + L.P + ' 字';
+        status.textContent = L.d.out === 'print' ? MX.t('共 {n} 頁 · {paper}{orient} · 輸出 {w}×{h} px（{dpi} dpi）· 每行 {cols} 字', { n: npages, paper: L.d.paperSize, orient: L.d.orient === 'l' ? MX.t(' 橫向') : MX.t(' 直向'), w: sz.w, h: sz.h, dpi: L.d.dpi, cols: L.P })
+          : L.merge ? MX.t('共 {n} 頁，合成 1 張（{dir}）· 輸出 {w}×{h} px · 每行 {cols} 字', { n: L.pages.length, dir: L.merge.dir === 'v' ? MX.t('由右到左並排') : MX.t('由上到下'), w: sz.w, h: sz.h, cols: L.P })
+          : MX.t(L.d.format === 'pages' ? '共 {n} 頁 · 輸出 {w}×{h} px · 每行 {cols} 字' : '共 {n} 張 · 輸出 {w}×{h} px · 每行 {cols} 字', { n: L.pages.length, w: sz.w, h: sz.h, cols: L.P });
         nav.innerHTML = '';
         if (npages > 1 && !L.merge) {
-          nav.appendChild(h('button', { 'data-act': 'pprev', text: '上一頁', disabled: ui.page <= 0 ? true : null, onclick: function () { ui.page--; refresh(); } }));
+          nav.appendChild(h('button', { 'data-act': 'pprev', text: MX.t('上一頁'), disabled: ui.page <= 0 ? true : null, onclick: function () { ui.page--; refresh(); } }));
           nav.appendChild(h('div', { 'data-role': 'exp-ctr', text: (ui.page + 1) + ' / ' + npages }));
-          nav.appendChild(h('button', { 'data-act': 'pnext', text: '下一頁', disabled: ui.page >= npages - 1 ? true : null, onclick: function () { ui.page++; refresh(); } }));
+          nav.appendChild(h('button', { 'data-act': 'pnext', text: MX.t('下一頁'), disabled: ui.page >= npages - 1 ? true : null, onclick: function () { ui.page++; refresh(); } }));
         }
       }
-      function progress(f) { status.textContent = '正在產生… ' + Math.round(f * 100) + '%'; }
+      function progress(f) { status.textContent = MX.t('正在產生… {n}%', { n: Math.round(f * 100) }); }
       async function save() {
         btnSave.disabled = true;
         if (!native) {
-          status.textContent = '處理中…';
+          status.textContent = MX.t('處理中…');
           var seq0 = ui.seq;
           try {
             var files = await E.build(ui.cp, ui.o, { progress: progress });
-            if (seq0 === ui.seq) { showPanel(files); status.textContent = '檔案已備妥，請按「儲存」'; try { panel.scrollIntoView({ block: 'nearest' }); } catch (e) { /* ignore */ } }
-          } catch (e) { MX.err(e); MX.toast('匯出失敗'); status.textContent = '匯出失敗'; }
+            if (seq0 === ui.seq) { showPanel(files); status.textContent = MX.t('檔案已備妥，請按「儲存」'); try { panel.scrollIntoView({ block: 'nearest' }); } catch (e) { /* ignore */ } }
+          } catch (e) { MX.err(e); MX.toast(MX.t('匯出失敗')); status.textContent = MX.t('匯出失敗'); }
           btnSave.disabled = false;
           return;
         }
-        status.textContent = '儲存中…';
+        status.textContent = MX.t('儲存中…');
         try {
           var r = await E.run(ui.cp, ui.o, { progress: progress });
-          MX.toast(r.files.length > 1 ? '已匯出 ' + r.files.length + ' 個檔案 · ' + r.status : r.status);
-          status.textContent = '已儲存：' + r.files.map(function (f) { return f.name; }).join('、') + (r.notes && r.notes.length ? '　' + r.notes.join(' ') : '');
-          if (r.files.some(function (f) { return f.mime === 'application/pdf'; })) status.textContent += '　（用手機的 PDF 檢視器就能列印）';
-        } catch (e) { MX.err(e); MX.toast('匯出失敗'); status.textContent = '匯出失敗'; }
+          MX.toast(r.files.length > 1 ? MX.t('已匯出 {n} 個檔案 · {status}', { n: r.files.length, status: r.status }) : r.status);
+          status.textContent = MX.t('已儲存：{names}', { names: r.files.map(function (f) { return f.name; }).join(MX.t('、')) }) + (r.notes && r.notes.length ? MX.t('　') + r.notes.join(' ') : '');
+          if (r.files.some(function (f) { return f.mime === 'application/pdf'; })) status.textContent += MX.t('　（用手機的 PDF 檢視器就能列印）');
+        } catch (e) { MX.err(e); MX.toast(MX.t('匯出失敗')); status.textContent = MX.t('匯出失敗'); }
         btnSave.disabled = false;
       }
       drawControls();

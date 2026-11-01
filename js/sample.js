@@ -52,13 +52,13 @@
   // ------------------------------------------------------------------ 描 / 臨 / 默 side by side
   Sm.modes = function (get, set, o) {
     o = o || {};
-    var box = h('div', { class: 'mcards' + (o.compact ? ' compact' : ''), 'data-k': 'mode', 'data-role': 'sample-modes', role: 'radiogroup', 'aria-label': '書寫方式' });
+    var box = h('div', { class: 'mcards' + (o.compact ? ' compact' : ''), 'data-k': 'mode', 'data-role': 'sample-modes', role: 'radiogroup', 'aria-label': MX.t('書寫方式') });
     var self = { el: box, chars: o.chars || [Sm.ONE], cards: [] };
     var SIZE = o.compact ? 64 : (window.innerWidth < 420 ? 72 : 88);
     Sm.MODES.forEach(function (m) {
       var cv = h('canvas', { 'data-mode': m[0] });
-      var b = h('button', { type: 'button', class: 'mcard', 'data-v': m[0], role: 'radio', 'aria-checked': 'false', 'aria-label': m[1] + '：' + m[2], onclick: function () { set(m[0]); } },
-        [cv, h('span', { class: 'mn', text: m[1] }), h('span', { class: 'md', text: m[2] })]);
+      var b = h('button', { type: 'button', class: 'mcard', 'data-v': m[0], role: 'radio', 'aria-checked': 'false', 'aria-label': MX.t('{name}：{desc}', { name: MX.t(m[1]), desc: MX.t(m[2]) }), onclick: function () { set(m[0]); } },
+        [cv, h('span', { class: 'mn', text: MX.t(m[1]) }), h('span', { class: 'md', text: MX.t(m[2]) })]);
       self.cards.push({ b: b, cv: cv, mode: m[0] });
       box.appendChild(b);
     });
@@ -92,7 +92,7 @@
         p = Layout.slotToColRow(grid, s);
         Draw.cell(r.ctx, p.col * cell, p.row * cell, cell, { ch: ready ? (list[s] || '') : '', punct: '' }, op);
       }
-      cap.textContent = '每頁 ' + dm[0] + '×' + dm[1] + ' 格 · ' + (dir === 'h' ? '橫書：左到右，由上而下' : '直書：右行先，由上而下') + (cfg.mode && cfg.mode !== 'trace' ? ' · 預覽以描紅顯示' : '');
+      cap.textContent = [MX.t('每頁 {c}×{r} 格', { c: dm[0], r: dm[1] }), dir === 'h' ? MX.t('橫書：左到右，由上而下') : MX.t('直書：右行先，由上而下'), cfg.mode && cfg.mode !== 'trace' ? MX.t('預覽以描紅顯示') : ''].filter(Boolean).join(' · ');
       box.setAttribute('data-chars', list.slice(0, 4).join(''));
       box.setAttribute('data-v', [cfg.script, cfg.grid, cfg.guide, cfg.box, dir, cfg.size, (g.st || {}).tplStyle, (g.st || {}).tplFont, (g.st || {}).gridLook, ready ? 1 : 0].join());
     };
@@ -109,8 +109,8 @@
     var cv = h('canvas', { class: 'padcv', 'data-role': 'brush-try', style: 'width:' + W + 'px;height:' + HH + 'px' });
     cv.style.touchAction = 'none';
     var ps = { strokes: [], cur: null, cap: new Ink.Sampler(), ctx: null, kx: 1 };
-    var clear = h('button', { type: 'button', text: '清除', 'data-act': 'try-clear', onclick: function () { ps.strokes = []; paintAll(); } });
-    var box = h('div', { class: 'smp sbrush', 'data-role': 'sample-brush' }, [ws.el, h('div', { class: 'note', text: '在下面框裡試寫（用目前的筆觸，改設定會用同一筆重畫）：' }), h('div', { class: 'frame' }, [cv]), h('div', { class: 'btnrow' }, [clear])]);
+    var clear = h('button', { type: 'button', text: MX.t('清除'), 'data-act': 'try-clear', onclick: function () { ps.strokes = []; paintAll(); } });
+    var box = h('div', { class: 'smp sbrush', 'data-role': 'sample-brush' }, [ws.el, h('div', { class: 'note', text: MX.t('在下面框裡試寫（用目前的筆觸，改設定會用同一筆重畫）：') }), h('div', { class: 'frame' }, [cv]), h('div', { class: 'btnrow' }, [clear])]);
     var self = { el: box };
     function style() { return Ink.style(get().st); }
     function setup() {

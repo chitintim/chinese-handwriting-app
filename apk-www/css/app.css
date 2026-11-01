@@ -315,7 +315,7 @@ html.phone .nextbtn{margin-left:-110px;width:220px}
 .autopill{min-width:64px;font-size:15px;white-space:nowrap}
 .autopill[aria-pressed=true]{background:#000;color:#fff}
 .autopill[aria-pressed=false]{background:#fff;color:#000;border-style:dashed}
-.ptrow{display:flex;align-items:baseline;min-width:0;padding:0 2px 2px}
+.ptrow{display:flex;align-items:center;min-width:0;padding:0 2px 2px}
 .ptitle{flex:1 1 0;min-width:0;padding:0 4px 0 0;text-align:left;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ptrow .ctr{flex:none;font-size:16px;white-space:nowrap}
 .pctx{display:flex;justify-content:center;align-items:stretch;min-width:0}
@@ -548,3 +548,19 @@ html.phone .lrow.work .lmain{grid-column:2;grid-row:1}
 html.phone .lrow.work .lbtns{grid-column:1 / -1;grid-row:2;max-width:none;flex-wrap:nowrap;padding:0 6px 6px}
 html.phone .lrow.work .lbtns button{flex:1 1 0;margin:0 6px 0 0;min-width:0}
 html.phone .lrow.work .lbtns button:last-child{margin-right:0}
+
+/* ---- interface-language toggle (繁 / 简 / EN; docs/SPEC.md revision 22): three 44 px squares in the top bar (the practice view: one cycle button). Black on white, no animation. ---- */
+.lang{display:inline-flex;flex:none;vertical-align:middle}
+.lang button{min-width:44px;width:44px;min-height:44px;height:44px;padding:0;font-size:16px;line-height:1;margin-right:-2px}
+.lang button:last-child{margin-right:0}
+.lang button.on{background:#000;color:#fff}
+button.lang.langcycle{width:44px;min-width:44px;min-height:44px;height:44px;padding:0;margin-right:0;font-size:16px}
+html[data-ui=en] body,html[data-ui=en] button,html[data-ui=en] input,html[data-ui=en] textarea{letter-spacing:0}
+html[data-ui=simp] body{font-family:"MoUKai SC","MoKai SC","MoTWKai","Kaiti SC","STKaiti","Noto Sans CJK SC","Microsoft YaHei",serif}
+button.fav.withico,html.phone .topbar button.fav.withico,html.phone .btnrow button.fav.withico{width:auto;padding:0 12px}
+.ptop .ptrow button.lang{flex:none;margin:0 0 0 8px;min-height:44px}
+html[data-ui=en] .ptop .prow.head>button{font-size:14px;padding:0 4px;min-width:40px}
+html[data-ui=en] .ptop .prow.head>button:first-child{min-width:48px}
+html[data-ui=en] .autopill{min-width:0;font-size:14px}
+html.phone[data-ui=en] .lrow.work .lbtns{flex-wrap:wrap}
+html.phone[data-ui=en] .lrow.work .lbtns button{flex:1 1 auto;margin-bottom:6px;padding:0 8px}

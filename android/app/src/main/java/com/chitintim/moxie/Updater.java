@@ -51,7 +51,7 @@ final class Updater {
                 c = dm == null ? null : dm.query(new DownloadManager.Query().setFilterById(id));
                 if (c == null || !c.moveToFirst()) {
                     downloadId = -1;
-                    emit("error", 0, "下載已取消");
+                    emit("error", 0, Lang.s(activity, "下載已取消", "下载已取消", "Download cancelled"));
                     return;
                 }
                 int status = c.getInt(c.getColumnIndexOrThrow(DownloadManager.COLUMN_STATUS));
@@ -66,7 +66,7 @@ final class Updater {
                 if (status == DownloadManager.STATUS_FAILED) {
                     int reason = c.getInt(c.getColumnIndexOrThrow(DownloadManager.COLUMN_REASON));
                     downloadId = -1;
-                    emit("error", 0, "下載失敗 (" + reason + ")");
+                    emit("error", 0, Lang.s(activity, "下載失敗 (", "下载失败 (", "Download failed (") + reason + ")");
                     return;
                 }
                 int p = total > 0 ? (int) (got * 100L / total) : 0;
@@ -91,7 +91,7 @@ final class Updater {
      */
     String start(String url) {
         try {
-            if (url == null || !url.startsWith(URL_PREFIX)) return "error:不支援的網址";
+            if (url == null || !url.startsWith(URL_PREFIX)) return "error:" + Lang.s(activity, "不支援的網址", "不支持的网址", "Unsupported address");
             if (!canInstall()) {
                 openUnknownSourcesSettings();
                 emit("permission", 0, null);
@@ -99,13 +99,13 @@ final class Updater {
             }
             if (downloadId >= 0) return "started"; // already downloading: keep reporting
             File dir = activity.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);
-            if (dir == null) return "error:沒有可用的儲存空間";
+            if (dir == null) return "error:" + Lang.s(activity, "沒有可用的儲存空間", "没有可用的存储空间", "No storage space available");
             File f = new File(dir, FILE_NAME);
-            if (f.exists() && !f.delete()) return "error:無法清除舊的下載檔";
+            if (f.exists() && !f.delete()) return "error:" + Lang.s(activity, "無法清除舊的下載檔", "无法清除旧的下载文件", "Cannot remove the old download");
             DownloadManager dm = (DownloadManager) activity.getSystemService(android.content.Context.DOWNLOAD_SERVICE);
-            if (dm == null) return "error:系統沒有下載服務";
+            if (dm == null) return "error:" + Lang.s(activity, "系統沒有下載服務", "系统没有下载服务", "The system has no download service");
             DownloadManager.Request r = new DownloadManager.Request(Uri.parse(url));
-            r.setTitle("墨字帖更新");
+            r.setTitle(Lang.s(activity, "墨字帖更新", "墨字帖更新", "墨字帖 update"));
             r.setDescription("moxie.apk");
             r.setMimeType("application/vnd.android.package-archive");
             r.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
@@ -138,7 +138,7 @@ final class Updater {
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 activity.startActivity(i);
             } catch (Exception e) {
-                Toast.makeText(activity, "請在系統設定中允許本 App 安裝未知應用程式", Toast.LENGTH_LONG).show();
+                Toast.makeText(activity, Lang.s(activity, "請在系統設定中允許本 App 安裝未知應用程式", "请在系统设置中允许本 App 安装未知应用", "Please allow this app to install unknown apps in system settings"), Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -148,12 +148,12 @@ final class Updater {
             File dir = activity.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);
             File f = dir == null ? null : new File(dir, FILE_NAME);
             if (f == null || !f.isFile() || f.length() < 100000L) {
-                emit("error", 0, "下載的檔案不完整");
+                emit("error", 0, Lang.s(activity, "下載的檔案不完整", "下载的文件不完整", "The downloaded file is incomplete"));
                 return;
             }
             PackageInfo pi = activity.getPackageManager().getPackageArchiveInfo(f.getAbsolutePath(), 0);
             if (pi == null || !activity.getPackageName().equals(pi.packageName)) {
-                emit("error", 0, "這不是墨字帖的安裝檔");
+                emit("error", 0, Lang.s(activity, "這不是墨字帖的安裝檔", "这不是墨字帖的安装文件", "This is not the 墨字帖 installer"));
                 return;
             }
             if (!canInstall()) { // the permission may have been revoked meanwhile

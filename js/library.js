@@ -20,7 +20,7 @@
   // Both schemas are understood: the previous one had no categories / sections (title + body at the top of the text, a plain description).
   function normIndex(raw) {
     var cats = raw.categories && raw.categories.length ? raw.categories.map(function (c) { return { id: c.id, title: dual(c.title) }; })
-      : [{ id: 'all', title: { trad: '文庫', simp: '文库' } }];
+      : [{ id: 'all', title: { trad: '文庫', simp: '文库', en: 'Library 文庫' } }];
     var texts = (raw.texts || []).map(function (e) {
       return {
         id: e.id, category: e.category || cats[0].id, title: dual(e.title), author: dual(e.author), dynasty: dual(e.dynasty), file: e.file,
@@ -53,7 +53,7 @@
     var n = cjkCount(c.body);
     return {
       id: c.id, category: CUSTOM, title: dual(c.title), author: dual(''), dynasty: dual(''), file: '', chars: n, sections: 1, custom: true,
-      description: dual(n + '字')
+      description: dual('')
     };
   }
 
@@ -153,7 +153,7 @@
     // categories as shown on the home screen: the library's, then 自訂 (always, so a new text can be added)
     categories: function () {
       var cats = (L.index ? L.index.categories : []).filter(function (c) { return L.texts(c.id).length > 0; });
-      cats.push({ id: CUSTOM, title: { trad: '自訂', simp: '自定义' }, custom: true });
+      cats.push({ id: CUSTOM, title: { trad: '自訂', simp: '自定义', en: 'My texts 自訂' }, custom: true });
       return cats;
     },
     category: function (id) {
@@ -219,9 +219,9 @@
     validateCustom: function (title, body) {
       title = String(title || '').trim();
       body = String(body || '').replace(/\r\n?/g, '\n').trim();
-      if (!title) return { error: '請輸入標題' };
-      if (cjkCount(body) < 1) return { error: '內文要有漢字' };
-      if (Array.from(body).length > MAX_CUSTOM) return { error: '內文太長（上限 ' + MAX_CUSTOM + ' 字）' };
+      if (!title) return { error: MX.t('請輸入標題') };
+      if (cjkCount(body) < 1) return { error: MX.t('內文要有漢字') };
+      if (Array.from(body).length > MAX_CUSTOM) return { error: MX.t('內文太長（上限 {n} 字）', { n: MAX_CUSTOM }) };
       return { title: title.slice(0, 40), body: body };
     },
     saveCustom: function (id, title, body) {

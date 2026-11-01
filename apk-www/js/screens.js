@@ -18,14 +18,16 @@
     archivedToast: '上一遍已存入我的作品', worksTitle: '我的作品', worksSummary: '{n} 份作品 · 已完成 {m} 份', worksAll: '全部 {n}', worksEmpty: '還沒有作品。寫完的和寫到一半的都會列在這裡。',
     backupText: '備份這篇'
   };
+  MX.I18n.live(STR);       // read through MX.t each time (a language switch redraws the screen)
   S.STR = STR;
 
   // A screen: top bar = 返回 (top left, never at the bottom edge), title, extra buttons (right); then an optional breadcrumb line crumbs = [[label, hash], ...] (the last one is the page itself).
   function screen(root, title, backHash, extra, crumbs) {
     var el = h('div', { class: 'screen' });
     var top = h('div', { class: 'topbar' });
-    if (backHash) top.appendChild(h('button', { text: '返回', class: 'backbtn', 'data-act': 'back', onclick: function () { location.hash = backHash; } }));
+    if (backHash) top.appendChild(h('button', { text: MX.t('返回'), class: 'backbtn', 'data-act': 'back', onclick: function () { location.hash = backHash; } }));
     top.appendChild(h('h1', { class: 'grow', text: title }));
+    top.appendChild(MX.langToggle());       // 繁 / 简 / EN: on every screen, right after the title (the screen's own buttons stay at the right edge)
     if (extra) extra.forEach(function (n) { top.appendChild(n); });
     el.appendChild(top);
     if (crumbs && crumbs.length) el.appendChild(crumbRow(crumbs));
@@ -35,7 +37,7 @@
   function crumbRow(crumbs) {
     var row = h('div', { class: 'crumbs', 'data-role': 'crumbs' });
     crumbs.forEach(function (c, i) {
-      if (i) row.appendChild(h('span', { class: 'sep', text: '〉' }));
+      if (i) row.appendChild(h('span', { class: 'sep', text: MX.t('〉') }));
       if (i < crumbs.length - 1) row.appendChild(h('button', { class: 'crumb', 'data-act': 'crumb', text: c[0], onclick: function () { location.hash = c[1]; } }));
       else row.appendChild(h('span', { class: 'here', text: c[0] }));
     });
@@ -54,7 +56,7 @@
     return o;
   }
   function libScript() { return Model.settings.libScript === 'simp' ? 'simp' : 'trad'; }
-  function T(v) { return v ? (v[libScript()] || v.trad || '') : ''; }
+  function T(v) { if (v && v.en && MX.I18n.isEn()) return v.en; return v ? (v[libScript()] || v.trad || '') : ''; }
   function uiFont(script) { return MX.Draw.uiFam(script || libScript()); }
   // where 返回 goes from a text's pages: its chapter list, or its category
   S.backFor = function (textId) {
@@ -65,7 +67,7 @@
   };
   function catCrumbs(e) {
     var cat = e ? Lib.category(e.custom ? Lib.CUSTOM : e.category) : null;
-    return [['首頁', '#/'], [cat ? T(cat.title) : '書庫', cat ? H('lib', cat.id) : '#/']];
+    return [[MX.t('首頁'), '#/'], [cat ? T(cat.title) : MX.t('書庫'), cat ? H('lib', cat.id) : '#/']];
   }
   function dateOf(ts) { return ts ? MX.fmtDate(ts) : '—'; }
 
@@ -89,9 +91,9 @@
       host.appendChild(box);
       if (pages > 1) {
         host.appendChild(h('div', { class: 'pager', 'data-role': 'pager' }, [
-          h('button', { 'data-act': 'ppage-prev', text: '上一頁', disabled: st.p <= 1 ? true : null, onclick: function () { st.p--; render(); sync(); } }),
+          h('button', { 'data-act': 'ppage-prev', text: MX.t('上一頁'), disabled: st.p <= 1 ? true : null, onclick: function () { st.p--; render(); sync(); } }),
           h('div', { class: 'ctr', 'data-role': 'pager-ctr', text: st.p + ' / ' + pages }),
-          h('button', { 'data-act': 'ppage-next', text: '下一頁', disabled: st.p >= pages ? true : null, onclick: function () { st.p++; render(); sync(); } })
+          h('button', { 'data-act': 'ppage-next', text: MX.t('下一頁'), disabled: st.p >= pages ? true : null, onclick: function () { st.p++; render(); sync(); } })
         ]));
       }
     }
@@ -119,7 +121,7 @@
   }
   function pctOf(copy) { return copy && copy.total ? Math.floor(100 * copy.filled / copy.total) : 0; }
   function notesBtn(textId, sectionId, script) {
-    return { label: '解說', act: 'notes', onclick: function () { location.hash = H('notes', textId, sectionId || 'main'); } };
+    return { label: MX.t('解說'), act: 'notes', onclick: function () { location.hash = H('notes', textId, sectionId || 'main'); } };
   }
 
   // 匯出 for a copy from a list (loads its text and ink first): the 匯出作品 sheet
@@ -129,7 +131,7 @@
     Model.upgradeKeys(c, txt);
     MX.Export.openSheet(MX.Export.ctx(c, txt, MX.Layout.cellsFor(txt, c)));
   };
-  function exportBtn(c) { return { label: '匯出', act: 'export', onclick: function () { S.exportCopy(c).catch(function (e) { MX.err(e); MX.toast('匯出失敗'); }); } }; }
+  function exportBtn(c) { return { label: MX.t('匯出'), act: 'export', onclick: function () { S.exportCopy(c).catch(function (e) { MX.err(e); MX.toast(MX.t('匯出失敗')); }); } }; }
 
   // buttons of a (text, section) row: 繼續/開始, 解說 (when there are notes), 收藏
   function sectionButtons(textId, sectionId, favSec, onFav) {
@@ -142,7 +144,7 @@
   }
   function sectionMeta(textId, sectionId, chars, prefix) {
     var copy = Model.activeCopy(textId, sectionId);
-    return (prefix ? prefix + ' · ' : '') + chars + '字 · 進度 ' + pctOf(copy) + '% · 已抄 ' + Model.doneCount(textId, sectionId) + ' 遍';
+    return (prefix ? prefix + ' · ' : '') + MX.t('{chars}字 · 進度 {pct}% · 已抄 {n} 遍', { chars: chars, pct: pctOf(copy), n: Model.doneCount(textId, sectionId) });
   }
   function scriptOf(textId, sectionId) {
     var copy = Model.activeCopy(textId, sectionId);
@@ -159,22 +161,22 @@
     return a ? (a.completedAt ? STR.again : STR.resume) : STR.start;
   }
   // The choices of a copy in words (米字格 · 直書 · 中格 ...; 無外框 / 顯示標點 / 無標題 only when they differ from the usual): the setup screen's 進階選項 summary and the text page's quick-start line.
+  var SIZE_WORD = { XL: '特大格', L: '大格', ML: '中大格', M: '中格', S: '小格', XS: '特小格' };
   function cfgWords(d) {
     var D = Model.DEF_CFG, get = function (k) { return d[k] === undefined ? D[k] : d[k]; };
-    var size = MX.Form.CFG.filter(function (f) { return f.k === 'size'; })[0].opts.filter(function (o) { return o[0] === get('size'); })[0];
-    var parts = [get('guide') === false ? '無格線' : (get('grid') === 'tian' ? '田字格' : '米字格')];
-    if (get('box') === false) parts.push('無外框');
-    parts.push(get('dir') === 'h' ? '橫書' : '直書', (size ? size[1].split(' ')[0] : '中') + '格');
-    if (get('punct') === 'show') parts.push('顯示標點');
-    if (get('title') === false) parts.push('無標題');
-    parts.push(get('sign') === false ? '無落款' : '含落款');
+    var parts = [get('guide') === false ? MX.t('無格線') : (get('grid') === 'tian' ? MX.t('田字格') : MX.t('米字格'))];
+    if (get('box') === false) parts.push(MX.t('無外框'));
+    parts.push(get('dir') === 'h' ? MX.t('橫書') : MX.t('直書'), MX.t(SIZE_WORD[get('size')] || '中格'));
+    if (get('punct') === 'show') parts.push(MX.t('顯示標點'));
+    if (get('title') === false) parts.push(MX.t('無標題'));
+    parts.push(get('sign') === false ? MX.t('無落款') : MX.t('含落款'));
     return parts;
   }
   function cfgLine(d) {
     var D = Model.DEF_CFG, mode = d.mode === undefined ? D.mode : d.mode;
-    return [(d.script === undefined ? D.script : d.script) === 'simp' ? '简体' : '繁體', { trace: '描', copy: '臨', recall: '默' }[mode] || '描'].concat(cfgWords(d)).join(' · ');
+    return [(d.script === undefined ? D.script : d.script) === 'simp' ? MX.t('简体') : MX.t('繁體'), { trace: MX.t('描'), copy: MX.t('臨'), recall: MX.t('默') }[mode] || MX.t('描')].concat(cfgWords(d)).join(' · ');
   }
-  var CFG_SOURCE = { text: '本篇上次的選項', 'default': '新字帖預設', builtin: '內建預設' };
+  var CFG_SOURCE = { text: '本篇上次的選項', 'default': '新字帖預設', builtin: '內建預設' };      // keys of the string table (read through MX.t)
   // Start (or continue) a section with the choices d: makes the copy when there is none, otherwise gives it the choices (a section with ink keeps its 字體), and remembers d for the text.
   // Shared by the setup screen and the text page's quick-start panel. Resolves to the copy.
   async function beginCopy(textId, sectionId, d, copy) {
@@ -215,9 +217,9 @@
   function resumeRow(c, compact) {
     var e = Lib.entry(c.textId);
     var r = lrow({
-      title: T(e.title), meta: '進度 ' + pctOf(c) + '% · 最後書寫 ' + dateOf(c.updatedAt), font: uiFont(c.cfg.script), compact: compact, pct: pctOf(c),
+      title: T(e.title), meta: MX.t('進度 {pct}% · 最後書寫 {date}', { pct: pctOf(c), date: dateOf(c.updatedAt) }), font: uiFont(c.cfg.script), compact: compact, pct: pctOf(c),
       attrs: { 'data-role': 'resume', 'data-copy': c.id, 'data-text': null }, open: function () { location.hash = H('practice', c.id); },
-      buttons: [{ label: '繼續', act: 'resume', primary: true, onclick: function () { location.hash = H('practice', c.id); } }, exportBtn(c)]
+      buttons: [{ label: MX.t('繼續'), act: 'resume', primary: true, onclick: function () { location.hash = H('practice', c.id); } }, exportBtn(c)]
     });
     if (e.sections > 1) refineTitle(r, c.textId, Model.sid(c));
     return r;
@@ -229,7 +231,7 @@
     if (sec) {
       var copy = Model.activeCopy(f.textId, sec);
       r = lrow({
-        title: T(e.title), meta: '進度 ' + pctOf(copy) + '% · 已抄 ' + Model.doneCount(f.textId, sec) + ' 遍', font: uiFont(scriptOf(f.textId, sec)), compact: compact, pct: pctOf(copy),
+        title: T(e.title), meta: MX.t('進度 {pct}% · 已抄 {n} 遍', { pct: pctOf(copy), n: Model.doneCount(f.textId, sec) }), font: uiFont(scriptOf(f.textId, sec)), compact: compact, pct: pctOf(copy),
         attrs: { 'data-role': 'fav', 'data-fav-text': f.textId, 'data-fav-section': sec }, open: function () { location.hash = startHash(f.textId, sec); },
         buttons: [{ label: startLabel(f.textId, sec), act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, sec); } },
           { node: MX.favButton(f.textId, sec, onFav) }]
@@ -240,9 +242,9 @@
     var byline = [T(e.author), T(e.dynasty)].filter(Boolean).join(' ');
     var prog = multi ? Math.floor(100 * Model.textProgress(f.textId, e.sections)) : pctOf(Model.activeCopy(f.textId, 'main'));
     return lrow({
-      title: T(e.title), meta: (byline ? byline + ' · ' : '') + e.chars + '字 · 進度 ' + prog + '%', font: uiFont(), compact: compact, pct: prog,
+      title: T(e.title), meta: (byline ? byline + ' · ' : '') + MX.t('{chars}字 · 進度 {pct}%', { chars: e.chars, pct: prog }), font: uiFont(), compact: compact, pct: prog,
       attrs: { 'data-role': 'fav', 'data-fav-text': f.textId }, open: function () { location.hash = multi ? H('text', f.textId) : startHash(f.textId, 'main'); },
-      buttons: [multi ? { label: '章節', act: 'sections', primary: true, onclick: function () { location.hash = H('text', f.textId); } }
+      buttons: [multi ? { label: MX.t('章節'), act: 'sections', primary: true, onclick: function () { location.hash = H('text', f.textId); } }
         : { label: startLabel(f.textId, 'main'), act: 'start', primary: true, onclick: function () { location.hash = startHash(f.textId, 'main'); } },
         { node: MX.favButton(f.textId, null, onFav) }]
     });
@@ -254,26 +256,26 @@
 
   // ------------------------------------------------------------------ home
   S.home = function (root, query) {
-    var el = screen(root, '墨字帖', null, [
-      h('button', { text: '搜尋', 'data-act': 'search', onclick: function () { location.hash = '#/search'; } }),
-      h('button', { text: '筆測', 'data-act': 'pentest', onclick: function () { location.hash = '#/pentest'; } }),
-      h('button', { text: '設定', 'data-act': 'settings', onclick: function () { location.hash = '#/settings'; } })
+    var el = screen(root, MX.t('墨字帖'), null, [
+      h('button', { text: MX.t('搜尋'), 'data-act': 'search', onclick: function () { location.hash = '#/search'; } }),
+      h('button', { text: MX.t('筆測'), 'data-act': 'pentest', onclick: function () { location.hash = '#/pentest'; } }),
+      h('button', { text: MX.t('設定'), 'data-act': 'settings', onclick: function () { location.hash = '#/settings'; } })
     ]);
     el.setAttribute('data-screen', 'home');
     if (MX.updateReady) {
       el.appendChild(h('div', { class: 'card update', 'data-role': 'update' }, [
-        h('div', { class: 'm', text: '有新版本可用。', style: 'margin-bottom:8px' }),
-        h('button', { class: 'on big', 'data-act': 'reload', text: '重新載入以更新', onclick: function () { location.reload(); } })
+        h('div', { class: 'm', text: MX.t('有新版本可用。'), style: 'margin-bottom:8px' }),
+        h('button', { class: 'on big', 'data-act': 'reload', text: MX.t('重新載入以更新'), onclick: function () { location.reload(); } })
       ]));
     }
     // iOS Safari, not installed to the Home Screen: the browser may delete site data after about 7 days without a visit
     if (MX.Device.needsInstallTip()) {
       el.appendChild(h('div', { class: 'card tip', 'data-role': 'ios-tip' }, [
-        h('div', { class: 't', text: '加到主畫面，保護你的字跡' }),
-        h('div', { class: 'm', text: 'Safari 可能在約 7 天沒開啟後清除網站資料。請按分享鈕，選「加入主畫面」，之後從主畫面圖示開啟：字跡才會長期保存，也能全螢幕書寫。也請定期到「設定 → 資料」匯出備份。' }),
+        h('div', { class: 't', text: MX.t('加到主畫面，保護你的字跡') }),
+        h('div', { class: 'm', text: MX.t('Safari 可能在約 7 天沒開啟後清除網站資料。請按分享鈕，選「加入主畫面」，之後從主畫面圖示開啟：字跡才會長期保存，也能全螢幕書寫。也請定期到「設定 → 資料」匯出備份。') }),
         h('div', { class: 'btnrow' }, [
-          h('button', { class: 'on', text: '知道了', 'data-act': 'tip-ok', onclick: function () { MX.Device.dismissInstallTip(); MX.route(); } }),
-          h('button', { text: '去備份', 'data-act': 'tip-backup', onclick: function () { MX.Device.dismissInstallTip(); location.hash = '#/settings'; } })
+          h('button', { class: 'on', text: MX.t('知道了'), 'data-act': 'tip-ok', onclick: function () { MX.Device.dismissInstallTip(); MX.route(); } }),
+          h('button', { text: MX.t('去備份'), 'data-act': 'tip-backup', onclick: function () { MX.Device.dismissInstallTip(); location.hash = '#/settings'; } })
         ])
       ]));
     }
@@ -286,14 +288,15 @@
     // the intro card near the top of home, right under the header and notices, in every layout (wide: a two-column card). Black text.
     // Title, a short story (English + 中文), the ask, and two separate big links: 關於與隨喜 (opens the intro dialog) and GitHub. On the 電子紙 tablet the 中文 line comes first and the English one is smaller (keeps the shelves above the fold).
     var compactIntro = !MX.Device.isWide() && !MX.Device.isPhone() && Model.settings.screenType === 'eink';
-    var iEn = h('p', { class: 'ien', lang: 'en', 'data-role': 'intro-en', text: 'Hey, it\'s Tim 👋 I vibe-coded this while sitting with my mom in hospital. She\'s a devoted Buddhist, and 抄心經 is close to her heart. It started as one sutra and grew into a little library of texts to trace.' });
-    var iZh = h('p', { class: 'izh', lang: 'zh', 'data-role': 'intro-zh', text: '在醫院陪媽媽的日子裡做的小工具，由一篇《心經》開始，慢慢變成一個小字帖庫。' });
+    var iEn = h('p', { class: 'ien', lang: 'en', 'data-role': 'intro-en', text: MX.t('Hey, it\'s Tim 👋 I vibe-coded this while sitting with my mom in hospital. She\'s a devoted Buddhist, and 抄心經 is close to her heart. It started as one sutra and grew into a little library of texts to trace.') });
+    var zhText = MX.t('在醫院陪媽媽的日子裡做的小工具，由一篇《心經》開始，慢慢變成一個小字帖庫。');       // '' in EN: the English line says it
+    var iZh = zhText ? h('p', { class: 'izh', lang: 'zh', 'data-role': 'intro-zh', text: zhText }) : null;
     var introEl = h('div', { class: 'intro' + (compactIntro ? ' compact' : ''), 'data-role': 'home-intro' }, [
-      h('div', { class: 'i1', 'data-role': 'intro-title', text: '墨字帖 · 抄經、臨帖的描紅練習' }),
+      h('div', { class: 'i1', 'data-role': 'intro-title', text: MX.t('墨字帖 · 抄經、臨帖的描紅練習') }),
       h('div', { class: 'ibodies' }, compactIntro ? [iZh, iEn] : [iEn, iZh]),
-      h('div', { class: 'i3', 'data-role': 'intro-ask', text: 'Free, always. If you like it, please consider a kind donation to Dana-Farber, or a visit to 西方寺 — 如覺得有用，歡迎隨喜。' }),
+      h('div', { class: 'i3', 'data-role': 'intro-ask', 'data-zh': '', text: MX.t('Free, always. If you like it, please consider a kind donation to Dana-Farber, or a visit to 西方寺 — 如覺得有用，歡迎隨喜。') }),
       h('div', { class: 'i4', 'data-role': 'intro-links' }, [
-        h('a', { class: 'ilink', 'data-act': 'about', href: '#/about', onclick: function (e) { e.preventDefault(); if (MX.Intro) MX.Intro.open(); } }, ['關於與隨喜', MX.icon('tri-r', 12)]),
+        h('a', { class: 'ilink', 'data-act': 'about', href: '#/about', onclick: function (e) { e.preventDefault(); if (MX.Intro) MX.Intro.open(); } }, [MX.t('關於與隨喜'), MX.icon('tri-r', 12)]),
         h('a', { class: 'ilink', 'data-act': 'github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: 'GitHub' })
       ])
     ]);
@@ -307,7 +310,7 @@
     function shelf(kind, title, items, emptyMsg) {
       var box = h('div', { class: 'shelf', 'data-shelf': kind });
       var head = h('div', { class: 'shead' }, [h('h2', { text: title, 'data-role': 'shelf-title' })]);
-      if (items.length) head.appendChild(h('button', { 'data-act': 'shelf-all', text: '全部 ' + items.length, onclick: function () { location.hash = H('shelf', kind); } }));
+      if (items.length) head.appendChild(h('button', { 'data-act': 'shelf-all', text: MX.t('全部 {n}', { n: items.length }), onclick: function () { location.hash = H('shelf', kind); } }));
       box.appendChild(head);
       var rows = h('div', { 'data-role': 'shelf-rows' });
       box.appendChild(rows);
@@ -315,8 +318,8 @@
       colA.appendChild(box);
       return rows;
     }
-    var rRows = shelf('resume', '繼續書寫', rItems, '還沒有進行中的字帖。從下面的書庫選一篇開始。');
-    var fRows = shelf('fav', '收藏', fItems, '還沒有收藏。點文本或章節旁的星號，加進這裡。');
+    var rRows = shelf('resume', MX.t('繼續書寫'), rItems, MX.t('還沒有進行中的字帖。從下面的書庫選一篇開始。'));
+    var fRows = shelf('fav', MX.t('收藏'), fItems, MX.t('還沒有收藏。點文本或章節旁的星號，加進這裡。'));
     // 我的作品: every writing (in progress, finished, archived) in one list; the shelf is only the way in
     var ws = Model.works(), wFin = ws.filter(function (c) { return c.completedAt; }).length;
     var wBox = h('div', { class: 'shelf', 'data-shelf': 'works' }, [
@@ -326,32 +329,32 @@
     colA.appendChild(wBox);
 
     // 書庫: category tiles
-    colB.appendChild(h('div', { class: 'shead' }, [h('h2', { text: '書庫' })]));
+    colB.appendChild(h('div', { class: 'shead' }, [h('h2', { text: MX.t('書庫') })]));
     var tiles = h('div', { class: 'tiles', 'data-role': 'tiles' });
     Lib.categories().forEach(function (c) {
       var n = Lib.texts(c.id).length, done = 0;
       Lib.texts(c.id).forEach(function (e) { done += Model.doneCount(e.id); });
-      var meta = c.custom ? (n ? n + ' 篇' : '貼上文字') : n + ' 篇';
+      var meta = c.custom && !n ? MX.t('貼上文字') : MX.t('{n} 篇', { n: n });
       var t = h('button', { class: 'tile', 'data-cat': c.id, 'data-act': 'open', style: 'font-family:' + uiFont(), onclick: function () { location.hash = H('lib', c.id); } }, [
         h('div', { class: 't', text: T(c.title) }),
-        h('div', { class: 'm', text: meta, title: done ? '已抄 ' + done + ' 遍' : null })
+        h('div', { class: 'm', text: meta, title: done ? MX.t('已抄 {n} 遍', { n: done }) : null })
       ]);
       tiles.appendChild(t);
     });
-    if (!tiles.children.length) tiles.appendChild(h('p', { text: '文庫是空的。' }));
+    if (!tiles.children.length) tiles.appendChild(h('p', { text: MX.t('文庫是空的。') }));
     colB.appendChild(tiles);
     if (!window.MoBridge) {
       // hosted web app only: offer the Android app (hidden inside the APK)
       el.appendChild(h('div', { class: 'card install compactcard', 'data-role': 'apk-install' }, [
-        h('div', { class: 'ct' }, [h('div', { class: 't', text: '安裝 App (APK)' }), h('div', { class: 'm', text: '安裝到平板，可離線使用。' })]),
-        h('a', { class: 'btnlink', 'data-act': 'apk', href: APK_URL, text: '安裝 App (APK)' }),
-        h('a', { class: 'btnlink plain', 'data-act': 'apk-help', href: 'download/', text: '安裝步驟' }),
+        h('div', { class: 'ct' }, [h('div', { class: 't', text: MX.t('安裝 App (APK)') }), h('div', { class: 'm', text: MX.t('安裝到平板，可離線使用。') })]),
+        h('a', { class: 'btnlink', 'data-act': 'apk', href: APK_URL, text: MX.t('安裝 App (APK)') }),
+        h('a', { class: 'btnlink plain', 'data-act': 'apk-help', href: MX.I18n.downloadHref(), text: MX.t('安裝步驟') }),
         // a plain link (no download attribute, no target): the browser's own download manager handles it; if nothing happens, the note says what to do
-        h('div', { class: 'note apkfb', 'data-role': 'apk-fallback' }, ['若下載無反應：長按連結 → 下載連結，或開啟 ', h('a', { class: 'flink', 'data-act': 'apk-releases', href: RELEASES_URL, text: 'GitHub Releases 頁面' })])
+        h('div', { class: 'note apkfb', 'data-role': 'apk-fallback' }, [MX.t('若下載無反應：長按連結 → 下載連結，或開啟 '), h('a', { class: 'flink', 'data-act': 'apk-releases', href: RELEASES_URL, text: MX.t('GitHub Releases 頁面') })])
       ]));
     }
     var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '';
-    el.appendChild(h('div', { class: 'note vernote', text: '版本 ' + ver + ' · 字帖庫 ' + Lib.version() + ' · 儲存：' + Store.mode() }));
+    el.appendChild(h('div', { class: 'note vernote', text: MX.t('版本 {ver} · 字帖庫 {lib} · 儲存：{mode}', { ver: ver, lib: Lib.version(), mode: Store.mode() }) }));
     // rows: whatever height is left, shared between the two shelves (at least one row each when they have any)
     if (rItems.length) rRows.innerHTML = '';
     if (fItems.length) fRows.innerHTML = '';
@@ -382,8 +385,8 @@
 
   // ------------------------------------------------------------------ a full shelf (all copies in progress / all favourites)
   S.shelf = function (root, kind, query) {
-    var isFav = kind === 'fav', title = isFav ? '收藏' : '繼續書寫';
-    var el = screen(root, title, '#/', null, [['首頁', '#/'], [title, H('shelf', kind)]]);
+    var isFav = kind === 'fav', title = isFav ? MX.t('收藏') : MX.t('繼續書寫');
+    var el = screen(root, title, '#/', null, [[MX.t('首頁'), '#/'], [title, H('shelf', kind)]]);
     el.setAttribute('data-screen', 'shelf');
     el.setAttribute('data-shelf', kind);
     var q = qs(query), pl;
@@ -393,7 +396,7 @@
         if (!isFav) return resumeItems().map(function (c) { return resumeRow(c, false); });
         return favItems().map(function (f) { return favRow(f, false, function () { pl.render(); }); }).filter(Boolean);
       },
-      empty: function () { return isFav ? empty('還沒有收藏', '點文本或章節旁的星號，加進這裡。') : empty('還沒有進行中的字帖', '從書庫選一篇開始。'); }
+      empty: function () { return isFav ? empty(MX.t('還沒有收藏'), MX.t('點文本或章節旁的星號，加進這裡。')) : empty(MX.t('還沒有進行中的字帖'), MX.t('從書庫選一篇開始。')); }
     });
     pl.render();
   };
@@ -418,15 +421,15 @@
     var multi = e.sections > 1, buttons = [], meta, custom = !!e.custom;
     var byline = [T(e.author), T(e.dynasty)].filter(Boolean).join(' ');
     if (multi) {
-      meta = (byline ? byline + ' · ' : '') + e.chars + '字 · ' + e.sections + '章 · 已完成 ' + Model.sectionsDone(e.id) + '/' + e.sections + ' · 進度 ' +
-        Math.floor(100 * Model.textProgress(e.id, e.sections)) + '% · 已抄 ' + Model.doneCount(e.id) + ' 遍' + (Lib.hasNotes(e.id) ? ' · 有解說' : '');
-      buttons.push({ label: '章節', act: 'sections', primary: true, onclick: function () { location.hash = H('text', e.id); } });
+      meta = (byline ? byline + ' · ' : '') + MX.t('{chars}字 · {secs}章 · 已完成 {done}/{secs} · 進度 {pct}% · 已抄 {n} 遍', { chars: e.chars, secs: e.sections, done: Model.sectionsDone(e.id),
+        pct: Math.floor(100 * Model.textProgress(e.id, e.sections)), n: Model.doneCount(e.id) }) + (Lib.hasNotes(e.id) ? MX.t(' · 有解說') : '');
+      buttons.push({ label: MX.t('章節'), act: 'sections', primary: true, onclick: function () { location.hash = H('text', e.id); } });
       buttons.push({ node: MX.favButton(e.id, null, onFav) });
     } else {
       meta = sectionMeta(e.id, 'main', e.chars, byline);
       buttons = sectionButtons(e.id, 'main', null, onFav);
     }
-    if (custom) buttons.splice(buttons.length - 1, 0, { label: '編輯', act: 'edit-custom', onclick: function () { location.hash = H('custom', e.id); } });
+    if (custom) buttons.splice(buttons.length - 1, 0, { label: MX.t('編輯'), act: 'edit-custom', onclick: function () { location.hash = H('custom', e.id); } });
     return lrow({
       title: T(e.title), meta: meta, font: uiFont(multi ? libScript() : scriptOf(e.id, 'main')), attrs: { 'data-text': e.id },
       open: function () { location.hash = multi ? H('text', e.id) : startHash(e.id, 'main'); },
@@ -440,9 +443,9 @@
     var seg = null;
     if (o.sortable !== false) {
       seg = MX.Form.seg(SORTS, st.s, function (v) { st.s = v; st.p = 1; pl.render(); pl.sync(); }, false);
-      ctl.appendChild(MX.Form.row('排序', seg, 'sort'));
+      ctl.appendChild(MX.Form.row(MX.t('排序'), seg, 'sort'));
     }
-    var input = h('input', { type: 'text', value: st.q, placeholder: '搜尋書名、作者、朝代', 'data-role': 'search', 'aria-label': '搜尋', maxlength: '30' });
+    var input = h('input', { type: 'text', value: st.q, placeholder: MX.t('搜尋書名、作者、朝代'), 'data-role': 'search', 'aria-label': MX.t('搜尋'), maxlength: '30' });
     input.addEventListener('input', function () { st.q = input.value; st.p = 1; pl.render(); pl.sync(); });
     ctl.appendChild(h('div', { class: 'frow searchrow', 'data-k': 'search' }, [input]));
     el.appendChild(ctl);
@@ -463,16 +466,16 @@
     var cat = Lib.category(catId);
     if (!cat) { location.hash = '#/'; return; }
     var custom = catId === Lib.CUSTOM;
-    var el = screen(root, T(cat.title), '#/', null, [['首頁', '#/'], [T(cat.title), H('lib', catId)]]);
+    var el = screen(root, T(cat.title), '#/', null, [[MX.t('首頁'), '#/'], [T(cat.title), H('lib', catId)]]);
     el.setAttribute('data-screen', 'category');
     el.setAttribute('data-cat', catId);
     if (custom) {
-      el.appendChild(h('div', { class: 'btnrow' }, [h('button', { class: 'on big', 'data-act': 'new-custom', text: '新增自訂文本', onclick: function () { location.hash = H('custom', 'new'); } })]));
-      el.appendChild(h('div', { class: 'note', text: '貼上任何文字，繁體、簡體都照原樣使用。只存在這台裝置，會包含在資料備份中。' }));
+      el.appendChild(h('div', { class: 'btnrow' }, [h('button', { class: 'on big', 'data-act': 'new-custom', text: MX.t('新增自訂文本'), onclick: function () { location.hash = H('custom', 'new'); } })]));
+      el.appendChild(h('div', { class: 'note', text: MX.t('貼上任何文字，繁體、簡體都照原樣使用。只存在這台裝置，會包含在資料備份中。') }));
     }
     textList(el, {
       query: query, entries: function () { return Lib.texts(catId); }, link: function (s) { return H('lib', catId, null, listQuery(s)); },
-      empty: function (s) { return s.q ? empty('找不到「' + s.q + '」', '換個關鍵字，或清除搜尋。') : empty(custom ? '還沒有自訂文本' : '這個分類沒有文本', custom ? '按上面的「新增自訂文本」貼上自己的文字。' : ''); }
+      empty: function (s) { return s.q ? empty(MX.t('找不到「{q}」', { q: s.q }), MX.t('換個關鍵字，或清除搜尋。')) : empty(custom ? MX.t('還沒有自訂文本') : MX.t('這個分類沒有文本'), custom ? MX.t('按上面的「新增自訂文本」貼上自己的文字。') : ''); }
     });
   };
   function listQuery(s) {
@@ -484,12 +487,12 @@
   }
 
   S.search = function (root, query) {
-    var el = screen(root, '搜尋', '#/', null, [['首頁', '#/'], ['搜尋', '#/search']]);
+    var el = screen(root, MX.t('搜尋'), '#/', null, [[MX.t('首頁'), '#/'], [MX.t('搜尋'), '#/search']]);
     el.setAttribute('data-screen', 'search');
     var r = textList(el, {
       query: query, needQuery: true, entries: function () { return ((Lib.index && Lib.index.texts) || []).concat(Lib.texts(Lib.CUSTOM)); },
       link: function (s) { return H('search', null, null, listQuery(s)); },
-      empty: function (s) { return s.q ? empty('找不到「' + s.q + '」', '試試書名的一個字，如「心」「論」。') : empty('輸入書名、作者或朝代', '找到的文本會列在這裡（含自訂文本）。'); }
+      empty: function (s) { return s.q ? empty(MX.t('找不到「{q}」', { q: s.q }), MX.t('試試書名的一個字，如「心」「論」。')) : empty(MX.t('輸入書名、作者或朝代'), MX.t('找到的文本會列在這裡（含自訂文本）。')); }
     });
     try { r.input.focus(); } catch (e) { /* ignore */ }
   };
@@ -502,13 +505,13 @@
     text.sections.forEach(function (s, i) { if (s.id === nx.id) { sec = s; idx = i; } });
     var copy = Model.activeCopy(textId, sec.id), doing = nx.state === 'doing', all = nx.state === 'done';
     var d = assign({}, doing && copy ? copy.cfg : Model.textCfg(textId));
-    var kind = all ? '全部 ' + n + ' 章都抄過了' : (doing ? '繼續' : (Model.sectionsDone(textId) || Model.lastWritten(textId) ? '下一章' : '開始'));
-    var meta = (idx + 1) + ' / ' + n + ' 章 · ' + Lib.sectionChars(sec) + '字' + (doing && copy ? ' · 進度 ' + pctOf(copy) + '%' : '');
-    var go = h('button', { class: 'on big startbtn', 'data-act': 'qstart', text: all ? '再抄一遍' : (doing && copy ? '繼續上次（' + (copy.filled || 0) + ' / ' + (copy.total || 0) + '）' : '開始抄寫'),
+    var kind = all ? MX.t('全部 {n} 章都抄過了', { n: n }) : (doing ? MX.t('繼續') : (Model.sectionsDone(textId) || Model.lastWritten(textId) ? MX.t('下一章') : MX.t('開始')));
+    var meta = MX.t('{i} / {n} 章 · {chars}字', { i: idx + 1, n: n, chars: Lib.sectionChars(sec) }) + (doing && copy ? MX.t(' · 進度 {pct}%', { pct: pctOf(copy) }) : '');
+    var go = h('button', { class: 'on big startbtn', 'data-act': 'qstart', text: all ? MX.t('再抄一遍') : (doing && copy ? MX.t('繼續上次（{a} / {b}）', { a: copy.filled || 0, b: copy.total || 0 }) : MX.t('開始抄寫')),
       onclick: async function () {
         if (all) { location.hash = H('setup', textId, sec.id); return; }
         go.disabled = true;
-        try { location.hash = H('practice', (await beginCopy(textId, sec.id, d, copy)).id); } catch (e) { go.disabled = false; MX.err(e); MX.toast('無法開始：' + String(e && e.message || e)); }
+        try { location.hash = H('practice', (await beginCopy(textId, sec.id, d, copy)).id); } catch (e) { go.disabled = false; MX.err(e); MX.toast(MX.t('無法開始：{msg}', { msg: String(e && e.message || e) })); }
       } });
     return h('div', { class: 'qstart', 'data-role': 'quickstart', 'data-state': nx.state, 'data-next': sec.id }, [
       h('div', { class: 'qinfo' }, [
@@ -517,7 +520,7 @@
         h('div', { class: 'qm', 'data-role': 'qs-meta', text: meta }),
         h('div', { class: 'qline', 'data-role': 'qs-choices', text: cfgLine(d) })
       ].concat(MX.Form.inputRow() || [])),
-      h('div', { class: 'qbtns btnrow' }, [go, h('button', { class: 'qadjust', 'data-act': 'qadjust', text: '調整選項', onclick: function () { location.hash = H('setup', textId, sec.id); } })])
+      h('div', { class: 'qbtns btnrow' }, [go, h('button', { class: 'qadjust', 'data-act': 'qadjust', text: MX.t('調整選項'), onclick: function () { location.hash = H('setup', textId, sec.id); } })])
     ]);
   }
 
@@ -526,10 +529,10 @@
     if (!entry) { location.hash = '#/'; return; }
     var cats = catCrumbs(entry);
     var extra = [MX.favButton(textId, null, null, true)];
-    extra.push(h('button', { text: '列印練習紙', 'data-act': 'practice-sheet', onclick: function () {      // the section the quick-start panel shows
-      Lib.getText(textId).then(function (t) { return MX.Export.openPractice(textId, Model.nextSection(textId, t.sections.map(function (x) { return x.id; })).id); }).catch(function (e) { MX.err(e); MX.toast('無法開啟練習紙'); });
+    extra.push(h('button', { text: MX.t('列印練習紙'), 'data-act': 'practice-sheet', onclick: function () {      // the section the quick-start panel shows
+      Lib.getText(textId).then(function (t) { return MX.Export.openPractice(textId, Model.nextSection(textId, t.sections.map(function (x) { return x.id; })).id); }).catch(function (e) { MX.err(e); MX.toast(MX.t('無法開啟練習紙')); });
     } }));
-    if (Model.archived(textId).length) extra.push(h('button', { text: '存檔 (' + Model.archived(textId).length + ')', 'data-act': 'archives', onclick: function () { location.hash = H('archives', textId); } }));
+    if (Model.archived(textId).length) extra.push(h('button', { text: MX.t('存檔 ({n})', { n: Model.archived(textId).length }), 'data-act': 'archives', onclick: function () { location.hash = H('archives', textId); } }));
     if (Model.works().some(function (c) { return c.textId === textId; })) {       // a backup of this text's writings only
       extra.push(h('button', { text: STR.backupText, 'data-act': 'backup-text', onclick: function () { MX.Backup.save({ text: textId }).catch(function (e) { MX.err(e); MX.toast(MX.Backup.STR.saveFail); }); } }));
     }
@@ -548,7 +551,7 @@
       text.sections.forEach(function (s) { if (Model.doneCount(textId, s.id) > 0) doneSecs++; });
       qsBox.innerHTML = ''; barBox.innerHTML = ''; listBox.innerHTML = '';
       qsBox.appendChild(quickStart(textId, text, nx));
-      sum.textContent = '共 ' + total + ' 章 · ' + entry.chars + ' 字 · 已完成 ' + doneSecs + ' / ' + total + ' 章 · 已抄 ' + Model.doneCount(textId) + ' 遍';
+      sum.textContent = MX.t('共 {total} 章 · {chars} 字 · 已完成 {done} / {total} 章 · 已抄 {n} 遍', { total: total, chars: entry.chars, done: doneSecs, n: Model.doneCount(textId) });
       barBox.appendChild(h('div', { class: 'bar', style: 'margin-top:0' }, [h('i', { style: 'width:' + Math.floor(100 * doneSecs / total) + '%' })]));
       var pl = pagedHost(el, {
         state: pst, into: listBox, link: function (st) { return H('text', textId, null, st.p > 1 ? 'p=' + st.p : ''); },
@@ -570,14 +573,14 @@
     }
     function load() {
       qsBox.innerHTML = '';
-      qsBox.appendChild(h('div', { class: 'note', 'data-role': 'loading', text: '載入中…' }));
+      qsBox.appendChild(h('div', { class: 'note', 'data-role': 'loading', text: MX.t('載入中…') }));
       Lib.getText(textId).then(function (text) { if (el.parentNode) build(text); }).catch(function (e) {
         MX.err(e);
         if (!el.parentNode) return;
         qsBox.innerHTML = '';
         qsBox.appendChild(h('div', { class: 'qstart err', 'data-role': 'text-error' }, [
-          h('div', { class: 'qinfo' }, [h('div', { class: 'qm', text: '無法載入文本：' + String(e && e.message || e) })]),
-          h('div', { class: 'qbtns btnrow' }, [h('button', { class: 'on big startbtn', 'data-act': 'retry', text: '重試', onclick: load })])
+          h('div', { class: 'qinfo' }, [h('div', { class: 'qm', text: MX.t('無法載入文本：{msg}', { msg: String(e && e.message || e) }) })]),
+          h('div', { class: 'qbtns btnrow' }, [h('button', { class: 'on big startbtn', 'data-act': 'retry', text: MX.t('重試'), onclick: load })])
         ]));
       });
     }
@@ -597,7 +600,7 @@
     var d = assign({}, locked ? copy.cfg : Model.textCfg(textId));         // choices: this copy's when it has ink, else the text's remembered ones (Model.textCfg)
     var crumbs = catCrumbs(entry);
     if (entry.sections > 1) crumbs.push([T(entry.title), H('text', textId)]);
-    crumbs.push(['設定', H('setup', textId, sectionId)]);
+    crumbs.push([MX.t('設定'), H('setup', textId, sectionId)]);
     var el = screen(root, T(entry.title), S.backFor(textId), null, crumbs);
     el.setAttribute('data-screen', 'setup');
     el.setAttribute('data-section', sectionId);
@@ -627,9 +630,9 @@
     function refreshInfo() {
       viewP.then(function (txt) {
         var cells = cellsOf(txt), pg = pagesOf(cells);
-        info.textContent = '約 ' + cells.length + ' 字' + (pg ? ' · ' + pg + ' 頁' : '');
+        info.textContent = pg ? MX.t('約 {n} 字 · {pages} 頁', { n: cells.length, pages: pg }) : MX.t('約 {n} 字', { n: cells.length });
         info.setAttribute('data-cells', String(cells.length));
-      }).catch(function (e) { info.textContent = '無法載入文本：' + (e && e.message || e); });
+      }).catch(function (e) { info.textContent = MX.t('無法載入文本：{msg}', { msg: e && e.message || e }); });
       refreshAdv();
     }
     el.appendChild(info);
@@ -637,7 +640,7 @@
     var inprog = !!(copy && Model.recount(copy) > 0);
     var row = h('div', { class: 'btnrow actions startrow' });
     row.appendChild(h('button', {
-      class: 'on big startbtn', 'data-act': 'go', text: inprog ? '繼續上次（' + Model.recount(copy) + ' / ' + (copy.total || 0) + '）' : (finished ? STR.againBtn : '開始抄寫'),
+      class: 'on big startbtn', 'data-act': 'go', text: inprog ? MX.t('繼續上次（{a} / {b}）', { a: Model.recount(copy), b: copy.total || 0 }) : (finished ? STR.againBtn : MX.t('開始抄寫')),
       onclick: async function () {
         var c = await beginCopy(textId, sectionId, d, copy || finished);
         location.hash = H('practice', c.id);
@@ -645,9 +648,9 @@
     }));
     if (copy && inprog) {
       row.appendChild(h('button', {
-        class: 'restartbtn', 'data-act': 'newcopy', text: '重新開始',
+        class: 'restartbtn', 'data-act': 'newcopy', text: MX.t('重新開始'),
         onclick: async function () {
-          var ok = await MX.confirm('將目前這一遍存檔，重新開始新的一遍？', '重新開始', '重新開始');
+          var ok = await MX.confirm(MX.t('將目前這一遍存檔，重新開始新的一遍？'), MX.t('重新開始'), MX.t('重新開始'));
           if (!ok) return;
           Model.archive(copy);
           location.replace(H('setup', textId, sectionId, 'new=' + Date.now()));
@@ -667,23 +670,23 @@
     el.appendChild(MX.Form.build(cfgFields.filter(function (f) { return f.k === 'script'; }), d, locked, function () { refreshInfo(); refreshSamples(); }));
     var modeSmp = MX.Sample.modes(sget, function (v) { d.mode = v; refreshInfo(); refreshSamples(); }, { compact: true });
     smp.push(modeSmp);
-    el.appendChild(MX.Form.row('書寫方式', modeSmp.el));
+    el.appendChild(MX.Form.row(MX.t('書寫方式'), modeSmp.el));
     var cellSmp = MX.Sample.cells(sget, { compact: true });
     smp.push(cellSmp);
     viewP.then(function (txt) {         // the sample cells show the first characters of this very text
       viewTxt = txt;
       if (el.parentNode) refreshSamples();
     }).catch(function () { /* the samples keep their own characters */ });
-    if (locked) el.appendChild(h('div', { class: 'note', text: '已開始書寫：字體需「重新開始」才能更改。' }));
+    if (locked) el.appendChild(h('div', { class: 'note', text: MX.t('已開始書寫：字體需「重新開始」才能更改。') }));
     var inRow = MX.Form.inputRow();          // 書寫工具: asked on every new writing (a global, device-level setting; none on a laptop)
     if (inRow) el.appendChild(inRow);
     var row2 = h('div', { class: 'btnrow secondary' });
     row2.appendChild(MX.favButton(textId, entry.sections > 1 ? sectionId : null, null, true));
-    if (Lib.hasNotes(textId, sectionId)) row2.appendChild(h('button', { text: '解說', 'data-act': 'notes', onclick: function () { location.hash = H('notes', textId, sectionId); } }));
-    row2.appendChild(h('button', { text: '設為預設', 'data-act': 'set-default', title: '把目前的選項設為新字帖的預設', onclick: function () { Model.setDefaultCfg(d); MX.toast('已設為新字帖的預設選項（設定 → 字帖預設）'); } }));
-    row2.appendChild(h('button', { text: '列印練習紙', 'data-act': 'practice-sheet', title: '把這一章的描紅範本印在紙上（PDF）', onclick: function () { MX.Export.openPractice(textId, sectionId, d).catch(function (e) { MX.err(e); MX.toast('無法開啟練習紙'); }); } }));
+    if (Lib.hasNotes(textId, sectionId)) row2.appendChild(h('button', { text: MX.t('解說'), 'data-act': 'notes', onclick: function () { location.hash = H('notes', textId, sectionId); } }));
+    row2.appendChild(h('button', { text: MX.t('設為預設'), 'data-act': 'set-default', title: MX.t('把目前的選項設為新字帖的預設'), onclick: function () { Model.setDefaultCfg(d); MX.toast(MX.t('已設為新字帖的預設選項（設定 → 字帖預設）')); } }));
+    row2.appendChild(h('button', { text: MX.t('列印練習紙'), 'data-act': 'practice-sheet', title: MX.t('把這一章的描紅範本印在紙上（PDF）'), onclick: function () { MX.Export.openPractice(textId, sectionId, d).catch(function (e) { MX.err(e); MX.toast(MX.t('無法開啟練習紙')); }); } }));
     var arch = Model.archived(textId, sectionId).length;
-    if (arch) row2.appendChild(h('button', { text: '存檔 (' + arch + ')', 'data-act': 'archives', onclick: function () { location.hash = H('archives', textId, sectionId); } }));
+    if (arch) row2.appendChild(h('button', { text: MX.t('存檔 ({n})', { n: arch }), 'data-act': 'archives', onclick: function () { location.hash = H('archives', textId, sectionId); } }));
 
     try { if (Store.get('setupAdv:v1') !== undefined) Store.del('setupAdv:v1'); } catch (e) { /* ignore */ }       // reset once: the old flag is gone, 進階選項 starts collapsed
     // 進階選項: collapsed by default; the choice is remembered per device (Store `setupAdv:v2`, device-local; v1 is deleted once)
@@ -698,20 +701,20 @@
       adv.hidden = !open;
       advBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
       advBtn.innerHTML = '';
-      advBtn.appendChild(h('span', { text: '進階選項' }));
+      advBtn.appendChild(h('span', { text: MX.t('進階選項') }));
       advBtn.appendChild(MX.icon(open ? 'tri-u' : 'tri-d', 18));
       refreshAdv();
     }
     el.appendChild(advBtn);
     el.appendChild(advSum);
     // where these choices come from (the Model.textCfg rule), and that the other sections of the text start with them too (inside 進階選項: nothing but the essentials above the fold)
-    adv.appendChild(h('div', { class: 'note cfgorigin', 'data-role': 'cfg-origin', text: '選項沿用：' + (locked ? '這份字帖的選項' : CFG_SOURCE[Model.cfgSource(textId)]) + (entry.sections > 1 ? ' · 其他章節同用' : '') }));
+    adv.appendChild(h('div', { class: 'note cfgorigin', 'data-role': 'cfg-origin', text: MX.t('選項沿用：{src}', { src: locked ? MX.t('這份字帖的選項') : MX.t(CFG_SOURCE[Model.cfgSource(textId)]) }) + (entry.sections > 1 ? MX.t(' · 其他章節同用') : '') }));
     adv.appendChild(cellSmp.el);
     adv.appendChild(MX.Form.build(cfgFields.filter(function (f) { return ESS.indexOf(f.k) < 0; }), d, locked, function () { refreshInfo(); refreshSamples(); }));
     var signHold = h('div');
     adv.appendChild(signHold);
     viewP.then(function (v) {
-      signHold.appendChild(h('h2', { text: '署名與落款' }));
+      signHold.appendChild(h('h2', { text: MX.t('署名與落款') }));
       signHold.appendChild(MX.Form.signBlock(Model.settings, d, v.category === 'buddhist', function () { Model.saveSettings(); refreshInfo(); }));
     }).catch(function () { /* the cell count shows the error */ });
     el.appendChild(adv);
@@ -724,38 +727,38 @@
   S.custom = function (root, id) {
     var isNew = !id || id === 'new', old = isNew ? null : Store.get('custom:' + id);
     if (!isNew && !(old && old.id)) { location.hash = H('lib', Lib.CUSTOM); return; }
-    var el = screen(root, isNew ? '新增自訂文本' : '編輯自訂文本', H('lib', Lib.CUSTOM));
+    var el = screen(root, isNew ? MX.t('新增自訂文本') : MX.t('編輯自訂文本'), H('lib', Lib.CUSTOM));
     el.setAttribute('data-screen', 'custom');
     var used = !isNew && (Object.keys(Model.copies).some(function (k) { return Model.copies[k].textId === id; }) || Model.doneCount(id) > 0);
-    var title = h('input', { type: 'text', value: old ? old.title : '', placeholder: '標題', maxlength: '40', 'data-role': 'custom-title' });
-    var body = h('textarea', { class: 'cbody', placeholder: '貼上或輸入要練習的文字', 'data-role': 'custom-body', disabled: used ? true : null });
+    var title = h('input', { type: 'text', value: old ? old.title : '', placeholder: MX.t('標題'), maxlength: '40', 'data-role': 'custom-title' });
+    var body = h('textarea', { class: 'cbody', placeholder: MX.t('貼上或輸入要練習的文字'), 'data-role': 'custom-body', disabled: used ? true : null });
     body.value = old ? old.body : '';
     var msg = h('div', { class: 'note', 'data-role': 'custom-msg' });
     var count = h('div', { class: 'note', 'data-role': 'custom-count' });
     function recount() {
       var n = 0;
       Array.from(body.value).forEach(function (c) { if (MX.Closing.isCJK(c)) n++; });
-      count.textContent = '漢字 ' + n + ' 個（上限 ' + Lib.MAX_CUSTOM + ' 字）';
+      count.textContent = MX.t('漢字 {n} 個（上限 {max} 字）', { n: n, max: Lib.MAX_CUSTOM });
     }
     body.addEventListener('input', recount);
-    el.appendChild(MX.Form.row('標題', title));
+    el.appendChild(MX.Form.row(MX.t('標題'), title));
     el.appendChild(body);
     el.appendChild(count);
-    if (used) el.appendChild(h('div', { class: 'note', text: '已有抄寫紀錄，內文不能再改（標題可以）。要換內文請新增另一篇。' }));
+    if (used) el.appendChild(h('div', { class: 'note', text: MX.t('已有抄寫紀錄，內文不能再改（標題可以）。要換內文請新增另一篇。') }));
     el.appendChild(msg);
     recount();
     var btns = h('div', { class: 'btnrow', style: 'margin-top:12px' });
-    btns.appendChild(h('button', { class: 'on big', 'data-act': 'save-custom', text: '儲存',
+    btns.appendChild(h('button', { class: 'on big', 'data-act': 'save-custom', text: MX.t('儲存'),
       onclick: function () {
         var r = Lib.saveCustom(isNew ? null : id, title.value, used ? old.body : body.value);
         if (r.error) { msg.textContent = r.error; return; }
-        MX.toast('已儲存');
+        MX.toast(MX.t('已儲存'));
         location.hash = H('lib', Lib.CUSTOM);
       } }));
     if (!isNew) {
-      btns.appendChild(h('button', { class: 'big', 'data-act': 'delete-custom', text: '刪除',
+      btns.appendChild(h('button', { class: 'big', 'data-act': 'delete-custom', text: MX.t('刪除'),
         onclick: async function () {
-          var ok = await MX.confirm('刪除這篇自訂文本和它的所有抄寫紀錄？無法復原。', '刪除', '刪除自訂文本');
+          var ok = await MX.confirm(MX.t('刪除這篇自訂文本和它的所有抄寫紀錄？無法復原。'), MX.t('刪除'), MX.t('刪除自訂文本'));
           if (!ok) return;
           Object.keys(Model.copies).map(function (k) { return Model.copies[k]; }).filter(function (c) { return c.textId === id; }).forEach(function (c) { Model.remove(c); });
           Store.keys('done:').forEach(function (k) { var dn = Store.get(k); if (dn && dn.textId === id) Store.del(k); });
@@ -776,22 +779,22 @@
     var st = Model.settings;
     function save() { Model.saveSettings(); }
     function done() { if (history.length > 1) history.back(); else location.hash = '#/'; }
-    el.appendChild(h('button', { class: 'on floatdone', 'data-act': 'done', text: '完成', onclick: done }));
-    el.appendChild(h('div', { class: 'topbar' }, [h('h1', { class: 'grow', text: '設定' })]));
-    el.appendChild(h('div', { class: 'note', 'data-role': 'autosave-note', text: '變更會立即套用並自動儲存。' }));
+    el.appendChild(h('button', { class: 'on floatdone', 'data-act': 'done', text: MX.t('完成'), onclick: done }));
+    el.appendChild(h('div', { class: 'topbar' }, [h('h1', { class: 'grow', text: MX.t('設定') }), MX.langToggle()]));
+    el.appendChild(h('div', { class: 'note', 'data-role': 'autosave-note', text: MX.t('變更會立即套用並自動儲存。') }));
     var G = {};
     MX.Form.GROUPS.forEach(function (g) { G[g.id] = g; });
     // two kinds of options, said once and marked on every block: 新字帖預設 = the choices of a 字帖 (they begin the texts that were never started; every text then remembers its own),
     // 所有字帖 = an app setting that applies to everything at once. The practice sheet shows the same blocks with 這一遍 in place of 新字帖預設.
-    el.appendChild(h('div', { class: 'note', 'data-role': 'cfg-note', text: '標「新字帖預設」的選項，只用在還沒開始過的文本：每篇文本會記住自己上次用的選項，同一篇的各章共用（字帖設定頁的「設為預設」也存在這裡）。標「所有字帖」的選項，馬上套用到全部字帖。' }));
+    el.appendChild(h('div', { class: 'note', 'data-role': 'cfg-note', text: MX.t('標「新字帖預設」的選項，只用在還沒開始過的文本：每篇文本會記住自己上次用的選項，同一篇的各章共用（字帖設定頁的「設為預設」也存在這裡）。標「所有字帖」的選項，馬上套用到全部字帖。') }));
     var index = h('div', { class: 'sindex', 'data-role': 'section-index' });
     el.appendChild(index);
     var sections = {};
     function section(id) {
-      var box = h('section', { class: 'sect', 'data-sect': id }, [h('h2', { text: G[id].title })]);
+      var box = h('section', { class: 'sect', 'data-sect': id }, [h('h2', { text: MX.t(G[id].title) })]);
       sections[id] = box;
       el.appendChild(box);
-      index.appendChild(h('button', { type: 'button', text: G[id].title, 'data-act': 'goto-' + id, onclick: function () {
+      index.appendChild(h('button', { type: 'button', text: MX.t(G[id].title), 'data-act': 'goto-' + id, onclick: function () {
         // jump (no animation): the section's top at the top of the screen
         el.scrollTop = box.offsetTop - 70;
       } }));
@@ -800,7 +803,7 @@
     // 新字帖預設 (Model.defaultCfg): the choices a text that was never started begins with. A started text remembers its own.
     var dc = Model.defaultCfg();
     var ctx = {
-      st: st, cfg: dc, scope: '新字帖預設', noContent: false, samples: [], boxes: [],
+      st: st, cfg: dc, scope: MX.t('新字帖預設'), noContent: false, samples: [], boxes: [],
       onCfg: function () { Model.setDefaultCfg(dc); },
       onSet: function () { save(); },
       custom: { sign: function () {
@@ -814,7 +817,7 @@
       var box = section(g.id);
       MX.Form.groupBody(g, ctx).forEach(function (n) { box.appendChild(n); });
     });
-    sections.look.appendChild(h('div', { class: 'btnrow' }, [h('button', { text: '還原內建預設', 'data-act': 'cfg-reset', title: '新字帖預設（書寫方式與字帖外觀的選項）回到內建的選項', onclick: function () {
+    sections.look.appendChild(h('div', { class: 'btnrow' }, [h('button', { text: MX.t('還原內建預設'), 'data-act': 'cfg-reset', title: MX.t('新字帖預設（書寫方式與字帖外觀的選項）回到內建的選項'), onclick: function () {
       Model.setDefaultCfg(null);
       var base = Model.defaultCfg();
       Object.keys(base).forEach(function (k) { dc[k] = base[k]; ctx.boxes.forEach(function (b) { MX.Form.syncSeg(b, k, base[k]); }); });
@@ -829,41 +832,41 @@
     var ab = section('about');
     var ver = (document.querySelector('meta[name=mx-version]') || {}).content || '';
     var native = window.MoBridge ? MX.Update.current() : '';
-    ab.appendChild(h('div', { class: 'note', 'data-role': 'version', text: (native ? 'App 版本 ' + native + ' · ' : '') + '網頁版本 ' + ver + ' · 字帖庫 ' + Lib.version() }));
+    ab.appendChild(h('div', { class: 'note', 'data-role': 'version', text: (native ? MX.t('App 版本 {ver} · ', { ver: native }) : '') + MX.t('網頁版本 {ver} · 字帖庫 {lib}', { ver: ver, lib: Lib.version() }) }));
     var out = h('div', { 'data-role': 'upd-result' });
     function result(msg) { out.innerHTML = ''; if (typeof msg === 'string') out.appendChild(h('div', { class: 'note', 'data-role': 'upd-msg', text: msg })); else if (msg) out.appendChild(msg); }
     var row = h('div', { class: 'btnrow' });
-    row.appendChild(h('button', { text: '檢查更新', 'data-act': 'check-update', onclick: function () {
-      result('檢查中…');
+    row.appendChild(h('button', { text: MX.t('檢查更新'), 'data-act': 'check-update', onclick: function () {
+      result(MX.t('檢查中…'));
       if (window.MoBridge) {
         MX.Update.checkApk(true).then(function (r) {
           if (r.status === 'new') result(MX.Update.apkCard());
-          else if (r.status === 'current') result('已是最新版本（' + r.version + '）');
-          else result('檢查失敗：無法連線（沒有網路？）');
+          else if (r.status === 'current') result(MX.t('已是最新版本（{ver}）', { ver: r.version }));
+          else result(MX.t('檢查失敗：無法連線（沒有網路？）'));
         });
       } else if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
         navigator.serviceWorker.getRegistration().then(function (reg) {
-          if (!reg) { result('網頁版目前沒有啟用離線快取。'); return null; }
-          return reg.update().then(function () { result(MX.updateReady ? '有新版本：回到首頁按「重新載入以更新」。' : '已檢查：目前是最新版本。'); });
-        }).catch(function () { result('檢查失敗：無法連線（沒有網路？）'); });
-      } else result('此環境無法檢查更新。');
+          if (!reg) { result(MX.t('網頁版目前沒有啟用離線快取。')); return null; }
+          return reg.update().then(function () { result(MX.updateReady ? MX.t('有新版本：回到首頁按「重新載入以更新」。') : MX.t('已檢查：目前是最新版本。')); });
+        }).catch(function () { result(MX.t('檢查失敗：無法連線（沒有網路？）')); });
+      } else result(MX.t('此環境無法檢查更新。'));
     } }));
     if (window.MoBridge) {
-      row.appendChild(h('button', { text: '檢查字帖庫更新', 'data-act': 'check-lib', onclick: function () {
-        result('檢查中…');
+      row.appendChild(h('button', { text: MX.t('檢查字帖庫更新'), 'data-act': 'check-lib', onclick: function () {
+        result(MX.t('檢查中…'));
         MX.Update.checkLib(true).then(function (r) {
           if (r.status === 'new') result(MX.Update.libCard());
-          else if (r.status === 'current') result('字帖庫已是最新（版本 ' + r.version + '）');
-          else result('檢查失敗：無法連線（沒有網路？）');
+          else if (r.status === 'current') result(MX.t('字帖庫已是最新（版本 {ver}）', { ver: r.version }));
+          else result(MX.t('檢查失敗：無法連線（沒有網路？）'));
         });
       } }));
     }
-    row.appendChild(h('button', { text: '筆測頁', 'data-act': 'pentest', onclick: function () { location.hash = '#/pentest'; } }));
+    row.appendChild(h('button', { text: MX.t('筆測頁'), 'data-act': 'pentest', onclick: function () { location.hash = '#/pentest'; } }));
     ab.appendChild(row);
     ab.appendChild(out);
     ab.appendChild(h('div', { class: 'btnrow', 'data-role': 'about-links' }, [
-      h('button', { text: '關於與隨喜', 'data-act': 'about', onclick: function () { if (MX.Intro) MX.Intro.open(); } }),
-      h('a', { class: 'btnlink plain', 'data-act': 'about-github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: '完整介紹 · GitHub' })
+      h('button', { text: MX.t('關於與隨喜'), 'data-act': 'about', onclick: function () { if (MX.Intro) MX.Intro.open(); } }),
+      h('a', { class: 'btnlink plain', 'data-act': 'about-github', href: GITHUB_URL, target: '_blank', rel: 'noopener', text: MX.t('完整介紹 · GitHub') })
     ]));
     ab.appendChild(h('div', { class: 'note', 'data-role': 'font-credit', text: MX.Notes.CREDITS.font }));
     ab.appendChild(h('div', { class: 'note', 'data-role': 'stroke-credit', text: MX.Notes.CREDITS.stroke }));
@@ -873,22 +876,22 @@
   // ------------------------------------------------------------------ archives (of one section; no section = all sections of the text)
   S.archives = function (root, textId, sectionId) {
     var entry = Lib.entry(textId);
-    var el = screen(root, '存檔 · ' + (entry ? T(entry.title) : ''), S.backFor(textId), [
+    var el = screen(root, MX.t('存檔 · {title}', { title: entry ? T(entry.title) : '' }), S.backFor(textId), [
       h('button', { text: STR.worksTitle, 'data-act': 'works', onclick: function () { location.hash = H('works', null, null, 't=' + encodeURIComponent(textId)); } })]);
     el.setAttribute('data-screen', 'archives');
     var list = Model.archived(textId, sectionId);
-    if (!list.length) el.appendChild(h('p', { text: '沒有存檔。' }));
+    if (!list.length) el.appendChild(h('p', { text: MX.t('沒有存檔。') }));
     list.forEach(function (c) {
       var card = h('div', { class: 'card', 'data-copy': c.id }, [
         h('div', { class: 't', text: MX.fmtDate(c.archivedAt || c.updatedAt) }),
-        h('div', { class: 'm', text: (c.cfg.script === 'simp' ? '简体' : '繁體') + ' · ' + { trace: '描', copy: '臨', recall: '默' }[c.cfg.mode] +
-          ' · ' + c.filled + '/' + c.total + '格' + (c.completedAt ? ' · 已完成' : '') })
+        h('div', { class: 'm', text: (c.cfg.script === 'simp' ? MX.t('简体') : MX.t('繁體')) + ' · ' + { trace: MX.t('描'), copy: MX.t('臨'), recall: MX.t('默') }[c.cfg.mode] +
+          ' · ' + MX.t('{a}/{b}格', { a: c.filled, b: c.total }) + (c.completedAt ? MX.t(' · 已完成') : '') })
       ]);
       card.appendChild(h('div', { class: 'btnrow' }, [
-        h('button', { text: '檢視', 'data-act': 'view', onclick: function () { location.hash = H('view', c.id); } }),
-        h('button', { text: '匯出', 'data-act': 'export', onclick: function () { S.exportCopy(c).catch(function (e) { MX.err(e); MX.toast('匯出失敗'); }); } }),
-        h('button', { text: '刪除', 'data-act': 'delete', onclick: async function () {
-          var ok = await MX.confirm('刪除這份存檔？無法復原。', '刪除', '刪除存檔');
+        h('button', { text: MX.t('檢視'), 'data-act': 'view', onclick: function () { location.hash = H('view', c.id); } }),
+        h('button', { text: MX.t('匯出'), 'data-act': 'export', onclick: function () { S.exportCopy(c).catch(function (e) { MX.err(e); MX.toast(MX.t('匯出失敗')); }); } }),
+        h('button', { text: MX.t('刪除'), 'data-act': 'delete', onclick: async function () {
+          var ok = await MX.confirm(MX.t('刪除這份存檔？無法復原。'), MX.t('刪除'), MX.t('刪除存檔'));
           if (!ok) return;
           Model.remove(c);
           location.hash = H('archives', textId, sectionId, 'r=' + Date.now());

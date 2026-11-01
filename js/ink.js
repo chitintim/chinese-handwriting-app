@@ -99,7 +99,7 @@
     if (st.brush === 'custom') {
       var c = st.custom;
       if (c && !c.rel) { c = {}; Object.keys(st.custom).forEach(function (k) { if (k !== 'wMin' && k !== 'wMax') c[k] = st.custom[k]; }); }   // saved before the one-model rewrite: wMin / wMax meant something else
-      return sanitize(c, BRUSH.mao, '自訂');
+      return sanitize(c, BRUSH.mao, MX.t('自訂'));
     }
     return sanitize(BRUSH[st.brush] || BRUSH.mao, BRUSH.mao);
   };
@@ -544,11 +544,11 @@
   // Returns null on success, else the reason (nothing is stored): too few pressure samples, or the three strokes are not clearly increasing (hard <= normal, normal <= light ...).
   Ink.calibrate = function (set, light, normal, hard) {
     var a = pressures(light), b = pressures(normal), c = pressures(hard), pl, pn, ph;
-    if (a.length < 4 || b.length < 4 || c.length < 4) return '壓力資料太少，請重寫（筆要長一點）';
+    if (a.length < 4 || b.length < 4 || c.length < 4) return MX.t('壓力資料太少，請重寫（筆要長一點）');
     pl = pct(a, 0.5); pn = pct(b, 0.5); ph = pct(c, 0.9);
-    if (pn - pl < 0.02) return '「平常」不比「輕」重，請重做';
-    if (ph - pn < 0.03) return '「重」不比「平常」重，請重做（壓得更用力）';
-    if (pl < 0.02 || ph > 1) return '壓力資料不合理，請重做';
+    if (pn - pl < 0.02) return MX.t('「平常」不比「輕」重，請重做');
+    if (ph - pn < 0.03) return MX.t('「重」不比「平常」重，請重做（壓得更用力）');
+    if (pl < 0.02 || ph > 1) return MX.t('壓力資料不合理，請重做');
     set.pressKnots = [round3(pl), round3(pn), round3(ph)]; set.pressCal = true;
     set.pressLo = round3(pl * 0.5); set.pressHi = round3(ph);
     return null;

@@ -67,10 +67,10 @@
       if (v === 'pen' || v === 'touch') return { mode: v, auto: false, stored: v };
       return { mode: D.isPhone() ? 'touch' : 'pen', auto: true, stored: 'auto' };
     },
-    INPUT_NAMES: { pen: '觸控筆', touch: '手指' },
+    INPUT_NAMES: { pen: '觸控筆', touch: '手指' },      // keys of the string table: read through MX.t
     // [[value, label], ...]: 自動 shows what it resolves to right now (自動（觸控筆） on the tablet layout, 自動（手指） on the phone layout)
     inputOpts: function () {
-      return [['auto', '自動（' + D.INPUT_NAMES[D.input({ inputMode: 'auto' }).mode] + '）'], ['pen', D.INPUT_NAMES.pen], ['touch', D.INPUT_NAMES.touch]];
+      return [['auto', MX.t('自動（{tool}）', { tool: MX.t(D.INPUT_NAMES[D.input({ inputMode: 'auto' }).mode]) })], ['pen', MX.t(D.INPUT_NAMES.pen)], ['touch', MX.t(D.INPUT_NAMES.touch)]];
     },
     inputValue: function (st) { return D.input(st).stored; },
     setInput: function (st, v) { st.inputMode = v === 'pen' || v === 'touch' ? v : 'auto'; return st; },

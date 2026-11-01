@@ -158,8 +158,8 @@
       L.pages[pp.src].items.forEach(function (it) { if (it.t === 'cell') ink += (L.kind === 'practice' ? 0 : ((ctl && ctl.cp && ctl.cp.copy.ink[ctl.cp.cells[it.i].key]) || []).length); });
       bytes += estSheet(g, d.dpi, pp.color) + ink * pp.u * (pp.color ? 4.8 : 3.1);
     });
-    lines.push(d.paperSize + (d.orient === 'l' ? ' 橫向 ' : ' 直向 ') + Math.round(g.wmm) + '×' + Math.round(g.hmm) + ' mm，邊界 ' + d.margin + ' mm，每個字約 ' + (Math.round(cellMm * 10) / 10) + ' mm（' + Math.round(pl.pages[0].u) + ' 像素）。');
-    if (d.format === 'scroll' && n > 1) lines.push('手卷分成 ' + n + ' 頁，在欄與欄之間切開，第 1 頁在最右邊，由右到左並排。');
+    lines.push(MX.t('{paper}{orient}{w}×{h} mm，邊界 {margin} mm，每個字約 {cell} mm（{px} 像素）。', { paper: d.paperSize, orient: d.orient === 'l' ? MX.t(' 橫向 ') : MX.t(' 直向 '), w: Math.round(g.wmm), h: Math.round(g.hmm), margin: d.margin, cell: Math.round(cellMm * 10) / 10, px: Math.round(pl.pages[0].u) }));
+    if (d.format === 'scroll' && n > 1) lines.push(MX.t('手卷分成 {n} 頁，在欄與欄之間切開，第 1 頁在最右邊，由右到左並排。', { n: n }));
     var r = { cell: null, pdf: true, print: true, files: 1, lim: I.limits(ctl), capped: false, u: pl.pages[0].u, notes: lines, bytes: bytes, big: false, strips: false, pages: n };
     r.images = pl.pages.map(function (pp, i) { return { spec: { page: i }, w: g.W, h: g.H, mode: 'print', strips: 1 }; });
     r.px = n * g.W * g.H; r.maxPx = g.W * g.H;
@@ -369,8 +369,8 @@
     var status = h('div', { class: 'note', 'data-role': 'exp-status' }), infoBox = h('div', { class: 'note expinfo', 'data-role': 'exp-info' });
     var box = h('div', { class: 'prevbox', 'data-role': 'exp-box' }), nav = h('div', { class: 'prevnav' }), ctrl = h('div', { 'data-role': 'exp-opts' }), panel = h('div', { class: 'savepanel', 'data-role': 'save-panel' });
     var native = !!(window.MoBridge && typeof window.MoBridge.saveFile === 'function');
-    var btnSave = h('button', { class: 'on big', 'data-act': 'save', text: native ? '儲存' : '產生檔案', onclick: save });
-    root.appendChild(h('div', { class: 'topbar' }, [h('h1', { class: 'grow', text: '列印練習紙' }), btnSave, h('button', { class: 'big', 'data-act': 'back', text: '返回', onclick: function () { api.close(); } })]));
+    var btnSave = h('button', { class: 'on big', 'data-act': 'save', text: native ? MX.t('儲存') : MX.t('產生檔案'), onclick: save });
+    root.appendChild(h('div', { class: 'topbar' }, [h('h1', { class: 'grow', text: MX.t('列印練習紙') }), btnSave, h('button', { class: 'big', 'data-act': 'back', text: MX.t('返回'), onclick: function () { api.close(); } })]));
     [status, infoBox, panel, box, nav, ctrl].forEach(function (n) { root.appendChild(n); });
     var pan = I.makePanel(panel, status);
 
@@ -386,36 +386,36 @@
       drawControls(); refresh();
     }
     function drawControls() {
-      var d = practiceOpts(cfg, ui.o), rows = [], onoff = [[true, '有'], [false, '無']];
+      var d = practiceOpts(cfg, ui.o), rows = [], onoff = [[true, MX.t('有')], [false, MX.t('無')]];
       function row(k, label, opts, val) { rows.push(MX.Form.row(label, MX.Form.seg(opts, val, function (v) { set(k, v); }), k)); }
-      row('mode', '模式', MODES, d.mode);
-      row('script', '字體', [['trad', '繁體'], ['simp', '简体']], d.script);
-      row('dir', '方向', [['v', '直書'], ['h', '橫書']], d.dir);
-      row('cellMm', '格子大小', CELLS_MM.map(function (n) { return [n, n + ' mm']; }), d.cellMm);
-      row('gridKind', '格線', GRID_KINDS, d.gridKind);
-      row('gridColor', '格線顏色', [['gray', '灰色'], ['red', '朱紅']], d.gridColor);
+      row('mode', MX.t('模式'), MODES, d.mode);
+      row('script', MX.t('字體'), [['trad', MX.t('繁體')], ['simp', MX.t('简体')]], d.script);
+      row('dir', MX.t('方向'), [['v', MX.t('直書')], ['h', MX.t('橫書')]], d.dir);
+      row('cellMm', MX.t('格子大小'), CELLS_MM.map(function (n) { return [n, n + ' mm']; }), d.cellMm);
+      row('gridKind', MX.t('格線'), GRID_KINDS, d.gridKind);
+      row('gridColor', MX.t('格線顏色'), [['gray', MX.t('灰色')], ['red', MX.t('朱紅')]], d.gridColor);
       if (d.mode === 'trace') {
-        row('tplStyle', '範本字', [['fill', '灰字'], ['outline', '空心']], d.tplStyle);
-        row('tone', '深淺', TONES, d.tone);
+        row('tplStyle', MX.t('範本字'), [['fill', MX.t('灰字')], ['outline', MX.t('空心')]], d.tplStyle);
+        row('tone', MX.t('深淺'), TONES, d.tone);
       }
-      row('title', '題目', onoff, d.title);
-      row('sign', '落款', onoff, d.sign);
-      if (d.mode === 'recall') row('ref', '參考字', onoff, d.ref);
-      row('header', '頁首', onoff, d.header);
-      row('paperSize', '紙張', [['A4', 'A4'], ['A3', 'A3'], ['Letter', 'Letter']], d.paperSize);
-      row('orient', '紙張方向', [['p', '直向'], ['l', '橫向']], d.orient);
-      row('margin', '邊界', [[8, '窄 8 mm'], [12, '標準 12 mm'], [20, '寬 20 mm']], d.margin);
-      row('dpi', '解析度', [[150, '150 dpi 草稿'], [300, '300 dpi 列印'], [600, '600 dpi 精細']], d.dpi);
-      rows.push(h('div', { class: 'note', 'data-role': 'print-note', text: '描：範本字是真正的灰色，可以直接用筆描；臨：每個字旁邊有一格空白；默：只有格子，另有小字參考。列印時請選「實際大小」。' + (d.name ? '' : '尚未設定姓名：落款不會印出。') }));
+      row('title', MX.t('題目'), onoff, d.title);
+      row('sign', MX.t('落款'), onoff, d.sign);
+      if (d.mode === 'recall') row('ref', MX.t('參考字'), onoff, d.ref);
+      row('header', MX.t('頁首'), onoff, d.header);
+      row('paperSize', MX.t('紙張'), [['A4', 'A4'], ['A3', 'A3'], ['Letter', 'Letter']], d.paperSize);
+      row('orient', MX.t('紙張方向'), [['p', MX.t('直向')], ['l', MX.t('橫向')]], d.orient);
+      row('margin', MX.t('邊界'), [[8, MX.t('窄 8 mm')], [12, MX.t('標準 12 mm')], [20, MX.t('寬 20 mm')]], d.margin);
+      row('dpi', MX.t('解析度'), [[150, MX.t('150 dpi 草稿')], [300, MX.t('300 dpi 列印')], [600, MX.t('600 dpi 精細')]], d.dpi);
+      rows.push(h('div', { class: 'note', 'data-role': 'print-note', text: MX.t('描：範本字是真正的灰色，可以直接用筆描；臨：每個字旁邊有一格空白；默：只有格子，另有小字參考。列印時請選「實際大小」。') + (d.name ? '' : MX.I18n.sep() + MX.t('尚未設定姓名：落款不會印出。')) }));
       ctrl.innerHTML = '';
       rows.forEach(function (r) { ctrl.appendChild(r); });
     }
     async function refresh() {
       pan.clear();
       var seq = ++ui.seq;
-      status.textContent = '處理中…';
+      status.textContent = MX.t('處理中…');
       var L;
-      try { L = composePractice(view, cfg, ui.o); await Draw.fontsReady(L.d.script, practiceFontText(L), L.d.font, true); } catch (e) { MX.err(e); status.textContent = '預覽失敗'; return; }
+      try { L = composePractice(view, cfg, ui.o); await Draw.fontsReady(L.d.script, practiceFontText(L), L.d.font, true); } catch (e) { MX.err(e); status.textContent = MX.t('預覽失敗'); return; }
       if (seq !== ui.seq) return;
       ui.L = L;
       var d = L.d, pl = printPlan(L, d.dpi), full = pl.g, n = L.pages.length, prevDpi = Math.max(20, Math.min(d.dpi, 1100 / (Math.max(full.wmm, full.hmm) / 25.4))), pp = printPlan(L, prevDpi);
@@ -428,32 +428,32 @@
       // a blank sheet (A4, 300 dpi, measured): 描 about 435 KB, 臨 about 270 KB, 默 about 255 KB per page (the dashed guide lines and the glyph edges are what costs); 朱紅 is RGB, about twice
       var bytes = n * full.W * full.H * { trace: 0.050, copy: 0.031, recall: 0.029 }[d.mode] * Math.pow(dpi300(d.dpi), 1.3) * (d.gridColor === 'red' ? 2 : 1);
       infoBox.innerHTML = '';
-      infoBox.appendChild(h('div', { 'data-role': 'exp-size', text: 'PDF 1 個，' + n + ' 頁，預估約 ' + I.kb(bytes) }));
-      infoBox.appendChild(h('div', { 'data-role': 'exp-warn', text: d.paperSize + (d.orient === 'l' ? ' 橫向 ' : ' 直向 ') + '每頁 ' + L.cols + ' 欄 × ' + L.rows + ' 列，格子 ' + L.cellMm + ' mm，共 ' + L.cells.length + ' 字。' }));
-      status.textContent = '共 ' + n + ' 頁 · ' + d.paperSize + (d.orient === 'l' ? ' 橫向' : ' 直向') + ' · 輸出 ' + full.W + '×' + full.H + ' px（' + d.dpi + ' dpi）· ' + MODE_NAME[d.mode];
+      infoBox.appendChild(h('div', { 'data-role': 'exp-size', text: MX.t('PDF 1 個，{n} 頁，預估約 {size}', { n: n, size: I.kb(bytes) }) }));
+      infoBox.appendChild(h('div', { 'data-role': 'exp-warn', text: MX.t('{paper}{orient}每頁 {cols} 欄 × {rows} 列，格子 {mm} mm，共 {n} 字。', { paper: d.paperSize, orient: d.orient === 'l' ? MX.t(' 橫向 ') : MX.t(' 直向 '), cols: L.cols, rows: L.rows, mm: L.cellMm, n: L.cells.length }) }));
+      status.textContent = MX.t('共 {n} 頁 · {paper}{orient} · 輸出 {w}×{h} px（{dpi} dpi）· {mode}', { n: n, paper: d.paperSize, orient: d.orient === 'l' ? MX.t(' 橫向') : MX.t(' 直向'), w: full.W, h: full.H, dpi: d.dpi, mode: MX.t(MODE_NAME[d.mode]) });
       nav.innerHTML = '';
       if (n > 1) {
-        nav.appendChild(h('button', { 'data-act': 'pprev', text: '上一頁', disabled: ui.page <= 0 ? true : null, onclick: function () { ui.page--; refresh(); } }));
+        nav.appendChild(h('button', { 'data-act': 'pprev', text: MX.t('上一頁'), disabled: ui.page <= 0 ? true : null, onclick: function () { ui.page--; refresh(); } }));
         nav.appendChild(h('div', { 'data-role': 'exp-ctr', text: (ui.page + 1) + ' / ' + n }));
-        nav.appendChild(h('button', { 'data-act': 'pnext', text: '下一頁', disabled: ui.page >= n - 1 ? true : null, onclick: function () { ui.page++; refresh(); } }));
+        nav.appendChild(h('button', { 'data-act': 'pnext', text: MX.t('下一頁'), disabled: ui.page >= n - 1 ? true : null, onclick: function () { ui.page++; refresh(); } }));
       }
     }
-    function progress(f) { status.textContent = '正在產生… ' + Math.round(f * 100) + '%'; }
+    function progress(f) { status.textContent = MX.t('正在產生… {n}%', { n: Math.round(f * 100) }); }
     async function save() {
       btnSave.disabled = true;
-      status.textContent = '處理中…';
+      status.textContent = MX.t('處理中…');
       var seq0 = ui.seq;
       try {
         var L = composePractice(view, cfg, ui.o);
         if (!native) {
           var files = await buildPractice(L, { progress: progress });
-          if (seq0 === ui.seq) { pan.show(files); status.textContent = '檔案已備妥，請按「儲存」'; try { panel.scrollIntoView({ block: 'nearest' }); } catch (e) { /* ignore */ } }
+          if (seq0 === ui.seq) { pan.show(files); status.textContent = MX.t('檔案已備妥，請按「儲存」'); try { panel.scrollIntoView({ block: 'nearest' }); } catch (e) { /* ignore */ } }
         } else {
           var stt = '', fl = await buildPractice(L, { progress: progress, sink: async function (f) { stt = await MX.saveFile(f.name, f.blob, f.mime); return stt; } });
           MX.toast(stt);
-          status.textContent = '已儲存：' + fl[0].name + '（用手機的 PDF 檢視器就能列印）';
+          status.textContent = MX.t('已儲存：{name}（用手機的 PDF 檢視器就能列印）', { name: fl[0].name });
         }
-      } catch (e) { MX.err(e); MX.toast('匯出失敗'); status.textContent = '匯出失敗'; }
+      } catch (e) { MX.err(e); MX.toast(MX.t('匯出失敗')); status.textContent = MX.t('匯出失敗'); }
       btnSave.disabled = false;
     }
     drawControls();

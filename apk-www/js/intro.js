@@ -30,8 +30,8 @@
 
   function build() {
     var C = cur, paged = C.paged;
-    var close = h('button', { type: 'button', class: 'iclose', 'data-act': 'intro-close', 'aria-label': '關閉', title: '關閉', onclick: function () { I.close('x'); } }, [MX.icon('x', 26)]);
-    var head = h('div', { class: 'ihead' }, [h('h1', { id: 'intro-title', 'data-role': 'intro-title', text: '墨字帖 · 抄經、臨帖的描紅練習' }), close]);
+    var close = h('button', { type: 'button', class: 'iclose', 'data-act': 'intro-close', 'aria-label': MX.t('關閉'), title: MX.t('關閉'), onclick: function () { I.close('x'); } }, [MX.icon('x', 26)]);
+    var head = h('div', { class: 'ihead' }, [h('h1', { id: 'intro-title', 'data-role': 'intro-title', text: MX.t('墨字帖 · 抄經、臨帖的描紅練習') }), close]);
     var blocks = MX.Notes.aboutBlocks();       // the version + licences are in 設定 -> 關於
     var body;
     if (paged) {
@@ -47,12 +47,12 @@
     }
     var foot = h('div', { class: 'ifoot' });
     if (paged) {
-      C.prev = h('button', { type: 'button', 'data-act': 'intro-prev', onclick: function () { go(C.page - 1); } }, [MX.icon('tri-u', 18), '上一頁']);
-      C.next = h('button', { type: 'button', 'data-act': 'intro-next', onclick: function () { go(C.page + 1); } }, ['下一頁', MX.icon('tri-d', 18)]);
+      C.prev = h('button', { type: 'button', 'data-act': 'intro-prev', onclick: function () { go(C.page - 1); } }, [MX.icon('tri-u', 18), MX.t('上一頁')]);
+      C.next = h('button', { type: 'button', 'data-act': 'intro-next', onclick: function () { go(C.page + 1); } }, [MX.t('下一頁'), MX.icon('tri-d', 18)]);
       C.ctr = h('div', { class: 'ctr', 'data-role': 'intro-ctr', text: '1 / 1' });
       foot.appendChild(h('div', { class: 'pager npager', 'data-role': 'intro-pager' }, [C.prev, C.ctr, C.next]));
     }
-    foot.appendChild(h('button', { type: 'button', class: 'on big istart', 'data-act': 'intro-start', onclick: function () { I.close('start'); } }, '開始抄寫 · Start'));
+    foot.appendChild(h('button', { type: 'button', class: 'on big istart', 'data-act': 'intro-start', onclick: function () { I.close('start'); } }, MX.t('開始抄寫 · Start')));
     var dlg = h('div', { class: 'idlg', id: 'intro-dlg', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'intro-title', tabindex: '-1', 'data-mode': paged ? 'paged' : 'scroll' }, [head, paged ? C.view : body, foot]);
     var root = h('div', { class: 'intro-bg', id: 'intro', 'data-role': 'intro', 'data-eink': Model.settings.screenType === 'eink' ? '1' : '0', 'data-mode': paged ? 'paged' : 'scroll' }, [dlg]);
     C.root = root; C.dlg = dlg;

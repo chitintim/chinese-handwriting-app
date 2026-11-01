@@ -85,7 +85,8 @@ public class MainActivity extends Activity {
             webView = createWebView();
         } catch (AndroidRuntimeException | LinkageError e) {
             // No usable WebView implementation installed / enabled on this device.
-            showFatal("無法啟動 WebView (Android System WebView 未安裝或已停用)。\n\n" + e.getMessage());
+            showFatal(Lang.s(this, "無法啟動 WebView (Android System WebView 未安裝或已停用)。\n\n", "无法启动 WebView (Android System WebView 未安装或已停用)。\n\n",
+                    "Cannot start the WebView (Android System WebView is not installed or is disabled).\n\n") + e.getMessage());
             return;
         }
         setContentView(webView, new ViewGroup.LayoutParams(
@@ -147,11 +148,11 @@ public class MainActivity extends Activity {
                 pick.addCategory(Intent.CATEGORY_OPENABLE);
                 pick.setType("*/*");
                 try {
-                    startActivityForResult(Intent.createChooser(pick, "選擇備份檔"), REQ_FILE);
+                    startActivityForResult(Intent.createChooser(pick, Lang.s(MainActivity.this, "選擇備份檔", "选择备份文件", "Choose a backup file")), REQ_FILE);
                 } catch (ActivityNotFoundException e) {
                     fileCallback = null;
                     callback.onReceiveValue(null);
-                    Toast.makeText(MainActivity.this, "找不到檔案管理程式", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, Lang.s(MainActivity.this, "找不到檔案管理程式", "找不到文件管理程序", "No file manager found"), Toast.LENGTH_LONG).show();
                 }
                 return true;
             }
@@ -212,7 +213,7 @@ public class MainActivity extends Activity {
             i.addCategory(Intent.CATEGORY_BROWSABLE);
             startActivity(i);
         } catch (ActivityNotFoundException | SecurityException e) {
-            Toast.makeText(this, "無法開啟連結", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, Lang.s(this, "無法開啟連結", "无法打开链接", "Cannot open the link"), Toast.LENGTH_SHORT).show();
         }
         return false;
     }
@@ -221,7 +222,7 @@ public class MainActivity extends Activity {
     private void handleDownload(String url, String contentDisposition, String mimeType) {
         if (webView == null || url == null) return;
         if (!url.startsWith("blob:") && !url.startsWith("data:")) {
-            Toast.makeText(this, "不支援的下載", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, Lang.s(this, "不支援的下載", "不支持的下载", "Unsupported download"), Toast.LENGTH_SHORT).show();
             return;
         }
         String name = URLUtil.guessFileName(url, contentDisposition, mimeType);
@@ -254,7 +255,7 @@ public class MainActivity extends Activity {
         }
         webView = null;
         if (crashCount > 3) {
-            showFatal("WebView 渲染程序反覆當機，請重新啟動 App。");
+            showFatal(Lang.s(this, "WebView 渲染程序反覆當機，請重新啟動 App。", "WebView 渲染进程反复崩溃，请重新启动 App。", "The WebView renderer keeps crashing; please restart the app."));
             return;
         }
         handler.post(this::recreate);
@@ -403,7 +404,8 @@ public class MainActivity extends Activity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQ_STORAGE) {
             boolean ok = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
-            Toast.makeText(this, ok ? "已允許儲存權限，請再按一次匯出" : "未允許儲存權限，無法匯出", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, ok ? Lang.s(this, "已允許儲存權限，請再按一次匯出", "已允许存储权限，请再按一次导出", "Storage permission granted; tap Export again")
+                    : Lang.s(this, "未允許儲存權限，無法匯出", "未允许存储权限，无法导出", "Storage permission denied; cannot export"), Toast.LENGTH_LONG).show();
         }
     }
 

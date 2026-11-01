@@ -41,6 +41,12 @@ public class MoBridge {
         updater.shutdown();
     }
 
+    /** The interface language chosen in the page ("trad", "simp" or "en"): the native texts (toasts, save results, update errors) follow it. */
+    @JavascriptInterface
+    public void setLang(String lang) {
+        Lang.set(activity, lang);
+    }
+
     @JavascriptInterface
     public boolean isNative() {
         return true;
@@ -113,12 +119,12 @@ public class MoBridge {
 
             if (Build.VERSION.SDK_INT >= 29) {
                 String saved = saveViaMediaStore(name, mime, bytes);
-                return "已儲存到 Download/" + FOLDER + "/" + saved;
+                return Lang.s(activity, "已儲存到 Download/", "已保存到 Download/", "Saved to Download/") + FOLDER + "/" + saved;
             }
             return saveLegacy(name, bytes);
         } catch (Throwable t) {
             String m = t.getMessage();
-            return "儲存失敗：" + (m == null ? t.getClass().getSimpleName() : m);
+            return Lang.s(activity, "儲存失敗：", "保存失败：", "Save failed: ") + (m == null ? t.getClass().getSimpleName() : m);
         }
     }
 
@@ -154,7 +160,7 @@ public class MoBridge {
                     s.uri = newDownload(s.cr, name, mime);
                     try {
                         s.os = s.cr.openOutputStream(s.uri);
-                        if (s.os == null) throw new Exception("無法寫入檔案");
+                        if (s.os == null) throw new Exception(Lang.s(activity, "無法寫入檔案", "无法写入文件", "Cannot write the file"));
                     } catch (Exception e) {
                         try {
                             s.cr.delete(s.uri, null, null);
@@ -168,11 +174,11 @@ public class MoBridge {
                             != PackageManager.PERMISSION_GRANTED) {
                         activity.runOnUiThread(() -> activity.requestPermissions(
                                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MainActivity.REQ_STORAGE));
-                        return "需要儲存權限：請在彈出視窗按「允許」，然後再按一次匯出";
+                        return Lang.s(activity, "需要儲存權限：請在彈出視窗按「允許」，然後再按一次匯出", "需要存储权限：请在弹出窗口按「允许」，然后再按一次导出", "Storage permission needed: tap Allow in the pop-up, then tap Export again");
                     }
                     File dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), FOLDER);
                     if (!dir.isDirectory() && !dir.mkdirs() && !dir.isDirectory()) {
-                        throw new Exception("無法建立資料夾 Download/" + FOLDER);
+                        throw new Exception(Lang.s(activity, "無法建立資料夾 Download/", "无法创建文件夹 Download/", "Cannot create folder Download/") + FOLDER);
                     }
                     s.file = uniqueFile(dir, name);
                     s.os = new FileOutputStream(s.file);
@@ -183,7 +189,7 @@ public class MoBridge {
                 return s.id;
             } catch (Throwable t) {
                 String m = t.getMessage();
-                return "儲存失敗：" + (m == null ? t.getClass().getSimpleName() : m);
+                return Lang.s(activity, "儲存失敗：", "保存失败：", "Save failed: ") + (m == null ? t.getClass().getSimpleName() : m);
             }
         }
     }
@@ -192,7 +198,7 @@ public class MoBridge {
     @JavascriptInterface
     public String writeChunk(String id, String base64Data) {
         synchronized (sinkLock) {
-            if (sink == null || id == null || !id.equals(sink.id)) return "儲存失敗：找不到這個檔案";
+            if (sink == null || id == null || !id.equals(sink.id)) return Lang.s(activity, "儲存失敗：找不到這個檔案", "保存失败：找不到这个文件", "Save failed: file not found");
             try {
                 byte[] bytes = Base64.decode(base64Data == null ? "" : base64Data, Base64.DEFAULT);
                 sink.os.write(bytes);
@@ -200,7 +206,7 @@ public class MoBridge {
             } catch (Throwable t) {
                 dropSink();
                 String m = t.getMessage();
-                return "儲存失敗：" + (m == null ? t.getClass().getSimpleName() : m);
+                return Lang.s(activity, "儲存失敗：", "保存失败：", "Save failed: ") + (m == null ? t.getClass().getSimpleName() : m);
             }
         }
     }
@@ -209,7 +215,7 @@ public class MoBridge {
     @JavascriptInterface
     public String endFile(String id) {
         synchronized (sinkLock) {
-            if (sink == null || id == null || !id.equals(sink.id)) return "儲存失敗：找不到這個檔案";
+            if (sink == null || id == null || !id.equals(sink.id)) return Lang.s(activity, "儲存失敗：找不到這個檔案", "保存失败：找不到这个文件", "Save failed: file not found");
             Sink s = sink;
             sink = null;
             try {
@@ -219,14 +225,14 @@ public class MoBridge {
                     ContentValues done = new ContentValues();
                     done.put(MediaStore.MediaColumns.IS_PENDING, 0);
                     s.cr.update(s.uri, done, null, null);
-                    return "已儲存到 Download/" + FOLDER + "/" + finalName(s.cr, s.uri, s.name);
+                    return Lang.s(activity, "已儲存到 Download/", "已保存到 Download/", "Saved to Download/") + FOLDER + "/" + finalName(s.cr, s.uri, s.name);
                 }
                 MediaScannerConnection.scanFile(activity, new String[]{s.file.getAbsolutePath()}, null, null);
-                return "已儲存到 Download/" + FOLDER + "/" + s.name;
+                return Lang.s(activity, "已儲存到 Download/", "已保存到 Download/", "Saved to Download/") + FOLDER + "/" + s.name;
             } catch (Throwable t) {
                 discard(s);
                 String m = t.getMessage();
-                return "儲存失敗：" + (m == null ? t.getClass().getSimpleName() : m);
+                return Lang.s(activity, "儲存失敗：", "保存失败：", "Save failed: ") + (m == null ? t.getClass().getSimpleName() : m);
             }
         }
     }
@@ -266,7 +272,7 @@ public class MoBridge {
         v.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/" + FOLDER);
         v.put(MediaStore.MediaColumns.IS_PENDING, 1);
         Uri uri = cr.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, v);
-        if (uri == null) throw new Exception("無法建立檔案");
+        if (uri == null) throw new Exception(Lang.s(activity, "無法建立檔案", "无法创建文件", "Cannot create the file"));
         return uri;
     }
 
@@ -292,7 +298,7 @@ public class MoBridge {
         Uri uri = newDownload(cr, name, mime);
         try {
             OutputStream os = cr.openOutputStream(uri);
-            if (os == null) throw new Exception("無法寫入檔案");
+            if (os == null) throw new Exception(Lang.s(activity, "無法寫入檔案", "无法写入文件", "Cannot write the file"));
             try {
                 os.write(bytes);
                 os.flush();
@@ -319,11 +325,11 @@ public class MoBridge {
                 != PackageManager.PERMISSION_GRANTED) {
             activity.runOnUiThread(() -> activity.requestPermissions(
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MainActivity.REQ_STORAGE));
-            return "需要儲存權限：請在彈出視窗按「允許」，然後再按一次匯出";
+            return Lang.s(activity, "需要儲存權限：請在彈出視窗按「允許」，然後再按一次匯出", "需要存储权限：请在弹出窗口按「允许」，然后再按一次导出", "Storage permission needed: tap Allow in the pop-up, then tap Export again");
         }
         File dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), FOLDER);
         if (!dir.isDirectory() && !dir.mkdirs() && !dir.isDirectory()) {
-            throw new Exception("無法建立資料夾 Download/" + FOLDER);
+            throw new Exception(Lang.s(activity, "無法建立資料夾 Download/", "无法创建文件夹 Download/", "Cannot create folder Download/") + FOLDER);
         }
         File f = uniqueFile(dir, name);
         FileOutputStream os = new FileOutputStream(f);
@@ -334,7 +340,7 @@ public class MoBridge {
             os.close();
         }
         MediaScannerConnection.scanFile(activity, new String[]{f.getAbsolutePath()}, null, null);
-        return "已儲存到 Download/" + FOLDER + "/" + f.getName();
+        return Lang.s(activity, "已儲存到 Download/", "已保存到 Download/", "Saved to Download/") + FOLDER + "/" + f.getName();
     }
 
     private static File uniqueFile(File dir, String name) {

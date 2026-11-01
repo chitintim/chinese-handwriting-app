@@ -82,11 +82,11 @@
     statusText: function () {
       var d = U.dl;
       switch (d.state) {
-        case 'downloading': return '下載中… ' + Math.round(d.progress) + '%';
-        case 'downloaded': case 'installing': return '下載完成，正在開啟安裝程式…';
-        case 'permission': return '請在設定中允許本 App「安裝未知應用程式」，然後返回，再按一次「更新」。';
-        case 'error': return '更新失敗：' + (d.message || '未知錯誤') + '。可改用下方「用瀏覽器下載」。';
-        case 'canceled': return '已取消。';
+        case 'downloading': return MX.t('下載中… {n}%', { n: Math.round(d.progress) });
+        case 'downloaded': case 'installing': return MX.t('下載完成，正在開啟安裝程式…');
+        case 'permission': return MX.t('請在設定中允許本 App「安裝未知應用程式」，然後返回，再按一次「更新」。');
+        case 'error': return MX.t('更新失敗：{msg}。可改用下方「用瀏覽器下載」。', { msg: d.message || MX.t('未知錯誤') });
+        case 'canceled': return MX.t('已取消。');
         default: return '';
       }
     },
@@ -101,13 +101,13 @@
       if (!U.apk || U.dismissed) return null;
       var a = U.apk;
       return h('div', { class: 'card update', 'data-role': 'apk-update' }, [
-        h('div', { class: 't', text: '有新版本 ' + a.tag }),
-        h('div', { class: 'm', text: '目前版本 ' + (U.parse(U.current()) || ['?']).join('.') + ' · 更新會保留所有抄寫資料' }),
+        h('div', { class: 't', text: MX.t('有新版本 {tag}', { tag: a.tag }) }),
+        h('div', { class: 'm', text: MX.t('目前版本 {ver} · 更新會保留所有抄寫資料', { ver: (U.parse(U.current()) || ['?']).join('.') }) }),
         a.notes ? h('div', { class: 'notes', 'data-role': 'upd-notes', text: a.notes }) : null,
         h('div', { class: 'btnrow' }, [
-          h('button', { class: 'on big', 'data-act': 'update', text: '更新', disabled: U.dl.state === 'downloading' ? true : null, onclick: function () { U.startUpdate(); } }),
-          h('button', { 'data-act': 'later', text: '稍後', onclick: function () { U.dismissed = true; if (MX.route) MX.route(); } }),
-          h('a', { class: 'btnlink plain', 'data-act': 'update-browser', href: a.url, text: '用瀏覽器下載' })
+          h('button', { class: 'on big', 'data-act': 'update', text: MX.t('更新'), disabled: U.dl.state === 'downloading' ? true : null, onclick: function () { U.startUpdate(); } }),
+          h('button', { 'data-act': 'later', text: MX.t('稍後'), onclick: function () { U.dismissed = true; if (MX.route) MX.route(); } }),
+          h('a', { class: 'btnlink plain', 'data-act': 'update-browser', href: a.url, text: MX.t('用瀏覽器下載') })
         ]),
         h('div', { class: 'note', 'data-role': 'upd-status', text: U.statusText() })
       ]);
@@ -160,9 +160,9 @@
     },
     libStatusText: function () {
       var s = U.libState;
-      if (s.state === 'running') return '下載中… ' + s.done + ' / ' + s.total;
-      if (s.state === 'error') return '下載失敗：' + (s.message || '') + '。請稍後再試。';
-      if (s.state === 'done') return '字帖庫已更新。';
+      if (s.state === 'running') return MX.t('下載中… {done} / {total}', { done: s.done, total: s.total });
+      if (s.state === 'error') return MX.t('下載失敗：{msg}。請稍後再試。', { msg: s.message || '' });
+      if (s.state === 'done') return MX.t('字帖庫已更新。');
       return '';
     },
     paintLib: function () {
@@ -173,10 +173,10 @@
     libCard: function () {
       if (!U.lib) return null;
       return h('div', { class: 'card update', 'data-role': 'lib-update' }, [
-        h('div', { class: 't', text: '字帖庫有更新' }),
-        h('div', { class: 'm', text: '字帖庫版本 ' + U.lib.version + '（目前 ' + MX.Library.version() + '）· 新增或更新 ' + U.lib.n + ' 篇' }),
+        h('div', { class: 't', text: MX.t('字帖庫有更新') }),
+        h('div', { class: 'm', text: MX.t('字帖庫版本 {ver}（目前 {cur}）· 新增或更新 {n} 篇', { ver: U.lib.version, cur: MX.Library.version(), n: U.lib.n }) }),
         h('div', { class: 'btnrow' }, [
-          h('button', { class: 'on big', 'data-act': 'lib-download', text: '下載', disabled: U.libState.state === 'running' ? true : null, onclick: function () { U.downloadLib(); } })
+          h('button', { class: 'on big', 'data-act': 'lib-download', text: MX.t('下載'), disabled: U.libState.state === 'running' ? true : null, onclick: function () { U.downloadLib(); } })
         ]),
         h('div', { class: 'note', 'data-role': 'lib-status', text: U.libStatusText() })
       ]);
