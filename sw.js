@@ -7,7 +7,7 @@
        - library/fonts/*.woff2 (content-hashed names, each a unicode-range chunk): cache-first, filled at runtime as pages need them.
      CORE (the library index and the first chunk of every font) is precached so the first offline start works.
    Not cached: the download page (download/), the APK link (cross-origin), apk-www/ and android/ (not part of the app). */
-var CACHE = 'moxie-00cf40ccd1';
+var CACHE = 'moxie-305f81b19c';
 var DATA = 'moxie-data';
 var FILES = [
  "./",
@@ -30,6 +30,7 @@ var FILES = [
  "js/main.js",
  "js/model.js",
  "js/notes.js",
+ "js/pad.js",
  "js/pentest.js",
  "js/practice.js",
  "js/screens.js",

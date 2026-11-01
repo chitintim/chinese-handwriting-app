@@ -11,7 +11,8 @@
     screenType: '', exp: null, libScript: 'trad',
     sigDate: 'gz', sigWord: '', sigDizi: true, sigHui: false,
     autoNotes: true, sideNotes: false, strokeTap: true, strokeSpeed: 'mid',
-    layoutMode: 'auto', phoneTouch: true, phoneAuto: true, lowLat: 'auto'
+    layoutMode: 'auto', phoneTouch: true, phoneAuto: true, lowLat: 'auto',
+    padMode: 'off', padFine: false, padGain: '0.5'       // 觸控板書寫 (laptop only): off | drag | space; 精細模式; its gain
   };
   var DEF_CFG = {
     script: 'trad', mode: 'trace', grid: 'mi', box: true, guide: true, size: 'M', dir: 'v', punct: 'hide',

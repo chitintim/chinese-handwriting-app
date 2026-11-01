@@ -55,6 +55,11 @@
       if (v === 'off') return false;
       return /iReader|Smart 6c|SmartOS/i.test(navigator.userAgent || '');
     },
+    // 觸控板書寫 (settings padMode, docs/SPEC.md "Trackpad writing") is offered on a laptop / desktop only: no touch screen and a fine pointer, the same test as "the mouse writes" (never the e-ink tablet, phone or iPad).
+    // The layout does not matter: a laptop can write in the phone layout (one big character, 版面 手機) too.
+    trackpad: function () { return !!D.env().desktop; },
+    // Pointer Lock (the 精細模式 of the trackpad writing); the options dictionary / promise form is feature-detected where it is used
+    pointerLock: function () { return typeof Element !== 'undefined' && typeof Element.prototype.requestPointerLock === 'function' && 'onpointerlockchange' in document; },
     // the wide (laptop / desktop) layout: a landscape window of at least 1100 px at 3:2 or wider, never the phone layout. Class `wide` on <html>; docs/SPEC.md "Wide layout".
     isWide: function () { return !D.isPhone() && window.innerWidth >= 1100 && window.innerWidth >= 1.5 * window.innerHeight; },
     // class + CSS variables; true when the mode changed since the last call

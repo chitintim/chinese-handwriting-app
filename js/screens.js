@@ -682,6 +682,11 @@
     }
     section('write').appendChild(groupForm('write'));
     sections.write.appendChild(h('div', { class: 'note', 'data-role': 'stroke-tap-note', text: MX.Form.GROUP_NOTES.write }));
+    if (MX.Form.fields(G.pad.keys).length) {         // 觸控板書寫: laptops / desktops only
+      var pd = section('pad');
+      pd.appendChild(groupForm('pad'));
+      pd.appendChild(h('div', { class: 'note', 'data-role': 'pad-note', text: MX.Form.GROUP_NOTES.pad }));
+    }
     var b = section('brush');
     ws = MX.Form.widthSample(st);
     b.appendChild(groupForm('brush'));

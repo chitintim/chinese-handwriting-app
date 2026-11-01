@@ -35,6 +35,10 @@
       { k: 'acceptTouch', label: '手指書寫', opts: ONOFF },
       { k: 'phoneTouch', label: '手機手指書寫', opts: ONOFF },
       { k: 'strokeTap', label: '雙擊看筆順', opts: ONOFF },
+      // 觸控板書寫: only on a laptop / desktop (`when`); 精細模式 also needs Pointer Lock
+      { k: 'padMode', label: '觸控板書寫', when: function () { return MX.Device.trackpad(); }, opts: [['off', '關'], ['drag', '按住拖曳'], ['space', '按住空白鍵']] },
+      { k: 'padFine', label: '精細模式', when: function () { return MX.Device.trackpad() && MX.Device.pointerLock(); }, opts: ONOFF },
+      { k: 'padGain', label: '靈敏度', when: function () { return MX.Device.trackpad() && MX.Device.pointerLock(); }, opts: [['0.3', '低'], ['0.5', '中'], ['0.75', '高']] },
       { k: 'perf', label: '效能模式', opts: ONOFF },
       { k: 'autoFlip', label: '自動翻頁', opts: ONOFF },
       { k: 'phoneAuto', label: '自動下一字（手機）', opts: ONOFF },
@@ -49,6 +53,7 @@
     // The app settings screen / the practice sheet group the SETTINGS fields (the 署名落款 block, 資料 and 關於 are built by the screen itself)
     GROUPS: [
       { id: 'write', title: '書寫', keys: ['acceptTouch', 'phoneTouch', 'strokeTap', 'autoFlip', 'phoneAuto', 'flipDelay', 'autoNext'] },
+      { id: 'pad', title: '觸控板書寫', keys: ['padMode', 'padFine', 'padGain'] },
       { id: 'brush', title: '筆觸', keys: ['brush', 'tune', 'inkWidth', 'pressRange', 'stab', 'pressure'] },
       { id: 'grid', title: '格線', keys: ['gridLook', 'gridDensity'] },
       { id: 'sign', title: '署名落款', keys: [] },
@@ -60,10 +65,12 @@
     // the explanation under a settings group (shown by the settings screen and the practice sheet)
     GROUP_NOTES: {
       write: '雙擊看筆順：筆不在旁邊時，用手指在格子上快速點兩下，顯示該字的筆順動畫。「手指書寫」開啟時此手勢停用，請改用工具列的「筆順」鈕。手機版面預設可用手指書寫（「手機手指書寫」），雙擊手勢停用，請按「筆順」鈕。',
+      pad: '按住空白鍵：手指在觸控板上滑動，同時按住空白鍵（或 Option 鍵）才落筆，放開就提筆；不必按下觸控板。字跡粗細依書寫速度：慢則粗、快則細（Safari 搭配 Force Touch 觸控板時改用實際壓力）。精細模式：點一下書寫區進入，游標被鎖定在書寫區內，手指移動量依靈敏度縮小，筆畫更細緻；按 Esc 離開。書寫區內雙指縮放、捲動會被擋下；雙指點按＝撤銷（Command 或 Ctrl 加 Z 也行）。想一次寫一個大字：到「顯示」把版面設為「手機」。',
       display: '螢幕類型：電子紙＝黑色點線格（電子紙快速刷新也看得清楚）；一般螢幕＝淺灰實線格。選擇時會一併換上對應的格線樣式。版面：自動＝螢幕短邊小於 520 像素時用手機版面（一次寫一個字），否則用平板版面。兩種版面的字跡通用，可以在任一種繼續同一份字帖。低延遲筆跡（實驗）：自動＝只在 iReader 電子紙平板上使用低延遲畫布；其他 Android 平板的某些顯示晶片會把書寫層畫成全黑，所以預設關閉。若書寫區變黑請設為「關」。下次進入書寫頁面才生效。'
     },
+    // the definitions of `keys` that apply on this device (a field with `when` only where it returns true)
     fields: function (keys) {
-      return keys.map(function (k) { return F.SETTINGS.filter(function (f) { return f.k === k; })[0]; }).filter(Boolean);
+      return keys.map(function (k) { return F.SETTINGS.filter(function (f) { return f.k === k; })[0]; }).filter(function (f) { return f && (!f.when || f.when()); });
     },
     // 署名 + 落款 block: the name (any script, as typed; the one name used by 落款 and the 印章), and how the 落款 is written. st = the settings object (name, sigDate, sigWord,
     // sigDizi, sigHui), cfg = the copy's config (adds the per-copy 落款 on/off row; null in the app settings), buddhist = true / false for a text of that kind, null = not known (all rows).

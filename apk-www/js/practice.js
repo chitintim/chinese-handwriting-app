@@ -62,12 +62,14 @@
       attach();
       layout();
       keepOn(true);
+      padTip();
     },
     hide: function () {
       if (!S) return;
       var s = S;
       if (MX.StrokePop) MX.StrokePop.close();
       flush();
+      if (s.pad) s.pad.destroy();
       s.listeners.forEach(function (l) { l[0].removeEventListener(l[1], l[2], l[3]); });
       Object.keys(s.timers).forEach(function (k) { clearTimeout(s.timers[k]); });
       if (s.root.parentNode) s.root.parentNode.removeChild(s.root);
@@ -97,6 +99,11 @@
       on(S.root, 'touchmove', function (e) { if (e.target === S.stage || S.stage.contains(e.target)) stop(e); }, { passive: false });
       ['gesturestart', 'gesturechange'].forEach(function (t) { on(document, t, stop, { passive: false }); });
     }
+    // 觸控板書寫 (pad.js): decides when the pen is down on a laptop (Space held, 精細模式), cancels the trackpad gestures; its pointer handlers run before ours
+    S.pad = MX.Pad.create({
+      root: S.root, stage: S.stage, ink: ink, st: settings, on: on, down: onDown, move: onMove, up: onUp, cancel: function () { if (S && S.active !== null) finish(true); },
+      active: function () { return !!S && S.active !== null; }, samples: function () { return S.cap.pts.length / 6; }, hit: hitClient, writable: function () { return !!S && !S.readOnly; }, undo: undo
+    });
     on(ink, 'pointerdown', onDown);
     // pointerrawupdate (Chrome 77+, secure contexts) delivers every digitizer sample as it arrives, ahead of the frame-aligned pointermove;
     // without it pointermove's coalesced events carry the same samples. Both are fed through the Sampler, which drops what it already has.
@@ -121,6 +128,7 @@
     on(window, 'orientationchange', onResize);
     on(document, 'pointerdown', function (e) { if (S && S.chooser && !S.chooser.contains(e.target) && !(S.pill && S.pill.contains(e.target))) closeChooser(); }, true);
     on(document, 'keydown', onKey);
+    on(document, 'keyup', function (e) { if (S && S.pad) S.pad.key(e, false); });
     on(window, 'mo-key', function (e) {
       var d = e.detail;
       if (MX.StrokePop && MX.StrokePop.isOpen()) return;       // the stroke-order popup uses them to step characters
@@ -412,6 +420,7 @@
     S.inkx.setTransform(S.kx, 0, 0, S.ky, 0, 0);
     S.pageIdx = pageOf(S.copy.pos || 0);
     renderPage();
+    S.pad.sync();
   }
 
   function slotOrigin(s) {
@@ -496,6 +505,8 @@
     if (!S || document.querySelector('.modal-bg')) return;
     var k = e.key, c = e.keyCode, d = 0, vert = S.cfg.dir === 'v';
     if (k === 'Escape' && S.chooser) { closeChooser(); return; }
+    if (S.pad.key(e, true)) return;
+    if ((e.metaKey || e.ctrlKey) && !e.altKey && !e.shiftKey && (k === 'z' || k === 'Z') && !S.readOnly && !(e.target.closest && e.target.closest('input,textarea'))) { e.preventDefault(); undo(); return; }      // ⌘Z / Ctrl+Z
     if (k === 'ArrowLeft') d = vert ? 1 : -1;
     else if (k === 'ArrowRight') d = vert ? -1 : 1;
     else if (k === 'PageDown' || k === 'AudioVolumeDown' || k === 'VolumeDown' || c === 25) d = 1;
@@ -573,8 +584,8 @@
   function fingerOk() { return S.phone ? settings().phoneTouch !== false : !!settings().acceptTouch; }
   function allowed(e) {
     if (e.pointerType === 'pen') return true;
-    if (e.pointerType === 'mouse' && !S.phone && MX.Device.env().desktop) {       // desktop without touch or pen: the mouse writes (else the app is unusable); a one-time hint says a tablet or pen is best
-      if (!settings().mouseTip) { settings().mouseTip = true; Model.saveSettings(); MX.toast('用滑鼠也能書寫；用平板或手寫筆效果最好。', 4000); }
+    if (e.pointerType === 'mouse' && MX.Device.env().desktop && (!S.phone || S.pad.mode() !== 'off')) {       // desktop without touch or pen: the mouse writes (else the app is unusable); a one-time hint says a tablet or pen is best
+      if (!S.phone && !settings().mouseTip && S.pad.mode() === 'off') { settings().mouseTip = true; Model.saveSettings(); MX.toast('用滑鼠也能書寫；用平板或手寫筆效果最好。', 4000); }
       return true;
     }
     if (!fingerOk()) return false;
@@ -582,7 +593,7 @@
     return Date.now() - S.lastPen > 1500;   // palm rejection while a pen is around
   }
   function onDown(e) {
-    if (!S || S.readOnly) return;
+    if (!S || S.readOnly || S.pad.takes(e)) return;
     var isPen = e.pointerType === 'pen';
     if (isPen) { S.lastPen = Date.now(); S.penSeen = true; }
     if (S.active !== null) {
@@ -603,11 +614,11 @@
     var x = e.clientX - S.rect.left, y = e.clientY - S.rect.top;
     var idx = hit(x, y);
     if (idx < 0) return;
-    e.preventDefault();
+    if (e.pointerType !== 'mouse' || S.pad.mode() === 'off') e.preventDefault();       // (a trackpad in Safari reports its force through mouse events, which a cancelled pointerdown would suppress)
     S.active = e.pointerId;
     S.activeType = e.pointerType;
     S.lastEv = Date.now();
-    try { S.ink.setPointerCapture(e.pointerId); } catch (x2) { /* synthetic pointer */ }
+    if (!e.pad) { try { S.ink.setPointerCapture(e.pointerId); } catch (x2) { /* synthetic pointer */ } }
     hideNext();
     tickTime(true);
     if (S.hint >= 0) { S.hint = -1; drawBg(true); }
@@ -622,13 +633,14 @@
     S.stroke = { idx: idx, cx: o.x, cy: o.y, fed: 0, style: inkStyle() };
     // finger / mouse: no real pressure -> width from the writing speed (touch always; a mouse only in the phone layout, where it stands in for a finger)
     if (e.pointerType === 'touch' || e.pointerType === 'mouse') { var sty = S.stroke.style; S.cap.synth = function (n) { return Ink.rawFor(sty, n); }; }
+    if (e.pointerType === 'mouse' && S.pad.mode() !== 'off') S.cap.force = function () { return S.pad.forceN(); };       // Force Touch trackpad (Safari): real pressure instead of the speed
     S.stroke.map = mapFor(S.stroke);
     S.stroke.pen = Ink.pen(S.inkx, o.x, o.y, S.g.cell / 1000, S.stroke.style, { px: S.kx });
     S.cap.take(e, S.stroke.map);
     feed();
   }
   function onMove(e) {
-    if (!S) return;
+    if (!S || S.pad.takes(e)) return;
     if (e.pointerType === 'pen') { S.lastPen = Date.now(); S.penSeen = true; }
     if (S.promptFor && e.pointerId === S.promptFor.id && Math.hypot(e.clientX - S.promptFor.x, e.clientY - S.promptFor.y) > 10) { S.promptFor = null; if (!settings().touchPrompted) showTouchPrompt(); }
     if (S.active === null || e.pointerId !== S.active) return;
@@ -642,6 +654,7 @@
     if (S.cap.take(e, S.stroke.map)) feed();
   }
   function onUp(e) {
+    if (S && S.pad.takes(e)) return;
     if (S && S.promptFor && e.pointerId === S.promptFor.id) S.promptFor = null;
     if (!S || S.active === null || e.pointerId !== S.active) return;
     if (e.type === 'pointerup' && S.stroke) {
@@ -655,6 +668,7 @@
   function finish(cancelled) {
     var wasErase = S.erasing, wasType = S.activeType;
     S.active = null; S.activeType = null;
+    S.pad.force = -1;
     if (wasErase) {
       S.erasing = null;
       if (wasErase.items.length) { pushOp({ k: 'del', items: wasErase.items }); scheduleSave(); afterChange(); }
@@ -886,6 +900,22 @@
     S.stage.appendChild(S.banner);
   }
   function closeBanner() { if (S && S.banner) { if (S.banner.parentNode) S.banner.parentNode.removeChild(S.banner); S.banner = null; } }
+  // A laptop (no touch screen) that has not met 觸控板書寫 yet: a one-time banner on the practice view (device-local Store key sys:padTip, closed either way)
+  function padTip() {
+    if (!S || S.readOnly || S.banner || window.__MX_NO_PADTIP || !MX.Device.trackpad() || S.pad.mode() !== 'off') return;
+    try { if (MX.Store.get('sys:padTip')) return; } catch (e) { return; }
+    function seen() { try { MX.Store.set('sys:padTip', Date.now()); } catch (e) { /* ignore */ } closeBanner(); }
+    S.banner = h('div', { class: 'banner', 'data-role': 'pad-tip' }, [
+      h('div', { text: '用筆電的觸控板寫字？開啟「觸控板書寫」，按住空白鍵再滑動手指就能落筆，不必用力按。之後可在「設定」的「觸控板書寫」更改。' }),
+      h('div', { class: 'btnrow' }, [
+        h('button', { text: '開啟', 'data-act': 'pad-on', onclick: function () {
+          settings().padMode = 'space'; Model.saveSettings(); seen(); S.pad.sync(); MX.toast('已開啟：按住空白鍵書寫', 3000);
+        } }),
+        h('button', { text: '不用了', 'data-act': 'pad-off', onclick: seen })
+      ])
+    ]);
+    S.stage.appendChild(S.banner);
+  }
 
   // ------------------------------------------------------------------ sheets
   function cp() { return MX.Export.ctx(S.copy, S.text, S.cells); }
@@ -931,7 +961,7 @@
       })
     ];
     MX.Form.GROUPS.forEach(function (g) {
-      if (!g.keys.length) return;
+      if (!MX.Form.fields(g.keys).length) return;
       body.push(h('h2', { text: g.title }));
       body.push(MX.Form.build(MX.Form.fields(g.keys), settings(), false, function (k) {
         Model.saveSettings();
@@ -955,6 +985,7 @@
   }
   function complete() {
     var c = S.copy;
+    S.pad.release();      // the pointer is needed for the dialog
     c.completedAt = Date.now();
     Model.flush(c);
     Model.addDone(c);
@@ -1012,6 +1043,7 @@
     inkOf: function (idx) { return S && S.cells[idx] ? (S.copy.ink[S.cells[idx].key] || []) : []; },
     setPos: function (p) { if (S) { S.copy.pos = p; layout(); } },
     strokeMs: 0,
+    pad: function () { return S && S.pad ? S.pad.info() : null; },
     lastCell: function () { return S ? S.lastCell : undefined; },
     clearLast: function () { if (S) { S.lastCell = undefined; S.focus = -1; } }
   };
