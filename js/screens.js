@@ -226,7 +226,9 @@
         { node: MX.favButton(f.textId, null, onFav) }]
     });
   }
-  function resumeItems() { return Model.recent().filter(function (c) { return Lib.entry(c.textId); }); }
+  // a copy saved before its text was split into sections (sectionId 'main' of a text that now has sections) has no section to open: left out of 繼續書寫, its data kept
+  function stale(c) { var e = Lib.entry(c.textId); return !e || (e.sections > 1 && Model.sid(c) === 'main'); }
+  function resumeItems() { return Model.recent().filter(function (c) { return !stale(c); }); }
   function favItems() { return Model.favs().filter(function (f) { return Lib.entry(f.textId); }); }
 
   // ------------------------------------------------------------------ home

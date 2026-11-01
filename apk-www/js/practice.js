@@ -23,6 +23,14 @@
       if (copy.status === 'archived') opts = { readOnly: true };   // e.g. Back after 新抄一遍: never edit an archived copy
       var text;
       try { text = await MX.Library.getView(copy.textId, Model.sid(copy)); } catch (e) {
+        // the section is gone (a copy saved before the text was split into sections): the text's section list instead of an error page; the copy is kept
+        if (/^unknown section/.test(e.message || '') && (MX.Library.entry(copy.textId) || {}).sections > 1) {
+          if (seq === showSeq) {
+            window.addEventListener('hashchange', function () { setTimeout(function () { MX.toast('這份字帖的章節已更新，請從章節列表選擇。', 4000); }, 0); }, { once: true });     // after the route has cleared #layer
+            location.replace(MX.Screens.hash('text', copy.textId));
+          }
+          return;
+        }
         root.appendChild(h('div', { class: 'screen' }, [h('h1', { text: '無法載入文本' }), h('p', { text: String(e.message || e) }),
           h('button', { text: '返回', onclick: function () { location.hash = '#/'; } })]));
         return;
