@@ -197,8 +197,9 @@ This repo is generated from a private source repository, so accepted PRs are mer
 
 ## Privacy
 
-- What you write **stays on your device** (IndexedDB, with localStorage as fallback). No accounts, analytics, tracking, ads or backend.
-- The network is used only to: (1) load the web app and fonts; (2) check for APK updates (GitHub Releases API, at most once a day or on demand); (3) check for library updates (reads `library/index.json` and shows 「字帖庫有更新」; you choose whether to download).
+- What you write **stays on your device** (IndexedDB, with localStorage as fallback). No accounts, ads, tracking or backend.
+- One anonymous **visit count** per app start via [GoatCounter](https://www.goatcounter.com/) (no cookies, nothing personal), just so I know whether it's worth putting effort into keeping this maintained. Skipped with Do Not Track.
+- The network is used only to: (1) load the web app and fonts, plus the visit count above; (2) check for APK updates (GitHub Releases API, at most once a day or on demand); (3) check for library updates (reads `library/index.json` and shows 「字帖庫有更新」; you choose whether to download).
 - Backups are your job: 設定 → 資料 → 匯出.
 
 ---

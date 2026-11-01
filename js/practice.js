@@ -931,7 +931,27 @@
   }
   function openSettings() {
     if (!S) return;
-    var cfgFields = MX.Form.CFG.filter(function (f) { return !f.content; }), api, ws = MX.Form.widthSample(settings());
+    var api;
+    // The same groups, in the same order, as the settings screen (Form.GROUPS): the sample and the options of each. 這一遍 = the choices of this 字帖; 所有字帖 = app settings.
+    var ctx = {
+      st: settings(), cfg: S.cfg, scope: '這一遍', noContent: true, samples: [], boxes: [],
+      onCfg: function (k) {
+        Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg);
+        if (k === 'title') { rebuildCells(); return; }
+        S.copy.pos = firstIdx(S.pages[S.pageIdx]);
+        layout();
+      },
+      onSet: function () { Model.saveSettings(); layout(); },
+      custom: { sign: function () {
+        var sb = MX.Form.signBlock(settings(), S.cfg, S.text.category === 'buddhist', function (k) {
+          if (k === 'sign') { Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg); }
+          else Model.saveSettings();
+          if (k === 'name') rebuildLater(); else rebuildCells();
+        });
+        ctx.boxes.push(sb);
+        return sb;
+      } }
+    };
     // 完成 sticks to the top right of the sheet (no button at the bottom edge); everything applies and is saved at once
     var head = h('div', { class: 'sheethead' }, [h('h2', { text: '設定', class: 'grow' }), h('button', { class: 'on', text: '完成', 'data-act': 'done', onclick: function () { api.close(); } })]);
     var body = [
@@ -939,31 +959,14 @@
       h('div', { class: 'btnrow' }, [
         h('button', { text: '新抄一遍', 'data-act': 'newcopy', onclick: function () { api.close(); newCopy(); } })
       ]),
-      h('h2', { text: '署名與落款' }),
-      MX.Form.signBlock(settings(), S.cfg, S.text.category === 'buddhist', function (k) {
-        if (k === 'sign') { Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg); }
-        else Model.saveSettings();
-        if (k === 'name') rebuildLater(); else rebuildCells();
-      }),
-      h('h2', { text: '這一遍' }),
-      MX.Form.build(cfgFields, S.cfg, false, function (k) {
-        Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg);
-        if (k === 'title') { rebuildCells(); return; }
-        S.copy.pos = firstIdx(S.pages[S.pageIdx]);
-        layout();
-      })
+      h('div', { class: 'note', 'data-role': 'scope-note', text: '標「這一遍」的選項只改目前這份字帖；標「所有字帖」的選項套用到全部字帖。' })
     ];
     MX.Form.GROUPS.forEach(function (g) {
-      if (!MX.Form.fields(g.keys).length) return;
-      body.push(h('h2', { text: g.title }));
-      body.push(MX.Form.build(MX.Form.fields(g.keys), settings(), false, function (k) {
-        Model.saveSettings();
-        if (k === 'brush' || k === 'inkWidth' || k === 'pressRange') ws.update();
-        if (k === 'screenType' && api) MX.Form.syncSeg(api.el, 'gridLook', settings().gridLook);
-        layout();
-      }));
-      if (MX.Form.GROUP_NOTES[g.id]) body.push(h('div', { class: 'note', text: MX.Form.GROUP_NOTES[g.id] }));
-      if (g.id === 'brush') body.push(ws.el);
+      if (g.id === 'data' || g.id === 'about') return;
+      var nodes = MX.Form.groupBody(g, ctx);
+      if (!nodes.length) return;
+      body.push(h('h2', { text: g.title, 'data-group': g.id }));
+      nodes.forEach(function (n) { body.push(n); });
     });
     api = MX.modal({ body: body });
     api.el.className += ' sheet';

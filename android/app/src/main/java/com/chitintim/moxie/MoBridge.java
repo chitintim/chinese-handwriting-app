@@ -122,18 +122,174 @@ public class MoBridge {
         }
     }
 
+    // ---------------------------------------------------------------- big files, piece by piece
+    // The export can be a PNG of 100 MB and more: one base64 string of it would not fit through the JavascriptInterface. The page calls
+    // beginFile -> writeChunk (base64 of 1.5 MB raw, any number of times) -> endFile; abortFile drops the half-written file. One file at a time:
+    // beginFile throws away an unfinished earlier one (the page was reloaded in between).
+
+    private final Object sinkLock = new Object();
+    private Sink sink;
+    private int sinkCounter = 0;
+
+    private static class Sink {
+        String id;
+        String name;
+        Uri uri;
+        File file;
+        OutputStream os;
+        ContentResolver cr;
+    }
+
+    /** @return "id:N" to use with writeChunk / endFile, or a final status (error, or the storage permission is missing). */
+    @JavascriptInterface
+    public String beginFile(String filename, String mimeType) {
+        synchronized (sinkLock) {
+            dropSink();
+            try {
+                String name = sanitize(filename);
+                String mime = (mimeType == null || mimeType.trim().isEmpty()) ? guessMime(name) : mimeType.trim();
+                Sink s = new Sink();
+                if (Build.VERSION.SDK_INT >= 29) {
+                    s.cr = activity.getContentResolver();
+                    s.uri = newDownload(s.cr, name, mime);
+                    try {
+                        s.os = s.cr.openOutputStream(s.uri);
+                        if (s.os == null) throw new Exception("無法寫入檔案");
+                    } catch (Exception e) {
+                        try {
+                            s.cr.delete(s.uri, null, null);
+                        } catch (Exception ignored) {
+                        }
+                        throw e;
+                    }
+                    s.name = name;
+                } else {
+                    if (activity.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        activity.runOnUiThread(() -> activity.requestPermissions(
+                                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MainActivity.REQ_STORAGE));
+                        return "需要儲存權限：請在彈出視窗按「允許」，然後再按一次匯出";
+                    }
+                    File dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), FOLDER);
+                    if (!dir.isDirectory() && !dir.mkdirs() && !dir.isDirectory()) {
+                        throw new Exception("無法建立資料夾 Download/" + FOLDER);
+                    }
+                    s.file = uniqueFile(dir, name);
+                    s.os = new FileOutputStream(s.file);
+                    s.name = s.file.getName();
+                }
+                s.id = "id:" + (++sinkCounter);
+                sink = s;
+                return s.id;
+            } catch (Throwable t) {
+                String m = t.getMessage();
+                return "儲存失敗：" + (m == null ? t.getClass().getSimpleName() : m);
+            }
+        }
+    }
+
+    /** @return "ok", or an error text (the half-written file has been dropped). */
+    @JavascriptInterface
+    public String writeChunk(String id, String base64Data) {
+        synchronized (sinkLock) {
+            if (sink == null || id == null || !id.equals(sink.id)) return "儲存失敗：找不到這個檔案";
+            try {
+                byte[] bytes = Base64.decode(base64Data == null ? "" : base64Data, Base64.DEFAULT);
+                sink.os.write(bytes);
+                return "ok";
+            } catch (Throwable t) {
+                dropSink();
+                String m = t.getMessage();
+                return "儲存失敗：" + (m == null ? t.getClass().getSimpleName() : m);
+            }
+        }
+    }
+
+    /** Finishes the file; same status text as saveFile. */
+    @JavascriptInterface
+    public String endFile(String id) {
+        synchronized (sinkLock) {
+            if (sink == null || id == null || !id.equals(sink.id)) return "儲存失敗：找不到這個檔案";
+            Sink s = sink;
+            sink = null;
+            try {
+                s.os.flush();
+                s.os.close();
+                if (s.uri != null) {
+                    ContentValues done = new ContentValues();
+                    done.put(MediaStore.MediaColumns.IS_PENDING, 0);
+                    s.cr.update(s.uri, done, null, null);
+                    return "已儲存到 Download/" + FOLDER + "/" + finalName(s.cr, s.uri, s.name);
+                }
+                MediaScannerConnection.scanFile(activity, new String[]{s.file.getAbsolutePath()}, null, null);
+                return "已儲存到 Download/" + FOLDER + "/" + s.name;
+            } catch (Throwable t) {
+                discard(s);
+                String m = t.getMessage();
+                return "儲存失敗：" + (m == null ? t.getClass().getSimpleName() : m);
+            }
+        }
+    }
+
+    @JavascriptInterface
+    public void abortFile(String id) {
+        synchronized (sinkLock) {
+            if (sink != null && id != null && id.equals(sink.id)) dropSink();
+        }
+    }
+
+    private void dropSink() {
+        if (sink == null) return;
+        Sink s = sink;
+        sink = null;
+        discard(s);
+    }
+
+    private void discard(Sink s) {
+        try {
+            if (s.os != null) s.os.close();
+        } catch (Exception ignored) {
+        }
+        try {
+            if (s.uri != null) s.cr.delete(s.uri, null, null);
+            else if (s.file != null) s.file.delete();
+        } catch (Exception ignored) {
+        }
+    }
+
     // ---------------------------------------------------------------- API 29+
 
-    private String saveViaMediaStore(String name, String mime, byte[] bytes) throws Exception {
-        ContentResolver cr = activity.getContentResolver();
+    private Uri newDownload(ContentResolver cr, String name, String mime) throws Exception {
         ContentValues v = new ContentValues();
         v.put(MediaStore.MediaColumns.DISPLAY_NAME, name);
         v.put(MediaStore.MediaColumns.MIME_TYPE, mime);
         v.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/" + FOLDER);
         v.put(MediaStore.MediaColumns.IS_PENDING, 1);
-        Uri collection = MediaStore.Downloads.EXTERNAL_CONTENT_URI;
-        Uri uri = cr.insert(collection, v);
+        Uri uri = cr.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, v);
         if (uri == null) throw new Exception("無法建立檔案");
+        return uri;
+    }
+
+    /** The provider may have renamed the file ("name (1).png"); returns the real name. */
+    private static String finalName(ContentResolver cr, Uri uri, String name) {
+        String finalName = name;
+        Cursor c = null;
+        try {
+            c = cr.query(uri, new String[]{MediaStore.MediaColumns.DISPLAY_NAME}, null, null, null);
+            if (c != null && c.moveToFirst()) {
+                String n = c.getString(0);
+                if (n != null && !n.isEmpty()) finalName = n;
+            }
+        } catch (Exception ignored) {
+        } finally {
+            if (c != null) c.close();
+        }
+        return finalName;
+    }
+
+    private String saveViaMediaStore(String name, String mime, byte[] bytes) throws Exception {
+        ContentResolver cr = activity.getContentResolver();
+        Uri uri = newDownload(cr, name, mime);
         try {
             OutputStream os = cr.openOutputStream(uri);
             if (os == null) throw new Exception("無法寫入檔案");
@@ -153,20 +309,7 @@ public class MoBridge {
             }
             throw e;
         }
-        // The provider may have renamed the file ("name (1).png"); report the real name.
-        String finalName = name;
-        Cursor c = null;
-        try {
-            c = cr.query(uri, new String[]{MediaStore.MediaColumns.DISPLAY_NAME}, null, null, null);
-            if (c != null && c.moveToFirst()) {
-                String n = c.getString(0);
-                if (n != null && !n.isEmpty()) finalName = n;
-            }
-        } catch (Exception ignored) {
-        } finally {
-            if (c != null) c.close();
-        }
-        return finalName;
+        return finalName(cr, uri, name);
     }
 
     // ---------------------------------------------------------------- API 24-28

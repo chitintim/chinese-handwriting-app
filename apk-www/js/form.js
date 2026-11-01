@@ -3,6 +3,7 @@
   var MX = window.MX, h = MX.h;
 
   var ONOFF = [[true, '開'], [false, '關']];
+  var advN = 0;
   var F = MX.Form = {
     // per-copy config fields; content=true ones are locked once the copy has ink
     CFG: [
@@ -23,7 +24,7 @@
       { k: 'pressRange', label: '筆壓幅度', opts: [['small', '小'], ['mid', '中'], ['large', '大']] },
       { k: 'stab', label: '防抖', opts: [['off', '關'], ['light', '輕'], ['mid', '中']] },
       { k: 'tplStyle', label: '描紅樣式', opts: [['fill', '灰色'], ['dots', '網點'], ['outline', '空心']] },
-      { k: 'tplFont', label: '字體', opts: [['ukai', '楷書'], ['tw', '正楷'], ['msz', '行楷'], ['wk', '硬筆']] },
+      { k: 'tplFont', label: '字型', opts: [['ukai', '楷書'], ['tw', '正楷'], ['msz', '行楷'], ['wk', '硬筆']] },
       { k: 'screenType', label: '螢幕類型', opts: [['eink', '電子紙'], ['normal', '一般螢幕']] },
       { k: 'gridLook', label: '格線樣式', opts: [['dots', '點線(黑)'], ['light', '實線淺灰'], ['black', '實線黑']] },
       { k: 'gridDensity', label: '點線疏密', opts: [['sparse', '疏'], ['mid', '中'], ['dense', '密']] },
@@ -45,23 +46,30 @@
       { k: 'autoNotes', label: '完成後顯示解說', opts: ONOFF },
       { k: 'sideNotes', label: '對照模式', opts: ONOFF }
     ],
-    // The app settings screen / the practice sheet group the SETTINGS fields (the 署名落款 block, 資料 and 關於 are built by the screen itself)
+    // The groups of the app settings screen and of the practice sheet (one list, one order: by how often people change them; the 署名落款 block, 資料 and 關於 are built by the screen itself).
+    //   cfg   = CFG fields (the choices of a 字帖: 新字帖預設 in 設定, 這一遍 in the practice sheet)   keys = SETTINGS fields (app-wide: 所有字帖)
+    //   adv   = the same two lists behind a collapsed 進階選項 (remembered per device)   sample = the live sample shown above the options (Sample.modes / cells / brush)
     GROUPS: [
-      // everything about HOW the page is written on: the tool, the finger gesture, the pen's latency (書寫 below = page flipping)
+      { id: 'mode', title: '書寫方式', cfg: ['mode'], sample: 'modes' },
+      { id: 'look', title: '字帖外觀', cfg: ['script', 'grid', 'guide', 'box', 'dir', 'size'], keys: ['tplFont', 'tplStyle'], sample: 'cells',
+        adv: { cfg: ['punct', 'title'], keys: ['tplTone', 'tplSize', 'gridLook', 'gridDensity'] } },
+      { id: 'brush', title: '筆觸', keys: ['brush', 'inkWidth', 'pressRange'], sample: 'brush', adv: { keys: ['stab', 'pressure', 'tune'] } },
+      // everything about HOW the page is written on: the tool, the finger gesture, the pen's latency (翻頁 below = page flipping)
       { id: 'input', title: '書寫工具', keys: ['inputMode', 'strokeTap', 'lowLat'] },
-      { id: 'write', title: '書寫', keys: ['autoFlip', 'phoneAuto', 'flipDelay', 'autoNext'] },
-      { id: 'brush', title: '筆觸', keys: ['brush', 'tune', 'inkWidth', 'pressRange', 'stab', 'pressure'] },
-      { id: 'grid', title: '格線', keys: ['gridLook', 'gridDensity'] },
-      { id: 'cfg', title: '字帖預設', keys: [] },
-      { id: 'sign', title: '署名落款', keys: [] },
+      { id: 'flip', title: '翻頁', keys: ['autoFlip', 'phoneAuto', 'flipDelay', 'autoNext'] },
+      { id: 'sign', title: '署名落款', keys: [], custom: 'sign' },
       { id: 'notes', title: '解說', keys: ['autoNotes', 'sideNotes'] },
-      { id: 'display', title: '顯示', keys: ['layoutMode', 'screenType', 'libScript', 'tplStyle', 'tplFont', 'tplSize', 'tplTone', 'edgeBottom', 'edgeSide', 'perf'] },
+      { id: 'display', title: '顯示', keys: ['screenType', 'layoutMode', 'libScript'], adv: { keys: ['edgeBottom', 'edgeSide', 'perf'] } },
       { id: 'data', title: '資料', keys: [] },
       { id: 'about', title: '關於', keys: [] }
     ],
+    // the two scopes of an option: 新字帖預設 (設定) / 這一遍 (the practice sheet) = the choices of a 字帖; 所有字帖 = an app setting that applies at once everywhere
+    SCOPE_ALL: '所有字帖',
     // the explanation under a settings group (shown by the settings screen and the practice sheet)
     GROUP_NOTES: {
+      brush: '粗細＝平常力道的線寬；筆壓幅度＝力道輕重讓線變細變粗的程度。校準只對應筆壓，不改線寬（筆測頁）。',
       input: '觸控筆：只有觸控筆（Apple Pencil、電磁筆、iReader 的筆）會寫出筆跡，手指和手掌不會（防誤觸）。手指：手指也能寫，筆照樣可用。自動：維持原本的行為，手機版面用手指，平板版面（電子紙平板、iPad）只用觸控筆。雙擊看筆順：手指不寫字時，在格子上快速點兩下看筆順；選「手指」或用手機版面時，請按工具列的「筆順」。低延遲筆跡：自動＝只在 iReader 上使用；書寫區變黑請設為「關」，下次進入書寫頁面才生效。',
+      notes: '完成一章後自動顯示該章解說；對照模式在抄寫時於旁邊（橫向）或下方（直向）顯示要旨與字詞。',
       display: '螢幕類型：電子紙＝黑色點線格（電子紙快速刷新也看得清楚）；一般螢幕＝淺灰實線格。選擇時會一併換上對應的格線樣式。版面：自動＝螢幕短邊小於 520 像素時用手機版面（一次寫一個字），否則用平板版面。兩種版面的字跡通用，可以在任一種繼續同一份字帖。'
     },
     // the definitions of `keys` that apply on this device (a field with `when` only where it returns true)
@@ -111,6 +119,84 @@
       }
       update();
       return { el: box, update: update };
+    },
+    // CFG fields by key (noContent: leave out the ones that need a new 字帖 once it has ink)
+    cfgFields: function (keys, noContent) {
+      return keys.map(function (k) { return F.CFG.filter(function (f) { return f.k === k; })[0]; }).filter(function (f) { return f && !(noContent && f.content); });
+    },
+    // the small heading of a block of options: whose option it is (新字帖預設 / 這一遍 / 所有字帖)
+    scope: function (label) { return h('div', { class: 'scope', 'data-role': 'scope', text: label }); },
+    // 進階選項: a collapsed block (static, no animation); open / closed is remembered per group and device (Store `setupAdv:g-<id>`, device-local: not in a backup)
+    adv: function (id, kids) {
+      var key = 'setupAdv:g-' + id, uid = 'adv-' + id + '-' + (++advN);
+      function open() { try { return !!MX.Store.get(key); } catch (e) { return false; } }
+      var body = h('div', { class: 'advbody', id: uid, 'data-role': 'adv-body', 'data-adv': id }, kids);
+      var btn = h('button', { type: 'button', class: 'advbtn', 'data-act': 'adv-' + id, 'aria-controls': uid, onclick: function () {
+        try { if (open()) MX.Store.del(key); else MX.Store.set(key, 1); } catch (e) { MX.err(e); }
+        sync();
+      } });
+      function sync() {
+        var o = open();
+        body.hidden = !o;
+        btn.setAttribute('aria-expanded', o ? 'true' : 'false');
+        btn.innerHTML = '';
+        btn.appendChild(h('span', { text: '進階選項' }));
+        btn.appendChild(MX.icon(o ? 'tri-u' : 'tri-d', 18));
+      }
+      sync();
+      return h('div', { class: 'advgrp', 'data-role': 'adv-group', 'data-adv-group': id }, [btn, body]);
+    },
+    // The nodes of one group (not its heading), for the settings screen and the practice sheet: the live sample, then the options, the explanation, then 進階選項.
+    // ctx = { st: the settings object, cfg: the choices object the cfg rows edit (設定: the 新字帖預設; the sheet: this 字帖's), scope: its label, noContent: leave out 字體,
+    //         onCfg(k, v) / onSet(k, v): called after a change was made (the caller saves / re-lays out), compact, custom: {sign: function () -> node}, samples: [] (filled) }.
+    // Every change redraws every sample of ctx.samples (ctx.refresh()); 螢幕類型 also moves the 格線樣式 buttons.
+    groupBody: function (g, ctx) {
+      var out = [], st = ctx.st, cfg = ctx.cfg, smp = ctx.samples = ctx.samples || [], boxes = ctx.boxes = ctx.boxes || [];
+      function get() { return { cfg: cfg, st: st }; }
+      function refresh() { smp.forEach(function (x) { x.update(); }); }
+      ctx.refresh = refresh;
+      function cfgBox(keys) {
+        var fs = cfg ? F.cfgFields(keys || [], ctx.noContent) : [];
+        if (!fs.length) return null;
+        var b = F.build(fs, cfg, false, function (k, v) { if (ctx.onCfg) ctx.onCfg(k, v); refresh(); });
+        boxes.push(b);
+        return b;
+      }
+      function setBox(keys) {
+        var fs = F.fields(keys || []);
+        if (!fs.length) return null;
+        var b = F.build(fs, st, false, function (k, v) {
+          if (k === 'screenType') boxes.forEach(function (x) { F.syncSeg(x, 'gridLook', st.gridLook); });
+          if (k === 'brush') boxes.forEach(function (x) { F.syncSeg(x, 'brush', st.brush); });       // 筆觸調校 (in 進階選項) saved a 自訂 brush and selected it
+          if (ctx.onSet) ctx.onSet(k, v);
+          refresh();
+        });
+        boxes.push(b);
+        return b;
+      }
+      // a block of options: [scope label, cfg rows] and [所有字帖, setting rows]
+      function block(cfgKeys, setKeys) {
+        var nodes = [], c = cfgBox(cfgKeys), s = setBox(setKeys);
+        if (c) { nodes.push(F.scope(ctx.scope), c); }
+        if (s) { if (c) nodes.push(F.scope(F.SCOPE_ALL)); nodes.push(s); }
+        return nodes;
+      }
+      var sm = null;
+      if (g.sample === 'modes' && cfg) {
+        sm = MX.Sample.modes(get, function (v) { cfg.mode = v; if (ctx.onCfg) ctx.onCfg('mode', v); refresh(); }, { compact: ctx.compact });
+        boxes.push(sm.el);
+        out.push(F.scope(ctx.scope));
+      } else if (g.sample === 'cells') sm = MX.Sample.cells(get, { compact: ctx.compact });
+      else if (g.sample === 'brush') sm = MX.Sample.brush(get, {});
+      if (sm) { smp.push(sm); out.push(sm.el); }
+      if (g.custom && ctx.custom && ctx.custom[g.custom]) out.push(ctx.custom[g.custom]());
+      block(g.sample === 'modes' ? [] : g.cfg, g.keys).forEach(function (n) { out.push(n); });
+      if (F.GROUP_NOTES[g.id]) out.push(h('div', { class: 'note', 'data-role': g.id + '-note', text: F.GROUP_NOTES[g.id] }));
+      if (g.adv) {
+        var rows = block(g.adv.cfg, g.adv.keys);
+        if (rows.length) out.push(F.adv(g.id, rows));
+      }
+      return out;
     },
     // segmented single-choice control
     seg: function (opts, value, onChange, disabled) {

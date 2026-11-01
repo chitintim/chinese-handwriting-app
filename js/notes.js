@@ -191,6 +191,7 @@
   // the licence notes of 設定 -> 關於 (fonts, stroke data); the version line is built there
   N.CREDITS = {
     font: '字型：文鼎 PL 中楷 AR PL UKai（Arphic Public License）；全字庫正楷體 TW-Kai、馬善政 Ma Shan Zheng、霞鶩文楷 LXGW WenKai（SIL OFL 1.1）。已裁切字集並改名，授權全文在 library/fonts/。',
+    privacy: '私隱：你寫的字只存在這部裝置。開啟時會匿名計一次到訪（GoatCounter，不用 cookie），只是想知道值不值得繼續花心思維護。瀏覽器設定「不追蹤」時不計。',
     stroke: '筆順資料：hanzi-writer-data／Make Me a Hanzi（取自文鼎 Arphic 字型，Arphic Public License，授權全文在 library/strokes/LICENSE）。筆順依資料集（大陸標準），部分繁體字可能與臺灣標準不同。'
   };
 

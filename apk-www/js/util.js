@@ -195,6 +195,8 @@
     });
   };
 
+  var BRIDGE_CHUNK = 1572864;       // raw bytes per bridge call: a multiple of 3, so every chunk's base64 stands alone
+  MX.BRIDGE_CHUNK = BRIDGE_CHUNK;
   function blobToBase64(blob) {
     return new Promise(function (res, rej) {
       var fr = new FileReader();
@@ -227,8 +229,21 @@
     var blob = typeof src === 'string' ? dataUrlToBlob(src) : src;
     mime = mime || blob.type || 'application/octet-stream';
     if (window.MoBridge && typeof window.MoBridge.saveFile === 'function') {
+      var B = window.MoBridge;
+      // big files (the export can be 100 MB+) go over in pieces: one base64 string of the whole file would need 2-3 copies in the WebView and the JavascriptInterface
+      if (blob.size > BRIDGE_CHUNK && typeof B.beginFile === 'function' && typeof B.writeChunk === 'function' && typeof B.endFile === 'function') {
+        var id = String(B.beginFile(filename, mime));
+        if (id.indexOf('id:') !== 0) return id;      // not an id: the final status (an error, or the storage permission is missing)
+        try {
+          for (var at = 0; at < blob.size; at += BRIDGE_CHUNK) {
+            var r = String(B.writeChunk(id, await blobToBase64(blob.slice(at, at + BRIDGE_CHUNK))));
+            if (r !== 'ok') { try { B.abortFile(id); } catch (e2) { /* ignore */ } return r; }
+          }
+          return String(B.endFile(id));
+        } catch (e) { try { B.abortFile(id); } catch (e3) { /* ignore */ } throw e; }
+      }
       var b64 = await blobToBase64(blob);
-      var st = window.MoBridge.saveFile(filename, b64, mime);
+      var st = B.saveFile(filename, b64, mime);
       return String(st === undefined || st === null ? '已儲存' : st);
     }
     if (MX.isMobileBrowser() && typeof navigator.share === 'function' && typeof navigator.canShare === 'function') {
@@ -245,7 +260,7 @@
     var a = h('a', { href: url, download: filename, style: 'display:none' });
     document.body.appendChild(a);
     a.click();
-    setTimeout(function () { URL.revokeObjectURL(url); if (a.parentNode) a.parentNode.removeChild(a); }, 60000);
+    setTimeout(function () { URL.revokeObjectURL(url); if (a.parentNode) a.parentNode.removeChild(a); }, blob.size > 20000000 ? 600000 : 60000);       // a big file is read late
     return '已下載 ' + filename;
   };
 

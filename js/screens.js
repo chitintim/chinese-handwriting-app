@@ -496,6 +496,9 @@
     if (!entry) { location.hash = '#/'; return; }
     var cats = catCrumbs(entry);
     var extra = [MX.favButton(textId, null, null, true)];
+    extra.push(h('button', { text: '列印練習紙', 'data-act': 'practice-sheet', onclick: function () {      // the section the quick-start panel shows
+      Lib.getText(textId).then(function (t) { return MX.Export.openPractice(textId, Model.nextSection(textId, t.sections.map(function (x) { return x.id; })).id); }).catch(function (e) { MX.err(e); MX.toast('無法開啟練習紙'); });
+    } }));
     if (Model.archived(textId).length) extra.push(h('button', { text: '存檔 (' + Model.archived(textId).length + ')', 'data-act': 'archives', onclick: function () { location.hash = H('archives', textId); } }));
     var el = screen(root, T(entry.title), H('lib', entry.custom ? Lib.CUSTOM : entry.category), extra, cats.concat([[T(entry.title), H('text', textId)]]));
     el.setAttribute('data-screen', 'text');
@@ -617,9 +620,24 @@
       }));
     }
     el.appendChild(row);
-    // the essentials: 字體 (繁 / 简) and 模式 (描 / 臨 / 默)
-    var ESS = ['script', 'mode'], cfgFields = MX.Form.CFG;
-    el.appendChild(MX.Form.build(cfgFields.filter(function (f) { return ESS.indexOf(f.k) >= 0; }), d, locked, refreshInfo));
+    // the essentials: 字體 (繁 / 简) and 模式 (描 / 臨 / 默: three sample cells of the text's first character, drawn with the app's own drawing code; tap = choose). The 2 x 2 sample of the
+    // cells (grid, direction, size ...) is the first thing inside 進階選項, right above the options that change it. What the samples show is what the practice view draws.
+    var ESS = ['script', 'mode'], cfgFields = MX.Form.CFG, smp = [], sget = function () { return { cfg: d, st: Model.settings }; };
+    var viewTxt = null;       // the loaded text: the samples show ITS first characters in the chosen 字體 (繁 / 简) and with or without the title
+    function refreshSamples() {
+      var cs = viewTxt ? cellsOf(viewTxt).map(function (c) { return c.ch; }).filter(function (c) { return MX.Closing.isCJK(c); }) : [];
+      smp.forEach(function (x) { if (cs.length) x.setChars(cs); else x.update(); });
+    }
+    el.appendChild(MX.Form.build(cfgFields.filter(function (f) { return f.k === 'script'; }), d, locked, function () { refreshInfo(); refreshSamples(); }));
+    var modeSmp = MX.Sample.modes(sget, function (v) { d.mode = v; refreshInfo(); refreshSamples(); }, { compact: true });
+    smp.push(modeSmp);
+    el.appendChild(MX.Form.row('書寫方式', modeSmp.el));
+    var cellSmp = MX.Sample.cells(sget, { compact: true });
+    smp.push(cellSmp);
+    viewP.then(function (txt) {         // the sample cells show the first characters of this very text
+      viewTxt = txt;
+      if (el.parentNode) refreshSamples();
+    }).catch(function () { /* the samples keep their own characters */ });
     if (locked) el.appendChild(h('div', { class: 'note', text: '已開始書寫：字體需「重新開始」才能更改。' }));
     var inRow = MX.Form.inputRow();          // 書寫工具: asked on every new writing (a global, device-level setting; none on a laptop)
     if (inRow) el.appendChild(inRow);
@@ -627,6 +645,7 @@
     row2.appendChild(MX.favButton(textId, entry.sections > 1 ? sectionId : null, null, true));
     if (Lib.hasNotes(textId, sectionId)) row2.appendChild(h('button', { text: '解說', 'data-act': 'notes', onclick: function () { location.hash = H('notes', textId, sectionId); } }));
     row2.appendChild(h('button', { text: '設為預設', 'data-act': 'set-default', title: '把目前的選項設為新字帖的預設', onclick: function () { Model.setDefaultCfg(d); MX.toast('已設為新字帖的預設選項（設定 → 字帖預設）'); } }));
+    row2.appendChild(h('button', { text: '列印練習紙', 'data-act': 'practice-sheet', title: '把這一章的描紅範本印在紙上（PDF）', onclick: function () { MX.Export.openPractice(textId, sectionId, d).catch(function (e) { MX.err(e); MX.toast('無法開啟練習紙'); }); } }));
     var arch = Model.archived(textId, sectionId).length;
     if (arch) row2.appendChild(h('button', { text: '存檔 (' + arch + ')', 'data-act': 'archives', onclick: function () { location.hash = H('archives', textId, sectionId); } }));
 
@@ -651,7 +670,8 @@
     el.appendChild(advSum);
     // where these choices come from (the Model.textCfg rule), and that the other sections of the text start with them too (inside 進階選項: nothing but the essentials above the fold)
     adv.appendChild(h('div', { class: 'note cfgorigin', 'data-role': 'cfg-origin', text: '選項沿用：' + (locked ? '這份字帖的選項' : CFG_SOURCE[Model.cfgSource(textId)]) + (entry.sections > 1 ? ' · 其他章節同用' : '') }));
-    adv.appendChild(MX.Form.build(cfgFields.filter(function (f) { return ESS.indexOf(f.k) < 0; }), d, locked, refreshInfo));
+    adv.appendChild(cellSmp.el);
+    adv.appendChild(MX.Form.build(cfgFields.filter(function (f) { return ESS.indexOf(f.k) < 0; }), d, locked, function () { refreshInfo(); refreshSamples(); }));
     var signHold = h('div');
     adv.appendChild(signHold);
     viewP.then(function (v) {
@@ -725,6 +745,9 @@
     el.appendChild(h('div', { class: 'note', 'data-role': 'autosave-note', text: '變更會立即套用並自動儲存。' }));
     var G = {};
     MX.Form.GROUPS.forEach(function (g) { G[g.id] = g; });
+    // two kinds of options, said once and marked on every block: 新字帖預設 = the choices of a 字帖 (they begin the texts that were never started; every text then remembers its own),
+    // 所有字帖 = an app setting that applies to everything at once. The practice sheet shows the same blocks with 這一遍 in place of 新字帖預設.
+    el.appendChild(h('div', { class: 'note', 'data-role': 'cfg-note', text: '標「新字帖預設」的選項，只用在還沒開始過的文本：每篇文本會記住自己上次用的選項，同一篇的各章共用（字帖設定頁的「設為預設」也存在這裡）。標「所有字帖」的選項，馬上套用到全部字帖。' }));
     var index = h('div', { class: 'sindex', 'data-role': 'section-index' });
     el.appendChild(index);
     var sections = {};
@@ -738,42 +761,29 @@
       } }));
       return box;
     }
-    var ws = null;
-    function groupForm(id, onChange) {
-      return MX.Form.build(MX.Form.fields(G[id].keys), st, false, function (k) {
-        save();
-        if (ws && (k === 'brush' || k === 'inkWidth' || k === 'pressRange')) ws.update();
-        if (onChange) onChange(k);
-      });
-    }
-    // 書寫工具: everything about how the page is written on (the tool, the finger double-tap, the pen's latency); 書寫: page flipping
-    section('input').appendChild(groupForm('input'));
-    sections.input.appendChild(h('div', { class: 'note', 'data-role': 'input-note', text: MX.Form.GROUP_NOTES.input }));
-    section('write').appendChild(groupForm('write'));
-    var b = section('brush');
-    ws = MX.Form.widthSample(st);
-    b.appendChild(groupForm('brush'));
-    b.appendChild(h('div', { class: 'note', text: '粗細＝平常力道的線寬；筆壓幅度＝力道輕重讓線變細變粗的程度。校準只對應筆壓，不改線寬（筆測頁）。' }));
-    b.appendChild(ws.el);
-    section('grid').appendChild(groupForm('grid'));
-    // 字帖預設: the choices a text that was never started begins with (Model.defaultCfg). A started text remembers its own; 設為預設 in the setup screen writes here too.
-    var cg = section('cfg'), dc = Model.defaultCfg();
-    cg.appendChild(MX.Form.build(MX.Form.CFG, dc, false, function () { Model.setDefaultCfg(dc); }));
-    cg.appendChild(MX.Form.row('落款', MX.Form.seg([[true, '開'], [false, '關']], dc.sign !== false, function (v) { dc.sign = v; Model.setDefaultCfg(dc); }), 'sign'));
-    cg.appendChild(h('div', { class: 'btnrow' }, [h('button', { text: '還原內建預設', 'data-act': 'cfg-reset', onclick: function () {
+    // 新字帖預設 (Model.defaultCfg): the choices a text that was never started begins with. A started text remembers its own.
+    var dc = Model.defaultCfg();
+    var ctx = {
+      st: st, cfg: dc, scope: '新字帖預設', noContent: false, samples: [], boxes: [],
+      onCfg: function () { Model.setDefaultCfg(dc); },
+      onSet: function () { save(); },
+      custom: { sign: function () {
+        var sb = MX.Form.signBlock(st, dc, null, function (k) { if (k === 'sign') Model.setDefaultCfg(dc); else save(); });       // 署名 / 日期 / 敬語 are app settings, 落款 on / off is a choice of the 字帖
+        ctx.boxes.push(sb);
+        return sb;
+      } }
+    };
+    MX.Form.GROUPS.forEach(function (g) {
+      if (g.id === 'data' || g.id === 'about') return;
+      var box = section(g.id);
+      MX.Form.groupBody(g, ctx).forEach(function (n) { box.appendChild(n); });
+    });
+    sections.look.appendChild(h('div', { class: 'btnrow' }, [h('button', { text: '還原內建預設', 'data-act': 'cfg-reset', title: '新字帖預設（書寫方式與字帖外觀的選項）回到內建的選項', onclick: function () {
       Model.setDefaultCfg(null);
       var base = Model.defaultCfg();
-      Object.keys(base).forEach(function (k) { dc[k] = base[k]; MX.Form.syncSeg(cg, k, base[k]); });
+      Object.keys(base).forEach(function (k) { dc[k] = base[k]; ctx.boxes.forEach(function (b) { MX.Form.syncSeg(b, k, base[k]); }); });
+      ctx.refresh();
     } })]));
-    cg.appendChild(h('div', { class: 'note', 'data-role': 'cfg-note', text: '每篇文本會記住自己上次用的選項（按「開始抄寫」或書寫中更改時），同一篇的各章共用。這裡的選項只用在還沒開始過的文本；字帖設定頁的「設為預設」也會存到這裡。筆觸、署名等其他設定是全部字帖共用的。' }));
-    section('sign').appendChild(MX.Form.signBlock(st, null, null, function () { save(); }));
-    var n = section('notes');
-    n.appendChild(groupForm('notes'));
-    n.appendChild(h('div', { class: 'note', text: '完成一章後自動顯示該章解說；對照模式在抄寫時於旁邊（橫向）或下方（直向）顯示要旨與字詞。' }));
-    section('display').appendChild(groupForm('display', function (k) {
-      if (k === 'screenType') MX.Form.syncSeg(el, 'gridLook', st.gridLook);       // the preset also sets the grid style
-    }));
-    sections.display.appendChild(h('div', { class: 'note', 'data-role': 'display-note', text: MX.Form.GROUP_NOTES.display }));
 
     // ---- 資料
     var dat = section('data');
@@ -843,6 +853,7 @@
     ]));
     ab.appendChild(h('div', { class: 'note', 'data-role': 'font-credit', text: MX.Notes.CREDITS.font }));
     ab.appendChild(h('div', { class: 'note', 'data-role': 'stroke-credit', text: MX.Notes.CREDITS.stroke }));
+    ab.appendChild(h('div', { class: 'note', 'data-role': 'privacy-note', text: MX.Notes.CREDITS.privacy }));
   };
 
   // ------------------------------------------------------------------ archives (of one section; no section = all sections of the text)

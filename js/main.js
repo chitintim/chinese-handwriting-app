@@ -110,12 +110,31 @@
       } catch (e) { MX.err(e); }
       return false;
     };
+    // anonymous visit count (GoatCounter: no cookies, no personal data): one count per app start, only on the hosted site (path /) and in the APK
+    // when online (path /apk); never with Do Not Track, never on localhost / test servers
+    MX.visitPath = function (host, apk, dnt) {
+      if (dnt === '1' || dnt === 'yes') return null;
+      if (host === 'chitintim.github.io') return '/';
+      return apk && host === 'appassets.androidplatform.net' ? '/apk' : null;
+    };
+    function countVisit() {
+      try {
+        var path = MX.visitPath(location.hostname, !!window.MoBridge, navigator.doNotTrack || window.doNotTrack);
+        if (!path || navigator.onLine === false) return;
+        window.goatcounter = { no_onload: true };
+        var sc = document.createElement('script');
+        sc.async = true; sc.src = 'https://gc.zgo.at/count.js'; sc.setAttribute('data-goatcounter', 'https://moxie.goatcounter.com/count');
+        sc.onload = function () { try { window.goatcounter.count({ path: path, title: '墨字帖' }); } catch (e) { /* ignore */ } };
+        document.head.appendChild(sc);
+      } catch (e) { /* never matters */ }
+    }
     try {
       if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(function () { /* ignore */ });
     } catch (e) { /* ignore */ }
     route();
     MX.ready = true;
     registerSw();
+    countVisit();
     // APK: look for a newer release / library (at most once per 24 h, silent when offline)
     if (window.MoBridge) { try { MX.Update.auto().catch(function () { /* offline */ }); } catch (e) { MX.err(e); } }
   }

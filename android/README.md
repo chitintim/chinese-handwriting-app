@@ -71,6 +71,10 @@ Gradle reads `MOXIE_KEYSTORE_FILE`, `MOXIE_KEYSTORE_PASSWORD`, `MOXIE_KEY_ALIAS`
   Android 10+, legacy storage + runtime permission on 9 and below; on the first legacy call the user is prompted
   and must press export again). `saveFileAndToast(...)` is the same plus a toast (also used as a fallback for
   `blob:` downloads triggered by `<a download>`).
+  Big files (the export can be a PNG of 100 MB and more; one base64 string would not pass the interface) are sent piece by piece:
+  `beginFile(filename, mime)` -> `"id:N"` (or a final status text: error / storage permission missing), `writeChunk(id, base64)` (1.5 MiB raw per call) -> `"ok"` or an error text
+  (the half-written file is deleted), `endFile(id)` -> the same status text as `saveFile`, `abortFile(id)`. One file at a time: `beginFile` drops an unfinished earlier one.
+  The page uses it for files above 1.5 MiB (`MX.saveFile` in `app/js/util.js`) and falls back to `saveFile` when a bridge lacks these methods.
 - Hardware keys: Volume down / Page down / Next -> `window` event `mo-key` with `detail:'next'`; Volume up / Page up /
   Previous -> `'prev'`. These keys are consumed (volume does not change, and the page does not also get a DOM keydown).
   D-pad/arrow keys are left to the page as normal DOM key events.
