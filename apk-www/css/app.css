@@ -373,12 +373,11 @@ html.wide .topbar>:last-child{margin-right:0}
 html.wide .screen[data-screen=home]{display:flex;flex-direction:column}
 html.wide .screen[data-screen=home]>*{flex:none}
 html.wide .screen[data-screen=home] .topbar{order:-2}
-html.wide .screen[data-screen=home] .intro{order:-1;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);grid-template-rows:auto 1fr;column-gap:32px;align-items:start;margin:0 0 24px;padding:16px 24px;border:2px solid #000;font-size:15px;line-height:1.4}
-html.wide .intro .i1{grid-column:1;grid-row:1;font-size:21px}
-html.wide .intro .ibodies{grid-column:1;grid-row:2}
+html.wide .screen[data-screen=home] .intro{order:-1;margin:0 0 24px;padding:16px 24px;border:2px solid #000;font-size:15px;line-height:1.4}
+html.wide .intro .i1{font-size:21px}
 html.wide .intro .ibodies p{font-size:15px}
-html.wide .intro .i3{grid-column:2;grid-row:1;margin:0;font-size:15px}
-html.wide .intro .i4{grid-column:2;grid-row:2;align-self:end;margin:8px 0 0}
+html.wide .intro .i3{margin:10px 0 0;font-size:15px}
+html.wide .intro .i4{margin:8px 0 0}
 html.wide .intro .ilink{min-height:48px;font-size:17px}
 html.wide .homewrap{display:block}
 html.wide .hcol:first-child{margin-right:0}
