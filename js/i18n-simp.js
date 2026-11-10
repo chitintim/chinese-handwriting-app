@@ -287,6 +287,8 @@ MX.I18n.addSimp({
   "這一章還沒有解說。": "这一章还没有解说。",
   "這篇文本還沒有英文解說，以下是中文解說。": "这篇文本还没有英文解说，以下是中文解说。",
   "解說語言": "解说语言",
+  "抄寫時並列白話": "抄写时并列白话",
+  "回到開頭": "回到开头",
   "英文解說由 AI 協助撰寫，譯文對照 James Legge、Herbert A. Giles、William Gemmell 與 Samuel Beal 的公有領域譯本核對，僅供學習參考。": "英文解说由 AI 协助撰写，译文对照 James Legge、Herbert A. Giles、William Gemmell 与 Samuel Beal 的公有领域译本核对，仅供学习参考。",
   "將目前這一遍存檔，重新開始新的一遍？": "将目前这一遍存档，重新开始新的一遍？",
   "I vibe-coded this while spending a lot of time sitting with my mom in hospital. She's been a devoted Buddhist for a very long time (皈依 many years ago), and 抄心經 is close to her heart. I wouldn't call myself a Buddhist, more someone slowly learning about it, and this gave me something calm to do while I'm here.": "I vibe-coded this while spending a lot of time sitting with my mom in hospital. She's been a devoted Buddhist for a very long time (皈依 many years ago), and 抄心经 is close to her heart. I wouldn't call myself a Buddhist, more someone slowly learning about it, and this gave me something calm to do while I'm here.",

@@ -93,6 +93,22 @@
     return { id: raw && raw.id, disclaimer: str(raw && raw.disclaimer), sections: secs };
   }
 
+  // ---- 白話 beside the text: library/notes/bai/<textId>.json (docs/BAIHUA.md), listed by `bai: true` in the manifest. Per section the sentences in order, each with the number of cells (CJK
+  // characters) of its original, which is all the practice view needs to find the sentences of a page: {start, n, zh, simp, en}. The original itself is not kept (the cells have it).
+  var baiCache = {};
+  function normBai(raw) {
+    var secs = {};
+    Object.keys((raw && raw.sections) || {}).forEach(function (id) {
+      var at = 0;
+      secs[id] = ((raw.sections[id]) || []).map(function (g) {
+        var n = cjkCount(g && g.src), o = { start: at, n: n, zh: str(g && g.zh), simp: str(g && g.simp) || str(g && g.zh), en: str(g && g.en) };
+        at += n;
+        return o;
+      });
+    });
+    return { id: raw && raw.id, sections: secs };
+  }
+
   var L = MX.Library = {
     CUSTOM: CUSTOM, MAX_CUSTOM: MAX_CUSTOM,
     index: null,            // the library index in force (bundled, or the downloaded one when newer)
@@ -100,6 +116,7 @@
     otaActive: false,
     notesIdx: {},            // {textId: {sectionId: true}} from library/notes/manifest.json
     notesEn: {},             // {textId: true}: texts that also have an English file library/notes/en/<id>.json (manifest `en: true`)
+    notesBai: {},            // {textId: true}: texts with a 白話 file library/notes/bai/<id>.json (manifest `bai: true`)
     dual: dual,
 
     load: async function () {
@@ -112,7 +129,7 @@
       return L.index;
     },
     loadNotesManifest: async function () {
-      L.notesIdx = {}; L.notesEn = {};
+      L.notesIdx = {}; L.notesEn = {}; L.notesBai = {};
       try {
         var m = await fetchJson('library/notes/manifest.json');
         (m && m.texts || []).forEach(function (t) {
@@ -121,8 +138,9 @@
           (t.sections || []).forEach(function (sid) { o[sid] = true; });
           L.notesIdx[t.id] = o;
           if (t.en === true) L.notesEn[t.id] = true;
+          if (t.bai === true) L.notesBai[t.id] = true;
         });
-      } catch (e) { L.notesIdx = {}; L.notesEn = {}; }       // no notes shipped (or offline without a cache): the app works without
+      } catch (e) { L.notesIdx = {}; L.notesEn = {}; L.notesBai = {}; }       // no notes shipped (or offline without a cache): the app works without
       return L.notesIdx;
     },
     // true when a 解說 exists for the section (sectionId omitted: for any section of the text)
@@ -134,6 +152,14 @@
     notesSections: function (textId) { return Object.keys(L.notesIdx[textId] || {}); },
     // true when the text has English explanations (all its sections)
     hasNotesEn: function (textId) { return !!L.notesEn[textId] && L.hasNotes(textId); },
+    // true when the text has a 白話 file (library/notes/bai/<id>.json): the toggle and the band beside the writing page exist only for such texts
+    hasBai: function (textId) { return !!L.notesBai[textId] && L.hasNotes(textId); },
+    // the sentences of one section ([{start, n, zh, simp, en}] in order), null when the text has no 白話 or it lacks the section
+    getSectionBai: async function (textId, sectionId) {
+      if (!L.hasBai(textId)) return null;
+      if (!baiCache[textId]) baiCache[textId] = normBai(await fetchJson('library/notes/bai/' + encodeURIComponent(textId) + '.json'));
+      return baiCache[textId].sections[sectionId || 'main'] || null;
+    },
     getNotesEn: async function (textId) {
       if (notesEnCache[textId]) return notesEnCache[textId];
       var raw = await fetchJson('library/notes/en/' + encodeURIComponent(textId) + '.json'), zh = null;

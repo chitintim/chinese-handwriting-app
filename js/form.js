@@ -59,7 +59,7 @@
       { id: 'input', title: '書寫工具', keys: ['inputMode', 'strokeTap', 'lowLat'] },
       { id: 'flip', title: '翻頁', keys: ['autoFlip', 'phoneAuto', 'flipDelay', 'autoNext'] },
       { id: 'sign', title: '署名落款', keys: [], custom: 'sign' },
-      { id: 'notes', title: '解說', keys: ['autoNotes', 'sideNotes'] },
+      { id: 'notes', title: '解說', keys: ['autoNotes', 'sideNotes'], custom: 'bai' },       // custom bai: the practice sheet's 抄寫時並列白話 row (js/bai.js), only for a text with 白話
       { id: 'display', title: '顯示', keys: ['uiLang', 'screenType', 'layoutMode', 'libScript'], adv: { keys: ['edgeBottom', 'edgeSide', 'perf'] } },
       { id: 'data', title: '資料', keys: [] },
       { id: 'about', title: '關於', keys: [] }
@@ -190,7 +190,7 @@
       } else if (g.sample === 'cells') sm = MX.Sample.cells(get, { compact: ctx.compact });
       else if (g.sample === 'brush') sm = MX.Sample.brush(get, {});
       if (sm) { smp.push(sm); out.push(sm.el); }
-      if (g.custom && ctx.custom && ctx.custom[g.custom]) out.push(ctx.custom[g.custom]());
+      if (g.custom && ctx.custom && ctx.custom[g.custom]) { var cn = ctx.custom[g.custom](); if (cn) out.push(cn); }
       block(g.sample === 'modes' ? [] : g.cfg, g.keys).forEach(function (n) { out.push(n); });
       if (F.GROUP_NOTES[g.id]) out.push(h('div', { class: 'note', 'data-role': g.id + '-note', text: MX.t(F.GROUP_NOTES[g.id]) }));
       if (g.adv) {

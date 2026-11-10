@@ -91,13 +91,19 @@
   }
 
   // inset {l,t,r,b} (px, optional): cells are laid out inside W x H minus the insets; the canvas stays W x H.
-  function grid(W, H, cfg, inset) {
-    var portrait = W < H;
+  // opt (optional, the 白話 band takes room beside the page, js/bai.js): portrait = the orientation of the grid (else W < H), cols / rows = at most so many columns / rows, cell = at most
+  // this size. With the band the page keeps the cell size of the grid without it and loses lines instead.
+  function grid(W, H, cfg, inset, opt) {
+    opt = opt || {};
+    var portrait = opt.portrait !== undefined ? !!opt.portrait : W < H;
     var d = DIMS[cfg.size] || DIMS.M;
     var cols = portrait ? d[0] : d[1], rows = portrait ? d[1] : d[0];
+    if (opt.cols) cols = Math.max(1, Math.min(cols, opt.cols));
+    if (opt.rows) rows = Math.max(1, Math.min(rows, opt.rows));
     var n = inset || { l: 0, t: 0, r: 0, b: 0 };
     var aw = Math.max(10, W - n.l - n.r), ah = Math.max(10, H - n.t - n.b);
     var cell = Math.max(10, Math.floor(Math.min(aw / cols, ah / rows)));
+    if (opt.cell) cell = Math.min(cell, opt.cell);
     return {
       cols: cols, rows: rows, perPage: cols * rows, cell: cell, portrait: portrait,
       ox: n.l + Math.floor((aw - cell * cols) / 2), oy: n.t + Math.floor((ah - cell * rows) / 2),

@@ -171,6 +171,8 @@
     } else if (MX.I18n.isEn() && nt) {
       cols.appendChild(h('p', { class: 'ntext nmiss', 'data-role': 'notes-en-missing', text: MX.t('這篇文本還沒有英文解說，以下是中文解說。') }));
     }
+    // 抄寫時並列白話: the switch of the band beside the writing page (js/bai.js); only for a text that has a 白話 file; remembered on this device (baiSide:v1)
+    if (Lib.hasBai(textId)) cols.appendChild(MX.Bai.row());
     if (done) {
       var n = Model.doneCount(textId, Model.sid(copy));
       cols.appendChild(h('div', { class: 'ndone', 'data-role': 'notes-done', text: MX.t('圓滿完成！這是第 {n} 遍，用時約 {time}。', { n: n, time: MX.fmtDuration(copy.activeMs) }) }));

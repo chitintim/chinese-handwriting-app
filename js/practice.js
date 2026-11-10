@@ -50,7 +50,7 @@
         phone: MX.Device.isPhone(), root: h('div', { class: 'practice' }), copy: copy, text: text, cells: cells, readOnly: !!(opts && opts.readOnly),
         cfg: copy.cfg, g: null, pages: [], pageIdx: 0, slotOf: {}, dpr: 1, token: 0,
         active: null, stroke: null, erasing: null, ops: [], focus: -1, penSeen: false, lastPen: 0, tick: 0,
-        cap: new Ink.Sampler(), rawOk: false, hint: -1, timers: {}, nextBtn: null, banner: null, rect: null, listeners: []
+        cap: new Ink.Sampler(), rawOk: false, hint: -1, timers: {}, nextBtn: null, banner: null, rect: null, listeners: [], bai: null, baiFail: false
       };
       root.appendChild(S.root);
       S.bar = h('div', { class: S.phone ? 'pbtns' : 'pbar', 'data-role': S.phone ? 'phone-buttons' : null });
@@ -151,6 +151,7 @@
   var onResize = MX.debounce(function () {
     if (!S) return;
     if (S.active !== null) { onResize(); return; }
+    if (S.bai && S.g) S.copy.pos = stayPos();         // the band changes the page grid with the orientation: stay on the page of the cell being written
     layout();
   }, 150);
 
@@ -395,6 +396,78 @@
     MX.Notes.fillStrip(S.pnotes, S.nsec || null, S.cfg.script === 'simp' ? 'simp' : 'trad', openNotes);
   }
 
+  // ---- 白話 beside the text (js/bai.js). A band between the toolbar and the writing page (portrait: on top, 24 - 28 % of the height; landscape: on the left, 29 - 32 % of the width)
+  // while the setting is on (device-local baiSide:v1) and the text has 白話. The cell size the user chose is kept: the page loses rows (portrait) or columns (landscape), never below
+  // one line. The band is HTML text outside the canvases (never in an export, a print or a PDF); it is filled when the page is drawn and when the writer moves into another sentence
+  // (after pen-up), never while the pen moves.
+  function syncBai() {
+    var want = !S.baiFail && MX.Bai.on() && MX.Bai.has(S.copy.textId);
+    if (!want) {
+      if (S.bai) { if (S.bai.el.parentNode) S.bai.el.parentNode.removeChild(S.bai.el); S.bai = null; }
+      return;
+    }
+    S.root.className += ' bai';
+    if (S.bai) return;
+    var el = h('div', { class: 'pbai', 'data-role': 'bai-band', role: 'region', 'aria-label': MX.t('白話'), style: 'font-family:' + Draw.uiFam(S.cfg.script) });
+    var b = S.bai = { el: el, segs: null, list: [], cur: -2, from: 0, off: 0, lang: '', fills: 0 };
+    S.root.insertBefore(el, S.stage);
+    // the sentences are measured to see what fits: again once the font chunks of their characters have loaded
+    if (document.fonts && document.fonts.addEventListener) on(document.fonts, 'loadingdone', function () { clearTimeout(S.timers.baifont); S.timers.baifont = setTimeout(function () { fillBai(false, true); }, 30); });
+    MX.Library.getSectionBai(S.copy.textId, Model.sid(S.copy)).then(function (segs) {
+      if (!S || S.bai !== b) return;
+      if (!segs || !segs.length) { baiGone(); return; }
+      b.segs = segs;
+      fillBai(true);
+    }).catch(function (e) { MX.err(e); if (S && S.bai === b) baiGone(); });
+  }
+  function baiGone() { S.baiFail = true; S.copy.pos = stayPos(); layout(); }       // the sentences cannot be loaded: no band
+  // the cell to stay on when the page grid changes: the cell written last when it is on this page, else the first cell of the page
+  function stayPos() {
+    return S.focus >= 0 && S.slotOf[S.focus] !== undefined ? S.focus : firstIdx(S.pages[S.pageIdx]);
+  }
+  // The band's size and the lines it costs. g0 = the grid of the stage without the band: its cell size is kept, the band takes what is left after as many lines as still fit
+  // (at least one; then the cell shrinks). The band is 24 % (portrait) / 29 % (landscape) of the view, up to 28 % / 32 % when the page has room to spare.
+  function planBai(g0, W, H, land) {
+    var P = land ? S.root.clientWidth : S.root.clientHeight, B = Math.round(P * (land ? 0.29 : 0.24)), Bmax = Math.round(P * (land ? 0.32 : 0.28));
+    var ext = land ? W : H, ins = land ? S.inset.l + S.inset.r : S.inset.t + S.inset.b, avail = ext - ins, c0 = g0.cell, lines0 = land ? g0.cols : g0.rows;
+    var lines = Math.max(1, Math.min(lines0, Math.floor((avail - B) / c0))), left = avail - lines * c0;
+    var px = left >= B ? Math.min(left, Bmax) : Math.min(B, Math.round(avail * 0.45));
+    var opts = { portrait: g0.portrait, cell: c0 };
+    opts[land ? 'cols' : 'rows'] = lines;
+    return { px: px, opts: opts, lines: lines };
+  }
+  function curSeg() {
+    var b = S.bai, c = MX.Bai.markCell(S.pages[S.pageIdx], S.focus, function (i) { return !isEmpty(i); });
+    return c >= 0 && S.cells[c].sec === 'body' ? MX.Bai.segOf(b.segs, +S.cells[c].key) : -1;
+  }
+  function baiAnchor(g) {
+    var base = 0, out = '', j;
+    while (base < S.cells.length && S.cells[base].sec !== 'body') base++;
+    for (j = 0; j < Math.min(3, g.n); j++) if (S.cells[base + g.start + j]) out += S.cells[base + g.start + j].ch;
+    return out;
+  }
+  function fillBai(reset, remeasure) {
+    var b = S && S.bai;
+    if (!b || !b.segs) return;
+    b.lang = MX.Bai.lang(S.copy.textId, S.cfg.script === 'simp' ? 'simp' : 'trad');
+    b.list = MX.Bai.pageSegs(b.segs, S.cells, S.pages[S.pageIdx]);
+    b.cur = curSeg();
+    if (reset) { b.from = Math.max(0, b.list.indexOf(b.cur)); b.off = 0; }       // too long for the band: from the sentence being written on
+    var r = MX.Bai.fill(b.el, { segs: b.segs, list: b.list, cur: b.cur, from: b.from, off: b.off, lang: b.lang, anchor: baiAnchor, onMore: function (f, off) { b.from = f; b.off = off; fillBai(false); } });
+    b.from = r.from; b.off = r.off;
+    if (!remeasure) b.fills++;       // (a redraw only to measure again after a font load is not counted: tests count the draws the writer causes)
+    b.el.setAttribute('data-lang', b.lang);
+  }
+  // after a stroke, an undo, a clear: only when the writer is now in another sentence is the band drawn again (after the stroke has been painted; never on pen move)
+  function scheduleBai() {
+    if (!S || !S.bai) return;
+    clearTimeout(S.timers.bai);
+    S.timers.bai = setTimeout(function () {
+      if (S && S.bai && S.bai.segs && curSeg() !== S.bai.cur) fillBai(true);
+    }, 0);
+  }
+  function baiChanged() { S.baiFail = false; S.copy.pos = stayPos(); layout(); }
+
   function layout() {
     if (!S) return;
     if (S.phone !== MX.Device.isPhone()) {      // the layout mode flipped (版面 setting, window resized across 520 px): rebuild the view in the other layout
@@ -407,17 +480,32 @@
     S.root.className = 'practice ' + (land ? 'land' : 'port') + (S.phone ? ' phone' : '');
     buildBar();
     syncStrip();
+    syncBai();
+    var bai = S.bai ? S.bai.el : null;
+    if (bai) bai.style.display = 'none';       // the stage is measured without the band first (its cell size is kept)
     var r = S.stage.getBoundingClientRect();
     var W = Math.floor(r.width), H = Math.floor(r.height);
-    if (W < 40 || H < 40) return;
+    if (W < 40 || H < 40) { if (bai) bai.style.display = ''; return; }
     // keep every cell clear of the screen-edge dead zone (pen digitizer / system gestures): margins only where the stage touches the viewport edge
     var vw = window.innerWidth, vh = window.innerHeight;
     if (S.phone) {
       S.inset = { l: 0, t: 0, r: 0, b: 0 };
+      if (bai) {
+        bai.style.display = ''; bai.style.width = land ? Math.round(S.root.clientWidth * 0.29) + 'px' : ''; bai.style.height = land ? '' : Math.round(S.root.clientHeight * 0.24) + 'px';       // a column left of the page (landscape) / a row under the head (portrait)
+        r = S.stage.getBoundingClientRect();
+        W = Math.floor(r.width); H = Math.floor(r.height);
+      }
       S.g = Layout.gridOne(W, H, S.cfg, S.inset, 8);      // one cell, as big as the stage allows
     } else {
       S.inset = Layout.insets(settings(), vw, vh, { left: r.left < 2, top: r.top < 2, right: r.right > vw - 2, bottom: r.bottom > vh - 2 });
       S.g = Layout.grid(W, H, S.cfg, S.inset);
+      if (bai) {
+        var plan = planBai(S.g, W, H, land);
+        bai.style.display = ''; bai.style.width = land ? plan.px + 'px' : ''; bai.style.height = land ? '' : plan.px + 'px';
+        r = S.stage.getBoundingClientRect();
+        W = Math.floor(r.width); H = Math.floor(r.height);
+        S.g = Layout.grid(W, H, S.cfg, S.inset, plan.opts);
+      }
     }
     S.pages = Layout.paginate(S.cells, S.g);
     // Both canvases use the real device pixel ratio (up to 3; 2.625 on the iReader) so one canvas pixel is one screen pixel: the 1-device-pixel
@@ -468,6 +556,7 @@
     else Draw.fontsReady(S.cfg.script, chars, settings().tplFont, all).then(function () { if (S && tk === S.token) drawBg(true); });
     redrawInk();
     updateUi();
+    fillBai(true);
     S.root.setAttribute('data-page', S.pageIdx);
   }
   function redrawInk() {
@@ -727,6 +816,7 @@
   function pushOp(op) { S.ops.push(op); if (S.ops.length > 400) S.ops.shift(); }
   function afterChange() {
     Model.recount(S.copy, S.cells);
+    scheduleBai();
     if (S.phone) { updateUi(); return; }       // phone: completion waits for the idle delay (armFlip) or the 完成 button
     if (!S.copy.completedAt && S.copy.total > 0 && S.copy.filled >= S.copy.total) complete();
   }
@@ -777,6 +867,7 @@
       var ok = op.k === 'add' ? pageHas(op.cell) : op.items.every(function (it) { return pageHas(it.cell); });
       if (!ok) continue;
       S.ops.splice(i, 1);
+      S.focus = op.k === 'add' ? op.cell : op.items[0].cell;        // the writer is back at the cell the undone stroke was in (the 白話 band marks its sentence)
       if (op.k === 'add') {
         var arr = S.copy.ink[KY(op.cell)] || [], at = arr.indexOf(op.stroke);
         if (at < 0) { i = S.ops.length; continue; }
@@ -802,7 +893,7 @@
   }
   function undone() {
     Model.recount(S.copy, S.cells);
-    redrawInk(); scheduleSave(); hideNext();
+    redrawInk(); scheduleSave(); hideNext(); scheduleBai();
     if (S.phone) updateUi();
   }
   async function clearPage() {
@@ -820,7 +911,7 @@
     });
     pushOp({ k: 'del', items: items });
     Model.recount(S.copy, S.cells);
-    redrawInk(); scheduleSave(); hideNext();
+    redrawInk(); scheduleSave(); hideNext(); scheduleBai();
     if (S.phone) updateUi();
   }
   function hint() {
@@ -955,7 +1046,7 @@
         layout();
       },
       onSet: function () { Model.saveSettings(); layout(); },
-      custom: { sign: function () {
+      custom: { bai: function () { return MX.Bai.has(S.copy.textId) ? MX.Bai.row(baiChanged) : null; }, sign: function () {
         var sb = MX.Form.signBlock(settings(), S.cfg, S.text.category === 'buddhist', function (k) {
           if (k === 'sign') { Model.saveMeta(S.copy); Model.saveTextCfg(S.copy.textId, S.cfg); }
           else Model.saveSettings();
@@ -1041,6 +1132,10 @@
         inkSize: [S.ink.width, S.ink.height], inkCss: [S.ink.style.width, S.ink.style.height] };
     },
     flipMs: 0,
+    bai: function () {
+      var b = S && S.bai;
+      return b ? { loaded: !!b.segs, list: b.list.slice(), cur: b.cur, from: b.from, lang: b.lang, fills: b.fills, rows: S.g.rows, cols: S.g.cols, cell: S.g.cell } : null;
+    },
     stats: function () { return { full: stats.full, region: stats.region, paints: stats.paints }; },
     style: function () { return inkStyle(); },
     relayout: function () { if (S) layout(); },
