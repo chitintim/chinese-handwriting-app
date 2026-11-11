@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  // 白話 beside the text while copying (docs/SPEC.md revision 24, docs/BAIHUA.md): a reading band next to the writing page with the sentences of the current page in plain modern
+  // 白話 beside the text while copying (docs/SPEC.md revisions 24 and 25, docs/BAIHUA.md): a reading band next to the writing page with the sentences of the current page in plain modern
   // language. This file: the device setting (baiSide:v1, device-local), the language, the mapping page -> sentences, and the band's content. The layout of the page around the band
   // (lines taken away, band size) is practice.js; the data is MX.Library.getSectionBai (library/notes/bai/<id>.json: [{start, n, zh, simp, en}] per section, start = index of the
   // sentence's first body cell).
@@ -63,7 +63,8 @@
 
   // ------------------------------------------------------------------ the band
   // o = { segs, list (sentence indices of the page), cur (sentence index of the mark or -1), from (position in `list` of the first sentence shown), off (px of the first sentence
-  //       already read, only for a sentence taller than the band), lang ('zh' | 'simp' | 'en'), anchor(seg) -> the first characters of the original, onMore(from, off) }.
+  //       already read, only for a sentence taller than the band), lang ('zh' | 'simp' | 'en'), label(sentence index) -> the number that leads the sentence ('3', or '…3' when it came
+  //       over from the previous page; the same number is drawn on the grid), onMore(from, off) }.
   // Builds the band's content; returns { from, count, off } as shown. No scrolling: what does not fit is left out, and a 更多 button (>= 56 px) shows the next ones (the band is paged;
   // a sentence taller than the whole band is read in steps of one band height).
   B.fill = function (el, o) {
@@ -73,7 +74,7 @@
     o.list.forEach(function (si) {
       var g = o.segs[si], txt = g[o.lang] || g.zh || '';
       var it = h('div', { class: 'bseg' + (si === o.cur ? ' cur' : ''), 'data-seg': si, 'data-cur': si === o.cur ? '1' : null, lang: o.lang === 'en' ? 'en' : (o.lang === 'simp' ? 'zh-Hans' : 'zh-Hant') }, [
-        h('span', { class: 'ba', 'data-role': 'bai-anchor', 'data-zh': '', text: o.anchor(g) }), h('span', o.lang === 'en' ? { class: 'bt', text: txt } : { class: 'bt', 'data-zh': '', text: txt })]);
+        h('span', { class: 'bn', 'data-role': 'bai-num', text: o.label(si) }), h('span', o.lang === 'en' ? { class: 'bt', text: txt } : { class: 'bt', 'data-zh': '', text: txt })]);       // (an empty .bn is hidden by css)
       items.push(it);
       body.appendChild(it);
     });

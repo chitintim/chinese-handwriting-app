@@ -396,21 +396,26 @@
     MX.Notes.fillStrip(S.pnotes, S.nsec || null, S.cfg.script === 'simp' ? 'simp' : 'trad', openNotes);
   }
 
-  // ---- 白話 beside the text (js/bai.js). A band between the toolbar and the writing page (portrait: on top, 24 - 28 % of the height; landscape: on the left, 29 - 32 % of the width)
-  // while the setting is on (device-local baiSide:v1) and the text has 白話. The cell size the user chose is kept: the page loses rows (portrait) or columns (landscape), never below
-  // one line. The band is HTML text outside the canvases (never in an export, a print or a PDF); it is filled when the page is drawn and when the writer moves into another sentence
-  // (after pen-up), never while the pen moves.
+  // ---- 白話 beside the text (js/bai.js). A band between the toolbar and the writing page (portrait: on top, 14 - 18 % of the height; landscape: on the left, 20 - 24 % of the width;
+  // phone 16 - 20 %) while the setting is on (device-local baiSide:v1) and the text has 白話. The cell size the user chose is kept: the page loses rows (portrait) or columns (landscape),
+  // never below one line. The band is HTML text outside the canvases (never in an export, a print or a PDF); it is filled when the page is drawn and when the writer moves into another
+  // sentence (after pen-up), never while the pen moves.
+  // Sentence numbers: the sentences that START on a page are numbered 1, 2, 3 ... on that page (small numbers). The number is drawn in the top right corner of the sentence's first cell
+  // (the 臨 model character takes the top left, the punctuation the bottom right) by a span of the layer `.bmarks` between the template canvas and the ink canvas, and leads the
+  // sentence in the band. A sentence that comes over from the previous page is marked on its first cell of this page and its band entry leads with "…n", n = the number it had on the page it started on. The layer is
+  // built when the page is drawn; when the writer moves on only the class of two spans changes. Never the template canvas, never the pen path.
   function syncBai() {
     var want = !S.baiFail && MX.Bai.on() && MX.Bai.has(S.copy.textId);
     if (!want) {
-      if (S.bai) { if (S.bai.el.parentNode) S.bai.el.parentNode.removeChild(S.bai.el); S.bai = null; }
+      if (S.bai) { [S.bai.el, S.bai.lay].forEach(function (e) { if (e.parentNode) e.parentNode.removeChild(e); }); S.bai = null; }
       return;
     }
     S.root.className += ' bai';
     if (S.bai) return;
     var el = h('div', { class: 'pbai', 'data-role': 'bai-band', role: 'region', 'aria-label': MX.t('白話'), style: 'font-family:' + Draw.uiFam(S.cfg.script) });
-    var b = S.bai = { el: el, segs: null, list: [], cur: -2, from: 0, off: 0, lang: '', fills: 0 };
+    var b = S.bai = { el: el, segs: null, list: [], cur: -2, from: 0, off: 0, lang: '', fills: 0, lay: h('div', { class: 'bmarks', 'aria-hidden': 'true', 'data-role': 'bai-marks', style: 'font-family:' + Draw.uiFam(S.cfg.script) }), mtk: -1, nums: null, numsFor: null };
     S.root.insertBefore(el, S.stage);
+    S.stage.insertBefore(b.lay, S.ink);       // between the template canvas and the ink canvas
     // the sentences are measured to see what fits: again once the font chunks of their characters have loaded
     if (document.fonts && document.fonts.addEventListener) on(document.fonts, 'loadingdone', function () { clearTimeout(S.timers.baifont); S.timers.baifont = setTimeout(function () { fillBai(false, true); }, 30); });
     MX.Library.getSectionBai(S.copy.textId, Model.sid(S.copy)).then(function (segs) {
@@ -426,9 +431,15 @@
     return S.focus >= 0 && S.slotOf[S.focus] !== undefined ? S.focus : firstIdx(S.pages[S.pageIdx]);
   }
   // The band's size and the lines it costs. g0 = the grid of the stage without the band: its cell size is kept, the band takes what is left after as many lines as still fit
-  // (at least one; then the cell shrinks). The band is 24 % (portrait) / 29 % (landscape) of the view, up to 28 % / 32 % when the page has room to spare.
+  // (at least one; then the cell shrinks). Share of the view [aimed at, at most when the page has room to spare anyway]: portrait 14 % / 18 % of the height, landscape 20 % / 24 % of
+  // the width, phone 16 % / 20 % (the landscape phone column not under 140 px).
+  var BAI_FRAC = { port: [0.14, 0.18], land: [0.20, 0.24], phone: [0.16, 0.20] };
+  function baiSpan(land) {
+    var P = land ? S.root.clientWidth : S.root.clientHeight, f = BAI_FRAC[S.phone ? 'phone' : (land ? 'land' : 'port')];
+    return { B: Math.max(Math.round(P * f[0]), S.phone && land ? 140 : 0), Bmax: Math.round(P * f[1]) };
+  }
   function planBai(g0, W, H, land) {
-    var P = land ? S.root.clientWidth : S.root.clientHeight, B = Math.round(P * (land ? 0.29 : 0.24)), Bmax = Math.round(P * (land ? 0.32 : 0.28));
+    var sp = baiSpan(land), B = sp.B, Bmax = Math.max(sp.Bmax, B);
     var ext = land ? W : H, ins = land ? S.inset.l + S.inset.r : S.inset.t + S.inset.b, avail = ext - ins, c0 = g0.cell, lines0 = land ? g0.cols : g0.rows;
     var lines = Math.max(1, Math.min(lines0, Math.floor((avail - B) / c0))), left = avail - lines * c0;
     var px = left >= B ? Math.min(left, Bmax) : Math.min(B, Math.round(avail * 0.45));
@@ -436,15 +447,64 @@
     opts[land ? 'cols' : 'rows'] = lines;
     return { px: px, opts: opts, lines: lines };
   }
+  // the phone has one cell on the stage: the band takes what the cell leaves along the axis of the band, else the cell gets smaller
+  function planBaiOne(g0, W, H, land) {
+    var sp = baiSpan(land), ext = land ? W : H, left = ext - g0.cell - 16;
+    return { px: left >= sp.B ? Math.min(left, Math.max(sp.Bmax, sp.B)) : Math.min(sp.B, Math.round(ext * 0.45)) };
+  }
+  // the sentence being written: the one holding the cell the writer is at; while that is a title cell (it has no sentence) the first sentence of the page's body
   function curSeg() {
-    var b = S.bai, c = MX.Bai.markCell(S.pages[S.pageIdx], S.focus, function (i) { return !isEmpty(i); });
+    var b = S.bai, pg = S.pages[S.pageIdx], c = MX.Bai.markCell(pg, S.focus, function (i) { return !isEmpty(i); }), i;
+    if (c >= 0 && S.cells[c].sec === 'title') {
+      c = -1;
+      for (i = 0; i < pg.length; i++) if (pg[i] >= 0 && S.cells[pg[i]].sec === 'body') { c = pg[i]; break; }
+    }
     return c >= 0 && S.cells[c].sec === 'body' ? MX.Bai.segOf(b.segs, +S.cells[c].key) : -1;
   }
-  function baiAnchor(g) {
-    var base = 0, out = '', j;
-    while (base < S.cells.length && S.cells[base].sec !== 'body') base++;
-    for (j = 0; j < Math.min(3, g.n); j++) if (S.cells[base + g.start + j]) out += S.cells[base + g.start + j].ch;
-    return out;
+  // The numbers of the sentences: { sentence index: { page: the page it starts on, n: its number there } }, from the pages of this layout (built once per layout)
+  function baiNums() {
+    var b = S.bai;
+    if (b.numsFor === S.pages) return b.nums;
+    var nums = {};
+    S.pages.forEach(function (pg, pi) {
+      var n = 0;
+      pg.forEach(function (idx) {
+        var c = idx >= 0 ? S.cells[idx] : null, k, si;
+        if (!c || c.sec !== 'body') return;
+        k = +c.key; si = MX.Bai.segOf(b.segs, k);
+        if (si >= 0 && b.segs[si].start === k) nums[si] = { page: pi, n: ++n };
+      });
+    });
+    b.nums = nums; b.numsFor = S.pages;
+    return nums;
+  }
+  // what leads a sentence in the band: its number, "…n" when it started on an earlier page, '' when it has none
+  function baiLabel(si) {
+    var m = baiNums()[si];
+    return m ? (m.page < S.pageIdx ? '\u2026' : '') + m.n : '';
+  }
+  // The markers on the grid: one for every sentence of the page, on its first cell on this page (the top right corner), the same label as its band entry ("…n" when it came over from
+  // the previous page). Built when the page is drawn (b.mtk = the draw they belong to), later only the current one changes class.
+  function baiMarks() {
+    var b = S.bai, lay = b.lay, g = S.g, sz = Math.max(10, Math.round(g.cell * 0.13)), kids, i, on;
+    if (b.mtk !== S.token) {
+      var seen = {};
+      lay.innerHTML = '';
+      lay.style.setProperty('--mk', (g.single ? Math.min(sz, 16) : sz) + 'px');
+      S.pages[S.pageIdx].forEach(function (idx, s) {
+        var c = idx >= 0 ? S.cells[idx] : null, si = c && c.sec === 'body' ? MX.Bai.segOf(b.segs, +c.key) : -1, o, t;
+        if (si < 0 || seen[si] || !(t = baiLabel(si))) return;
+        seen[si] = 1;
+        o = slotOrigin(s);
+        lay.appendChild(h('span', { class: 'bmk', 'data-seg': si, 'data-cont': t.charAt(0) === '\u2026' ? '1' : null, text: t, style: 'top:' + (o.y + 2) + 'px;right:' + (g.W - o.x - g.cell + 2) + 'px' }));
+      });
+      b.mtk = S.token;
+    }
+    kids = lay.children;
+    for (i = 0; i < kids.length; i++) {
+      on = +kids[i].getAttribute('data-seg') === b.cur;
+      if (kids[i].classList.contains('cur') !== on) kids[i].classList.toggle('cur', on);
+    }
   }
   function fillBai(reset, remeasure) {
     var b = S && S.bai;
@@ -453,8 +513,9 @@
     b.list = MX.Bai.pageSegs(b.segs, S.cells, S.pages[S.pageIdx]);
     b.cur = curSeg();
     if (reset) { b.from = Math.max(0, b.list.indexOf(b.cur)); b.off = 0; }       // too long for the band: from the sentence being written on
-    var r = MX.Bai.fill(b.el, { segs: b.segs, list: b.list, cur: b.cur, from: b.from, off: b.off, lang: b.lang, anchor: baiAnchor, onMore: function (f, off) { b.from = f; b.off = off; fillBai(false); } });
+    var r = MX.Bai.fill(b.el, { segs: b.segs, list: b.list, cur: b.cur, from: b.from, off: b.off, lang: b.lang, label: baiLabel, onMore: function (f, off) { b.from = f; b.off = off; fillBai(false); } });
     b.from = r.from; b.off = r.off;
+    baiMarks();
     if (!remeasure) b.fills++;       // (a redraw only to measure again after a font load is not counted: tests count the draws the writer causes)
     b.el.setAttribute('data-lang', b.lang);
   }
@@ -466,6 +527,8 @@
       if (S && S.bai && S.bai.segs && curSeg() !== S.bai.cur) fillBai(true);
     }, 0);
   }
+  // a band that is a short row (portrait, under 240 px) gets the compact 更多 row: 44 px instead of 56 (css .pbai.compact)
+  function baiCompact(el, land, px) { el.classList.toggle('compact', !land && px < 240); }
   function baiChanged() { S.baiFail = false; S.copy.pos = stayPos(); layout(); }
 
   function layout() {
@@ -491,7 +554,9 @@
     if (S.phone) {
       S.inset = { l: 0, t: 0, r: 0, b: 0 };
       if (bai) {
-        bai.style.display = ''; bai.style.width = land ? Math.round(S.root.clientWidth * 0.29) + 'px' : ''; bai.style.height = land ? '' : Math.round(S.root.clientHeight * 0.24) + 'px';       // a column left of the page (landscape) / a row under the head (portrait)
+        var one = planBaiOne(Layout.gridOne(W, H, S.cfg, S.inset, 8), W, H, land);
+        bai.style.display = ''; bai.style.width = land ? one.px + 'px' : ''; bai.style.height = land ? '' : one.px + 'px';       // a column left of the page (landscape) / a row under the head (portrait)
+        baiCompact(bai, land, one.px);
         r = S.stage.getBoundingClientRect();
         W = Math.floor(r.width); H = Math.floor(r.height);
       }
@@ -502,6 +567,7 @@
       if (bai) {
         var plan = planBai(S.g, W, H, land);
         bai.style.display = ''; bai.style.width = land ? plan.px + 'px' : ''; bai.style.height = land ? '' : plan.px + 'px';
+        baiCompact(bai, land, plan.px);
         r = S.stage.getBoundingClientRect();
         W = Math.floor(r.width); H = Math.floor(r.height);
         S.g = Layout.grid(W, H, S.cfg, S.inset, plan.opts);

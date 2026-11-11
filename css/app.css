@@ -596,22 +596,29 @@ html[data-ui=en] .qstart .qt{line-height:1.3}
 .ncols .nitem.gl .nnote.en{display:block;padding-left:17px}
 .ncols .nmiss{font-size:var(--t-s);line-height:1.5;border:2px solid #000;padding:6px 10px;margin:0 0 var(--sp-3);text-align:left}
 .pnotes .ssum.en{white-space:pre-line}
-/* ---- 白話 beside the text while copying (docs/SPEC.md revision 24): the band between the toolbar and the writing page. Portrait: on top (about 25 % of the height); landscape: on the left
-   (about 30 % of the width). Black on white, no animation; the sentence being written has a heavy rule and bold type; the anchor (the first characters of the original) is small and grey. ---- */
-.pbai{flex:none;box-sizing:border-box;background:#fff;border:0 solid #000;display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden;font-size:18px;line-height:1.5}
-.practice.port .pbai{border-bottom-width:2px;padding:4px calc(12px + var(--edge-r)) 0 calc(12px + var(--edge-l))}
-.practice.land .pbai{border-right-width:2px;padding:calc(4px + var(--edge-t)) 10px var(--edge-b) 8px}
+/* ---- 白話 beside the text while copying (docs/SPEC.md revisions 24, 25): the band between the toolbar and the writing page. Portrait: on top (about 14 % of the height, up to 18 %); landscape: on the left
+   (about 20 % of the width, up to 24 %). Black on white, no animation; the sentence being written has a heavy rule and bold type; every sentence is led by its number, the same number as on the grid. ---- */
+.pbai{flex:none;box-sizing:border-box;background:#fff;border:0 solid #000;display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden;font-size:16px;line-height:1.35}
+.practice.port .pbai{border-bottom-width:2px;padding:2px calc(12px + var(--edge-r)) 0 calc(12px + var(--edge-l))}
+.practice.land .pbai{border-right-width:2px;padding:calc(2px + var(--edge-t)) 8px var(--edge-b) 6px}
 .pbai .bbody{flex:1 1 auto;min-height:0;overflow:hidden}
-.pbai .bseg{display:block;border-left:4px solid transparent;padding:3px 0 4px 8px;text-align:left}
+.pbai .bseg{display:block;border-left:4px solid transparent;padding:1px 0 2px 6px;text-align:left}
 .pbai .bseg[hidden]{display:none}
 .pbai .bseg.cur{border-left-color:#000;font-weight:700}
-.pbai .ba{font-size:13px;color:#555;margin-right:6px;letter-spacing:1px;font-weight:400}
-.pbai .bt{font-size:18px}
-.pbai[data-lang=en] .bt{font-size:16px;line-height:1.4}
+.pbai .bn,.bmk{box-sizing:border-box;border:1px solid #555;color:#555;background:#fff;text-align:center;font-weight:400}
+.pbai .bn{display:inline-block;min-width:20px;height:20px;padding:0 4px;margin-right:6px;border-radius:10px;font-size:12px;line-height:18px;vertical-align:1px}
+.pbai .bn:empty{display:none}
+.pbai .bseg.cur .bn,.bmk.cur{background:#000;border-color:#000;color:#fff;font-weight:700}
+.pbai .bt{font-size:16px}
+.pbai[data-lang=en] .bt{font-size:14px;line-height:1.3}
 .pbai .bfoot{flex:none;border-top:2px solid #000}
 .pbai .bmore{display:block;width:100%;min-height:56px;font-size:var(--t-s)}
-.practice.phone .pbai{grid-area:bai;border-width:0 0 2px 0;padding:4px calc(10px + var(--edge-r)) 0 calc(10px + var(--edge-l))}
+.pbai.compact .bmore{min-height:44px}
+/* the numbers on the grid: a layer between the template canvas and the ink canvas, spans placed by practice.js at the top right corner of a sentence's first cell (--mk = the size) */
+.bmarks{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;overflow:hidden;--mk:10px}
+.bmk{position:absolute;min-width:calc(var(--mk) + 2px);height:calc(var(--mk) + 2px);padding:0 1px;border-radius:calc(var(--mk) / 2 + 1px);font-size:var(--mk);line-height:var(--mk);pointer-events:none}
+.practice.phone .pbai{grid-area:bai;border-width:0 0 2px 0;padding:2px calc(10px + var(--edge-r)) 0 calc(10px + var(--edge-l))}
 .practice.phone.bai{grid-template-rows:auto auto minmax(0,1fr) auto;grid-template-areas:"top" "bai" "stage" "bar"}
 .practice.phone.land.bai{grid-template-columns:auto minmax(0,1fr) clamp(288px,42%,440px);grid-template-rows:minmax(0,1fr) auto;grid-template-areas:"bai stage top" "bai stage bar"}
-.practice.phone.land .pbai{border-width:0 2px 0 0;padding:4px 8px var(--edge-b) 8px}
+.practice.phone.land .pbai{border-width:0 2px 0 0;padding:4px 6px var(--edge-b) 6px}
 html[data-ui=en] [data-role=bai-toggle] label{min-width:0;flex:1 1 100%}
